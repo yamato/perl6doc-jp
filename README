@@ -12,7 +12,7 @@
 
 Perl6のドキュメントを日本語に翻訳するプロジェクトです。
 フリーの翻訳メモリOmegaTを用いて翻訳を行います。
-大和はOmegaT-2.0.5を使用しています。
+大和はOmegaT-2.2.3_4を使用しています。
 
 * https://github.com/perl6/specs
 * OmegaT     http://sourceforge.net/projects/omegat/
@@ -68,10 +68,10 @@ FireFoxのDictionary Tooltipにアルクの英辞郎 on the WEBを追加する�
 
 # おすすめ設定その2
 
-OmegaT 2.0.5はStarDict形式の辞書を利用できます。以下のURLにある辞書ファイルを
+OmegaTはStarDict形式の辞書を利用できます。以下のURLにある辞書ファイルを
 展開し、*.dz、*.idx、*.ifoというファイルをプロジェクトのdictionaryディレクトリに
 コピーしておくと単語の意味が表示されます。辞書はEnglish-Japaneseやen-jaというものを
 使用してください。
 
 * StarDict   http://stardict.sourceforge.net/index.php
-* 日本語辞書 http://stardict.sourceforge.net/Dictionaries_ja.php
+* 日本語辞書 http://yeelou.com/huzheng/stardict-dic/ja/
