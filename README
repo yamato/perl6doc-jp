@@ -14,7 +14,7 @@ Perl6のドキュメントを日本語に翻訳するプロジェクトです。
 フリーの翻訳メモリOmegaTを用いて翻訳を行います。
 大和はOmegaT-2.0.5を使用しています。
 
-* Perl6::Doc http://search.cpan.org/dist/Perl6-Doc/
+* https://github.com/perl6/specs
 * OmegaT     http://sourceforge.net/projects/omegat/
 
 # 翻訳の手順
