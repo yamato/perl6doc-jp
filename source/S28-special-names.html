@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>[DRAFT] Synopsis 28 - Special Names [DRAFT]</title>
+</head>
+<div class="pod">
+<h1 id="TITLE">TITLE</h1>
+<div id="TITLE_CONTENT">
+<pre> [DRAFT] Synopsis 28 - Special Names [DRAFT]
+</pre>
+</div>
+<h1 id="AUTHORS">AUTHORS</h1>
+<div id="AUTHORS_CONTENT">
+<pre>Larry Wall &lt;larry@wall.org&gt;
+Tim Nelson &lt;wayland@wayland.id.au&gt;
+Lyle Hopkins &lt;webmaster@cosmicperl.com&gt;
+Carl Mäsak &lt;cmasak@gmail.com&gt;
+</pre>
+</div>
+<h1 id="VERSION">VERSION</h1>
+<div id="VERSION_CONTENT">
+<pre>Created: 23 Feb 2009, created by Tim Nelson from miscellaneous documents lying around
+
+Last Modified: 17 Nov 2010
+Version: 9
+</pre>
+</div>
+<h1 id="Special_Variables">Special Variables</h1>
+<div id="Special_Variables_CONTENT">
+</div>
+<h2 id="Introduction">Introduction</h2>
+<div id="Introduction_CONTENT">
+<p>This document serves as a collection point
+for what is known about special variables
+in Perl 6 and correlates them with the changes from Perl 5.</p>
+<p>If you are trying to find the Perl 6 equivalent of a Perl 5 special
+variable you know, try searching this file for the Perl 5 version.
+Each main entry is followed by a note containing the corresponding
+Perl 5 variable(s). The list of main entries is also followed by
+a table showing the 5 and 6 variables side-by-side.</p>
+</div>
+<h2 id="Overview">Overview</h2>
+<div id="Overview_CONTENT">
+</div>
+<h3 id="Secondary_Sigils_also_known_as_quot_">Secondary Sigils (also known as &quot;twigils&quot;)</h3>
+<div id="Secondary_Sigils_also_known_as_quot_-2">
+<p>A quick reminder of the relevant twigils from S02:</p>
+<pre>$?foo   # Compiler constants (fixed at compile time)
+$*foo   # Context variable, default global (run time)
+$=foo   # File-scoped Pod data
+</pre>
+<p>The various <code>$?foo</code> variables are determined at compile time, and are
+not modifiable at run time.  This does not mean that the variable has the
+same value everywhere; for instance, <code>$?LINE</code> is different on every line
+of the program.</p>
+<p>The <code>$*foo</code> variables function both as dynamically scoped variables
+and as globals.  Globalness is relative, in other words.  Any dynamic
+scope may modify the set of globals visible via the <code>$*foo</code> notation.
+Most of the standard globals listed below actually live either in
+the <code>PROCESS</code> or the <code>GLOBAL</code> package, where <code>PROCESS</code> contains
+globals belonging to the entire process, while <code>GLOBAL</code> contains the
+globals belonging to the current interpreter, since a process may be
+running more than one interpreter.  Unless otherwise indicated below,
+the outermost definition of these variables are kept in the <code>PROCESS</code>
+package.</p>
+<p>The <code>$=foo</code> variables are related to the <code>$?foo</code> variables
+insofar as the text of the program is known at compile time, so the
+values are static.  However, the different twigil indicates that the
+variable contains Pod data, which is primarily under user control
+rather than compiler control.  The structure of these variables will
+be fleshed out in S26.</p>
+</div>
+<h3 id="Named_variables">Named variables</h3>
+<div id="Named_variables_CONTENT">
+<pre> Variable          Spec  Type         Description
+ --------          ----  ----         -----------
+
+ @_                                   # ??? (FIX)
+ $!                S04                # Current Exception object
+ $/                S05   Match        # Last match
+ $0, $1, $2        S05   Str          # First captured value from match: $/[0]
+ $?ARCH                  Application  # Host architecture
+ $?XARCH                 Application  # Target architecture
+ @*ARGS            S06   Array of Str # command-line arguments
+ $*ARGFILES        S02   IO           # The magic command-line input handle
+ &amp;?BLOCK           S06   Block        # current block (itself)
+ ::?CLASS          S12   Str          # current class (as package or type name)
+ $?CLASS           S02   Class        # current class
+ @=COMMENT        (S26)               # All the comment blocks in the file
+ %?CONFIG                Hash of XXX  # configuration hash XXX What does this do?
+ $*CWD                   Path         # current working directory
+ $=DATA           (S26)  IO           # data block handle (=begin DATA ... =end)
+ @=DATA           (S26)  Array        # Same as above, but array
+ %?DEEPMAGIC       S13   Hash of XXX  # Controls the mappings of magical names to sub definitions
+ $?DISTRO          S02   Application  # Which OS distribution am I compiling under
+ $*DISTRO          S02   Application  # Which OS distribution am I running under
+ $*EGID                  Int          # effective group id
+ %*ENV             S02   Hash of Str  # system environment variables
+ $*ERR             S16   IO           # Standard error handle
+ $*EUID                  Int          # effective user id
+ $*EXECUTABLE_NAME       Str          # executable name
+ $?FILE            S02   Str          # current filename of source file
+ $?GRAMMAR         S02   Grammar      # current grammar
+ $*GID                   Int          # group id
+ $*IN              S16   IO           # Standard input handle; is an IO object
+ @*INC             S11                # where to search for user modules (but not std lib!)
+ %?LANG            S02   Hash of Grammar # What is the current set of interwoven languages?
+ $*LANG            S02   Str          # LANG variable from %*ENV that defines what human language is used
+ $?LINE            S02   Int          # current line number in source file
+ %*META-ARGS       S19   Hash of XXX  # Meta-arguments
+ $?MODULE          S02   Module       # current module
+ %*OPTS            S19   Hash of XXX  # Options from command line
+ %*OPT...          S19   Hash of XXX  # Options from command line to be passed down
+ $?KERNEL                Application  # operating system compiled for
+ $*KERNEL                Application  # operating system running under
+ $*OUT             S16   IO           # Standard output handle
+ $?PACKAGE         S02   Package      # current package
+ $?PERL            S02   Application  # Which Perl am I compiled for?
+ $*PERL            S02   Application  # perl version running under
+ $*PID                   Int          # system process id
+ %=POD             S02                # (or some such)
+ $*PROGRAM_NAME    S19   Str          # name of the Perl program being executed
+ %*PROTOCOLS       S16   Hash of Method # Stores the methods needed for the uri() function
+ ::?ROLE                 Str          # current role (as package or type name)
+ $?ROLE            S02   Role         # current role
+ &amp;?ROUTINE         S06   Routine      # current sub or method (itself)
+ $?SCOPE           S02                # Current &quot;my&quot; scope (XXX unnecessary?)
+ $*TZ              S32                # Local time zone
+ $*UID                   Int          # system user id
+ $?USAGE           S06   Str          # Default usage message generated at compile time
+ $?VM              S02   Application  # Which virtual machine am I compiling under
+ $?XVM             S02   Application  # Which virtual machine am I cross-compiling for
+</pre>
+<p>Note that dynamic variables such as <code>$*OUT</code> may have more than
+one current definition in the outer dynamic context, in which case
+the innermost dynamic scope in which it is defined determines the meaning.  For instance,
+<code>$PROCESS::OUT</code> is the stdout for the entire process, but each
+interpreter can set its own <code>$GLOBAL::OUT</code> to make <code>$*OUT</code> mean
+whatever it wants independently of other interpreters.  Any dynamic
+scope may also declare a local meaning of <code>$*OUT</code> that applies only
+to called code.  Likewise each thread could log its own errors
+to its own <code>$*ERR</code>, since a thread is a dynamic scope.</p>
+<p>The class <code>Application</code> collects a few common features of some of the special
+variables such as <code>$*PERL</code>, <code>$?VM</code>, <code>$*KERNEL</code>, etc.</p>
+<pre> class Application {
+ has Str $.name;
+ has Str $.auth;
+ has Version $.version;
+ }
+</pre>
+</div>
+<h3 id="Perl5_to_Perl6_special_variable_tran">Perl5 to Perl6 special variable translation</h3>
+<div id="Perl5_to_Perl6_special_variable_tran-2">
+<p>If a column has a &quot;-&quot; in it, it means that item is unavailable in that version of Perl.</p>
+<pre> Perl 5              Perl 6         Comment
+ -----------         -----------    -----------------------
+ STDIN               $*IN           See S16; actual variable is $PROCESS::IN
+ STDOUT              $*OUT          See S16; actual variable is $PROCESS::OUT
+ STDERR              $*ERR          See S16; actual variable is $PROCESS::ERR
+ $_ $ARG             $_             More lexically aware
+ $_[1],$_[2]..       $^a,$^b..
+ $a,$b               -              Just params to anonymous block
+ -                   $/             Object with results of last regex match
+ $1,$2,$3...         $1,$2,$3...
+ $&amp; $MATCH           $&lt;&gt;
+ $` $PREMATCH        substr based on $/.from
+ $' $POSTMATCH       substr based on $/.to
+ $+                  -              But info can now be retrieved from $/
+ $^N                 $*MOST_RECENT_CAPTURED_MATCH  ...or some such.
+                   or $/[*-$n]                       ...or omit
+ @-                  $1.start, etc
+ @+                  $1.end, etc.
+ %!                  -
+ $[                  -              This feature has been removed
+ $*                  -              Deprecated long ago
+ $#                  -              Deprecated long ago
+ $^H                 -              These were only ever internal anyway
+ %^H                 -
+ -                   $!             Current exception (see L&lt;S04-control&gt;)
+ $! $ERRNO $OS_ERROR -              Use shiny new $!
+ $?  $CHILD_ERROR    -              Use shiny new $!
+ $@  $EVAL_ERROR     -              Use shiny new $!
+ $^E                 -              Use shiny new $!
+ $^S                 -
+ $. $NR              $*IN.input_record_number()
+ $/ $RS              $*IN.input_record_separator()
+ $|                  $*OUT.autoflush()
+ $, $OFS             $*OUT.output_field_separator()
+ $\                  $*OUT.output_record_separator()
+ $&quot; $LIST_SEPARATOR  -
+ $; $SUBSEP          -
+ $$ $PID             $*PID
+ $&lt; $UID             $*UID          Real UID (User ID)
+ $( $GID             $*GID          Real GID (Group ID)
+ $&gt; $EUID            $*EUID         Effective UID
+ $) $EGID            $*EGID         Effective GID
+ $0 $PROGRAM_NAME    $*PROGRAM_NAME
+ $^C $COMPILING      $*COMPILING
+ $^D $DEBUGGING      $*DEBUGGING
+ $^F $SYS_FD_MAX     $*SYS_FD_MAX   ...or some such
+ $^I $INPLACE_EDIT   $*INPLACE_EDIT ...or some such
+ $^M                 $*EMERGENCY_MEMORY ...or some such (or omit)
+ $^O $OSNAME         $*OSNAME       ...or some such
+ $^P $PERLDB         $*PERLDB       ...or some such
+ $^R                 $*LAST_REGEXP_CODE_RESULT   ...or some such. Or omit.
+ $^T $BASETIME       $*INITTIME     A Temporal::Instant object
+ $^V $]              $?PERL.version
+ $^W                 $*WARNINGS (if any dynamic control needed)
+ ${^WARNING_BITS}    $?WARNINGS
+ $^X                 $*EXECUTABLE_NAME ...or some such
+ ARGV                $*ARGFILE      Note the P6 idiom for this handle:
+                                for lines() {
+                                  # each time through loop
+                                  # proc a line from files named in ARGS
+                                }
+ @ARGV               @*ARGS
+ ARGVOUT             TBD
+ $ARGV               TBD
+ @F                  @_
+ %ENV                %*ENV
+ @INC                @*INC (but not for std library modules)
+ %INC                %*INC (maybe, if needed)
+ %SIG                event filters plus exception translation
+ $SIG{__WARN__}      $*ON_WARN
+ $SIG{__DIE__}       $*ON_DIE
+ ${^OPEN}            -              This was internal; forget it
+</pre>
+</div>
+<h2 id="NOT_YET_DEFINED">NOT YET DEFINED</h2>
+<div id="NOT_YET_DEFINED_CONTENT">
+<p>The following items are not yet defined, but will need to be defined.</p>
+<p>XXX Don't remove this line until this section is completely blank.</p>
+<p>We also seem to have $*INC in the table at the top, @*INC in S19 and the table
+immediately above, %*INC also in the table above.</p>
+<p>The $?LANG and $*LANG variables are also confusing (both in S02).</p>
+</div>
+<h3 id="Form_pm">Form.pm</h3>
+<div id="Form_pm_CONTENT">
+<p>These go in the Perl5 to Perl6 conversion table:</p>
+<pre> Perl6   Perl5
+ -----   -----------------------------------------
+ -       $%  $FORMAT_PAGE_NUMBER
+ -           HANDLE-&gt;format_page_number(EXPR)
+
+ -       $=  $FORMAT_LINES_PER_PAGE
+ -           HANDLE-&gt;format_lines_per_page(EXPR)
+
+ -       $-  $FORMAT_LINES_LEFT
+ -           HANDLE-&gt;format_lines_left(EXPR)
+
+ -       $~  $FORMAT_NAME
+ -           HANDLE-&gt;format_name(EXPR)
+
+ -       $^  $FORMAT_TOP_NAME
+ -           HANDLE-&gt;format_top_name(EXPR)
+
+ -       $:  $FORMAT_LINE_BREAK_CHARACTERS
+ -           IO::Handle-&gt;format_line_break_characters
+
+ -       $^L $FORMAT_FORMFEED
+ -           IO::Handle-&gt;format_formfeed
+
+ -       $^A $ACCUMULATOR
+</pre>
+</div>
+<h3 id="S15_unicode_pod">S15-unicode.pod</h3>
+<div id="S15_unicode_pod_CONTENT">
+<p>${^ENCODING} variable -- S32/Str.pod implies this is $?ENC
+$?NF -- unicode normalisation form
+${^UNICODE} variable</p>
+</div>
+<h3 id="Infectious_trait_spec">Infectious trait spec</h3>
+<div id="Infectious_trait_spec_CONTENT">
+<p>${^TAINT} variable, which is pending, among other things, infectious trait spec</p>
+</div>
+<h1 id="Additions">Additions</h1>
+<div id="Additions_CONTENT">
+<p>Please post errors and feedback to perl6-language.  If you are making
+a general laundry list, please separate messages by topic.</p>
+</div>
+</div>
+</body>
+</html>

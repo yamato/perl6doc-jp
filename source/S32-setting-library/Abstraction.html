@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>DRAFT: Synopsis 32: Setting Library - Abstraction</title>
+</head>
+<div class="pod">
+<h1 id="TITLE">TITLE</h1>
+<div id="TITLE_CONTENT">
+<p>DRAFT: Synopsis 32: Setting Library - Abstraction</p>
+</div>
+<h1 id="AUTHORS">AUTHORS</h1>
+<div id="AUTHORS_CONTENT">
+<pre>Tim Nelson &lt;wayland@wayland.id.au&gt;
+Larry Wall &lt;larry@wall.org&gt;
+</pre>
+</div>
+<h1 id="VERSION">VERSION</h1>
+<div id="VERSION_CONTENT">
+<pre>Created: 26 Feb 2009
+
+Last Modified: 26 Feb 2009
+Version: 1
+</pre>
+<p>The document is a draft.</p>
+<p>If you read the HTML version, it is generated from the Pod in the specs
+repository under
+<a href="https://github.com/perl6/specs/blob/master/S32-setting-library/Abstraction.pod">https://github.com/perl6/specs/blob/master/S32-setting-library/Abstraction.pod</a>
+so edit it there in the git repository if you would like to make changes.</p>
+</div>
+<h1 id="Roles">Roles</h1>
+<div id="Roles_CONTENT">
+</div>
+<h2 id="Abstraction">Abstraction</h2>
+<div id="Abstraction_CONTENT">
+<pre>role Abstraction {...}
+</pre>
+</div>
+<h1 id="Classes">Classes</h1>
+<div id="Classes_CONTENT">
+<pre>class Class does Abstraction {...}
+
+class Role does Abstraction {...}
+
+class Module does Abstraction {...}
+
+class Package does Abstraction {...}
+</pre>
+</div>
+<h2 id="Grammar">Grammar</h2>
+<div id="Grammar_CONTENT">
+<pre>
+
+
+class Grammar does Abstraction {
+    method parse(Str $text, $action?) {...}
+    method parsefile(Str $filename, $action?) {...}
+}
+
+
+
+</pre>
+</div>
+<h1 id="Additions">Additions</h1>
+<div id="Additions_CONTENT">
+<p>Please post errors and feedback to perl6-language.  If you are making
+a general laundry list, please separate messages by topic.</p>
+</div>
+</div>
+</body>
+</html>

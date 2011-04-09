@@ -1,0 +1,1281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>DRAFT: Synopsis 32: Setting Library - IO</title>
+</head>
+<div class="pod">
+<h1 id="TITLE">TITLE</h1>
+<div id="TITLE_CONTENT">
+<p>DRAFT: Synopsis 32: Setting Library - IO</p>
+</div>
+<h1 id="AUTHORS">AUTHORS</h1>
+<div id="AUTHORS_CONTENT">
+<pre>The authors of the related Perl 5 docs
+Rod Adams &lt;rod@rodadams.net&gt;
+Larry Wall &lt;larry@wall.org&gt;
+Aaron Sherman &lt;ajs@ajs.com&gt;
+Mark Stosberg &lt;mark@summersault.com&gt;
+Carl Mäsak &lt;cmasak@gmail.com&gt;
+Moritz Lenz &lt;moritz@faui2k3.org&gt;
+Tim Nelson &lt;wayland@wayland.id.au&gt;
+Daniel Ruoso &lt;daniel@ruoso.com&gt;
+Lyle Hopkins &lt;webmaster@cosmicperl.com&gt;
+</pre>
+</div>
+<h1 id="VERSION">VERSION</h1>
+<div id="VERSION_CONTENT">
+<pre>Created: 19 Feb 2009 extracted from S29-functions.pod; added stuff from S16-IO later
+
+Last Modified: 4 July 2010
+Version: 13
+</pre>
+<p>The document is a draft.</p>
+<p>If you read the HTML version, it is generated from the Pod in the specs
+repository under
+<a href="https://github.com/perl6/specs/blob/master/S32-setting-library/IO.pod">https://github.com/perl6/specs/blob/master/S32-setting-library/IO.pod</a>
+so edit it there in the git repository if you would like to make changes.</p>
+</div>
+<h2 id="IO">IO</h2>
+<div id="IO_CONTENT">
+<p>[Note: if a method declaration indicates a method name qualified by
+type, it should be taken as shorthand to say which role or class the
+method is actually declared in.]</p>
+<dl>
+	<dt>open
+</dt>
+	<dd>
+<pre>multi open (Str $name,
+    Bool :$rw = False,
+    Bool :$bin = False,
+    Str  :$enc = &quot;Unicode&quot;,
+    Any  :$nl = &quot;\n&quot;,
+    Bool :$chomp = True,
+    ...
+    --&gt; IO
+) is export
+</pre>
+		<p>A convenience method/function that hides most of the OO complexity.
+It will only open normal files.  Text is the default.  Note that
+the &quot;Unicode&quot; encoding implies figuring out which actual UTF is
+in use, either from a BOM or other heuristics.  If heuristics are
+inconclusive, UTF-8 will be assumed.  (No 8-bit encoding will ever
+be picked implicitly.)  A file opened with <code>:bin</code> may still be
+processed line-by-line, but IO will be in terms of <code>Buf</code> rather
+than <code>Str</code> types.</p>
+		<p>TODO: document read/write/append modes (:r, :w, :a)</p>
+	</dd>
+	<dt>dir
+</dt>
+	<dd>
+<pre>multi dir($directory = '.', Mu :$test = none('.', '..')) { ... }
+</pre>
+		<p>Returns a lazy list of file names in the <code>$directory</code>. By default the current
+and the parent directory are excluded, which can be controlled with the
+<code>$test</code> named paramater. Only items that smart-match against this test are
+returned.</p>
+	</dd>
+	<dt>getc
+</dt>
+	<dd>
+<pre>method getc (Int $chars = 1 --&gt; Char)
+</pre>
+		<p>See below for details.</p>
+	</dd>
+	<dt>print
+</dt>
+	<dd>
+<pre>method print (*@LIST --&gt; Bool)
+multi print (*@LIST --&gt; Bool)
+method Str::print (IO $io --&gt; Bool)
+method Array::print (IO $io --&gt; Bool)
+method Hash::print (IO $io --&gt; Bool)
+</pre>
+		<p>See below for details.</p>
+	</dd>
+	<dt>say
+</dt>
+	<dd>
+<pre>method say (*@LIST --&gt; Bool)
+multi say (*@LIST --&gt; Bool)
+method Str::say (IO $io --&gt; Bool)
+method Array::say (IO $io --&gt; Bool)
+method Hash::say (IO $io --&gt; Bool)
+</pre>
+		<p>See below for details.</p>
+	</dd>
+	<dt>note
+</dt>
+	<dd>
+<pre>multi note (*@LIST --&gt; Bool)
+</pre>
+		<p>See below for details.</p>
+	</dd>
+	<dt>printf
+</dt>
+	<dd>
+<pre>method printf (Str $fmt, *@LIST --&gt; Bool)
+multi printf (Str $fmt, *@LIST --&gt; Bool)
+</pre>
+		<p>See below for details.</p>
+	</dd>
+	<dt>uri
+</dt>
+	<dd>
+<pre>method uri(Str $uri --&gt; IO::Streamable);
+sub uri(Str $uri --&gt; IO::Streamable);
+</pre>
+		<p>Returns an appropriate <code>IO::Streamable</code> descendant, with the type depending on the uri
+passed in.  Here are some example mappings:</p>
+<pre>URI type IO type
+======== =======
+file:    IO::File or IO::Directory
+ftp:     IO::Socket::INET (data channel)
+http:    IO::Socket::INET
+</pre>
+		<p>These can naturally be overridden or added to by other modules.</p>
+	</dd>
+	<dt>%*PROTOCOLS dynamic variable</dt>
+	<dd>
+		<p>For each protocol, stores a type name that should be instantiated by calling the <code>uri</code>
+constructor on that type, and passing in the appropriate uri.</p>
+	</dd>
+</dl>
+</div>
+<h1 id="Roles">Roles</h1>
+<div id="Roles_CONTENT">
+<p>The functionality of <code>IO</code> objects is broken down into several roles,
+which should identify the features each object supports.</p>
+</div>
+<h2 id="IO-2">IO</h2>
+<div id="IO_CONTENT-2">
+<p>The base role only tags that this is an <code>IO</code> object for more generic
+purposes. It doesn't specify any methods or attributes.</p>
+</div>
+<h2 id="IO_Readable">IO::Readable</h2>
+<div id="IO_Readable_CONTENT">
+<p>This role provides unbuffered read access to the data stream.</p>
+<pre>role IO::Readable {
+    has $.isReadable;
+    method read(Int $bytes --&gt; Buf)
+}
+</pre>
+<p>When the <code>$.isReadable</code> is set, it tries to change the readability of the filehandle.  This
+is not always possible, but can be done in a number of cases.  <code>IO::Socket</code> can remove
+readability by calling <code>shutdown</code>, for example.</p>
+<dl>
+	<dt>method read(Int $bytes --&gt; Buf)</dt>
+	<dd>
+		<p>Tries to read <code>$bytes</code> bytes and return it as a <code>Buf</code>. The <code>Buf</code> may be
+shorter than the actual specified number of <code>$bytes</code>.</p>
+		<p>This is &quot;raw&quot; read. You're going to
+have plain octets stored in <code>$buf</code>. If what you want is a <code>Str</code>,
+you're going to need to <code>.decode</code> it after <code>read</code>ing, or use &quot;getc&quot; or other
+<code>IO::Readable::Encoded</code> methods.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_Writeable">IO::Writeable</h2>
+<div id="IO_Writeable_CONTENT">
+<p>This role provides unbuffered write access to the data stream.</p>
+<pre>role IO::Writeable {
+    has $.isWriteable;
+    method write(Buf $buf --&gt; Int)
+}
+</pre>
+<p>When the <code>$.isWriteable</code> is set, it tries to change the writeability of the filehandle.
+This is not always possible, but can be done in a number of cases.  <code>IO::Socket</code> can remove
+writeability by calling shutdown(), for example.</p>
+<dl>
+	<dt>method write(Buf $buf --&gt; Int)</dt>
+	<dd>
+		<p>Tries to write <code>$buf</code>. The actual number of bytes
+written is returned. It might return unthrown failures, to be
+specified by each <code>IO</code> implementation.</p>
+		<p>This is &quot;raw&quot; write. <code>$buf</code> contains plain octets. If you want to <code>write</code>
+a <code>Str</code>, you should <code>.encode</code> it first, or use &quot;print&quot; or other
+<code>IO::Writeable::Encoded</code> methods.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_Seekable">IO::Seekable</h2>
+<div id="IO_Seekable_CONTENT">
+<dl>
+	<dt>method eoi( --&gt; Bool)</dt>
+	<dd>
+		<p>EOI = End Of Input -- equivalent to End Of File, but applies to other kinds of sockets as
+well.</p>
+		<p>Returns true if it's the end of the input (i.e. end of file or whatever), returns false if
+not, fails if we can't say for certain.</p>
+	</dd>
+	<dt>method seek(Int $position --&gt; Bool)</dt>
+	<dd>
+		<p>Position this stream into <code>$position</code>. The meaning of this position is
+always in &quot;octets&quot;.</p>
+	</dd>
+	<dt>method tell( --&gt; Int)</dt>
+	<dd>
+		<p>Returns the current raw position in the stream in number of &quot;octets&quot;.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_Buffered">IO::Buffered</h2>
+<div id="IO_Buffered_CONTENT">
+<p>Indicates that this object performs buffering. The management of the
+buffer is completely implementation specific.</p>
+<dl>
+	<dt>method flush( --&gt; Bool)</dt>
+	<dd>
+		<p>Flushes the buffers associated with this object.</p>
+	</dd>
+	<dt>method autoflush( --&gt; Bool) is rw</dt>
+	<dd>
+		<p>Forces this object to keep its buffers empty</p>
+		<p>If set to nonzero, forces a flush right away and after every write
+or print on the currently selected output channel.
+Default is 0 (regardless of whether the channel is really buffered
+by the system or not;
+<code>$OUT_FH.autoflush</code> tells you only whether you've asked Perl
+explicitly to flush after each write).
+<code>$*OUT</code> will typically be line buffered if output is to the
+terminal and block buffered otherwise.
+Setting this variable is useful primarily when you are
+outputting to a pipe or socket,
+such as when you are running a Perl program under rsh
+and want to see the output as it's happening.
+This has no effect on input buffering.</p>
+
+
+
+
+	</dd>
+</dl>
+</div>
+<h2 id="IO_Streamable">IO::Streamable</h2>
+<div id="IO_Streamable_CONTENT">
+<p>This role represents objects that depend on some external resource,
+which means that data might not be available at request.</p>
+<pre>role IO::Streamable does IO {...}
+</pre>
+<dl>
+	<dt>new()</dt>
+	<dd>
+<pre>method new(
+    Bool :$NoOpen,
+    Bool :$Blocking,
+    --&gt; IO::Streamable
+) {...}
+</pre>
+		<p>Unless the NoOpen option is passed, an open will be done on the <code>IO</code> object when it is
+created.</p>
+		<p>If blocking is passed in, .blocking() is called (see below).</p>
+	</dd>
+	<dt>method blocking( --&gt; Bool) is rw</dt>
+	<dd>
+		<p>This allows the user to control whether this object should do a
+blocking wait or immediately return in the case of not having data
+available.</p>
+	</dd>
+	<dt>uri</dt>
+	<dd>
+<pre>method uri(Str $uri --&gt; IO::Streamable) {...}
+</pre>
+		<p>This should be callable on the class, and act like a kind of &quot;new()&quot; function.  When given
+a URI, it returns an <code>IO::Streamable</code> of the appropriate type, and throws an error when an
+inappropriate type is passed in.  For example, calling <code>IO::File.uri('http://....')</code> will
+throw an error (but will suggest using just uri('http://...') instead).</p>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_Encoded">IO::Encoded</h2>
+<div id="IO_Encoded_CONTENT">
+<p>This is a generic role for encoded data streams.</p>
+<dl>
+	<dt>method encoding( --&gt; Str) is rw</dt>
+	<dt>method locale( --&gt; Str) is rw</dt>
+	<dd>
+		<p>Encoding and locale are required for sane conversions.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_Readable_Encoded">IO::Readable::Encoded</h2>
+<div id="IO_Readable_Encoded_CONTENT">
+<p>This role provides encoded access to a readable data stream, implies
+<code>IO::Encoded</code>. Might imply <code>IO::Buffered</code>, but that's not a requirement.</p>
+<dl>
+	<dt>method ins( --&gt; Int)</dt>
+	<dd>
+		<p>Returns the number of lines or records that have been input.
+Now with cleaned-up localization usage.</p>
+	</dd>
+	<dt>method input-line-separator( --&gt; Str) is rw</dt>
+	<dd>
+		<p>This regulates how &quot;get&quot; and &quot;lines&quot; behave.</p>
+		<p>The input line (record) separator, newline by default.
+This influences Perl's idea of what a ``line'' is.
+Works like awk's RS variable, including treating empty lines
+as a terminator if set to the null string.
+(An empty line cannot contain any spaces or tabs.)
+You may set it to a multi-character string to match a multi-character
+terminator, or to Nil to read through the end of file.
+Setting it to &quot;\n\n&quot; means something slightly different
+than setting to &quot;&quot;, if the file contains consecutive empty lines.
+Setting to &quot;&quot; will treat two or more consecutive empty lines
+as a single empty line. Setting to &quot;\n\n&quot; will blindly assume
+that the next input character belongs to the next paragraph,
+even if it's a newline.</p>
+		<p>You may also set it to a regular expression.  The value of <code>$/</code>
+will be (temporarily) set to the matched separator upon input,
+if you care about the contents of the separator.</p>
+	</dd>
+	<dt>method input-field-separator( --&gt; Str) is rw</dt>
+	<dd>
+		<p>[Deprecated.]</p>
+	</dd>
+	<dt>method input-escape( --&gt; Str) is rw</dt>
+	<dd>
+		<p>[Deprecated.]</p>
+	</dd>
+	<dt>method get( --&gt; Str)</dt>
+	<dd>
+		<p>Reads the stream before it finds a <code>$.input-line-separator</code> and
+returns it (autochomped by default).</p>
+	</dd>
+	<dt>method readfield( --&gt; Str)</dt>
+	<dd>
+		<p>[Deprecated. Use split or comb or an ILS regex.]</p>
+	</dd>
+	<dt>method getc( --&gt; Char)</dt>
+	<dd>
+		<p>Reads the next character in the set <code>$.encoding</code>,
+or <code>Failure</code> at end of file, or if there was
+an error (in either case <code>$!</code> is set).  Note that this
+function cannot be used interactively as a <code>readkey()</code> function, since under
+Unicode you can't tell the end of a grapheme until you
+see the beginning of the next one.</p>
+		<p>[TODO someone needs to define something like <code>readkey()</code> for terminal IO.
+Though most event-based programs will just want to feed keystrokes into the
+event queue.]</p>
+	</dd>
+	<dt>multi method comb ( Regex $matcher, Int $limit = * )</dt>
+	<dd>
+		<p>Reads everything into a string, and calls <code>.comb</code> on it with the same
+parameters. See <code>Str::comb</code>.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_Writeable_Encoded">IO::Writeable::Encoded</h2>
+<div id="IO_Writeable_Encoded_CONTENT">
+<p>This role provides encoded access to a writeable data stream, implies
+<code>IO::Encoded</code>. Might imply <code>IO::Buffered</code>, but that's not a requirement.</p>
+<p>If these are called in their non-object form, they operate on <code>$*OUT</code>, except in the
+case of warn(), which operates on <code>$*ERR</code>.  The form with leading dot prints <code>$_</code> to
+the appropriate handle unless <code>$_</code> happens to be a filehandle.</p>
+<dl>
+	<dt>Int method outs()</dt>
+	<dd>
+		<p>Returns the number of lines or records that have been output so far.</p>
+	</dd>
+	<dt>method output-line-separator( --&gt; Str) is rw</dt>
+	<dd>
+		<p>This regulates how say behaves.</p>
+	</dd>
+	<dt>method output-field-separator( --&gt; Str) is rw</dt>
+	<dd>
+		<p>[Deprecated.]</p>
+	</dd>
+	<dt>method output-escape( --&gt; Str) is rw</dt>
+	<dd>
+		<p>[Deprecated.]</p>
+	</dd>
+	<dt>method Str::print (IO $io = $*OUT --&gt; Bool)</dt>
+	<dt>method Str::say (IO $io = $*OUT --&gt; Bool)</dt>
+	<dt>method Array::print(IO $io = $*OUT --&gt; Bool)</dt>
+	<dt>method Array::say(IO $io = $*OUT --&gt; Bool)</dt>
+	<dt>method Hash::print(IO $io = $*OUT --&gt; Bool)</dt>
+	<dt>method Hash::say(IO $io = $*OUT --&gt; Bool)</dt>
+	<dd>
+		<p>Stringifies the invocant (if necessary) and then sends it to the output.
+<code>say</code> should add an additional <code>$.output-line-separator</code>.</p>
+
+
+
+
+	</dd>
+	<dt>method print (*@LIST --&gt; Bool)</dt>
+	<dt>multi print (*@LIST --&gt; Bool)</dt>
+	<dd>
+
+
+
+
+		<p>Stringifies each element, concatenates those strings, and sends the
+result to the output.
+Returns <code>Bool::True</code> if successful, <code>Failure</code> otherwise.</p>
+		<p>The compiler will warn you if use a bare <code>print</code> without arguments.
+(However, it's fine if you have an explicit argument list that evaluates to
+the empty list at runtime.)</p>
+<pre>print;             # warns
+if $_ { print }    # warns
+if $_ { print() }  # ok, but does nothing
+if $_ { print () } # ok, but does nothing
+</pre>
+	</dd>
+	<dt>method say (*@LIST --&gt; Bool)</dt>
+	<dt>multi say (*@LIST --&gt; Bool)</dt>
+	<dd>
+		<p>This is identical to print() except that it auto-appends the <code>output-line-separator</code> after
+the final argument.</p>
+<pre>Was:    print &quot;Hello, world!\n&quot;;
+Now:    say   &quot;Hello, world!&quot;;
+</pre>
+		<p>As with <code>print</code>, the compiler will warn you if you use a bare <code>say</code> without
+arguments.</p>
+	</dd>
+	<dt>multi note (*@LIST --&gt; Bool)</dt>
+	<dd>
+		<p>Does a &quot;say&quot; to <code>$*ERR</code>, more or less.  Like <code>warn</code>, it adds a
+newline only if the message does not already end in newline.  Unlike
+<code>warn</code>, it is not trappable as a resumable exception because it
+outputs directly to <code>$*ERR</code>.  You can suppress notes in a lexical
+scope by declaring:</p>
+<pre>only note(*@) {}
+</pre>
+	</dd>
+	<dt>method printf ($self: Str $fmt, *@LIST --&gt; Bool)</dt>
+	<dt>multi printf (Str $fmt, *@LIST --&gt; Bool)</dt>
+	<dd>
+		<p>The function form works as in Perl 5 and always prints to <code>$*OUT</code>.</p>
+	</dd>
+</dl>
+<p>For any handle marked as textual, all these output calls intercept any newline
+character and translate it to the current <code>output-line-separator</code> if it
+is defined as something other than newline.  No such translation is done on
+binary handles, though you may still specify a record separator.  In any case,
+escaping separators is the responsibility of the programmer.</p>
+</div>
+<h2 id="IO_Closeable">IO::Closeable</h2>
+<div id="IO_Closeable_CONTENT">
+<p>This role indicates that this object can be closed.</p>
+<dl>
+	<dt>method close( --&gt; Bool)</dt>
+	<dd>
+		<p>Closes the file or pipe associated with the object.</p>
+		<p>Returns <code>True</code> on success, but might return an unthrown <code>Failure</code>.
+Returns true only if <code>IO</code> buffers are successfully flushed and closes the system
+file descriptor.</p>
+		<p>Unlike in Perl 5, an <code>IO</code> object is not a special symbol table entry
+neither this object is available magically anywhere else. But as in
+Perl 5, unless stated otherwise, <code>IO::Closeable</code> objects always close
+themselves during destruction.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_Socket">IO::Socket</h2>
+<div id="IO_Socket_CONTENT">
+<pre>role IO::Socket
+    does IO::Closeable
+    does IO::Readable
+    does IO::Writeable
+    does IO::Streamable
+{
+    has %.options;
+    has Bool $.Listener;
+    ...
+}
+</pre>
+<p>Accessing the <code>%.options</code> would on Unix be done with <i>getsockopt(2)</i>/<i>setsockopt(2)</i>.</p>
+<p>The $.Listener attribute indicates whether the socket will be a listening socket when
+opened, rather than indicating whether it is currently listening.</p>
+<dl>
+	<dt>new</dt>
+	<dd>
+<pre>method new(
+    :$Listener, # initialises $.Listener
+)
+</pre>
+		<p>The initial value of the $.Listener attribute is defined according to the following rules:</p>
+<pre> * If $Listener is passed to .new(), then that value is used
+ * If neither a local address nor a remote address are passed in, throw an exception
+ * If no remote address is passed, then $.Listener is set to SOMAXCONN
+ * If no local address is used, then $Listener is set to 0
+ * If both local and remote addresses are used, throw an exception that asks people to
+   specify $Listener
+</pre>
+	</dd>
+	<dt>open</dt>
+	<dd>
+<pre>method open()
+</pre>
+		<p>If $.Listener is true, does a <i>bind(2)</i> and a <i>listen(2)</i>, otherwise does a
+<i>connect(2)</i>.</p>
+		<p>It's end-user use case is intended for the case where NoOpen is passed to .new().  .new()
+itself will presumably also call it.</p>
+	</dd>
+	<dt>close</dt>
+	<dd>
+<pre>method close()
+</pre>
+		<p>Implements the close() function from IO::Closeable by doing a shutdown on the connection
+(see below) with @how set to ('Readable', 'Writeable').</p>
+	</dd>
+	<dt>shutdown</dt>
+	<dd>
+<pre>method shutdown(Str @how)
+</pre>
+		<p>Does a <i>shutdown(2)</i> on the connection.  See also IO::Readable.isReadable and
+IO::Writeable.isWriteable.</p>
+		<p>$how can contain 1 or more of the strings 'Readable' and 'Writeable'.</p>
+	</dd>
+	<dt>accept</dt>
+	<dd>
+<pre>method accept( --&gt; IO::Socket)
+</pre>
+	</dd>
+	<dt>method read($buf is rw, Int $bytes --&gt; Int)</dt>
+	<dd>
+		<p>Implements the IO::Readable interface by doing a <i>recv(2)</i>.</p>
+	</dd>
+	<dt>method write($buf, Int $bytes --&gt; Int)</dt>
+	<dd>
+		<p>Implements the IO::Writeable interface by doing  a <i>send(2)</i>.</p>
+	</dd>
+	<dt>getpeername</dt>
+</dl>
+</div>
+<h2 id="IO_FileDescriptor">IO::FileDescriptor</h2>
+<div id="IO_FileDescriptor_CONTENT">
+<p>This role indicates that this object actually represents an open file
+descriptor in the os level.</p>
+<dl>
+	<dt>method int fileno()</dt>
+	<dd>
+		<p>File descriptors are always native integers, conforming to C89.</p>
+	</dd>
+</dl>
+</div>
+<h1 id="Classes">Classes</h1>
+<div id="Classes_CONTENT">
+</div>
+<h2 id="IO_File">IO::File</h2>
+<div id="IO_File_CONTENT">
+<p>This does file input and output.</p>
+<pre>class IO::File does IO::Streamable {
+    ...
+}
+</pre>
+<dl>
+	<dt>new</dt>
+	<dd>
+<pre>method new(
+    Path :$Path,
+    :$fd
+    Bool :$NoOpen,
+    :$Writeable,
+    :$Readable
+);
+</pre>
+		<p>The <code>Path</code> and <code>fd</code> options are mutually exclusive.  </p>
+		<p><code>NoOpen</code> is passed to <code>IO::Streamable.new()</code></p>
+		<p>Examples:</p>
+<pre># Read, no interpolation
+$fobj = IO::File.new(Path =&gt; qp{/path/to/file});
+
+# Write, interpolation
+$fobj = IO::File.new(
+    Path =&gt; p:qq{$filename},
+    Writeable =&gt; 1
+);
+
+# Read using file descriptor
+$fobj = IO::File.new(fd =&gt; $fd);
+</pre>
+		<p>This final example associates an <code>IO</code> object with an already-open file descriptor,
+presumably passed in from the parent process.</p>
+	</dd>
+	<dt>open()</dt>
+	<dd>
+		<p>This function opens a file that had the <code>NoOpen</code> option passed to the <code>new</code> method.</p>
+	</dd>
+	<dt>IO.truncate</dt>
+	<dt>IO.fcntl</dt>
+	<dd>
+		<p>Available only as a handle method.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_Directory">IO::Directory</h2>
+<div id="IO_Directory_CONTENT">
+<pre>role IO::Directory does IO::Streamable {
+    ...
+}
+</pre>
+<dl>
+	<dt>open</dt>
+	<dd>
+<pre>$dir.open(
+    Str  :$enc = &quot;Unicode&quot;,
+);
+</pre>
+		<p>Opens a directory for processing, if the <code>new</code> method was passed the <code>NoOpen</code> option.
+Makes the directory looks like
+a list of autochomped lines, so just use ordinary <code>IO</code> operators after the open.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_FileSystems">IO::FileSystems</h2>
+<div id="IO_FileSystems_CONTENT">
+<p>This represents the file systems mounted on the current machine (i.e. accessible via a 
+filesystem path).  </p>
+<pre>class IO::FileSystems {
+    has Str $.illegal-chars; # i.e. /\x0
+    has Int $.max-path;
+    has Int $.max-path-element;
+...
+}
+</pre>
+<dl>
+	<dt>chdir FILENAME
+ </dt>
+	<dt>chdir</dt>
+	<dd>
+		<p>Changes the current working directory to the one specified by FILENAME.
+If it succeeds it returns true, otherwise it returns <code>Failure</code> and
+sets <code>$!</code> (errno).  Note, though, that chdir affects only the system 
+directory; most things in Perl 6 that need a current directory depend
+on their thread's copy of $*CWD, so you probably want to set $*CWD
+instead of using chdir().  </p>
+	</dd>
+	<dt>find</dt>
+	<dd>
+		<p>Returns <code>Path</code> objects.  Path.Encoding is set to $?ENC unless the 
+$Encoding parameter is passed in (see Path for further discussion of
+encoding).</p>
+	</dd>
+	<dt>glob</dt>
+	<dd>
+		<p>Returns <code>Path</code> objects.  Path.Encoding is set to $?ENC unless the 
+Encoding parameter is passed in (see Path for further discussion of
+encoding).  </p>
+	</dd>
+	<dt>rename</dt>
+</dl>
+</div>
+<h2 id="Path">Path</h2>
+<div id="Path_CONTENT">
+<p>The &quot;Path&quot; role covers both the path to the file, and the file metadata.  They
+are usually created with the qp{/path/to/file} syntax.  It could be a directory,
+file, link, or something else OS-specific.  </p>
+<pre>role Path does Str does Array {
+    has Str $.Type;
+    has Str @.Elements;
+    has Str $.Encoding;
+    has Buf $.Binary;
+    has IO::ACL @.ACLs;
+    has %.times;
+...
+}
+</pre>
+<p><code>$.Type</code> can be <code>File</code>, <code>Directory</code>, <code>Link</code>, or <code>Other</code>.  See 
+<code>.create()</code> method documentation for how it is set.  </p>
+<p>The <code>@.Elements</code> array is a list of Str that contain the path elements, but
+all are checked before being pushed onto the array.  Note that @.Elements
+can not be accessed unless $.Encoding is defined.  </p>
+<p>The <code>%.times</code> has keys that can be e.g. <code>ctime</code>, <code>Modification</code>, and 
+<code>Access</code> (and maybe others on other operating systems), and the values are 
+all <code>Instant</code> objects.</p>
+<p>When a Path is used as a Str, it allows some operations, so that it can 
+be concatenated easily with other strings.  When used as an Array, it 
+acts as an array of path elements.  </p>
+</div>
+<h3 id="Methods">Methods</h3>
+<div id="Methods_CONTENT">
+<dl>
+	<dt>new</dt>
+	<dd>
+		<p>While new Path objects will normally be created with the qp{/path/to/file} 
+syntax, there are also OO-related alternatives.  </p>
+		<p>This is called automatically on object creation.</p>
+<pre>multi method new(
+    Stringy :$Path,
+    Str :@PathElements,
+    Str :$Encoding,
+
+    Str :@Constraints, 
+    Str :$Protocol,
+
+    Str :$Target,
+    Str :$LinkType,
+    Str :$Type,
+);
+</pre>
+		<p>Path and PathElements are mutually exclusive.  </p>
+		<p>If the $Encoding parameter is not defined, then, if Path is a Buf, 
+the $.Encoding attribute remains undefined, otherwise it is set to 
+$?ENC.  There are
+a number of features that don't work without the encoding being set.  </p>
+		<p>$Constraints determines whether the $Path and $Target strings should be
+assumed to be Unix-style, Windows-style, or something else.  </p>
+		<p>If the Type option is not passed in, the Path.Type attribute is initialised 
+as follows:</p>
+<pre>Value        Condition
+=====        =========
+Directory    $Path ends in a separator (i.e. /)
+Link         $Target is specified
+Other        $Protocol is specified
+Undefined    All other cases
+</pre>
+		<p>If the $.Type attribute is read (which will happen in a number of cases,
+including when you read $.Target and $.LinkType), but is still undefined, 
+then an attempt is 
+made to determine what its type should be from the filesystem.  If no 
+answers are found using this method, then it defaults to &quot;File&quot;.  </p>
+		<p>The <code>Target</code> and <code>LinkType</code> options are only relevant for links that have
+not been created yet, or are to be overwritten; in all other cases, 
+they will be determined from the filesystem.  If Target is not specified,
+this Path is assumed not to be a link.  If LinkType is not specified, 
+then the default is used (symbolic, on a Unix system).  </p>
+		<p>Examples:</p>
+<pre># These three do the same thing (on a Unix machine)
+$path = qp{/home/wayland};
+$path = Path.new(PathElements =&gt; ['home', 'wayland']);
+$path = Path.new(Constraints =&gt; ['Unix'], Path =&gt; qp{/home/wayland});
+$path = Path.new(Path =&gt; qp{/home/wayland});
+
+# This creates a symlink from /home/wayland/m to /home/wayland/Music
+$path = Path.new(
+    Path =&gt; qp{/home/wayland/m},
+    Target =&gt; qp{/home/wayland/Music},
+);
+</pre>
+	</dd>
+	<dt>path</dt>
+	<dd>
+		<p>method path( --&gt; Str);</p>
+		<p>Returns @.elements concatenated together for use as a string.  Usually this 
+is the path that it was originally created with.  </p>
+	</dd>
+	<dt>canonpath</dt>
+	<dd>
+<pre>method canonpath( --&gt; Str);
+</pre>
+		<p>No physical check on the filesystem, but a logical cleanup of a path.</p>
+	</dd>
+	<dt>realpath</dt>
+	<dd>
+<pre>method realpath( --&gt; Str);
+</pre>
+		<p>Gets the real path to the object, resolving softlinks/shortcuts, etc</p>
+	</dd>
+	<dt>resolvepath</dt>
+	<dd>
+<pre>method resolvepath(Str :@Types --&gt; Str);
+</pre>
+		<p>@Types can contain &quot;real&quot; and &quot;canon&quot;, in any order, and the
+method will run realpath and canonpath in the order specified.</p>
+	</dd>
+	<dt>ACCEPTS</dt>
+	<dd>
+<pre>multi method ACCEPTS(Path $filename);
+</pre>
+		<p>Test whether the specified filename is the same file as this file.  On a 
+Unix system, this would presumably be done by comparing inode numbers or 
+something.  </p>
+	</dd>
+	<dt>create
+   </dt>
+	<dd>
+<pre>method create(
+    Bool :$Recursive,
+    Bool :$Truncate,
+)
+</pre>
+		<p>Creates/touches the specified path.  In the case of a link or a directory, no 
+parameters are required.  If a file doesn't exist, then no parameters are 
+required.  If the path already exists, then an exception is thrown, unless
+the file is an ordinary file or a link, and $Truncate is true.  </p>
+		<p>The $Recursive option specifies that any necessary parent directories should
+also be created.  </p>
+	</dd>
+	<dt>touch</dt>
+	<dd>
+		<p>Update timestamps on a file.  </p>
+	</dd>
+	<dt>delete</dt>
+	<dd>
+		
+<pre>method delete(Bool :$Recursive --&gt; Int);
+</pre>
+		<p>This deletes the <code>Path</code> from the filesystem.  If the node has children, it 
+throws an error unless the <code>Recursive</code> option is specified.  It returns the 
+number of nodes deleted, and may throw an exception.  </p>
+	</dd>
+	<dt>get</dt>
+	<dd>
+<pre>multi get () 
+</pre>
+		<p>Returns the next line from $*ARGFILES.  (Note that other <code>get</code> functions
+and methods are operations on any iterator, not just an IO handle.)</p>
+	</dd>
+	<dt>lines</dt>
+	<dd>
+<pre>method lines ($handle:
+    Any  $limit = *,
+    Bool :$bin = False,
+    Str  :$enc = &quot;Unicode&quot;,
+    Any  :$nl = &quot;\n&quot;,
+    Bool :$chomp = True,
+    --&gt; List
+)
+
+multi lines (IO $fh = $*ARGFILES,
+    Any  $limit = *,
+    Bool :$bin = False,
+    Str  :$enc = &quot;Unicode&quot;,
+    Any  :$nl = &quot;\n&quot;,
+    Bool :$chomp = True,
+    --&gt; List
+)
+
+# See also Str.lines and lines(Str)
+</pre>
+		<p>Returns some or all the lines of a file or entries in a directory
+as a <code>List</code> regardless of context.
+See also <code>slurp</code>.  Note that lists are lazy by default, but you
+can always ask for <code>eager lines</code>.  Note that the limit semantics cannot be
+duplicated by subscripting, since</p>
+<pre>$fh.lines[^5]
+</pre>
+		<p>reads all the lines before the subscript gives you the first five,
+whereas</p>
+<pre>$fh.lines(5)
+</pre>
+		<p>reads only five lines from the handle.  Note that</p>
+<pre>$fh.lines(1)
+</pre>
+		<p>is equivalent to</p>
+<pre>$fh.get
+</pre>
+		<p>If fewer lines are available than the limit, it is not an error;
+you just get the number of lines available.</p>
+	</dd>
+	<dt>slurp</dt>
+	<dd>
+<pre>method slurp ($handle:
+    Bool :$bin = False,
+    Str  :$enc = &quot;Unicode&quot;,
+    --&gt; Str|Buf
+)
+multi slurp (IO $fh = $*ARGFILES,
+    Bool :$bin = False,
+    Str  :$enc = &quot;Unicode&quot;,
+    --&gt; Str|Buf
+)
+multi slurp (Str $filename,
+    Bool :$bin = False,
+    Str  :$enc = &quot;Unicode&quot;,
+    --&gt; Str|Buf
+)
+</pre>
+		<p>Slurps the entire file into a <code>Str</code> (or <code>Buf</code> if <code>:bin</code>) regardless of context.
+(See also <code>lines</code>.)</p>
+		<p>In the case of a directory, it uses &quot;\n&quot; to separate entries.  </p>
+	</dd>
+</dl>
+</div>
+<h3 id="Other_things">Other things</h3>
+<div id="Other_things_CONTENT">
+<dl>
+	<dt>IO ~~ :X
+
+</dt>
+	<dt>EXPR ~~ :X</dt>
+	<dd>
+<pre>  $file.:X
+  $file ~~ :X
+</pre>
+		<p>A file test, where X is one of the letters listed below.  This unary
+operator takes one argument, either a filename or a filehandle, and
+tests the associated file to see if something is true about it.</p>
+		<p>A <code>Pair</code> used as a pattern is treated as a file test.</p>
+<pre>:r  File is readable by effective uid/gid.
+:w  File is writable by effective uid/gid.
+:x  File is executable by effective uid/gid.
+:o  File is owned by effective uid.
+
+:R  File is readable by real uid/gid.
+:W  File is writable by real uid/gid.
+:X  File is executable by real uid/gid.
+:O  File is owned by real uid.
+
+:e  File exists.
+:s  File has a size &gt; 0 bytes
+
+:f  File is a plain file.
+:d  File is a directory.
+:l  File is a symbolic link.
+:p  File is a named pipe (FIFO), or Filehandle is a pipe.
+:S  File is a socket.
+:b  File is a block special file.
+:c  File is a character special file.
+:t  Filehandle is opened to a tty.
+
+:u  File has setuid bit set.
+:g  File has setgid bit set.
+:k  File has sticky bit set.
+</pre>
+		<p>Each of these is redirected (by <code>Pair.ACCEPTS</code>) to the
+corresponding method name on an IO object.  (These methods are not
+defined on bare strings).  Each test returns a boolean, and may be
+negated with a <code>!</code> after the colon.  They maybe ANDed and ORed using
+junctional logic.  In fact, this is the primary reason for writing
+them as a pattern match; if you only want one test, you could just call
+the individual IO method directly and more efficiently.  In any case,
+you must call the <code>.s</code> method to return the file's size in bytes.</p>
+		<p>There is no &lt;.z&gt; method, so just write <code>:!s</code> to test a file for zero size.
+Likewise, just call <code>.s</code> directly if you actually want to know the file's
+size, since <code>~~ :s</code> only returns a boolean.</p>
+		<p>The <code>.T</code> and <code>.B</code> methods will be replaced by some filetype guessing
+methods more appropriate to the age of Unicode.  There are likely methods
+to return the various ages of the file corresponding to Perl 5's <code>-M</code>,
+<code>-A</code>, and <code>-C</code> times, but they make no sense as booleans, so also call
+those methods directly (whatever they end up being named).</p>
+		<p>The interpretation of the file permission operators <code>:r</code>, <code>:R</code>,
+<code>:w</code>, <code>:W</code>, <code>:x</code>, and <code>:X</code> is by default based on:</p>
+		<p>
+			<dl>
+				<dt>* The mode of the file and the uids and gids of the user</dt>
+				<dt>* ACLs (access control lists)</dt>
+				<dt>* read-only filesystems</dt>
+			</dl>
+		</p>
+		<p>There may be other reasons you can't actually read, write, or execute
+the file.  Such reasons may be for example network filesystem access
+controls and unrecognized executable formats.</p>
+		<p>Also note that, for the superuser on the local filesystems, the <code>:r</code>,
+<code>:R</code>, <code>:w</code>, and <code>:W</code> tests always return 1, and <code>:x</code> and <code>:X</code> return 1
+if any execute bit is set in the mode.  Scripts run by the superuser
+may thus need to do a <code>stat</code> to determine the actual mode of the file,
+or temporarily set their effective uid to something else.</p>
+		<p>You can test multiple features using junctions:</p>
+<pre>  if $filename.IO ~~ :r &amp; :w &amp; :x  {...}
+</pre>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_ACL">IO::ACL</h2>
+<div id="IO_ACL_CONTENT">
+<p>This is a basic abstraction; for better control, use the operating-system specific
+interfaces, over which this is a thin veneer.</p>
+<pre>class IO::ACL {
+    has Str $.type; # &quot;User&quot;, &quot;Group&quot;, &quot;Everyone&quot;, ???
+    has Str $.id; # username or groupname; unused for $type eq &quot;Everyone&quot;
+    has %.permissions;
+            # Unsupported values may (or may not) throw
+            # UnsupportedPermission when set or read
+    has Path $.owningObject;
+    ...
+}
+</pre>
+<p>The permissions used in <code>%permissions</code> are:</p>
+<dl>
+	<dt>Readable</dt>
+	<dd>
+		<p>Should be supported by all filesystems as an item to read from the hash for the group
+&quot;Everyone&quot;.</p>
+	</dd>
+	<dt>Writeable</dt>
+	<dd>
+		<p>Should be supported by all filesystems as an item to read from the hash for the group
+&quot;Everyone&quot;.</p>
+	</dd>
+	<dt>Executable</dt>
+	<dd>
+		<p>Supported on most Unix systems, anyway.  Windows should be able to guess when this is
+read, and throw an exception if written to.</p>
+	</dd>
+	<dt>Default</dt>
+	<dd>
+		<p>An ACL of User,fred,Default sets the user &quot;fred&quot; to be the owner of the file.  This can be
+done with groups too.  Works on Unix, at least.</p>
+	</dd>
+</dl>
+<p>The <code>$.owningObject</code> attribute of <code>ACL</code> shows what the ACL is set on.  On a
+Windows system, this can be a parent directory, as permissions are inherited.</p>
+</div>
+<h2 id="IO_Socket_INET">IO::Socket::INET</h2>
+<div id="IO_Socket_INET_CONTENT">
+<pre>class IO::Socket::INET does IO::Socket {
+    has Str $.proto = 'TCP';
+    has Str $.host;
+    has Int $.port;
+    has Str $.localhost;
+    has Int $.localport;
+    ...
+}
+</pre>
+<dl>
+	<dt>new</dt>
+	<dd>
+<pre>multi method new(:$host!, :$port, *%attributes) { ... }
+multi method new(:$localhost!, :$localport, :$listen! *%attributes) { ... }
+</pre>
+		<p>Creates a new socket and opens it.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_Pipe">IO::Pipe</h2>
+<div id="IO_Pipe_CONTENT">
+<pre>class IO::Pipe does IO::Streamable does IO::Readable does IO::Writable {
+    ...
+}
+</pre>
+<p>Will need to set IO::Readable.isReadable and IO::Writable.isWriteable depending on opening
+method.</p>
+<dl>
+	<dt>close()</dt>
+	<dd>
+		<p>If the file handle came from a piped open, <code>close</code> will additionally
+return <code>Failure</code> (aliased to <code>$!</code>) if one of the other system calls involved fails, or if the
+program exits with non-zero status.  The exception object will contain any
+pertinent information.  Closing a pipe
+also waits for the process executing on the pipe to complete, in case you
+want to look at the output of the pipe afterwards, and
+implicitly puts the exit status value into the <code>Failure</code> object if necessary.</p>
+	</dd>
+	<dt>IO::Pipe.to</dt>
+	<dd>
+<pre>method to(Str $command, *%opts --&gt; Bool)
+method to(Str *@command, *%opts --&gt; Bool)
+</pre>
+		<p>Opens a one-way pipe writing to <code>$command</code>.  <code>IO</code> redirection for
+stderr is specified with <code>:err(IO)</code> or <code>:err&lt;Str&gt;</code>.  Other <code>IO</code> redirection
+is done with feed operators. XXX how to specify &quot;2&gt;&amp;1&quot;?</p>
+	</dd>
+	<dt>IO::Pipe.from</dt>
+	<dd>
+<pre>method from(Str $command, *%opts --&gt; Bool)
+method from(Str *@command, *%opts --&gt; Bool)
+</pre>
+		<p>Opens a one-way pipe reading from $command.  <code>IO</code> redirection for
+stderr is specified with <code>:err(IO)</code> or <code>:err&lt;Str&gt;</code>.  Other <code>IO</code> redirection
+is done with feed operators. XXX how to specify &quot;2&gt;&amp;1&quot;?</p>
+	</dd>
+	<dt>IO::Pipe.pair</dt>
+	<dd>
+<pre>method pair(--&gt; List of IO::Pipe)
+</pre>
+		<p>A wrapper for <i>pipe(2)</i>, returns a pair of <code>IO</code> objects representing the
+reader and writer ends of the pipe.</p>
+<pre>   ($r, $w) = IO::Pipe.pair;
+</pre>
+	</dd>
+</dl>
+</div>
+<h1 id="OS_specific_classes">OS-specific classes</h1>
+<div id="OS_specific_classes_CONTENT">
+</div>
+<h2 id="Unix">Unix</h2>
+<div id="Unix_CONTENT">
+</div>
+<h2 id="Path_Unix">Path::Unix</h2>
+<div id="Path_Unix_CONTENT">
+<dl>
+	<dt>chown</dt>
+	<dd>
+<pre>multi chown ($uid = -1, $gid = -1, *@files --&gt; Int)
+</pre>
+		<p>Changes the owner (and group) of a list of files.  The first
+two elements of the list must be the numeric uid and gid, in
+that order.  A value of -1 in either position is interpreted by
+most systems to leave that value unchanged.  Returns the number
+of files successfully changed.</p>
+<pre>$count = chown $uid, $gid, 'foo', 'bar';
+chown $uid, $gid, @filenames;
+</pre>
+		<p>On systems that support <code>fchown</code>, you might pass file handles
+among the files.  On systems that don't support <code>fchown</code>, passing
+file handles produces a fatal error at run time.</p>
+		<p>Here's an example that looks up nonnumeric uids in the passwd
+file:</p>
+<pre>   $user = prompt &quot;User: &quot;;
+   $pattern = prompt &quot;Files: &quot;;
+
+   ($login,$pass,$uid,$gid) = getpwnam($user)
+   or die &quot;$user not in passwd file&quot;;
+
+   @ary = glob($pattern);      # expand filenames
+   chown $uid, $gid, @ary;
+</pre>
+		<p>On most systems, you are not allowed to change the ownership of
+the file unless you're the superuser, although you should be
+able to change the group to any of your secondary groups.  On
+insecure systems, these restrictions may be relaxed, but this
+is not a portable assumption.  On POSIX systems, you can detect
+this condition this way:</p>
+<pre>use POSIX qw(sysconf _PC_CHOWN_RESTRICTED);
+$can-chown-giveaway = not sysconf(_PC_CHOWN_RESTRICTED);
+</pre>
+	</dd>
+	<dt>chmod LIST
+  </dt>
+	<dd>
+		<p>Changes the permissions of a list of files.  The first element of the
+list must be the numerical mode, which should probably be an octal
+number, and which definitely should <i>not</i> be a string of octal digits:
+<code>0o644</code> is okay, <code>0644</code> is not.  Returns the number of files
+successfully changed.</p>
+<pre>$count = chmod 0o755, 'foo', 'bar';
+chmod 0o755, @executables;
+$mode = '0644'; chmod $mode, 'foo';      # !!! sets mode to --w----r-T
+$mode = '0o644'; chmod $mode, 'foo';     # this is better
+$mode = 0o644;   chmod $mode, 'foo';     # this is best
+</pre>
+	</dd>
+	<dt>stat</dt>
+	<dt>IO.stat</dt>
+	<dd>
+<pre>$node.stat(Bool :$link); # :link does an lstat instead
+</pre>
+		<p>Returns a stat buffer.  If the lstat succeeds, the stat buffer evaluates
+to true, and additional file tests may be performed on the value.  If
+the stat fails, all subsequent tests on the stat buffer also evaluate
+to false.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_Socket_Unix">IO::Socket::Unix</h2>
+<div id="IO_Socket_Unix_CONTENT">
+<pre>role IO::Socket::Unix does IO::Socket {
+    has Str $.RemoteAddr, # Remote Address
+    has Str $.LocalAddr,  # Local Address
+}
+</pre>
+<dl>
+	<dt>new</dt>
+	<dd>
+<pre>method new(
+    Str  :$RemoteAddr,
+    Str  :$LocalAddr,
+
+    Bool :$Listener,   # Passed to IO::Socket.new()
+
+    Bool :$Blocking,   # Passed to IO::Streamable.new()
+    Bool :$NoOpen,     # Passed to IO::Streamable.new()
+
+    --&gt; IO::Socket::Unix
+) {...}
+</pre>
+	</dd>
+	<dt>pair</dt>
+	<dd>
+<pre>method pair(Int $domain, Int $type, Int $protocol --&gt; List of IO)
+</pre>
+		<p>A wrapper for <i>socketpair(2)</i>, returns a pair of <code>IO</code> objects representing the
+reader and writer ends of the socket.</p>
+<pre>   use IO::Socket;
+   ($r, $w) = IO::Socket::Unix.pair(AF_UNIX, SOCK_STREAM, PF_UNSPEC);
+
+
+
+</pre>
+	</dd>
+</dl>
+</div>
+<h2 id="IO_POSIX">IO::POSIX</h2>
+<div id="IO_POSIX_CONTENT">
+<p>Indicates that this object can perform standard posix <code>IO</code>
+operations. It implies <code>IO::Readable</code> and <code>IO::Writeable</code>.</p>
+<dl>
+	<dt>method dup( --&gt; IO)</dt>
+	<dt>has Bool $.blocking is rw</dt>
+	<dt>method flock(:$r,:$w --&gt; Bool)</dt>
+	<dt>method funlock( --&gt; Bool)</dt>
+	<dt>...</dt>
+</dl>
+</div>
+<h1 id="Unfiled">Unfiled</h1>
+<div id="Unfiled_CONTENT">
+<dl>
+	<dt>IO.ioctl</dt>
+	<dd>
+		<p>Available only as a handle method.</p>
+	</dd>
+	<dt>alarm</dt>
+	<dt>prompt</dt>
+	<dd>
+<pre>multi prompt (Str $prompt --&gt; Str)
+</pre>
+		<p>Should there be an IO::Interactive role?</p>
+	</dd>
+	<dt>Str.readpipe</dt>
+	<dt>sysopen</dt>
+	<dt>IO.sysseek</dt>
+	<dt>umask</dt>
+</dl>
+</div>
+<h1 id="Removed_functions">Removed functions</h1>
+<div id="Removed_functions_CONTENT">
+<dl>
+	<dt>IO.eof</dt>
+	<dd>
+		<p>Gone, see eoi <code>IO::Seekable</code>.</p>
+	</dd>
+	<dt>IO.fileno</dt>
+	<dd>
+		<p>See <code>IO::FileDescriptor</code>.</p>
+	</dd>
+	<dt>/(get|set)(host|net|proto|serv|sock).*/</dt>
+	<dd>
+		<p>Should be implemented by an external library.</p>
+	</dd>
+	<dt>lstat</dt>
+	<dd>
+		<p>Use <code>stat</code> with the <code>:link</code> option.</p>
+	</dd>
+	<dt>IO.name</dt>
+	<dd>
+		<p>Changed to <code>.path</code>, but we haven't gotten around to specifying this on all of them.</p>
+		<p>The <code>.name</code> method returns the name of the file/socket/uri the handle
+was opened with, if known.  Returns Nil otherwise.  There is no
+corresponding <code>name()</code> function.</p>
+	</dd>
+	<dt>pipe</dt>
+	<dd>
+		<p>Gone, see Pipe.pair</p>
+	</dd>
+	<dt>select(both)</dt>
+	<dd>
+		<p>Gone.  (Note: for sub-second sleep, just use sleep with a fractional argument.)</p>
+	</dd>
+	<dt>IO.shutdown()</dt>
+	<dd>
+		<p>Gone, see <code>IO::Socket.close()</code>, <code>$IO::Readable.isReadable</code>, and <code>$IO::Writeable.isWriteable</code></p>
+	</dd>
+	<dt>socketpair</dt>
+	<dd>
+		<p>Gone, see Socket.pair</p>
+	</dd>
+	<dt>IO.sysread</dt>
+	<dd>
+		<p>Gone, see <code>IO::Readable.read()</code>.</p>
+	</dd>
+	<dt>IO.syswrite</dt>
+	<dd>
+		<p>Gone, see <code>IO::Writeable.read()</code>.</p>
+	</dd>
+	<dt>utime</dt>
+	<dd>
+		<p>Gone, see <code>Path.times</code>.</p>
+	</dd>
+</dl>
+</div>
+<h1 id="Additions">Additions</h1>
+<div id="Additions_CONTENT">
+<p>Please post errors and feedback to perl6-language.  If you are making
+a general laundry list, please separate messages by topic.</p>
+</div>
+</div>
+</body>
+</html>

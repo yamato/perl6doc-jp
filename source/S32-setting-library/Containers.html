@@ -1,0 +1,1097 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>DRAFT: Synopsis 32: Setting Library - Containers.pod</title>
+</head>
+<div class="pod">
+<h1 id="TITLE">TITLE</h1>
+<div id="TITLE_CONTENT">
+<p>DRAFT: Synopsis 32: Setting Library - Containers.pod</p>
+</div>
+<h1 id="AUTHORS">AUTHORS</h1>
+<div id="AUTHORS_CONTENT">
+<pre>Rod Adams &lt;rod@rodadams.net&gt;
+Larry Wall &lt;larry@wall.org&gt;
+Aaron Sherman &lt;ajs@ajs.com&gt;
+Mark Stosberg &lt;mark@summersault.com&gt;
+Carl Mäsak &lt;cmasak@gmail.com&gt;
+Moritz Lenz &lt;moritz@faui2k3.org&gt;
+Tim Nelson &lt;wayland@wayland.id.au&gt;
+</pre>
+</div>
+<h1 id="VERSION">VERSION</h1>
+<div id="VERSION_CONTENT">
+<pre>Created: 19 Feb 2009 extracted from S29-functions.pod
+
+Last Modified: 5 Feb 2011
+Version: 28
+</pre>
+<p>The document is a draft.</p>
+<p>If you read the HTML version, it is generated from the Pod in the specs
+repository under
+<a href="https://github.com/perl6/specs/blob/master/S32-setting-library/Containers.pod">https://github.com/perl6/specs/blob/master/S32-setting-library/Containers.pod</a>
+so edit it there in the git repository if you would like to make changes.</p>
+</div>
+<h1 id="Function_Roles">Function Roles</h1>
+<div id="Function_Roles_CONTENT">
+</div>
+<h2 id="Positional">Positional</h2>
+<div id="Positional_CONTENT">
+<pre>role Positional {...}
+</pre>
+<p>The <code>Positional</code> role implies the ability to support <code>postcircumfix:&lt;[ ]&gt;</code>.</p>
+</div>
+<h2 id="Associative">Associative</h2>
+<div id="Associative_CONTENT">
+<pre>role Associative {...}
+</pre>
+<p>The <code>Associative</code> role implies the ability to support <code>postcircumfix:&lt;{ }&gt;</code>.</p>
+</div>
+<h2 id="Container">Container</h2>
+<div id="Container_CONTENT">
+<pre>role Container {...}
+</pre>
+<dl>
+	<dt>cat</dt>
+	<dd>
+<pre> our Cat multi cat( **@list )
+</pre>
+		<p><code>cat</code> reads arrays serially rather than in parallel as <code>zip</code> does. It
+returns all of the elements of the containers that were passed to it
+like so:</p>
+<pre> cat(@a;@b;@c);
+</pre>
+		<p>Typically, you could just write <code>(@a,@b,@c)</code>, but sometimes
+it's nice to be explicit about that:</p>
+<pre> @foo := [[1,2,3],[4,5,6]]; say cat(||@foo); # 1,2,3,4,5,6
+</pre>
+		<p>In addition, a <code>Cat</code> in item context emulates the <code>Str</code> interface lazily.</p>
+		<p>[Conjecture: Cats should maybe just do the lazy strings, and leave flattening
+to other operators.]</p>
+	</dd>
+	<dt>roundrobin</dt>
+	<dd>
+<pre> our Parcel multi roundrobin( **@list )
+</pre>
+		<p><code>roundrobin</code> is very similar to <code>zip</code>.  The difference is that
+<code>roundrobin</code> will not stop on lists that run out of elements but
+simply skip any undefined value:</p>
+<pre> my @a = 1;
+ my @b = 1..2;
+ my @c = 1..3;
+ for roundrobin( @a; @b; @c ) -&gt; $x { ... }
+</pre>
+		<p>will get the following values for <code>$x</code>: <code>1, 1, 1, 2, 2, 3</code></p>
+	</dd>
+	<dt>zip</dt>
+	<dd>
+<pre> our Parcel of Parcel multi zip ( **@list )
+ our Parcel of Parcel multi infix:&lt;Z&gt; ( **@list )
+</pre>
+		<p>zip takes any number of arrays and returns one tuple for every index.
+This is easier to read in an example:</p>
+<pre> for zip(@a;@b;@c) -&gt; $nth_a, $nth_b, $nth_c {
+   ...
+ }
+</pre>
+		<p>Mnemonic: the input arrays are &quot;zipped&quot; up like a zipper.</p>
+		<p>The <code>zip</code> function defaults to stopping as soon as any of its lists
+is exhausted.  This behavior may be modified by conceptually extending
+any short list using <code>*</code>, which replicates the final element.</p>
+		<p>If all lists are potentially infinite, an evaluation in <code>eager</code>
+context will automatically fail as soon as it can be known that all
+sublists in the control of iterators of infinite extent, such as
+indefinite ranges or arbitrary replication.  If it can be known at
+compile time, a compile-time error results.</p>
+		<p><code>Z</code> is an infix equivalent for zip:</p>
+<pre> for @a Z @b Z @c -&gt; $a, $b, $c {...}
+</pre>
+		<p>In lol context a list of <code>List</code> is returned instead of a flat list.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="List">List</h2>
+<div id="List_CONTENT">
+<p>The following are defined in the <code>List</code> role/class:</p>
+<pre>role List does Container {...}
+</pre>
+<dl>
+	<dt>new</dt>
+	<dd>
+<pre> our List multi method new(*@args)
+</pre>
+		<p>Constructs an <code>List</code> that can visit all iterable elements of the all the arguments.</p>
+	</dd>
+	<dt>list</dt>
+	<dd>
+<pre> our List sub list(*@args)
+</pre>
+		<p>Constructs an <code>List</code> that can visit all iterable elements of the all the arguments.</p>
+	</dd>
+	<dt>cat</dt>
+	<dd>
+<pre> our Cat multi cat ( @values )
+</pre>
+		<p>Returns a <code>Cat</code> object, a concatenated version of the list that does the <code>Str</code>
+interface, but generates the string lazily to the extent permitted
+by the pattern of access to the string.  Its two primary uses are
+matching against an array of strings and doing the equivalent of a
+<code>join('')</code>, except that <code>join</code> is always eager.  However, a <code>Cat</code>
+in an interpolative context is also effectively eager, since the
+interpolator needs to know the string length.  List context is lazy,
+though, so a <code>cat</code> of a <code>cat</code> is also lazy, and in fact, you just
+get a flat cat because <code>cat</code> in a list context is a no-op.  The <code>Cat</code>
+interface also lets you interrogate the object at a particular string
+position without actually stringifying the element; the regex engine
+can make use of this to match a tree node, for instance, without
+serializing the entire subtree.</p>
+		<p>Accessing a filehandle as both a filehandle and as a <code>Cat</code> is undefined,
+because lazy objects are not required to be as lazy as possible, but may
+instead choose to precalculate values in semi-eager batches to maximize
+cache hits.</p>
+	</dd>
+	<dt>classify</dt>
+	<dd>
+<pre> our Hash multi method classify ( @values: &amp;mapper )
+ our Hash multi method classify ( @values: %mapper )
+ our Hash multi method classify ( @values: @mapper )
+ our Hash multi classify ( &amp;mapper, *@values )
+ our Hash multi classify ( %mapper, *@values )
+ our Hash multi classify ( @mapper, *@values )
+</pre>
+		<p><code>classify</code> transforms a list or array of values into a hash
+representing the classification of those values according to a mapper;
+each hash key represents the classification for one or more of the
+incoming list values, and the corresponding hash value contains
+an array of those list values classified by the mapper into the category
+of the associated key.  For example:</p>
+<pre>  @list = (1, 2, 3, 4);
+  (:@even, :@odd) := |classify { $_ % 2 ?? 'odd' !! 'even' }, @list;
+</pre>
+		<p>In this example, @even will contain all even numbers from <code>@list</code>
+and <code>@odd</code> will contain all odd numbers from <code>@list</code>.</p>
+		<p>To simply transform a list into a hash of arrays:</p>
+<pre>  %cars_by_color := classify { .color }, @cars;
+  red_car_owners(%cars_by_color&lt;red&gt;.map:{.owner});
+</pre>
+		<p>A mapper maybe any unary function, hash, or array.
+Values that have no mapping will be classified under an undefined
+failure key (whatever is returned by the mapper in use).  [Conjecture:
+if a hash comes with a default value, it can map anything.]</p>
+		<p><code>classify</code> always assumes that the mapper returns a single value.
+To categorize values into multiple categories, see <code>categorize</code>.</p>
+	</dd>
+	<dt>categorize</dt>
+	<dd>
+<pre> our Hash multi method categorize ( @values: &amp;mapper )
+ our Hash multi method categorize ( @values: %mapper )
+ our Hash multi method categorize ( @values: @mapper )
+ our Hash multi categorize ( &amp;mapper, *@values )
+ our Hash multi categorize ( %mapper, *@values )
+ our Hash multi categorize ( @mapper, *@values )
+</pre>
+		<p>Like <code>classify</code>, <code>categorize</code> transforms a list or array of values
+into a hash representing the categorizations of those
+values according to a mapper; each hash key represents one possible
+categorization for one or more of the incoming list values, and
+the corresponding hash value contains an array of those list values
+categorized by the mapper into the category of the associated key.</p>
+		<p>Unlike <code>classify</code>, <code>categorize</code> always assumes that the return
+value of the mapper is a list of categories that are appropriate to
+the current value.  Hence, if the mapper returns <code>Nil</code>, the value
+is discarded rather than being returned under a <code>Nil</code> key.  On the
+other hand, if the mapper returns a list of categories, the value in
+question will be pushed into multiple hash locations (while <code>classify</code>
+would merely make a key out of the list returned from the mapper).</p>
+	</dd>
+	<dt>grep</dt>
+	<dd>
+<pre> our List multi method grep ( @values: Matcher $test )
+ our List multi grep ( Matcher $test, *@values )
+</pre>
+		<p><code>grep</code> takes a list or array of values and returns a lazily evaluated
+list comprised of all of the values from the original list for which
+the <code>$test</code> smart-matches as true.</p>
+		<p>Here is an example of its use:</p>
+<pre> @friends = grep { .is_friend }, @coworkers;
+</pre>
+		<p>This takes the array <code>@coworkers</code>, checks every element to see
+which ones return true for the <code>.is_friend</code> method, and returns
+the resulting list to store into <code>@friends</code>.</p>
+		<p>Note that, unlike in Perl 5, a comma is required after the <code>Matcher</code>
+in the multi form.</p>
+		<p>Note that <code>grep</code> is an implicit loop, so <code>next</code> and <code>last</code> without
+an argument will iterate or terminate the <code>grep</code> itself, not some
+loop surrounding the statement containing the <code>grep</code>.  Use a label
+if you mean the other thing.</p>
+	</dd>
+	<dt>first</dt>
+	<dd>
+<pre> our Parcel multi method first ( @values: Matcher $test )
+ our Parcel multi first ( Matcher $test, *@values )
+</pre>
+		<p><code>first</code> searches exactly like <code>grep</code> but returns only the first matching value.</p>
+	</dd>
+	<dt>pick</dt>
+	<dd>
+<pre> our multi method pick ( @values: Int $num = 1 )
+ our multi method pick ( @values: Whatever )
+ our multi pick ( Int $num, *@values )
+ our multi pick ( Whatever, *@values )
+</pre>
+		<p><code>pick</code> takes a list or array of values and returns a random
+selection of elements from the list (without replacement;
+see <code>roll</code> for dice roll aka replacement semantics).  If <code>*</code>
+is specified as the number (or if the number of elements in
+the list is less than the specified number), all the available
+elements are returned in random order:</p>
+<pre>@team = @volunteers.pick(5);
+@shuffled = @deck.pick(*);
+</pre>
+		<p>Due to the normal semantics of returning a <code>Parcel</code>, a pick of a
+single element may be used as an item without requiring <code>.[0]</code>.</p>
+	</dd>
+	<dt>roll</dt>
+	<dd>
+<pre> our multi method roll ( @values: Int $num = 1 )
+ our multi method roll ( @values: Whatever )
+ our multi roll ( Int $num, *@values )
+ our multi roll ( Whatever, *@values )
+</pre>
+		<p><code>roll</code> takes a list or array of values and returns a random selection
+of elements from the list, like rolling N independent dice, where
+each list element corresponds to one side of your dice.  This is also known
+as &quot;pick with replacement&quot;, that is, like pulling one marble out of
+bag and putting it back, and doing this N times; see <code>pick</code> for the
+non-replacement semantics.  If <code>*</code> is specified as the number, <code>*</code>
+provides an infinite list of random choices from <code>@values</code>:</p>
+<pre>@byte = (0,1).roll(8);                   # 8d2
+for (1..20).roll(*) -&gt; $die_roll { ... } # 1d20 xx *
+</pre>
+		<p>Due to the normal semantics of returning a <code>Parcel</code>, a roll of a
+single element may be used as an item without requiring <code>.[0]</code>.</p>
+		<p>Note that <code>roll 1, 6</code> is not the same as a 1d6, but always returns
+<code>6</code> as a degenerate one-sided die.  Use <code>roll 1, 1..6</code> to simulate a six-sided die.</p>
+	</dd>
+	<dt>join</dt>
+	<dd>
+<pre> our Str multi method join ( @values: Str $separator = '' )
+ our Str multi join ( Str $separator = '', *@values )
+</pre>
+		<p><code>join</code> returns a single string comprised of all of the elements
+of <code>@values</code>, separated by <code>$separator</code>.</p>
+		<p>Given an empty list, <code>join</code> returns the empty string.</p>
+		<p>The separator defaults to the null string.  To join with space,
+just coerce to <code>Str</code>.</p>
+	</dd>
+	<dt>map</dt>
+	<dd>
+<pre> our List of Parcel multi method map ( @values: Code *&amp;expression )
+ our List of Parcel multi map ( Code $expression, *@values )
+</pre>
+		<p><code>map</code> returns a lazily evaluated list which is comprised of
+the return value of the expression, evaluated once for every
+one of the <code>@values</code> that are passed in.</p>
+		<p>If the expression returns no values or multiple values, then the
+resulting list may not be the same length as the number of values
+that were passed.</p>
+		<p>The actual return value is a multislice containing one slice per
+map iteration.  In most contexts these slices are flattened into a
+single list.</p>
+		<p>Note that <code>map</code> is an implicit loop, so <code>next</code> and <code>last</code> without
+an argument will iterate or terminate the <code>map</code> itself, not some
+loop surrounding the statement containing the <code>map</code>.  Use a label
+if you mean the other thing.</p>
+	</dd>
+	<dt>reduce</dt>
+	<dd>
+<pre> our Item multi method reduce ( @values: Code *&amp;expression )
+ our Item multi reduce ( Code $expression ;; *@values ) {
+   my $res;
+   for @values -&gt; $cur {
+ FIRST {$res = $cur; next;}
+ $res = &amp;$expression($res, $cur);
+   }
+   $res;
+ }
+</pre>
+		<p>Note that <code>reduce</code> is an implicit loop, so <code>next</code> and <code>last</code> without
+an argument will iterate or terminate the <code>reduce</code> itself, not some
+loop surrounding the statement containing the <code>reduce</code>.  Use a label
+if you mean the other thing.</p>
+
+
+
+
+	</dd>
+	<dt>reverse</dt>
+	<dd>
+<pre> our List multi method reverse ( @values: ) is export
+ our List multi reverse ( *@values ) {
+gather {
+    1 while take pop @values;
+}
+ }
+</pre>
+		<p>Note that strings are now reversed with <code>flip</code>.</p>
+	</dd>
+	<dt>rotate</dt>
+	<dd>
+<pre> our List multi method rotate ( @values is copy: Int $n = 1) is export
+</pre>
+		<p>Produces a new list with the same elements as the old list,
+rotated by the specified amount.  See Array::rotate for more
+info.</p>
+	</dd>
+	<dt>sort</dt>
+	<dd>
+<pre> our Array multi method sort( @values: *&amp;by )
+ our Array multi method sort( @values: Ordering @by )
+ our Array multi method sort( @values: Ordering $by = &amp;infix:&lt;cmp&gt; )
+
+ our List multi sort( Ordering @by,  *@values )
+ our List multi sort( Ordering $by, *@values )
+</pre>
+		<p>Returns <code>@values</code> sorted, using criteria <code>$by</code> or <code>@by</code> for
+comparisons. <code>@by</code> differs from <code>$by</code> in that each criterion is
+applied, in order, until a non-zero (tie) result is achieved.</p>
+		<p>If <code>$by</code> is a code object of arity zero or one, it is applied on each item
+of <code>@values</code>, and <code>@values</code> is sorted by comparing the result values with
+<code>&amp;infix:&lt;cmp&gt;</code> (Schwartzian Transform).</p>
+		<p><code>Ordering</code> is as described in <b>Type Declarations</b> in <cite>S29</cite>.  Any
+<code>Ordering</code> may receive either or both of the mixins <code>descending</code>
+and <code>canon(Code $how)</code> to reverse the order of sort, or
+to adjust the case, sign, or other order sensitivity of <code>cmp</code>.
+(Mixins are applied to values using <code>but</code>.)  If a <code>Signature</code>
+is used as an <code>Ordering</code> then sort-specific traits such as <code>is
+canon($how)</code> are allowed on the positional elements.</p>
+		<p>If all criteria are exhausted when comparing two elements, sort should
+return them in the same relative order they had in <code>@values</code>.</p>
+		<p>To sort an array in place use the <code>.=sort</code> mutator form.</p>
+		<p>See <a href="http://www.nntp.perl.org/group/perl.perl6.language/16578">http://www.nntp.perl.org/group/perl.perl6.language/16578</a>
+for more details and examples (with <code>is insensitive</code> meaning
+<code>is canonicalized(&amp;lc)</code>.)</p>
+	</dd>
+	<dt>min</dt>
+	<dd>
+<pre> our multi method min( @values: *&amp;by )
+ our multi method min( @values: Ordering @by )
+ our multi method min( @values: Ordering $by = &amp;infix:&lt;cmp&gt; )
+
+ our multi min( *@values, Ordering :@by )
+ our multi min( *@values, Ordering :$by )
+</pre>
+		<p>Returns the earliest (i.e., lowest index) minimum element
+of <code>@values</code> , using criteria <code>$by</code> or <code>@by</code> for
+comparisons. <code>@by</code> differs from <code>$by</code> in that each criterion
+is applied, in order, until a non-zero (tie) result is achieved.</p>
+		<p><code>Ordering</code> is as described in <b>Type Declarations</b> in <cite>S29</cite>.  Any
+<code>Ordering</code> may receive the mixin <code>canonicalized(Code $how)</code> to
+adjust the case, sign, or other order sensitivity of <code>cmp</code>.
+(Mixins are applied to values using <code>but</code>.)  If a <code>Signature</code>
+is used as an <code>Ordering</code> then sort-specific traits such as <code>is
+canonicalized($how)</code> are allowed on the positional elements.</p>
+		<p>For a <code>min</code> function that does not require an ordering, see the
+<code>[min]</code> reduction operator.</p>
+	</dd>
+	<dt>max</dt>
+	<dd>
+<pre> our multi method max( @values: *&amp;by )
+ our multi method max( @values: Ordering @by )
+ our multi method max( @values: Ordering $by = &amp;infix:&lt;cmp&gt; )
+
+ our multi max(*@values, Ordering :@by,)
+ our multi max(*@values, Ordering :$by,)
+</pre>
+		<p>Returns the earliest (i.e., lowest index) maximum element
+of <code>@values</code> , using criteria <code>$by</code> or <code>@by</code> for
+comparisons. <code>@by</code> differs from <code>$by</code> in that each criterion
+is applied, in order, until a non-zero (tie) result is achieved.</p>
+		<p><code>Ordering</code> is as described in <b>Type Declarations</b> in <cite>S29</cite>.  Any
+<code>Ordering</code> may receive the mixin <code>canonicalized(Code $how)</code> to
+adjust the case, sign, or other order sensitivity of <code>cmp</code>.
+(Mixins are applied to values using <code>but</code>.)  If a <code>Signature</code>
+is used as an <code>Ordering</code> then sort-specific traits such as <code>is
+canonicalized($how)</code> are allowed on the positional elements.</p>
+		<p>For a <code>max</code> function that does not require an ordering, see the
+<code>[max]</code> reduction operator.</p>
+	</dd>
+	<dt>minmax</dt>
+	<dd>
+<pre> our multi method minmax( @values: *&amp;by )
+ our multi method minmax( @values: Ordering @by )
+ our multi method minmax( @values: Ordering $by = &amp;infix:&lt;cmp&gt; )
+
+ our multi minmax( *@values, Ordering :@by )
+ our multi minmax( *@values, Ordering :$by )
+</pre>
+		<p>Returns a <code>Range</code> from the minimum element of <code>@values</code> to the maximum
+element, using criteria <code>$by</code> or <code>@by</code> for comparisons. <code>@by</code> differs from
+<code>$by</code> in that each criterion is applied, in order, until a non-zero (tie)
+result is achieved. <code>Range</code> elements in <code>@values</code> are treated as if their
+minimum and maximum values were passed individually, except that if the
+corresponding <code>excludes</code> flag is set in Range, the excludes flag is also set
+in the returned <code>Range</code>.</p>
+		<p><code>Ordering</code> is as described in <b>Type Declarations</b> in <cite>S29</cite>.  Any
+<code>Ordering</code> may receive the mixin <code>canonicalized(Code $how)</code> to
+adjust the case, sign, or other order sensitivity of <code>cmp</code>.
+(Mixins are applied to values using <code>but</code>.)  If a <code>Signature</code>
+is used as an <code>Ordering</code> then sort-specific traits such as <code>is
+canonicalized($how)</code> are allowed on the positional elements.</p>
+		<p>For a <code>minmax</code> function that does not require an ordering, see the
+<code>[minmax]</code> reduction operator.</p>
+	</dd>
+	<dt>any</dt>
+	<dd>
+<pre> our Junction multi method any( @values: )
+ our Junction multi any( *@values ) is export
+</pre>
+		<p>Returns a junction with all the values of the list <code>|</code>-ed together. The
+junction will only match against another value if at least one of the
+values in the list matches.</p>
+	</dd>
+	<dt>all</dt>
+	<dd>
+<pre> our Junction multi method all( @values: )
+ our Junction multi all( *@values ) is export
+</pre>
+		<p>Returns a junction with all the values of the list <code>&amp;</code>-ed together. The
+junction will only match against another value if all of the values in the
+list match.</p>
+	</dd>
+	<dt>one</dt>
+	<dd>
+<pre> our Junction multi method one( @values: )
+ our Junction multi one( *@values ) is export
+</pre>
+		<p>Returns a junction with all the values of the list <code>^</code>-ed together. The
+junction will only match against another value if exactly one of the values
+in the list matches.</p>
+	</dd>
+	<dt>none</dt>
+	<dd>
+<pre> our Junction multi method none( @values: )
+ our Junction multi none( *@values ) is export
+</pre>
+		<p>Returns a junction which will only match against another value if none of
+the values in the list matches.</p>
+	</dd>
+	<dt>comb</dt>
+	<dd>
+<pre> multi method comb ( Regex $matcher, Int $limit = * )
+</pre>
+		<p>Treats the list as a string (by simply <code>join</code>ing them together), and calls
+<code>.comb</code> on that string with the same parameters. See <code>Str::comb</code>.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="Array">Array</h2>
+<div id="Array_CONTENT">
+<p>All these methods are defined in the <code>Array</code> role/class.</p>
+<pre>role Array does List {...}
+</pre>
+<dl>
+	<dt>new </dt>
+	<dd>
+<pre> our Array multi method new(*@args)
+</pre>
+		<p>Constructs a new <code>Array</code> containing the arguments passed to <code>new</code>.</p>
+	</dd>
+	<dt>shape</dt>
+	<dd>
+<pre> our Parcel method shape (@array: ) is export
+</pre>
+		<p>Returns the declared shape of the array, as described in S09.</p>
+	</dd>
+	<dt>end</dt>
+	<dd>
+<pre> our Any method end (@array: ) is export
+</pre>
+		<p>Returns the final subscript of the first dimension; for a one-dimensional
+array this simply the index of the final element.  For fixed dimensions
+this is the declared maximum subscript.  For non-fixed dimensions (undeclared
+or explicitly declared with <code>*</code>), the index of the actual last element is used.
+So that the degenerate case of an empty range works correctly, <code>-1</code> is returned
+if the array is empty.  (If you actually try to index with <code>-1</code>, you'll get a
+failure.)</p>
+	</dd>
+	<dt>elems</dt>
+	<dd>
+<pre> our Int method elems (@array: ) is export
+</pre>
+		<p>Returns the length of the array counted in elements.</p>
+	</dd>
+	<dt>delete</dt>
+	<dd>
+<pre> our List method delete (@array : *@indices ) is export
+</pre>
+		<p>Sets elements specified by <code>@indices</code> in the invocant to a
+non-existent state, as if they never had a value. Deleted elements at
+the end of an Array shorten the length of the Array, unless doing so
+would violate an <code>is shape()</code> definition.</p>
+		<p>The interpretation of <code>@indices</code> is subject to change.
+The normal way to delete is by applying a <code>:delete</code> adverb to
+any subscripting operation.</p>
+		<p>Returns the value(s) previously held in deleted locations.</p>
+	</dd>
+	<dt>:delete</dt>
+	<dd>
+		<p>This adverb may be applied to any subscripting operation.  The operation
+returns the elements normally, but reads them out destructively.</p>
+	</dd>
+	<dt>exists</dt>
+	<dd>
+<pre> our Bool method exists (@array: Int $index)
+</pre>
+		<p>True if the specified Array element has been assigned to. This
+is not the same as being defined.</p>
+		<p>Supplying a different number of indices than invocant has dimensions is
+an error.</p>
+		<p>The normal way to test for existence is to apply the <code>:exists</code>
+adverb to a subscripting operation.</p>
+	</dd>
+	<dt>:exists</dt>
+	<dd>
+		<p>This adverb may be applied to any subscripting operation.  The
+operation returns true if specified element exists.  If a slice
+is specified by the subscript, a <code>Parcel</code> of <code>Bool</code> is returned,
+which can be processed using junctions.</p>
+
+
+
+
+	</dd>
+	<dt>pop</dt>
+	<dd>
+<pre> our Scalar multi method pop ( @array: ) is export
+</pre>
+		<p>Remove the last element of <code>@array</code> and return it.
+If <code>@array</code> is empty returns a failure.</p>
+	</dd>
+	<dt>push</dt>
+	<dd>
+<pre> our Array multi method push ( @array: *@values ) is export
+</pre>
+		<p>Adds all the values to the end of <code>@array</code> eagerly.
+Returns the modified array.</p>
+	</dd>
+	<dt>plan</dt>
+	<dd>
+<pre> our Array multi method plan ( @array: *@list ) is export
+</pre>
+		<p>Adds the list to the end of <code>@array</code> lazily as a kind of &quot;lazy push&quot;.
+(That is, the reified part of the array is not modified, but the list
+is appended to the not-yet-reified specifications for how to
+extend the array on demand, if it is subscripted or shifted beyond the
+currently reified elements.)  Returns the modified array.</p>
+		<p>Note that the semantics of these are different:</p>
+<pre>@ro := (0,1,*+*...*);
+@rw.plan(0,1,*+*...*);
+</pre>
+		<p>In the first case, <code>@ro</code> is bound directly to the list, so its
+values are memoized but not considered mutable.  In contrast, <code>@rw</code>
+allows modification of any reified element; new elements are merely
+initialized to the fibonacci sequence.  If you try to modify a
+non-reified element, the array will be reified to that point before
+the modification is attempted.</p>
+		<p>For all external purposes, the array considers that its plan is
+part of the array.  If you ask for <code>.elems</code>, for instance, it will
+try to reify the entire array, which might take a long time in the
+case of infinite arrays (though a list may return <code>Inf</code> if it can
+determine this).  Methods such as <code>.splice</code> can refer to the rest of
+the list in the abstract, and need only reify those elements necessary
+to perform the operation in question.  (Hence, there is no need for
+an <code>.unplan</code> method, since the plan of an array may be thrown away
+by using <code>splice</code> without the risk of memory exhaustion.)</p>
+	</dd>
+	<dt>rotate</dt>
+	<dd>
+<pre> our Array multi method rotate ( @array is copy: Int $n = 1, Int *@n) is export
+</pre>
+		<p>Produces a new array with the same elements as the old array,
+rotated by the specified amount.  A positive rotation of 1 is defined as:</p>
+<pre>@array.push(@array.shift);
+</pre>
+		<p>A negative shift of 1 is defined as:</p>
+<pre>@array.unshift(@array.pop);
+</pre>
+		<p>If the magnitude of <code>$n</code> is larger than the number of elements,
+the rotational semantics must be equivalent to doing:</p>
+<pre>@array.rotate(sign($n)) for ^abs($n)
+</pre>
+		<p>The new array to be returned contains nothing but aliases for
+the old array's elements; however, you can use this to get
+any of three different semantic behaviors:</p>
+<pre>@a.=rotate       # @a is rotated in place
+@b = @a.rotate   # @b contains copied elements of rotated @a
+@b := @a.rotate  # @b contains aliased elements of rotated @a
+</pre>
+		<p>If additional rotations are specified via the slurpy, they are
+applied to subdimensions of multidimensional arrays.  (To perform
+a flat rotation on a shaped array requires flattening to a list
+and rotating that instead.)</p>
+	</dd>
+	<dt>shift</dt>
+	<dd>
+<pre> our Scalar multi method shift ( @array:  ) is export
+</pre>
+		<p>Remove the first element from <code>@array</code> and return it.
+If <code>@array</code> is empty returns a failure.</p>
+	</dd>
+	<dt>splice</dt>
+	<dd>
+<pre> our multi method splice( @array is rw: Int $offset = 0, Int $size?, *@values ) is export
+</pre>
+		<p><code>splice</code> fills many niches in array-management, but its fundamental behavior
+is to remove zero or more elements from an array and replace them with a
+new (and potentially empty) list. This operation can shorten or lengthen
+the target array.</p>
+		<p><code>$offset</code> is the index of the array element to start with. It defaults
+to <code>0</code>.</p>
+		<p><code>$size</code> is the number of elements to remove from <code>@array</code>. It defaults
+to removing the rest of the array from <code>$offset</code> on.</p>
+		<p>The slurpy list of values (if any) is then inserted at <code>$offset</code>.</p>
+		<p>Calling splice with a traditional parameter list, you must define <code>$offset</code>
+and <code>$size</code> if you wish to pass a replacement list of values. To avoid
+having to pass these otherwise optional parameters, use the piping operator(s):</p>
+<pre> splice(@array,10) &lt;== 1..*;
+</pre>
+		<p>which replaces <code>@array[10]</code> and all subsequent elements with an infinite
+sequence starting at <code>1</code>.</p>
+		<p>This behaves similarly to Perl 5's <code>splice</code>.</p>
+		<p>If <code>@array</code> is multidimensional, <code>splice</code> operates only on the first
+dimension, and works with Array References.</p>
+		<p><code>splice</code> returns a <code>Parcel</code> of the deleted elements, which behaves as
+expected in either list or item context.</p>
+
+
+
+
+	</dd>
+	<dt>unshift</dt>
+	<dd>
+<pre> our Array multi method unshift ( @array: *@values ) is export
+</pre>
+		<p><code>unshift</code> adds the values onto the start of the <code>@array</code> and
+returns the modified array.</p>
+	</dd>
+	<dt>keys</dt>
+	<dt>kv</dt>
+	<dt>pairs</dt>
+	<dt>values</dt>
+	<dd>
+<pre> multi method keys   ( @array: ) is export
+ multi method kv     ( @array: ) is export
+ multi method pairs  ( @array: ) is export
+ multi method enums  ( @array: ) is export
+ multi method values ( @array: ) is export
+</pre>
+		<p>Iterates the elements of <code>@array</code>, in order.</p>
+		<p>What is returned at each element of the iteration varies with function.
+<code>values</code> returns the value of the associated element; <code>kv</code> returns
+a 2 element list in (index, value) order, <code>pairs</code> a <code>Pair(index, value)</code>.
+With <code>pairs</code> the values are references back to the original containers,
+while with <code>enums</code> a snapshot of those values is taken.  That is, <code>.pairs</code>
+returns a <code>PairMap</code> while <code>enums</code> returns an <code>EnumMap</code>.</p>
+		<p>If <code>@array</code> is declared to be multi-dimensional, the keys returned may
+in fact be slice lists.  (Arrays that are effectively multi-dimensional
+by containing other arrays or hashes are treat with their declared
+dimensionality, not their effective dimensionality.)</p>
+		<p>Note that <code>kv @array</code> returns the same as <code>zip(^@array; @array)</code></p>
+	</dd>
+</dl>
+</div>
+<h2 id="Hash">Hash</h2>
+<div id="Hash_CONTENT">
+<p>The following are defined in the <code>Hash</code> role.</p>
+<pre>role Hash does Container does Associative {...}
+</pre>
+<dl>
+	<dt>:delete</dt>
+	<dd>
+		<p>This adverb may be applied to any subscripting operation.  The operation
+returns the elements normally, but reads them out destructively.</p>
+	</dd>
+	<dt>:exists</dt>
+	<dd>
+		<p>This adverb may be applied to any subscripting operation.  The
+operation returns true if specified element exists.  If a slice
+is specified by the subscript, a <code>Parcel</code> of <code>Bool</code> is returned,
+which can be processed using junctions.</p>
+	</dd>
+	<dt>keys</dt>
+	<dt>kv</dt>
+	<dt>pairs</dt>
+	<dt>values</dt>
+	<dd>
+<pre> multi method keys   ( %hash: ) is export
+ multi method kv     ( %hash: ) is export
+ multi method pairs  ( %hash: ) is export
+ multi method enums  ( %hash: ) is export
+ multi method values ( %hash: ) is export
+</pre>
+		<p>Iterates the elements of <code>%hash</code>. The order is implementation dependent
+and arbitrary, but will be the same between successive calls to these
+functions, as long as <code>%hash</code> doesn't change.</p>
+		<p>What is returned at each element of the iteration varies with function.
+<code>keys</code> only returns the key; <code>values</code> the value; <code>kv</code> returns both as
+a 2 element list in (key, value) order, <code>pairs</code> a <code>Pair(key, value)</code>.
+With <code>pairs</code> the values are references back to the original containers,
+while with <code>enums</code> a snapshot of those values is taken.  That is, <code>.pairs</code>
+returns a <code>PairMap</code> while <code>enums</code> returns an <code>EnumMap</code>.</p>
+		<p>Note that <code>kv %hash</code> returns the same as <code>zip(keys %hash; values %hash)</code></p>
+		<p>The lvalue form of <code>keys</code> is no longer supported. Use the <code>.buckets</code>
+property instead.</p>
+	</dd>
+	<dt>any</dt>
+	<dd>
+<pre> our Junction multi method any( %hash: ) is export
+</pre>
+		<p>Returns a junction with all the keys of the hash <code>|</code>-ed together. The
+junction will only match against another value if at least one of the
+keys in the hash matches.</p>
+	</dd>
+	<dt>all</dt>
+	<dd>
+<pre> our Junction multi method all( %hash: ) is export
+</pre>
+		<p>Returns a junction with all the keys of the hash <code>&amp;</code>-ed together. The
+junction will only match against another value if all of the keys in the hash
+match.</p>
+	</dd>
+	<dt>one</dt>
+	<dd>
+<pre> our Junction multi method one( %hash: ) is export
+</pre>
+		<p>Returns a junction with all the keys of the hash <code>^</code>-ed together. The
+junction will only match against another value if exactly one of the keys
+in the hash matches.</p>
+	</dd>
+	<dt>none</dt>
+	<dd>
+<pre> our Junction multi method none( %hash: ) is export
+</pre>
+		<p>Returns a junction which will only match against another value if none of
+the keys in the hash matches.</p>
+	</dd>
+	<dt>invert</dt>
+	<dd>
+<pre> our List multi method invert ( %hash: ) is export {
+ map -&gt; $k, $v { $v X=&gt; $k }, %hash.kv;
+ }
+</pre>
+		<p>Produces a backmapping of values to keys, expanding list values
+into multiple pairs.  (The <code>X=&gt;</code> expands <code>$v</code> if it is a list.)
+[NB: this may need refinement to handle keys that do <code>Positional</code>.]</p>
+	</dd>
+	<dt>push</dt>
+	<dd>
+<pre> our Hash multi method push ( %hash: *@values ) is export
+</pre>
+		<p>Like hash assignment insofar as it accepts either <code>Pair</code> objects or
+alternating keys and values; also like in that it returns the new hash.
+However, unlike assignment, when a duplicate key is detected,
+<code>push</code> coerces the colliding entry's value to an
+array and pushes the <code>Pair</code>'s value onto that array.  Hence to invert
+a hash containing duplicate values without losing (associative) information,
+say:</p>
+<pre>%out.push(%in.invert)
+</pre>
+		<p>Note that when reading the values of such a hash, you must not assume
+that all the elements are arrays, since the first instance of a key
+merely sets the value without turning it into an array.  (Fortunately,
+most list operators create a list of one element when used on an object
+that is not a list.)</p>
+		<p>The intent is that reversing a hash twice produces a hash equivalent
+to the original hash.</p>
+	</dd>
+</dl>
+</div>
+<h1 id="Classes_and_Roles">Classes and Roles</h1>
+<div id="Classes_and_Roles_CONTENT">
+<p>This documents Buf, List, Seq, Range, Set, Bag, Junction, Array, Hash, KeyHash, KeySet,
+KeyBag, Pair, and PairMap.</p>
+</div>
+<h2 id="Seq">Seq</h2>
+<div id="Seq_CONTENT">
+<pre>class Seq does Positional does Iterable {...}
+</pre>
+</div>
+<h2 id="Range">Range</h2>
+<div id="Range_CONTENT">
+<pre>class Range does Positional does Iterable {
+    method from() {...}
+    method to() {...}
+    method min() {...}
+    method max() {...}
+    method List minmax() {...}
+}
+</pre>
+</div>
+<h2 id="Buf">Buf</h2>
+<div id="Buf_CONTENT">
+<pre>class Buf does Positional does Stringy {...}
+</pre>
+<p>A mutable container for an array of integer values in contiguous
+memory. The default constructor takes a single array parameter of
+integers, the largest of which determines the actual type. So</p>
+<pre>Buf.new([:16&lt;c3&gt;, :16&lt;B6&gt;]) # or
+Buf.new([195, 182])         # which is exactly the same
+</pre>
+<p>returns a <code>buf8</code> containing two <code>uint8</code> items, while</p>
+<pre>Buf.new([256])
+</pre>
+<p>returns a <code>buf16</code> which consists of a single <code>uint16</code>.</p>
+<p>To explicit request a <code>Buf</code> of a specific size, you can use</p>
+<pre>Buf.new([127], :size(16))     # returns a buf16
+Buf.new([1024], :size(8))     # dies, because 1024 &gt;= 2**8
+</pre>
+<p>Subtypes with additional constraints like <code>utf8</code> (which only allows valid
+UTF-8 byte sequences) exist and provide similar constructors. See
+<b>Built-In Data Types</b> in <cite>S02</cite>.</p>
+<p>The array in the constructor used to be slurpy rather than positional, but
+the former was deemed to be too inefficient (during signature construction)
+for arrays of many elements.</p>
+</div>
+<h3 id="Methods">Methods</h3>
+<div id="Methods_CONTENT">
+<dl>
+	<dt>decode</dt>
+	<dd>
+<pre>our Str method decode($encoding = $?ENC, $nf = $?NF)
+</pre>
+		<p>Decode the <code>Buf</code> into a <code>Str</code>. For subtypes that know their encoding (like
+<code>utf8</code>, <code>utf16</code>) the <code>$encoding</code> parameter defaults to their intrinsic
+encoding instead.</p>
+	</dd>
+</dl>
+</div>
+<h3 id="code_Buf_code_Operators"><code>Buf</code> Operators</h3>
+<div id="code_Buf_code_Operators_CONTENT">
+<p>Two <code>Buf</code> objects of the same bit size can be compared with the same
+operators as strings (in particular <code>eq</code>, <code>lt</code>, <code>le</code>, <code>gt</code>, <code>ge</code>,
+<code>ne</code> and <code>leg</code>), but actually compares the stored integers, not
+characters. Concatenating two compatible <code>Buf</code>s produces an object of the
+most specific type possible, for example <code>buf8.new() ~ utf8.new()</code> results in
+a <code>buf8</code> object.</p>
+<p>Comparing or concatenating two <code>Buf</code> objects of different bit sizes,
+or a <code>Buf</code> that doesn't know its encoding with a <code>Str</code> throws an exception.</p>
+<p>Likewise, coercing an encoding-unaware <code>Buf</code> to <code>Str</code> dies.</p>
+<p>[Conjecture: The behaviour of encoding-aware <code>Buf</code> objects on string
+operators is intentionally not defined yet, because I have no idea what
+implications on speed and usage they might have --moritz].</p>
+</div>
+<h2 id="Enum_and_Pair">Enum and Pair</h2>
+<div id="Enum_and_Pair_CONTENT">
+<pre>class Enum does Associative {...}
+class Pair does Associative {...}
+
+
+
+</pre>
+<p>A value formed by associating a single key with a single value.
+In an <code>Enum</code>, both key and value are immutable.  In a <code>Pair</code>, the
+key is immutable but the value mutable.  <code>Enum</code> works identically
+to <code>Pair</code> unless you try to modify it.)</p>
+<dl>
+	<dt>invert</dt>
+	<dd>
+<pre>our List multi method invert ( $pair: ) is export {
+ $pair.value X=&gt; $pair.key
+}
+</pre>
+	</dd>
+</dl>
+</div>
+<h2 id="EnumMap">EnumMap</h2>
+<div id="EnumMap_CONTENT">
+<pre>class EnumMap does Associative does Positional {...}
+</pre>
+<p>An immutable hash value, viewable either as a (constant) hash or as
+a sequence of <code>Enum</code>s.  The keys may not contain duplicates, while
+the values may.  The implementation of <code>EnumMap</code> associativity is not
+guaranteed to be as efficient as a <code>Hash</code> lookup.  (A brute force
+linear scan for the matching key is allowed.  Optimization
+is also allowed.)</p>
+</div>
+<h2 id="PairMap">PairMap</h2>
+<div id="PairMap_CONTENT">
+<pre>class PairMap does Associative does Positional {...}
+</pre>
+<p>A hash value that is mutable only in values, differing from a normal
+hash insofar as the key set is frozen.  It may be accessed either as
+a frozen hash or as a sequence of <code>Pair</code>s. The keys may not contain
+duplicates, while the values may.  The implementation of <code>PairMap</code>
+associativity is not guaranteed to be as efficient as a <code>Hash</code> lookup.
+(A brute force linear scan for the matching key is allowed.  Optimization
+to something like an ordered hash is also allowed.)</p>
+</div>
+<h2 id="Set">Set</h2>
+<div id="Set_CONTENT">
+<pre>class Set does Associative {...}
+</pre>
+<p>A set of unique values.  When used as a hash always treats the set's
+values as the keys of the hash, returning <code>True</code> for set elements.
+See <code>KeySet</code> for a container that can represent different sets
+as keys are added or deleted.  A <code>Set</code> responds to hash operators as
+if it were a <code>Hash of True</code>.</p>
+<dl>
+	<dt>pick</dt>
+	<dd>
+<pre> our multi method pick ( $set: Int $num = 1 )
+ our multi method pick ( $set: Whatever )
+</pre>
+		<p>Works like an ordinary list <code>pick</code>.</p>
+	</dd>
+	<dt>roll</dt>
+	<dd>
+<pre> our multi method roll ( $set: Int $num = 1 )
+ our multi method roll ( $set: Whatever )
+</pre>
+		<p>Works like an ordinary list <code>roll</code>.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="KeySet">KeySet</h2>
+<div id="KeySet_CONTENT">
+<p>A mutable Set container, represented as <code>KeyHash of Bool</code>.</p>
+</div>
+<h2 id="Bag">Bag</h2>
+<div id="Bag_CONTENT">
+<pre>class Bag does Associative {...}
+</pre>
+<p>A collection of values that need not be unique, represented by an
+associative mapping from each key value to its replication number.
+The <code>.elems</code> method returns the sum of all replication values.</p>
+<dl>
+	<dt>pick</dt>
+	<dd>
+<pre> our multi method pick ( $bag: Int $num = 1 )
+ our multi method pick ( $bag: Whatever )
+ our multi method pickpairs ( $bag: Int $num = 1 )
+ our multi method pickpairs ( $bag: Whatever )
+</pre>
+		<p>Like an ordinary list <code>pick</code>, but returns keys of the bag weighted by
+values, as if the keys were replicated the number of times indicated
+by the corresponding value and then list pick used.  <code>KeyBag</code> is the
+mutable form of <code>Bag</code>.  A <code>Bag</code> responds to hash operators as
+if it were a <code>Hash of UInt</code>.</p>
+		<p>The underlying metaphor for picking is that you're pulling colored
+marbles out a bag.  (For &quot;picking with replacement&quot; see <code>roll</code> instead.)
+Picking require tracking the temporary state, so the immutable <code>Bag</code> is copied to
+a temporary private <code>KeyBag</code>, and the picks are made from that
+using the corresponding <code>.grab</code> or <code>.grabpairs</code> method (see below).</p>
+		<p>Each <code>.pick</code> invocation maintains its own private state and has no
+effect on subsequent <code>.pick</code> invocations.</p>
+	</dd>
+	<dt>roll</dt>
+	<dd>
+<pre> our multi method roll ( $bag: Int $num = 1 )
+ our multi method roll ( $bag: Whatever )
+</pre>
+		<p>Like an ordinary list <code>roll</code>, but returns keys of the bag weighted
+by values, as if the keys were replicated the number of times
+indicated by the corresponding value and then list <code>roll</code> used.
+The underlying metaphor for rolling is that you're throwing <code>$num</code>
+dice that are independent of each other, which (in bag terms) is
+equivalent to picking a colored marble out your bag and then putting
+it back, and doing this <code>$num</code> times.  In dice terms, the number
+of marbles corresponds to the number of sides, and the number of
+marbles of the same color corresponds to number of sides with the
+same color.  (For &quot;picking without replacement&quot; see <code>pick</code> instead.)
+Rolling requires no temporary state.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="KeyBag">KeyBag</h2>
+<div id="KeyBag_CONTENT">
+<p>A mutable <code>Bag</code> container, represented as <code>KeyHash of UInt</code>.</p>
+</div>
+<h2 id="KeyHash">KeyHash</h2>
+<div id="KeyHash_CONTENT">
+<pre>role KeyHash[::T, $default = Any] does Associative {...}
+</pre>
+<p>A <code>KeyHash</code> represents a mutable set of values, represented as the keys
+of a <code>Hash</code>.  When asked to behave as a list it ignores its values
+and returns only <code>.keys</code>.  <code>KeySet</code> and <code>KeyBag</code> are derived from
+this type, but constrain their values to be <code>Bool</code> and <code>UInt</code>,
+respectively.  A <code>KeyHash</code> automatically deletes any key whose
+value goes false.  For any <code>KeyHash</code>, the <code>.elems</code> methods returns
+the current sum of the values, which the <code>KeyHash</code> must either track
+or compute on demand.  Tracking is preferable for efficient implementation
+of <code>.pick</code> and <code>.grab</code>.</p>
+<p>All <code>KeyHash</code> containers have a default value that is false (such as
+<code>0</code> or <code>''</code> or <code>Nil</code> or <code>Bool::False</code>), and keep around only those
+entries with non-default values, deleting any entry if its value goes
+to false.</p>
+<dl>
+	<dt>grab</dt>
+	<dd>
+<pre> our multi method grab ( $bag: Int $num = 1 )
+ our multi method grab ( $bag: Whatever )
+ our multi method grabpairs ( $bag: Int $num = 1 )
+ our multi method grabpairs ( $bag: Whatever )
+</pre>
+		<p>Like <code>pick</code>, a <code>grab</code> returns a random selection of elements, weighted
+by the values corresponding to each key.
+Since a <code>KeyHash</code>, unlike a <code>Set</code> or <code>Bag</code>, is mutable, <code>.grab</code>
+works directly on the <code>KeyHash</code>, modifying it in place.  (You may use
+<code>.pick</code> to treat the <code>KeyHash</code> as immutable; this will copy it and grab
+only from the temporary copy.)</p>
+		<p>Grabbing decrements the grabbed
+key's replication value by one (deleting the key when it goes to 0).
+By definition, <code>.elems</code> of the bag also decreases by one, so the
+probabilities stay consistent through subsequent grab operations.</p>
+		<p>With the <code>.grabpairs</code> version, the replication value of the picked
+key is forced immediately to 0, removing all marbles of that color from
+the bag, as it were.  Instead of returning keys, returns the grabbed
+values as a list of <code>Pair</code> objects, whose keys are the deleted keys
+and whose values are the deleted replication values.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="KeyWeight">KeyWeight</h2>
+<div id="KeyWeight_CONTENT">
+<p>A <code>KeyHash of FatRat</code>; like a <code>KeyBag</code> but may have non-integral
+weights for use in weighted picking.  Keys with fractional weights
+are deleted if they go to 0.  Negative weights are not deleted, but
+the implementation may complain if it notices you attempting to use
+such a weight.</p>
+</div>
+<h2 id="Junction">Junction</h2>
+<div id="Junction_CONTENT">
+<p>All method calls on junctions autothread because the type provides no public methods.</p>
+<dl>
+	<dt>!eigenstates</dt>
+	<dd>
+<pre>method !eigenstates (Junction $j: --&gt; Parcel)
+</pre>
+		<p>Returns an unordered list of the values that constitute the junction (formerly
+called <code>.values</code>). It flattens nested junctions of the same type, so
+<code>(1|(2|3)).eigenstates</code> returns an arbitrary permutation of the list
+<code>1, 2, 3</code>.</p>
+		<p>Note this is a private method; you must arrange for yourself to be trusted
+by the junctions class in order to call it, which probably involves evil
+MONKEY_TYPING.</p>
+		<p>Alternately, the values may be explicitly converted to a set value
+using <code>.Set</code> or <code>Set()</code>.  Note, however, that the set of eigenstates
+for a <code>none</code> junction defines the values that are *not* there,
+so the resulting <code>Set</code> will be the <i>complement</i> to the universe of
+values recognized by the junction!  Also note that <code>any</code> and <code>all</code>
+junctions represent <i>sets</i> of sets of items, not sets of items.
+Since set items are by definition unique, only the <code>one</code> junction
+can be unthinkingly mapped to and from a given set.  (This is why we
+discourage casual use of the eigenstates as a set.)</p>
+	</dd>
+</dl>
+</div>
+<h1 id="Additions">Additions</h1>
+<div id="Additions_CONTENT">
+<p>Please post errors and feedback to perl6-language.  If you are making
+a general laundry list, please separate messages by topic.</p>
+</div>
+</div>
+</body>
+</html>

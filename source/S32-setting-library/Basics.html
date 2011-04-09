@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>DRAFT: Synopsis 32: Setting Library - Basics</title>
+</head>
+<div class="pod">
+<h1 id="TITLE">TITLE</h1>
+<div id="TITLE_CONTENT">
+<p>DRAFT: Synopsis 32: Setting Library - Basics</p>
+</div>
+<h1 id="AUTHORS">AUTHORS</h1>
+<div id="AUTHORS_CONTENT">
+<pre>Rod Adams &lt;rod@rodadams.net&gt;
+Larry Wall &lt;larry@wall.org&gt;
+Aaron Sherman &lt;ajs@ajs.com&gt;
+Mark Stosberg &lt;mark@summersault.com&gt;
+Carl Mäsak &lt;cmasak@gmail.com&gt;
+Moritz Lenz &lt;moritz@faui2k3.org&gt;
+Tim Nelson &lt;wayland@wayland.id.au&gt;
+</pre>
+</div>
+<h1 id="VERSION">VERSION</h1>
+<div id="VERSION_CONTENT">
+<pre>Created: 19 Mar 2009 extracted from S29-functions.pod
+
+Last Modified: 17 Dec 2009
+Version: 4
+</pre>
+<p>The document is a draft.</p>
+<p>If you read the HTML version, it is generated from the Pod in the specs
+repository under
+<a href="https://github.com/perl6/specs/blob/master/S32-setting-library/Basics.pod">https://github.com/perl6/specs/blob/master/S32-setting-library/Basics.pod</a>
+so edit it there in the git repository if you would like to make changes.</p>
+</div>
+<h1 id="Roles">Roles</h1>
+<div id="Roles_CONTENT">
+</div>
+<h2 id="Mu">Mu</h2>
+<div id="Mu_CONTENT">
+<p>The following are defined in the <code>Mu</code> role:</p>
+<pre> role Mu {
+ our Bool multi method defined ($self:) is export {...}
+ our Bool multi method defined ($self: ::role ) is export {...}
+
+ our multi method undefine( $self: ) is export {...}
+
+ method not() {...}
+ method so() {...}
+ }
+</pre>
+<dl>
+	<dt>defined</dt>
+	<dd>
+<pre>  our Bool multi method defined ( $self: ) is export
+  our Bool multi method defined ( $self: ::role ) is export
+</pre>
+		<p><code>defined</code> returns true if the parameter has a value and that value is
+considered defined by its type, otherwise false is returned.</p>
+		<p>Same as Perl 5, only takes extra optional argument to ask if value is defined
+with respect to a particular role:</p>
+<pre>  defined($x, SomeRole);
+</pre>
+		<p>A value may be defined according to one role and undefined according to another.
+Without the extra argument, defaults to the definition of defined supplied by
+the type of the object.</p>
+	</dd>
+	<dt>undefine</dt>
+	<dd>
+<pre>  our multi undefine( Any $thing )
+  our multi method undefine( Any $self )
+</pre>
+		<p>Takes any variable as a parameter and attempts to &quot;remove&quot; its
+definition. For simple scalar variables this means assigning
+the undefined value to the variable. For objects, this is equivalent
+to invoking their undefine method. For arrays, hashes and other
+complex data, this might require emptying the structures associated
+with the object.</p>
+		<p>In all cases, calling <code>undefine</code> on a variable
+should place the object in the same state as if it was just
+declared.</p>
+	</dd>
+	<dt>not</dt>
+	<dd>
+<pre> method not() {...}
+</pre>
+	</dd>
+	<dt>so</dt>
+	<dd>
+<pre> method so() {...}
+</pre>
+		<p>XXX Copied from S02 -- should it be deleted from there?</p>
+		<p>The definition of <code>.Bool</code> for the most ancestral type (that is, the
+<code>Mu</code> type) is equivalent to <code>.defined</code>.  Since type objects are
+considered undefined, all type objects (including <code>Mu</code> itself)
+are false unless the type overrides the definition of <code>.Bool</code>
+to include undefined values.  Instantiated objects default to true
+unless the class overrides the definition.  Note that if you could
+instantiate a <code>Mu</code> it would be considered defined, and thus true.
+(It is not clear that this is allowed, however.)</p>
+	</dd>
+</dl>
+</div>
+<h2 id="Any">Any</h2>
+<div id="Any_CONTENT">
+<p>The following are defined in the <code>Any</code> role:</p>
+<pre> role Any does Mu does Pattern {
+ our multi method clone (::T $self --&gt; T) {...}
+ our multi method clone (::T $self, *%attributes --&gt; T) {...}
+
+ our Callable multi method can ($self:, Str $method) {...}
+ our Bool     multi method does ($self:, $type) {...}
+ our Bool     multi method isa  ($self:, $type) {...}
+ our Str      multi method perl ( Mu $o: ) is export {...}
+ our          multi method warn ( Mu $o: ) is export {...}
+ }
+</pre>
+<dl>
+	<dt>can</dt>
+	<dd>
+<pre> our Callable multi method can ($self:, Str $method)
+</pre>
+		<p>If there is a multi method of name <code>$method</code> that can be called on
+<code>$self</code>, then a closure is return which has <code>$self</code> bound to the position
+of the invocant.</p>
+		<p>Otherwise an undefined value is returned.</p>
+	</dd>
+	<dt>clone</dt>
+	<dd>
+<pre> our multi method clone (::T $self --&gt; T)
+ our multi method clone (::T $self, *%attributes --&gt; T)
+</pre>
+		<p>The first variant returns  an independent copy of <code>$o</code> that is equivalent
+to <code>$o</code>.</p>
+		<p>The second variant does the same, but any named arguments override an
+attribute during the cloning process.</p>
+	</dd>
+	<dt>does</dt>
+	<dd>
+<pre> our Bool multi method does ($self:, $type)
+</pre>
+		<p>Returns <code>True</code> if and only if <code>$self</code> conforms to type <code>$type</code>.</p>
+	</dd>
+	<dt>isa</dt>
+	<dd>
+<pre> our Bool multi method isa ($self:, $type)
+</pre>
+		<p>Returns <code>True</code> if a the invocant an instance of class <code>$type</code>, or
+of a subset type or a derived class (through inheritance) of <code>$type</code>.</p>
+	</dd>
+	<dt>perl</dt>
+	<dd>
+<pre> our Str multi method perl ( Mu $o: ) is export
+</pre>
+		<p>Returns a perlish representation of the object, so that calling <code>eval</code>
+on the returned string reproduces the object as accurately as possible.</p>
+	</dd>
+	<dt>warn</dt>
+	<dd>
+<pre> our multi method warn ( Mu $o: ) is export
+</pre>
+		<p>Throws a resumable warning exception, which is considered a control
+exception, and hence is invisible to most normal exception handlers.
+The outermost control handler will print the warning to <code>$*ERR</code>
+(which usually finds <code>$PROCESS::ERR</code>; see <code>Synopsis 16: IPC /
+IO / Signals</code> for details).  After printing the warning, the exception
+is resumed where it was thrown.  To override this behavior, catch the
+exception in a CONTROL block.  A quietly {...} block is the opposite of a
+try {...} block in that it will suppress any warnings but pass fatal
+exceptions through.</p>
+		<p>To simply print to <code>$*ERR</code>, please use <code>note</code> instead.  <code>warn</code>
+should be reserved for use in threatening situations when you don't
+quite want to throw an exception.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="Pattern">Pattern</h2>
+<div id="Pattern_CONTENT">
+<pre> role Pattern {
+ method ACCEPTS($self:, $other) {...}
+ }
+</pre>
+<dl>
+	<dt>ACCEPTS</dt>
+	<dd>
+		<p>Used in smartmatching; see S03.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="Scalar">Scalar</h2>
+<div id="Scalar_CONTENT">
+<p><strong>API document</strong>: <cite>Scalar</cite></p>
+<p><code>Scalar</code> provides the basic tools for operating on undifferentiated
+scalar variables. All of the following are exported by default.</p>
+<dl>
+	<dt>VAR</dt>
+	<dd>
+		<p>This is not really a method, but some kind of macro.  See <cite>S12</cite> for details.</p>
+	</dd>
+</dl>
+</div>
+<h1 id="Additions">Additions</h1>
+<div id="Additions_CONTENT">
+<p>Please post errors and feedback to perl6-language.  If you are making
+a general laundry list, please separate messages by topic.</p>
+</div>
+</div>
+</body>
+</html>

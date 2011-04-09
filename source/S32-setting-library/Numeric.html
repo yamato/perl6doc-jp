@@ -1,0 +1,454 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>DRAFT: Synopsis 32: Setting Library - Numeric</title>
+</head>
+<div class="pod">
+<h1 id="TITLE">TITLE</h1>
+<div id="TITLE_CONTENT">
+<p>DRAFT: Synopsis 32: Setting Library - Numeric</p>
+</div>
+<h1 id="AUTHORS">AUTHORS</h1>
+<div id="AUTHORS_CONTENT">
+<pre>Rod Adams &lt;rod@rodadams.net&gt;
+Larry Wall &lt;larry@wall.org&gt;
+Aaron Sherman &lt;ajs@ajs.com&gt;
+Mark Stosberg &lt;mark@summersault.com&gt;
+Carl Mäsak &lt;cmasak@gmail.com&gt;
+Moritz Lenz &lt;moritz@faui2k3.org&gt;
+Tim Nelson &lt;wayland@wayland.id.au&gt;
+</pre>
+</div>
+<h1 id="VERSION">VERSION</h1>
+<div id="VERSION_CONTENT">
+<pre>Created: 19 Mar 2009 extracted from S29-functions.pod
+
+Last Modified: 16 July 2010
+Version: 10
+</pre>
+<p>The document is a draft.</p>
+<p>If you read the HTML version, it is generated from the Pod in the specs
+repository under
+<a href="https://github.com/perl6/specs/blob/master/S32-setting-library/Numeric.pod">https://github.com/perl6/specs/blob/master/S32-setting-library/Numeric.pod</a>
+so edit it there in the git repository if you would like to make changes.</p>
+<p>This documents Bit, Int, Numeric, Rat, Complex, and Bool.</p>
+<p>XXX So where are Bit, Int, and Rat</p>
+</div>
+<h1 id="Function_Packages">Function Packages</h1>
+<div id="Function_Packages_CONTENT">
+</div>
+<h2 id="Bool">Bool</h2>
+<div id="Bool_CONTENT">
+<dl>
+	<dt>succ</dt>
+	<dd>
+<pre> our Bool multi method succ ( Bool $b: ) is export
+</pre>
+		<p>Returns <code>Bool::True</code>.</p>
+	</dd>
+	<dt>pred</dt>
+	<dd>
+<pre> our Bool multi method pred ( Bool $b: ) is export
+</pre>
+		<p>Returns <code>Bool::False</code>.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="Numeric">Numeric</h2>
+<div id="Numeric_CONTENT">
+<p><code>Numeric</code> is a role for everything that's a scalar number. So <code>Num</code>, <code>Int</code>,
+<code>Rat</code>, <code>Complex</code> and other numeric types do that role. However it is an
+abstract interface, so <code>$number.WHAT</code> will never return <code>Numeric</code>. </p>
+<p>Users who provide their own scalar numeric types are encouraged to implement the
+<code>Numeric</code> role.  It is intended that such types such support the basic arithmetic
+operators to the extent possible, as well as <code>==</code>.  In addition, it is hoped that
+comparison operators will at least return consistent results, even if there is no
+sensible mathemtical ordering of your type.  That allows functions like sort to 
+not choke and die if they are handed a value of your type.  (See also the <code>Real</code>
+role for scalar numeric types that represent real numbers.)</p>
+<p>The following are all defined in the <code>Numeric</code> role:</p>
+<p><code>Numeric</code> provides some constants in addition to the basic
+mathematical functions.</p>
+<pre>constant pi is export = 3.14159_26535_89793_23846_26433_83279_50288;
+constant e  is export = 2.71828_18284_59045_23536_02874_71352_66249;
+constant i  is export = 1i;
+</pre>
+<dl>
+	<dt>Real</dt>
+	<dd>
+<pre> our Real multi method Real ()
+</pre>
+		<p>If this <code>Numeric</code> is equivalent to a <code>Real</code>, return that <code>Real</code>.  
+(For instance, if this number is a <code>Complex</code> with a zero imaginary part.)  
+Fail otherwise.</p>
+	</dd>
+	<dt>Int</dt>
+	<dd>
+<pre> our Int multi method Int ()
+</pre>
+		<p>If this <code>Numeric</code> is equivalent to a <code>Real</code>, return the equivalent of
+calling <code>truncate</code> on that <code>Real</code> to get an <code>Int</code>. </p>
+	</dd>
+	<dt>Rat</dt>
+	<dd>
+<pre> our Rat multi method Rat ( Real $epsilon = 1.0e-6 )
+</pre>
+		<p>If this <code>Numeric</code> is equivalent to a <code>Real</code>, return a <code>Rat</code> which is
+within <code>$epsilon</code> of that <code>Real</code>'s value.</p>
+	</dd>
+	<dt>Num</dt>
+	<dd>
+<pre> our Num multi method Num ()
+</pre>
+		<p>If this <code>Numeric</code> is equivalent to a <code>Real</code>, return that <code>Real</code> as a <code>Num</code>
+as accurately as is possible.</p>
+	</dd>
+	<dt>succ</dt>
+	<dd>
+<pre> our Numeric multi method succ ( Numeric $x: ) is export
+ our Int     multi method succ ( Int $x: )     is export
+</pre>
+		<p>Returns the successor of <code>$x</code>. This method is used by <code>prefix:&lt;++&gt;</code> and
+<code>postfix:&lt;++&gt;</code> to increment the value in a container.</p>
+	</dd>
+	<dt>pred</dt>
+	<dd>
+<pre> our Numeric multi method pred ( Numeric $x: ) is export
+ our Int     multi method pred ( Int $x:     ) is export
+</pre>
+		<p>Returns the predecessor of <code>$x</code>. This method is used by <code>prefix:&lt;--&gt;</code>
+and <code>postfix:&lt;--&gt;</code> to decrement the value in a container.</p>
+	</dd>
+	<dt>abs</dt>
+	<dd>
+<pre> our Numeric multi method abs ( Numeric $x: ) is export
+</pre>
+		<p>Absolute Value.</p>
+	</dd>
+	<dt>conjugate</dt>
+	<dd>
+<pre> our Numeric multi method conjugate ( Numeric $x: ) is export
+</pre>
+		<p>The complex conjugate of the value. For non-complex types, returns self.</p>
+	</dd>
+	<dt>exp</dt>
+	<dd>
+<pre> our Numeric multi method exp ( Numeric $exponent: Numeric :$base = Num::e ) is export
+</pre>
+		<p>Performs similar to <code>$base ** $exponent</code>. <code>$base</code> defaults to the
+constant <i>e</i>.</p>
+	</dd>
+	<dt>log</dt>
+	<dd>
+<pre> our Numeric multi method log ( Numeric $x: Numeric $base = Num::e ) is export
+</pre>
+		<p>Logarithm of base <code>$base</code>, default Natural. Calling with <code>$x == 0</code> is an
+error.</p>
+	</dd>
+	<dt>log10</dt>
+	<dd>
+<pre> our Numeric multi method log10 (Numeric $x:) is export
+</pre>
+		<p>A base <code>10</code> logarithm, otherwise identical to <code>log</code>.</p>
+	</dd>
+	<dt>rand</dt>
+	<dd>
+<pre> our Num term:&lt;rand&gt;
+</pre>
+		<p>Pseudo random number in range <code>0 ..^ 1</code>.  That is, <code>0</code> is
+theoretically possible, while <code>1</code> is not.  Note that there is no
+unary <code>rand</code> function in Perl 6, but there is a <code>rand</code> method.  
+For picking a random integer you probably want
+to use something like <code>(1..6).pick</code> instead.</p>
+	</dd>
+	<dt>sqrt</dt>
+	<dd>
+<pre> our Numeric multi method sqrt ( Numeric $x: ) is export
+</pre>
+		<p>Returns the principle square root of the parameter.</p>
+	</dd>
+	<dt>roots</dt>
+	<dd>
+<pre>  method roots (Numeric $x: Int $n ) is export
+</pre>
+		<p>Returns a list of all <code>$n</code>th (complex) roots of <code>$x</code>. Returns <code>NaN</code> if
+<code>$n &lt;= 0</code>, itself if <code>$n == 0</code>,  and is free to return a single <code>NaN</code>
+if <code>$x</code> is <code>NaN</code> or <code>Inf</code>, or in case of complex numbers if one of the
+components is.</p>
+	</dd>
+	<dt>i</dt>
+	<dd>
+<pre> our Complex multi postfix:&lt;i&gt; ( Numeric $x )
+</pre>
+		<p>Returns a complex number representing the parameter multiplied by the imaginary
+unit <code>i</code>.  Note that there is no <code>.i</code> method.  To follow a variable name
+with the postfix, it's necessary to use a backslash or parentheses:</p>
+<pre>$land\i
+($land)i
+</pre>
+	</dd>
+	<dt>to-radians</dt>
+	<dd>
+<pre> our Numeric multi method to-radians ( Numeric $x: TrigBase $base ) is export
+</pre>
+		<p>Convert from <code>$base</code> to radians.</p>
+	</dd>
+	<dt>from-radians</dt>
+	<dd>
+<pre> our Numeric multi method from-radians ( Numeric $x: TrigBase $base ) is export
+</pre>
+		<p>Convert from radians to <code>$base</code>.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="Real">Real</h2>
+<div id="Real_CONTENT">
+<pre>role Real does Numeric;
+</pre>
+<p><code>Real</code>, like <code>Numeric</code>, is an abstract role that represents the interface of
+a real scalar number (i.e. neither <code>Complex</code> nor vector-like). For example
+<code>Num</code>, <code>Int</code>, <code>Bool</code> and <code>Rat</code> implement the <code>Real</code> role.</p>
+<p>Users who provide their own scalar real numeric types are encouraged to implement the
+<code>Real</code> role.  Because real numbers are strictly-totally-ordered and
+<code>Real</code> types try to emulate that property, it is desirable that any two
+<code>Real</code> types be mutally compatible, even if they are not aware of each other.  The
+current proposal requires you to define a <code>Bridge</code> method in your <code>Real</code> type, which
+converts your type into a neutral <code>Real</code> type by restating it in terms of the fundamental
+Perl 6 types and calling <code>Bridge</code> on them.  This then makes the default <code>Real</code> methods
+and operators all work with your <code>Real</code> type.  While the name of this method may changed,
+it is hoped that something like this will remain in the spec.</p>
+<dl>
+	<dt>Complex</dt>
+	<dd>
+<pre> our Complex multi method Complex ()
+</pre>
+		<p>Returns a <code>Complex</code> whose real part is this <code>Real</code> and whose imaginary part is 0.</p>
+	</dd>
+	<dt>Str</dt>
+	<dd>
+<pre> our Str multi method Str ()
+</pre>
+		<p>Returns the <code>Real</code> as a <code>Str</code>.  All built-in <code>Real</code> types format it as a decimal 
+number, so for example, the <code>Rat</code> <code>5/4</code> is returned as <code>&quot;1.2&quot;</code>.</p>
+	</dd>
+	<dt>floor</dt>
+	<dd>
+<pre> our Int multi method floor ( Real $x: ) is export
+</pre>
+		<p>Returns the highest integer not greater than <code>$x</code>.</p>
+	</dd>
+	<dt>ceiling</dt>
+	<dd>
+<pre> our Int multi method ceiling ( Real $x: ) is export
+</pre>
+		<p>Returns the lowest integer not less than <code>$x</code>.</p>
+	</dd>
+	<dt>round</dt>
+	<dd>
+<pre> our Int multi method round ( Real $x: $scale = 1) is export
+</pre>
+		<p>Returns the nearest integer to <code>$x</code>.  The algorithm is:</p>
+<pre>floor($x / $scale + 0.5) * $scale
+</pre>
+		<p>(Other rounding algorithms will be given extended names beginning with &quot;round&quot;.)</p>
+		<p>Functions that round to a particular precision may easily be created with
+currying:</p>
+<pre>constant &amp;roundcents ::= &amp;round.assuming(:scale(1/100));
+</pre>
+	</dd>
+	<dt>truncate</dt>
+	<dd>
+<pre> our Int multi method truncate ( Real $x: ) is export
+</pre>
+		<p>Returns the closest integer to <code>$x</code> whose absolute value is not greater
+than the absolute value of <code>$x</code>.  (In other words, just chuck any
+fractional part.)  This is the default rounding function used by
+implicit integer conversions.</p>
+		<p>You may also truncate using explicit integer casts, either <code>Int()</code> for
+an arbitrarily large integers, or <code>int()</code> for native integers.</p>
+	</dd>
+	<dt>sign</dt>
+	<dd>
+<pre> our Int multi method sign ( Real $x: ) is export
+</pre>
+		<p>Returns 1 when <code>$x</code> is greater than 0, -1 when it is less than 0, 0 when it
+is equal to 0, or undefined when the value passed is undefined.</p>
+	</dd>
+	<dt>srand</dt>
+	<dd>
+<pre> multi srand ( Real $seed = default_seed_algorithm())
+</pre>
+		<p>Seed the generator <code>rand</code> uses. <code>$seed</code> defaults to some combination
+of various platform dependent characteristics to yield a non-deterministic seed.
+Note that you get one <code>srand()</code> for free when you start a Perl program, so
+you <i>must</i> call <code>srand()</code> yourself if you wish to specify a deterministic seed
+(or if you wish to be differently nondeterministic).</p>
+	</dd>
+	<dt>rand</dt>
+	<dd>
+<pre> our Num multi method rand (Real $x:) is export
+</pre>
+		<p>Pseudo random number in range <code>0 ..^ $x</code>.  That is, <code>0</code> is
+theoretically possible, while <code>$x</code> is not.  For picking a random integer
+you probably want to use something like <code>(1..6).pick</code> instead.</p>
+	</dd>
+	<dt>cis</dt>
+	<dd>
+<pre>our Complex multi method cis (Real $angle:) is export
+</pre>
+		<p>Returns 1.unpolar($angle)</p>
+	</dd>
+	<dt>unpolar</dt>
+	<dd>
+<pre>our Complex multi method unpolar (Real $mag: Real $angle) is export
+</pre>
+		<p>Returns a complex number specified in polar coordinates.  Angle is in radians.</p>
+
+
+
+
+	</dd>
+</dl>
+</div>
+<h2 id="Num">Num</h2>
+<div id="Num_CONTENT">
+<pre>class Num does Real;
+</pre>
+<p><code>Num</code> is a machine-precision numeric real value.</p>
+</div>
+<h2 id="Complex">Complex</h2>
+<div id="Complex_CONTENT">
+<p><code>Complex</code> is an immutable type. Each <code>Complex</code> object stores two numbers,
+the real and imaginary part. For all practical purposes a <code>Complex</code> with
+a <code>NaN</code> in real or imaginary part may be considered a <code>NaN</code> itself (and
+<code>(NaN + 1i) ~~ NaN</code> is <code>True</code>).</p>
+<p>Coercion of a <code>Complex</code> to any <code>Real</code> returns the real part (coerced, if
+necessary) if the imaginary part is 0, and fails otherwise. Comparison
+between a <code>Real</code> number and a <code>Complex</code> must be smart enough not to coerce
+the <code>Complex</code> to a real number blindly.</p>
+<dl>
+	<dt>new</dt>
+	<dd>
+<pre>our Complex multi method new(Real $re, Real $im)
+</pre>
+		<p>Constructs a <code>Complex</code> number from real and imaginary part. This is the
+method form of <code>$re + ($im)i</code>.</p>
+	</dd>
+	<dt>polar</dt>
+	<dd>
+<pre>our Seq multi method polar (Complex $nim:) is export
+</pre>
+		<p>Returns (magnitude, angle) corresponding to the complex number.
+The magnitude is non-negative, and the angle in the range <code>-π ..^ π</code>.</p>
+	</dd>
+	<dt>re</dt>
+	<dd>
+<pre>our Real multi method re()
+</pre>
+		<p>Returns the real part of the complex number.</p>
+	</dd>
+	<dt>im</dt>
+	<dd>
+<pre>our Real multi method im()
+</pre>
+		<p>Returns the imaginary part of a complex number.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="Trigonometric_functions">Trigonometric functions</h2>
+<div id="Trigonometric_functions_CONTENT">
+<p>The following are also defined in <code>Numeric</code>.  The trig functions
+depend on the current (lexically scoped) trig base:</p>
+<pre> enum TrigBase is export &lt;Radians Degrees Gradians Circles&gt;;
+ constant $?TRIGBASE = Radians;
+</pre>
+<dl>
+	<dt><i>Standard Trig Functions</i></dt>
+	<dd>
+<pre> Numeric multi method func ( Numeric  $x: TrigBase $base = CALLER::&lt;$?TRIGBASE&gt; ) is export
+</pre>
+		<p>where <i>func</i> is one of:
+sin, cos, tan, asin, acos, atan, sec, cosec, cotan, asec, acosec,
+acotan, sinh, cosh, tanh, asinh, acosh, atanh, sech, cosech, cotanh,
+asech, acosech, acotanh.</p>
+		<p>Performs the various trigonometric functions.</p>
+		<p>Option <code>$base</code> is used to declare how you measure your angles.
+Given the value of an arc representing a single full revolution.</p>
+<pre> $base       Subdivisions of circle
+ ----        ----------------------
+ Radians     2*pi
+ Degrees     360
+ Gradians    400
+ Circles     1
+</pre>
+		<p>To change the base within your own lexical scope, it suffices to redefine the
+compiler constant with the <code>trigbase</code> pragma:</p>
+<pre> use trigbase Degrees;
+</pre>
+		<p>In addition to setting the new lexical <code>$?TRIGBASE</code>, this also
+curries a new set of functions into the current lexical scope that
+assume the new base.  (Note that methods calls cannot be curried, so
+methods must still look up the caller's trigbase.  The optimizer may,
+of course, optimize these into fast function calls.)</p>
+	</dd>
+	<dt>atan2</dt>
+	<dd>
+<pre> our Real multi method atan2 ( Real $y: Real $x = 1, TrigBase $base = CALLER::&lt;$?TRIGBASE&gt; )
+ our Real multi atan2 ( Real $y, Real $x = 1, TrigBase $base = CALLER::&lt;$?TRIGBASE&gt; )
+</pre>
+		<p>This second form of <code>atan</code> computes the arctangent of <code>$y/$x</code>, and takes
+the quadrant into account. Otherwise behaves as other trigonometric functions.</p>
+	</dd>
+</dl>
+</div>
+<h2 id="Int">Int</h2>
+<div id="Int_CONTENT">
+<p>An <code>Int</code> is an immutable, integral number of arbitrary size.</p>
+</div>
+<h2 id="Rat">Rat</h2>
+<div id="Rat_CONTENT">
+<pre>class Rat does Real;
+</pre>
+<p>An immutable rational number, represented by two <code>Int</code>s, a numerator and
+a denominator. All interface methods return values as if the numerator and
+denominator were stored in a normal form: both numerator and denominator are
+minimal in their magnitude, and the denominator is positive. So
+<code>Rat.new(2, -4).denominator</code> return <code>2</code>, because the normal form is <code>-1/2</code>.</p>
+<dl>
+	<dt>new</dt>
+	<dd>
+<pre>multi method new(Int $num, Int $denom)
+</pre>
+		<p>Constructs a <code>Rat</code> object from the numerator and denominator.
+Fails if <code>$denom == 0</code>.</p>
+	</dd>
+	<dt>nude</dt>
+	<dd>
+<pre>our Seq[Int] multi method nude()
+</pre>
+		<p>Returns a <code>Seq</code> of numerator and denominator</p>
+	</dd>
+	<dt>denominator</dt>
+	<dd>
+<pre>our Int multi method denominator()
+</pre>
+		<p>Returns the denominator</p>
+	</dd>
+	<dt>numerator</dt>
+	<dd>
+<pre>our Int multi method numerator()
+</pre>
+		<p>Returns the numerator</p>
+	</dd>
+</dl>
+</div>
+<h1 id="Additions">Additions</h1>
+<div id="Additions_CONTENT">
+<p>Please post errors and feedback to perl6-language.  If you are making
+a general laundry list, please separate messages by topic.</p>
+</div>
+</div>
+</body>
+</html>
