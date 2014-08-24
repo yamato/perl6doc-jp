@@ -27,8 +27,8 @@ my @found;
 my @pod_names;
 my @dir_names;
 
-print "chdir docs\n";
-chdir "docs" or die $!;
+print "chdir specs\n";
+chdir "specs" or die $!;
 find( sub { push @found, $File::Find::name; }, '.');
 
 foreach my $name (@found) {
