@@ -1,7 +1,2 @@
 *.bak
-*.dz
-*.idx
-*.ifo
-omegat/project_stats.txt
-target/*.html
-target/**/*
+*.html
