@@ -4152,8 +4152,8 @@
       <tuv lang="EN-US">
         <seg>We use the phrase "lexical scoping" in its industry-standard meaning to indicate those blocks that surround the current textual location.</seg>
       </tuv>
-      <tuv lang="JA" changeid="Toshiyuki" changedate="20130727T140343Z" creationid="Toshiyuki" creationdate="20130727T114316Z">
-        <seg>我々は「レキシカルスコープ」という言い回しを業界標準の「現在のテキスト位置を囲んでいるブロック」を示す意味で使用する。</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140830T111514Z" creationid="Toshiyuki" creationdate="20130727T114316Z">
+        <seg>我々は「レキシカルスコープ」という言い回しを業界標準の「現在の位置のテキストを囲んでいるブロック」という意味で使用する。</seg>
       </tuv>
     </tu>
     <tu>
