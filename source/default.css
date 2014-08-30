@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+body {
+    font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+    margin: 5% 20% 10% 10%;
+}
+
+a:link, a:visited, a:active {
+    color: #000099;
+}
+
+h2, h3, h4, h5, h6 {
+    font-size: 1em;
+}
+
+p {
+    line-height: 140%;
+}
+
+li p {
+    margin-left: 0.5em;
+}
+
+dl {
+    margin-left: 2ex;
+}
+
+dd p {
+    margin-left: 0em;
+}
+
+p strong {
+    color: #CC3333;
+}
+
+h2, dt {
+    color: #3399CC;
+}
+
+h1 {
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-bottom-color: #3366CC;
+    padding-bottom: 0.5ex;
+    padding-left: 0.5ex;
+}
+
+.u {
+    text-decoration: none;
+}
+
+p code {
+    border: solid thin #C0C0C0;
+    margin-left: 0.5ex;
+    margin-right: 0.5ex;
+    padding-left: 0.5ex;
+    padding-right: 0.5ex;
+    background-color: #F8F8F8;
+}
+
+pre {
+    background-color: #F8F8F8;
+    border: solid thin #C0C0C0;
+    padding: 0.5ex;
+}
+
+pre, code {
+    font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+}
+
+address, em, dt {
+    font-style: normal;
+}

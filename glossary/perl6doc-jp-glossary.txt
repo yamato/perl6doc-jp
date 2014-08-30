@@ -1,0 +1,741 @@
+﻿control flow	制御フロー
+programming language	プログラミング言語
+feature	特徴、特色、機能
+dynamic	動的な、機能的な
+differ	違う、異なる
+extent	広さ、広がり、範囲
+attached	付属の、取り付けてある
+declarative	宣言的
+static	静的な
+lexical	語彙の、単語の、辞書的な
+document	文書
+statement	文
+syntax	文法
+phrase	慣用句、決まり文句、言い回し
+industry standard	業界標準
+meaning	意味
+indicate	示す、表す
+surround	囲う、囲っている
+current	今の
+textual	原文の、文字通りの
+location	位置、場所
+abstractly	抽象的に
+declaration	宣言
+associate	関連付ける、連携する
+consider	よく考える、検討する、～とみなす
+term	語句
+earn	得る、獲得する
+in the sense that	という訳で
+actually	実際に、本当は
+define	定義する
+lexicon	辞書、語彙集
+chunk	データの塊
+insofar as	～する限りにおいて
+variable	変数
+definition	定義
+create	創造する
+domain specific language	ドメイン固有言語	略称DSL
+local	局所的な
+this is where	～する所
+lexical scoping	レキシカルスコープ
+dynamic scoping	ダイナミックスコープ
+standard fashion	標準的な方法
+frame	形作る、骨組み
+every time	（～する）たびごとに
+nested	入れ子になった
+call frame	コールフレーム
+destroy	破棄する
+interesting	興味深い
+quite	まったく、すっかり
+differently	違うように、違って
+important	重要な、大切な
+distinguish	識別する、見分ける
+carefully	注意深く
+further	もっと程度の進んだ、それ以上の
+compound	度を増す、より一層ひどくする
+difficulty	難しさ
+somewhere	どこか
+isolation	隔離、分離
+or the other	どれか一方
+construct	構成物
+particular	事項、点、特定の
+interplay	相互作用
+many	多数の、たくさんの、数々の
+for instance	例えば
+unlike	同じでない、違った、似てない
+normal	通常の、標準の、正規の
+search	探す
+along the way	～の途中で
+each	各々の、それぞれの
+expect	予期する、期待する
+most of	大部分
+imply	含む、伴う、暗示する
+nature	性質、本質
+combine	結合する、結びつける
+most of the time	殆どの場合、大抵の場合
+peel	皮をむく
+eventually	結局は
+internal	内部の
+subroutine	サブルーチン
+layer	層
+any number of	～がいくらでも
+but to do that	それを行うためには
+supply	与える、供給する
+declare	宣言する
+operation	操作、演算
+seem	～であるように見える
+prevailing	広く行われる、流行の、一般的な
+industry	産業、工業、業界
+coine	作り出す
+refer	参照する、言及する
+strange	奇妙な、変な
+perform	する、行う、動作する
+in mind	考慮して、心掛けて
+operator	演算子
+include	含む
+fall back	逆戻りする
+purely	純粋に、まったく
+interpretation	解釈、判断
+lexotic	レギゾチック	レキシカルなターゲットを考慮して動的な操作を行う
+work	正常に機能する
+prefer to	～する方を好む
+appropriate	割り当てる
+context	文脈
+upward	上へ向かって
+even though	～であるが
+visible	可視の
+implement	実行する、実装する
+exception	例外
+contain	含む
+identity	独自性、識別
+discover	発見する、気づく
+match	一致する
+relationship	結びつき、関係
+every	全ての
+closure	クロージャ
+abstract	抽象的な
+anonymous	無名の、匿名の
+environment	環境
+invoke	実施する、起動する、呼び出す
+result	結果
+matter	物事、問題
+same	同一の
+inside	内部
+snapshot	スナップショット	ある時点での内容
+delimit	区切る、境界を定める
+curlies	カーリーブラケット
+compile	コンパイルする
+compilation	コンパイル
+string	文字列
+policy	やり方、方策
+implicit	暗黙の
+around	～の周囲に
+control	制御
+structure	構造
+standard	標準の、標準的な
+macro	マクロ
+violate	違反する
+resist	抵抗する
+urge	促す、急がせる、衝動
+mediate	調停する、仲介する
+outer	外側の
+inner	内側の
+such as	などの、次のような
+generally	一般に、全体に
+formal	正式の、形式上の
+parameter	パラメータ
+formal parameter	仮パラメータ	コンピュータ用語では仮パラメータと訳す
+way	方法
+bare	裸の、ありのままの
+except	～を除いては、～以外では
+conditional	条件付きの
+placeholder	プレースホルダー
+argument	引数	関数、メソッド、サブルーチンに渡されるパラメータ
+explicit	はっきりした、明白な
+explicitly	明示的に
+implicitly	暗黙に
+treat	扱う
+though	～だけれども、～にも関わらず	though
+as though	さながら、～のように
+in any case	いずれにせよ、とにかく
+equivalent	同等の
+within	～以内で、～の範囲内で
+such	こんな、そんな
+enclose	取り囲む
+leak	漏れる
+external	外部の
+at least	少なくとも
+alias	別名を付ける
+export	エクスポートする
+any other	何か他の
+
+aliasing	別名を付けること
+part of	部分
+some	いくつかの
+moment	間、瞬間、時
+as in	～における
+no longer	もはや
+value	値
+twice	二度
+suppress	抑制する
+modify	変更する
+prior	先の、前の、より重要な
+tentatively	仮に、試験的に
+bound	縛る、結びつける
+require	要求する
+complain	苦情を言う、訴える
+detect	発見する、検出する
+hidden	隠された、隠れた
+erroneous	誤った、間違った
+subsequently	その後、～に続いて
+since	～だから
+introduce	もたらす
+declarator	宣言
+constant	定数
+initialize	初期化する
+pseudo	擬似
+assignment	割り当て
+expression	式、表現
+evaluate	評価する
+enum	列挙型
+default	初期値を使う
+persist	持続する、残存する
+life	寿命
+keep	ずっと持っている
+separate	異なる、別々の
+however	しかしながら、けれども
+recursive	再帰的な
+function	関数
+rename	名前を変更する
+reflect	表す、示す
+prefix	接頭辞、前につける
+hypothetical	仮想の
+exactly	まさに
+restore	復元する
+unsuccessfully	失敗して
+exit	抜け出る
+below for more	以下詳細は
+temporize	一時的にする
+hypotheticalize	仮定する
+whether	～かどうか、～であろうと
+difference	違い
+cause	引き起こす
+behavior	振る舞い
+undone	なされない
+prepare	準備する、用意する
+redone	やり直す
+absence	無いこと、欠落
+terminate	終える、終結する
+early	早期に
+final	最後の
+return value	返り値
+embed	埋め込む
+embedded	埋め込まれた
+in question	討議されている、問題の、当の
+subtly	わずかに、微妙に、かすかに
+execute	実行する
+branch	分岐、枝分かれ
+always	常に、いつも
+occur	起こる、生じる、発生する
+line ending	行末
+follow	次に来る、続く
+whitespace	ホワイトスペース、空白文字
+comment	コメント
+bracket	括弧に入れる
+consistent	一貫性のある
+works out	うまくいく
+invalid	無効な、不当な
+valid	有効な、正しい
+certain	確かな、確実な
+conceivably	おそらく、多分
+parse	構文解析する、パースする
+self-contained way	自己完結型の方法
+visual consistency	視覚的な一貫性
+statement-terminating blocks	文の終端ブロック
+omit	省略する
+parentheses	括弧
+allow	許可する
+optionally	選択して、任意に
+note that	注意
+truth	真理
+necessarily	必ず、必然的に
+in fact	事実上、実際は
+relatively	相対的に
+useless	役に立たない
+nevertheless	それにもかかわらず
+repeat	繰り返す
+sufficiently	十分に
+ary	～の
+contrast	対比
+likely	たぶん、おそらく
+modifier	修飾子
+short-circuit	短絡、ショート
+so	それゆえ、そういうわけで、そのように、この通りに
+paren	丸括弧
+comprehension	理解力
+form	形
+underneath	下に
+conjecture	推測
+taught	teachの過去形
+as long as	～である限り
+presumably	思うに、多分
+sort out	選り分ける
+innermost	最も深い部分
+however	どんな方法でも
+instead	その代わりとして
+iteration	繰り返し、反復
+single	たった一つの
+but in short	一言で言えば
+ordinary	普通の、通常の
+parcel	一群、一組
+multiple	多数の
+ignore	無視する
+boundary	境界
+flatten	平坦化する
+turn	変える
+any	どんな～でも
+extra	余分の
+therefore	それゆえに、したがって、それによって
+disappear	姿が見えなくなる
+interpolate	補完する
+empty	中身のない、空の
+which	そしてそれは	コンマが前に置かれている場合は「そしてそれは」になる
+flat context	フラットコンテキスト
+slice context	スライスコンテキスト
+finer-grained	きめ細かな
+possible	可能な、起こり得る
+accidentally	偶然に
+side effects	副作用
+wish	思う、望む
+place	配置する
+itself	それ自身
+leave out	省く、省略する
+as with	～の様に
+simply	簡単に、単純に
+bind	結びつける
+ever	常に
+ever	今までに
+uninteresting	つまらない
+fashion	やり方
+mechanism	メカニズム
+mechanism	仕組み、機構
+remain	残る
+still	まだ
+solution	解決策
+in particular	特に
+apply	適用する、応用する
+specifically	はっきりと、明確に
+disallow	禁じる
+recognize	認める、評価する
+even	～でさえ
+own	独自の
+visually	視覚的に
+confuse	わかりにくくする
+at the best of times	最も順調な時でさえ
+force	強要する
+semantics	意味論
+previous	前の
+example	例
+rewrite	書き直す
+clear	はっきりした、明瞭な
+may	～かもしれない
+condition	条件
+first time	初回、1回目
+disguise	変装する
+spec	仕様
+entirely	まったく、完全に
+infinite	無限
+That is	すなわち
+any more	いまや、もはや
+spell	綴る
+mention	簡単に述べる
+earlier	より前に
+pass	渡す
+travers	横断する
+element	要素
+at a time	一度に
+more than	以上に
+process	処理する
+array	配列
+parallel	並行して
+generate	生成する
+list	リスト
+corresponding	一致する、対応する
+lazily	不精な
+benefit	利益
+past	過ぎ去った
+continue	続ける
+remember	覚えておく
+special	特別な
+Note also that	～ということにも注意
+rule	規則、ルール
+automatically	自動的に
+assign	割り当てる
+carried over	次へ持ち越す
+short for	～の略
+readonly	読み込み専用
+readonly	読み取り専用
+trait	トレイト、特性
+include	付け加える
+modifiable	変更可能な
+every other	一つ置き
+suggestive	示唆的な、暗示的な
+double-ended arrow	両頭矢印
+rely	当てにする、頼る
+thunk	サンク
+privately	ひそかに
+original	初期の
+available	使用出来る、利用できる、手に入る
+temporization	一時的にすること
+necessary	必要な
+temporize	テンポラリー化する
+temporization	テンポラリー化
+Likewise	同様に
+never	決して～ない
+need	必要とする
+deem	～だと思う、判断する
+another	もう一つの、別の
+reason	理由
+put	置く
+test-at-the-end	テストの終盤
+attach	取り付ける、くっ付ける、加える
+allow	可能とする
+entire	全体の
+some sort	何らかの
+effect	効果
+unmatch	マッチしない
+parenthesis	丸括弧
+much like	とても似ている
+precedence	優先順位
+decision	決定
+cross	交差する、横切る
+missing	欠けている
+assume	思い込む、決めてかかる
+terminator	終止符
+unmatch	対応のとれていない
+unnecessary	不必要な
+immediately	ただちに、すぐに
+above	上述は
+basically	基本的に
+rvalue	右辺値
+consequence	結果、成り行き、結論
+multidimensional	多次元の
+fed	feedの過去形
+particularly	特に、とりわけ
+useful	役に立つ
+officially	正式に
+Although	とはいえ
+as if	まるで～であるかのように
+postfix	接尾辞
+trigger	きっかけとなる、起こす
+because	なぜなら
+out front	率直な、正直な
+out front	前に出て
+error	エラー
+either	（否定文）どちらも
+as always	いつも通り
+variant	変形
+once	一回
+specify	明示する
+signature	記号
+like that	そのような、あのように
+merely	単に、ただ
+fall back	戻る
+falls back	戻る
+Well	さて
+really	本当に、実際に
+compile time	コンパイル時
+obviously	明らかに
+invisible	不可視の
+Less obviously	あまり明らかでない
+any	何か一つの
+harvest	取り入れる、収納する
+arise	起こる、生じる
+attempt	試みる
+somehow	なんとかして、どういうわけか
+unless	～でない限り
+primitive	原始的な、基本の
+situation	状況
+thereof	それについて
+lack	足りない
+loosely	緩く
+besides	～に加えて
+after all	結局
+wrapped up	深く専念させた
+additional	追加の、付加的な
+dependent	従属の、依存している
+on how	どのように～する
+Regardless of	～に関わらず
+immediate	直接の、即時の
+gather	集める
+real	真の、本当の
+discrete	別々の
+discrete	不連続の
+eventual	結局の
+thus	このように、だから
+determin	決心する、決意する
+throw away	投げ捨てる
+individual	個々の
+Most	最大量の
+usually	普通は
+acronym	頭文字
+block	ブロック
+typically	典型的に
+en passant	ついでに
+unchanged	不変の
+keep track	追い続ける
+essentially	本質的に
+simultaneously	同時に
+operate	動作する
+identical	同一の
+coerce	強制する
+resulting	結果として生じる
+provide	与える、供給する
+resume	再び始める
+pigeon	鳩
+clay tablet	粘土板
+choice	選択
+portable	移植可能な
+generic	一般的な、総括的な
+routine	ルーチン
+multi	複数の、多重の
+often	しばしば
+a bit of	少し
+whose	～するもの
+linguistic	言語の
+somewhat	やや、いくぶん、多少
+virtual method	仮想メソッド
+actual	実際の
+invocant	インボカント
+virtual	仮想の
+look up	調べる
+concrete	具体的な
+immediately	すぐ近くに
+vary	変わる
+anything	何でも
+look up	探索する
+redirect	切り替える
+specific	明確な
+candidate	候補
+caller	呼び出し元
+through	～を通って、～の中で
+For example	例えば
+comparison	比較
+piece	断片
+face value	表面通りの意味
+Everything else	他のすべて
+mean	意味する
+something	何か
+assume	仮定する
+ordinarily	通常、普通は
+run time	実行時
+looks like	ように見える
+similar	似ている
+establish	成立させる、確立する
+user-defined	ユーザー定義の
+purpose	目的
+unary	単項の
+look for	探す
+On the other hand	一方では、他方では
+topicalizing	トピカライジング
+topicalizer	トピカライザー
+means of	方法、手段
+topic	トピック、話題
+special variable	特殊変数
+succeed	成功する
+broken out of	～から切り離す
+leave	去る
+difficult	難しい
+guess	推測する
+intend	意図する
+surrounding	周囲の
+smart match	スマートマッチ
+proceed	続行する、進む
+presume	推定する、仮定する
+in order	順番に
+contiguous	連続的な
+appropriate	適切な
+fall off	離れる
+function	機能する
+break out	突破する、脱出する
+verb	動詞
+precisely	正確に
+outward	外側へ
+belong	属する
+unwind	展開する、解きほぐす
+unwind	巻き戻す
+via	～を経て、～経由で
+successful	成功した
+thence	そこから、それゆえ
+violent	乱暴な
+Of course	もちろん
+directly	直接的に
+explicit	明示的な
+might be	かもしれない
+breakout	脱出
+against	～に反対して
+languages	（プログラミング）言語
+handle	扱う
+fatal	致命的な
+replace	取り替える、交換する
+redundant	冗長な、余分の
+prevent	防ぐ
+unexpected	予期しない、予想外の
+unexpectedly	思いがけなく、予想外に
+eager	～したがっている
+lazy	怠惰な、不精な
+in which case	～の場合に
+Additionally	加えて、さらに
+enforce	強いる、強要する
+failure	失敗
+such that	～であるように
+dealt	分配する、分ける、配る
+In other words	言い換えれば
+Hence	それゆえに、今後
+gonna	going to
+Whenever	～する時はいつでも
+produce	引き起こす
+came in	入る
+may or may not	～するかどうかわからない
+continuation	継続
+abandoned	放棄された、捨てられた
+manipulate	操る
+logically	論理的に
+forever	絶えず、永遠に
+behave	振る舞う
+that way	そのように
+Otherwise	さもなければ
+treasure	取っておく
+further up	更に上
+presence	存在
+guarantee	保証する
+eagerly	しきりに
+abnormal	異常な
+in the general case	一般の場合
+optimize	最適化する
+transfer	転送
+falling off	離れる
+break	中断
+unhindered	妨げられない
+worry	心配する
+constructs	構造
+may	～することもできる
+transparent	透明な、明白な
+in that	～という点で
+illegal	違法な、不当な
+owns	所持する、認める
+respond	返答する、応答する
+locate	配置する
+By default	デフォルトでは
+criteria	基準
+selection	選択
+cumbersome	扱いにくい
+bit	少しばかり
+theory	理論
+ In theory	理論的には
+culturally	文化的に
+right thing	正しいこと
+specific	特定の
+mention	言及する
+preference	好み、優先傾向
+respect	関連、関心
+outermost	最も外側の
+warning	警告
+extract	抜き取る、取り出す
+intercept	横取りする
+anywhere	どこにでも
+suitable	適切な
+orthogonal	直角の、直交する
+optimize away	最適化して除去する
+along with	～と一緒に
+preserve	保存する
+going on	進行中の
+reduce	減らす
+retain	保つ、保持する
+careful	注意深い
+notion	意見、考え
+delay	遅らせる、伸ばす
+numeric	数値
+conversion	変換
+failsoft	フェールソフト
+initialization	初期化
+emulate	エミュレートする
+prohibition	禁止
+fall under	～の分類に入る、～に該当する
+As in	～にあるような
+convenient	便利な
+recent	最近の
+store	保存する、格納する
+robust	強い
+anymore	もはや
+probably	たぶん、おそらく
+issue	出す
+deal with	対処する
+harmless	無害な
+thereafter	その後は
+propagate	伝搬する
+state	状態
+various	様々な
+tend to	なりやすい
+prematurely	早まって
+one by one	一つずつ
+abort	中止する
+discard	破棄する
+principle	原理
+whatever	何でも
+coercion	強制、威圧
+transition	移行
+phase	段階
+as well	そのうえ、同様にうまく
+little bit	少し
+lowercase	小文字
+construct	構造
+rest	残り、休憩
+vernacular	固有の言葉
+expose	さらす、公開する
+precede	優先する
+preceding	すぐ前の
+whole	全体の、全ての
+as a whole	全体として
+innard	内部、内蔵
+unpredictable	予測できない
+dire	緊急の
+possibly	ひょっとしたら
+suppose	～だと思う
+uncertainty	不確実
+increase	増加する
+fire off	発射する
+in time	時間内に
+Apart from	～は別として
+examine	調査する、検査する
+find	気づく
+opposite	逆の
+notice	気がつく
+put off	延期する、遅らせる
+till	～まで
+whereas	～なのに対し
+elaborate	作りこむ
+Preface	序文
+completeness	完全性、網羅性
+in turn	順に、次々に
+influence	影響する
+contradiction	矛盾
+misfeature	仕様の欠陥
+excessive	過剰な
+at first	最初のうちは
+constraint	制約
+similarly	同様に
+race condition	競合状態
+due to	～のため、～の結果
+metasyntactic	メタ構文
+follow	従う
+mandatory	必須の
+storing	記憶、格納
+While	とは言え
+reproduce	再構築する
+notation	表記法
+For	～については
+Conversely	反対に、逆に
+ephemeral	短命な、一過性の
+as well as	だけでなく
+subsequent	以降の
