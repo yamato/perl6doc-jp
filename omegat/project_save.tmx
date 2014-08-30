@@ -3534,6 +3534,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>There are two forms of comment based on &lt;c1&gt;#&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="Toshiyuki Yamato" changedate="20140830T110244Z" creationid="Toshiyuki Yamato" creationdate="20140830T110233Z">
+        <seg>&lt;c1&gt;#&lt;/c1&gt;ベースのコメントには2つの形式があります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>There does not seem to be a prevailing term in the industry for this, so we've coined the term &lt;i1&gt;lexotic&lt;/i1&gt; to refer to these strange operations that perform a dynamic operation with a lexical target in mind.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130728T010232Z" creationid="Toshiyuki" creationdate="20130728T005906Z">
