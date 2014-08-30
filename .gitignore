@@ -3,7 +3,7 @@ perl6doc-jp-level2.tmx
 perl6doc-jp-omegat.tmx
 dictionary/
 target/
-specs/
+# specs/
 omegat/project_stats.txt
 omegat/project_stats_match.txt
 omegat/*.bak

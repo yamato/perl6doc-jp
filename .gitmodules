@@ -1,0 +1,3 @@
+[submodule "specs"]
+	path = specs
+	url = git@github.com:perl6/specs.git
