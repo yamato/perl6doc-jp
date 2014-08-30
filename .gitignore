@@ -1,0 +1,11 @@
+perl6doc-jp-level1.tmx
+perl6doc-jp-level2.tmx
+perl6doc-jp-omegat.tmx
+dictionary/
+target/
+specs/
+omegat/project_stats.txt
+omegat/project_stats_match.txt
+omegat/*.bak
+desktop.ini
+Thumbs.db
