@@ -5054,6 +5054,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It only depends on the $.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T041420Z" creationid="yamato" creationdate="20140914T041420Z">
+        <seg>それは$だけに依存する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It returns &lt;c10&gt;True&lt;/c10&gt; for handled exceptions and for all non-&lt;c11&gt;Failure&lt;/c11&gt; objects.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T161809Z" creationid="Toshiyuki" creationdate="20130817T161809Z">
@@ -10258,6 +10266,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140326T132814Z" creationid="Toshiyuki" creationdate="20140326T132814Z">
         <seg>トレイトは実行時に変更できません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Twigil Scope</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T041636Z" creationid="yamato" creationdate="20140914T041636Z">
+        <seg>ツウィギルスコープ</seg>
       </tuv>
     </tu>
     <tu>
