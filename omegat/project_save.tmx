@@ -4734,6 +4734,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In a flattening context like array assignment, that flattens out into a list of 6 elements, &lt;c2&gt;('a', 1, 'b', 2, 'c', 3)&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T150620Z" creationid="yamato" creationdate="20140914T150620Z">
+        <seg>配列の割り当てのようなフラット化コンテキストでは、6つの要素のリストにフラット化する。&lt;c2&gt;('a', 1, 'b', 2, 'c', 3)&lt;/c2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In addition one can add new identifier terms with the syntax</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T124429Z" creationid="yamato" creationdate="20140914T124429Z">
