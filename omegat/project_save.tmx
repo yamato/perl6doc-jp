@@ -1662,6 +1662,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Arguments from the command line.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115104Z" creationid="yamato" creationdate="20140914T115104Z">
+        <seg>コマンドラインの引数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Array</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T024550Z" creationid="yamato" creationdate="20140914T024550Z">
@@ -2682,6 +2690,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T141645Z" creationid="Toshiyuki" creationdate="20140112T090658Z">
         <seg>カスタムコンストラクタを宣言することは、それらの従属物とともにタスクを宣言するシンプルな方法を提供します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Default encoding of Str.encode/Buf.decode/various IO methods.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115008Z" creationid="yamato" creationdate="20140914T115008Z">
+        <seg>Str.encode/Buf.decode/様々なIOメソッドのデフォルトエンコーディング。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5662,6 +5678,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Magic command-line input handle.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115052Z" creationid="yamato" creationdate="20140914T115052Z">
+        <seg>マジックコマンドライン入力ハンドル。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Magical access to documentation</seg>
       </tuv>
       <tuv lang="JA">
@@ -7814,6 +7838,30 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Standard error filehandle.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115145Z" creationid="yamato" creationdate="20140914T115145Z">
+        <seg>標準エラーファイルハンドル。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Standard input filehandle.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115117Z" creationid="yamato" creationdate="20140914T115117Z">
+        <seg>標準入力ファイルハンドル。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Standard output filehandle.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115130Z" creationid="yamato" creationdate="20140914T115130Z">
+        <seg>標準出力ファイルハンドル。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Starting with class</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T180001Z" creationid="Toshiyuki" creationdate="20140111T180001Z">
@@ -9470,6 +9518,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The system's local timezone.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115201Z" creationid="yamato" creationdate="20140914T115201Z">
+        <seg>システムローカルのタイムゾーン。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The third attribute represents the state of completion of a task:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T183131Z" creationid="Toshiyuki" creationdate="20140111T183131Z">
@@ -9506,6 +9562,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130814T115244Z" creationid="Toshiyuki" creationdate="20130814T115244Z">
         <seg>ハンドルされないリストはダイナミックな変数なので.resumeがそれを扱うのは簡単だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The usage message generated from the signatures of MAIN subs.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114933Z" creationid="yamato" creationdate="20140914T114933Z">
+        <seg>MAINサブルーチンのシグネチャによって生成される使用法メッセージ。</seg>
       </tuv>
     </tu>
     <tu>
