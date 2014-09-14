@@ -702,6 +702,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;m/regex/&lt;/c0&gt; and &lt;c1&gt;/regex/&lt;/c1&gt; regex matches and &lt;c2&gt;s/regex/subst/&lt;/c2&gt; substitutions work on &lt;c3&gt;$_&lt;/c3&gt;:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T112632Z" creationid="yamato" creationdate="20140914T112632Z">
+        <seg>&lt;c0&gt;m/regex/&lt;/c0&gt;と&lt;c1&gt;/regex/&lt;/c1&gt;の正規表現マッチと&lt;c2&gt;s/regex/subst/&lt;/c2&gt;の置換は&lt;c3&gt;$_&lt;/c3&gt;で機能する：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;my Dog $spot&lt;/c0&gt; by itself does not automatically call a &lt;c1&gt;Dog&lt;/c1&gt; constructor.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140327T133640Z" creationid="Toshiyuki" creationdate="20140327T133640Z">
@@ -2250,6 +2258,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>デフォルトで、キーと値はタブ文字で区切られる、そして、組は改行文字によって終了される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Calling a method on &lt;c0&gt;$_&lt;/c0&gt; can be shortened by leaving off the variable name:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T112515Z" creationid="yamato" creationdate="20140914T112515Z">
+        <seg>&lt;c0&gt;$_&lt;/c0&gt;でメソッドを呼ぶのは、変数名を除くことで短くすることができる：</seg>
       </tuv>
     </tu>
     <tu>
