@@ -5710,6 +5710,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Likewise a routine can return a container if it is marked as &lt;c0&gt;is rw&lt;/c0&gt;:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T132403Z" creationid="yamato" creationdate="20140914T132403Z">
+        <seg>同様に&lt;c0&gt;is rw&lt;/c0&gt;とマークされているならルーチンはコンテナを返すことができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Likewise any non-alphanumeric character is assumed to be equivalent to a dot.</seg>
       </tuv>
       <tuv lang="JA">
@@ -6448,8 +6456,8 @@ qw/a b c/</seg>
       <tuv lang="EN-US">
         <seg>Note that subroutine signatures allow passing around of containers:</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamato" changedate="20140914T131922Z" creationid="yamato" creationdate="20140914T131922Z">
-        <seg>サブルーチンシグネチャがコンテナを渡すことが許される：</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T132202Z" creationid="yamato" creationdate="20140914T131922Z">
+        <seg>サブルーチンシグネチャにコンテナを渡すことが許される：</seg>
       </tuv>
     </tu>
     <tu>
@@ -12010,6 +12018,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T114811Z" creationid="yamato" creationdate="20140914T114811Z">
         <seg>どの文法の中にいるのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Which is why assignment to &lt;c2&gt;$a&lt;/c2&gt; also modifies the contents of &lt;c3&gt;$x&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T132305Z" creationid="yamato" creationdate="20140914T132305Z">
+        <seg>それが&lt;c2&gt;$a&lt;/c2&gt;への割り当てが&lt;c3&gt;$x&lt;/c3&gt;の内容も変更する理由だ。</seg>
       </tuv>
     </tu>
     <tu>
