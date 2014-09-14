@@ -3038,6 +3038,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For a list of those special variables see &lt;a0&gt;Compile-time "constants"&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T060253Z" creationid="yamato" creationdate="20140914T060253Z">
+        <seg>これらの特殊変数については&lt;a0&gt;Compile-time "constants"&lt;/a0&gt;を参照。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For all builtin operations, all &lt;c0&gt;Str&lt;/c0&gt; positions are reported as position objects, not integers.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T133559Z" creationid="Toshiyuki" creationdate="20140328T133559Z">
