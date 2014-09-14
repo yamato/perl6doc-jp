@@ -638,6 +638,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;$!&lt;/c0&gt; is the error variable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T113807Z" creationid="yamato" creationdate="20140914T113807Z">
+        <seg>&lt;c0&gt;$!&lt;/c0&gt;はエラー変数だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;$/&lt;/c0&gt; is the match variable.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T112652Z" creationid="yamato" creationdate="20140914T112652Z">
@@ -6662,6 +6670,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Other match variables are aliases to elements of &lt;c0&gt;$/&lt;/c0&gt;:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T113753Z" creationid="yamato" creationdate="20140914T113753Z">
+        <seg>他のマッチ変数は&lt;c0&gt;$/&lt;/c0&gt;の要素への別名だ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Other postfix operators may also make use of unspace:</seg>
       </tuv>
       <tuv lang="JA">
@@ -8234,6 +8250,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T232612Z" creationid="Toshiyuki" creationdate="20140328T232612Z">
         <seg>&lt;c0&gt;Cool&lt;/c0&gt;型は&lt;c1&gt;Any&lt;/c1&gt;から派生し、“cool”（“私はその型の引数にクールです”）なメソッドを全て含みます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;Grammar.parse&lt;/c0&gt; method also sets the caller's &lt;c1&gt;$/&lt;/c1&gt; to the resulting &lt;a2&gt;Match&lt;/a2&gt; object.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T113719Z" creationid="yamato" creationdate="20140914T113719Z">
+        <seg>&lt;c0&gt;Grammar.parse&lt;/c0&gt;メソッドも呼び出し元の&lt;c1&gt;$/&lt;/c1&gt;に結果の&lt;a2&gt;Match&lt;/a2&gt;オブジェクトをセットする。</seg>
       </tuv>
     </tu>
     <tu>
