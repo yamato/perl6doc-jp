@@ -1606,6 +1606,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Array</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T024550Z" creationid="yamato" creationdate="20140914T024550Z">
+        <seg>配列</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Array and Hash variables can be evaluated in item context by prefixing them with a single dollar sign:</seg>
       </tuv>
       <tuv lang="JA">
@@ -5110,6 +5118,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Item assignment places the value from the right-hand side into the variable (container) on the left.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T024419Z" creationid="yamato" creationdate="20140914T024410Z">
+        <seg>アイテム割り当ては左側の変数（コンテナ）に右側の値を設置する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Iterable types may have multiple iterators (lists) running across them simultaneously, but an iterator/list itself has only one thread of consumption.</seg>
       </tuv>
       <tuv lang="JA">
@@ -5306,6 +5322,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>リスト割当ても、暗黙のうちに熱心である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>List assignment leaves the choice of what to do to the variable on the left.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T024545Z" creationid="yamato" creationdate="20140914T024545Z">
+        <seg>リスト割り当ては左の変数に何をすべきかという選択肢を残す。</seg>
       </tuv>
     </tu>
     <tu>
