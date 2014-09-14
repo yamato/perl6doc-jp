@@ -6070,6 +6070,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that all those &lt;c0&gt;$=someBlockName&lt;/c0&gt; support the &lt;c1&gt;Positional&lt;/c1&gt; and the &lt;c2&gt;Associative&lt;/c2&gt; role.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T064603Z" creationid="yamato" creationdate="20140914T064603Z">
+        <seg>それらの全ての&lt;c0&gt;$=someBlockName&lt;/c0&gt;は&lt;c1&gt;Positional&lt;/c1&gt;と&lt;c2&gt;Associative&lt;/c2&gt;ロールをサポートしている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that any &lt;c0&gt;die&lt;/c0&gt; in the catch lambda eventually rethrows outside the lambda as a new exception, but not until the current exception handler has a chance to handle all exceptions that came in via &lt;c1&gt;@!&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130814T113621Z" creationid="Toshiyuki" creationdate="20130814T113621Z">
@@ -11506,6 +11514,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T141122Z" creationid="Toshiyuki" creationdate="20140111T193319Z">
         <seg>あなたは&lt;c0&gt;new&lt;/c0&gt;という名前のデフォルトコンストラクターをベースクラス &lt;c1&gt;Object&lt;/c1&gt;から継承します。しかし例のように&lt;c2&gt;new&lt;/c2&gt;をオーバーライドするのは自由です：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You may access the Pod tree which contains all Pod structures as a hierarchical data structure through &lt;c0&gt;$=pod&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T064514Z" creationid="yamato" creationdate="20140914T064514Z">
+        <seg>&lt;c0&gt;$=pod&lt;/c0&gt;変数を通して階層的な全てのPod構造のツリーにアクセスできる。</seg>
       </tuv>
     </tu>
     <tu>
