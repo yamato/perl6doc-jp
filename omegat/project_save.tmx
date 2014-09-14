@@ -8406,6 +8406,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c2&gt;~~&lt;/c2&gt; smart-match operator sets &lt;c3&gt;$_&lt;/c3&gt; on the right-hand side expression to the value of the left-hand side.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T112013Z" creationid="yamato" creationdate="20140914T112013Z">
+        <seg>&lt;c2&gt;~~&lt;/c2&gt;スマートマッチ演算子は左側の値に右側の式の&lt;c3&gt;$_&lt;/c3&gt;をセットする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c4&gt;.next&lt;/c4&gt; and &lt;c5&gt;.last&lt;/c5&gt; methods take an optional argument giving the final value of that loop iteration.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130806T101538Z" creationid="Toshiyuki" creationdate="20130806T101538Z">
