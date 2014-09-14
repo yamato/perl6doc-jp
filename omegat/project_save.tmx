@@ -9950,6 +9950,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The most common case (and one of the reasons for the whole flattening vs. non-flattening distinction to exist) is to have some list-like operator that could conceivably return either a flat list, or a list of lists.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T143152Z" creationid="yamato" creationdate="20140914T143152Z">
+        <seg>最もよくある例（そしてフラット化と非フラット化の区別が存在するすべての理由の内の1つ）はフラットリストまたはリストのリストを返すリストのような演算子を持つことだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The name itself returns that type object:</seg>
       </tuv>
       <tuv lang="JA">
