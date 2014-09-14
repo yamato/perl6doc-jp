@@ -854,6 +854,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A &lt;c0&gt;List&lt;/c0&gt; has the same attitude of indifference towards containers.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T134651Z" creationid="yamato" creationdate="20140914T134651Z">
+        <seg>&lt;c0&gt;List&lt;/c0&gt;はコンテナに対して同じ無関心の態度をとる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A &lt;c0&gt;Str&lt;/c0&gt; is a Unicode string object.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T131121Z" creationid="Toshiyuki" creationdate="20140328T131121Z">
@@ -8058,6 +8066,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130806T102156Z" creationid="Toshiyuki" creationdate="20130806T102156Z">
         <seg>それゆえ、&lt;c6&gt;next LINE&lt;/c6&gt;という文法はまだ許可される。しかし本当は表面化に&lt;c7&gt;LINE.next(())&lt;/c7&gt;のようなことをしている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So the parcel doesn't care about whether its elements are values or containers, they just store and retrieve whatever was given to them.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T134553Z" creationid="yamato" creationdate="20140914T134553Z">
+        <seg>parcelは要素が値かコンテナか気にしないので、与えられたものを何でも格納・読み出すだけだ。</seg>
       </tuv>
     </tu>
     <tu>
