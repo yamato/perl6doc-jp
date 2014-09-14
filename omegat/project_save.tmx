@@ -1878,6 +1878,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Attributes are variables that exists per instance of a class.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T051944Z" creationid="yamato" creationdate="20140914T051944Z">
+        <seg>属性はクラスのインスタンスごとに存在する変数だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Autopriming of Unary and Binary Operators with Whatever</seg>
       </tuv>
       <tuv lang="JA">
@@ -10058,6 +10066,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>このセクションは、それのために便利な構文法のシュガーについてである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This stems from the fact that we declared a new dynamic variable &lt;c6&gt;$*dynamic1&lt;/c6&gt; in the block and did not assign to the old variable as we did with &lt;c7&gt;$*dynamic2&lt;/c7&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T051730Z" creationid="yamato" creationdate="20140914T051730Z">
+        <seg>我々が新しい動的変数&lt;c6&gt;$*dynamic1&lt;/c6&gt;をブロックで宣言し、古い変数&lt;c7&gt;$*dynamic2&lt;/c7&gt;にしたような割り当てをしなかったことによりこれが生じる。</seg>
       </tuv>
     </tu>
     <tu>
