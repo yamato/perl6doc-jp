@@ -5998,6 +5998,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that the item assignment has tighter precedence than list assignment, and also tighter than the comma.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T025754Z" creationid="yamato" creationdate="20140914T025754Z">
+        <seg>アイテム割り当てがリスト割り当てとコンマより高い優先順位を持つことに注意するべきだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that the value being evaluated for truth and subsequently bound is not necessarily a value of type &lt;c0&gt;Bool&lt;/c0&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130804T070604Z" creationid="Toshiyuki" creationdate="20130804T070604Z">
@@ -9834,6 +9842,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130818T090602Z" creationid="Toshiyuki" creationdate="20130818T090602Z">
         <seg>これは&lt;c1&gt;CATCH&lt;/c1&gt;と&lt;c2&gt;CONTROL&lt;/c2&gt;が常にブロックを要求することを意味する。それらは&lt;c3&gt;$_&lt;/c3&gt;を現在のトピックにセットする引数をとるので、内部はswitch文として振る舞うことができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This means that:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T025806Z" creationid="yamato" creationdate="20140914T025806Z">
+        <seg>これは以下を意味する：</seg>
       </tuv>
     </tu>
     <tu>
