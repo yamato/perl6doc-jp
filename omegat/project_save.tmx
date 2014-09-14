@@ -1846,6 +1846,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Assigns &lt;c0&gt;42&lt;/c0&gt; to &lt;c1&gt;$num&lt;/c1&gt;, and both &lt;c2&gt;42&lt;/c2&gt; and &lt;c3&gt;"str"&lt;/c3&gt; to &lt;c4&gt;@array&lt;/c4&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T025934Z" creationid="yamato" creationdate="20140914T025934Z">
+        <seg>&lt;c0&gt;42&lt;/c0&gt;を&lt;c1&gt;$num&lt;/c1&gt;に、そして&lt;c2&gt;42&lt;/c2&gt;と&lt;c3&gt;"str"&lt;/c3&gt;の両方を&lt;c4&gt;@array&lt;/c4&gt;に割り当てる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>At each point in the parse, the lexer knows which subset of the grammatical categories are possible at that point, and follows the longest-token rule across all the active alternatives, including those representing any grammatical categories that are ready to match.</seg>
       </tuv>
       <tuv lang="JA">
@@ -6938,6 +6946,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>第二のシギル（twigils）は、主要なシギルが改竄するかどうかに対する影響力を持たない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See &lt;a5&gt;operators&lt;/a5&gt; for more details.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T025948Z" creationid="yamato" creationdate="20140914T025948Z">
+        <seg>詳細は&lt;a5&gt;operators&lt;/a5&gt;を参照。</seg>
       </tuv>
     </tu>
     <tu>
