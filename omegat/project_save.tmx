@@ -8160,8 +8160,8 @@
       <tuv lang="EN-US">
         <seg>That means that &lt;c1&gt;degrees&lt;/c1&gt; and &lt;c2&gt;ﾎｸ&lt;/c2&gt; above actually directly represent &lt;c3&gt;Int&lt;/c3&gt;s.</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamato" changedate="20140914T040130Z" creationid="yamato" creationdate="20140914T040130Z">
-        <seg>それは実際に&lt;c1&gt;degrees&lt;/c1&gt;と&lt;c2&gt;ﾎｸ&lt;/c2&gt;が直接&lt;c3&gt;Int&lt;/c3&gt;を表現することを意味する。</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120503Z" creationid="yamato" creationdate="20140914T040130Z">
+        <seg>それは実際に&lt;c1&gt;degrees&lt;/c1&gt;と&lt;c2&gt;θ&lt;/c2&gt;が直接&lt;c3&gt;Int&lt;/c3&gt;を表現することを意味する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12494,6 +12494,16 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>my \degrees = pi / 180;
+my \ﾎｸ       = 15 * degrees;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120454Z" creationid="yamato" creationdate="20140914T120454Z">
+        <seg>my \degrees = pi / 180;
+my \θ       = 15 * degrees;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>or</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130730T125614Z" creationid="Toshiyuki" creationdate="20130730T125614Z">
@@ -12714,6 +12724,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130814T110054Z" creationid="Toshiyuki" creationdate="20130814T110054Z">
         <seg>実際にはこれの何かのように動作する&lt;i0&gt;catch lambda&lt;/i0&gt;の中へ呼んでいる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ﾎｸ = 3; # Dies with the error "Cannot modify an immutable Int"</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120513Z" creationid="yamato" creationdate="20140914T120513Z">
+        <seg>θ = 3; # Dies with the error "Cannot modify an immutable Int"</seg>
       </tuv>
     </tu>
 <!-- Alternative translations -->
