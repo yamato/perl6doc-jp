@@ -8638,6 +8638,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The first time &lt;c0&gt;&amp;say-all&lt;/c0&gt; is called, it prints "1, 10, 100" just as one would expect.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T043557Z" creationid="yamato" creationdate="20140914T043557Z">
+        <seg>最初に&lt;c0&gt;&amp;say-all&lt;/c0&gt;が呼ばれ、「1, 10, 100」を予期する通りに出力する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The first two tests each smart-match against a class name.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140322T104937Z" creationid="Toshiyuki" creationdate="20140112T135621Z">
