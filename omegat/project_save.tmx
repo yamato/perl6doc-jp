@@ -6102,6 +6102,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Often-Used Variables</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T022013Z" creationid="yamato" creationdate="20140914T022001Z">
+        <seg>頻繁に使用される変数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Old disambiguation</seg>
       </tuv>
       <tuv lang="JA">
@@ -7366,6 +7374,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Special Variables</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T021826Z" creationid="yamato" creationdate="20140914T021826Z">
+        <seg>特殊変数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Special variables</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T090220Z" creationid="Toshiyuki" creationdate="20140329T090220Z">
@@ -7758,10 +7774,26 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;:&lt;/c0&gt; Sigil</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T021801Z" creationid="yamato" creationdate="20140914T021801Z">
+        <seg>&lt;c0&gt;:&lt;/c0&gt;シギル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c0&gt;&lt;&lt;/c0&gt; Sigil</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T021744Z" creationid="yamato" creationdate="20140914T021744Z">
         <seg>&lt;c0&gt;&lt;&lt;/c0&gt;シギル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;=&lt;/c0&gt; Sigil</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T021809Z" creationid="yamato" creationdate="20140914T021809Z">
+        <seg>&lt;c0&gt;=&lt;/c0&gt;シギル</seg>
       </tuv>
     </tu>
     <tu>
@@ -7938,6 +7970,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130809T143804Z" creationid="Toshiyuki" creationdate="20130809T143804Z">
         <seg>&lt;c0&gt;while&lt;/c0&gt;と&lt;c1&gt;until&lt;/c1&gt;文はPerl 5のように動作する。条件文の周囲の括弧を省略するかもしれない場合を除いて：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;~&lt;/c0&gt; Sigil</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T021816Z" creationid="yamato" creationdate="20140914T021816Z">
+        <seg>&lt;c0&gt;~&lt;/c0&gt;シギル</seg>
       </tuv>
     </tu>
     <tu>
