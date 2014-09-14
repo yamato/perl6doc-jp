@@ -2838,6 +2838,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Every Pod block in the current file can be accessed via a Pod object, such as &lt;c1&gt;$=data&lt;/c1&gt;, &lt;c2&gt;$=SYNOPSIS&lt;/c2&gt; or &lt;c3&gt;=UserBlock&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T064155Z" creationid="yamato" creationdate="20140914T064155Z">
+        <seg>現在のファイルの全てのPodブロックは&lt;c1&gt;$=data&lt;/c1&gt;、&lt;c2&gt;$=SYNOPSIS&lt;/c2&gt;、または&lt;c3&gt;=UserBlock&lt;/c3&gt;のようなPodオブジェクトでアクセスできる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Every block is a closure.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130729T115438Z" creationid="Toshiyuki" creationdate="20130729T115438Z">
@@ -8122,6 +8130,14 @@
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T021809Z" creationid="yamato" creationdate="20140914T021809Z">
         <seg>&lt;c0&gt;=&lt;/c0&gt;シギル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;=&lt;/c0&gt; twigil is used to access Pod variables.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T064006Z" creationid="yamato" creationdate="20140914T064006Z">
+        <seg>&lt;c0&gt;=&lt;/c0&gt;ツウィギルはPod変数にアクセスするのに使用される。</seg>
       </tuv>
     </tu>
     <tu>
