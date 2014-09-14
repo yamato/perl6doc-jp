@@ -1062,6 +1062,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A low-level explanation of Perl 6 containers</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T125640Z" creationid="yamato" creationdate="20140914T125640Z">
+        <seg>Perl 6のローレベルの説明</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A multidimensional slice will be done with semicolons between individual slice sublists.</seg>
       </tuv>
       <tuv lang="JA">
@@ -10426,6 +10434,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>これは、強制演算子としてシギルを使うことができる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This article started as a conversion on IRC explaining the difference between the &lt;c0&gt;Array&lt;/c0&gt; and the &lt;c1&gt;List&lt;/c1&gt; type in Perl 6.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T125833Z" creationid="yamato" creationdate="20140914T125833Z">
+        <seg>本稿は&lt;c0&gt;Array&lt;/c0&gt;と&lt;c1&gt;List&lt;/c1&gt;型の違いを説明するIRCの変換としてスタートした。</seg>
       </tuv>
     </tu>
     <tu>
