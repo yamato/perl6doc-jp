@@ -6878,6 +6878,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Perl 6 Terms</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T121332Z" creationid="yamato" creationdate="20140914T121332Z">
+        <seg>Perl 6の項</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Perl 6 Variables</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T021202Z" creationid="yamato" creationdate="20140914T021202Z">
@@ -8074,6 +8082,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>タイトル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Terms</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T121318Z" creationid="yamato" creationdate="20140914T121318Z">
+        <seg>項</seg>
       </tuv>
     </tu>
     <tu>
