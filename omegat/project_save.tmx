@@ -6734,6 +6734,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Please be aware that twigils have no influence over whether the primary sigil interpolates.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T041112Z" creationid="yamato" creationdate="20140914T041112Z">
+        <seg>ツウィギルが第1のシギルを補完するかどうかに対する影響力を持たないので注意が必要だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Please note that this abbreviation allows:</seg>
       </tuv>
       <tuv lang="JA">
@@ -7698,6 +7706,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T060536Z" creationid="Toshiyuki" creationdate="20130810T060536Z">
         <seg>すなわち、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>That is, if &lt;c0&gt;$a&lt;/c0&gt; interpolates, so do &lt;c1&gt;$^a&lt;/c1&gt;, &lt;c2&gt;$*a&lt;/c2&gt;, &lt;c3&gt;$=a&lt;/c3&gt;, &lt;c4&gt;$?a&lt;/c4&gt;, &lt;c5&gt;$.a&lt;/c5&gt;, etc.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T041341Z" creationid="yamato" creationdate="20140914T041341Z">
+        <seg>つまり、&lt;c0&gt;$a&lt;/c0&gt;を補完すると&lt;c1&gt;$^a&lt;/c1&gt;、&lt;c2&gt;$*a&lt;/c2&gt;、&lt;c3&gt;$=a&lt;/c3&gt;、&lt;c4&gt;$?a&lt;/c4&gt;、&lt;c5&gt;$.a&lt;/c5&gt;のようになる。</seg>
       </tuv>
     </tu>
     <tu>
