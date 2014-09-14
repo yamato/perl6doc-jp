@@ -798,6 +798,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c1&gt;@a[0]&lt;/c1&gt; returns one of them, and the assignment operator replaces the integer value stored in that container with the new one, &lt;c2&gt;42&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T135134Z" creationid="yamato" creationdate="20140914T135134Z">
+        <seg>&lt;c1&gt;@a[0]&lt;/c1&gt;はそれらの1つを返し、そして割り当て演算子はそのコンテナに保存されている整数値を 新しい&lt;c2&gt;42&lt;/c2&gt;に置き換える。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c2&gt;$!&lt;/c2&gt; is a convenient link to the last failure, and only ever contains one exception, the most recent.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T151646Z" creationid="Toshiyuki" creationdate="20130817T151646Z">
@@ -2010,6 +2018,22 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>ご覧の通り、名前の拡張は、コロン一組表記法を使用する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Assigning and Binding to Array Variables</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T135156Z" creationid="yamato" creationdate="20140914T135156Z">
+        <seg>配列変数への割り当てとバインディング</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Assigning to a scalar variable and to an array variable both do basically the same thing: discard the old value(s), and enter some new value(s).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T135322Z" creationid="yamato" creationdate="20140914T135322Z">
+        <seg>スカラー変数と配列変数への割り当ては基本的に同じことをする：古い値を捨て、新しい値を入れる。</seg>
       </tuv>
     </tu>
     <tu>
