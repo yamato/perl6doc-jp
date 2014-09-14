@@ -2326,6 +2326,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Compile-time "constants"</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T022112Z" creationid="yamato" creationdate="20140914T022112Z">
+        <seg>コンパイル時の「定数」</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Complex literals</seg>
       </tuv>
       <tuv lang="JA">
@@ -2674,6 +2682,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>動的変数創造</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Dynamic variables</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T022123Z" creationid="yamato" creationdate="20140914T022123Z">
+        <seg>動的変数</seg>
       </tuv>
     </tu>
     <tu>
