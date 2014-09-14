@@ -5078,6 +5078,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Item and List Assignment</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T021643Z" creationid="yamato" creationdate="20140914T021643Z">
+        <seg>アイテムとリストの割り当て</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Iterable types may have multiple iterators (lists) running across them simultaneously, but an iterator/list itself has only one thread of consumption.</seg>
       </tuv>
       <tuv lang="JA">
@@ -6950,6 +6958,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Sigilless variables</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T021659Z" creationid="yamato" creationdate="20140914T021659Z">
+        <seg>シギルなしの変数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Sigils</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T000155Z" creationid="Toshiyuki" creationdate="20140329T000155Z">
@@ -7670,6 +7686,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;!&lt;/c0&gt; Sigil</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T021723Z" creationid="yamato" creationdate="20140914T021723Z">
+        <seg>&lt;c0&gt;!&lt;/c0&gt;シギル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c0&gt;$Package'var&lt;/c0&gt; syntax is gone.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T000110Z" creationid="Toshiyuki" creationdate="20140329T000110Z">
@@ -7682,6 +7706,22 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T182550Z" creationid="Toshiyuki" creationdate="20140111T182550Z">
         <seg>&lt;c0&gt;&amp;&lt;/c0&gt;シギルは属性が何かを起動可能であることを示します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;*&lt;/c0&gt; Sigil</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T021715Z" creationid="yamato" creationdate="20140914T021715Z">
+        <seg>&lt;c0&gt;*&lt;/c0&gt;シギル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;.&lt;/c0&gt; Sigil</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T021737Z" creationid="yamato" creationdate="20140914T021737Z">
+        <seg>&lt;c0&gt;.&lt;/c0&gt;シギル</seg>
       </tuv>
     </tu>
     <tu>
@@ -7718,6 +7758,22 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;&lt;&lt;/c0&gt; Sigil</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T021744Z" creationid="yamato" creationdate="20140914T021744Z">
+        <seg>&lt;c0&gt;&lt;&lt;/c0&gt;シギル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;?&lt;/c0&gt; Sigil</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T021730Z" creationid="yamato" creationdate="20140914T021730Z">
+        <seg>&lt;c0&gt;?&lt;/c0&gt;シギル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c0&gt;Cool&lt;/c0&gt; module also contains all multisubs of last resort; these are automatically searched if normal multiple dispatch does not find a viable candidate.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T233824Z" creationid="Toshiyuki" creationdate="20140328T233824Z">
@@ -7738,6 +7794,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T133413Z" creationid="Toshiyuki" creationdate="20140328T133413Z">
         <seg>&lt;c0&gt;StrPos&lt;/c0&gt;型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;^&lt;/c0&gt; Sigil</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T021752Z" creationid="yamato" creationdate="20140914T021752Z">
+        <seg>&lt;c0&gt;^&lt;/c0&gt;シギル</seg>
       </tuv>
     </tu>
     <tu>
