@@ -10750,6 +10750,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Those always start with a colon, and then are followed either by an identifier or the name of an already existing variable (whose name sans the sigil is used as the key, and value of the variable is used as the value of the pair).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T123609Z" creationid="yamato" creationdate="20140914T123609Z">
+        <seg>それらは常にコロンで始まり、識別子またはすでに存在する変数名が続く（その名前はシギルがキーに使われ、変数の値がペアの値になる）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Those that apply to some object such as a filehandle will instead be attributes of the appropriate object.</seg>
       </tuv>
       <tuv lang="JA">
