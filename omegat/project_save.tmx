@@ -2366,6 +2366,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Compile-time "constants" may be addressed via the &lt;c0&gt;?&lt;/c0&gt; twigil.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T054725Z" creationid="yamato" creationdate="20140914T054725Z">
+        <seg>コンパイル時の「定数」は&lt;c0&gt;?&lt;/c0&gt;ツウィギルでアドレスされることができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Complex literals</seg>
       </tuv>
       <tuv lang="JA">
