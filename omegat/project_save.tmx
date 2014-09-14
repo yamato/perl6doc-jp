@@ -4078,6 +4078,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If you don't want this to happen, use &lt;c4&gt;$!x&lt;/c4&gt; and &lt;c5&gt;$!y&lt;/c5&gt; instead.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T061330Z" creationid="yamato" creationdate="20140914T061330Z">
+        <seg>これが起こらないようにしたいなら&lt;c4&gt;$!x&lt;/c4&gt;と&lt;c5&gt;$!y&lt;/c5&gt;を代わりに使う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If you have a switch that is the main block of a &lt;c0&gt;for&lt;/c0&gt; loop that uses &lt;c1&gt;$_&lt;/c1&gt; as its loop variable, and you break out of the switch either implicitly or explicitly (that is, the switch "succeeds"), control merely goes to the end of that block, and thence on to the next iteration of the loop.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130813T115936Z" creationid="Toshiyuki" creationdate="20130813T115936Z">
@@ -6162,6 +6170,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>なお、しかし、それはautoboxingすることを繰り返した、そして、ネイティブ型かオブジェクトタイプを一貫して利用するプログラムと比較して、箱から出すことはあなたのプログラムを非常により遅くすることができる。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note, however, that subclasses may override those methods.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T061232Z" creationid="yamato" creationdate="20140914T061232Z">
+        <seg>しかしサブクラスがそれらのメソッドをオーバーライドするかもしれないので注意。</seg>
       </tuv>
     </tu>
     <tu>
