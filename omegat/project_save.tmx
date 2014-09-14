@@ -3214,6 +3214,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For &lt;c0&gt;Scalar&lt;/c0&gt; it means "replace the previously stored value with the new one".</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T131835Z" creationid="yamato" creationdate="20140914T131835Z">
+        <seg>&lt;c0&gt;Scalar&lt;/c0&gt;にとってはそれは「前に保存された値を新しいものと入れ替える」ということを意味する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For Perl 6 we have to make this preference for lexotic behavior explicit.)</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T081915Z" creationid="Toshiyuki" creationdate="20130817T081915Z">
@@ -9062,6 +9070,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The assignment operator asks the container on the left to store the value on its right.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T131637Z" creationid="yamato" creationdate="20140914T131637Z">
+        <seg>割り当て演算子は右の値を保存するために左にコンテナを求める。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The backslash is always removed in this case.</seg>
       </tuv>
       <tuv lang="JA">
@@ -11746,6 +11762,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T155030Z" creationid="Toshiyuki" creationdate="20130810T155030Z">
         <seg>さて、それは本当は戻らない。&lt;c2&gt;take&lt;/c2&gt;がレキシカルかダイナミックに使われるかどうかコンパイル時に知る時から。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What exactly that means is up to the container type.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T131712Z" creationid="yamato" creationdate="20140914T131712Z">
+        <seg>それが正確に意味するものはコンテナ型次第だ。</seg>
       </tuv>
     </tu>
     <tu>
