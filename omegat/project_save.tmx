@@ -9118,6 +9118,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The two dynamic variables are looked up in the callers scope and therefore have the values 11 and 101.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T045714Z" creationid="yamato" creationdate="20140914T045714Z">
+        <seg>2つの動的変数は呼び出し元のスコープでルックアップされる。したがって11と101という値を持つ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The type inside the parens indicates the acceptable set of types that are allowed to be bound or assigned to this location via coercion.</seg>
       </tuv>
       <tuv lang="JA">
