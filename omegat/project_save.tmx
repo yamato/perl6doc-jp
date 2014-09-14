@@ -3766,6 +3766,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Here &lt;c0&gt;@a&lt;/c0&gt; is flattened out in the second line.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T141143Z" creationid="yamato" creationdate="20140914T141143Z">
+        <seg>ここで&lt;c0&gt;@a&lt;/c0&gt;は2行目でフラット化される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Here after the initial binding, the lexpad entries for &lt;c0&gt;$a&lt;/c0&gt; and &lt;c1&gt;$b&lt;/c1&gt; both point to the same scalar container, so assigning to one variable also changes the contents of the other.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T133652Z" creationid="yamato" creationdate="20140914T133652Z">
@@ -5714,6 +5722,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T024906Z" creationid="yamato" creationdate="20140914T024410Z">
         <seg>アイテム割り当ては左側の変数（コンテナ）に右側の値を配置する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Item containers prevent flattening, thus allowing the programmer to write nested data structures.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T141303Z" creationid="yamato" creationdate="20140914T141303Z">
+        <seg>アイテムコンテナはフラット化を防ぐ。したがってネストしてあデータ構造をプログラマに書くことを許す。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8658,6 +8674,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T120503Z" creationid="yamato" creationdate="20140914T040130Z">
         <seg>それは実際に&lt;c1&gt;degrees&lt;/c1&gt;と&lt;c2&gt;θ&lt;/c2&gt;が直接&lt;c3&gt;Int&lt;/c3&gt;を表現することを意味する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>That means that flattening list context iterates over them as if there was no container boundary:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T141107Z" creationid="yamato" creationdate="20140914T141107Z">
+        <seg>それはリストコンテキストのフラット化は、コンテナの境界が無いかのようにそれらを繰り返すということを意味する：</seg>
       </tuv>
     </tu>
     <tu>
