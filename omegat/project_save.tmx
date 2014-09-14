@@ -6086,6 +6086,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note, however, that these do not create &lt;a0&gt;containers&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T035007Z" creationid="yamato" creationdate="20140914T035007Z">
+        <seg>しかしこれらが&lt;a0&gt;コンテナ&lt;/a0&gt;を作成しない点に注意が必要だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Nothing is ever bound implicitly, however, and many conditionals would simply bind &lt;c0&gt;True&lt;/c0&gt; or &lt;c1&gt;False&lt;/c1&gt; in an uninteresting fashion.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130809T145004Z" creationid="Toshiyuki" creationdate="20130809T145004Z">
