@@ -1830,6 +1830,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>As a curious side note, Perl 6 supports binding to array elements:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T135922Z" creationid="yamato" creationdate="20140914T135922Z">
+        <seg>珍しいサイドノートとして、Perl 6は配列要素へのバインディングをサポートする：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>As a postfix operator, a method call is one of those operators that is automatically primed.</seg>
       </tuv>
       <tuv lang="JA">
@@ -2242,6 +2250,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>バインディングは、割当てと異なる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Binding to Array Elements</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T135757Z" creationid="yamato" creationdate="20140914T135757Z">
+        <seg>配列の要素へのバインディング</seg>
       </tuv>
     </tu>
     <tu>
