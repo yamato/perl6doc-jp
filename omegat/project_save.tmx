@@ -638,6 +638,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;$/&lt;/c0&gt; is the match variable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T112652Z" creationid="yamato" creationdate="20140914T112652Z">
+        <seg>&lt;c0&gt;$/&lt;/c0&gt;はマッチ変数だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;$&lt;/c0&gt; always means a scalar variable, &lt;c1&gt;@&lt;/c1&gt; an array variable, and &lt;c2&gt;%&lt;/c2&gt; a hash variable, even when subscripting.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T022212Z" creationid="Toshiyuki" creationdate="20140329T022212Z">
@@ -5226,6 +5234,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140322T044921Z" creationid="Toshiyuki" creationdate="20140111T175137Z">
         <seg>それは、シグネチャーのカスタムコンストラクタ、プライベートとパブリック属性、メソッドといろいろな側面を公開します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It stores the result of each regex match, and usually contains objects of type &lt;a1&gt;Match&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T112758Z" creationid="yamato" creationdate="20140914T112758Z">
+        <seg>それはそれぞれの正規表現のマッチを保存し、通常は&lt;a1&gt;Match&lt;/a1&gt;型オブジェクトを含んでいる。</seg>
       </tuv>
     </tu>
     <tu>
