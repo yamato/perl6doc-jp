@@ -1102,6 +1102,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Absolute path of the perl executable that is currently running.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115725Z" creationid="yamato" creationdate="20140914T115725Z">
+        <seg>現在実行しているperl実行ファイルの絶対パス。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>According to S12, properties are actually implemented by a kind of mixin mechanism, and such mixins are accomplished by the generation of an individual anonymous class for the object (unless an identical anonymous class already exists and can safely be shared).</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140326T132615Z" creationid="Toshiyuki" creationdate="20140326T132615Z">
@@ -6838,6 +6846,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Path to the current executable as it was typed in on the</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115532Z" creationid="yamato" creationdate="20140914T115532Z">
+        <seg>現在の実行ファイルのパス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Pattern matching is the process of applying these patterns to actual text to look for matches.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140320T163801Z" creationid="Toshiyuki" creationdate="20140115T143212Z">
@@ -9314,6 +9330,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>名前そのものは、その型オブジェクトを返る：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The name of the perl executable that is currently running.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115749Z" creationid="yamato" creationdate="20140914T115749Z">
+        <seg>現在実行しているperl実行ファイルの名前。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12210,6 +12234,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130802T140153Z" creationid="Toshiyuki" creationdate="20130802T140153Z">
         <seg>は&lt;c0&gt;$x&lt;/c0&gt;をその現在の値で始める。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>command line, or C&lt;-e&gt; if perl was invoked with the -e flag.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115658Z" creationid="yamato" creationdate="20140914T115658Z">
+        <seg>perlが-eフラグで起動されたならC&lt;-e&gt;。</seg>
       </tuv>
     </tu>
     <tu>
