@@ -4014,6 +4014,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If it is left blank, the value is &lt;c0&gt;Bool::True&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T123824Z" creationid="yamato" creationdate="20140914T123824Z">
+        <seg>左が空白なら値は&lt;c0&gt;Bool::True&lt;/c0&gt;だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If it is not, it is compiled as a provisional function call of the list operator form, which may or may not have an argument list.</seg>
       </tuv>
       <tuv lang="JA">
@@ -4218,6 +4226,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>2つの単位がパッケージ名に非互換の型シグネチャを提供するならば、単位の編集は失敗する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If used in an argument list, all of these forms count as named arguments, with the exception of &lt;c0&gt;'quoted string' =&gt; $value &lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124002Z" creationid="yamato" creationdate="20140914T124002Z">
+        <seg>引数リストで使われるなら、これらの全ての形式は名前付き引数とみなされる。&lt;c0&gt;'quoted string' =&gt; $value &lt;/c0&gt;を除いて。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4906,6 +4922,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>第一に、すべてのオブジェクトが同じメモリ空間（たとえば、NUMAについての文献を見る）にあるというわけではない、そして、単にそれらが2つの異なるメモリ空間に同じオフセットで保存されたのでだけ、2つのオブジェクトには同じアイデンティティが偶然にあってはならない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the identifier form a colonpair, the optional value can be any circumfix.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T123744Z" creationid="yamato" creationdate="20140914T123744Z">
+        <seg>コロンペアの形式の識別子でオブションの値は何らかのcircumfixでありえる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9738,6 +9762,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130808T131033Z" creationid="Toshiyuki" creationdate="20130808T131033Z">
         <seg>ループ文の値はそれぞれの反復の値のリストになる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The value of the &lt;c1&gt;:!identifier&lt;/c1&gt; form is &lt;c2&gt;Bool::False&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T123845Z" creationid="yamato" creationdate="20140914T123845Z">
+        <seg>&lt;c1&gt;:!identifier&lt;/c1&gt;形式の値は&lt;c2&gt;Bool::False&lt;/c2&gt;だ。</seg>
       </tuv>
     </tu>
     <tu>
