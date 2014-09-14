@@ -2502,6 +2502,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Contrary to item assignment, it means that the type of the variable on the left always stays &lt;c2&gt;Array&lt;/c2&gt;, regardless of the type of the right-hand side.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T025543Z" creationid="yamato" creationdate="20140914T025543Z">
+        <seg>アイテム割り当てとは逆に、右側の型に関係なく左の変数の型が常に&lt;c2&gt;Array&lt;/c2&gt;であり続けることを意味する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Control exceptions may be caught with a &lt;c1&gt;CONTROL&lt;/c1&gt; block.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130816T125447Z" creationid="Toshiyuki" creationdate="20130816T125447Z">
