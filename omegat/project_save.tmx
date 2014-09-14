@@ -1494,6 +1494,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>An &lt;c0&gt;Array&lt;/c0&gt; is just like a list, except that it forces all its elements to be containers.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T134925Z" creationid="yamato" creationdate="20140914T134925Z">
+        <seg>&lt;c0&gt;Array&lt;/c0&gt;はリストのようだが、すべての要素にコンテナであることを強制する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>An &lt;c0&gt;of&lt;/c0&gt; type on an array or hash specifies the type stored by each element:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T222144Z" creationid="Toshiyuki" creationdate="20140328T222144Z">
@@ -2314,6 +2322,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T134344Z" creationid="yamato" creationdate="20140914T134344Z">
         <seg>しかし要素の一つがスカラーコンテナなら、それへの割り当てはまだ可能だ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>But it allows modifying the length (for example with &lt;c1&gt;push&lt;/c1&gt;, &lt;c2&gt;pop&lt;/c2&gt;, &lt;c3&gt;shift&lt;/c3&gt; and &lt;c4&gt;unshift&lt;/c4&gt;), and it is also lazy.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T134818Z" creationid="yamato" creationdate="20140914T134818Z">
+        <seg>しかしそれは長さの変更を許す（例えば&lt;c1&gt;push&lt;/c1&gt;、 &lt;c2&gt;pop&lt;/c2&gt;、&lt;c3&gt;shift&lt;/c3&gt;、&lt;c4&gt;unshift&lt;/c4&gt;）、そしてそれは怠惰でもある。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11166,6 +11182,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Thus you can say</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T134947Z" creationid="yamato" creationdate="20140914T134947Z">
+        <seg>このように書くことができる</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To coerce your return value, use a coercion type:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T224039Z" creationid="Toshiyuki" creationdate="20140328T224039Z">
@@ -12714,6 +12738,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>そして、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>and &lt;c0&gt;@a&lt;/c0&gt; actually stores three scalar containers.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T135022Z" creationid="yamato" creationdate="20140914T135022Z">
+        <seg>そして&lt;c0&gt;@a&lt;/c0&gt;は実際に3つのスカラーコンテナを保存している。</seg>
       </tuv>
     </tu>
     <tu>
