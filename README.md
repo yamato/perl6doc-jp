@@ -1,6 +1,6 @@
 # 概要
 
-Perl 6関連ドキュメントを日本語に翻訳するプロジェクトです。
+Perl 6関連ドキュメントを日本語に翻訳するプロジェクトです
 
 # 翻訳を始めるには
 
@@ -21,7 +21,14 @@ OmegaTを起動後、メニューの「プロジェクト」→「チームプ�
 
 ## 3. コミットとGitHubリポジトリへの反映
 
-プロジェクトを保存するとユーザー名とパスワードの入力が求められます。ここにはGitHubアカウントのユーザー名とパスワードを入力してください。あとは自動でcommitとpushが行われます。OmegaTの仕様により、pushされるブランチはmaster固定です。
+プロジェクトを保存するとユーザー名とパスワードの入力が求められます。ここにはGitHubアカウントのユーザー名とパスワードを入力してください。自動でcommitとpushが行われます。OmegaTの仕様により、pushされるブランチはmaster固定です。
+
+# 翻訳ソース
+
+これらのドキュメントの著作権はPerl6開発チームにあります。
+
+* [Perl 6 specification documents](https://github.com/perl6/specs)
+* [Perl 6 documentation](https://github.com/perl6/doc)
 
 # 管理者
 
