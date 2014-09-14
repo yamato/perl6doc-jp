@@ -3398,6 +3398,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For example in</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T142416Z" creationid="yamato" creationdate="20140914T142416Z">
+        <seg>例として</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example,</seg>
       </tuv>
       <tuv lang="JA">
@@ -6554,6 +6562,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140327T132547Z" creationid="Toshiyuki" creationdate="20140327T132547Z">
         <seg>&lt;c0&gt;$x&lt;/c0&gt;は&lt;c1&gt;Int&lt;/c1&gt;型オブジェクトにも初期化されるので注意してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that &lt;c0&gt;.list&lt;/c0&gt; de-itemizes only the invocant; it does not recursively flatten the whole data structure.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T142412Z" creationid="yamato" creationdate="20140914T142412Z">
+        <seg>&lt;c0&gt;.list&lt;/c0&gt;はインボカントだけをde-itemizesするので注意；それは再帰的に全てのデータ構造をフラット化するのではない。</seg>
       </tuv>
     </tu>
     <tu>
