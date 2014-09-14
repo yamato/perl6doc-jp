@@ -2382,6 +2382,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>But if you want to preserve the structure, you can append .tree, and it returns the array</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T150730Z" creationid="yamato" creationdate="20140914T150730Z">
+        <seg>もし構造を保持したいなら、.treeを追加して配列を返す</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>But it allows modifying the length (for example with &lt;c1&gt;push&lt;/c1&gt;, &lt;c2&gt;pop&lt;/c2&gt;, &lt;c3&gt;shift&lt;/c3&gt; and &lt;c4&gt;unshift&lt;/c4&gt;), and it is also lazy.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T134818Z" creationid="yamato" creationdate="20140914T134818Z">
