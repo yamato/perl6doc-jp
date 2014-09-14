@@ -8350,6 +8350,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;~&lt;/c0&gt; twigil is for referring to sublanguages (called slangs).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T110403Z" creationid="yamato" creationdate="20140914T110403Z">
+        <seg>&lt;c0&gt;~&lt;/c0&gt;ツウィギルはサブ言語（slang）を参照するためのものだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c1&gt;!&lt;/c1&gt; character is a &lt;e2&gt;twigil&lt;/e2&gt;, or secondary sigil.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T182628Z" creationid="Toshiyuki" creationdate="20140111T182628Z">
