@@ -3158,6 +3158,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For more details on objects, classes and their attributes see &lt;a5&gt;objects&lt;/a5&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T054348Z" creationid="yamato" creationdate="20140914T054348Z">
+        <seg>オブジェクト、クラス、それらの属性についての詳細は&lt;a5&gt;objects&lt;/a5&gt;を参照。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For multiline comments it is recommended (but not required) to use two or more brackets both for visual clarity and to avoid relying too much on internal bracket counting heuristics when commenting code that may accidentally miscount single brackets:</seg>
       </tuv>
       <tuv lang="JA">
