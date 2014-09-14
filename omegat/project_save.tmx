@@ -2022,6 +2022,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Both use the equal sign &lt;c2&gt;=&lt;/c2&gt; as operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T023520Z" creationid="yamato" creationdate="20140914T023520Z">
+        <seg>両方とも等号&lt;c2&gt;=&lt;/c2&gt;を演算子として使用する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Bracketing Characters</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140330T053433Z" creationid="Toshiyuki" creationdate="20140330T053433Z">
@@ -9082,6 +9090,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>2つのあり得る方法が、heredocsを解析するためにある。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There are two types of assignment, &lt;e0&gt;item assignment&lt;/e0&gt; and &lt;e1&gt;list assignment&lt;/e1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T023432Z" creationid="yamato" creationdate="20140914T023432Z">
+        <seg>&lt;e0&gt;アイテム割り当て&lt;/e0&gt;と&lt;e1&gt;リスト割り当て&lt;/e1&gt;という2種類の割り当てがある。</seg>
       </tuv>
     </tu>
     <tu>
