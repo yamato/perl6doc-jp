@@ -6966,6 +6966,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>On the other hand, assigning (or binding) to a scalar preserves the structure without itemizing any inner arrays or lists:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T174051Z" creationid="yamato" creationdate="20140914T174051Z">
+        <seg>一方でスカラーへの割り当て（またはバインディング）は内部の配列またはリストのアイテム化なしで構造を保持する：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>On the other hand, if a statement_prefix is followed by a non-block statement, all nested blockless statement_prefixes will terminate at the same statement ending:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130811T124551Z" creationid="Toshiyuki" creationdate="20130811T124551Z">
