@@ -4590,6 +4590,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If you've read and understood the previous explanations, it is now time to wonder how this can possibly work.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T140107Z" creationid="yamato" creationdate="20140914T140107Z">
+        <seg>あなたが前の説明を読んで理解したなら、これがどのようにして動作が可能なのか疑問に思う時だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If you've referred to &lt;c0&gt;$x&lt;/c0&gt; prior to the first declaration, and the compiler tentatively bound it to &lt;c1&gt;$OUTER::x&lt;/c1&gt;, then it's an error to declare it, and the compiler is required to complain at that point.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130730T131017Z" creationid="Toshiyuki" creationdate="20130730T131017Z">
