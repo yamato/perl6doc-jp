@@ -6062,6 +6062,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that even though &lt;c2&gt;$^second&lt;/c2&gt; appears before &lt;c3&gt;$^first&lt;/c3&gt; in the code, &lt;c4&gt;$^first&lt;/c4&gt; is still the first formal parameter to that block.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T062351Z" creationid="yamato" creationdate="20140914T062351Z">
+        <seg>コードの中で&lt;c2&gt;$^second&lt;/c2&gt;が&lt;c3&gt;$^first&lt;/c3&gt;の前に現れたとしても、&lt;c4&gt;$^first&lt;/c4&gt;は最初の仮パラメータのままなので注意。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that since these are type names, parentheses must always be used to call them as coercers, since the listop form is not allowed for coercions.</seg>
       </tuv>
       <tuv lang="JA">
@@ -11758,6 +11766,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>has two formal parameters, namely &lt;c0&gt;$first&lt;/c0&gt; and &lt;c1&gt;$second&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T062213Z" creationid="yamato" creationdate="20140914T062213Z">
+        <seg>これは2つのパラメータ&lt;c0&gt;$first&lt;/c0&gt;と&lt;c1&gt;$second&lt;/c1&gt;を持つ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>if we're gonna blow past</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130814T110705Z" creationid="Toshiyuki" creationdate="20130814T110705Z">
@@ -12114,6 +12130,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>そしてそれは以下の通りである：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>which prints</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T062129Z" creationid="yamato" creationdate="20140914T062129Z">
+        <seg>は次のように出力する</seg>
       </tuv>
     </tu>
     <tu>
