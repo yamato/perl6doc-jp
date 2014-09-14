@@ -1438,6 +1438,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Although objects of type &lt;c0&gt;Scalar&lt;/c0&gt; are everywhere in Perl 6, you usually never see them directly as objects, because most operations &lt;e1&gt;decontainerize&lt;/e1&gt;, which means they act on the &lt;c2&gt;Scalar&lt;/c2&gt; container's contents instead of the container itself.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T131253Z" creationid="yamato" creationdate="20140914T131253Z">
+        <seg>&lt;c0&gt;Scalar&lt;/c0&gt;型のオブジェクトはPerl 6の至る所にあるが、通常は直接それらをオブジェクトとして見ない。なぜならほとんどの演算が&lt;e1&gt;decontainerize&lt;/e1&gt;、&lt;c2&gt;Scalar&lt;/c2&gt;コンテナの内容がコンテナ自身の代わりに振る舞う、を行うからだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Although they may not be changed at runtime, the user is allowed to (re)define such constants.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T055928Z" creationid="yamato" creationdate="20140914T055928Z">
@@ -4538,6 +4546,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T090056Z" creationid="Toshiyuki" creationdate="20140329T090056Z">
         <seg>ブールコンテキストでは、ハッシュに何らかのペアがあればハッシュオブジェクトは真です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In a code like</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T131308Z" creationid="yamato" creationdate="20140914T131308Z">
+        <seg>次のようなコードで</seg>
       </tuv>
     </tu>
     <tu>
@@ -13004,6 +13020,14 @@ my \θ       = 15 * degrees;</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T114118Z" creationid="Toshiyuki" creationdate="20130810T114118Z">
         <seg>なのでその場合あなたは現在のリストの要素を変更できる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>the assignment &lt;c0&gt;$x = 42&lt;/c0&gt; stores a pointer to the &lt;c1&gt;Int&lt;/c1&gt; object 42 in the scalar container to which the lexpad entry for &lt;c2&gt;$x&lt;/c2&gt; points.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T131516Z" creationid="yamato" creationdate="20140914T131516Z">
+        <seg>割り当て&lt;c0&gt;$x = 42&lt;/c0&gt;は&lt;c1&gt;Int&lt;/c1&gt;オブジェクト42へのポインタをスカラーコンテナに保存し、それは lexpadの&lt;c2&gt;$x&lt;/c2&gt;がポイントするエントリーだ。</seg>
       </tuv>
     </tu>
     <tu>
