@@ -982,6 +982,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A popular example for this is:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T055640Z" creationid="yamato" creationdate="20140914T055640Z">
+        <seg>ポピュラーな例はこうなる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A signature object (&lt;c0&gt;Signature&lt;/c0&gt;) may be created with colon-prefixed parens:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T082134Z" creationid="Toshiyuki" creationdate="20140329T082134Z">
@@ -9642,6 +9650,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>それらは、典型的プログラマーにほとんど良い十分な答えを成し遂げるためのツールを与えるようになっている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>They are known to the compiler and may not be modified after being compiled in.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T055215Z" creationid="yamato" creationdate="20140914T055215Z">
+        <seg>それらはコンパイラに知られていて、コンパイル後に修正されない。</seg>
       </tuv>
     </tu>
     <tu>
