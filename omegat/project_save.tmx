@@ -646,6 +646,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Num&lt;/a0&gt; (floating point numbers) literals consist of &lt;a1&gt;Rat&lt;/a1&gt; or &lt;a2&gt;Int&lt;/a2&gt; literals followed by an &lt;c3&gt;e&lt;/c3&gt; and a (possibly negative) exponent.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T122602Z" creationid="yamato" creationdate="20140914T122602Z">
+        <seg>&lt;a0&gt;Num&lt;/a0&gt;（浮動小数点）リテラルは&lt;a1&gt;Rat&lt;/a1&gt;または&lt;a2&gt;Int&lt;/a2&gt;リテラルの後に &lt;c3&gt;e&lt;/c3&gt;と（可能なら負の）指数が続く。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;Rat&lt;/a0&gt; (rational numbers) literals contain two integer parts joined by a dot.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T122058Z" creationid="yamato" creationdate="20140914T122058Z">
@@ -770,6 +778,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T090731Z" creationid="Toshiyuki" creationdate="20140329T090731Z">
         <seg>&lt;c3&gt;$0&lt;/c3&gt;、&lt;c4&gt;$1&lt;/c4&gt;、&lt;c5&gt;$2&lt;/c5&gt;などは&lt;c6&gt;$/&lt;/c6&gt;オブジェクトの別名です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c4&gt;3e8&lt;/c4&gt; constructs a &lt;a5&gt;Num&lt;/a5&gt; with value &lt;c6&gt;3 * 10**8&lt;/c6&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T122642Z" creationid="yamato" creationdate="20140914T122642Z">
+        <seg>&lt;c4&gt;3e8&lt;/c4&gt;は&lt;c6&gt;3 * 10**8&lt;/c6&gt;という値の&lt;a5&gt;Num&lt;/a5&gt;を構成する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7226,6 +7242,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>マクロからの引用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Quoting Constructs</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T122709Z" creationid="yamato" creationdate="20140914T122709Z">
+        <seg>クォート構造</seg>
       </tuv>
     </tu>
     <tu>
