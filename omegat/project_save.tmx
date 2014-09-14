@@ -3814,6 +3814,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If a &lt;c1&gt;try&lt;/c1&gt; block or statement prefix catches an exception, that exception is stored in &lt;c2&gt;$!&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T113944Z" creationid="yamato" creationdate="20140914T113944Z">
+        <seg>もし&lt;c1&gt;try&lt;/c1&gt;ブロックまたは文接頭語が例外をキャッチすると、その例外は&lt;c2&gt;$!&lt;/c2&gt;に保存される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If a buf type is initialized with a Unicode string value, the string is decomposed into Unicode codepoints, and each codepoint shoved into an integer element.</seg>
       </tuv>
       <tuv lang="JA">
@@ -3922,6 +3930,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>そうでないならば、それはリスト演算子形式の暫定的な関数呼び出しとして編集される。そして、それは引数の並びを持つかもしれないか、持たないかもしれない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If no exception was caught, &lt;c3&gt;$!&lt;/c3&gt; is set to the &lt;c4&gt;Any&lt;/c4&gt; type object.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114022Z" creationid="yamato" creationdate="20140914T114022Z">
+        <seg>例外がキャッチされなければ&lt;c3&gt;$!&lt;/c3&gt;は&lt;c4&gt;Any&lt;/c4&gt;型オブジェクトにセットされる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6126,6 +6142,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that &lt;c0&gt;CATCH&lt;/c0&gt; blocks &lt;e1&gt;do not&lt;/e1&gt; set &lt;c2&gt;$!&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114114Z" creationid="yamato" creationdate="20140914T114114Z">
+        <seg>注意として&lt;c0&gt;CATCH&lt;/c0&gt;ブロックは&lt;c2&gt;$!&lt;/c2&gt;をセット&lt;e1&gt;しない&lt;/e1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that a capture is not considered a kind of parcel, so does not flatten in flat context.</seg>
       </tuv>
       <tuv lang="JA">
@@ -7098,6 +7122,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>根目印</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Rather they set &lt;c3&gt;$_&lt;/c3&gt; inside the block to the caught exception.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114228Z" creationid="yamato" creationdate="20140914T114228Z">
+        <seg>むしろそれらは&lt;c3&gt;$_&lt;/c3&gt;をキャッチされた例外の内側のブロックにセットする。</seg>
       </tuv>
     </tu>
     <tu>
