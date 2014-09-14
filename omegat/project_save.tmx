@@ -1318,6 +1318,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Although they may not be changed at runtime, the user is allowed to (re)define such constants.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T055928Z" creationid="yamato" creationdate="20140914T055928Z">
+        <seg>それらは実行時に変更されないが、ユーザーがそのような定数を（再）定義することが許可される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Although we say that the unspace hides the whitespace from the parser, it does not hide whitespace from the lexer.</seg>
       </tuv>
       <tuv lang="JA">
