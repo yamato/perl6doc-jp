@@ -7382,6 +7382,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>See &lt;a2&gt;Quoting Constructs&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T122833Z" creationid="yamato" creationdate="20140914T122833Z">
+        <seg>&lt;a2&gt;Quoting Constructs&lt;/a2&gt;を参照。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>See &lt;a5&gt;operators&lt;/a5&gt; for more details.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T025948Z" creationid="yamato" creationdate="20140914T025948Z">
@@ -7978,6 +7986,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>厳しい検索</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>String literals are most often created with &lt;c0&gt;'&lt;/c0&gt; or &lt;c1&gt;"&lt;/c1&gt;, but strings are actually a powerful sub-language of Perl 6.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T122823Z" creationid="yamato" creationdate="20140914T122823Z">
+        <seg>文字列リテラルはしばしば&lt;c0&gt;'&lt;/c0&gt;または&lt;c1&gt;"&lt;/c1&gt;で作成される。しかし文字列は実際はPerl 6の強力なサブ言語だ。</seg>
       </tuv>
     </tu>
     <tu>
@@ -10066,6 +10082,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130811T080849Z" creationid="Toshiyuki" creationdate="20130811T080849Z">
         <seg>これらの構成物はレキシカルスコープを確立する必要なしに動的スコープを確立する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These forms produce regex literals.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T122916Z" creationid="yamato" creationdate="20140914T122916Z">
+        <seg>これらの形式は正規表現リテラルを作り出す。</seg>
       </tuv>
     </tu>
     <tu>
