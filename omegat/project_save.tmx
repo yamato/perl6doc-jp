@@ -646,6 +646,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;$_&lt;/c0&gt; is the topic variable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T110722Z" creationid="yamato" creationdate="20140914T110722Z">
+        <seg>&lt;c0&gt;$_&lt;/c0&gt;はトピック変数だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;$o.perl&lt;/c0&gt; returns a string that can be executed as Perl code, and reproduces the original object &lt;c1&gt;$o&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140322T105129Z" creationid="Toshiyuki" creationdate="20140112T140148Z">
@@ -9454,6 +9462,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>There are three special variables that are available in every block:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T110659Z" creationid="yamato" creationdate="20140914T110659Z">
+        <seg>ブロックごとに利用できる3つの特殊変数がある：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>There are three ways to declare formal parameters to a closure.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130729T123503Z" creationid="Toshiyuki" creationdate="20130729T123503Z">
@@ -11522,6 +11538,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T141122Z" creationid="Toshiyuki" creationdate="20140111T193319Z">
         <seg>あなたは&lt;c0&gt;new&lt;/c0&gt;という名前のデフォルトコンストラクターをベースクラス &lt;c1&gt;Object&lt;/c1&gt;から継承します。しかし例のように&lt;c2&gt;new&lt;/c2&gt;をオーバーライドするのは自由です：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You may &lt;c0&gt;supersede&lt;/c0&gt; or &lt;c1&gt;augment&lt;/c1&gt; those languages in your current lexical scope by doing</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T110609Z" creationid="yamato" creationdate="20140914T110609Z">
+        <seg>これらの言語をレキシカルスコープで&lt;c0&gt;supersede&lt;/c0&gt;または&lt;c1&gt;augment&lt;/c1&gt;できる。</seg>
       </tuv>
     </tu>
     <tu>
