@@ -4494,6 +4494,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If you write</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T133215Z" creationid="yamato" creationdate="20140914T133215Z">
+        <seg>次のように書くなら</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If you've referred to &lt;c0&gt;$x&lt;/c0&gt; prior to the first declaration, and the compiler tentatively bound it to &lt;c1&gt;$OUTER::x&lt;/c1&gt;, then it's an error to declare it, and the compiler is required to complain at that point.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130730T131017Z" creationid="Toshiyuki" creationdate="20130730T131017Z">
@@ -11862,6 +11870,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>When binding a value or a container to a variable, the lexpad entry of the variable is modified (and not just the container it points to).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T133207Z" creationid="yamato" creationdate="20140914T133207Z">
+        <seg>値またはコンテナを変数にバインドする時、変数のlexpadエントリーは変更される（そしてそれをポイントする単なるコンテナではない）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>When bound into a lol context, however, the parcel objects become real &lt;c0&gt;List&lt;/c0&gt; objects that keep their identity as discrete sublists.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T204650Z" creationid="Toshiyuki" creationdate="20130810T204650Z">
@@ -12078,6 +12094,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Which means that you cannot assign to it anymore:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T133353Z" creationid="yamato" creationdate="20140914T133353Z">
+        <seg>これはあなたがそれに何も割り当てられないことを意味する：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Which module am I in?</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T114722Z" creationid="yamato" creationdate="20140914T114722Z">
@@ -12250,6 +12274,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T184610Z" creationid="Toshiyuki" creationdate="20140111T184610Z">
         <seg>将来、値を返すより複雑なことをしたいなら、貴方自身のアクセサメソッドを書いて結構です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can also bind variables to other variables:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T133426Z" creationid="yamato" creationdate="20140914T133426Z">
+        <seg>変数を別の変数にバインドすることができる：</seg>
       </tuv>
     </tu>
     <tu>
@@ -13140,6 +13172,14 @@ my \θ       = 15 * degrees;</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T074309Z" creationid="Toshiyuki" creationdate="20140329T074309Z">
         <seg>構文法の&lt;c0&gt;Parcel&lt;/c0&gt;はバインディングに備えて3つの位置依存と名前付き引数の&lt;c1&gt;Capture&lt;/c1&gt;オブジェクトに変換（この場合はコンパイル時に） されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>then the lexpad entry for &lt;c0&gt;$x&lt;/c0&gt; directly points to the &lt;c1&gt;Int&lt;/c1&gt; 42.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T133258Z" creationid="yamato" creationdate="20140914T133258Z">
+        <seg>&lt;c0&gt;$x&lt;/c0&gt;のlexpadエントリーは直接&lt;c1&gt;Int&lt;/c1&gt; 42をポイントする。</seg>
       </tuv>
     </tu>
     <tu>
