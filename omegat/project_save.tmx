@@ -12214,6 +12214,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>attribute (class member)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120709Z" creationid="yamato" creationdate="20140914T120709Z">
+        <seg>属性（クラスメンバー）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>but never as</seg>
       </tuv>
       <tuv lang="JA">
@@ -12246,6 +12254,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>compile-time "constant"</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120718Z" creationid="yamato" creationdate="20140914T120718Z">
+        <seg>コンパイル時「定数」</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>deletes the entries &lt;i0&gt;en passant&lt;/i0&gt; while returning them.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T084807Z" creationid="Toshiyuki" creationdate="20140329T084807Z">
@@ -12274,6 +12290,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>doesは、クロージャのリストをしない、等しくない</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dynamic</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120656Z" creationid="yamato" creationdate="20140914T120656Z">
+        <seg>動的</seg>
       </tuv>
     </tu>
     <tu>
@@ -12314,6 +12338,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T062641Z" creationid="Toshiyuki" creationdate="20130810T062641Z">
         <seg>Perl 6では代わりに&lt;c0&gt;for&lt;/c0&gt;を使うべきだ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>index into match object (not really a variable)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120816Z" creationid="yamato" creationdate="20140914T120816Z">
+        <seg>マッチオブジェクトへのインデックス（本当は変数ではない）</seg>
       </tuv>
     </tu>
     <tu>
@@ -12490,6 +12522,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140322T043913Z" creationid="Toshiyuki" creationdate="20140322T043913Z">
         <seg>メソッド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>method (not really a variable)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120743Z" creationid="yamato" creationdate="20140914T120743Z">
+        <seg>メソッド（本当は変数ではない）</seg>
       </tuv>
     </tu>
     <tu>
