@@ -7766,6 +7766,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>That means that &lt;c1&gt;degrees&lt;/c1&gt; and &lt;c2&gt;ﾎｸ&lt;/c2&gt; above actually directly represent &lt;c3&gt;Int&lt;/c3&gt;s.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T040130Z" creationid="yamato" creationdate="20140914T040130Z">
+        <seg>それは実際に&lt;c1&gt;degrees&lt;/c1&gt;と&lt;c2&gt;ﾎｸ&lt;/c2&gt;が直接&lt;c3&gt;Int&lt;/c3&gt;を表現することを意味する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>That should now be written:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T112113Z" creationid="Toshiyuki" creationdate="20130810T111931Z">
@@ -10134,6 +10142,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>To illustrate, just try assigning to one after you've defined it:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T040549Z" creationid="yamato" creationdate="20140914T040549Z">
+        <seg>実例を示すために、それを定義したあと、何かを割り当ててみる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To jump into the next &lt;c4&gt;when&lt;/c4&gt; block without testing its condition, you must use a &lt;c5&gt;goto&lt;/c5&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130813T115331Z" creationid="Toshiyuki" creationdate="20130813T115331Z">
@@ -10234,6 +10250,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T014611Z" creationid="Toshiyuki" creationdate="20140329T014611Z">
         <seg>ツウィギル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Twigils influence the scoping of a variable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T040640Z" creationid="yamato" creationdate="20140914T040640Z">
+        <seg>ツウィギルは変数のスコーピングに影響する。</seg>
       </tuv>
     </tu>
     <tu>
