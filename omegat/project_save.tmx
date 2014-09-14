@@ -4102,6 +4102,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If you have self-declared a parameter using &lt;c5&gt;$^a&lt;/c5&gt; once you may refer to it using only &lt;c6&gt;$a&lt;/c6&gt; thereafter.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T062814Z" creationid="yamato" creationdate="20140914T062814Z">
+        <seg>もしあなたが自身で定義した&lt;c5&gt;$^a&lt;/c5&gt;を一度使ったパラメータを持っているなら、あとで&lt;c6&gt;$a&lt;/c6&gt;だけを使ってそれを参照するかもしれない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If you need to force inner context to item (scalar), we now have convenient single-character context specifiers such as + for numbers and ~ for strings:</seg>
       </tuv>
       <tuv lang="JA">
@@ -7702,6 +7710,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Subroutines may also make use of placeholder variables but only if they do not have an explicit parameter list.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T062915Z" creationid="yamato" creationdate="20140914T062915Z">
+        <seg>明示的なパラメータリストを持っていない場合のみ、サブルーチンでプレースホルダー変数を使うようにできる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Subscript adverbs</seg>
       </tuv>
       <tuv lang="JA">
@@ -10074,6 +10090,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>これは難しいレッスンであるPerl 5が、ソースフィルタである、そして、他のマルチパス構文解析は誤認する。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is true for normal blocks too.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T062933Z" creationid="yamato" creationdate="20140914T062933Z">
+        <seg>これは通常のブロックについてもそうだ。</seg>
       </tuv>
     </tu>
     <tu>
