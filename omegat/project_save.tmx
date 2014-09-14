@@ -1294,6 +1294,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>After all, binding to a variable requires a lexpad entry for that variable, and while there is one for an array, there aren't lexpad entries for each array element (you cannot expand the lexpad at run time).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T140403Z" creationid="yamato" creationdate="20140914T140403Z">
+        <seg>つまり、変数へのバインディングはその変数へのlexpadエントリーを必要とする。そしてその1つが配列のためにあり、それぞれの配列要素のためのlexpadエントリーは無い（lexpadを実行時に拡張することはできない）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>After creating a class, you can create instances of the class.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T141612Z" creationid="Toshiyuki" creationdate="20140112T090546Z">
