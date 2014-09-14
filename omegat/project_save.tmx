@@ -4518,6 +4518,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In addition one can add new identifier terms with the syntax</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124429Z" creationid="yamato" creationdate="20140914T124429Z">
+        <seg>その上、新しい識別子項を以下の構文で追加できる</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In addition to &lt;c0&gt;next&lt;/c0&gt;, &lt;c1&gt;last&lt;/c1&gt;, and &lt;c2&gt;redo&lt;/c2&gt;, Perl 6 also supports &lt;c3&gt;goto&lt;/c3&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T131449Z" creationid="Toshiyuki" creationdate="20130817T131449Z">
@@ -5018,6 +5026,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140112T092803Z" creationid="Toshiyuki" creationdate="20140112T092803Z">
         <seg>継承</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Inside a method, &lt;c0&gt;self&lt;/c0&gt; refers to the invocant (i.e. the object the method was called on).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124540Z" creationid="yamato" creationdate="20140914T124540Z">
+        <seg>メソッド内で&lt;c0&gt;self&lt;/c0&gt;はインボカントを参照する（すなわちメソッドが呼ばれたオブジェクト）。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9838,6 +9854,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>There are built-in identifier terms in Perl 6, which are listed below.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124356Z" creationid="yamato" creationdate="20140914T124356Z">
+        <seg>Perl 6ではビルトインの識別子項があり、以下に記載されている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>There are no barewords in Perl 6.</seg>
       </tuv>
       <tuv lang="JA">
@@ -12748,6 +12772,14 @@ my \θ       = 15 * degrees;</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130730T125614Z" creationid="Toshiyuki" creationdate="20130730T125614Z">
         <seg>または</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>or as constants</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124445Z" creationid="yamato" creationdate="20140914T124445Z">
+        <seg>または定数として</seg>
       </tuv>
     </tu>
     <tu>
