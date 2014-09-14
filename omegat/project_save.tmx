@@ -3326,6 +3326,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For explicit returns, &lt;c0&gt;return-rw&lt;/c0&gt; instead of &lt;c1&gt;return&lt;/c1&gt; must be used.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T132607Z" creationid="yamato" creationdate="20140914T132607Z">
+        <seg>明示的リターンのため、&lt;c1&gt;return&lt;/c1&gt;の代わりに&lt;c0&gt;return-rw&lt;/c0&gt;が使われなければならない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For finer-grained control of which iterations return values, use &lt;c0&gt;gather&lt;/c0&gt; and &lt;c1&gt;take&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130809T141605Z" creationid="Toshiyuki" creationdate="20130809T141605Z">
