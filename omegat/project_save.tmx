@@ -9982,6 +9982,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is because the placeholder variables are sorted in Unicode order.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T062441Z" creationid="yamato" creationdate="20140914T062441Z">
+        <seg>これは、プレースホルダー変数がユニコード順でソートされるからだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is defined as the textually last statement of its top-level list of statements; any statements embedded within those top-level statements are in their own lower-level list of statements and, while they may be a final statement in their subscope, they're not considered the final statement of the outer block in question.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130803T015413Z" creationid="Toshiyuki" creationdate="20130803T015413Z">
