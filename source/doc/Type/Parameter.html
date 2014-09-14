@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Parameter</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Parameter</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_name">method name</a></li>
+    <li class="indexItem indexItem2"><a href="#method_constraints">method constraints</a></li>
+    <li class="indexItem indexItem2"><a href="#method_type">method type</a></li>
+    <li class="indexItem indexItem2"><a href="#method_named">method named</a></li>
+    <li class="indexItem indexItem2"><a href="#method_named_names">method named_names</a></li>
+    <li class="indexItem indexItem2"><a href="#method_positional">method positional</a></li>
+    <li class="indexItem indexItem2"><a href="#method_slurpy">method slurpy</a></li>
+    <li class="indexItem indexItem2"><a href="#method_optional">method optional</a></li>
+    <li class="indexItem indexItem2"><a href="#method_parcel">method parcel</a></li>
+    <li class="indexItem indexItem2"><a href="#method_capture">method capture</a></li>
+    <li class="indexItem indexItem2"><a href="#method_rw">method rw</a></li>
+    <li class="indexItem indexItem2"><a href="#method_copy">method copy</a></li>
+    <li class="indexItem indexItem2"><a href="#method_readonly">method readonly</a></li>
+    <li class="indexItem indexItem2"><a href="#method_invocant">method invocant</a></li>
+    <li class="indexItem indexItem2"><a href="#method_default">method default</a></li>
+    <li class="indexItem indexItem2"><a href="#method_type_captures">method type_captures</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Parameter { }</pre>
+<p>Represents a parameter, for purpose of introspection.</p>
+<p>The usual way to obtain a Parameter object is to create a signature, and call <code>.params</code> on it to obtain a list of the Parameters.</p>
+<pre>my $sig   = :(Str $x);
+my $param = $sig.params[0];
+say $sig.type;              # Str()</pre>
+<p>See <a href="Signature">Signature</a> for more information, and also for an explanation on what most of the concepts related to parameters mean.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_name"><a class="u" href="#___top" title="go to top of document">method name</a></h2>
+<p>Returns the variable name.</p>
+<h2 id="method_constraints"><a class="u" href="#___top" title="go to top of document">method constraints</a></h2>
+<p>Returns additional constraints on the parameter (usually as an <code>all</code>-Junction).</p>
+<h2 id="method_type"><a class="u" href="#___top" title="go to top of document">method type</a></h2>
+<p>Returns the nominal type constraint of the parameter.</p>
+<h2 id="method_named"><a class="u" href="#___top" title="go to top of document">method named</a></h2>
+<p>Returns <code>True</code> if it&#39;s a named parameter.</p>
+<h2 id="method_named_names"><a class="u" href="#___top" title="go to top of document">method named_names</a></h2>
+<p>Returns a list of names/aliases for this parameter.</p>
+<h2 id="method_positional"><a class="u" href="#___top" title="go to top of document">method positional</a></h2>
+<p>Returns <code>True</code> if the parameter is positional.</p>
+<h2 id="method_slurpy"><a class="u" href="#___top" title="go to top of document">method slurpy</a></h2>
+<p>Returns <code>True</code> for slurpy parameters.</p>
+<h2 id="method_optional"><a class="u" href="#___top" title="go to top of document">method optional</a></h2>
+<p>Returns <code>True</code> for optional parameters.</p>
+<h2 id="method_parcel"><a class="u" href="#___top" title="go to top of document">method parcel</a></h2>
+<p>Returns <code>True</code> for parcel parameters.</p>
+<pre>sub f(\$parcel) {
+    $parcel = 5;
+}
+f(my $x);   # works
+f(42);      # dies in the assignment</pre>
+<p>Parcel parameters bind either a variable or a value passed to it, with no decontainerization taking place. That means that if a variable was passed to it, you can assign to the parameter. This is different from <a href="#rw">rw</a>-parameter which can only bind to variables, never to values.</p>
+<h2 id="method_capture"><a class="u" href="#___top" title="go to top of document">method capture</a></h2>
+<p>Returns <code>True</code> for parameters that capture the rest of the argument list.</p>
+<pre>sub f(\capture) { }</pre>
+<p>Capture parameters do not force any context on the values passed bound to them, which is why they cannot have sigils.</p>
+<h2 id="method_rw"><a class="u" href="#___top" title="go to top of document">method rw</a></h2>
+<p>Returns <code>True</code> for <code>is rw</code> parameters.</p>
+<h2 id="method_copy"><a class="u" href="#___top" title="go to top of document">method copy</a></h2>
+<p>Returns <code>True</code> for <code>is copy</code> parameters.</p>
+<h2 id="method_readonly"><a class="u" href="#___top" title="go to top of document">method readonly</a></h2>
+<p>Returns <code>True</code> for read-only parameters (the default).</p>
+<h2 id="method_invocant"><a class="u" href="#___top" title="go to top of document">method invocant</a></h2>
+<p>Returns <code>True</code> if the parameter is the invocant parameter.</p>
+<h2 id="method_default"><a class="u" href="#___top" title="go to top of document">method default</a></h2>
+<p>Returns a closure that upon invocation returns the default value for this parameter, or <code>Any</code> if no default was provided.</p>
+<h2 id="method_type_captures"><a class="u" href="#___top" title="go to top of document">method type_captures</a></h2>
+<p>Returns a list of variable names of type captures associated with this parameter.</p>
+<pre>sub a(::T ::U $x) { }
+say &amp;a.signature.params[0].type_captures;   # T U</pre>
+
+
+
+</body>
+</html>
+

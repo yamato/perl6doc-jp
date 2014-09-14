@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Date</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Date</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_new">method new</a></li>
+    <li class="indexItem indexItem2"><a href="#method_today">method today</a></li>
+    <li class="indexItem indexItem2"><a href="#method_year">method year</a></li>
+    <li class="indexItem indexItem2"><a href="#method_month">method month</a></li>
+    <li class="indexItem indexItem2"><a href="#method_day">method day</a></li>
+    <li class="indexItem indexItem2"><a href="#method_day-of-week">method day-of-week</a></li>
+    <li class="indexItem indexItem2"><a href="#method_day-of-year">method day-of-year</a></li>
+    <li class="indexItem indexItem2"><a href="#method_day-of-month">method day-of-month</a></li>
+    <li class="indexItem indexItem2"><a href="#method_truncated-to">method truncated-to</a></li>
+    <li class="indexItem indexItem2"><a href="#method_succ">method succ</a></li>
+    <li class="indexItem indexItem2"><a href="#method_days-in-month">method days-in-month</a></li>
+    <li class="indexItem indexItem2"><a href="#method_is-leap-year">method is-leap-year</a></li>
+    <li class="indexItem indexItem2"><a href="#method_prev">method prev</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Str">method Str</a></li>
+    <li class="indexItem indexItem2"><a href="#method_gist">method gist</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Date { }</pre>
+<p>A <code>Date</code> is an immutable object identifying a day in the Gregorian calendar.</p>
+<p>Date objects support addition and subtraction of integers, where an integer is interpreted as the number of days. You can compare Date objects with the numeric comparison operators <code>==, &lt;, &lt;=, &gt;, &gt;=, != </code>. Their stringification in <code>YYYY-MM-DD</code> format means that comparing them with the string operators <code>eq, lt, le</code> etc. also gives the right result.</p>
+<p><code>Date.today</code> creates an object the current day according to the system clock.</p>
+<pre>my $d = Date.new(2012, 12, 24); # Christmas Eve!
+say $d;                         # 2012-12-24
+say $d.year;                    # 2012
+say $d.month;                   # 12
+say $d.day;                     # 24
+say $d.day-of-week;             # 1  (that&#39;s Monday)
+my $n = Date.new(&#39;2012-12-31&#39;); # New Year&#39;s Eve
+say $n - $d;                    # 7
+say $n + 1;                     # 2013-01-01</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_new"><a class="u" href="#___top" title="go to top of document">method new</a></h2>
+<pre>proto method new() {*}
+multi method new($year,   $month,  $day)          returns Date:D
+multi method new(:$year!, :$month = 1, :$day = 1) returns Date:D
+multi method new(Str $date)                       returns Date:D
+multi method new(DateTime:D $dt)                  returns Date:D</pre>
+<p>Creates a new <code>Date</code> object, either from a triple of (year, month, day) integers, or from a string of the form <code>YYYY-MM-DD</code> (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>), or from a DateTime object.</p>
+<h2 id="method_today"><a class="u" href="#___top" title="go to top of document">method today</a></h2>
+<pre>method today() returns Date:D</pre>
+<p>Returns a <code>Date</code> object for the current day.</p>
+<h2 id="method_year"><a class="u" href="#___top" title="go to top of document">method year</a></h2>
+<pre>method year(Date:D:) returns Int:D</pre>
+<p>Returns the year of the date</p>
+<h2 id="method_month"><a class="u" href="#___top" title="go to top of document">method month</a></h2>
+<pre>method month(Date:D:) returns Int:D</pre>
+<p>Returns the month of the date (1..12)</p>
+<h2 id="method_day"><a class="u" href="#___top" title="go to top of document">method day</a></h2>
+<pre>method day(Date:D:) returns Int:D</pre>
+<p>Returns the day of the month of the date (1..31)</p>
+<h2 id="method_day-of-week"><a class="u" href="#___top" title="go to top of document">method day-of-week</a></h2>
+<pre>method day-of-week(Date:D:) returns Int:D</pre>
+<p>Returns the day of the week, where 1 is Monday, 2 is Tuesday and Sunday is 7.</p>
+<h2 id="method_day-of-year"><a class="u" href="#___top" title="go to top of document">method day-of-year</a></h2>
+<pre>method day-of-year(Date:D:) returns Int:D</pre>
+<p>Returns the day of the year (1..366).</p>
+<h2 id="method_day-of-month"><a class="u" href="#___top" title="go to top of document">method day-of-month</a></h2>
+<pre>method day-of-month(Date:D:) returns Int:D</pre>
+<p>Returns the day of the month of the date (1..31). Synonymous to the <code>day</code> method.</p>
+<h2 id="method_truncated-to"><a class="u" href="#___top" title="go to top of document">method truncated-to</a></h2>
+<pre>method truncated-to(Date:D: :$year, :$month, :$week)</pre>
+<p>Returns a <code>Date</code> truncated to the first day of its year, month or week. For example</p>
+<pre>my $c = Date.new(&#39;2012-12-24&#39;);
+say $c.truncated-to(:year);     # 2012-01-01
+say $c.truncated-to(:month);    # 2012-12-01
+say $c.truncated-to(:week);     # 2012-12-24  (because it&#39;s Monday already) </pre>
+<h2 id="method_succ"><a class="u" href="#___top" title="go to top of document">method succ</a></h2>
+<pre>method succ(Date:D:) returns Date:D</pre>
+<p>Returns the following day</p>
+<h2 id="method_days-in-month"><a class="u" href="#___top" title="go to top of document">method days-in-month</a></h2>
+<pre>method days-in-month(year = self.year, month = self.month) returns Int:D</pre>
+<p>Returns the number of days in a month, where year and month default to that of the invocant. If both year and month are provided, it can be called as a class method.</p>
+<h2 id="method_is-leap-year"><a class="u" href="#___top" title="go to top of document">method is-leap-year</a></h2>
+<pre>method is-leap-year($year = self.year) returns Bool:D</pre>
+<p>Returns <code>True</code> if <code>$year</code> is a leap year. Can be called as a class method if the year is provided.</p>
+<h2 id="method_prev"><a class="u" href="#___top" title="go to top of document">method prev</a></h2>
+<pre>method prev(Date:D:) return Date:D</pre>
+<p>Returns the previous day</p>
+<h2 id="method_Str"><a class="u" href="#___top" title="go to top of document">method Str</a></h2>
+<pre>multi method Str(Date:D:) returns Str:D</pre>
+<p>Returns the date in <code>YYYY-MM-DD</code> format (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>)</p>
+<h2 id="method_gist"><a class="u" href="#___top" title="go to top of document">method gist</a></h2>
+<pre>multi method gist(Date:D:) returns Str:D</pre>
+<p>Returns the date in <code>YYYY-MM-DD</code> format (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>)</p>
+
+
+
+</body>
+</html>
+

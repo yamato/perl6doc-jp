@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Any</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Any</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_ACCEPTS">method ACCEPTS</a></li>
+    <li class="indexItem indexItem2"><a href="#method_any">method any</a></li>
+    <li class="indexItem indexItem2"><a href="#method_all">method all</a></li>
+    <li class="indexItem indexItem2"><a href="#method_one">method one</a></li>
+    <li class="indexItem indexItem2"><a href="#method_none">method none</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Any is Mu { ... }</pre>
+<p>While <code>Mu</code> is the root of the Perl 6 class hierarchy, <code>Any</code> is the class that serves as a default base class for new classes, and as the base class for most built-in classes.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_ACCEPTS"><a class="u" href="#___top" title="go to top of document">method ACCEPTS</a></h2>
+<pre>multi method ACCEPTS(Any:D: Mu $other)</pre>
+<p>Returns <code>True</code> if <code>$other === self</code> (i.e. it checks object identity).</p>
+<h2 id="method_any"><a class="u" href="#___top" title="go to top of document">method any</a></h2>
+<p>Interprets the invocant as a list and creates an <code>any</code>-Junction from it.</p>
+<h2 id="method_all"><a class="u" href="#___top" title="go to top of document">method all</a></h2>
+<p>Interprets the invocant as a list and creates an <code>all</code>-Junction from it.</p>
+<h2 id="method_one"><a class="u" href="#___top" title="go to top of document">method one</a></h2>
+<p>Interprets the invocant as a list and creates an <code>one</code>-Junction from it.</p>
+<h2 id="method_none"><a class="u" href="#___top" title="go to top of document">method none</a></h2>
+<p>Interprets the invocant as a list and creates an <code>none</code>-Junction from it.</p>
+
+
+
+</body>
+</html>
+

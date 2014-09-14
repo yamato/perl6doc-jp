@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+  <title>class IO::Path</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class IO::Path</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_new">method new</a></li>
+    <li class="indexItem indexItem2"><a href="#method_basename">method basename</a></li>
+    <li class="indexItem indexItem2"><a href="#method_directory">method directory</a></li>
+    <li class="indexItem indexItem2"><a href="#method_volume">method volume</a></li>
+    <li class="indexItem indexItem2"><a href="#method_parts">method parts</a></li>
+    <li class="indexItem indexItem2"><a href="#method_path">method path</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Str">method Str</a></li>
+    <li class="indexItem indexItem2"><a href="#method_open">method open</a></li>
+    <li class="indexItem indexItem2"><a href="#method_watch">method watch</a></li>
+    <li class="indexItem indexItem2"><a href="#method_is-absolute">method is-absolute</a></li>
+    <li class="indexItem indexItem2"><a href="#method_is-relative">method is-relative</a></li>
+    <li class="indexItem indexItem2"><a href="#method_absolute">method absolute</a></li>
+    <li class="indexItem indexItem2"><a href="#method_relative">method relative</a></li>
+    <li class="indexItem indexItem2"><a href="#method_contents">method contents</a></li>
+    <li class="indexItem indexItem2"><a href="#method_chmod">method chmod</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class IO::Path is Cool does IO::FileTestable { }</pre>
+<p>Built-in class for file and directory paths.</p>
+<p>Conceptually, an <code>IO::Path</code> object consists of a volume (think <code>C:</code> on windows), a directory, and a basename.</p>
+<p><code>IO::Path</code> supports both purely textual operations, and operations that access the file system.</p>
+<p>The current working directory is available as an IO::Path object in <code>$*CWD</code>.</p>
+<p>The behavior of <code>IO::Path</code> is dependent on the operating system it runs on; to get reproducible behavior across operating systems, you can use one of its subclasses instead: <a href="IO::Path::Unix">IO::Path::Unix</a>, <a href="IO::Path::Win32">IO::Path::Win32</a>, <a href="IO::Path::Cygwin">IO::Path::Cygwin</a>, <a href="IO::Path::QNX">IO::Path::QNX</a>.</p>
+<p>The rest of this document silently assumes Unix semantics in its examples, unless when stated otherwise.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_new"><a class="u" href="#___top" title="go to top of document">method new</a></h2>
+<pre>multi method new(Str:D $path)
+multi method new(:$basename!, :$directory = &#39;.&#39;, :$volume = &#39;&#39;)</pre>
+<p>Creates a new IO::Path object from a path string (which is being parsed for volume, directory and basename), or from volumen, directory and basename passed as named arguments.</p>
+<h2 id="method_basename"><a class="u" href="#___top" title="go to top of document">method basename</a></h2>
+<pre>method basename(IO::Path:D)</pre>
+<p>Returns the basename part of the path object. That is, it returns the name of the file relative to to its directory.</p>
+<pre>say IO::Path.new(&quot;/etc/passwd&quot;).basename;   # passwd</pre>
+<h2 id="method_directory"><a class="u" href="#___top" title="go to top of document">method directory</a></h2>
+<pre>method directory(IO::Path:D)</pre>
+<p>Returns the directory portion of the path object. That is, it returns the path excluding the volume and the base name.</p>
+<pre>say IO::Path.new(&quot;/etc/passwd&quot;).directory;  # /etc</pre>
+<h2 id="method_volume"><a class="u" href="#___top" title="go to top of document">method volume</a></h2>
+<pre>method volume(IO::Path:D)</pre>
+<p>Returns the volume portion of the path object. On Unix system, this is always the empty string.</p>
+<pre>say IO::Path::Win32.new(&quot;C:\\Windows\\registry.ini&quot;).volume;    # C:</pre>
+<h2 id="method_parts"><a class="u" href="#___top" title="go to top of document">method parts</a></h2>
+<pre>method parts(IO::Path:D) returns Hash</pre>
+<p>Returns a hash with the keys <code>directory</code>, <code>path</code> and <code>volume</code>, and as values the return values of the methods with the same names.</p>
+<pre>say IO::Path.new(&quot;/etc/passwd&quot;).parts.perl
+# (&quot;directory&quot; =&gt; &quot;/etc&quot;, &quot;volume&quot; =&gt; &quot;&quot;, &quot;basename&quot; =&gt; &quot;passwd&quot;).hash</pre>
+<h2 id="method_path"><a class="u" href="#___top" title="go to top of document">method path</a></h2>
+<pre>method path(IO::Path:D:)</pre>
+<p>Returns the invocant.</p>
+<h2 id="method_Str"><a class="u" href="#___top" title="go to top of document">method Str</a></h2>
+<pre>method Str(IO::Path:D:)</pre>
+<p>Returns the full path as a string. If the path object was constructed from a single string, the method Str will return that string.</p>
+<h2 id="method_open"><a class="u" href="#___top" title="go to top of document">method open</a></h2>
+<pre>method open(IO::Path:D: *%opts)</pre>
+<p>Opens the path as a file; the named options control the mode, and are the same as the <a href="open">open</a> function accepts.</p>
+<h2 id="method_watch"><a class="u" href="#___top" title="go to top of document">method watch</a></h2>
+<pre>method watch(IO::Path:D: --&gt; Supply)</pre>
+<p>Watches the path for modifications. Only implemented in Rakudo with the MoarVM backend at the moment.</p>
+<h2 id="method_is-absolute"><a class="u" href="#___top" title="go to top of document">method is-absolute</a></h2>
+<pre>method is-absolute(IO::Path:D: --&gt; Bool:D)</pre>
+<p>Returns <code>True</code> if the path is an absolute path, and <code>False</code> otherwise.</p>
+<h2 id="method_is-relative"><a class="u" href="#___top" title="go to top of document">method is-relative</a></h2>
+<pre>method is-relative(IO::Path:D: --&gt; Bool:D)</pre>
+<p>Returns <code>True</code> if the path is a relative path, and <code>False</code> otherwise.</p>
+<h2 id="method_absolute"><a class="u" href="#___top" title="go to top of document">method absolute</a></h2>
+<pre>method absolute (IO::Path:D: $base = ~$*CWD --&gt; IO::Path:D)</pre>
+<p>Returns a new <code>IO::Path</code> object that is an absolute path, based on <code>$base</code>.</p>
+<h2 id="method_relative"><a class="u" href="#___top" title="go to top of document">method relative</a></h2>
+<pre>method relative (IO::Path:D: $base = ~$*CWD --&gt; IO::Path:D)</pre>
+<p>Returns a new <code>IO::Path</code> object relative to the <code>$base</code> path.</p>
+<h2 id="method_contents"><a class="u" href="#___top" title="go to top of document">method contents</a></h2>
+<pre>method contents(IO::Path:D: Mu :$test = none(&#39;.&#39;, &#39;..&#39;))</pre>
+<p>Tries to interpret the path as a directory, and returns a lazy list of <code>IO::Path</code> objects that match the <code>$test</code> smart-matcher.</p>
+<p>By default, the <code>.</code> and <code>..</code> entries (current directory, and parent directory) are filtered out. To get a list of all files and directories, simply pass a smart-matcher that always matches, like <code>True</code>: <code>$path.contents(:test(True))</code>, or shorter: <code>$path.contents(:test)</code>.</p>
+<p>An example that lists all files and directories recursively:</p>
+<pre>sub MAIN($dir = &#39;.&#39;) {
+    my @todo = $dir.path;
+    while @todo {
+        for @todo.pop.contents -&gt; $path {
+            say $path.Str;
+            @todo.push: $path if $path.d;
+        }
+    }
+}</pre>
+<h2 id="method_chmod"><a class="u" href="#___top" title="go to top of document">method chmod</a></h2>
+<pre>method chmod(IO::Path:D: Int:D $mode)</pre>
+<p>Changes the POSIX permissions of a file to <code>$mode</code>.</p>
+<pre>$*CWD.chmod(0o700);</pre>
+
+
+
+</body>
+</html>
+

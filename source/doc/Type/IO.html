@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <title>role IO</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>role IO</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Operators">Operators</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_prompt">method prompt</a></li>
+    <li class="indexItem indexItem2"><a href="#method_dir">method dir</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>role IO { }</pre>
+<p>The IO role provides no functionality itself, and moreso just marks if a particular object relates to input/output.</p>
+<h1 id="Operators"><a class="u" href="#___top" title="go to top of document">Operators</a></h1>
+<h2 id="method_prompt"><a class="u" href="#___top" title="go to top of document">method prompt</a></h2>
+<pre>sub prompt($msg)</pre>
+<p>Prints <code>$msg</code> to the standard output and waits for the user to type in something and finish with an ENTER. Returns the string typed in without the trailing newline.</p>
+<pre>my $name = prompt(&quot;Hi, what&#39;s your name? &quot;);</pre>
+<h2 id="method_dir"><a class="u" href="#___top" title="go to top of document">method dir</a></h2>
+<pre>sub dir(Cool $path = &#39;.&#39;, Mu :$test = none(&#39;.&#39;, &#39;..&#39;))</pre>
+<p>Returns a list of <a href="IO::File">IO::File</a> and <a href="IO::Path">IO::Path</a> objects for the files and directories found in the $path. If $path is not given assumes the current directory.</p>
+<p>A second optional parameter can be given that will be matched against the strings to filter out certain entries. By default it filters out the &#39;.&#39; and &#39;..&#39; entries.</p>
+<p>Examples:</p>
+<pre>for dir() -&gt; $file {
+   say $file;
+}</pre>
+<pre>dir(&#39;path/to/directory&#39;);</pre>
+<p>To include all the entries (including . and ..) write:</p>
+<pre>dir(test =&gt; all())</pre>
+<p>To include only entries with a .pl extension write:</p>
+<pre>dir(test =&gt; /.pl$/)</pre>
+<p>TODO: more IO Ops</p>
+
+
+
+</body>
+</html>
+

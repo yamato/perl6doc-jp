@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <title>role X::Comp</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>role X::Comp</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_filename">method filename</a></li>
+    <li class="indexItem indexItem2"><a href="#method_line">method line</a></li>
+    <li class="indexItem indexItem2"><a href="#method_column">method column</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>role X::Comp is Exception { }</pre>
+<p>Common role for compile-time errors.</p>
+<p>Note that since the backtrace of a compile time error generally shows routines from the compiler, not from user-space programs, the <a href="Backtrace">Backtrace</a> returned from the <a href="backtrace">backtrace</a> method is not very informative. Instead the exception carries its own <code>filename</code>, <code>line</code> and <code>column</code> attributes and public accessors.</p>
+<p>If an error occurs while creating an object (like a class or routine) at compile time, generally the exception associated with it does not hold a reference to the object (for example a class would not be fully composed, and thus not usable). In those cases the name of the would-be-created object is included in the error message instead.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_filename"><a class="u" href="#___top" title="go to top of document">method filename</a></h2>
+<p>The filename in which the compilation error occurred</p>
+<h2 id="method_line"><a class="u" href="#___top" title="go to top of document">method line</a></h2>
+<p>The line number in which the compilation error occurred.</p>
+<h2 id="method_column"><a class="u" href="#___top" title="go to top of document">method column</a></h2>
+<p>The column number of location where the compilation error occurred. (Rakudo does not implement that yet).</p>
+
+
+
+</body>
+</html>
+

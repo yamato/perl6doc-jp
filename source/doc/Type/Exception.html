@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Exception</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Exception</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_message">method message</a></li>
+    <li class="indexItem indexItem2"><a href="#method_backtrace">method backtrace</a></li>
+    <li class="indexItem indexItem2"><a href="#method_throw">method throw</a></li>
+    <li class="indexItem indexItem2"><a href="#method_rethrow">method rethrow</a></li>
+    <li class="indexItem indexItem2"><a href="#method_fail">method fail</a></li>
+    <li class="indexItem indexItem2"><a href="#method_gist">method gist</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Exception { ... }</pre>
+<p>All exceptions that are placed into the <code>$!</code> variable (or into <code>$_</code> in <code>CATCH</code> blocks) inherit from <code>Exception</code>. When you call <code>die</code> or <code>fail</code> with a non-Exception argument, it is wrapped into an <code>X::AdHoc</code> object, which also inherits from <code>Exception</code>.</p>
+<p>User-defined exception classes should inherit from <code>Exception</code> too, and define at least a method <code>message</code>.</p>
+<pre>class X::YourApp::SomeError is Exception {
+    method message() {
+        &quot;A YourApp-Specific error occurred: out of coffee!&quot;;
+    }
+}</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_message"><a class="u" href="#___top" title="go to top of document">method message</a></h2>
+<pre>method message(Exception:D:) returns Str:D</pre>
+<p>This is a stub that must be overwritten by subclasses, and should return the exception message.</p>
+<p>Special care should be taken that this method does not produce an exception itself.</p>
+<h2 id="method_backtrace"><a class="u" href="#___top" title="go to top of document">method backtrace</a></h2>
+<pre>method backtrace(Exception:D:) returns Backtrace:D</pre>
+<p>Returns the backtrace associated with the exception. Only makes sense on exceptions that have been thrown at least once.</p>
+<h2 id="method_throw"><a class="u" href="#___top" title="go to top of document">method throw</a></h2>
+<pre>method throw(Exception:D:)</pre>
+<p>Throws the exception.</p>
+<h2 id="method_rethrow"><a class="u" href="#___top" title="go to top of document">method rethrow</a></h2>
+<pre>method rethrow(Exception:D:)</pre>
+<p>Rethrows an exception that has already been thrown at least once. This is different from <code>throw</code> in that it preserves the original backtrace.</p>
+<h2 id="method_fail"><a class="u" href="#___top" title="go to top of document">method fail</a></h2>
+<pre>method fail(Exception:D:)</pre>
+<p>Same as <code>fail $exception</code>; i.e., it exits the calling <code>Routine</code> and returns the exception wrapped in a <a href="Failure">Failure</a> object.</p>
+<h2 id="method_gist"><a class="u" href="#___top" title="go to top of document">method gist</a></h2>
+<pre>multi method gist(Exception:D:)</pre>
+<p>Returns whatever the exception printer should produce for this exception. The default implementation returns message and backtrace separated by a newline.</p>
+
+
+
+</body>
+</html>
+

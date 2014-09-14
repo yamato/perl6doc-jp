@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Routine</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Routine</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_multi">method multi</a></li>
+    <li class="indexItem indexItem2"><a href="#method_candidates">method candidates</a></li>
+    <li class="indexItem indexItem2"><a href="#method_wrap">method wrap</a></li>
+    <li class="indexItem indexItem2"><a href="#method_unwrap">method unwrap</a></li>
+    <li class="indexItem indexItem2"><a href="#method_yada">method yada</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Routine is Block { }</pre>
+<p>A <code>Routine</code> is a code object meant for larger unities of code than <a href="Block">Block</a>. Routine is the common superclass for <a href="Sub">Sub</a> and <a href="Method">Method</a>, the two primary code objects for code reuse.</p>
+<p>Routines serve as a scope limiter for <code>return</code> (i.e. a <code>return</code> returns from the innermost outer Routine).</p>
+<p>Routine is also the level at which multiness (multi subs and multi methods) are handled.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_multi"><a class="u" href="#___top" title="go to top of document">method multi</a></h2>
+<pre>method multi(Routine:D:) returns Bool:D</pre>
+<p>Returns <code>True</code> if the routine is a multi sub or method.</p>
+<h2 id="method_candidates"><a class="u" href="#___top" title="go to top of document">method candidates</a></h2>
+<pre>method candidates(Routine:D:) returns Positional:D</pre>
+<p>Returns a list of multi candidates, or a one-element list with itself if it&#39;s not a multi</p>
+<h2 id="method_wrap"><a class="u" href="#___top" title="go to top of document">method wrap</a></h2>
+<pre>method wrap(Routine:D: &amp;wrapper)</pre>
+<p>Wraps (i.e. in-place modifies) the routine. That means a call to this routine first calls <code>&amp;wrapper</code>, which then can (but doesn&#39;t have to) call the original routine with the <code>callsame</code>, <code>callwith</code>, <code>nextsame</code> and <code>nextwith</code> dispatchers. The return value from the routine is also the return value from the wrapper.</p>
+<p><code>wrap</code> returns a wrap handler, which you can pass to <a href="unwrap">unwrap</a> to restore the original routine.</p>
+<h2 id="method_unwrap"><a class="u" href="#___top" title="go to top of document">method unwrap</a></h2>
+<pre>method unwrap(Routine:D: $wraphandler)</pre>
+<p>Restores the original routine after it has been wrapped with <a href="wrap">wrap</a>.</p>
+<h2 id="method_yada"><a class="u" href="#___top" title="go to top of document">method yada</a></h2>
+<pre>method yada(Routine:D:) returns Bool:D</pre>
+<p>Returns <code>True</code> if the routine is a stub</p>
+<pre>say (sub f() { ... }).yada      # True
+say (sub g() { 1;  }).yada      # False</pre>
+
+
+
+</body>
+</html>
+

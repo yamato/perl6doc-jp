@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+  <title>Modules</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Modules</h1>
+<p class='subtitle'>How to create and distribute Perl 6 modules</p>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Creating_and_Distributing_Modules">Creating and Distributing Modules</a></li>
+</ol>
+</nav>
+<h1 id="Creating_and_Distributing_Modules"><a class="u" href="#___top" title="go to top of document">Creating and Distributing Modules</a></h1>
+<p>If you&#39;ve written a Perl 6 module and would like to share it with the community, we&#39;d be delighted to have it listed in the <a href="http://modules.perl6.org">Perl 6 modules directory</a>. <code>:)</code></p>
+<p>For now, the process requires that you use git for your module&#39;s version control.</p>
+<p>The instructions herein require that you have a github account so that your module can be shared from its github repository.</p>
+<p>To share your module then, do the following:</p>
+<ul><ul><li><p>Create a project directory named after your module. For example, if your module is Vortex::TotalPerspective, then create a project directory named <code>Vortex-TotalPerspective</code>. This project directory name will also be used as the github repo name.</p>
+</li>
+<li><p>Make your project directory look like this:</p>
+<pre>Vortex-TotalPerspective/
+|-- lib
+|   `-- Vortex
+|       `-- TotalPerspective.pm
+|-- LICENSE
+|-- META.info
+|-- README.md
+`-- t
+    `-- basic.t</pre>
+<p>If your project contains other modules that help the main module do its job, they should go in your lib directory like so:</p>
+<pre>lib
+`-- Vortex
+    |-- TotalPerspective.pm
+    `-- TotalPerspective
+        |-- FairyCake.pm
+        `-- Gargravarr.pm</pre>
+</li>
+<li><p>The <code>README.md</code> file is a markdown-formatted text file, which will later be automatically rendered as html by github.</p>
+</li>
+<li><p>Regarding the <code>LICENSE</code> file, if you have no other preference, you might just use the same one that Rakudo Perl 6 uses. Just copy/paste the raw form of <a href="https://github.com/rakudo/rakudo/blob/nom/LICENSE">its license</a> into your own <code>LICENSE</code> file.</p>
+</li>
+<li><p>If you don&#39;t yet have any tests, you can leave out the <code>t</code> directory and <code>basic.t</code> file for now. For more info on how to write tests (for now), you might have a look at how other modules use Test. It&#39;s quite similar to Perl 5&#39;s Test::More.</p>
+</li>
+<li><p>To document your modules, use <a href="http://perlcabal.org/syn/S26.html">Perl 6 Pod</a> markup inside your modules. Module documentation is most appreciated, and will be especially important once the Perl 6 module directory (or some other site) begins rendering Pod docs as html for easy browsing. <a href="#fn-1" id="fn-ref-1">[1]</a></p>
+</li>
+<li><p>Make your <code>META.info</code> file look something like this:</p>
+<pre>    {
+        &quot;name&quot; : &quot;Vortex::TotalPerspective&quot;,
+        &quot;version&quot; : &quot;0.1.0&quot;,
+        &quot;description&quot; : &quot;Wonderful simulation to get some perspective.&quot;,
+        &quot;author&quot; : &quot;<var>Your Name</var>&quot;,
+        &quot;depends&quot; : [ ],
+        &quot;source-url&quot; : &quot;git://github.com/<var>you</var>/Vortex-TotalPerspective.git&quot;
+    }
+</pre>
+<p>For choosing a version numbering scheme, perhaps use &quot;major.minor.patch&quot; (see <a href="http://perlcabal.org/syn/S11.html#Versioning">the spec on versioning</a> for further details). If the version number doesn&#39;t matter to you or your users right now, you can just put in an asterisk (*) for the version.</p>
+</li>
+<li><p>Put your project under git version control if you haven&#39;t done so already.</p>
+</li>
+<li><p>Once you&#39;re happy with your project, create a repo for it at github. See <a href="https://help.github.com/">github&#39;s help docs</a> if necessary. Your github repo should be named the same as your project directory. Immediately after creating the github repo, github shows you how to configure your local repo to know about your github repo.</p>
+</li>
+<li><p>Push your project to github.</p>
+</li>
+<li><p>Ping someone on IRC (#perl6 at freenode) to either show you how to add your module to the <a href="https://github.com/perl6/ecosystem">ecosystem</a>, or else ask them if they could please add it for you.</p>
+</li>
+</ul>
+</ul>
+<p><strong>That&#39;s it! Thanks for contributing to the Perl 6 community!</strong></p>
+<p>If you&#39;d like to try out installing your module, use the panda module installer tool which is included with Rakudo Star Perl 6:</p>
+<pre>panda install Vortex::TotalPerspective
+</pre>
+<p>This will download your module to its own working directory (<code>~/.panda</code>), build it there, and install the module into <code>~/.perl6</code>.</p>
+<p>To use Vortex::TotalPerspective from your scripts, just write <code>use Vortex::TotalPerspective</code>, and your Perl 6 implementation will know where to look for the module file(s).</p>
+
+<aside><ol start="1">
+<li><a href="#fn-ref-1" id="fn-1">[↑]</a>  Note, described above is a minimal project directory. If your project contains scripts that you&#39;d like distributed along with your module(s), put them in a bin directory. If you have extra docs (in addition to the Pod docs in your module(s)), create a doc directory for them. If you&#39;d like a graphical logo to appear next to your module at the module directory, create a logotype directory and put into it a <code>logo_32x32.png</code> file. At some point, you might also consider adding CONTRIBUTORS, NEWS, TODO, or other files.  </li>
+</ol></aside>
+
+
+</body>
+</html>
+

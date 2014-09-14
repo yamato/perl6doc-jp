@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Parcel</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Parcel</h1>
+<nav class="indexgroup">
+</nav>
+<pre>class Parcel is Cool does Positional { }</pre>
+<p><em>Parcel</em> stands for <em>Par</em>enthesis <em>cel</em>l, i.e. an expression surrounded by parenthesis. Though with the exception of the empty parcel, <code>()</code>, it is really the comma that creates a Parcel.</p>
+<pre>(1 + 2) # not a Parcel
+()      # empty Parcel
+(1,)    # Parcel with one element
+(1, 2)  # Parcel with two elements</pre>
+<p>Parcels are immutable, but can contain mutable containers.</p>
+<pre>my $x;
+my $p = (0, $x, 2); # can assign to $p[1], but not
+                    # to any other element of $p</pre>
+<p>Word-quoting constructs such as <code>&lt;...&gt; </code> also create parcels:</p>
+<pre>&lt;a b c&gt; # 3-element Parcel</pre>
+<p>In flattening list context, parcels are flattened out and disappear:</p>
+<pre>my @flat = &lt;a b&gt;, &lt;c, d&gt;;
+say @flat.elems;            # 4</pre>
+
+
+
+</body>
+</html>
+

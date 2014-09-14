@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::Syntax::NoSelf</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::Syntax::NoSelf</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_variable">method variable</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::Syntax::NoSelf does X::Syntax { }</pre>
+<p>Compile time error thrown when <code>$.foo</code> style calls are used where no invocant is available.</p>
+<p>For example the code</p>
+<pre>$.meth</pre>
+<p>in the mainline throws the error</p>
+<pre>===SORRY!===
+Variable $.meth used where no &#39;self&#39; is available</pre>
+<p>because <code>$.meth</code> is short for <code>$(self.meth)</code>, and there is no <code>self</code> available in mainline.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_variable"><a class="u" href="#___top" title="go to top of document">method variable</a></h2>
+<p>Returns the variable/method call that caused the error.</p>
+
+
+
+</body>
+</html>
+

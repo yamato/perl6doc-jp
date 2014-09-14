@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Mu</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Mu</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#routine_defined">routine defined</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_Bool">routine Bool</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Str">method Str</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_gist">routine gist</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_perl">routine perl</a></li>
+    <li class="indexItem indexItem2"><a href="#method_clone">method clone</a></li>
+    <li class="indexItem indexItem2"><a href="#method_new">method new</a></li>
+    <li class="indexItem indexItem2"><a href="#method_bless">method bless</a></li>
+    <li class="indexItem indexItem2"><a href="#method_CREATE">method CREATE</a></li>
+    <li class="indexItem indexItem2"><a href="#method_print">method print</a></li>
+    <li class="indexItem indexItem2"><a href="#method_say">method say</a></li>
+    <li class="indexItem indexItem2"><a href="#method_ACCEPTS">method ACCEPTS</a></li>
+    <li class="indexItem indexItem2"><a href="#method_WHICH">method WHICH</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Mu { ... }</pre>
+<p>The root of the Perl 6 type hierarchy. For the origin of the name, see <a href="http://en.wikipedia.org/wiki/Mu_%28negative%29">http://en.wikipedia.org/wiki/Mu_%28negative%29</a>. One can also say that there are many undefined values in Perl 6, and <code>Mu</code> is the <em>most undefined</em> value.</p>
+<p>Note that most classes do not derive from <code>Mu</code> directly, but rather from <a href="Any">Any</a>.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="routine_defined"><a class="u" href="#___top" title="go to top of document">routine defined</a></h2>
+<pre>multi sub    defined(Mu) returns Bool:D
+multi method defined()   returns Bool:D</pre>
+<p>Returns <code>False</code> on the type object, and <code>True</code> otherwise.</p>
+<h2 id="routine_Bool"><a class="u" href="#___top" title="go to top of document">routine Bool</a></h2>
+<pre>multi sub    Bool(Mu) returns Bool:D
+multi method Bool()   returns Bool:D</pre>
+<p>Returns <code>False</code> on the type object, and <code>True</code> otherwise.</p>
+<h2 id="method_Str"><a class="u" href="#___top" title="go to top of document">method Str</a></h2>
+<pre>multi method Str()   returns Str</pre>
+<p>Returns a string representation of the invocant, intended to be machine readable.</p>
+<h2 id="routine_gist"><a class="u" href="#___top" title="go to top of document">routine gist</a></h2>
+<pre>multi sub    gist(Mu) returns Str
+multi method gist()   returns Str</pre>
+<p>Returns a string representation of the invocant, optimized for fast recognition by humans.</p>
+<p>The default <code>gist</code> method in <code>Mu</code> re-dispatches to the <code>perl</code> method, but many built-in classes override it to something more specific.</p>
+<h2 id="routine_perl"><a class="u" href="#___top" title="go to top of document">routine perl</a></h2>
+<pre>multi sub    perl(Mu) returns Str
+multi method perl()   returns Str</pre>
+<p>Returns a Perlish representation of the object (i.e., can usually be re-parsed to regenerate the object).</p>
+<h2 id="method_clone"><a class="u" href="#___top" title="go to top of document">method clone</a></h2>
+<pre>method clone(*%twiddles)</pre>
+<p>Creates a shallow clone of the invocant. If named arguments are passed to it, their values are used in every place where an attribute name matches the name of a named argument.</p>
+<h2 id="method_new"><a class="u" href="#___top" title="go to top of document">method new</a></h2>
+<pre>multi method new(*%attrinit)</pre>
+<p>Default method for constructing (create + initialize) new objects of a class. This method expects only named arguments which are then used to initialize attributes with accessors of the same name.</p>
+<p>Classes may provide their own <code>new</code> method to override this default.</p>
+<h2 id="method_bless"><a class="u" href="#___top" title="go to top of document">method bless</a></h2>
+<pre>method bless(*%attrinit) returns Mu:D</pre>
+<p>Lower-level object construction method than <code>new</code>.</p>
+<p>Creates a new object of the same type as the invocant, uses the named arguments to initialize attributes, and returns the created object.</p>
+<p>You can use this method when writing custom constructors:</p>
+<pre>class Point {
+    has $.x;
+    has $.y;
+    multi method new($x, $y) {
+        self.bless(:$x, :$y);
+    }
+}
+my $p = Point.new(-1, 1);</pre>
+<p>(Though each time you write a custom constructor, remember that it makes subclassing harder).</p>
+<h2 id="method_CREATE"><a class="u" href="#___top" title="go to top of document">method CREATE</a></h2>
+<pre>method CREATE() returns Mu:D</pre>
+<p>Allocates a new object of the same type as the invocant, without initializing any attributes.</p>
+<h2 id="method_print"><a class="u" href="#___top" title="go to top of document">method print</a></h2>
+<pre>multi method print() returns Bool:D</pre>
+<p>Prints value to <code>$*OUT</code> after stringification using <code>.Str</code> method without newline at end.</p>
+<h2 id="method_say"><a class="u" href="#___top" title="go to top of document">method say</a></h2>
+<pre>multi method say() returns Bool:D</pre>
+<p>Prints value to <code>$*OUT</code> after stringification using <code>.gist</code> method with newline at end.</p>
+<h2 id="method_ACCEPTS"><a class="u" href="#___top" title="go to top of document">method ACCEPTS</a></h2>
+<pre>multi method ACCEPTS(Mu:U: $other)</pre>
+<p>Performs a type check. Returns <code>True</code> if <code>$other</code> conforms to the invocant (which is always a type object or failure).</p>
+<p>This is the method that is triggered on smart-matching against type objects, for example in <code>if $var ~~ Int { ... }</code>.</p>
+<h2 id="method_WHICH"><a class="u" href="#___top" title="go to top of document">method WHICH</a></h2>
+<pre>multi method WHICH() returns ObjAt:D</pre>
+<p>Returns an object of type <a href="ObjAt">ObjAt</a> which uniquely identifies the object. Value types override this method which makes sure that two equivalent objects return the same return value from <code>WHICH</code>.</p>
+
+
+
+</body>
+</html>
+

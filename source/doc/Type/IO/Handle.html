@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <title>class IO::Handle</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class IO::Handle</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_get">method get</a></li>
+    <li class="indexItem indexItem2"><a href="#method_getc">method getc</a></li>
+    <li class="indexItem indexItem2"><a href="#method_eof">method eof</a></li>
+    <li class="indexItem indexItem2"><a href="#method_lines">method lines</a></li>
+    <li class="indexItem indexItem2"><a href="#method_read">method read</a></li>
+    <li class="indexItem indexItem2"><a href="#method_write">method write</a></li>
+    <li class="indexItem indexItem2"><a href="#method_seek">method seek</a></li>
+    <li class="indexItem indexItem2"><a href="#method_tell">method tell</a></li>
+    <li class="indexItem indexItem2"><a href="#method_slurp">method slurp</a></li>
+    <li class="indexItem indexItem2"><a href="#method_spurt">method spurt</a></li>
+    <li class="indexItem indexItem2"><a href="#method_close">method close</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class IO::Handle does IO::FileTestable { }</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_get"><a class="u" href="#___top" title="go to top of document">method get</a></h2>
+<p>Reads a single line from the input stream (usually the Standard Input or a file).</p>
+<p>Read one line from the standard input:</p>
+<pre>$*IN.get;</pre>
+<p>Read one line from a file:</p>
+<pre>my $fh = open &#39;filename&#39;;
+my $line = $fh.get;</pre>
+<h2 id="method_getc"><a class="u" href="#___top" title="go to top of document">method getc</a></h2>
+<p>Read a single character from the input stream.</p>
+<h2 id="method_eof"><a class="u" href="#___top" title="go to top of document">method eof</a></h2>
+<p>Returns <a href="Bool::True">Bool::True</a> if the read operations have exhausted the content of the file.</p>
+<h2 id="method_lines"><a class="u" href="#___top" title="go to top of document">method lines</a></h2>
+<pre>method lines($limit = Inf)</pre>
+<p>Return a lazy list of the file&#39;s lines read via <a href="get">get</a>, limited to <code>$limit</code> lines.</p>
+<pre>    my @data;
+    my $data-file = open &#39;readings.csv&#39;
+    for <strong>$data-file.lines</strong> -&gt; $line {
+        @data.push($line.split(&#39;,&#39;))
+    }
+</pre>
+<h2 id="method_read"><a class="u" href="#___top" title="go to top of document">method read</a></h2>
+<pre>method read(IO::Handle:D: Cool:D $bytes as Int --&gt; Buf)</pre>
+<p>Binary reading; reads and returns <code>$bytes</code> bytes from the handle</p>
+<h2 id="method_write"><a class="u" href="#___top" title="go to top of document">method write</a></h2>
+<pre>method write(IO::Handle:D: Blob:D $buf)</pre>
+<p>Binary writing; writes <code>$buf</code> to the filehandle.</p>
+<h2 id="method_seek"><a class="u" href="#___top" title="go to top of document">method seek</a></h2>
+<h2 id="method_tell"><a class="u" href="#___top" title="go to top of document">method tell</a></h2>
+<h2 id="method_slurp"><a class="u" href="#___top" title="go to top of document">method slurp</a></h2>
+<h2 id="method_spurt"><a class="u" href="#___top" title="go to top of document">method spurt</a></h2>
+<h2 id="method_close"><a class="u" href="#___top" title="go to top of document">method close</a></h2>
+<p>Will close a previously opened filehandle.</p>
+<pre>$fh.close;</pre>
+
+
+
+</body>
+</html>
+

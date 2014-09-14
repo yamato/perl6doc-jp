@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <title>Quoting Constructs</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Quoting Constructs</h1>
+<p class='subtitle'>Writing strings, word lists, and regexes in Perl 6</p>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#The_Q_Lang">The Q Lang</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Literal_strings%3A_Q">Literal strings: Q</a></li>
+    <li class="indexItem indexItem2"><a href="#Escaping%3A_q">Escaping: q</a></li>
+    <li class="indexItem indexItem2"><a href="#Interpolation%3A_qq">Interpolation: qq</a></li>
+    <li class="indexItem indexItem2"><a href="#Word_quoting%3A_qw">Word quoting: qw</a></li>
+    <li class="indexItem indexItem2"><a href="#Shell_quoting%3A_qqw">Shell quoting: qqw</a></li>
+    <li class="indexItem indexItem2"><a href="#Heredocs%3A_%3Ato">Heredocs: :to</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Regexes">Regexes</a></li>
+</ol>
+</nav>
+<h1 id="The_Q_Lang"><a class="u" href="#___top" title="go to top of document">The Q Lang</a></h1>
+<p>Strings are usual represented in Perl 6 code using some form of quoting construct. The most minimalistic of these is <code>Q</code>, usable via the shortcut <code>｢…｣</code>, or via <code>Q</code> followed by any pair of delimiters surrounding your text. Most of the time, though, the most you&#39;ll need is <code>&#39;…&#39;</code> or <code>&quot;…&quot;</code>, described in more detail in the next sections.</p>
+<h2 id="Literal_strings:_Q"><a class="u" href="#___top" title="go to top of document">Literal strings: Q</a></h2>
+<pre><strong>Q[</strong>A literal string<strong>]</strong>
+<strong>｢</strong>More plainly.<strong>｣</strong>
+<strong>Q ^</strong>Almost any non-word character can be a delimiter!<strong>^</strong>
+</pre>
+<p>Delimiters can nested, but in the plain <code>Q</code> form, backslash escapes aren&#39;t allowed. In other words, basic <code>Q</code> strings are as literal as possible.</p>
+<pre>Q&lt;Make sure you <strong>&lt;</strong>match<strong>&gt;</strong> opening and closing delimiters&gt;
+Q{This is still a closing brace → <strong>\</strong>}
+</pre>
+<p>These examples produce:</p>
+<pre>A literal string
+More plainly.
+Almost any non-word character can be a delimiter!
+Make sure you &lt;match&gt; opening and closing delimiters
+This is still a closing brace → \</pre>
+<p>The other quote forms add on to this basic functionality:</p>
+<h2 id="Escaping:_q"><a class="u" href="#___top" title="go to top of document">Escaping: q</a></h2>
+<pre><strong>&#39;</strong>Very plain<strong>&#39;</strong>
+<strong>q[</strong>This back<strong>\s</strong>lash stays<strong>]</strong>
+<strong>q[</strong>This back<strong>\\</strong>slash stays<strong>]</strong> # Identical output
+<strong>q{</strong>This is not a closing brace → <strong>\}</strong>, but this is → <strong>}</strong>
+<strong>Q :q $</strong>There&#39;re no backslashes here, only lots of <strong>\$</strong><strong>\$</strong><strong>\$</strong>!<strong>$</strong>
+<strong>&#39;</strong>(Just kidding. There<strong>\&#39;</strong>s no money in that string)<strong>&#39;</strong>
+<strong>&#39;</strong>No $interpolation {here}!<strong>&#39;</strong>
+<strong>Q:q#</strong>Just a literal &quot;\n&quot; here<strong>#</strong>
+</pre>
+<p>The <code>q</code> form allows for escaping characters that would otherwise end the string using a backslash. The backslash itself can be escaped, too, as in the third example above. The usual form is <code>&#39;…&#39;</code> or <code>q</code> followed by a delimiter, but it&#39;s also available as an adverb on <code>Q</code>, as in the fifth and last example above.</p>
+<p>These examples produce:</p>
+<pre>Very plain
+This back\slash stays
+This back\slash stays
+This is not a closing brace → } but this is →
+There&#39;s no backslashes here, only lots of $$$!
+(Just kidding. There&#39;s no money in that string)
+No $interpolation {here}!
+Just a literal &quot;\n&quot; here</pre>
+<h2 id="Interpolation:_qq"><a class="u" href="#___top" title="go to top of document">Interpolation: qq</a></h2>
+<pre>my $color = &#39;blue&#39;;
+<a href="say">say</a> <strong>&quot;</strong>My favorite color is <strong>$color</strong>!<strong>&quot;</strong>
+</pre>
+<pre>My favorite color is blue!</pre>
+<p>The <code>qq</code> form, usually written using double quotes, allows for interpolation of variables, i.e, they allow you to write variables within the string, so that the content of the variable gets added to the string. <code>qq</code> also allows escaping of these variables:</p>
+<pre>say <strong>&quot;</strong>The <strong>\</strong>$color variable contains the value &#39;$color&#39;<strong>&quot;</strong>;
+</pre>
+<pre>The $color variable contatins the value &#39;blue&#39;</pre>
+<p>Another feature of <code>qq</code> is the ability to interpolate Perl 6 code from within the string, using curly braces:</p>
+<pre>my ($x, $y, $z) = 4, 3.5, 3;
+say &quot;This room is <strong>$x</strong> m by <strong>$y</strong> m by <strong>$z</strong> m.&quot;
+say &quot;That means its volume should be <strong>{ $x * $y * $z }</strong> m³!&quot;
+</pre>
+<pre>This room is 4 m by 3.5 m by 3 m.
+That means its volume should be 42 m³!</pre>
+<p>By default, only variables with the <code>$</code> sigil are interpolated normally. This way, when you write <code>&quot;documentation@perl6.org&quot;</code>, you aren&#39;t interpolating the <code>@perl6</code> variable. If that&#39;s what you want to do, append a <code>[]</code> to the variable name:</p>
+<pre>my @neighbors = &quot;Felix&quot;, &quot;Danielle&quot;, &quot;Lucinda&quot;;
+say &quot;@neighbors<strong>[]</strong> and I try our best to coexist peacefully.&quot;
+</pre>
+<pre>Felix Danielle Lucinda and I try our best to coexist peacefully.</pre>
+<p>Often, though a method call is more appropriate, and these are also allowed within <code>qq</code> quotes, as long as they have parentheses after the call. This means that <code>&quot;@example.com&quot;</code> produces <code>@example.com</code>, but that the following will work:</p>
+<pre>say &quot;@neighbors<strong>.<a href="join">join</a>(&#39;, &#39;)</strong>, and I try our best to coexist peacefully.&quot;
+</pre>
+<pre>Felix, Danielle, Lucinda, and I try our best to coexist peacefully.</pre>
+<h2 id="Word_quoting:_qw"><a class="u" href="#___top" title="go to top of document">Word quoting: qw</a></h2>
+<pre><strong>&lt;</strong>a b c<strong>&gt;</strong> <a href="eqv">eqv</a> (&#39;a&#39;, &#39;b&#39;, &#39;c&#39;)
+<strong>qw|</strong>! @ # $ % ^ &amp; * \| &lt; &gt; <strong>|</strong> eqv &#39;! @ # $ % ^ &amp; | &lt; &gt;&#39;.words
+<strong>Q:w {</strong> [ ] \{ \} <strong>}</strong> eqv (&#39;[&#39;, &#39;]&#39;, &#39;{&#39;, &#39;}&#39;)
+</pre>
+<p>The <code>:w</code> form, usually written <code>&lt;…&gt;</code> or <code>qw</code>. It splits up the string into words (which are, in this context, defined as sequences of non-whitespace characters separated by whitespace). <code>q:w</code> and <code>qw</code> forms inherit the interpolation and escape semantics of the <code>q</code> and single quote string delimiters, <code>Qw</code> and <code>Q:w</code> inherit the non-escaping semantis of the <code>Q</code> quoter.</p>
+<p>This form is used in preference to writing out many quotation marks and commas for lists of strings. For example, where you could write:</p>
+<pre>my @directions = &#39;left&#39;, &#39;right,&#39;, &#39;up&#39;, &#39;down&#39;;</pre>
+<p>It&#39;s easier to write and to read this:</p>
+<pre>my @directions = &lt;left right up down&gt;;</pre>
+<h2 id="Shell_quoting:_qqw"><a class="u" href="#___top" title="go to top of document">Shell quoting: qqw</a></h2>
+<p>TODO</p>
+<h2 id="Heredocs:_:to"><a class="u" href="#___top" title="go to top of document">Heredocs: :to</a></h2>
+<p>TODO</p>
+<h1 id="Regexes"><a class="u" href="#___top" title="go to top of document">Regexes</a></h1>
+<p>TODO -- or just point to regexes.pod?</p>
+
+
+
+</body>
+</html>
+

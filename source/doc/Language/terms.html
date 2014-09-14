@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+  <title>Terms</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Terms</h1>
+<p class='subtitle'>Perl 6 Terms</p>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Literals">Literals</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Int">Int</a></li>
+    <li class="indexItem indexItem2"><a href="#Rat">Rat</a></li>
+    <li class="indexItem indexItem2"><a href="#Num">Num</a></li>
+    <li class="indexItem indexItem2"><a href="#Str">Str</a></li>
+    <li class="indexItem indexItem2"><a href="#Regex">Regex</a></li>
+    <li class="indexItem indexItem2"><a href="#Pair">Pair</a></li>
+    <li class="indexItem indexItem2"><a href="#Parcel">Parcel</a></li>
+    <li class="indexItem indexItem2"><a href="#term_*">term *</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Identifier_terms">Identifier terms</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#term_self">term self</a></li>
+    <li class="indexItem indexItem2"><a href="#term_now">term now</a></li>
+    <li class="indexItem indexItem2"><a href="#term_rand">term rand</a></li>
+    <li class="indexItem indexItem2"><a href="#term_pi">term pi</a></li>
+    <li class="indexItem indexItem2"><a href="#term_e">term e</a></li>
+    <li class="indexItem indexItem2"><a href="#term_i">term i</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Variables">Variables</a></li>
+</ol>
+</nav>
+<p>Most syntactic constructs in Perl 6 can be categorized in <em>terms</em> and <a href="/language/operators">operators</a>.</p>
+<p>Here you can find an overview of different kinds of terms.</p>
+<h1 id="Literals"><a class="u" href="#___top" title="go to top of document">Literals</a></h1>
+<h2 id="Int"><a class="u" href="#___top" title="go to top of document">Int</a></h2>
+<pre>42
+12_300_00
+:16&lt;DEAD_BEEF&gt;</pre>
+<p><a href="Int">Int</a> literals consist of digits, and can contain underscores between any two digits.</p>
+<p>To specify a base other than ten, use the colonpair form <code>:radix&lt;number&gt; </code>.</p>
+<h2 id="Rat"><a class="u" href="#___top" title="go to top of document">Rat</a></h2>
+<pre>12.34
+1_200.345_678</pre>
+<p><a href="Rat">Rat</a> (rational numbers) literals contain two integer parts joined by a dot.</p>
+<p>Note that trailing dots are not allowed, so you have to write <code>1.0</code> instead of <code>1.</code> (this rule is important because there are infix operators starting with a dot, for example the <code>..</code> <a href="Range">Range</a> operator).</p>
+<h2 id="Num"><a class="u" href="#___top" title="go to top of document">Num</a></h2>
+<pre>12.3e-32
+3e8</pre>
+<p><a href="Num">Num</a> (floating point numbers) literals consist of <a href="Rat">Rat</a> or <a href="Int">Int</a> literals followed by an <code>e</code> and a (possibly negative) exponent. <code>3e8</code> constructs a <a href="Num">Num</a> with value <code>3 * 10**8</code>.</p>
+<h2 id="Str"><a class="u" href="#___top" title="go to top of document">Str</a></h2>
+<pre>&#39;a string&#39;
+&#39;I\&#39;m escaped!&#39;
+&quot;I don&#39;t need to be&quot;
+&quot;\&quot;But I still can be,\&quot; he said.&quot;
+q|Other delimters can be used too!|</pre>
+<p>String literals are most often created with <code>&#39;</code> or <code>&quot;</code>, but strings are actually a powerful sub-language of Perl 6. See <a href="Quoting Constructs">Quoting Constructs</a>.</p>
+<h2 id="Regex"><a class="u" href="#___top" title="go to top of document">Regex</a></h2>
+<pre>/ match some text /
+rx/slurp \s rest (.*) $/</pre>
+<p>These forms produce regex literals. See <a href="Quoting Constructs">Quoting Constructs</a>.</p>
+<h2 id="Pair"><a class="u" href="#___top" title="go to top of document">Pair</a></h2>
+<pre>a =&gt; 1
+&#39;a&#39; =&gt; &#39;b&#39;
+:identifier
+:!identifier
+:identifier&lt;value&gt;
+:identifier&lt;value1 value2&gt;
+:identifier($value)
+:identifier[&#39;val1&#39;, &#39;val2&#39;]
+:identifier{key1 =&gt; &#39;val1&#39;, key2 =&gt; &#39;value2&#39;}
+:$item
+:@array
+:%hash
+:&amp;callable</pre>
+<p><a href="Pair">Pair</a> objects can be created either with <code>infix:«=&gt;» </code> (which auto-quotes the left-hand side if it is an identifier), or with the various colonpair forms. Those always start with a colon, and then are followed either by an identifier or the name of an already existing variable (whose name sans the sigil is used as the key, and value of the variable is used as the value of the pair).</p>
+<p>In the identifier form a colonpair, the optional value can be any circumfix. If it is left blank, the value is <code>Bool::True</code>. The value of the <code>:!identifier</code> form is <code>Bool::False</code>.</p>
+<p>If used in an argument list, all of these forms count as named arguments, with the exception of <code>&#39;quoted string&#39; =&gt; $value </code>.</p>
+<h2 id="Parcel"><a class="u" href="#___top" title="go to top of document">Parcel</a></h2>
+<pre>()
+1, 2, 3
+&lt;a b c&gt;
+«a b c»
+qw/a b c/</pre>
+<p><a href="Parcel">Parcel</a> literals are: the empty pair of parens <code>()</code>, a comma-separated list, or several quoting constructs</p>
+<h2 id="term_*"><a class="u" href="#___top" title="go to top of document">term *</a></h2>
+<p>Creates an object of type <code>Whatever</code>. See <a href="Whatever">Whatever</a> documentation for more details.</p>
+<h1 id="Identifier_terms"><a class="u" href="#___top" title="go to top of document">Identifier terms</a></h1>
+<p>There are built-in identifier terms in Perl 6, which are listed below. In addition one can add new identifier terms with the syntax</p>
+<pre>sub term:&lt;fourty-two&gt; { 42 };
+say fourty-two</pre>
+<p>or as constants</p>
+<pre>constant forty-two = 42;
+say fourty-two</pre>
+<h2 id="term_self"><a class="u" href="#___top" title="go to top of document">term self</a></h2>
+<p>Inside a method, <code>self</code> refers to the invocant (i.e. the object the method was called on). If used in a context where it doesn&#39;t make sense, a compile-time exception of type <a href="X::Syntax::NoSelf">X::Syntax::NoSelf</a> is thrown.</p>
+<h2 id="term_now"><a class="u" href="#___top" title="go to top of document">term now</a></h2>
+<p>Returns an <a href="Instant">Instant</a> object representing the current time.</p>
+<h2 id="term_rand"><a class="u" href="#___top" title="go to top of document">term rand</a></h2>
+<p>Returns a pseudo-random <a href="Num">Num</a> in the range <code>0..^1</code>.</p>
+<h2 id="term_pi"><a class="u" href="#___top" title="go to top of document">term pi</a></h2>
+<p>Returns the number <code>pi</code>, i.e. the ratio between circumference and diameter of a circle.</p>
+<h2 id="term_e"><a class="u" href="#___top" title="go to top of document">term e</a></h2>
+<p>Returns Euler&#39;s number</p>
+<h2 id="term_i"><a class="u" href="#___top" title="go to top of document">term i</a></h2>
+<p>Returns the imaginary unit (for <a href="Complex">Complex</a> numbers).</p>
+<h1 id="Variables"><a class="u" href="#___top" title="go to top of document">Variables</a></h1>
+<p>Variables are discussed in <a href="/language/variables">variable language docs</a>.</p>
+
+
+
+</body>
+</html>
+

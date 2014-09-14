@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Complex</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Complex</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Operators">Operators</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#postfix_i">postfix i</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_new">method new</a></li>
+    <li class="indexItem indexItem2"><a href="#method_re">method re</a></li>
+    <li class="indexItem indexItem2"><a href="#method_im">method im</a></li>
+    <li class="indexItem indexItem2"><a href="#method_isNaN">method isNaN</a></li>
+    <li class="indexItem indexItem2"><a href="#method_polar">method polar</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Complex is Cool does Numeric { ... }</pre>
+<p>Represents a number in the complex plane.</p>
+<p>Complex objects are immutable.</p>
+<h1 id="Operators"><a class="u" href="#___top" title="go to top of document">Operators</a></h1>
+<h2 id="postfix_i"><a class="u" href="#___top" title="go to top of document">postfix i</a></h2>
+<p>Adding a trailing <code>i</code> to a number literal makes it a Complex, for example:</p>
+<pre>2i;     # same as Complex.new(0, 2);
+1-2e3i; # same as Complex.new(1, -2e3);</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_new"><a class="u" href="#___top" title="go to top of document">method new</a></h2>
+<pre>proto method new(*@, *%) {*} returns Complex:D
+multi method new(Real $re, Real $im) returns Complex:D</pre>
+<p>Creates a new <code>Complex</code> object from real and imaginary parts.</p>
+<h2 id="method_re"><a class="u" href="#___top" title="go to top of document">method re</a></h2>
+<pre>method re(Complex:D:) returns Real:D</pre>
+<p>Returns the real part of the complex number.</p>
+<h2 id="method_im"><a class="u" href="#___top" title="go to top of document">method im</a></h2>
+<pre>method im(Complex:D:) returns Real:D</pre>
+<p>Returns the imaginary part of the complex number.</p>
+<h2 id="method_isNaN"><a class="u" href="#___top" title="go to top of document">method isNaN</a></h2>
+<pre>method isNaN(Complex:D:) returns Bool:D</pre>
+<p>Returns true if the real or imaginary part is <code>NaN</code> (not a number).</p>
+<h2 id="method_polar"><a class="u" href="#___top" title="go to top of document">method polar</a></h2>
+<pre>method polar(Complex:D:) returns Positional:D</pre>
+<p>Returns a two-element list of the polar coordinates for this value, i.e. magnitude and angle in radians.</p>
+
+
+
+</body>
+</html>
+

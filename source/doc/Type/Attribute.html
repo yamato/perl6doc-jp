@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Attribute</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Attribute</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_name">method name</a></li>
+    <li class="indexItem indexItem2"><a href="#method_package">method package</a></li>
+    <li class="indexItem indexItem2"><a href="#method_has-accessor">method has-accessor</a></li>
+    <li class="indexItem indexItem2"><a href="#method_readonly">method readonly</a></li>
+    <li class="indexItem indexItem2"><a href="#method_get_value">method get_value</a></li>
+    <li class="indexItem indexItem2"><a href="#method_set_value">method set_value</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Attribute { }</pre>
+<p>In Perl 6 lingo, an <em>attribute</em> refers to a per-instance/object storage slot. An <code>Attribute</code> is used to talk about classes&#39; and roles&#39; attributes on the meta level.</p>
+<p>Normal usage of attributes does not require the user to use class Attribute explicitly.</p>
+<p>The usual way to obtain an object of type <code>Attribute</code> is by introspection:</p>
+<pre>class Useless {
+    has @!things;
+}
+my $a = Useless.^attributes(:local)[0];
+say $a.name;            # @!things
+say $a.package;         # Useless()
+say $a.has-accessor;    # False</pre>
+<pre># modifying an attribute from the outside
+# this is usually not possible, but since Attribute
+# is at the level of the meta class, all is fair game
+my $instance = Useless.new;
+$a.set_value($instance, [1, 2, 3]);
+say $a.get_value($instance);        # 1 2 3</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_name"><a class="u" href="#___top" title="go to top of document">method name</a></h2>
+<pre>method name(Attribute:D:) returns Str:D</pre>
+<p>Returns the name of the attribute. Note that this is always the private name, so if an attribute is declared as <code>has $.a</code>, the name returned is <code>$!a</code>.</p>
+<h2 id="method_package"><a class="u" href="#___top" title="go to top of document">method package</a></h2>
+<pre>method package(Attribute:D:) returns Mu:U</pre>
+<p>Returns the package (class/grammar/role) to which this attribute belongs.</p>
+<h2 id="method_has-accessor"><a class="u" href="#___top" title="go to top of document">method has-accessor</a></h2>
+<pre>method has-accessor(Attribute:D:) returns Bool:D</pre>
+<p>Returns <code>True</code> if the attribute has a public accessor method.</p>
+<h2 id="method_readonly"><a class="u" href="#___top" title="go to top of document">method readonly</a></h2>
+<pre>method readonly(Attribute:D:) returns Bool:D</pre>
+<p>Returns <code>True</code> for readonly attributes, which is the default. Returns <code>False</code> for attributes marked as <code>is rw</code>.</p>
+<h2 id="method_get_value"><a class="u" href="#___top" title="go to top of document">method get_value</a></h2>
+<pre>method get_value(Attribute:D: Mu $instance)</pre>
+<p>Returns the value stored in this attribute of object <code>$instance</code>.</p>
+<p>Note that this method violates encapsulation of the object, and should be used with care. Here be dragons.</p>
+<h2 id="method_set_value"><a class="u" href="#___top" title="go to top of document">method set_value</a></h2>
+<pre>method set_value(Attribute:D: Mu $instance, Mu \new_val)</pre>
+<p>Binds the value <code>new_val</code> to this attribute of object <code>$instance</code>.</p>
+<p>Note that this method violates encapsulation of the object, and should be used with care. Here be dragons.</p>
+
+
+
+</body>
+</html>
+

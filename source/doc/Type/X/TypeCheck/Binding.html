@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::TypeCheck::Binding</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::TypeCheck::Binding</h1>
+<nav class="indexgroup">
+</nav>
+<pre>class X::TypeCheck::Binding is X::TypeCheck { }</pre>
+<p>Thrown when the type check of a binding operation fails.</p>
+<p>For example</p>
+<pre>my Int $x := &quot;foo&quot;&#39;</pre>
+<p>dies with</p>
+<pre>Type check failed in binding; expected &#39;Int&#39; but got &#39;Str&#39;</pre>
+<p>Note that the compiler is free to detect obvious errors at compile time, and complain with a different error at compile time.</p>
+
+
+
+</body>
+</html>
+

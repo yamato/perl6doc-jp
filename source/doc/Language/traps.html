@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+  <title>Traps to avoid</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Traps to avoid</h1>
+<p class='subtitle'>Traps to avoid when getting started with Perl 6</p>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Objects">Objects</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Assigning_to_attributes">Assigning to attributes</a></li>
+    <li class="indexItem indexItem2"><a href="#BUILD_prevents_automatic_attribute_initialization_from_constructor_arguments">BUILD prevents automatic attribute initialization from constructor arguments</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Regexes">Regexes</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Whitespace_in_Regexes_does_not_match_literally">Whitespace in Regexes does not match literally</a></li>
+  </ol>
+</ol>
+</nav>
+<p>When learning a programming language, possibly with the background of being familiar with another programming language, there are always some things that can surprise you, and might cost valuable time in debugging and discovery.</p>
+<p>This document aims to show common misconceptions</p>
+<h1 id="Objects"><a class="u" href="#___top" title="go to top of document">Objects</a></h1>
+<h2 id="Assigning_to_attributes"><a class="u" href="#___top" title="go to top of document">Assigning to attributes</a></h2>
+<p>Newcomers often think that, because attributes with accessors are declared as <code>has $.x</code>, they can assign to <code>$.x</code> inside the class. That&#39;s not the case.</p>
+<p>For example</p>
+<pre>use v6;
+class Point {
+    has $.x;
+    has $.y;
+    method double {
+        $.x *= 2;   # WRONG
+        $.y *= 2;   # WRONG
+        self;
+    }
+}</pre>
+<pre>say Point.new(x =&gt; 1, y =&gt; -2).double.x</pre>
+<p>dies with</p>
+<pre>Cannot mofify an immutable Int</pre>
+<p>in the first line marked with <code># WRONG</code>, because <code>$.x</code>, short for <code>$( self.x )</code>, is a call to a read-only accessor.</p>
+<p>The syntax <code>has $.x</code> is short for something like <code>has $!x; method x() { $!x }</code>, so the actual attribute is called <code>$!x</code>, and a read-only accessor method is automatically generated.</p>
+<p>So the correct way to write method double is</p>
+<pre>method double {
+    $!x *= 2;
+    $!y *= 2;
+    self;
+}</pre>
+<p>which operates on the attributes directly.</p>
+<h2 id="BUILD_prevents_automatic_attribute_initialization_from_constructor_arguments"><a class="u" href="#___top" title="go to top of document">BUILD prevents automatic attribute initialization from constructor arguments</a></h2>
+<p>When you define your own <code>BUILD</code> submethod, you must take care of initializing all attributes yourself. For example</p>
+<pre>use v6;
+class A {
+    has $.x;
+    has $.y;
+    submethod BUILD {
+        $!y = 18;
+    }
+}</pre>
+<pre>say A.new(x =&gt; 42).x;       # Any</pre>
+<p>leaves <code>$!x</code> uninitialized, because the custom <code>BUILD</code> doesn&#39;t initialize it. And the custom BUILD</p>
+<p>One possible remedy is to explicitly initialize the attribute in <code>BUILD</code>:</p>
+<pre>submethod BUILD(:$x) {
+    $!y = 18;
+    $!x := $x;
+}</pre>
+<p>which can be shortened to</p>
+<pre>submethod BUILD(:$!x) {
+    $!y = 18;
+}</pre>
+<p>Another, more general approach is to leave <code>BUILD</code> alone, and hook into the <code>BUILDALL</code> mechanism instead:</p>
+<pre>use v6;
+class A {
+    has $.x;
+    has $.y;
+    method BUILDALL(|c) {
+        nextsame;
+        $!y = 18;
+    }
+}</pre>
+<pre>say A.new(x =&gt; 42).x;       # 42</pre>
+<p>(Note that <code>BUILDALL</code> is a method, not a submethod. That&#39;s because by default, there is only one such method per class hierarchy, whereas <code>BUILD</code> is explicitly called per class. Which also explains why you need the <code>nexsame</code> inside <code>BUIDLALL</code>, but not inside <code>BUILD</code>).</p>
+<h1 id="Regexes"><a class="u" href="#___top" title="go to top of document">Regexes</a></h1>
+<h2 id="Whitespace_in_Regexes_does_not_match_literally"><a class="u" href="#___top" title="go to top of document">Whitespace in Regexes does not match literally</a></h2>
+<pre>$ perl6-e &quot;say &#39;a b&#39; ~~ /a b/&quot;
+False</pre>
+<p>Whitespace in regexes is, by default, considered an optional filler without semantics, just like in the rest of the Perl 6 language.</p>
+<p>Ways to match whitespace:</p>
+<ul><ul><li><p><code>\s</code> to match any one whitespace, <code>\s+</code> to match at least one</p>
+</li>
+<li><p><code>&#39; &#39;</code> (a blank in quotes) to match a single blank</p>
+</li>
+<li><p><code>\t</code>, <code>\n</code> for specific whitespace (tab, newline)</p>
+</li>
+<li><p><code>\h</code>, <code>\v</code> for horizontal, vertical whitespace</p>
+</li>
+<li><p>with <code>m:s/a b/</code> or <code>m:sigspace/a b/</code>, the blank in the regexes matches arbitrary whitespace</p>
+</li>
+</ul>
+</ul>
+
+
+
+</body>
+</html>
+

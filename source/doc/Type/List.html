@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+<head>
+  <title>class List</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class List</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Items%2C_Flattening_and_Sigils">Items, Flattening and Sigils</a></li>
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#routine_elems">routine elems</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_end">routine end</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_keys">routine keys</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_values">routine values</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_kv">routine kv</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_pairs">routine pairs</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_join">routine join</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_map">routine map</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_grep">routine grep</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_first">routine first</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_classify">routine classify</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Bool">method Bool</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Str">method Str</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Int">method Int</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_pick">routine pick</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_roll">routine roll</a></li>
+    <li class="indexItem indexItem2"><a href="#method_eager">method eager</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_reverse">routine reverse</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_rotate">routine rotate</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_sort">routine sort</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_reduce">routine reduce</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_splice">routine splice</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_pop">routine pop</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_push">routine push</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_shift">routine shift</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_unshift">routine unshift</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_combinations">routine combinations</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_permutations">routine permutations</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>my class List is Iterable does Positional { .. }</pre>
+<p><code>List</code> stores items sequentially and potentially lazily.</p>
+<p>Indexes into lists and arrays start at 0 by default.</p>
+<p>You can assign to list elements if they are containers. Use Arrays to have every value of the list stored in a container.</p>
+<h1 id="Items,_Flattening_and_Sigils"><a class="u" href="#___top" title="go to top of document">Items, Flattening and Sigils</a></h1>
+<p>In Perl 6, assigning a <code>List</code> to a scalar variable does not lose information. The difference is that iteration generally treats a list (or any other list-like object, like a <code>Parcel</code> or an <code>Array</code>) inside a scalar as a single element.</p>
+<pre>my @a = 1, 2, 3;
+for @a { }      # three iterations</pre>
+<pre>my $s = @a;
+for $s { }      # one iteration
+for @a.item { } # one iteration
+for $s.list { } # three iterations</pre>
+<p>Lists generally interpolate (flatten) unless they are accessed via an item (scalar) container.</p>
+<pre>my @a = 1, 2, 3;
+my @flat   = @a, @a;           # six elements
+my @nested = @a.item, @a.item; # two elements</pre>
+<p><code>.item</code> can often be written as <code>$( ... )</code>, and on an array variable even as <code>$@a</code>.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="routine_elems"><a class="u" href="#___top" title="go to top of document">routine elems</a></h2>
+<pre>multi sub    elems($list)  returns Int:D
+multi method elems(List:D:) returns Int:D</pre>
+<p>Returns the number of elements in the list.</p>
+<h2 id="routine_end"><a class="u" href="#___top" title="go to top of document">routine end</a></h2>
+<pre>multi sub    end($list)  returns Int:D
+multi method end(List:D:) returns Int:D</pre>
+<p>Returns the index of the last element.</p>
+<h2 id="routine_keys"><a class="u" href="#___top" title="go to top of document">routine keys</a></h2>
+<pre>multi sub    keys($list)  returns List:D
+multi method keys(List:D:) returns List:D</pre>
+<p>Returns a list of indexes into the list (e.g., 0..(@list.elems-1)).</p>
+<h2 id="routine_values"><a class="u" href="#___top" title="go to top of document">routine values</a></h2>
+<pre>multi sub    values($list)  returns List:D
+multi method values(List:D:) returns List:D</pre>
+<p>Returns a copy of the list.</p>
+<h2 id="routine_kv"><a class="u" href="#___top" title="go to top of document">routine kv</a></h2>
+<pre>multi sub    kv($list)  returns List:D
+multi method kv(List:D:) returns List:D</pre>
+<p>Returns an interleaved list of indexes and values. For example</p>
+<pre>&lt;a b c&gt;.kv</pre>
+<p>Returns</p>
+<pre>0, &#39;a&#39;, 1, &#39;b&#39;, 2, &#39;c&#39;</pre>
+<h2 id="routine_pairs"><a class="u" href="#___top" title="go to top of document">routine pairs</a></h2>
+<pre>multi sub    pairs($list)   returns List:D
+multi method pairs(List:D:) returns List:D</pre>
+<p>Returns a list of pairs, with the indexes as keys and the list values as values.</p>
+<pre>&lt;a b c&gt;.pairs   # 0 =&gt; &#39;a&#39;, 1 =&gt; &#39;b&#39;, 2 =&gt; &#39;c&#39;</pre>
+<h2 id="routine_join"><a class="u" href="#___top" title="go to top of document">routine join</a></h2>
+<pre>multi sub    join($separator, *@list) returns Str:D
+multi method join(List:D: $separator) returns Str:D</pre>
+<p>Treats the elements of the list as strings, interleaves them with <code>$separator</code> and concatenates everything into a single string.</p>
+<p>Example:</p>
+<pre>join &#39;, &#39;, &lt;a b c&gt;;     # &#39;a, b, c&#39;</pre>
+<h2 id="routine_map"><a class="u" href="#___top" title="go to top of document">routine map</a></h2>
+<pre>multi sub    map(&amp;code, *@elems) returns List:D
+multi method map(List:D: &amp;code) returns List:D</pre>
+<p>Invokes <code>&amp;code</code> for each element and gathers the return values in another list and returns it. This happens lazily, i.e. <code>&amp;code</code> is only invoked when the return values are accessed.</p>
+<p>Examples:</p>
+<pre>&gt; (&#39;hello&#39;, 1, 22/7, 42, &#39;world&#39;).map: { .WHAT.perl }
+Str Int Rat Int Str
+&gt; map *.Str.chars, &#39;hello&#39;, 1, 22/7, 42, &#39;world&#39;
+5 1 8 2 5</pre>
+<h2 id="routine_grep"><a class="u" href="#___top" title="go to top of document">routine grep</a></h2>
+<pre>multi sub    grep(Mu $matcher, *@elems) returns List:D
+multi method grep(List:D:  Mu $matcher) returns List:D</pre>
+<p>Returns a lazy list of elements against which <code>$matcher</code> smart-matches. The elements are returned in the order in which they appear in the original list.</p>
+<p>Examples:</p>
+<pre>&gt; (&#39;hello&#39;, 1, 22/7, 42, &#39;world&#39;).grep: Int
+1 42
+&gt; grep { .Str.chars &gt; 3 }, &#39;hello&#39;, 1, 22/7, 42, &#39;world&#39;
+hello 3.142857 world</pre>
+<h2 id="routine_first"><a class="u" href="#___top" title="go to top of document">routine first</a></h2>
+<pre>multi sub    first(Mu $matcher, *@elems)
+multi method first(List:D:  Mu $matcher)</pre>
+<p>Returns the first item of the list which smart-matches against <code>$matcher</code>, fails when no values match.</p>
+<p>Examples:</p>
+<pre>say (1, 22/7, 42).first: * &gt; 5;     # 42
+say $f = (&#39;hello&#39;, 1, 22/7, 42, &#39;world&#39;).first: Complex;
+say $f.perl;                        #  Failure.new(exception =&gt; X::AdHoc.new(payload =&gt; &quot;No values matched&quot;))</pre>
+<h2 id="routine_classify"><a class="u" href="#___top" title="go to top of document">routine classify</a></h2>
+<pre>multi sub    classify(&amp;mapper, *@values) returns Hash:D
+multi method classify(List:D: &amp;mapper)   returns Hash:D</pre>
+<p>Transforms a list of values into a hash representing the classification of those values according to a mapper; each hash key represents the classification for one or more of the incoming list values, and the corresponding hash value contains an array of those list values classified by the mapper into the category of the associated key.</p>
+<p>Example:</p>
+<pre>say classify { $_ %% 2 ?? &#39;even&#39; !! &#39;odd&#39; }, (1, 7, 6, 3, 2);
+            # (&quot;odd&quot; =&gt; [1, 7, 3], &quot;even&quot; =&gt; [6, 2]).hash;;
+say (&#39;hello&#39;, 1, 22/7, 42, &#39;world&#39;).classify: { .Str.chars }
+            # (&quot;5&quot; =&gt; [&quot;hello&quot;, &quot;world&quot;], &quot;1&quot; =&gt; [1], &quot;8&quot; =&gt; [22/7], &quot;2&quot; =&gt; [42]).hash</pre>
+<h2 id="method_Bool"><a class="u" href="#___top" title="go to top of document">method Bool</a></h2>
+<pre>multi method Bool(List:D:) returns Bool:D</pre>
+<p>Returns <code>True</code> if the list has at least one element, and <code>False</code> for the empty list.</p>
+<h2 id="method_Str"><a class="u" href="#___top" title="go to top of document">method Str</a></h2>
+<pre>multi method Str(List:D:) returns Str:D</pre>
+<p>Stringifies the elements of the list and joins them with spaces (same as <code>.join(&#39; &#39;)</code>).</p>
+<h2 id="method_Int"><a class="u" href="#___top" title="go to top of document">method Int</a></h2>
+<pre>multi method Int(List:D:) return Int:D</pre>
+<p>Returns the number of elements in the list (same as <code>.elems</code>).</p>
+<h2 id="routine_pick"><a class="u" href="#___top" title="go to top of document">routine pick</a></h2>
+<pre>multi sub    pick($count, *@list) returns List:D
+multi method pick(List:D: $count = 1)</pre>
+<p>Returns <code>$count</code> elements chosen at random and without repetition from the invocant. If <code>*</code> is passed as <code>$count</code>, or <code>$count</code> is greater than or equal to the size of the list, then all elements from the invocant list are returned in a random sequence.</p>
+<p>Examples:</p>
+<pre>say &lt;a b c d e&gt;.pick;           # b
+b
+say &lt;a b c d e&gt;.pick: 3;        # c a e
+say  &lt;a b c d e&gt;.pick: *;       # e d a b c</pre>
+<h2 id="routine_roll"><a class="u" href="#___top" title="go to top of document">routine roll</a></h2>
+<pre>multi sub    roll($count, *@list) returns List:D
+multi method roll(List:D: $count = 1)</pre>
+<p>Returns a lazy list of <code>$count</code> elements, each randomly selected from the list. Each random choice is made independently, like a separate die roll where each die face is a list element.</p>
+<p>If <code>*</code> is passed to <code>$count</code>, returns a lazy, infinite list of randomly chosen elements from the original list.</p>
+<p>Examples:</p>
+<pre>say &lt;a b c d e&gt;.roll;       # b
+b
+say &lt;a b c d e&gt;.roll: 3;    # c c e
+say roll 8, &lt;a b c d e&gt;;    # b a e d a e b c</pre>
+<pre>my $random_digits := (^10).roll(*);
+say $random_digits[^15];    # 3 8 7 6 0 1 3 2 0 8 8 5 8 0 5</pre>
+<h2 id="method_eager"><a class="u" href="#___top" title="go to top of document">method eager</a></h2>
+<pre>multi method eager(List:D:) returns List:D</pre>
+<p>Evaluates all elements in the list eagerly, and returns the invocant. If a List signals that it is &quot;known infinite&quot;, eager evaluation may stop at the point where the infinity is detected.</p>
+<h2 id="routine_reverse"><a class="u" href="#___top" title="go to top of document">routine reverse</a></h2>
+<pre>multi sub    reverse(*@list ) returns List:D
+multi method reverse(List:D:) returns List:D</pre>
+<p>Returns a list with the same elements in reverse order.</p>
+<p>Note that <code>reverse</code> always refers to reversing elements of a list; to reverse the characters in a string, use <a href="flip">flip</a>.</p>
+<p>Examples:</p>
+<pre>say &lt;hello world!&gt;.reverse      #  world! hello
+say reverse ^10                 # 9 8 7 6 5 4 3 2 1 0</pre>
+<h2 id="routine_rotate"><a class="u" href="#___top" title="go to top of document">routine rotate</a></h2>
+<pre>multi sub    rotate(@list,  Int:D $n = 1) returns List:D
+multi method rotate(List:D: Int:D $n = 1) returns List:D</pre>
+<p>Returns the list rotated by <code>$n</code> elements.</p>
+<p>Examples:</p>
+<pre>&lt;a b c d e&gt;.rotate(2);   # &lt;c d e a b&gt;
+&lt;a b c d e&gt;.rotate(-1);  # &lt;e a b c d&gt;</pre>
+<h2 id="routine_sort"><a class="u" href="#___top" title="go to top of document">routine sort</a></h2>
+<pre>multi sub    sort(*@elems)      returns List:D
+multi sub    sort(&amp;by, *@elems) returns List:D
+multi method sort(List:D:)      returns List:D
+multi method sort(List:D:, &amp;by) returns List:D</pre>
+<p>Sorts the list, smallest element first. By default <code>infix:&lt;cmp&gt; </code> is used for comparing list elements.</p>
+<p>If <code>&amp;by</code> is provided, and it accepts two arguments, it is invoked for pairs of list elements, and should return <code>Order::Increase</code>, <code>Order::Same</code> or <code>Order::Decrease</code>.</p>
+<p>If <code>&amp;by</code> accepts only one argument, the list elements are sorted according to <code>by($a) cmp by($b) </code>. The return values of <code>&amp;by</code> are cached, so that <code>&amp;by</code> is only called once per list element.</p>
+<p>Examples:</p>
+<pre>say (3, -4, 7, -1, 2, 0).sort;                  # -4 -1 0 2 3 7
+say (3, -4, 7, -1, 2, 0).sort: *.abs;           # 0 -1 2 3 -4 7
+say (3, -4, 7, -1, 2, 0).sort: { $^b leg $^a }; # 7 3 2 0 -4 -1</pre>
+<h2 id="routine_reduce"><a class="u" href="#___top" title="go to top of document">routine reduce</a></h2>
+<pre>multi sub    reduce(&amp;with, *@elems)
+multi method reduce(List:D: &amp;with)</pre>
+<p>Applies <code>&amp;with</code> to the first and the second value of the list, then to the result of that calculation and the third value and so on. Returns a single item generated that way.</p>
+<p>Note that <code>reduce</code> is an implicit loop, and thus responds to <code>next</code>, <code>last</code> and <code>redo</code> statements.</p>
+<p>Example:</p>
+<pre>say (1, 2, 3).reduce: * - *;    # -4</pre>
+<h2 id="routine_splice"><a class="u" href="#___top" title="go to top of document">routine splice</a></h2>
+<pre>multi sub    splice(@list,  $start, $elems?, *@replacement) returns List:D
+multi method splice(List:D: $start, $elems?, *@replacement) returns List:D</pre>
+<p>Deletes <code>$elems</code> elements starting from index <code>$start</code> from the list, returns them and replaces them by <code>@replacement</code>. If <code>$elems</code> is omitted, all the elements starting from index <code>$start</code> are deleted.</p>
+<p>Example:</p>
+<pre>my @foo = &lt;a b c d e f g&gt;;
+say @foo.splice(2, 3, &lt;M N O P&gt;);       # c d e
+say @foo;                               # a b M N O P f g</pre>
+<h2 id="routine_pop"><a class="u" href="#___top" title="go to top of document">routine pop</a></h2>
+<pre>multi sub    pop(List:D )
+multi method pop(List:D:)</pre>
+<p>Removes and returns the last item from the list, fails for an empty list.</p>
+<p>Example:</p>
+<pre>&gt; my @foo = &lt;a b&gt;;
+a b
+&gt; @foo.pop;
+b
+&gt; pop @foo
+a
+&gt; pop @foo
+Element popped from empty list</pre>
+<h2 id="routine_push"><a class="u" href="#___top" title="go to top of document">routine push</a></h2>
+<pre>multi sub    push(List:D, *@values) returns List:D
+multi method push(List:D: *@values) returns List:D</pre>
+<p>Adds the <code>@values</code> to the end of the list, and returns the modified list. Fails for infinite lists.</p>
+<p>Example:</p>
+<pre>my @foo = &lt;a b c&gt;;
+@foo.push: 1, 3 ... 11;
+say @foo;                   # a b c 1 3 5 7 9 11</pre>
+<h2 id="routine_shift"><a class="u" href="#___top" title="go to top of document">routine shift</a></h2>
+<pre>multi sub    shift(List:D )
+multi method shift(List:D:)</pre>
+<p>Removes and returns the first item from the list. Fails for an empty list.</p>
+<p>Example:</p>
+<pre>my @foo = &lt;a b&gt;;
+say @foo.shift;     # a
+say @foo.shift;     # b
+say @foo.shift;     # Element shifted from empty list</pre>
+<h2 id="routine_unshift"><a class="u" href="#___top" title="go to top of document">routine unshift</a></h2>
+<pre>multi sub    unshift(List:D, *@values) returns List:D
+multi method unshift(List:D: *@values) returns List:D</pre>
+<p>Adds the <code>@values</code> to the start of the list, and returns the modified list. Fails if <code>@values</code> is infinite.</p>
+<p>Example:</p>
+<pre>my @foo = &lt;a b c&gt;;
+@foo.unshift: 1, 3 ... 11;
+say @foo;                   # 1 3 5 7 9 11 a b c</pre>
+<h2 id="routine_combinations"><a class="u" href="#___top" title="go to top of document">routine combinations</a></h2>
+<pre>multi method combinations (List:D: Int:D $of)          returns List:D
+multi method combinations (List:D: Range:D $of = 0..*) returns List:D
+multi sub    combinations ($n, $k)                     returns List:D</pre>
+<p>The <code>Int</code> variant returns all <code>$of</code>-combinations of the invocant list. For example</p>
+<pre>say .join(&#39;|&#39;) for &lt;a b c&gt;.combinations(2);</pre>
+<p>prints</p>
+<pre>a|b
+a|c
+b|c</pre>
+<p>because all the 2-combinations of <code>&#39;a&#39;, &#39;b&#39;, &#39;c&#39;</code> are <code>[&#39;a&#39;, &#39;b&#39;], [&#39;a&#39;, &#39;c&#39;], [&#39;b&#39;, &#39;c&#39;]</code>.</p>
+<p>The <code>Range</code> variant combines all the individual combinations into a single list, so</p>
+<pre>say .join(&#39;|&#39;) for &lt;a b c&gt;.combinations(2..3);</pre>
+<p>prints</p>
+<pre>a|b
+a|c
+b|c
+a|b|c</pre>
+<p>because that&#39;s the list of all 2- and 3-combinations.</p>
+<p>The subroutine form <code>combinations($n, $k)</code> is equivalent to <code>(^$n).combinations($k)</code>, so</p>
+<pre>.say for combinations(4, 2)</pre>
+<p>prints</p>
+<pre>0 1
+0 2
+0 3
+1 2
+1 3
+2 3</pre>
+<h2 id="routine_permutations"><a class="u" href="#___top" title="go to top of document">routine permutations</a></h2>
+<pre>multi method permutations(List:D:) returns List:D
+multi sub    permutations($n)      returns List:D</pre>
+<p>Returns all possible permutations of a list as a list of arrays. So</p>
+<pre>say .join(&#39;|&#39;) for &lt;a b c&gt;.permutations</pre>
+<p>prints</p>
+<pre>a|b|c
+a|c|b
+b|a|c
+b|c|a
+c|a|b
+c|b|a</pre>
+<p><code>permutations</code> treats all list elements as distinguishable, so <code>(1, 1, 2).permutations</code> still returns a list of 6 elements, even though there are only three distinct permutations.</p>
+<p>The subroutine form <code>permutations($n)</code> is equivalent to <code>(^$n).permutations</code>, so</p>
+<pre>.say for permutations 3;</pre>
+<p>prints</p>
+<pre>1 2 3
+1 3 2
+2 1 3
+2 3 1
+3 1 2
+3 2 1</pre>
+
+
+
+</body>
+</html>
+

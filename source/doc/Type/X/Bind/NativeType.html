@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::Bind::NativeType</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::Bind::NativeType</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_name">method name</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::Bind::NativeType does X::Comp { }</pre>
+<p>Compile-time error thrown when trying to bind to a natively typed variable.</p>
+<p>Since native variables explicitly don&#39;t have the concept of a container at run time. Thus it does not make sense to support both binding and assignment, and Perl 6 supports only assignment (which makes more sense, because native types are value types). So use assignment for natively typed variables.</p>
+<p>For example the code</p>
+<pre>my int $x := 3;</pre>
+<p>dies with</p>
+<pre>Cannot bind to natively typed variable &#39;$x&#39;; use assignment instead</pre>
+<p>and can be fixed by writing it as</p>
+<pre>my int $x = 3;</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_name"><a class="u" href="#___top" title="go to top of document">method name</a></h2>
+<pre>method name() returns Str:D</pre>
+<p>Returns the name of the variable.</p>
+
+
+
+</body>
+</html>
+

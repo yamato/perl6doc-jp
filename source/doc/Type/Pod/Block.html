@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Pod::Block</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Pod::Block</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_contents">method contents</a></li>
+    <li class="indexItem indexItem2"><a href="#method_config">method config</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Pod::Block { }</pre>
+<p>Class for a Pod block, and base class for most other Pod classes.</p>
+<p>A Pod block has contents (more pod blocks or strings) and a config hash.</p>
+<p>Useful subclasses:</p>
+<table>
+<tbody>
+<tr>
+<td>Class Used for</td>
+<td>Class</td>
+<td>Used for</td>
+</tr>
+<tr>
+<td>===== ========</td>
+<td>=====</td>
+<td>========</td>
+</tr>
+<tr>
+<td>L&lt;Pod::Block::Para&gt; paragraphs</td>
+<td>L&lt;Pod::Block::Para&gt;</td>
+<td>paragraphs</td>
+</tr>
+<tr>
+<td>L&lt;Pod::Block::Named&gt; named blocks</td>
+<td>L&lt;Pod::Block::Named&gt;</td>
+<td>named blocks</td>
+</tr>
+<tr>
+<td>L&lt;Pod::Block::Code&gt; code blocks</td>
+<td>L&lt;Pod::Block::Code&gt;</td>
+<td>code blocks</td>
+</tr>
+<tr>
+<td>L&lt;Pod::Block::Comment&gt; comments</td>
+<td>L&lt;Pod::Block::Comment&gt;</td>
+<td>comments</td>
+</tr>
+<tr>
+<td>L&lt;Pod::Block::Heading&gt; =head1 etc. headings</td>
+<td>L&lt;Pod::Block::Heading&gt;</td>
+<td>=head1 etc. headings</td>
+</tr>
+<tr>
+<td>L&lt;Pod::Item&gt; list items</td>
+<td>L&lt;Pod::Item&gt;</td>
+<td>list items</td>
+</tr>
+</tbody>
+</table><h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_contents"><a class="u" href="#___top" title="go to top of document">method contents</a></h2>
+<pre>method contents() returns Positional:D</pre>
+<p>Returns a list of contents of this block.</p>
+<h2 id="method_config"><a class="u" href="#___top" title="go to top of document">method config</a></h2>
+<pre>method config returns EnumMap:D</pre>
+<p>Returns a hash of configs.</p>
+
+
+
+</body>
+</html>
+

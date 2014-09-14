@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Int</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Int</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#routine_chr">routine chr</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_expmod">routine expmod</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_is-prime">routine is-prime</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Operators">Operators</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#infix_div">infix div</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Int is Cool does Real { ... }</pre>
+<p><code>Int</code> objects store integral numbers of arbitrary size. <code>Int</code>s are immutable.</p>
+<p>There are two main syntax forms for <code>Int</code> literals</p>
+<pre>123         # Int in decimal notation
+:16&lt;BEEF&gt;   # Int in radix notations</pre>
+<p>Both forms allow underscores between any two digits which can serve as visual separators, but don&#39;t carry any meaning:</p>
+<pre>5_00000     # five Lakhs
+500_000     # five hundred thousand</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="routine_chr"><a class="u" href="#___top" title="go to top of document">routine chr</a></h2>
+<pre>multi sub    chr(Int:D ) returns Str:D
+multi method chr(Int:D:) returns Str:D</pre>
+<p>Returns a one-character string, by interpreting the integer as a Unicode codepoint number and converting it the corresponding character.</p>
+<h2 id="routine_expmod"><a class="u" href="#___top" title="go to top of document">routine expmod</a></h2>
+<pre>multi sub    expmod (Int:D: Int $y, Int $mod) returns Int:D
+multi method expmod (Int:D: Int $y, Int $mod) returns Int:D</pre>
+<p>Returns the given <code>Int</code> raised to the <code>$y</code> power within modulus <code>$mod</code>.</p>
+<h2 id="routine_is-prime"><a class="u" href="#___top" title="go to top of document">routine is-prime</a></h2>
+<pre>multi sub    is-prime (Int:D: Int $tries = 100) returns Bool:D
+multi method is-prime (Int:D: Int $tries = 100) returns Bool:D</pre>
+<p>Returns <code>True</code> if this <code>Int</code> is known to be a prime, or is likely to be a prime based on a probabilistic Miller-Rabin test. <code>$tries</code> is the maximal number of iterations the test is allowed to do. </p>
+<p>Returns <code>False</code> if this <code>Int</code> is known not to be a prime.</p>
+<h1 id="Operators"><a class="u" href="#___top" title="go to top of document">Operators</a></h1>
+<h2 id="infix_div"><a class="u" href="#___top" title="go to top of document">infix div</a></h2>
+<pre>multi sub infix:&lt;div&gt;(Int:D, Int:D) returns Int:D</pre>
+<p>Does an integer division, rounded down.</p>
+
+
+
+</body>
+</html>
+

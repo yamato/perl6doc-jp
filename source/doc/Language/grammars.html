@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+  <title>Grammars</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Grammars</h1>
+<p class='subtitle'>Parsing and interpreting text</p>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Named_Regexes">Named Regexes</a></li>
+  <li class="indexItem indexItem1"><a href="#class_Grammar">class Grammar</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Methods">Methods</a></li>
+    <ol class="indexList indexList3">
+      <li class="indexItem indexItem3"><a href="#method_parse">method parse</a></li>
+      <li class="indexItem indexItem3"><a href="#method_subparse">method subparse</a></li>
+      <li class="indexItem indexItem3"><a href="#method_parsefile">method parsefile</a></li>
+    </ol>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Action_Classes">Action Classes</a></li>
+</ol>
+</nav>
+<p>Grammars are a powerful tool used to destructure text and often to return data structures that have been created by interpreting that text.</p>
+<p>For example, Perl 6 is parsed and executed using a Perl 6-style grammar.</p>
+<p>An example that&#39;s more practical to the common Perl 6 user is the <a href="https://github.com/moritz/json">JSON::Simple module</a>, which can deserialize any valid JSON file, and yet the deserializing code is written in less than 100 lines of simple, extensible code.</p>
+<h1 id="Named_Regexes"><a class="u" href="#___top" title="go to top of document">Named Regexes</a></h1>
+<p>The main ingredient of grammars is named <a href="/language/regexes">regexes</a>. While the syntax of <a href="/language/regexes">Perl 6 Regexes</a> is outside the scope of this document, <em>named</em> regexes have a special syntax, similar to subroutine definitions:<a href="#fn-1" id="fn-ref-1">[1]</a></p>
+<pre>my <strong>regex number {</strong> \d+ [ \. \d+ ]? <strong>}</strong>
+</pre>
+<p>In this case, we have to specify that the regex is lexically scoped using the <code>my</code> keyword, because named regexes are normally used within grammars.</p>
+<p>Being named gives us the advantage of being able to easily reuse the regex elsewhere:</p>
+<pre>say &quot;32.51&quot; ~~ <strong>&amp;number</strong>;
+say &quot;15 + 4.5&quot; ~~ /<strong> &lt;number&gt; </strong>\s* &#39;+&#39; \s*<strong> &lt;number&gt; </strong>/
+</pre>
+<p><strong><code>regex</code></strong> isn&#39;t the only declarator for named regexes -- in fact, it&#39;s the least common. Most of the time, the <strong><code>token</code></strong> or <strong><code>rule</code></strong> declarators are used. These are both <em>ratcheting</em>, which means that the match engine won&#39;t back up and try again if it fails to match something. This will usually do what you want, but isn&#39;t appropriate for all cases:</p>
+<pre>my regex works-but-slow { .+ q }
+my token fails-but-fast { .+ q }
+my $s = &#39;Tokens won&#39;t backtrack, which makes them fail quicker!&#39;;
+say so $s ~~ &amp;works-but-slow; # True
+say so $s ~~ &amp;fails-but-fast; # False, the entire string get taken by the .+
+</pre>
+<p>The only difference between the <code>token</code> and <code>rule</code> declarators is that the <code>rule</code> declarator causes <a href="/language/regexes#sigspace"><code>:sigspace</code></a> to go into effect for the Regex:</p>
+<pre>my token non-space-y { once upon a time }
+my rule space-y { once upon a time }
+say &#39;onceuponatime&#39;    ~~ &amp;non-space-y;
+say &#39;once upon a time&#39; ~~ &amp;space-y;
+</pre>
+<h1 id="class_Grammar"><a class="u" href="#___top" title="go to top of document">class Grammar</a></h1>
+<pre>class Grammar is Cursor { }</pre>
+<p><code>Grammar</code> is the superclass that classes automatically get when they are declared with the <code>grammar</code> keyword instead of <code>class</code>. Grammars should only be used to parse text; if you wish to extract complex data, an <a href="/language/grammars#Action_Classes">action class</a> is recommended to be used in conjunction with the grammar.</p>
+<pre><strong>grammar</strong> CSV {
+    token TOP { [ &lt;line&gt; \n? ]+ }
+    token line {
+        ^^            # Beginning of a line
+        &lt;value&gt;* % \, # Any number of &lt;value&gt;s with commas in between them
+        $$            # End of a line
+    }
+    token value {
+        [
+        | &lt;-[&quot;,\n]&gt;     # Anything not a double quote, comma or newline
+        | &lt;quoted-text&gt; # Or some quoted text
+        ]*              # Any number of times
+    }
+    token quoted-text {
+        \&quot;
+        [
+        | &lt;-[&quot;\\]&gt; # Anything not a &quot; or \
+        | &#39;\&quot;&#39;     # Or \&quot;, an escaped quotation mark
+        ]*         # Any number of times
+        \&quot;
+    }
+}
+
+say &quot;Valid CSV file!&quot; if CSV.<a href="parse">parse</a>( q:to/EOCSV/ );
+    Year,Make,Model,Length
+    1997,Ford,E350,2.34
+    2000,Mercury,Cougar,2.38
+    EOCSV
+</pre>
+<h2 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h2>
+<h3 id="method_parse"><a class="u" href="#___top" title="go to top of document">method parse</a></h3>
+<pre>method parse(Grammar:D: $str, :$rule = &#39;TOP&#39;, :$actions) returns Match:D</pre>
+<p>Matches the grammar against <code>$str</code>, using <code>$rule</code> as the starting rule, optionally applying <code>$actions</code> as actions object.</p>
+<p>This will fail if the grammar does not parse the <em>entire</em> string. If a parse of only a part of the string is desired, use <a href="subparse">subparse</a>.</p>
+<p>Returns the resulting <a href="Match">Match</a> object, and also sets the caller&#39;s <code>$/</code> variable to the result Match object.</p>
+<pre>say CSV<strong>.parse</strong>( q:to/EOCSV/ );
+    Year,Make,Model,Length
+    1997,Ford,E350,2.34
+    2000,Mercury,Cougar,2.38
+    EOCSV
+</pre>
+<p>This outputs:</p>
+<pre>｢Year,Make,Model,Length
+1997,Ford,E350,2.34
+2000,Mercury,Cougar,2.38
+｣
+ line =&gt; ｢Year,Make,Model,Length｣
+  value =&gt; ｢Year｣
+  value =&gt; ｢Make｣
+  value =&gt; ｢Model｣
+  value =&gt; ｢Length｣
+ line =&gt; ｢1997,Ford,E350,2.34｣
+  value =&gt; ｢1997｣
+  value =&gt; ｢Ford｣
+  value =&gt; ｢E350｣
+  value =&gt; ｢2.34｣
+ line =&gt; ｢2000,Mercury,Cougar,2.38 ｣
+  value =&gt; ｢2000｣
+  value =&gt; ｢Mercury｣
+  value =&gt; ｢Cougar｣
+  value =&gt; ｢2.38 ｣</pre>
+<h3 id="method_subparse"><a class="u" href="#___top" title="go to top of document">method subparse</a></h3>
+<pre>method subparse(Grammar:D: $str, :$rule = &#39;TOP&#39;, :$actions) returns Match:D</pre>
+<p>Matches the grammar against <code>$str</code>, using <code>$rule</code> as the starting rule, optionally applying <code>$actions</code> as actions object.</p>
+<p>Unlike <a href="parse">parse</a>, <code>subparse</code> will allow the grammar to match only part of the supplied string.</p>
+<h3 id="method_parsefile"><a class="u" href="#___top" title="go to top of document">method parsefile</a></h3>
+<pre>method parsefile(Grammar:D: Cool $filename as Str, *%opts) returns Match:D</pre>
+<p>Parses the contents of the file <code>$filename</code> with the <a href="parse">parse</a> method, passing along any named options in <code>%opts</code>.</p>
+<h1 id="Action_Classes"><a class="u" href="#___top" title="go to top of document">Action Classes</a></h1>
+<p>TODO</p>
+
+<aside><ol start="1">
+<li><a href="#fn-ref-1" id="fn-1">[↑]</a> In fact, named regexes can even take extra arguments, using the same syntax as subroutine parameter lists </li>
+</ol></aside>
+
+
+</body>
+</html>
+

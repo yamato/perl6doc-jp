@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::Obsolete</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::Obsolete</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_old">method old</a></li>
+    <li class="indexItem indexItem2"><a href="#method_replacement">method replacement</a></li>
+    <li class="indexItem indexItem2"><a href="#method_when">method when</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::Obsolete does X::Comp { }</pre>
+<p>Syntax error thrown when obsolete (mostly Perl 5) syntax is detected.</p>
+<p>For example</p>
+<pre>m/abc/i</pre>
+<p>dies with</p>
+<pre>===SORRY!===
+Unsupported use of /i; in Perl 6 please use :i</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_old"><a class="u" href="#___top" title="go to top of document">method old</a></h2>
+<pre>method old() returns Str:D</pre>
+<p>Returns a textual description of the obsolete syntax construct</p>
+<h2 id="method_replacement"><a class="u" href="#___top" title="go to top of document">method replacement</a></h2>
+<pre>method replacement() returns Str:D</pre>
+<p>Describes what to use instead of the obsolete syntax.</p>
+<h2 id="method_when"><a class="u" href="#___top" title="go to top of document">method when</a></h2>
+<pre>method when() returns Str:D</pre>
+<p>Returns a string describing the state of the language (usually <code>&quot; in Perl 6&quot;</code>).</p>
+
+
+
+</body>
+</html>
+

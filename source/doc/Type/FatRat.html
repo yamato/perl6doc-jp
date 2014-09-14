@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <title>class FatRat</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class FatRat</h1>
+<nav class="indexgroup">
+</nav>
+<pre>class FatRat is Cool does Rational[Int, Int]</pre>
+<p>A <code>FatRat</code> is a rational number stored with arbitrary size numerator and denominator. Arithmetic operations involving a <code>FatRat</code> and optionally <a href="Int">Int</a> or <a href="Rat">Rat</a> objects return a <code>FatRat</code>, avoiding loss of precision.</p>
+<p>Since, unlike <a href="Rat">Rat</a>, FatRat arithmetics do not fall back <a href="Num">Num</a> at some point, there is a risk that repeated arithmetic operations generate pathologically large numerators and denominators.</p>
+<p>There are two common ways to generate <code>FatRat</code> objects: through the <code>FatRat.new(Int, Int)</code> constructor, which generates them from numerator and denominator, or by calling the <code>.FatRat</code> method on an <a href="Int">Int</a> or <a href="Rat">Rat</a> object.</p>
+
+
+
+</body>
+</html>
+

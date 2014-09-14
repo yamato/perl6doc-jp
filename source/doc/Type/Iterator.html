@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Iterator</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Iterator</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_reify">method reify</a></li>
+    <li class="indexItem indexItem2"><a href="#method_infinite">method infinite</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Iterator is Iterable { }</pre>
+<p>A <code>Iterator</code> is an object that can generate or provide elements of a sequence. Users usually don&#39;t have to care about iterators, their usage is hidden behind iteration APIs such as <code>for @list { }</code>, <a href="map">map</a>, <a href="grep">grep</a> and list indexing with <code>.[$idx]</code>.</p>
+<p>Iterators provide an immutable view of a sequence, though the actual elements in the sequence can still be mutable.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_reify"><a class="u" href="#___top" title="go to top of document">method reify</a></h2>
+<pre>method reify(Iterator:D: $n) returns Parcel:D</pre>
+<p>Returns at least <code>$n</code> elements of the sequence, followed by additional iterators needed to generate the remaining elements.</p>
+<p>Subsequent calls to <code>reify</code> on the same object must return the same <a href="Parcel">Parcel</a>, even if <code>$n</code> changed between the calls.</p>
+<h2 id="method_infinite"><a class="u" href="#___top" title="go to top of document">method infinite</a></h2>
+<pre>method infinite(Iterator:D:)</pre>
+<p>Returns <code>True</code> if the sequence being iterated is known to be infinite, <code>False</code> if it is known to be finite, and <code>Mu</code> if the iterator does not know if the sequence is finite or infinite.</p>
+
+
+
+</body>
+</html>
+

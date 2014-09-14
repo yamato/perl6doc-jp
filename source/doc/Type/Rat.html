@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Rat</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Rat</h1>
+<nav class="indexgroup">
+</nav>
+<pre>class Rat is Cool does Rational[Int, UInt64] { ... }</pre>
+<p><code>Rat</code> objects store rational numbers as a pair of a numerator and denominator. Number literals with a dot but without exponent produce <code>Rat</code>s.</p>
+<pre>3.1;    # Rat.new(31, 10)</pre>
+<p>Thus arithmetic with short dotted-decimal numbers does not suffer from floating point errors.</p>
+<p>To prevent the numerator and denominator from becoming pathologically large, the denominator is limited to 64 bit storage. On overflow of the denominator a <code>Num</code> (floating-point number) is returned instead.</p>
+<p>For example this function crudely approximates a square root, and overflows the denominator quickly:</p>
+<pre>sub approx-sqrt($n, $iterations) {
+    my $x = $n;
+    $x = ($x + $n / $x) / 2 for ^$iterations;
+    return $x;
+}
+say approx-sqrt(2, 5).WHAT;     # Rat()
+say approx-sqrt(2, 10).WHAT;    # Num()</pre>
+<p>If you want arbitrary precision arithmetic with rational numbers, use the <code>FatRat</code> type instead.</p>
+<p><code>Rat</code> objects are immutable.</p>
+
+
+
+</body>
+</html>
+

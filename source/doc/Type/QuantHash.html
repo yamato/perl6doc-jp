@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <title>role QuantHash</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>role QuantHash</h1>
+<nav class="indexgroup">
+</nav>
+<pre>class QuantHash does Associative { }</pre>
+<p>A <code>QuantHash</code> represents a set of objects, represented as the keys of a <code>Hash</code>. When asked to behave as a list it ignores its <code>.values</code> and returns only <code>.keys</code> (possibly replicated by weight in the case of bag types). For any <code>QuantHash</code>, the <code>.total</code> methods returns the current sum of the values.</p>
+<p>All standard QuantHash containers have a default value that is false (such as <code>0</code> or <code>&#39;&#39;</code> or <code>Nil</code> or <code>Bool::False</code>), and keep around only those entries with non-default values, automatically deleting any entry if its value goes to that (false) default value.</p>
+
+
+
+</body>
+</html>
+

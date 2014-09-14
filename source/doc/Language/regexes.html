@@ -1,0 +1,469 @@
+<!doctype html>
+<html>
+<head>
+  <title>Regexes</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Regexes</h1>
+<p class='subtitle'>Pattern matching against strings</p>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Lexical_conventions">Lexical conventions</a></li>
+  <li class="indexItem indexItem1"><a href="#Literals">Literals</a></li>
+  <li class="indexItem indexItem1"><a href="#Wildcards_and_character_classes">Wildcards and character classes</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Dot_to_match_any_character">Dot to match any character</a></li>
+    <li class="indexItem indexItem2"><a href="#Backslashed%2C_predefined_character_classes">Backslashed, predefined character classes</a></li>
+    <li class="indexItem indexItem2"><a href="#Unicode_properties">Unicode properties</a></li>
+    <li class="indexItem indexItem2"><a href="#Enumerated_character_classes_and_ranges">Enumerated character classes and ranges</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Quantifier">Quantifier</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#One_or_more%3A_%2B">One or more: +</a></li>
+    <li class="indexItem indexItem2"><a href="#Zero_or_more%3A_*">Zero or more: *</a></li>
+    <li class="indexItem indexItem2"><a href="#Zero_or_one_match%3A_%3F">Zero or one match: ?</a></li>
+    <li class="indexItem indexItem2"><a href="#General_quantifier%3A_**_min..max">General quantifier: ** min..max</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Alternation">Alternation</a></li>
+  <li class="indexItem indexItem1"><a href="#Grouping_and_Capturing">Grouping and Capturing</a></li>
+  <li class="indexItem indexItem1"><a href="#Adverbs">Adverbs</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Sigspace">Sigspace</a></li>
+  </ol>
+</ol>
+</nav>
+<p>Regular expressions are a computer science concept where simple patterns describe the format of text. Pattern matching is the process of applying these patterns to actual text to look for matches.</p>
+<p>The Most modern regular expression facilities are more powerful than traditional regular expressions due to the influence of languages such as Perl, but the short-hand term <em>regex</em> has stuck and continues to mean <em>regular expression-like pattern matching</em>.</p>
+<p>In Perl 6, although they are capable of much more than regular languages, we continue to call them <em>regex</em>.</p>
+<h1 id="Lexical_conventions"><a class="u" href="#___top" title="go to top of document">Lexical conventions</a></h1>
+<p>Perl 6 has special syntax for writing regexes:</p>
+<pre>m/abc/;         # a regex that is immediately matched against $_
+rx/abc/;        # a Regex object
+/abc/;          # a Regex object</pre>
+<p>The first two can use delimiters other than the slash:</p>
+<pre>m{abc};
+rx{abc};</pre>
+<p>Note that neither the colon <code>:</code> nor round parentheses can be delimiters; the colon is forbidden because it would clash with adverbs, such as <code>rx:i/abc/</code> (case insensitive regexes), and round parentheses would indicate a function call instead.</p>
+<p>Whitespace in regexes is generally ignored (except with the <code>:s</code> or <code>:sigspace</code> adverb).</p>
+<p>As in the rest of Perl 6, comments in regexes start with a hash character <code>#</code> and go upto the rest of the line.</p>
+<h1 id="Literals"><a class="u" href="#___top" title="go to top of document">Literals</a></h1>
+<p>The simplest case of a regex is a constant string. Matching a string against that regex searches for that string:</p>
+<pre>if &#39;properly&#39; ~~ m/ perl / {
+    say &quot;&#39;properly&#39; contains &#39;perl&#39;&quot;;
+}</pre>
+<p>Alphanumeric characters and the underscore <code>_</code> are literal matches. All other characters must either be escaped with a backslash (for example <code>\:</code> to match a colon), or included in quotes:</p>
+<pre>/ &#39;two words&#39; /     # matches &#39;two words&#39; including the blank
+/ &quot;a:b&quot;       /     # matches &#39;a:b&#39; including the colon</pre>
+<p>The hash character <code>#</code> cannot be escaped with a backslash, because that would collide with the <em>unspace</em> syntax. So to match a hash character, you need to quote it:</p>
+<pre>/&#39;#&#39;/               # hashes must be quoted, cannot be escaped</pre>
+<p>Strings are searched left to right for the regex, so its enough if a substring matches the regex:</p>
+<pre>if &#39;abcdef&#39; ~~ / de / {
+    say ~$/;            # de
+    say $/.prematch;    # abc
+    say $/.postmatch;   # f
+    say $/.from;        # 3
+    say $/.to;          # 5
+};</pre>
+<p>Match results are stored in the <code>$/</code> variable, and are also returned from the match. The result is of type <a href="Match">Match</a>.</p>
+<h1 id="Wildcards_and_character_classes"><a class="u" href="#___top" title="go to top of document">Wildcards and character classes</a></h1>
+<h2 id="Dot_to_match_any_character"><a class="u" href="#___top" title="go to top of document">Dot to match any character</a></h2>
+<p>An unescaped dot <code>.</code> in a regex matches any single character.</p>
+<p>So these all match:</p>
+<pre>&#39;perl&#39; ~~ / per . /;    # matches the whole string
+&#39;perl&#39; ~~ /per./;       # the same; whitespace is ignored
+&#39;perl&#39; ~~ / pe.l /;     # the . matches the r
+&#39;speller&#39; ~~ / pe.l/;   # the . matches the first l</pre>
+<p>This doesn&#39;t match:</p>
+<pre>&#39;perl&#39; ~~ /. per /</pre>
+<p>because there is no character to match before <code>per</code> in the target string.</p>
+<h2 id="Backslashed,_predefined_character_classes"><a class="u" href="#___top" title="go to top of document">Backslashed, predefined character classes</a></h2>
+<p>There are predefined character classes of the form <code>\w</code>. Its negation is written with an upper-case letter</p>
+<ul><ul><li><p>\d and \D</p>
+</li>
+</ul>
+</ul>
+<p><code>\d</code> matches a single digit (Unicode property <code>N</code>), and <code>\D</code> matches a single character that is not a digit.</p>
+<pre>&#39;ab42&#39; ~~ /\d/ and say ~$/;     # 4
+&#39;ab42&#39; ~~ /\D/ and say ~$/;     # a</pre>
+<p>Note that not only the Arabic digits (commonly used in the Latin alphabet) match <code>\d</code>, but also digits from other scripts.</p>
+<p>Examples for digits are</p>
+<pre>U+0035 5 DIGIT FIVE
+U+07C2 ߂ NKO DIGIT TWO
+U+0E53 ๓ THAI DIGIT THREE
+U+1B56 ᭖ BALINESE DIGIT SIX</pre>
+<ul><ul><li><p>\h and \H</p>
+</li>
+</ul>
+</ul>
+<p><code>\h</code> matches a single horizontal whitespace character. <code>\H</code> matches a single character that is not a horizontal whitespace character.</p>
+<p>Examples for horizontal whitespace characters are</p>
+<pre>U+0020 SPACE
+U+00A0 NO-BREAK SPACE
+U+0009 CHARACTER TABULATION
+U+2001 EM QUAD</pre>
+<p>Vertical whitespaces like newline characters are explicitly excluded; those can be matched with <code>\v</code>, and <code>\s</code> matches any kind of whitespace.</p>
+<ul><ul><li><p>\n and \N</p>
+</li>
+</ul>
+</ul>
+<p><code>\n</code> matches a single, logical newline character. <code>\n</code> is supposed to also match a Windows CR LF codepoing pair; though it is unclear whether the magic happens at the time that external data is read, or at regex match time. <code>\N</code> matches a single character that&#39;s not a logical newline.</p>
+<ul><ul><li><p>\s and \S</p>
+</li>
+</ul>
+</ul>
+<p><code>\s</code> matches a single whitespace character. <code>\S</code> matches a single character that is not a whitspace.</p>
+<p>TODO: examples</p>
+<ul><ul><li><p>\t and \T</p>
+</li>
+</ul>
+</ul>
+<p><code>\t</code> matches a single tab/tabulation character, <code>U+0009</code>. (Note that exotic tabs like the <code>U+000B VERTICAL TABULATION</code> character is not included here). <code>\T</code> matches a single character that is not a tab.</p>
+<ul><ul><li><p>\v and \V</p>
+</li>
+</ul>
+</ul>
+<p><code>\v</code> matches a single vertical whitespace character. <code>\V</code> match a single character that is not a vertical whitspace.</p>
+<p>Examples for vertical whitespace characters:</p>
+<pre>U+000A LINE FEED
+U+000B VERTICAL TABULATION
+U+000C CARRIAGE RETURN
+U+0085 NEXT LINE
+U+2029 PARAGRAPH SEPARATOR</pre>
+<p>Use <code>\s</code> to match any kind of whitespace, not just vertical whitespace</p>
+<ul><ul><li><p>\w and \W</p>
+</li>
+</ul>
+</ul>
+<p><code>\w</code> matches a single word character, that is a letter (Unicode category L), a digit or an underscore. <code>\W</code> matches a single character that isn&#39;t a word character.</p>
+<p>Examples of word characters:</p>
+<pre>0041 A LATIN CAPITAL LETTER A
+0031 1 DIGIT ONE
+03B4 δ GREEK SMALL LETTER DELTA
+03F3 ϳ GREEK LETTER YOT
+0409 Љ CYRILLIC CAPITAL LETTER LJE</pre>
+<h2 id="Unicode_properties"><a class="u" href="#___top" title="go to top of document">Unicode properties</a></h2>
+<p>The character classes so far are mostly for convenience; a more systematic approach is the use of Unicode properties. They are called in the form <code>&lt;:property&gt; </code>, where <code>property</code> can be a short or long Unicode property name.</p>
+<p>The following list is stolen from the Perl 5 <a href="http://perldoc.perl.org/perlunicode.html">perlunicode</a> documentation:</p>
+<table>
+<tbody>
+<tr>
+<td>Short Long</td>
+<td>Short</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>===== =====</td>
+<td>=====</td>
+<td>=====</td>
+</tr>
+<tr>
+<td>L Letter</td>
+<td>L</td>
+<td>Letter</td>
+</tr>
+<tr>
+<td>LC Cased_Letter</td>
+<td>LC</td>
+<td>Cased_Letter</td>
+</tr>
+<tr>
+<td>Lu Uppercase_Letter</td>
+<td>Lu</td>
+<td>Uppercase_Letter</td>
+</tr>
+<tr>
+<td>Ll Lowercase_Letter</td>
+<td>Ll</td>
+<td>Lowercase_Letter</td>
+</tr>
+<tr>
+<td>Lt Titlecase_Letter</td>
+<td>Lt</td>
+<td>Titlecase_Letter</td>
+</tr>
+<tr>
+<td>Lm Modifier_Letter</td>
+<td>Lm</td>
+<td>Modifier_Letter</td>
+</tr>
+<tr>
+<td>Lo Other_Letter</td>
+<td>Lo</td>
+<td>Other_Letter</td>
+</tr>
+<tr>
+<td>M Mark</td>
+<td>M</td>
+<td>Mark</td>
+</tr>
+<tr>
+<td>Mn Nonspacing_Mark</td>
+<td>Mn</td>
+<td>Nonspacing_Mark</td>
+</tr>
+<tr>
+<td>Mc Spacing_Mark</td>
+<td>Mc</td>
+<td>Spacing_Mark</td>
+</tr>
+<tr>
+<td>Me Enclosing_Mark</td>
+<td>Me</td>
+<td>Enclosing_Mark</td>
+</tr>
+<tr>
+<td>N Number</td>
+<td>N</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>Nd Decimal_Number (also Digit)</td>
+<td>Nd</td>
+<td>Decimal_Number (also Digit)</td>
+</tr>
+<tr>
+<td>Nl Letter_Number</td>
+<td>Nl</td>
+<td>Letter_Number</td>
+</tr>
+<tr>
+<td>No Other_Number</td>
+<td>No</td>
+<td>Other_Number</td>
+</tr>
+<tr>
+<td>P Punctuation (also Punct)</td>
+<td>P</td>
+<td>Punctuation (also Punct)</td>
+</tr>
+<tr>
+<td>Pc Connector_Punctuation</td>
+<td>Pc</td>
+<td>Connector_Punctuation</td>
+</tr>
+<tr>
+<td>Pd Dash_Punctuation</td>
+<td>Pd</td>
+<td>Dash_Punctuation</td>
+</tr>
+<tr>
+<td>Ps Open_Punctuation</td>
+<td>Ps</td>
+<td>Open_Punctuation</td>
+</tr>
+<tr>
+<td>Pe Close_Punctuation</td>
+<td>Pe</td>
+<td>Close_Punctuation</td>
+</tr>
+<tr>
+<td>Pi Initial_Punctuation</td>
+<td>Pi</td>
+<td>Initial_Punctuation</td>
+</tr>
+<tr>
+<td>(may behave like Ps or Pe depending on usage)</td>
+<td></td>
+<td>(may behave like Ps or Pe depending on usage)</td>
+</tr>
+<tr>
+<td>Pf Final_Punctuation</td>
+<td>Pf</td>
+<td>Final_Punctuation</td>
+</tr>
+<tr>
+<td>(may behave like Ps or Pe depending on usage)</td>
+<td></td>
+<td>(may behave like Ps or Pe depending on usage)</td>
+</tr>
+<tr>
+<td>Po Other_Punctuation</td>
+<td>Po</td>
+<td>Other_Punctuation</td>
+</tr>
+<tr>
+<td>S Symbol</td>
+<td>S</td>
+<td>Symbol</td>
+</tr>
+<tr>
+<td>Sm Math_Symbol</td>
+<td>Sm</td>
+<td>Math_Symbol</td>
+</tr>
+<tr>
+<td>Sc Currency_Symbol</td>
+<td>Sc</td>
+<td>Currency_Symbol</td>
+</tr>
+<tr>
+<td>Sk Modifier_Symbol</td>
+<td>Sk</td>
+<td>Modifier_Symbol</td>
+</tr>
+<tr>
+<td>So Other_Symbol</td>
+<td>So</td>
+<td>Other_Symbol</td>
+</tr>
+<tr>
+<td>Z Separator</td>
+<td>Z</td>
+<td>Separator</td>
+</tr>
+<tr>
+<td>Zs Space_Separator</td>
+<td>Zs</td>
+<td>Space_Separator</td>
+</tr>
+<tr>
+<td>Zl Line_Separator</td>
+<td>Zl</td>
+<td>Line_Separator</td>
+</tr>
+<tr>
+<td>Zp Paragraph_Separator</td>
+<td>Zp</td>
+<td>Paragraph_Separator</td>
+</tr>
+<tr>
+<td>C Other</td>
+<td>C</td>
+<td>Other</td>
+</tr>
+<tr>
+<td>Cc Control (also Cntrl)</td>
+<td>Cc</td>
+<td>Control (also Cntrl)</td>
+</tr>
+<tr>
+<td>Cf Format</td>
+<td>Cf</td>
+<td>Format</td>
+</tr>
+<tr>
+<td>Cs Surrogate</td>
+<td>Cs</td>
+<td>Surrogate</td>
+</tr>
+<tr>
+<td>Co Private_Use</td>
+<td>Co</td>
+<td>Private_Use</td>
+</tr>
+<tr>
+<td>Cn Unassigned</td>
+<td>Cn</td>
+<td>Unassigned</td>
+</tr>
+</tbody>
+</table><p>So for example <code>&lt;:Lu&gt; </code> matches a single, upper-case letter.</p>
+<p>Negation works as <code>&lt;:!category&gt; </code>, so <code>&lt;:!Lu&gt; </code> matches a single character that isn&#39;t an upper-case letter.</p>
+<p>Several category can be combined with one of these infix operators:</p>
+<table>
+<tbody>
+<tr>
+<td>Operator Meaning</td>
+<td>Operator</td>
+<td>Meaning</td>
+</tr>
+<tr>
+<td>======== =======</td>
+<td>========</td>
+<td>=======</td>
+</tr>
+<tr>
+<td>+ set union</td>
+<td>+</td>
+<td>set union</td>
+</tr>
+<tr>
+<td>| set union</td>
+<td>|</td>
+<td>set union</td>
+</tr>
+<tr>
+<td>&amp; set intersection</td>
+<td>&amp;</td>
+<td>set intersection</td>
+</tr>
+<tr>
+<td>- set difference (first minus second)</td>
+<td>-</td>
+<td>set difference (first minus second)</td>
+</tr>
+<tr>
+<td>^ symmetric set intersection / XOR</td>
+<td>^</td>
+<td>symmetric set intersection / XOR</td>
+</tr>
+</tbody>
+</table><p>So for example to either match a lower-case letter or a number, one can write <code>&lt;:Ll+:N&gt; </code> or <code>&lt;:Ll+:Number&gt; </code> or <code>&lt;+ :Lowercase_Letter + :Number&gt; </code>.</p>
+<p>(Grouping of set operations with round parens inside character classes is supposed to work, but not supported by Rakudo at the time of writing).</p>
+<h2 id="Enumerated_character_classes_and_ranges"><a class="u" href="#___top" title="go to top of document">Enumerated character classes and ranges</a></h2>
+<p>Sometimes the pre-existing wildcards and character classes are just not enough. Fortunately, defining your own is simple enough. Between <code>&lt;[ ]&gt; </code>, you can put any number of single characters and ranges of characters (expressed with two dots between the end points) between them, with or without whitespace.</p>
+<pre>&quot;abacabadabacaba&quot; ~~ / &lt;[ a .. c 1 2 3 ]&gt; /</pre>
+<p>In between the <code>&lt; &gt; </code>, you can also use the same operators for categories (<code>+</code>, <code>|</code>, <code>&amp;</code>, <code>-</code>, <code>^</code>) to combine multiple range definitions and even mix in some of the unicode categories above. Another thing you are allowed to write between the <code>[ ] </code> is the backslashed forms for character classes.</p>
+<pre>/ &lt;[\d] - [13579]&gt; /
+# not quite the same as
+/ &lt;[02468]&gt;
+# because the first one also contains &quot;weird&quot; unicodey digits</pre>
+<h1 id="Quantifier"><a class="u" href="#___top" title="go to top of document">Quantifier</a></h1>
+<p>A quantifier makes a preceding atom match not exactly once, but rather a variable number of times. For example <code>a+</code> matches one or more <code>a</code> characters.</p>
+<p>Quantifiers bind tighter than concatenation, so <code>ab+</code> matches one <code>a</code> followed by one or more <code>b</code>s. This is different for quotes, so <code>&#39;ab&#39;+</code> matches the strings <code>ab</code>, <code>abab</code>, <code>ababab</code> etc.</p>
+<h2 id="One_or_more:_+"><a class="u" href="#___top" title="go to top of document">One or more: +</a></h2>
+<p>The <code>+</code> quantifier makes the preceding atom match one or more times, with no upper limit.</p>
+<p>For example to match strings of the form <code>key=value</code>, you can write a regex like this:</p>
+<pre>/ \w+ &#39;=&#39; \w+ /</pre>
+<h2 id="Zero_or_more:_*"><a class="u" href="#___top" title="go to top of document">Zero or more: *</a></h2>
+<p>The <code>*</code> quantifier makes the preceding atom match zero or more times, with no upper limit.</p>
+<p>For example to optional whitespace between <code>a</code> and <code>b</code> you can write</p>
+<pre>/ a \s* b /</pre>
+<h2 id="Zero_or_one_match:_?"><a class="u" href="#___top" title="go to top of document">Zero or one match: ?</a></h2>
+<p>The <code>?</code> quantifier makes the preceding atom match zero or one time.</p>
+<h2 id="General_quantifier:_**_min..max"><a class="u" href="#___top" title="go to top of document">General quantifier: ** min..max</a></h2>
+<p>To quantifier an atom an arbitrary number of times, you can say for example <code>a ** 2..5</code> to match the character <code>a</code> at least twice and at most 5 times</p>
+<p>If minimal and maximal number of matches are the same, a single integer is possible: <code>a ** 5</code> to match <code>a</code> exactly five times.</p>
+<h1 id="Alternation"><a class="u" href="#___top" title="go to top of document">Alternation</a></h1>
+<p>TODO</p>
+<h1 id="Grouping_and_Capturing"><a class="u" href="#___top" title="go to top of document">Grouping and Capturing</a></h1>
+<p>TODO</p>
+<h1 id="Adverbs"><a class="u" href="#___top" title="go to top of document">Adverbs</a></h1>
+<p>TODO</p>
+<h2 id="Sigspace"><a class="u" href="#___top" title="go to top of document">Sigspace</a></h2>
+<p>The <strong><code>:sigspace</code></strong> or <strong><code>:s</code></strong> adverb makes whitespace significant in a regex.</p>
+<pre>say so &quot;I used Photoshop®&quot;  ~~ m:i/   photo shop /; # True
+say so &quot;I used a photo shop ~~ m:i<strong>:s</strong>/ photo shop /; # True
+say so &quot;I used Photoshop®&quot;  ~~ m:i<strong>:s</strong>/ photo shop /; # False
+</pre>
+<p><code>m:s/ photo shop /</code> acts just the same as if one had written <code>m/ photo &lt;ws&gt; shop &lt;ws&gt; /</code>. By default, <code>&lt;ws&gt; </code> makes sure that words are seperated, so <code>a b</code> and <code>^&amp;</code> will match <code>&lt;ws&gt; </code> in the middle, but <code>ab</code> won&#39;t.</p>
+
+
+
+</body>
+</html>
+

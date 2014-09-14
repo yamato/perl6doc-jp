@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::Role::Initialization</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::Role::Initialization</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_role">method role</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::Role::Initialization is Exception { }</pre>
+<p>Thrown when the <code>SomeRole($init)</code> syntax is used, but SomeRole does not have exactly one public attribute.</p>
+<p>For example role R { }; &quot;D2&quot; but R(2)</p>
+<p>throws the error</p>
+<pre>Can only supply an initialization value for a role if it has a single
+public attribute, but this is not the case for &#39;R&#39;</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_role"><a class="u" href="#___top" title="go to top of document">method role</a></h2>
+<pre>method role()</pre>
+<p>Returns the role that caused the error.</p>
+
+
+
+</body>
+</html>
+

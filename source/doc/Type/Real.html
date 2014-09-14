@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <title>role Real</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>role Real</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_Rat">method Rat</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_rand">routine rand</a></li>
+    <li class="indexItem indexItem2"><a href="#method_sign">method sign</a></li>
+    <li class="indexItem indexItem2"><a href="#method_round">method round</a></li>
+    <li class="indexItem indexItem2"><a href="#method_floor">method floor</a></li>
+    <li class="indexItem indexItem2"><a href="#method_ceiling">method ceiling</a></li>
+    <li class="indexItem indexItem2"><a href="#method_truncate">method truncate</a></li>
+    <li class="indexItem indexItem2"><a href="#method_base">method base</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>role Real does Numeric { ... }</pre>
+<p>Common role for non-Complex numbers.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_Rat"><a class="u" href="#___top" title="go to top of document">method Rat</a></h2>
+<pre>method Rat(Real:D: Real $epsilon = 1e-6)</pre>
+<p>Converts the number to a <code>Rat</code> with the precision <code>$epsilon</code>.</p>
+<h2 id="routine_rand"><a class="u" href="#___top" title="go to top of document">routine rand</a></h2>
+<pre>sub term:&lt;rand&gt; returns Num:D
+method rand(Real:D:) returns Real:D</pre>
+<p>Returns a pseudo-random number between zero and the number.</p>
+<p>The term form returns a pseudo-random <code>Num</code> between 0e0 and 1e0.</p>
+<h2 id="method_sign"><a class="u" href="#___top" title="go to top of document">method sign</a></h2>
+<pre>method sign(Real:D:)</pre>
+<p>Returns <code>-1</code> if the number is negative, <code>0</code> if it is zero and <code>1</code> otherwise.</p>
+<h2 id="method_round"><a class="u" href="#___top" title="go to top of document">method round</a></h2>
+<pre>method round(Real:D: $scale = 1)</pre>
+<p>Rounds the number to scale <code>$scale</code>. If <code>$scale</code> is 1, rounds to an integer. If scale is <code>0.1</code>, rounds to one digit after the comma etc.</p>
+<h2 id="method_floor"><a class="u" href="#___top" title="go to top of document">method floor</a></h2>
+<pre>method floor(Real:D) returns Int:D</pre>
+<p>Return the largest integer not greater than the number.</p>
+<h2 id="method_ceiling"><a class="u" href="#___top" title="go to top of document">method ceiling</a></h2>
+<pre>method ceiling(Real:D) returns Int:D</pre>
+<p>Returns the smallest integer not less than the number.</p>
+<h2 id="method_truncate"><a class="u" href="#___top" title="go to top of document">method truncate</a></h2>
+<pre>method truncate(Real:D) returns Int:D</pre>
+<p>Rounds the number towards zero.</p>
+<h2 id="method_base"><a class="u" href="#___top" title="go to top of document">method base</a></h2>
+<pre>method base(Real:D: Int:D $base where 2..36) returns Str:D</pre>
+<p>Converts the number to a string, using <code>$base</code> as base. For <code>$base</code> larger than ten, capital Latin letters are used.</p>
+<pre>255.base(16)    # &#39;FF&#39;</pre>
+
+
+
+</body>
+</html>
+

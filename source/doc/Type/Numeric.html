@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <title>role Numeric</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>role Numeric</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_Real">method Real</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Int">method Int</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Rat">method Rat</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Num">method Num</a></li>
+    <li class="indexItem indexItem2"><a href="#method_ACCEPTS">method ACCEPTS</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_log">routine log</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_log10">routine log10</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_exp">routine exp</a></li>
+    <li class="indexItem indexItem2"><a href="#method_roots">method roots</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_abs">routine abs</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_sqrt">routine sqrt</a></li>
+    <li class="indexItem indexItem2"><a href="#method_conj">method conj</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Bool">method Bool</a></li>
+    <li class="indexItem indexItem2"><a href="#method_succ">method succ</a></li>
+    <li class="indexItem indexItem2"><a href="#method_pred">method pred</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>role Numeric { ... }</pre>
+<p>Common role for numbers and types that can act as numbers.</p>
+<p>Binary numeric operations return an object of the &quot;wider&quot; type:</p>
+<pre>Int         narrowest
+Rat
+FatRat
+Num
+Complex     widest</pre>
+<p>So for example the product of a <a href="Rat">Rat</a> and an <a href="Int">Int</a> return a <a href="Rat">Rat</a>.</p>
+<p>Unary operations that in pure math usually return an irrational number generally return <a href="Num">Num</a> in Perl 6.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_Real"><a class="u" href="#___top" title="go to top of document">method Real</a></h2>
+<pre>method Real(Numeric:D:) returns Real:D</pre>
+<p>If this <code>Numeric</code> is equivalent to a <code>Real</code>, return that <code>Real</code>. Fail with <code>X::Numeric::Real</code> otherwise.</p>
+<h2 id="method_Int"><a class="u" href="#___top" title="go to top of document">method Int</a></h2>
+<pre>method Int(Numeric:D:) returns Int:D</pre>
+<p>If this <code>Numeric</code> is equivalent to a <code>Real</code>, return the equivalent of calling <code>truncate</code> on that <code>Real</code> to get an <code>Int</code>. Fail with <code>X::Numeric::Real</code> otherwise.</p>
+<h2 id="method_Rat"><a class="u" href="#___top" title="go to top of document">method Rat</a></h2>
+<pre>method Rat(Numeric:D: Real $epsilon = 1.0e-6) returns Rat:D</pre>
+<p>If this <code>Numeric</code> is equivalent to a <code>Real</code>, return a <code>Rat</code> which is within <code>$epsilon</code> of that <code>Real</code>&#39;s value. Fail with <code>X::Numeric::Real</code> otherwise.</p>
+<h2 id="method_Num"><a class="u" href="#___top" title="go to top of document">method Num</a></h2>
+<pre>method Num(Numeric:D:) returns Num:D</pre>
+<p>If this <code>Numeric</code> is equivalent to a <code>Real</code>, return that <code>Real</code> as a <code>Num</code> as accurately as is possible. Fail with <code>X::Numeric::Real</code> otherwise.</p>
+<h2 id="method_ACCEPTS"><a class="u" href="#___top" title="go to top of document">method ACCEPTS</a></h2>
+<pre>multi method ACCEPTS(Numeric:D: $other)</pre>
+<p>Returns True if <code>$other</code> is numerically the same as the invocant.</p>
+<h2 id="routine_log"><a class="u" href="#___top" title="go to top of document">routine log</a></h2>
+<pre>multi sub    log(Numeric:D, Numeric $base = e) returns Numeric:D
+multi method log(Numeric:D: Numeric $base = e) returns Numeric:D</pre>
+<p>Calculates the logarithm to base <code>$base</code>. Defaults to the natural logarithm.</p>
+<h2 id="routine_log10"><a class="u" href="#___top" title="go to top of document">routine log10</a></h2>
+<pre>multi sub    log10(Numeric:D ) returns Numeric:D
+multi method log10(Numeric:D:) returns Numeric:D</pre>
+<p>Calculates the logarithm to base 10.</p>
+<h2 id="routine_exp"><a class="u" href="#___top" title="go to top of document">routine exp</a></h2>
+<pre>multi sub    exp(Numeric:D, Numeric:D $base = e) returns Numeric:D
+multi method exp(Numeric:D: Numeric:D $base = e) returns Numeric:D</pre>
+<p>Returns <code>$base</code> to the power of the number, or <code>e</code> to the power of the number if called without a second argument.</p>
+<h2 id="method_roots"><a class="u" href="#___top" title="go to top of document">method roots</a></h2>
+<pre>multi method roots(Numeric:D: Int:D $n) returns Positional</pre>
+<p>Returns a list of the <code>$n</code> complex roots, which evaluate to the original number when raised to the <code>$n</code>th power.</p>
+<h2 id="routine_abs"><a class="u" href="#___top" title="go to top of document">routine abs</a></h2>
+<pre>multi sub    abs(Numeric:D ) returns Real:D
+multi method abs(Numeric:D:) returns Real:D</pre>
+<p>Returns the absolute value of the number.</p>
+<h2 id="routine_sqrt"><a class="u" href="#___top" title="go to top of document">routine sqrt</a></h2>
+<pre>multi sub    sqrt(Numeric:D) returns Numeric:D
+multi method sqrt(Numeric:D) returns Numeric:D</pre>
+<p>Returns a square root of the number. For real numbers the positive square root is returned.</p>
+<p>On negative real numbers, <code>sqrt</code> returns <code>NaN</code> rather than a complex number, in order to not confuse people who are not familiar with complex arithmetic. If you want to calculate complex square roots, coerce to <code>Complex</code> first, or use the <code>roots</code> method.</p>
+<h2 id="method_conj"><a class="u" href="#___top" title="go to top of document">method conj</a></h2>
+<pre>multi method conj(Numeric:D) returns Numeric:D</pre>
+<p>Returns the complex conjugate of the number. Returns the number itself for real numbers.</p>
+<h2 id="method_Bool"><a class="u" href="#___top" title="go to top of document">method Bool</a></h2>
+<pre>multi method Bool(Numeric:D:)</pre>
+<p>Returns <code>False</code> if the number is equivalent to zero, and <code>True</code> otherwise.</p>
+<h2 id="method_succ"><a class="u" href="#___top" title="go to top of document">method succ</a></h2>
+<pre>method succ(Numerid:D:)</pre>
+<p>Returns the number incremented by one (successor).</p>
+<h2 id="method_pred"><a class="u" href="#___top" title="go to top of document">method pred</a></h2>
+<pre>method pred(Numerid:D:)</pre>
+<p>Returns the number decremented by one (predecessor).</p>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::NYI</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::NYI</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_features">method features</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::NYI is Exception { }</pre>
+<p>Error class for unimplemented features. <em>NYI</em> stands for <em>Not Yet Implemented</em>.</p>
+<p>If a Perl 6 compiler is not yet feature complete, it may throw an <code>X::NYI</code> exception when a program uses a feature that it can detect is not yet implemented.</p>
+<p>A full-featured Perl 6 compiler must not throw such exceptions, but still provide the <code>X::NYI</code> class for compatibility reasons.</p>
+<p>A typical error message is</p>
+<pre>HyperWhatever is not yet implemented. Sorry.</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_features"><a class="u" href="#___top" title="go to top of document">method features</a></h2>
+<p>Returns a <code>Str</code> describing the missing feature.</p>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::Constructor::Positional</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::Constructor::Positional</h1>
+<nav class="indexgroup">
+</nav>
+<pre>class X::Constructor::Positional is Exception { }</pre>
+<p>Thrown from <a href="Mu.new">Mu.new</a> when positional arguments are passed to it.</p>
+<p>For example</p>
+<pre>class A { }
+A.new(2, 3)</pre>
+<p>dies with</p>
+<pre>Default constructor only takes named arguments</pre>
+
+
+
+</body>
+</html>
+

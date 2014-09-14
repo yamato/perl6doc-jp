@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <title>role Rational</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>role Rational</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#methods">methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_new">method new</a></li>
+    <li class="indexItem indexItem2"><a href="#method_numerator">method numerator</a></li>
+    <li class="indexItem indexItem2"><a href="#method_denominator">method denominator</a></li>
+    <li class="indexItem indexItem2"><a href="#method_nude">method nude</a></li>
+    <li class="indexItem indexItem2"><a href="#method_norm">method norm</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>role Rational[::NuT, ::DenomT] does Real { ... }</pre>
+<p><code>Rational</code> is the common role for numbers that are stored as pairs of numerator and denominator. It is parameterized by the types of the numerator and denominator.</p>
+<p>Built into Perl 6 are <a href="Rat">Rat</a> and <a href="FatRat">FatRat</a>, which both do the <code>Rational</code> role.</p>
+<h1 id="methods"><a class="u" href="#___top" title="go to top of document">methods</a></h1>
+<h2 id="method_new"><a class="u" href="#___top" title="go to top of document">method new</a></h2>
+<pre>method new(NuT:D $numerator, DenomT:D $denominator) returns Rational:D</pre>
+<p>Creates a new rational object from numerator and denominator.</p>
+<h2 id="method_numerator"><a class="u" href="#___top" title="go to top of document">method numerator</a></h2>
+<pre>method numerator(Rational:D:) returns NuT:D</pre>
+<p>Returns the numerator.</p>
+<h2 id="method_denominator"><a class="u" href="#___top" title="go to top of document">method denominator</a></h2>
+<pre>method denominator(Rational:D:) returns DenomT:D</pre>
+<p>Returns the denominator.</p>
+<h2 id="method_nude"><a class="u" href="#___top" title="go to top of document">method nude</a></h2>
+<pre>method nude(Rational:D:) returns Positional</pre>
+<p>Returns a list of the numerator and denominator.</p>
+<h2 id="method_norm"><a class="u" href="#___top" title="go to top of document">method norm</a></h2>
+<pre>method norm(Rational:D:) returns Rational:D</pre>
+<p>Returns a normalized Rational object, i.e. with positive denominator, and numerator and denominator coprime.</p>
+
+
+
+</body>
+</html>
+

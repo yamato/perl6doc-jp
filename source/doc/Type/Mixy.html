@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <title>role Mixy</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>role Mixy</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_total">method total</a></li>
+    <li class="indexItem indexItem2"><a href="#method_new-fp">method new-fp</a></li>
+    <li class="indexItem indexItem2"><a href="#method_roll">method roll</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>role Mixy does Baggy { }</pre>
+<p>A role for collections of weighted values. See <a href="Mix">Mix</a> and <a href="MixHash">MixHash</a>. <code>Mixy</code> objects differ from <a href="Baggy">Baggy</a> objects in that the weights of <code>Mixy</code> are <a href="Real">Real</a>s rather than <a href="Int">Int</a>s.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_total"><a class="u" href="#___top" title="go to top of document">method total</a></h2>
+<pre>method total(--&gt; Real)</pre>
+<p>Returns the sum of all the weights</p>
+<pre>mix(&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;a&#39;,&#39;a&#39;,&#39;d&#39;).total == 6; # True
+{a =&gt; 5.6, b =&gt; 2.4}.Mix.total == 8; # True</pre>
+<h2 id="method_new-fp"><a class="u" href="#___top" title="go to top of document">method new-fp</a></h2>
+<pre>method new-fp(*@pairs --&gt; Mixy)</pre>
+<p>Creates a new Mixy object from the pairs given. Where one might write:</p>
+<pre>{a =&gt; 5.6, b =&gt; 2.4}.Mix;</pre>
+<p>One could instead use:</p>
+<pre>Mix.new-fp((a =&gt; 5.6, b =&gt; 2.4));</pre>
+<h2 id="method_roll"><a class="u" href="#___top" title="go to top of document">method roll</a></h2>
+<pre>method roll ($count = 1)</pre>
+<p>Similar to a <a href="Bag.roll">Bag.roll</a>, but with <code>Real</code> weights rather than integral ones.</p>
+
+
+
+</body>
+</html>
+

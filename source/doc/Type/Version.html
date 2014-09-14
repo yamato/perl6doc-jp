@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Version</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Version</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_new">method new</a></li>
+    <li class="indexItem indexItem2"><a href="#method_parts">method parts</a></li>
+    <li class="indexItem indexItem2"><a href="#method_plus">method plus</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Version { }</pre>
+<p>Version objects identify version of software components (and potentially other entities). Perl 6 uses them internally for versioning modules.</p>
+<p>A version consists of several parts, which are visually represented by joining them with a dot. A version part is usually an integer, a string like <code>alpha</code>, or a <a href="Whatever">Whatever</a>-star <code>*</code>. The latter is used to indicate that any version part is acceptable in another version that is compared to the current one.</p>
+<pre>say v1.0.1 ~~ v.1.*;    # True</pre>
+<p>Version literals can only contain numeric and <a href="Whatever">Whatever</a> parts. They start with a lower-case <code>v</code>, and are followed by at least one part. Multiple parts are separate with a dot <code>.</code>. A trailing <code>+</code> indicates that higher versions are OK in comparisons:</p>
+<pre>say v1.2 ~~ v1.0;       # False
+say v1.2 ~~ v1.0+;      # True   </pre>
+<p>In comparisons, early parts take precedence over later parts.</p>
+<pre>say v1.2 cmp v2.1;      # Increase</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_new"><a class="u" href="#___top" title="go to top of document">method new</a></h2>
+<pre>method new(Str:d $s)</pre>
+<p>Creates a Version from a string <code>$s</code>. The string is combed for the numeric, alphabetic, and wildcard components of the version object. Any characters other than alphanumerics and asterisks are assumed to be equivalent to a dot. A dot is also assumed between any adjacent numeric and alphabetic characters.</p>
+<h2 id="method_parts"><a class="u" href="#___top" title="go to top of document">method parts</a></h2>
+<pre>method parts(Version:D:) returns List:D</pre>
+<p>Returns the list of parts that make up this Version object</p>
+<h2 id="method_plus"><a class="u" href="#___top" title="go to top of document">method plus</a></h2>
+<pre>method plus(Version:D:) returns Bool:D</pre>
+<p>Returns <code>True</code> if comparisons against this version allow larger versions too.</p>
+
+
+
+</body>
+</html>
+

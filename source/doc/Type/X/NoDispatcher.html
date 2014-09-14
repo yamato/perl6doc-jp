@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::NoDispatcher</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::NoDispatcher</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_redispatcher">method redispatcher</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::NoDispatcher is Exception { }</pre>
+<p>Error thrown when a redispatcher like <code>nextsame</code> is called without being in the dynamic scope of a call that could possible redispatch.</p>
+<p>For example</p>
+<pre>nextsame</pre>
+<p>in the mainline dies with</p>
+<pre>nextsame is not in the dynamic scope of a dispatcher</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_redispatcher"><a class="u" href="#___top" title="go to top of document">method redispatcher</a></h2>
+<pre>method redispatcher() returns Str:D</pre>
+<p>Returns the name of the redispatcher function that did not succeed.</p>
+
+
+
+</body>
+</html>
+

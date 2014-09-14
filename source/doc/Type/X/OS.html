@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <title>role X::OS</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>role X::OS</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_os-error">method os-error</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>role X::OS { has $.os-error }</pre>
+<p>Common role for all errors that are triggered by some error reported by the operating system (failed IO, system calls, fork, memory allocation).</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_os-error"><a class="u" href="#___top" title="go to top of document">method os-error</a></h2>
+<pre>method os-error() returns Str:D</pre>
+<p>Returns the error as reported by the operating system.</p>
+
+
+
+</body>
+</html>
+

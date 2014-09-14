@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+  <title>Classes and Objects</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Classes and Objects</h1>
+<p class='subtitle'>A tutorial for creating and using classes in Perl 6</p>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Starting_with_class">Starting with class</a></li>
+  <li class="indexItem indexItem1"><a href="#I_can_haz_state%3F">I can haz state?</a></li>
+  <li class="indexItem indexItem1"><a href="#Static_fields%3F">Static fields?</a></li>
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <li class="indexItem indexItem1"><a href="#Constructors">Constructors</a></li>
+  <li class="indexItem indexItem1"><a href="#Consuming_our_class">Consuming our class</a></li>
+  <li class="indexItem indexItem1"><a href="#Inheritance">Inheritance</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Overriding_Inherited_Methods">Overriding Inherited Methods</a></li>
+    <li class="indexItem indexItem2"><a href="#Multiple_Inheritance">Multiple Inheritance</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Introspection">Introspection</a></li>
+</ol>
+</nav>
+<p>The following program shows how a dependency handler might look in Perl 6. It showcases custom constructors, private and public attributes, methods and various aspects of signatures. It&#39;s not very much code, and yet the result is interesting and, at times, useful.</p>
+<pre>class Task {
+    has      &amp;!callback;
+    has Task @!dependencies;
+    has Bool $.done;
+
+    method new(&amp;callback, *@dependencies) {
+        return self.bless(:&amp;callback, :@dependencies);
+    }
+
+    submethod BUILD(:&amp;!callback, :@!dependencies) { }
+
+    method add-dependency(Task $dependency) {
+        push @!dependencies, $dependency;
+    }
+
+    method perform() {
+        unless $!done {
+            .perform() for @!dependencies;
+            &amp;!callback();
+            $!done = True;
+        }
+    }
+}
+
+my $eat =
+    Task.new({ say &#39;eating dinner. NOM!&#39; },
+        Task.new({ say &#39;making dinner&#39; },
+            Task.new({ say &#39;buying food&#39; },
+                Task.new({ say &#39;making some money&#39; }),
+                Task.new({ say &#39;going to the store&#39; })
+            ),
+            Task.new({ say &#39;cleaning kitchen&#39; })
+        )
+    );
+
+$eat.perform();
+</pre>
+<h1 id="Starting_with_class"><a class="u" href="#___top" title="go to top of document">Starting with class</a></h1>
+<p><span name="class"></span> <span name="classes"></span></p>
+<p><span name="state"></span> <span name="has"></span> <span name="classes  has"></span> <span name="behavior"></span> <span name="classes  behavior"></span></p>
+<p>Perl 6, like many other languages, uses the <code>class</code> keyword to introduce a new class. The block that follows may contain arbitrary code, just as with any other block, but classes commonly contain state and behavior declarations. The example code includes attributes (state), introduced through the <code>has</code> keyword, and behaviors introduced through the <code>method</code> keyword.</p>
+<p><span name="type object"></span> <span name="defined"></span> <span name=".defined"></span></p>
+<p>Declaring a class creates a <em>type object</em> which, by default, is installed into the current package (just like a variable declared with <code>our</code> scope). This type object is an &quot;empty instance&quot; of the class. You&#39;ve already seen these in previous chapters. For example, types such as <code>Int</code> and <code>Str</code> refer to the type object of one of the Perl 6 built- in classes. The example above uses the class name <code>Task</code> so that other code can refer to it later, such as to create class instances by calling the <code>new</code> method.</p>
+<p>Type objects are <em>undefined</em>, in the sense that they return <code>False</code> if you call the <code>.defined</code> method on them. You can use this method to find out if a given object is a type object or not:</p>
+<pre>my $obj = Int;
+if $obj.defined {
+    say &quot;Ordinary, defined object&quot;;
+} else {
+    say &quot;Type object&quot;;
+}</pre>
+<h1 id="I_can_haz_state?"><a class="u" href="#___top" title="go to top of document">I can haz state?</a></h1>
+<p><span name="attributes"></span> <span name="classes  attributes"></span></p>
+<p><span name="encapsulation"></span> <span name="classes  encapsulation"></span></p>
+<p>The first three lines inside the class block all declare attributes (called <em>fields</em> or <em>instance storage</em> in other languages). These are storage locations that every instance of a class will obtain. Just as a <code>my</code> variable can not be accessed from the outside of its declared scope, attributes are not accessible outside of the class. This <em>encapsulation</em> is one of the key principles of object oriented design.</p>
+<p>The first declaration specifies instance storage for a callback -- a bit of code to invoke in order to perform the task that an object represents:</p>
+<pre>has &amp;!callback;</pre>
+<p><span name="sigils  &"></span> <span name="twigils"></span> <span name="twigils  !"></span></p>
+<p>The <code>&amp;</code> sigil indicates that this attribute represents something invocable. The <code>!</code> character is a <em>twigil</em>, or secondary sigil. A twigil forms part of the name of the variable. In this case, the <code>!</code> twigil emphasizes that this attribute is private to the class.</p>
+<p>The second declaration also uses the private twigil:</p>
+<pre>has Task @!dependencies;</pre>
+<p>However, this attribute represents an array of items, so it requires the <code>@</code> sigil. These items each specify a task that must be completed before the present one can complete. Furthermore, the type declaration on this attribute indicates that the array may only hold instances of the <code>Task</code> class (or some subclass of it).</p>
+<p>The third attribute represents the state of completion of a task:</p>
+<pre>has Bool $.done;</pre>
+<p><span name="twigils  ."></span> <span name="twigils  accessors"></span> <span name="accessor methods"></span> <span name="classes  accessors"></span></p>
+<p>This scalar attribute (with the <code>$</code> sigil) has a type of <code>Bool</code>. Instead of the <code>!</code> twigil, this twigil is <code>.</code>. While Perl 6 does enforce encapsulation on attributes, it also saves you from writing accessor methods. Replacing the <code>!</code> with a <code>.</code> both declares the attribute <code>$!done</code> and an accessor method named <code>done</code>. It&#39;s as if you had written:</p>
+<pre>has Bool $!done;
+method done() { return $!done }</pre>
+<p>Note that this is not like declaring a public attribute, as some languages allow; you really get <em>both</em> a private storage location and a method, without having to write the method by hand. You are free instead to write your own accessor method, if at some future point you need to do something more complex than return the value.</p>
+<p>Note that using the <code>.</code> twigil has created a method that will provide with readonly access to the attribute. If instead the users of this object should be able to reset a task&#39;s completion state (perhaps to perform it again), you can change the attribute declaration:</p>
+<pre>has Bool $.done is rw;</pre>
+<p><span name="traits  is rw"></span></p>
+<p>The <code>is rw</code> trait causes the generated accessor method to return something external code can modify to change the value of the attribute.</p>
+<h1 id="Static_fields?"><a class="u" href="#___top" title="go to top of document">Static fields?</a></h1>
+<p>Perl6 has no <strong>static</strong> keyword. Anyway any class may declare anything that module can so making a scoped variable sounds like good idea.</p>
+<pre>class Singleton {
+    my Singleton $instance;
+    method new {!!!}
+    submethod instance {
+        $instance = Singleton.bless unless $instance;
+        $instance;
+    }
+}
+
+</pre>
+<p>Class attributes defined by <a href="">my</a> or <a href="">our</a> may also be initialized while  declaration but we are implementing Singleton pattern here and object must  be created during first use. It is not possible to predict in 100% the moment  when attribute initialization will be executed because it can be done during  compilation, runtime or both especially when importing class using <a href="">use</a>  keyword.</p>
+<pre>class HaveStaticAttr {
+      my Foo $.foo = some_complicated_subroutine; 
+}</pre>
+<p>Class attributes may also be declared with secondary sigil like object  attributes that will result in generating read-only accessor if attribute  is to be public.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<p><span name="methods"></span> <span name="classes  methods"></span></p>
+<p>While attributes give objects state, methods give objects behaviors. Ignore the <code>new</code> method temporarily; it&#39;s a special type of method. Consider the second method, <code>add-dependency</code>, which adds a new task to this task&#39;s dependency list.</p>
+<pre>method add-dependency(Task $dependency) {
+    push @!dependencies, $dependency;
+}</pre>
+<p><span name="invocant"></span></p>
+<p>In many ways, this looks a lot like a <code>sub</code> declaration. However, there are two important differences. First, declaring this routine as a method adds it to the list of methods for the current class. Thus any instance of the <code>Task</code> class can call this method with the <code>.</code> method call operator. Second, a method places its invocant into the special variable <code>self</code>.</p>
+<p>The method itself takes the passed parameter--which must be an instance of the <code>Task</code> class--and <code>push</code>es it onto the invocant&#39;s <code>@!dependencies</code> attribute.</p>
+<p>The second method contains the main logic of the dependency handler:</p>
+<pre>method perform() {
+    unless $!done {
+        .perform() for @!dependencies;
+        &amp;!callback();
+        $!done = True;
+    }
+}</pre>
+<p>It takes no parameters, working instead with the object&#39;s attributes. First, it checks if the task has already completed by checking the <code>$!done</code> attribute. If so, there&#39;s nothing to do.</p>
+<p><span name="operators  ."></span></p>
+<p>Otherwise, the method performs all of the task&#39;s dependencies, using the <code>for</code> construct to iterate over all of the items in the <code>@!dependencies</code> attribute. This iteration places each item--each a <code>Task</code> object--into the topic variable, <code>$_</code>. Using the <code>.</code> method call operator without specifying an explicit invocant uses the current topic as the invocant. Thus the iteration construct calls the <code>.perform()</code> method on every <code>Task</code> object in the <code>@!dependencies</code> attribute of the current invocant.</p>
+<p>After all of the dependencies have completed, it&#39;s time to perform the current <code>Task</code>&#39;s task by invoking the <code>&amp;!callback</code> attribute directly; this is the purpose of the parentheses. Finally, the method sets the <code>$!done</code> attribute to <code>True</code>, so that subsequent invocations of <code>perform</code> on this object (if this <code>Task</code> is a dependency of another <code>Task</code>, for example) will not repeat the task.</p>
+<h1 id="Constructors"><a class="u" href="#___top" title="go to top of document">Constructors</a></h1>
+<p><span name="constructors"></span></p>
+<p>Perl 6 is rather more liberal than many languages in the area of constructors. A constructor is anything that returns an instance of the class. Furthermore, constructors are ordinary methods. You inherit a default constructor named <code>new</code> from the base class <code>Object</code>, but you are free to override <code>new</code>, as this example does:</p>
+<pre>method new(&amp;callback, Task *@dependencies) {
+    return self.bless(:&amp;callback, :@dependencies);
+}</pre>
+<p><span name="objects  bless"></span> <span name="bless"></span></p>
+<p>The biggest difference between constructors in Perl 6 and constructors in languages such as C# and Java is that rather than setting up state on a somehow already magically created object, Perl 6 constructors actually create the object themselves. This easiest way to do this is by calling the <a href="">bless</a> method, also inherited from <a href="">Mu</a>. The <code>bless</code> method expects a set of named parameters providing the initial values for each attribute.</p>
+<p>The example&#39;s constructor turns positional arguments into named arguments, so that the class can provide a nice constructor for its users. The first parameter is the callback (the thing to do to execute the task). The rest of the parameters are dependent <code>Task</code> instances. The constructor captures these into the <code>@dependencies</code> slurpy array and passes them as named parameters to <code>bless</code> (note that <code>:&amp;callback</code> uses the name of the variable--minus the sigil--as the name of the parameter).</p>
+<p><span name="BUILD"></span></p>
+<p>Private attributes really are private. This means that <code>bless</code> is not allowed to bind things to <code>&amp;!callback</code> and <code>@!dependencies</code> directly. To do this, we override the <code>BUILD</code> submethod, which is called on the brand new object by <code>bless</code>:</p>
+<pre>submethod BUILD(:&amp;!callback, :@!dependencies) { }</pre>
+<p>Since <code>BUILD</code> runs in the context of the newly created <code>Task</code> object, it is allowed to manipulate those private attributes. The trick here is that the private attributes (<code>&amp;!callback</code> and <code>&amp;!dependencies</code>) are being used as the bind targets for <code>BUILD</code>&#39;s parameters. Zero-boilerplate initialization! See <a href="/language/objects#Object Construction">objects</a> for more information.</p>
+<h1 id="Consuming_our_class"><a class="u" href="#___top" title="go to top of document">Consuming our class</a></h1>
+<p>After creating a class, you can create instances of the class. Declaring a custom constructor provides a simple way of declaring tasks along with their dependencies. To create a single task with no dependencies, write:</p>
+<pre>my $eat = Task.new({ say &#39;eating dinner. NOM!&#39; });</pre>
+<p>An earlier section explained that declaring the class <code>Task</code> installed a type object in the namespace. This type object is a kind of &quot;empty instance&quot; of the class, specifically an instance without any state. You can call methods on that instance, as long as they do not try to access any state; <code>new</code> is an example, as it creates a new object rather than modifying or accessing an existing object.</p>
+<p>Unfortunately, dinner never magically happens. It has dependent tasks:</p>
+<pre>my $eat =
+    Task.new({ say &#39;eating dinner. NOM!&#39; },
+        Task.new({ say &#39;making dinner&#39; },
+            Task.new({ say &#39;buying food&#39; },
+                Task.new({ say &#39;making some money&#39; }),
+                Task.new({ say &#39;going to the store&#39; })
+            ),
+            Task.new({ say &#39;cleaning kitchen&#39; })
+        )
+    );</pre>
+<p>Notice how the custom constructor and sensible use of whitespace allows a layout which makes task dependencies clear.</p>
+<p>Finally, the <code>perform</code> method call recursively calls the <code>perform</code> method on the various other dependencies in order, giving the output:</p>
+<pre>making some money
+going to the store
+buying food
+cleaning kitchen
+making dinner
+eating dinner. NOM!</pre>
+<h1 id="Inheritance"><a class="u" href="#___top" title="go to top of document">Inheritance</a></h1>
+<p>Object Oriented Programming provides the concept of inheritance as one of the  mechanisms to allow for code reuse. Perl 6 supports the ability for one class  to inherit from one or more classes. When a class inherits from another class that informs the method dispatcher to follow the inheritance chain to look for a method to dispatch. This happens both for standard methods defined via the method keyword and for methods generated through other means such as  attribute accessors.</p>
+<p>TODO: the example here is rather bad, and needs to be replaced (or much improved). See <a href="">https://github.com/perl6/book/issues/58</a> for discussion.</p>
+<pre>class Employee {
+    has $.salary;
+
+    method pay() {
+        say &quot;Here is \$$.salary&quot;;
+    }
+
+}
+
+class Programmer is Employee {
+    has @.known_languages is rw;
+    has $.favorite_editor;
+
+    method code_to_solve( $problem ) {
+        say &quot;Solving $problem using $.favorite_editor in &quot; 
+        ~ $.known_languages[0] ~ &#39;.&#39;;
+    }
+}
+</pre>
+<p>Now any object of type Programmer can make use of the methods and accessors  defined in the Employee class as though they were from the Programmer class.</p>
+<pre>my $programmer = Programmer.new(
+    salary =&gt; 100_000, 
+    known_languages =&gt; &lt;Perl5 Perl6 Erlang C++&gt;,
+    favorite_editor =&gt; &#39;vim&#39;
+);
+
+$programmer.code_to_solve(&#39;halting problem&#39;);
+$programmer.pay();
+</pre>
+<h2 id="Overriding_Inherited_Methods"><a class="u" href="#___top" title="go to top of document">Overriding Inherited Methods</a></h2>
+<p>Of course, classes can override methods and attributes defined by parent  classes by defining their own. The example below demonstrates the <code>Baker</code> class  overriding the <code>Cook</code>&#39;s <code>cook</code> method.</p>
+<pre>class Cook is Employee {
+    has @.utensils  is rw;
+    has @.cookbooks is rw;
+
+    method cook( $food ) {
+        say &quot;Cooking $food&quot;;
+    }
+
+    method clean_utensils {
+        say &quot;Cleaning $_&quot; for @.utensils;
+    }
+}
+
+class Baker is Cook {
+    method cook( $confection ) {
+        say &quot;Baking a tasty $confection&quot;;
+    }
+}
+
+my $cook = Cook.new( 
+    utensils =&gt; (&lt;spoon ladle knife pan&gt;), 
+    cookbooks =&gt; (&#39;The Joy of Cooking&#39;), 
+    salary =&gt; 40000);
+
+$cook.cook( &#39;pizza&#39; ); # Cooking pizza
+
+my $baker = Baker.new(
+    utensils =&gt; (&#39;self cleaning oven&#39;), 
+    cookbooks =&gt; (&quot;The Baker&#39;s Apprentice&quot;), 
+    salary =&gt; 50000);
+
+$baker.cook(&#39;brioche&#39;); # Baking a tasty brioche
+</pre>
+<p>Because the dispatcher will see the <code>cook</code> method on <code>Baker</code> before it moves up to  the parent class the <code>Baker</code>&#39;s <code>cook</code> method will be called.</p>
+<h2 id="Multiple_Inheritance"><a class="u" href="#___top" title="go to top of document">Multiple Inheritance</a></h2>
+<p>As mentioned before, a class can inherit from multiple classes. When a class  inherits from multiple classes the dispatcher knows to look at both classes when looking up a method to search for. As a side note, Perl 6 uses the C3  algorithm to linearize the multiple inheritance hierarchies, which is a  significant improvement over Perl 5&#39;s approach to handling multiple inheritance.</p>
+<pre>class GeekCook is Programmer is Cook {
+    method new( *%params ) {
+        push( %params&lt;cookbooks&gt;, &quot;Cooking for Geeks&quot; );
+        return self.bless(|%params);
+    }
+}
+
+my $geek = GeekCook.new( 
+    books           =&gt; (&#39;Learning Perl 6&#39;), 
+    utensils        =&gt; (&#39;stainless steel pot&#39;, &#39;knife&#39;, &#39;calibrated oven&#39;),
+    favorite_editor =&gt; &#39;MacVim&#39;,
+    known_languages =&gt; &lt;Perl6&gt;
+);
+
+$geek.cook(&#39;pizza&#39;);
+$geek.code_to_solve(&#39;P =? NP&#39;);
+</pre>
+<p>Now all the methods made available by both the Programmer class and the Cook class are available from the GeekCook class.</p>
+<p>While multiple inheritance is a useful concept to know and on occasion of use, it is important to understand that there are more useful OOP concepts. When reaching for multiple inheritance it is good practice to consider whether the design wouldn&#39;t be better realized by using roles, which are generally safer because they force the class author to explicitly resolve conflicting method names. For more information on roles see <kbd class="pod2html-todo">A&lt;sec:roles&gt;</kbd>.</p>
+<h1 id="Introspection"><a class="u" href="#___top" title="go to top of document">Introspection</a></h1>
+<p>Introspection is the process of gathering information about some objects in your program, not by reading the source code, but by querying the object (or a controlling object) for some properties, like its type.</p>
+<p>Given an object <code>$p</code>, and the class definitions from the previous sections, we can ask it a few questions:</p>
+<pre>if $o ~~ Employee { say &quot;It&#39;s an employee&quot; };
+if $o ~~ GeekCook { say &quot;It&#39;s a geeky cook&quot; };
+say $o.WHAT;
+say $o.perl;
+say $o.^methods(:local).join(&#39;, &#39;);</pre>
+<p>The output can look like this:</p>
+<pre>
+It&#39;s an employee Programmer() Programmer.new(known_languages =&gt; [&quot;Perl&quot;, &quot;Python&quot;, &quot;Pascal&quot;], favorite_editor =&gt; &quot;gvim&quot;, salary =&gt; &quot;too small&quot;) code_to_solve, known_languages, favorite_editor</pre>
+<p>The first two tests each smart-match against a class name. If the object is of that class, or of an inheriting class, it returns true. So the object in question is of class <code>Employee</code> or one that inherits from it, but not <code>GeekCook</code>.</p>
+<p>The <code>.WHAT</code> method returns the type object associated with the object <code>$o</code>, which tells the exact type of <code>$o</code>: in this case <code>Programmer</code>.</p>
+<p><code>$o.perl</code> returns a string that can be executed as Perl code, and reproduces the original object <code>$o</code>. While this does not work perfectly in all cases<a href="#fn-1" id="fn-ref-1">[1]</a>, it is very useful for debugging simple objects.</p>
+<p>Finally <code>$o.^methods(:local)</code> produces a list of methods that can be called on <code>$o</code>. The <code>:local</code> named argument limits the returned methods to those defined in the <code>Employee</code> class, and excludes the inherited methods.</p>
+<p>The syntax of calling method with <code>.^</code> instead of a single dot means that it is actually a method call on the <em>meta class</em>, which is a class managing the properties of the <code>Employee</code> class - or any other class you are interested in. This meta class enables other ways of introspection too:</p>
+<pre>say $o.^attributes.join(&#39;, &#39;);
+say $o.^parents.join(&#39;, &#39;);  </pre>
+<p>Introspection is very useful for debugging, and for learning the language and new libraries. When a function or method returns an object you don&#39;t know about, finding its type with <code>.WHAT</code>, a construction recipe for it with <code>.perl</code> and so on you&#39;ll get a good idea what this return value is. With <code>.^methods</code> you can learn what you can do with it.</p>
+<p>But there are other applications too: a routine that serializes objects to a bunch of bytes needs to know the attributes of that object, which it can find out via introspection.</p>
+
+<aside><ol start="1">
+<li><a href="#fn-ref-1" id="fn-1">[↑]</a> For example closures cannot easily be reproduced this way; if you don&#39;t know what a closure is don&#39;t worry. Also current implementations have problems with dumping cyclic data structures this way, but they are expected to be handled correctly by <code>.perl</code> at some point. </li>
+</ol></aside>
+
+
+</body>
+</html>
+

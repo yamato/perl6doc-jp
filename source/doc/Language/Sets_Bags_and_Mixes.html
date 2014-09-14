@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+<head>
+  <title>Sets, Bags, and Mixes</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Sets, Bags, and Mixes</h1>
+<p class='subtitle'>Unique collections and weighted lists in Perl 6</p>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#class_Set">class Set</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#sub_set">sub set</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#class_SetHash">class SetHash</a></li>
+  <li class="indexItem indexItem1"><a href="#class_Bag">class Bag</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#sub_bag">sub bag</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#class_BagHash">class BagHash</a></li>
+  <li class="indexItem indexItem1"><a href="#class_Mix">class Mix</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#sub_mix">sub mix</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#class_MixHash">class MixHash</a></li>
+  <li class="indexItem indexItem1"><a href="#Set%2FBag_Operators">Set/Bag Operators</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Operators_that_return_Bool">Operators that return <code>Bool</code></a></li>
+    <ol class="indexList indexList3">
+      <li class="indexItem indexItem3"><a href="#infix_(elem)">infix (elem)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%88%88">infix ∈</a></li>
+        <li class="indexItem indexItem4"><a href="#infix_%E2%88%89">infix ∉</a></li>
+      </ol>
+      <li class="indexItem indexItem3"><a href="#infix_(cont)">infix (cont)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%88%8B">infix ∋</a></li>
+        <li class="indexItem indexItem4"><a href="#infix_%E2%88%8C">infix ∌</a></li>
+      </ol>
+      <li class="indexItem indexItem3"><a href="#infix_(%3C%3D)">infix (&lt;=)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%8A%86">infix ⊆</a></li>
+        <li class="indexItem indexItem4"><a href="#infix_%E2%8A%88">infix ⊈</a></li>
+      </ol>
+      <li class="indexItem indexItem3"><a href="#infix_(%3C)">infix (&lt;)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%8A%82">infix ⊂</a></li>
+        <li class="indexItem indexItem4"><a href="#infix_%E2%8A%84">infix ⊄</a></li>
+      </ol>
+      <li class="indexItem indexItem3"><a href="#infix_(%3E%3D)">infix (&gt;=)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%8A%87">infix ⊇</a></li>
+        <li class="indexItem indexItem4"><a href="#infix_%E2%8A%89">infix ⊉</a></li>
+      </ol>
+      <li class="indexItem indexItem3"><a href="#infix_(%3E)">infix (&gt;)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%8A%83">infix ⊃</a></li>
+        <li class="indexItem indexItem4"><a href="#infix_%E2%8A%85">infix ⊅</a></li>
+      </ol>
+      <li class="indexItem indexItem3"><a href="#infix_(%3C%2B)">infix (&lt;+)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%89%BC">infix ≼</a></li>
+      </ol>
+      <li class="indexItem indexItem3"><a href="#infix_(%3E%2B)">infix (&gt;+)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%89%BD">infix ≽</a></li>
+      </ol>
+    </ol>
+    <li class="indexItem indexItem2"><a href="#Operators_that_return_Set_or_Bag">Operators that return <code>Set</code> or <code>Bag</code></a></li>
+    <ol class="indexList indexList3">
+      <li class="indexItem indexItem3"><a href="#infix_(%7C)">infix (|)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%88%AA">infix ∪</a></li>
+      </ol>
+      <li class="indexItem indexItem3"><a href="#infix_(%26)">infix (&amp;)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%88%A9">infix ∩</a></li>
+      </ol>
+      <li class="indexItem indexItem3"><a href="#infix_(-)">infix (-)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%88%96">infix ∖</a></li>
+      </ol>
+      <li class="indexItem indexItem3"><a href="#infix_(%5E)">infix (^)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%8A%96">infix ⊖</a></li>
+      </ol>
+      <li class="indexItem indexItem3"><a href="#infix_(.)">infix (.)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%8A%8D">infix ⊍</a></li>
+      </ol>
+      <li class="indexItem indexItem3"><a href="#infix_(%2B)">infix (+)</a></li>
+      <ol class="indexList indexList4">
+        <li class="indexItem indexItem4"><a href="#infix_%E2%8A%8E">infix ⊎</a></li>
+      </ol>
+    </ol>
+  </ol>
+</ol>
+</nav>
+<p>Often, one wants to work with lists of values that are unique. While calling <a href="uniq"><code>.uniq</code></a> on the list repeatedly is certainly an option, better still is to use a <a href="Set"><strong><code>Set</code></strong></a> or <a href="SetHash"><strong><code>SetHash</code></strong></a>, whose elements are guaranteed to be unique.</p>
+<p>Other times, one wants to keep track of the number of occurrences of an item. One could use a hash &emdash; or use the built-in <a href="Bag"><strong><code>Bag</code></strong></a> or <a href="BagHash"><strong><code>BagHash</code></strong></a> types (for integer numbers) or the <a href="Mix"><strong><code>Mix</code></strong></a> or <a href="MixHash"><strong><code>MixHash</code></strong></a> types (for arbitrary numbers).</p>
+<p>There are also many built-in operators defined on <code>Set</code>s and <code>Bag</code>s, which this document describes in <a href="#Set%2FBag_Operators">Set/Bag Operators</a>.</p>
+<h1 id="class_Set"><a class="u" href="#___top" title="go to top of document">class Set</a></h1>
+<pre>class Set does Setty { }</pre>
+<p>An <em>immutable</em> set of unique values or objects. These values can be accessed via the <code>{ }</code> postcircumfix, and always have a value of either <code>True</code> or <code>False</code>. For a mutable set, see <a href="SetHash">SetHash</a>.</p>
+<h2 id="sub_set"><a class="u" href="#___top" title="go to top of document">sub set</a></h2>
+<pre>sub set(*@args --&gt; Set)</pre>
+<p>Creates a <code>Set</code> from the given <code>@args</code></p>
+<h1 id="class_SetHash"><a class="u" href="#___top" title="go to top of document">class SetHash</a></h1>
+<pre>class SetHash does Setty { }</pre>
+<p>A <em>mutable</em> collection of unique values. These values can be accessed via the <code>{ }</code> postcircumfix, and always have a value of either <code>True</code> or <code>False</code>. For an immutable collection, see <a href="Set">Set</a>.</p>
+<h1 id="class_Bag"><a class="u" href="#___top" title="go to top of document">class Bag</a></h1>
+<pre>class Bag does Baggy { }</pre>
+<p>An <em>immutable</em> collection of weighted values. These weights are always integers, and can be accessed with the <code>{ }</code> postcircumfix. For a mutable collection of weighted values, see <a href="BagHash">BagHash</a>.</p>
+<pre>bag(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;a&#39;, &#39;d&#39;, &#39;a&#39;)&lt;a&gt; === 3</pre>
+<h2 id="sub_bag"><a class="u" href="#___top" title="go to top of document">sub bag</a></h2>
+<pre>sub bag(*@args --&gt; Bag)</pre>
+<p>Creates a new <code>Bag</code> from <code>@args</code>.</p>
+<h1 id="class_BagHash"><a class="u" href="#___top" title="go to top of document">class BagHash</a></h1>
+<pre>class BagHash does Baggy { }</pre>
+<p>A <em>mutable</em> collection of weighted values. These weights are always integers, and can be accessed with the <code>{ }</code> postcircumfix. For an immutable collection of integrally weighted values, see <a href="Bag">Bag</a>.</p>
+<h1 id="class_Mix"><a class="u" href="#___top" title="go to top of document">class Mix</a></h1>
+<pre>class Mix does Mixy { }</pre>
+<p>An <em>immutable</em> collection of weighted values. The weights are accessable via the <code>{ }</code> postcircumfix. For a mutable collection, see <a href="MixHash">MixHash</a>.</p>
+<pre># TODO: More useful example
+{a =&gt; 1.3, b =&gt; 4.8, c =&gt; 8}.Mix&lt;b&gt; == 4.8 # True</pre>
+<h2 id="sub_mix"><a class="u" href="#___top" title="go to top of document">sub mix</a></h2>
+<pre>sub mix(*@args --&gt; Mix)</pre>
+<p>Creates a new <code>Mix</code> from <code>@args</code>.</p>
+<h1 id="class_MixHash"><a class="u" href="#___top" title="go to top of document">class MixHash</a></h1>
+<pre>class MixHash does Mixy { }</pre>
+<p>A <em>mutable</em> collection of weighted values. The weights are accessable via the <code>{ }</code> postcircumfix. For an immutable collection, see <a href="Mix">Mix</a>.</p>
+<pre>my $letter-prob = {a =&gt; 1.3, b =&gt; 4.8, c =&gt; 8}.MixHash;
+$letter-prob&lt;d&gt; = 1.6;
+say $letter-prob.total # 15.7</pre>
+<h1 id="Set/Bag_Operators"><a class="u" href="#___top" title="go to top of document">Set/Bag Operators</a></h1>
+<p>There are many infixes devoted to preforming common operations on <a href="Set"><code>Set</code>s</a>, such as unions and set differences. Other operations include boolean checks, like whether an object is an element of a <code>Set</code>, or whether one <code>Set</code> is a subset of another <code>Set</code>.</p>
+<p>These infixes can be written using the UTF-8 character that represents the function (like <a href="∈"><code>∈</code></a>, or <a href="∪"><code>∪</code></a>), or they can be written with an equivalent ASCII version (like <a href="(elem)"><code>(elem)</code></a> or <a href="(|)"><code>(|)</code></a>).</p>
+<p>Most of the time, explicitly using <code>Set</code> objects with these infixes is unnecessary. All of the infix operators will work on any objects of type <a href="Any"><code>Any</code></a> for its arguments (e.g., <a href="List"><code>List</code>s</a>, <a href="Parcel"><code>Parcel</code>s</a>, <a href="Mix"><code>Mix</code>es</a>, etc.) and coerce them to <code>Set</code>s where needed.</p>
+<p>In some cases, if the type of an argument is a <a href="Bag">Bag</a>, the infix operator will behave in a different but analogous way to the way it would behave with only <code>Set</code> arguments.</p>
+<h2 id="Operators_that_return_Bool"><a class="u" href="#___top" title="go to top of document">Operators that return <code>Bool</code></a></h2>
+<h3 id="infix_(elem)"><a class="u" href="#___top" title="go to top of document">infix (elem)</a></h3>
+<pre>multi sub infix:&lt;(elem)&gt;($a, Any $b --&gt; Bool)
+multi sub infix:&lt;(elem)&gt;($a, Set $b --&gt; Bool)</pre>
+<p>Returns <code>True</code> if <code>$a</code> is an <strong>element</strong> of <code>$b</code> as an element.</p>
+<h4 id="infix_∈"><a class="u" href="#___top" title="go to top of document">infix ∈</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2208&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <a href="(elem)">(elem)</a>.</p>
+<h4 id="infix_∉"><a class="u" href="#___top" title="go to top of document">infix ∉</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2208&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <code>!(elem)</code>, i.e., returns <code>True</code> if <code>$a</code> is not an element of <code>$b</code>.</p>
+<h3 id="infix_(cont)"><a class="u" href="#___top" title="go to top of document">infix (cont)</a></h3>
+<pre>multi sub infix:&lt;(cont)&gt;(Any $a, $b --&gt; Bool)
+multi sub infix:&lt;(cont)&gt;(Set $a, $b --&gt; Bool)</pre>
+<p>Returns <code>True</code> if <code>$a</code> <strong>contains</strong> <code>$b</code> as an element.</p>
+<h4 id="infix_∋"><a class="u" href="#___top" title="go to top of document">infix ∋</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x220B&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <a href="(cont)">(cont)</a>.</p>
+<h4 id="infix_∌"><a class="u" href="#___top" title="go to top of document">infix ∌</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x220C&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <code>!(cont)</code>, i.e., returns <code>True</code> if <code>$a</code> does not contain <code>$b</code>.</p>
+<h3 id="infix_(<=)"><a class="u" href="#___top" title="go to top of document">infix (&lt;=)</a></h3>
+<pre>multi sub infix:&lt;&lt;(&lt;=)&gt;&gt;(Any $a, Any $b --&gt; Bool)
+multi sub infix:&lt;&lt;(&lt;=)&gt;&gt;(Setty $a, Setty $b --&gt; Bool)</pre>
+<p>Returns <code>True</code> if <code>$a</code> is a <strong>subset</strong> or is equal to <code>$b</code>, i.e., if all the elements of <code>$a</code> are elements of <code>$b</code>, and <code>$a</code> is a smaller or equal sized set than <code>$b</code>.</p>
+<h4 id="infix_⊆"><a class="u" href="#___top" title="go to top of document">infix ⊆</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2286&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <a href="(<=)">(&lt;=)</a>.</p>
+<h4 id="infix_⊈"><a class="u" href="#___top" title="go to top of document">infix ⊈</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2288&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <code>!(&lt;=)</code>.</p>
+<h3 id="infix_(<)"><a class="u" href="#___top" title="go to top of document">infix (&lt;)</a></h3>
+<pre>multi sub infix:&lt;&lt;(&lt;)&gt;&gt;(Any $a, Any $b --&gt; Bool)
+multi sub infix:&lt;&lt;(&lt;)&gt;&gt;(Setty $a, Setty $b --&gt; Bool)</pre>
+<p>Returns <code>True</code> if <code>$a</code> is a <strong>strict subset</strong> of <code>$b</code>, i.e., that all the elements of <code>$a</code> are elements of <code>$b</code>, but <code>$a</code> is a smaller set than <code>$b</code>.</p>
+<h4 id="infix_⊂"><a class="u" href="#___top" title="go to top of document">infix ⊂</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2282&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <a href="(<)">(&lt;)</a>.</p>
+<h4 id="infix_⊄"><a class="u" href="#___top" title="go to top of document">infix ⊄</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2284&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <code>!(&lt;)</code>.</p>
+<h3 id="infix_(>=)"><a class="u" href="#___top" title="go to top of document">infix (&gt;=)</a></h3>
+<pre>multi sub infix:&lt;&lt;(&gt;=)&gt;&gt;(Any $a, Any $b --&gt; Bool)
+multi sub infix:&lt;&lt;(&gt;=)&gt;&gt;(Setty $a, Setty $b --&gt; Bool)</pre>
+<p>Like <a href="(<=)">(&lt;=)</a> with reversed arguments. Returns <code>True</code> if <code>$a</code> is a <strong>superset</strong> of or equal to <code>$b</code>.</p>
+<h4 id="infix_⊇"><a class="u" href="#___top" title="go to top of document">infix ⊇</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2287&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <a href="(>=)">(&gt;=)</a>.</p>
+<h4 id="infix_⊉"><a class="u" href="#___top" title="go to top of document">infix ⊉</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2289&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <code>!(&gt;=)</code>.</p>
+<h3 id="infix_(>)"><a class="u" href="#___top" title="go to top of document">infix (&gt;)</a></h3>
+<pre>multi sub infix:&lt;&lt;(&gt;)&gt;&gt;(Any $a, Any $b --&gt; Bool)
+multi sub infix:&lt;&lt;(&gt;)&gt;&gt;(Setty $a, Setty $b --&gt; Bool)</pre>
+<p>Like <a href="(<)">(&lt;)</a> with reversed arguments. Returns <code>True</code> if <code>$a</code> is a <strong>strict superset</strong> of <code>$b</code>.</p>
+<h4 id="infix_⊃"><a class="u" href="#___top" title="go to top of document">infix ⊃</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2283&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <a href="(>)">(&gt;)</a>.</p>
+<h4 id="infix_⊅"><a class="u" href="#___top" title="go to top of document">infix ⊅</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2285&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <code>!(&gt;)</code>.</p>
+<h3 id="infix_(<+)"><a class="u" href="#___top" title="go to top of document">infix (&lt;+)</a></h3>
+<pre>multi sub infix:&lt;&lt;(&lt;+)&gt;&gt;(Any $a, Any $b --&gt; Bool)
+multi sub infix:&lt;&lt;(&lt;+)&gt;&gt;(Baggy $a, Baggy $b --&gt; Bool)</pre>
+<p>Returns <code>True</code> if <code>$a</code> is a Baggy <strong>subset</strong> of <code>$b</code>, i.e., if all the elements of <code>$a</code> are in <code>$b</code> and each argument of <code>$a</code> is weighed at least as heavily as the element is in <code>$b</code>.</p>
+<h4 id="infix_≼"><a class="u" href="#___top" title="go to top of document">infix ≼</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x227C&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <a href="(<+)">(&lt;+)</a>.</p>
+<h3 id="infix_(>+)"><a class="u" href="#___top" title="go to top of document">infix (&gt;+)</a></h3>
+<pre>multi sub infix:&lt;&lt;(&gt;+)&gt;&gt;(Baggy $a, Baggy $b --&gt; Bool)
+multi sub infix:&lt;&lt;(&gt;+)&gt;&gt;(Any $a, Any $b --&gt; Bool)</pre>
+<p>Returns <code>True</code> if <code>$a</code> is a Baggy <strong>superset</strong> of <code>$b</code>, i.e., if all the elements of <code>$b</code> are in <code>$a</code> and no argument of <code>$a</code> is weighted heavier than that element is in <code>$b</code>.</p>
+<h4 id="infix_≽"><a class="u" href="#___top" title="go to top of document">infix ≽</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x227D&quot;&gt;&gt;($a, $b --&gt; Bool)</pre>
+<p>Equivalent to <a href="(+>)">(+&gt;)</a>.</p>
+<h2 id="Operators_that_return_Set_or_Bag"><a class="u" href="#___top" title="go to top of document">Operators that return <code>Set</code> or <code>Bag</code></a></h2>
+<h3 id="infix_(|)"><a class="u" href="#___top" title="go to top of document">infix (|)</a></h3>
+<pre>only sub infix:&lt;(|)&gt;(**@p)</pre>
+<p>Returns the <strong>union</strong> of all of its arguments. Generally, this creates a new <code>Set</code> that contains all the elements its arguments contain.</p>
+<pre>&lt;a a b c d&gt; (|) &lt;h g f e d c&gt; (|) &lt;i j&gt; === set &lt;a b c d e f g h i j&gt;</pre>
+<p>If any of its arguments are <code>Baggy</code>, it creates a new <code>Bag</code> that contains all the elements of the arguments, each weighed by the highest weight that appeared for that element.</p>
+<pre>bag(&lt;a a b c a&gt;) (|) bag(&lt;a a b c c&gt;) === bag(&lt;a a a b c c&gt;)</pre>
+<h4 id="infix_∪"><a class="u" href="#___top" title="go to top of document">infix ∪</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x222A&quot;&gt;&gt;(|p)</pre>
+<p>Equivalent to <a href="(|)">(|)</a>.</p>
+<h3 id="infix_(&)"><a class="u" href="#___top" title="go to top of document">infix (&amp;)</a></h3>
+<pre>only sub infix:&lt;(&amp;)&gt;(**@p)</pre>
+<p>Returns the <strong>intersection</strong> of all of its arguments. Generally, this creates a new <code>Set</code> that contains only the elements that all of its arguments contain.</p>
+<pre>&lt;a b c&gt; (&amp;) &lt;b c d&gt; === set &lt;b c&gt;
+&lt;a b c d&gt; (&amp;) &lt;b c d e&gt; (&amp;) &lt;c d e f&gt; === set &lt;c d&gt;</pre>
+<p>If any of its arguments are <code>Baggy</code>, this creates a new <code>Bag</code> that contains only the elements that all of the arguments contain, each weighted the max weight all of the arguments share for that element.</p>
+<pre>bag(&lt;a a b c a&gt;) (&amp;) bag(&lt;a a b c c&gt;) === bag(&lt;a a b c&gt;)</pre>
+<h4 id="infix_∩"><a class="u" href="#___top" title="go to top of document">infix ∩</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2229&quot;&gt;&gt;(|p)</pre>
+<p>Equivalent to <a href="(&)">(&amp;)</a>.</p>
+<h3 id="infix_(-)"><a class="u" href="#___top" title="go to top of document">infix (-)</a></h3>
+<pre>only sub infix:&lt;(-)&gt;(**@p)</pre>
+<p>Returns the <strong>set difference</strong> of all its arguments. Generally, this returns the <code>Set</code> made up of all the elements the first argument has but the rest don&#39;t, i.e., of all the elements of the first argument, minus the elements from the other arguments.</p>
+<p>If the first argument is <code>Baggy</code>, this returns a <code>Bag</code> that contains each element of the first argument with its weight subtracted by the weight of that element in each of the other arguments.</p>
+<pre>bag(&lt;a a b c a d&gt;) (-) bag(&lt;a a b c c&gt;) = bag(&lt;a d&gt;)
+bag(&lt;a a a a c d d d&gt;) (-) bag(&lt;a b d a&gt;) (-) bag(&lt;d c&gt;) = bag(&lt;a a d d&gt;)</pre>
+<h4 id="infix_∖"><a class="u" href="#___top" title="go to top of document">infix ∖</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2216&quot;&gt;&gt;(|p)</pre>
+<p>Equivalent to <a href="(-)">(-)</a>.</p>
+<h3 id="infix_(^)"><a class="u" href="#___top" title="go to top of document">infix (^)</a></h3>
+<pre>multi sub infix:&lt;(^)&gt;(Any $a, Any $b --&gt; Setty)
+multi sub infix:&lt;(^)&gt;(Set $a, Set $b --&gt; Setty)</pre>
+<p>Returns the <strong>symmetric set difference</strong> of all its arguments, i.e., a <code>Set</code> made up of all the elements that <code>$a</code> has but <code>$b</code> doesn&#39;t and all the elements <code>$b</code> has but <code>$a</code> doesn&#39;t. Equivalent to <code>($a ∖ $b) ∪ ($b ∖ $a)</code>.</p>
+<h4 id="infix_⊖"><a class="u" href="#___top" title="go to top of document">infix ⊖</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x2296&quot;&gt;&gt;($a, $b --&gt; Setty)</pre>
+<p>Equivalent to <a href="(^)">(^)</a></p>
+<h3 id="infix_(.)"><a class="u" href="#___top" title="go to top of document">infix (.)</a></h3>
+<pre>only sub infix:&lt;(.)&gt;(**@p)</pre>
+<p>Returns the Baggy <strong>multiplication</strong> of its arguments, i.e., a <code>Bag</code> that contains each element of the arguments with the weights of the element across the arguments multiplied together to get the new weight.</p>
+<pre>&lt;a b c&gt; (.) &lt;a b c d&gt; === bag &lt;a b c&gt; # Since 1 * 0 == 0, in the case of &#39;d&#39;
+bag(&lt;a a b c a d&gt;) (.) bag(&lt;a a b c c&gt;) === bag(&lt;a a a a a a b c c&gt;)</pre>
+<h4 id="infix_⊍"><a class="u" href="#___top" title="go to top of document">infix ⊍</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x228D&quot;&gt;&gt;(|p)</pre>
+<p>Equivalent to <a href="(.)">(.)</a>.</p>
+<h3 id="infix_(+)"><a class="u" href="#___top" title="go to top of document">infix (+)</a></h3>
+<pre>only sub infix:&lt;(+)&gt;(**@p)</pre>
+<p>Returns the Baggy <strong>addition</strong> of its arguments, i.e., a <code>Bag</code> that contains each element of the arguments with the weights of the element across the arguments added together to get the new weight.</p>
+<pre>bag(&lt;a a b c a d&gt;) (.) bag(&lt;a a b c c&gt;) === bag(&lt;a a a a a b b c c c d&gt;)</pre>
+<h4 id="infix_⊎"><a class="u" href="#___top" title="go to top of document">infix ⊎</a></h4>
+<pre>only sub infix:&lt;&lt;&quot;\x228E&quot;&gt;&gt;(|p)</pre>
+<p>Equivalent to <a href="(+)">(+)</a>.</p>
+
+
+
+</body>
+</html>
+

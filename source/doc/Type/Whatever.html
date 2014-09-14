@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Whatever</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Whatever</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_ACCEPTS">method ACCEPTS</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Whatever { }</pre>
+<p><code>Whatever</code> is a class whose objects don&#39;t really do much; it gets its semantic from other routines that accept <code>Whatever</code>-objects as markers to do something special. The <code>*</code> literal in term position creates a <code>Whatever</code> object.</p>
+<p>Another source of speciality is that the compiler turns combinations of <code>*</code> in term position and many operators into closures. This process is called <em>Whatever-currying</em>.</p>
+<pre>my $c = * + 2;          # same as   -&gt; $x { $x + 2 };
+say $c(4);              # 6</pre>
+<p>Multiple <code>*</code> in one expression generate closures with as many arguments:</p>
+<pre>my $c = * + *;          # same as   -&gt; $x, $y { $x + $y }</pre>
+<p><code>*</code> in complex expressions also generate closures:</p>
+<pre>my $c = 4 * * + 5;      # same as   -&gt; $x { 4 * $x + 5 }</pre>
+<p>Calling a method on <code>*</code> also create a closure:</p>
+<pre>say &lt;a b c&gt;.map: *.uc;  # A B C</pre>
+<p>Those closure are of type <a href="WhateverCode">WhateverCode</a>.</p>
+<p>Not all operators and syntactic constructs curry Whatever-stars.</p>
+<table>
+<tbody>
+<tr>
+<td>Exception Example What it does</td>
+<td>Exception</td>
+<td>Example</td>
+<td>What it does</td>
+</tr>
+<tr>
+<td>========= ======= ============</td>
+<td>=========</td>
+<td>=======</td>
+<td>============</td>
+</tr>
+<tr>
+<td>comma 1, *, 2 generates a Parcel with a * element</td>
+<td>comma</td>
+<td>1, *, 2</td>
+<td>generates a Parcel with a * element</td>
+</tr>
+<tr>
+<td>range operators 1..* Range.new(:from(1), :to(*));</td>
+<td>range operators</td>
+<td>1..*</td>
+<td>Range.new(:from(1), :to(*));</td>
+</tr>
+<tr>
+<td>series operator 1 ... * infinite list</td>
+<td>series operator</td>
+<td>1 ... *</td>
+<td>infinite list</td>
+</tr>
+<tr>
+<td>smart-matching 1 ~~ * returns True</td>
+<td>smart-matching</td>
+<td>1 ~~ *</td>
+<td>returns True</td>
+</tr>
+<tr>
+<td>assignment $x = * assign * to $x</td>
+<td>assignment</td>
+<td>$x = *</td>
+<td>assign * to $x</td>
+</tr>
+<tr>
+<td>binding $x := * binds * to $x</td>
+<td>binding</td>
+<td>$x := *</td>
+<td>binds * to $x</td>
+</tr>
+<tr>
+<td>list repetition 1 xx * generates infinite list</td>
+<td>list repetition</td>
+<td>1 xx *</td>
+<td>generates infinite list</td>
+</tr>
+</tbody>
+</table><p>The range operators are handled specially. They do not curry with <code>Whatever</code>-stars, but they do curry with <code>WhateverCode</code></p>
+<pre>say (1..*).WHAT;        # Range
+say (1..*-1).WHAT;      # WhateverCode</pre>
+<p>This allow all these constructs to work:</p>
+<pre>.say for 1..*;          # infinite loop
+my @a = 1..4;
+say @a[1..*];           # 2 3 4
+say @a[1..*-2];         # 2 3</pre>
+<p>The currying is purely syntactic.</p>
+<pre>my $x = *;
+$x + 2;                 # not a closure, dies because
+                        # it can&#39;t coerce $x to Numeric</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_ACCEPTS"><a class="u" href="#___top" title="go to top of document">method ACCEPTS</a></h2>
+<pre>multi method ACCEPTS(Whatever:D: Mu $other)</pre>
+<p>Returns <code>True</code>.</p>
+
+
+
+</body>
+</html>
+

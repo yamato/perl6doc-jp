@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Pair</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Pair</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_value">method value</a></li>
+    <li class="indexItem indexItem2"><a href="#infix_cmp">infix cmp</a></li>
+    <li class="indexItem indexItem2"><a href="#method_fmt">method fmt</a></li>
+    <li class="indexItem indexItem2"><a href="#method_kv">method kv</a></li>
+    <li class="indexItem indexItem2"><a href="#method_pairs">method pairs</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Pair is Enum { ... }</pre>
+<p>Consists of two parts, a <em>key</em> and a <em>value</em>. <code>Pair</code>s can be seen as the atomic units in <code>Hash</code>es, and they are also used in conjunction with named arguments and parameters.</p>
+<p><span name="">:</span> <span name="">=&gt; </span> <span name="">:!</span> There are three syntaxes for <code>Pair</code>s:</p>
+<pre>&#39;key&#39; =&gt; &#39;value&#39;    # this...
+:key&lt;value&gt;         # ...means the same as this
+:$foo               # short for foo =&gt; $foo</pre>
+<p>Variants of this are</p>
+<pre>:key                # same as   key =&gt; True
+:!key               # same as   key =&gt; False</pre>
+<p>The immutable version of a <code>Pair</code> is an <code>Enum</code>.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_value"><a class="u" href="#___top" title="go to top of document">method value</a></h2>
+<pre>multi method value(Pair:D:) is rw</pre>
+<p>Returns the <em>value</em> part of the <code>Pair</code>.</p>
+<h2 id="infix_cmp"><a class="u" href="#___top" title="go to top of document">infix cmp</a></h2>
+<pre>multi sub infix:&lt;cmp&gt;(Pair:D, Pair:D)</pre>
+<p>The type-agnostic comparator; compares two <code>Pair</code>s. Compares first their <em>key</em> parts, and then compares the <em>value</em> parts if the keys are equal.</p>
+<h2 id="method_fmt"><a class="u" href="#___top" title="go to top of document">method fmt</a></h2>
+<pre>multi method fmt(Pair:D:) returns Str:D</pre>
+<p>Takes a <em>format string</em>, and returns a string the <em>key</em> and <em>value</em> parts of the <code>Pair</code> formatted. Here&#39;s an example:</p>
+<pre>my $pair = :Earth(1);
+say $pair.fmt(&quot;%s is %.3f AU away from the sun&quot;)
+# Prints &quot;Earth is 1.000 AU away from the sun&quot;</pre>
+<p>For more about format strings, see <a href="sprintf">sprintf</a>.</p>
+<h2 id="method_kv"><a class="u" href="#___top" title="go to top of document">method kv</a></h2>
+<pre>multi method kv(Pair:D:) returns Parcel:D</pre>
+<p>Returns a two-element <code>Parcel</code> with the <em>key</em> and <em>value</em> parts o <code>Pair</code>, in that order. This method is a special case of the same-named method on <code>Hash</code>, which returns all its entries as a list of keys and values.</p>
+<h2 id="method_pairs"><a class="u" href="#___top" title="go to top of document">method pairs</a></h2>
+<pre>multi method pairs(Pair:D:)</pre>
+<p>Returns a list of one <code>Pair</code>, namely this one.</p>
+
+
+
+</body>
+</html>
+

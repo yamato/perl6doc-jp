@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <title>role IO::FileTestable</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>role IO::FileTestable</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#File_Test_operators">File Test operators</a></li>
+    <li class="indexItem indexItem2"><a href="#method_modified">method modified</a></li>
+    <li class="indexItem indexItem2"><a href="#method_accessed">method accessed</a></li>
+    <li class="indexItem indexItem2"><a href="#method_changed">method changed</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>role IO::FileTestable does IO { }</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="File_Test_operators"><a class="u" href="#___top" title="go to top of document">File Test operators</a></h2>
+<pre>-e
+-f Does not exist in Perl 6. See :e, :f.</pre>
+<pre>-M Does not exist in Perl 6. See C&lt;modified&gt;.
+-A Does not exist in Perl 6. See C&lt;accessed&gt;.
+-C Does not exist in Perl 6. See C&lt;changed&gt;.</pre>
+<pre>:e Exists
+:d Directory
+:f File
+:l Symbolic link
+:r Readable
+:w Writable
+:x Executable
+:s Size
+:z Zero size</pre>
+<p>Usage:</p>
+<p>If you have a string - a path to something in the filesystem:</p>
+<pre>if &quot;path/to/file&quot;.IO ~~ :e {
+    say &#39;file exists&#39;;</pre>
+<pre>}</pre>
+<pre>my $file = &quot;path/to/file&quot;;
+if $file.IO ~~ :e {
+    say &#39;file exists&#39;;
+}</pre>
+<p>If you already have an IO object in $file, either by creating one yourself, or by getting it from another subroutine, such as <code>dir</code>, you can write this:</p>
+<pre>my $file = &quot;path/to/file&quot;.IO;
+if $file ~~ :e {
+    say &#39;file exists&#39;;
+}</pre>
+<p>There are also 3 methods for fetching the 3 timestamps of a file (inode), on Operating Systems where these are available:</p>
+<h2 id="method_modified"><a class="u" href="#___top" title="go to top of document">method modified</a></h2>
+<p>Timestamp when the file was last modified.</p>
+<pre>&quot;path/to/file&quot;.IO.modified()</pre>
+<h2 id="method_accessed"><a class="u" href="#___top" title="go to top of document">method accessed</a></h2>
+<p>Timestamp when the file was last accessed.</p>
+<pre>&quot;path/to/file&quot;.IO.accessed()</pre>
+<h2 id="method_changed"><a class="u" href="#___top" title="go to top of document">method changed</a></h2>
+<p>Timestamp when the inode was last changed.</p>
+<pre>&quot;path/to/file&quot;.IO.changed()</pre>
+
+
+
+</body>
+</html>
+

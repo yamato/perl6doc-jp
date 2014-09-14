@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::Redeclaration</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::Redeclaration</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_symbol">method symbol</a></li>
+    <li class="indexItem indexItem2"><a href="#method_what">method what</a></li>
+    <li class="indexItem indexItem2"><a href="#method_postfix">method postfix</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::Redeclaration does X::Comp { }</pre>
+<p>Thrown when a symbol (variable, routine, type, parameter, ...) is redeclared. Note that redeclarations are generally fine in an inner scope, but if the redeclaration appears in the same scope as the original declaration, it usually indicates an error and is treated as one.</p>
+<p>Examples</p>
+<pre>my $x; my $x</pre>
+<pre>===SORRY!===
+Redeclaration of symbol $x</pre>
+<pre>sub f() { }
+sub f() { }
+===SORRY!===
+Redeclaration of routine f</pre>
+<p>But those are fine</p>
+<pre>my $x;
+sub f() {
+    my $x;          # not a redeclaration,
+                    # because it&#39;s in an inner scope
+    sub f() { };    # same
+}</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_symbol"><a class="u" href="#___top" title="go to top of document">method symbol</a></h2>
+<p>Returns the name of the symbol that was redeclared.</p>
+<h2 id="method_what"><a class="u" href="#___top" title="go to top of document">method what</a></h2>
+<p>Returns the kind of symbol that was redeclared. Usually <code>symbol</code>, but can also be <code>routine</code>, <code>type</code> etc.</p>
+<h2 id="method_postfix"><a class="u" href="#___top" title="go to top of document">method postfix</a></h2>
+<p>Returns a string that is attached to the end of the error message. It usually explains the particular problem in more detail, or suggests way to fix the problem.</p>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::Syntax::Missing</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::Syntax::Missing</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_what">method what</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::Syntax::Missing does X::Syntax { }</pre>
+<p>Syntax error thrown when the previous piece of syntax requires the existence of another piece of syntax, and that second piece is missing.</p>
+<p>For example</p>
+<pre>for 1, 2, 3</pre>
+<p>dies with</p>
+<pre>===SORRY!===
+Missing block</pre>
+<p>because a <code>for</code> that is not a statement modifier must be followed by a block.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_what"><a class="u" href="#___top" title="go to top of document">method what</a></h2>
+<pre>method what() returns Str:D</pre>
+<p>Returns a string description of the missing syntax element.</p>
+
+
+
+</body>
+</html>
+

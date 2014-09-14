@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::Declaration::Scope::Multi</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::Declaration::Scope::Multi</h1>
+<nav class="indexgroup">
+</nav>
+<pre>class X::Declaration::Scope::Multi is X::Declaration::Scope { }</pre>
+<p>Thrown when a multi is declared with an incompatible scope.</p>
+<p>For example <code>our multi sub foo() { }</code> dies with</p>
+<pre>===SORRY!===
+Cannot use &#39;our&#39; with individual multi candidates. Please declare an our-scoped proto instead</pre>
+
+
+
+</body>
+</html>
+

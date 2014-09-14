@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <title>Glossary</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Glossary</h1>
+<p class='subtitle'>Glossary of Perl 6 terminology</p>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Anonymous">Anonymous</a></li>
+  <li class="indexItem indexItem1"><a href="#Autothreading">Autothreading</a></li>
+  <li class="indexItem indexItem1"><a href="#Instance">Instance</a></li>
+  <li class="indexItem indexItem1"><a href="#Invocant">Invocant</a></li>
+  <li class="indexItem indexItem1"><a href="#Literal">Literal</a></li>
+  <li class="indexItem indexItem1"><a href="#lvalue">lvalue</a></li>
+  <li class="indexItem indexItem1"><a href="#Mainline">Mainline</a></li>
+  <li class="indexItem indexItem1"><a href="#Slurpy">Slurpy</a></li>
+  <li class="indexItem indexItem1"><a href="#Type_Object">Type Object</a></li>
+</ol>
+</nav>
+<h1 id="Anonymous"><a class="u" href="#___top" title="go to top of document">Anonymous</a></h1>
+<p>A subroutine, method or submethod is called <em>anonymous</em> if it can&#39;t be called by name.</p>
+<pre># named subroutine
+sub double($x) { 2 * $x };</pre>
+<pre># anonymous subroutine, stored in a named scalar
+my $double = sub ($x) { 2 * $x };</pre>
+<p>Note that it is still allowed to have a name</p>
+<pre># anonymous, but knows its own name
+my $s = anon sub triple($x) { 3 * $x }
+say $s.name;        # triple</pre>
+<h1 id="Autothreading"><a class="u" href="#___top" title="go to top of document">Autothreading</a></h1>
+<p>Autothreading is what happens if you pass a junction to a sub that expects a parameter of type <code>Any</code> or a subtype thereof. The call is executed multiple times, each time with a different eigenstate of the junction. The result of these calls is assembled in a junction of the same type as the original junction.</p>
+<pre>sub f($x) { 2 * $x };
+if f(1|2|3) == 4 {
+    say &#39;success&#39;;
+}</pre>
+<p>Here <code>f()</code> is a sub with one parameter, and since it has no explicit type, it is implicitly typed as <code>Any</code>. The <code>Junction</code> argument causes the <code>f(1|2|3)</code> call to be internally executed as <code>f(1)|f(2)|f(3)</code>, and the resulting junction is <code>2|4|6</code>. This process of separating Junction arguments into multiple calls to a function is called <em>autothreading</em>.</p>
+<h1 id="Instance"><a class="u" href="#___top" title="go to top of document">Instance</a></h1>
+<p>An <em>instance</em> of a class is also called an <em>object</em> in some other programming languages. It has a storage for attributes, and is often the return value of a call to a method called <code>new</code>, or a literal.</p>
+<p>Instances of most types are defined to be <code>True</code> e.g., <code>defined($instance)</code> is <code>True</code>.</p>
+<pre>my Str $str = &quot;hello&quot;;  ## this is with builtin types, e.g. Str
+if defined($str) {
+    say &quot;Oh, yeah. I&#39;m defined.&quot;;
+} else {
+    say &quot;No. Something off? &quot;;
+}</pre>
+<pre>## if you wanted objects...
+class A {
+    # nothing here for now.
+}</pre>
+<pre>my $an_instance = A.new;
+say $an_instance.defined.perl;# defined($an_instance) works too.</pre>
+<p>Or to put it another way, a class has all the blueprint of methods and attributes, and an instance carries it forward into the real world.</p>
+<h1 id="Invocant"><a class="u" href="#___top" title="go to top of document">Invocant</a></h1>
+<p>The object on which a method is called is called the <em>invocant</em> in Perl 6. It is what <code>self</code> refers to in a method.</p>
+<pre>say &#39;str&#39;.uc;   # &#39;str&#39; is the invocant of method uc</pre>
+<h1 id="Literal"><a class="u" href="#___top" title="go to top of document">Literal</a></h1>
+<p>A <em>literal</em> is a piece of code that directly stands for a (often built-in) object, and also refers to the object itself.</p>
+<pre>my $x = 2;      # the 2 is a literal
+say $x;         # $x is not a literal, but a variable</pre>
+<h1 id="lvalue"><a class="u" href="#___top" title="go to top of document">lvalue</a></h1>
+<p>An <em>lvalue</em> or a <em>left value</em> is anything that can appear on the left hand side of the assignment operator <code>=</code>; anything you can assign to.</p>
+<p>Typical lvalues are variables, private and <code>is rw</code> attributes, lists of variables and lvalue subroutines.</p>
+<p>Examples of lvalues:</p>
+<pre>Declaration             lvalue          Comments</pre>
+<pre>my $x;                  $x
+my ($a, $b);            ($a, $b)
+has $!attribute;        $!attribute     Only inside classes
+has $.attrib is rw;     $.attrib
+sub a is rw { $x };     a()</pre>
+<p>Examples of things that are not lvalues</p>
+<pre>3                        # literals
+constant x = 3;          # constants
+has $.attrib;            # attributes; you can only assign to $!attrib
+sub f { }; f();          # &quot;normal&quot; subs are not writable
+sub f($x) { $x = 3 };    # error - parameters are read-only by default</pre>
+<h1 id="Mainline"><a class="u" href="#___top" title="go to top of document">Mainline</a></h1>
+<p>The <code>mainline</code> is the program text that is not part of any kind of block.</p>
+<pre>use v6;     # mainline
+sub f {
+            # not in mainline, in sub f
+}
+f();        # in mainline again</pre>
+<h1 id="Slurpy"><a class="u" href="#___top" title="go to top of document">Slurpy</a></h1>
+<p>A parameter of a sub or method is said to be <em>slurpy</em> if it can consume an arbitrary number of arguments. It is indicated by an asterisk <code>*</code> in front of the parameter name.</p>
+<pre>sub sum (*@numbers) {
+    return [+] @numbers;
+}</pre>
+<h1 id="Type_Object"><a class="u" href="#___top" title="go to top of document">Type Object</a></h1>
+<p>A <em>type object</em> is an object representing a class, role, package, grammar or enum. It is generally accessible with the same name as the type.</p>
+<pre>class A { };
+say A;              # A is the type object
+my $x = A.new();    # same here</pre>
+<pre>my $x = class {
+    method greet() {
+        say &quot;hi&quot;;
+    }
+}</pre>
+<pre># $x now holds a type object returned from the
+# anonymous class definition</pre>
+
+
+
+</body>
+</html>
+

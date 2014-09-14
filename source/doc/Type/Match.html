@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Match</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Match</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_orig">method orig</a></li>
+    <li class="indexItem indexItem2"><a href="#method_from">method from</a></li>
+    <li class="indexItem indexItem2"><a href="#method_to">method to</a></li>
+    <li class="indexItem indexItem2"><a href="#method_ast">method ast</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Str">method Str</a></li>
+    <li class="indexItem indexItem2"><a href="#method_caps">method caps</a></li>
+    <li class="indexItem indexItem2"><a href="#method_chunks">method chunks</a></li>
+    <li class="indexItem indexItem2"><a href="#method_list">method list</a></li>
+    <li class="indexItem indexItem2"><a href="#method_hash">method hash</a></li>
+    <li class="indexItem indexItem2"><a href="#method_prematch">method prematch</a></li>
+    <li class="indexItem indexItem2"><a href="#method_postmatch">method postmatch</a></li>
+    <li class="indexItem indexItem2"><a href="#method_make">method make</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Match is Capture is Cool { ... }</pre>
+<p><code>Match</code> objects are the result of a successful regex match. They store a reference to the original string (<code>.orig</code>), positional and named captures, the positions of the start and end of the match  in the original string, and a payload referred to as <em>AST</em>  (abstract syntax tree), which can be used to build data structures  from complex regexes and grammars.</p>
+<p>Submatches are also <code>Match</code> objects (or lists of <code>Match</code> objects, if the corresponding regex was quantified), so each match object can be seen as the root of a tree of match objects.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_orig"><a class="u" href="#___top" title="go to top of document">method orig</a></h2>
+<p>Returns the original string that the regex was matched against.</p>
+<h2 id="method_from"><a class="u" href="#___top" title="go to top of document">method from</a></h2>
+<p>Returns the index of the starting position of the match.</p>
+<h2 id="method_to"><a class="u" href="#___top" title="go to top of document">method to</a></h2>
+<p>Returns the index of the end position of the match.</p>
+<h2 id="method_ast"><a class="u" href="#___top" title="go to top of document">method ast</a></h2>
+<p>Returns the AST (i.e. payload).</p>
+<h2 id="method_Str"><a class="u" href="#___top" title="go to top of document">method Str</a></h2>
+<p>Returns the matched text.</p>
+<h2 id="method_caps"><a class="u" href="#___top" title="go to top of document">method caps</a></h2>
+<p>Returns a list of pairs, with the index or submatch name as key and the submatches as values. The list is ordered by starting position of the submatches.</p>
+<h2 id="method_chunks"><a class="u" href="#___top" title="go to top of document">method chunks</a></h2>
+<p>Returns a list of pairs, with the index or submatch name as key and the submatches as values. The list is ordered by starting position of the submatches.</p>
+<p>Those parts of the string that were not matched by submatches are interleaved with the other pairs, with the string <code>~</code> as key.</p>
+<h2 id="method_list"><a class="u" href="#___top" title="go to top of document">method list</a></h2>
+<p>Returns a list of positional submatches.</p>
+<h2 id="method_hash"><a class="u" href="#___top" title="go to top of document">method hash</a></h2>
+<p>Returns a hash of named submatches.</p>
+<h2 id="method_prematch"><a class="u" href="#___top" title="go to top of document">method prematch</a></h2>
+<p>Returns the part of the original string leading up to the match.</p>
+<h2 id="method_postmatch"><a class="u" href="#___top" title="go to top of document">method postmatch</a></h2>
+<p>Returns the part of the original string following the match.</p>
+<h2 id="method_make"><a class="u" href="#___top" title="go to top of document">method make</a></h2>
+<pre>method make(Match:D: Mu $ast)</pre>
+<p>Sets the AST to <code>$ast</code>, and returns it.</p>
+
+
+
+</body>
+</html>
+

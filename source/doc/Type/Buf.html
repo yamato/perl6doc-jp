@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Buf</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Buf</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_new">method new</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Bool">method Bool</a></li>
+    <li class="indexItem indexItem2"><a href="#method_elems">method elems</a></li>
+    <li class="indexItem indexItem2"><a href="#method_decode">method decode</a></li>
+    <li class="indexItem indexItem2"><a href="#method_subbuf">method subbuf</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Buf does Positional { ... }</pre>
+<p>A <code>Buf</code> (short for buffer) is a binary string, and generally returned from low-level IO operations (<code>$io.read($number-of-by)</code>) or from <code>Str.encode</code>. It can be used to for writing to IO handles as <code>$io.write($buf)</code>.</p>
+<p>In the abstract it is just a list of integers, so for example indexing into a <code>Buf</code> with <code>.[$idx]</code> returns an <code>Int</code>.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_new"><a class="u" href="#___top" title="go to top of document">method new</a></h2>
+<pre>method new(*@codes)</pre>
+<p>Creates a <code>Buf</code> from a list of integers.</p>
+<h2 id="method_Bool"><a class="u" href="#___top" title="go to top of document">method Bool</a></h2>
+<pre>multi method Bool(Buf:D:)</pre>
+<p>Returns <code>False</code> if and only if the buffer is empty.</p>
+<h2 id="method_elems"><a class="u" href="#___top" title="go to top of document">method elems</a></h2>
+<pre>multi method elems(Buf:D:) returns Int:D</pre>
+<p>Returns the number of elements of the buffer.</p>
+<h2 id="method_decode"><a class="u" href="#___top" title="go to top of document">method decode</a></h2>
+<pre>multi method decode(Buf:D: Str:D $encoding = &#39;UTF-8&#39;) returns Str:D</pre>
+<p>Applies an encoding to turn the buffer into a <code>Str</code>.</p>
+<h2 id="method_subbuf"><a class="u" href="#___top" title="go to top of document">method subbuf</a></h2>
+<pre>method subbuf(Int $from, Int $len = self.elems) returns Buf:D</pre>
+<p>Extracts a part of the invocant buffer, starting from the index with elements <code>$from</code>, and taking <code>$len</code> elements (or less if the buffer is shorter), and creates a new buffer as the result.</p>
+<pre>say Buf.new(1..10).subbuf(2, 4);    # Buf:0x&lt;03 04 05 06&gt;</pre>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Str</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Str</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#routine_chop">routine chop</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_chomp">routine chomp</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_lc">routine lc</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_uc">routine uc</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_fc">routine fc</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_tc">routine tc</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_tclc">routine tclc</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_tcuc">routine tcuc</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_wordcase">routine wordcase</a></li>
+    <li class="indexItem indexItem2"><a href="#method_lcfirst">method lcfirst</a></li>
+    <li class="indexItem indexItem2"><a href="#method_ucfirst">method ucfirst</a></li>
+    <li class="indexItem indexItem2"><a href="#method_length">method length</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_chars">routine chars</a></li>
+    <li class="indexItem indexItem2"><a href="#method_encode">method encode</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_index">routine index</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_rindex">routine rindex</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_split">routine split</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_comb">routine comb</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_lines">routine lines</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_words">routine words</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_flip">routine flip</a></li>
+    <li class="indexItem indexItem2"><a href="#sub_sprintf">sub sprintf</a></li>
+    <li class="indexItem indexItem2"><a href="#method_subst">method subst</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_substr">routine substr</a></li>
+    <li class="indexItem indexItem2"><a href="#method_succ">method succ</a></li>
+    <li class="indexItem indexItem2"><a href="#method_pred">method pred</a></li>
+    <li class="indexItem indexItem2"><a href="#routine_ord">routine ord</a></li>
+    <li class="indexItem indexItem2"><a href="#method_ords">method ords</a></li>
+    <li class="indexItem indexItem2"><a href="#method_indent">method indent</a></li>
+    <li class="indexItem indexItem2"><a href="#method_trim">method trim</a></li>
+    <li class="indexItem indexItem2"><a href="#method_trim-trailing">method trim-trailing</a></li>
+    <li class="indexItem indexItem2"><a href="#method_trim-leading">method trim-leading</a></li>
+    <li class="indexItem indexItem2"><a href="#method_ACCEPTS">method ACCEPTS</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Str is Cool does Stringy { }</pre>
+<p>Built-in class for strings. Objects of type <code>Str</code> are immutable.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="routine_chop"><a class="u" href="#___top" title="go to top of document">routine chop</a></h2>
+<pre>multi sub    chop(Str:D)  returns Str:D
+multi method chop(Str:D: $chars = 1) returns Str:D</pre>
+<p>Returns the string with <code>$chars</code> characters removed from the end.</p>
+<h2 id="routine_chomp"><a class="u" href="#___top" title="go to top of document">routine chomp</a></h2>
+<pre>multi sub    chomp(Str:D ) returns Str:D
+multi method chomp(Str:D:) returns Str:D</pre>
+<p>Returns the string with a logical newline removed from the end.</p>
+<h2 id="routine_lc"><a class="u" href="#___top" title="go to top of document">routine lc</a></h2>
+<pre>multi sub    lc(Str:D ) returns Str:D
+multi method lc(Str:D:) returns Str:D</pre>
+<p>Returns a lower-case version of the string.</p>
+<h2 id="routine_uc"><a class="u" href="#___top" title="go to top of document">routine uc</a></h2>
+<pre>multi sub    uc(Str:D ) returns Str:D
+multi method uc(Str:D:) returns Str:D</pre>
+<p>Returns an uppercase version of the string.</p>
+<h2 id="routine_fc"><a class="u" href="#___top" title="go to top of document">routine fc</a></h2>
+<pre>multi sub    fc(Str:D ) returns Str:D
+multi method fc(Str:D:) returns Str:D </pre>
+<p>Does a Unicode &quot;fold case&quot; operation suitable for doing caseless string comparisons. (In general, the returned string is unlikely to be useful for any purpose other than comparison.)</p>
+<p>(Not implemented in Rakudo and Niecza)</p>
+<h2 id="routine_tc"><a class="u" href="#___top" title="go to top of document">routine tc</a></h2>
+<pre>multi sub    tc(Str:D ) returns Str:D
+multi method tc(Str:D:) returns Str:D</pre>
+<p>Does a Unicode &quot;titlecase&quot; operation, that is changes the first character in the string to title case, or to upper case if the character has no title case mapping</p>
+<p>(Not implemented in Niecza)</p>
+<h2 id="routine_tclc"><a class="u" href="#___top" title="go to top of document">routine tclc</a></h2>
+<pre>multi sub    tclc(Str:D ) returns Str:D
+multi method tclc(Str:D:) returns Str:D</pre>
+<p>Turns the first character to title case, and all other characters to lower case</p>
+<p>(not implemented in Niecza)</p>
+<h2 id="routine_tcuc"><a class="u" href="#___top" title="go to top of document">routine tcuc</a></h2>
+<pre>multi sub    tcuc(Str:D ) returns Str:D
+multi method tcuc(Str:D:) returns Str:D</pre>
+<p>Turns the first character to title case, and all other characters to upper case</p>
+<p>(Not implemented in Rakudo and Niecza)</p>
+<h2 id="routine_wordcase"><a class="u" href="#___top" title="go to top of document">routine wordcase</a></h2>
+<pre>multi sub    wordcase(Cool $x)  returns Str
+multi sub    wordcase(Str:D $x) returns Str
+multi method wordcase(Str:D: :&amp;filter = &amp;<a href="tclc">tclc</a>, Mu :$where = True) returns Str
+</pre>
+<p>Returns a string in which <code>&amp;filter</code> has been applied to all the words that match <code>$where</code>. By default, this means that the first letter of every word is capitalized, and all the other letters lowercased.</p>
+<h2 id="method_lcfirst"><a class="u" href="#___top" title="go to top of document">method lcfirst</a></h2>
+<p>Perl 6 does not have a <code>lcfirst</code> function.</p>
+<h2 id="method_ucfirst"><a class="u" href="#___top" title="go to top of document">method ucfirst</a></h2>
+<p>Perl 6 does not have a <code>ucfirst</code> function. See <a href="tc">tc</a>.</p>
+<h2 id="method_length"><a class="u" href="#___top" title="go to top of document">method length</a></h2>
+<p>Perl 6 does not have a <code>length</code> function. See <a href="chars">chars</a> or <a href="elems">elems</a>.</p>
+<h2 id="routine_chars"><a class="u" href="#___top" title="go to top of document">routine chars</a></h2>
+<pre>multi sub    chars(Cool $x)  returns Int:D
+multi sub    chars(Str:D $x) returns Int:D
+multi sub    chars(str $x)   returns int
+multi method chars(Str:D:)   returns Int:D</pre>
+<p>Returns the number of characters in the string in the current (lexically scoped) idea of what a normal character is, usually graphemes.</p>
+<h2 id="method_encode"><a class="u" href="#___top" title="go to top of document">method encode</a></h2>
+<pre>multi method encode(Str:D: $encoding = $?ENC, $nf = $?NF) returns Buf</pre>
+<p>Returns a <a href="Buf">Buf</a> which represents the original string in the given encoding and normal form. The actual return type is as specific as possible, so <code>$str.encode(&#39;UTF-8&#39;)</code> returns a <code>utf8</code> object, <code>$str.encode(&#39;ISO-8859-1&#39;)</code> a <code>buf8</code>.</p>
+<h2 id="routine_index"><a class="u" href="#___top" title="go to top of document">routine index</a></h2>
+<pre>multi sub    index(Cool $s, Str:D $needle, Cool $startpos = 0) returns Int
+multi method index(Cool $needle, Cool $startpos = 0) returns Int</pre>
+<p>Searches for <code>$needle</code> in the string starting from <code>$startpos</code>. It returns the offset into the string where <code>$needle</code> was found, and an undefined value if it was not found.</p>
+<p>Examples:</p>
+<pre>say index &quot;Camelia is a butterfly&quot;, &quot;a&quot;;     # 1
+say index &quot;Camelia is a butterfly&quot;, &quot;a&quot;, 2;  # 6
+say index &quot;Camelia is a butterfly&quot;, &quot;er&quot;;    # 17
+say index &quot;Camelia is a butterfly&quot;, &quot;Camel&quot;; # 0
+say index &quot;Camelia is a butterfly&quot;, &quot;Onion&quot;; # Int()</pre>
+<pre>say index(&quot;Camelia is a butterfly&quot;, &quot;Onion&quot;).defined ?? &#39;OK&#39; !! &#39;NOT&#39;; # NOT</pre>
+<h2 id="routine_rindex"><a class="u" href="#___top" title="go to top of document">routine rindex</a></h2>
+<pre>multi sub    rindex(Str:D $haystack, Str:D $needle, Int $startpos = $haystack.chars) returns StrPos
+multi method rindex(Str:D $haystack: Str:D $needle, Int $startpos = $haystack.chars) returns StrPos</pre>
+<p>Returns the last position of <code>$needle</code> in <code>$haystack</code> not after <code>$startpos</code>. Returns an undefined value if <code>$needle</code> wasn&#39;t found.</p>
+<p>Examples:</p>
+<pre>say rindex &quot;Camelia is a butterfly&quot;, &quot;a&quot;;     # 11
+say rindex &quot;Camelia is a butterfly&quot;, &quot;a&quot;, 10; # 6</pre>
+<h2 id="routine_split"><a class="u" href="#___top" title="go to top of document">routine split</a></h2>
+<pre>multi sub    split(  Str:D $delimiter, Str:D $input, $limit = Inf, :$all) returns Positional
+multi sub    split(Regex:D $delimiter, Str:D $input, $limit = Inf, :$all) returns Positional
+multi method split(Str:D $input:   Str:D $delimiter, $limit = Inf, :$all) returns Positional
+multi method split(Str:D $input: Regex:D $delimiter, $limit = Inf, :$all) returns Positional</pre>
+<p>Splits a string up into pieces based on delimiters found in the string.</p>
+<p>If <code>$delimiter</code> is a string, it is searched for literally and not treated as a regex.</p>
+<p>If the named parameter <code>:all</code> is passed, the matches from <code>$delimiter</code> are included in the result list.</p>
+<p>Note that unlike in Perl 5, empty chunks are not removed from the result list. If you want that behavior, consider using <a href="comb">comb</a> instead.</p>
+<p>Examples:</p>
+<pre>say split(&#39;;&#39;, &quot;a;b;c&quot;).perl;          # (&quot;a&quot;, &quot;b&quot;, &quot;c&quot;).list
+say split(&#39;;&#39;, &quot;a;b;c&quot;, :all).perl;    # (&quot;a&quot;, &quot;;&quot;, &quot;b&quot;, &quot;;&quot;, &quot;c&quot;).list
+say split(&#39;;&#39;, &quot;a;b;c&quot;, 2).perl;       # (&quot;a&quot;, &quot;b;c&quot;).list
+say split(&#39;;&#39;, &quot;a;b;c&quot;, 2, :all).perl; #(&quot;a&quot;, &quot;;&quot;, &quot;b;c&quot;).list</pre>
+<pre>say split(&#39;;&#39;, &quot;a;b;c,d&quot;).perl;        # (&quot;a&quot;, &quot;b&quot;, &quot;c,d&quot;).list
+say split(/\;/, &quot;a;b;c,d&quot;).perl;       # (&quot;a&quot;, &quot;b&quot;, &quot;c,d&quot;).list
+say split(/&lt;[;,]&gt;/, &quot;a;b;c,d&quot;).perl;   # (&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;).list</pre>
+<h2 id="routine_comb"><a class="u" href="#___top" title="go to top of document">routine comb</a></h2>
+<pre>multi sub    comb(Str:D   $matcher, Str:D $input, $limit = Inf, Bool :$match) 
+multi sub    comb(Regex:D $matcher, Str:D $input, $limit = Inf, Bool :$match) 
+multi method comb(Str:D $input:)
+multi method comb(Str:D $input: Str:D   $matcher, $limit = Inf, Bool :$match) 
+multi method comb(Str:D $input: Regex:D $matcher, $limit = Inf, Bool :$match) </pre>
+<p>Searches for <code>$matcher</code> in <code>$input</code> and returns a list of all matches (as <code>Str</code> by default, or as <a href="Match">Match</a> if <code>$match</code> is True), limited to at most <code>$limit</code> matches.</p>
+<p>If no matcher is supplied, a list of characters in the string (e.g. <code>$delimiter = rx/./</code>) is returned.</p>
+<p>Examples:</p>
+<pre>comb(/\w/, &quot;a;b;c&quot;).perl;        # (&quot;a&quot;, &quot;b&quot;, &quot;c&quot;).list
+comb(/\N/, &quot;a;b;c&quot;).perl;        # (&quot;a&quot;, &quot;;&quot;, &quot;b&quot;, &quot;;&quot;, &quot;c&quot;).list
+comb(/\w/, &quot;a;b;c&quot;, 2).perl;     # (&quot;a&quot;, &quot;b&quot;).list
+comb(/\w\;\w/, &quot;a;b;c&quot;, 2).perl; # (&quot;a;b&quot;,).list</pre>
+<h2 id="routine_lines"><a class="u" href="#___top" title="go to top of document">routine lines</a></h2>
+<pre>multi sub    lines(Str:D $input, $limit = Inf) returns Positional
+multi method lines(Str:D $input: $limit = Inf) returns Positional</pre>
+<p>Returns a list of lines (without trailing newline characters), i.e. the same as a call to <code>$input.comb( / ^^ \N* /, $limit )</code> would.</p>
+<p>Examples:</p>
+<pre>lines(&quot;a\nb&quot;).perl;    # (&quot;a&quot;, &quot;b&quot;).list
+lines(&quot;a\nb&quot;).elems;   # 2
+&quot;a\nb&quot;.lines.elems;    # 2
+&quot;a\n&quot;.lines.elems;     # 1</pre>
+<h2 id="routine_words"><a class="u" href="#___top" title="go to top of document">routine words</a></h2>
+<pre>multi sub    words(Str:D $input, $limit = Inf) returns Positional
+multi method words(Str:D $input: $limit = Inf) returns Positional</pre>
+<p>Returns a list of non-whitespace bits, i.e. the same as a call to <code>$input.comb( / \S+ /, $limit )</code> would.</p>
+<p>Examples:</p>
+<pre>&quot;a\nb\n&quot;.words.perl;       # (&quot;a&quot;, &quot;b&quot;).list
+&quot;hello world&quot;.words.perl;  # (&quot;hello&quot;, &quot;world&quot;).list
+&quot;foo:bar&quot;.words.perl;      # (&quot;foo:bar&quot;,).list
+&quot;foo:bar\tbaz&quot;.words.perl; # (&quot;foo:bar&quot;, &quot;baz&quot;).list</pre>
+<h2 id="routine_flip"><a class="u" href="#___top" title="go to top of document">routine flip</a></h2>
+<pre>multi sub    flip(Str:D ) returns Str:D
+multi method flip(Str:D:) returns Str:D</pre>
+<p>Returns the string reversed character by character.</p>
+<p>Examples:</p>
+<pre>&quot;Perl&quot;.flip;  # lreP
+&quot;ABBA&quot;.flip;  # ABBA</pre>
+<h2 id="sub_sprintf"><a class="u" href="#___top" title="go to top of document">sub sprintf</a></h2>
+<pre>multi sub sprintf ( Str:D $format, *@args) returns Str:D</pre>
+<p>This function is mostly identical to the C library sprintf function.</p>
+<p>The <code>$format</code> is scanned for <code>%</code> characters. Any <code>%</code> introduces a format token. Format tokens have the following grammar:</p>
+<pre>grammar Str::SprintfFormat {
+ regex format_token { &#39;%&#39;: &lt;index&gt;? &lt;precision&gt;? &lt;modifier&gt;? &lt;directive&gt; }
+ token index { \d+ &#39;$&#39; }
+ token precision { &lt;flags&gt;? &lt;vector&gt;? &lt;precision_count&gt; }
+ token flags { &lt;[ \x20 + 0 \# \- ]&gt;+ }
+ token precision_count { [ &lt;[1..9]&gt;\d* | &#39;*&#39; ]? [ &#39;.&#39; [ \d* | &#39;*&#39; ] ]? }
+ token vector { &#39;*&#39;? v }
+ token modifier { &lt; ll l h V q L &gt; }
+ token directive { &lt; % c s d u o x e f g X E G b p n i D U O F &gt; }
+}</pre>
+<p>Directives guide the use (if any) of the arguments. When a directive (other than <code>%</code>) is used, it indicates how the next argument passed is to be formatted into the string.</p>
+<p>The directives are:</p>
+<table>
+<tbody>
+<tr>
+<td>%</td>
+<td>a literal percent sign</td>
+</tr>
+<tr>
+<td>c</td>
+<td>a character with the given codepoint</td>
+</tr>
+<tr>
+<td>s</td>
+<td>a string</td>
+</tr>
+<tr>
+<td>d</td>
+<td>a signed integer, in decimal</td>
+</tr>
+<tr>
+<td>u</td>
+<td>an unsigned integer, in decimal</td>
+</tr>
+<tr>
+<td>o</td>
+<td>an unsigned integer, in octal</td>
+</tr>
+<tr>
+<td>x</td>
+<td>an unsigned integer, in hexadecimal</td>
+</tr>
+<tr>
+<td>e</td>
+<td>a floating-point number, in scientific notation</td>
+</tr>
+<tr>
+<td>f</td>
+<td>a floating-point number, in fixed decimal notation</td>
+</tr>
+<tr>
+<td>g</td>
+<td>a floating-point number, in %e or %f notation</td>
+</tr>
+<tr>
+<td>X</td>
+<td>like x, but using uppercase letters</td>
+</tr>
+<tr>
+<td>E</td>
+<td>like e, but using an uppercase &quot;E&quot;</td>
+</tr>
+<tr>
+<td>G</td>
+<td>like g, but with an uppercase &quot;E&quot; (if applicable)</td>
+</tr>
+<tr>
+<td>b</td>
+<td>an unsigned integer, in binary</td>
+</tr>
+</tbody>
+</table><p>Compatibility:</p>
+<table>
+<tbody>
+<tr>
+<td>i</td>
+<td>a synonym for %d</td>
+</tr>
+<tr>
+<td>D</td>
+<td>a synonym for %ld</td>
+</tr>
+<tr>
+<td>U</td>
+<td>a synonym for %lu</td>
+</tr>
+<tr>
+<td>O</td>
+<td>a synonym for %lo</td>
+</tr>
+<tr>
+<td>F</td>
+<td>a synonym for %f</td>
+</tr>
+</tbody>
+</table><p>Perl 5 (non-)compatibility:</p>
+<table>
+<tbody>
+<tr>
+<td>n</td>
+<td>produces a runtime exception</td>
+</tr>
+<tr>
+<td>p</td>
+<td>produces a runtime exception</td>
+</tr>
+</tbody>
+</table><p>Modifiers change the meaning of format directives, but are largely no-ops (the semantics are still being determined).</p>
+<table>
+<tbody>
+<tr>
+<td>h interpret integer as native &quot;short&quot; (typically int16)</td>
+</tr>
+<tr>
+<td>l interpret integer as native &quot;long&quot; (typically int32 or int64)</td>
+</tr>
+<tr>
+<td>ll interpret integer as native &quot;long long&quot; (typically int64)</td>
+</tr>
+<tr>
+<td>L interpret integer as native &quot;long long&quot; (typically uint64)</td>
+</tr>
+<tr>
+<td>q interpret integer as native &quot;quads&quot; (typically int64 or larger)</td>
+</tr>
+</tbody>
+</table><p>Examples:</p>
+<pre>sprintf &quot;%ld a big number, %lld a bigger number\n&quot;, 4294967295, 4294967296;</pre>
+<p>Special case: sprintf(&quot;&lt;b&gt;%s&lt;/b&gt;\n&quot;, &quot;Perl 6&quot;) will not work use either of the following:</p>
+<pre>sprintf Q:b &quot;&lt;b&gt;%s&lt;/b&gt;\n&quot;,  &quot;Perl 6&quot;;
+sprintf     &quot;&lt;b&gt;\%s&lt;/b&gt;\n&quot;, &quot;Perl 6&quot;;
+sprintf     &quot;&lt;b&gt;%s\&lt;/b&gt;\n&quot;, &quot;Perl 6&quot;;</pre>
+<h2 id="method_subst"><a class="u" href="#___top" title="go to top of document">method subst</a></h2>
+<pre>multi method subst(Str:D: $matcher, $replacement, *%opts)</pre>
+<p>Returns the invocant string where <code>$matcher</code> is replaced by <code>$replacement</code> (or the original string, if no match was found).</p>
+<p>There is an in-place syntactic variant of <code>subst</code> spelled <code>s/matcher/replacement</code>.</p>
+<p><code>$matcher</code> an be a <a href="Regex">Regex</a>, or a literal <code>Str</code>. Non-Str matcher arguments of type <a href="Cool">Cool</a> are coerced to to <code>Str</code> for literal matching.</p>
+<pre>my $some-string = &quot;Some foo&quot;;
+my $another-string = $some-string.subst(/foo/, &quot;string&quot;); # gives &#39;Some string&#39;
+$some-string.=subst(/foo/, &quot;string&quot;); # in-place substitution. $some-string is now &#39;Some string&#39;</pre>
+<p>The replacement can be a closure:</p>
+<pre>my $i = 41;
+my $str = &quot;The answer is secret.&quot;;
+my $real-answer = $str.subst(/secret/, {++$i}); # The answer to everything</pre>
+<p>Here are other examples of usage:</p>
+<pre>my $str = &quot;Hey foo foo foo&quot;; 
+$str.subst(/foo/, &quot;bar&quot;, :g); # global substitution - returns Hey bar bar bar</pre>
+<pre>$str.subst(/foo/, &quot;no subst&quot;, :x(0)); # targeted substitution. Number of times to substitute. Returns back unmodified.
+$str.subst(/foo/, &quot;bar&quot;, :x(1)); #replace just the first occurrence. </pre>
+<pre>$str.subst(/foo/, &quot;bar&quot;, :nth(3)); # replace nth match alone. Replaces the third foo. Returns Hey foo foo bar</pre>
+<p>The following adverbs are supported</p>
+<table>
+<tbody>
+<tr>
+<td>short long meaning</td>
+<td>short</td>
+<td>long</td>
+<td>meaning</td>
+</tr>
+<tr>
+<td>===== ==== =======</td>
+<td>=====</td>
+<td>====</td>
+<td>=======</td>
+</tr>
+<tr>
+<td>:g :global tries to match as often as possible</td>
+<td>:g</td>
+<td>:global</td>
+<td>tries to match as often as possible</td>
+</tr>
+<tr>
+<td>:nth(Int) only substitute the nth&#39;s match</td>
+<td>:nth(Int)</td>
+<td></td>
+<td>only substitute the nth&#39;s match</td>
+</tr>
+<tr>
+<td>:ss :samespace preserves whitespace on substitution</td>
+<td>:ss</td>
+<td>:samespace</td>
+<td>preserves whitespace on substitution</td>
+</tr>
+<tr>
+<td>:ii :samecase preserves case on substitution</td>
+<td>:ii</td>
+<td>:samecase</td>
+<td>preserves case on substitution</td>
+</tr>
+<tr>
+<td>:x(Int) substitute exactly $x matches</td>
+<td>:x(Int)</td>
+<td></td>
+<td>substitute exactly $x matches</td>
+</tr>
+</tbody>
+</table><p>Note that only in the <code>s///</code> form <code>:ii</code> implies <code>:i</code> and <code>:ss</code> implies <code>:s</code>. In the method form, the <code>:s</code> and <code>:i</code> modifiers must be added to the regex, not the <code>subst</code> method call.</p>
+<h2 id="routine_substr"><a class="u" href="#___top" title="go to top of document">routine substr</a></h2>
+<pre>multi sub    substr(Str:D $s, Int:D $from, Int:D $chars = $s.chars - $from) returns Str:D
+multi method substr(Str:D $s: Int:D $from, Int:D $chars = $s.chars - $from) returns Str:D</pre>
+<p>Returns a part of the string, starting from the character with index <code>$from</code> (where the first character has index 0) and with length <code>$chars</code>.</p>
+<p>Examples:</p>
+<pre>substr(&quot;Long string&quot;, 6, 3);     # tri
+substr(&quot;Long string&quot;, 6);        # tring
+substr(&quot;Long string&quot;, 6, *-1);   # trin
+substr(&quot;Long string&quot;, *-3, *-1); # in</pre>
+<h2 id="method_succ"><a class="u" href="#___top" title="go to top of document">method succ</a></h2>
+<pre>method succ(Str:D) returns Str:D</pre>
+<p>Returns the string incremented by one.</p>
+<p>String increment is &quot;magical&quot;. It searches for the last alphanumeric sequence that is not preceded by a dot, and increments it.</p>
+<pre>&#39;12.34&#39;.succ      # 13.34
+&#39;img001.png&#39;.succ # img002.png</pre>
+<p>The actual incrementation step works by mapping the last alphanumeric character to a character range it belongs to, and choosing the next character in that range, carrying to the previous letter on overflow.</p>
+<pre>&#39;aa&#39;.succ   # ab
+&#39;az&#39;.succ   # ba
+&#39;109&#39;.succ  # 110
+&#39;α&#39;.succ    # β
+&#39;a9&#39;.succ   # b0</pre>
+<p>String increment is Unicode-aware, and generally works for scripts where a character can be uniquely classified as belonging to one range of characters.</p>
+<h2 id="method_pred"><a class="u" href="#___top" title="go to top of document">method pred</a></h2>
+<pre>method pred(Str:D:) returns Str:D</pre>
+<p>Returns the string decremented by one.</p>
+<p>String decrementing is &quot;magical&quot; just like string increment (see <a href="succ">succ</a>). It fails on underflow</p>
+<pre>&#39;b0&#39;.pred           # a9
+&#39;a0&#39;.pred           # Failure
+&#39;img002.png&#39;.pred   # img001.png</pre>
+<h2 id="routine_ord"><a class="u" href="#___top" title="go to top of document">routine ord</a></h2>
+<pre>multi sub ord   (Str:D)  returns Int:D
+multi method ord(Str:D:) returns Int:D</pre>
+<p>Returns the codepoint number of the first character of the string</p>
+<h2 id="method_ords"><a class="u" href="#___top" title="go to top of document">method ords</a></h2>
+<pre>multi method ords(Str:D:) returns Positional</pre>
+<p>Returns a list of codepoint numbers, one for each character in the string.</p>
+<h2 id="method_indent"><a class="u" href="#___top" title="go to top of document">method indent</a></h2>
+<pre>proto method indent($)
+multi method indent(Int $steps where { $_ == 0 } )
+multi method indent(Int $steps where { $_ &gt; 0  } )
+multi method indent($steps where { .isa(Whatever) || .isa(Int) &amp;&amp; $_ &lt; 0 )</pre>
+<p>Indents each line of the string by <code>$steps</code>, if <code>$steps</code> is positive, or dedents it by <code>-$steps</code> if <code>$steps</code> is negative. if <code>$steps</code> is <a href="*"><code>*</code></a>, then the string is dedented to the margin:</p>
+<pre>&quot;  indented by 2 spaces\n    indented even more&quot;.indent(*)
+    eq &quot;indented by 2 spaces\n  indented even more&quot;
+</pre>
+<h2 id="method_trim"><a class="u" href="#___top" title="go to top of document">method trim</a></h2>
+<pre>method trim(Str:D:) returns Str</pre>
+<p>Remove leading and trailing whitespace. It can be use both as a method on strings and as a function. When used as a method it will return the trimmed string. In order to do in-place trimming, once needs to write <code>.=trim</code></p>
+<pre>my $line = &#39;   hello world    &#39;;
+say &#39;&lt;&#39; ~ $line.trim ~ &#39;&gt;&#39;;        # &lt;hello world&gt;
+say &#39;&lt;&#39; ~ trim($line) ~ &#39;&gt;&#39;;       # &lt;hello world&gt;
+$line.trim;
+say &#39;&lt;&#39; ~ $line ~ &#39;&gt;&#39;;             # &lt;   hello world    &gt;
+$line.=trim;
+say &#39;&lt;&#39; ~ $line ~ &#39;&gt;&#39;;             # &lt;hello world&gt;</pre>
+<p>See also <a href="trim-trailing">trim-trailing</a> and <a href="trim-leading">trim-leading</a></p>
+<h2 id="method_trim-trailing"><a class="u" href="#___top" title="go to top of document">method trim-trailing</a></h2>
+<p>Remove the whitespace characters from the end of a string. See also <a href="trim">trim</a>.</p>
+<h2 id="method_trim-leading"><a class="u" href="#___top" title="go to top of document">method trim-leading</a></h2>
+<p>Remove the whitespace characters from the beginning of a string. See also <a href="trim">trim</a>.</p>
+<h2 id="method_ACCEPTS"><a class="u" href="#___top" title="go to top of document">method ACCEPTS</a></h2>
+<pre>multi method ACCEPTS(Str:D: $other)</pre>
+<p>Returns <code>True</code> if the string is <a href="eq">the same as</a> <code>$other</code>.</p>
+
+
+
+</body>
+</html>
+

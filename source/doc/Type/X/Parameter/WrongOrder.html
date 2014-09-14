@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <title>X::Parameter::WrongOrder</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>X::Parameter::WrongOrder</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_misplaced">method misplaced</a></li>
+    <li class="indexItem indexItem2"><a href="#method_parameter">method parameter</a></li>
+    <li class="indexItem indexItem2"><a href="#method_after">method after</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::Parameter::WrongOrder does X::Comp</pre>
+<p>Compile time error that is thrown when parameters in a signature in the wrong order (for example if an optional parameter comes before a mandatory parameter).</p>
+<p>For example</p>
+<pre>sub f($a?, $b) { }</pre>
+<p>produces</p>
+<pre>Cannot put required parameter $b after optional parameters</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_misplaced"><a class="u" href="#___top" title="go to top of document">method misplaced</a></h2>
+<p>Returns the kind of misplaced parameter (for example <code>&quot;mandatory&quot;</code>, <code>&quot;positional&quot;</code>).</p>
+<h2 id="method_parameter"><a class="u" href="#___top" title="go to top of document">method parameter</a></h2>
+<p>Returns the name of the (first) misplaced parameter</p>
+<h2 id="method_after"><a class="u" href="#___top" title="go to top of document">method after</a></h2>
+<p>Returns a string describing other parameters after which the current parameter was illegally placed (for example <code>&quot;variadic&quot;</code>, <code>&quot;positional&quot;</code> or <code>&quot;optional&quot;</code>).</p>
+
+
+
+</body>
+</html>
+

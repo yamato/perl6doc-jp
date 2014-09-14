@@ -1,0 +1,606 @@
+<!doctype html>
+<html>
+<head>
+  <title>Variables</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Variables</h1>
+<p class='subtitle'>Perl 6 Variables</p>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Sigils">Sigils</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Item_and_List_Assignment">Item and List Assignment</a></li>
+    <li class="indexItem indexItem2"><a href="#Sigilless_variables">Sigilless variables</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Twigils">Twigils</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#The_*_Sigil">The <code>*</code> Sigil</a></li>
+    <li class="indexItem indexItem2"><a href="#The_!_Sigil">The <code>!</code> Sigil</a></li>
+    <li class="indexItem indexItem2"><a href="#The_%3F_Sigil">The <code>?</code> Sigil</a></li>
+    <li class="indexItem indexItem2"><a href="#The_._Sigil">The <code>.</code> Sigil</a></li>
+    <li class="indexItem indexItem2"><a href="#The_%3C_Sigil">The <code>&lt;</code> Sigil</a></li>
+    <li class="indexItem indexItem2"><a href="#The_%5E_Sigil">The <code>^</code> Sigil</a></li>
+    <li class="indexItem indexItem2"><a href="#The_%3A_Sigil">The <code>:</code> Sigil</a></li>
+    <li class="indexItem indexItem2"><a href="#The_%3D_Sigil">The <code>=</code> Sigil</a></li>
+    <li class="indexItem indexItem2"><a href="#The_~_Sigil">The <code>~</code> Sigil</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Special_Variables">Special Variables</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Often-Used_Variables">Often-Used Variables</a></li>
+    <ol class="indexList indexList3">
+      <li class="indexItem indexItem3"><a href="#%24_"><code>$_</code></a></li>
+      <li class="indexItem indexItem3"><a href="#%24%2F"><code>$/</code></a></li>
+      <li class="indexItem indexItem3"><a href="#%24!"><code>$!</code></a></li>
+    </ol>
+    <li class="indexItem indexItem2"><a href="#Compile-time_%22constants%22">Compile-time &quot;constants&quot;</a></li>
+    <li class="indexItem indexItem2"><a href="#Dynamic_variables">Dynamic variables</a></li>
+  </ol>
+</ol>
+</nav>
+<p>Variable names start with a special character called a <em>sigil</em>, followed optionally by a second special character named <em>twigil</em>, and then an <em>identifier</em>.</p>
+<h1 id="Sigils"><a class="u" href="#___top" title="go to top of document">Sigils</a></h1>
+<p>The sigil serves both as rough type constraint, and as an indicator as to whether the contents of the variable flatten in list context. See also the documentation in <a href="List">List</a>.</p>
+<table>
+<tbody>
+<tr>
+<td>Sigil Type constraint Default type Flattens Assignment</td>
+<td>Sigil</td>
+<td>Type constraint</td>
+<td>Default type</td>
+<td>Flattens</td>
+<td>Assignment</td>
+</tr>
+<tr>
+<td>===== =============== ============ ======== ==========</td>
+<td>=====</td>
+<td>===============</td>
+<td>============</td>
+<td>========</td>
+<td>==========</td>
+</tr>
+<tr>
+<td>$ Mu (no type constraint) Any No item</td>
+<td>$</td>
+<td>Mu (no type constraint)</td>
+<td>Any</td>
+<td>No</td>
+<td>item</td>
+</tr>
+<tr>
+<td>&amp; Callable Callable No item</td>
+<td>&amp;</td>
+<td>Callable</td>
+<td>Callable</td>
+<td>No</td>
+<td>item</td>
+</tr>
+<tr>
+<td>@ Positional Array Yes list</td>
+<td>@</td>
+<td>Positional</td>
+<td>Array</td>
+<td>Yes</td>
+<td>list</td>
+</tr>
+<tr>
+<td>% Associative Hash Yes list</td>
+<td>%</td>
+<td>Associative</td>
+<td>Hash</td>
+<td>Yes</td>
+<td>list</td>
+</tr>
+</tbody>
+</table><p>Examples:</p>
+<pre>my $square = 9 ** 2;
+my @array  = 1, 2, 3;   # Array variable with three elements
+my %hash   = London =&gt; &#39;UK&#39;, Berlin =&gt; &#39;Germany&#39;;</pre>
+<h2 id="Item_and_List_Assignment"><a class="u" href="#___top" title="go to top of document">Item and List Assignment</a></h2>
+<p>There are two types of assignment, <em>item assignment</em> and <em>list assignment</em>. Both use the equal sign <code>=</code> as operator. The distinction whether an <code>=</code> means item or list assignment is based on the syntax of the left-hand side. (TODO: explain in detail, or do that in <a href="operators">operators</a>).</p>
+<p>Item assignment places the value from the right-hand side into the variable (container) on the left.</p>
+<p>List assignment leaves the choice of what to do to the variable on the left.</p>
+<p>For example <a href="Array">Array</a> variables (<code>@</code> sigil) empty themselves on list assignment, and then put all the values from the right-hand side into themselves. Contrary to item assignment, it means that the type of the variable on the left always stays <code>Array</code>, regardless of the type of the right-hand side.</p>
+<p>Note that the item assignment has tighter precedence than list assignment, and also tighter than the comma. This means that:</p>
+<pre>my @array = my $num = 42, &quot;str&quot;;</pre>
+<p>Assigns <code>42</code> to <code>$num</code>, and both <code>42</code> and <code>&quot;str&quot;</code> to <code>@array</code>. See <a href="operators">operators</a> for more details.</p>
+<h2 id="Sigilless_variables"><a class="u" href="#___top" title="go to top of document">Sigilless variables</a></h2>
+<p>It is possible to create &quot;variables&quot; in Perl 6 that do not have sigils:</p>
+<pre>my \degrees = pi / 180;
+my \θ       = 15 * degrees;</pre>
+<p>Note, however, that these do not create <a href="containers">containers</a>. That means that <code>degrees</code> and <code>θ</code> above actually directly represent <code>Int</code>s. To illustrate, just try assigning to one after you&#39;ve defined it:</p>
+<pre>θ = 3; # Dies with the error &quot;Cannot modify an immutable Int&quot;</pre>
+<h1 id="Twigils"><a class="u" href="#___top" title="go to top of document">Twigils</a></h1>
+<p>Twigils influence the scoping of a variable. Please be aware that twigils have no influence over whether the primary sigil interpolates. That is, if <code>$a</code> interpolates, so do <code>$^a</code>, <code>$*a</code>, <code>$=a</code>, <code>$?a</code>, <code>$.a</code>, etc. It only depends on the $.</p>
+<table>
+<tbody>
+<tr>
+<td>Twigil Scope</td>
+<td>Twigil</td>
+<td>Scope</td>
+</tr>
+<tr>
+<td>====== =====</td>
+<td>======</td>
+<td>=====</td>
+</tr>
+<tr>
+<td>* dynamic</td>
+<td>*</td>
+<td>dynamic</td>
+</tr>
+<tr>
+<td>! attribute (class member)</td>
+<td>!</td>
+<td>attribute (class member)</td>
+</tr>
+<tr>
+<td>? compile-time &quot;constant&quot;</td>
+<td>?</td>
+<td>compile-time &quot;constant&quot;</td>
+</tr>
+<tr>
+<td>. method (not really a variable)</td>
+<td>.</td>
+<td>method (not really a variable)</td>
+</tr>
+<tr>
+<td>&lt; index into match object (not really a variable)</td>
+<td>&lt;</td>
+<td>index into match object (not really a variable)</td>
+</tr>
+<tr>
+<td>^ self-declared formal positional parameter</td>
+<td>^</td>
+<td>self-declared formal positional parameter</td>
+</tr>
+<tr>
+<td>: self-declared formal named parameter</td>
+<td>:</td>
+<td>self-declared formal named parameter</td>
+</tr>
+<tr>
+<td>= Pod variables</td>
+<td>=</td>
+<td>Pod variables</td>
+</tr>
+<tr>
+<td>~ the sublanguage seen by the parser at this lexical spot</td>
+<td>~</td>
+<td>the sublanguage seen by the parser at this lexical spot</td>
+</tr>
+</tbody>
+</table><h2 id="The_*_Sigil"><a class="u" href="#___top" title="go to top of document">The <code>*</code> Sigil</a></h2>
+<p>Dynamic variables are looked up through the caller, not through the outer scope. For example:</p>
+<pre>    my $lexical   = 1;
+    my $*dynamic1 = 10;
+    my $*dynamic2 = 100;
+
+    sub say-all() {
+        say &quot;$lexical, $*dynamic1, $*dynamic2&quot;;
+    }
+
+    # prints 1, 10, 100
+    say-all();
+
+    {
+        my $lexical   = 2;
+        my $*dynamic1 = 11;
+        $*dynamic2    = 101;
+
+        # prints 1, 11, 101
+        say-all();
+    }
+
+    # prints 1, 10, 101
+    say-all();
+</pre>
+<p>The first time <code>&amp;say-all</code> is called, it prints &quot;1, 10, 100&quot; just as one would expect. The second time though, it prints &quot;1, 11, 101&quot;. This is because <code>$lexical</code> isn&#39;t looked up in the caller&#39;s scope but in the scope <code>&amp;say-all</code> was defined in. The two dynamic variables are looked up in the callers scope and therefore have the values 11 and 101. The third time <code>&amp;say-all</code> is called <code>$*dynamic1</code> isn&#39;t 11 anymore, but <code>$*dynamic2</code> is still 101. This stems from the fact that we declared a new dynamic variable <code>$*dynamic1</code> in the block and did not assign to the old variable as we did with <code>$*dynamic2</code>.</p>
+<h2 id="The_!_Sigil"><a class="u" href="#___top" title="go to top of document">The <code>!</code> Sigil</a></h2>
+<p>Attributes are variables that exists per instance of a class. They may be directly accessed from within the class via <code>!</code>:</p>
+<pre>    class Point {
+        has $.x;
+        has $.y;
+
+        method Str() {
+            &quot;($!x, $!y)&quot;
+        }
+    }
+</pre>
+<p>Note how the attributes are declared as <code>$.x</code> and <code>$.y</code> but are still accessed via <code>$!x</code> and <code>$!y</code>. This is because in Perl 6 all attributes are private and can be directly accessed within the class by using <code>$!attribute-name</code>. Perl 6 may automatically generate accessor methods for you though. For more details on objects, classes and their attributes see <a href="objects">objects</a>.</p>
+<h2 id="The_?_Sigil"><a class="u" href="#___top" title="go to top of document">The <code>?</code> Sigil</a></h2>
+<p>Compile-time &quot;constants&quot; may be addressed via the <code>?</code> twigil. They are known to the compiler and may not be modified after being compiled in. A popular example for this is:</p>
+<pre>say &quot;$?FILE: $?LINE&quot;; # prints &quot;hello.pl: 23&quot; if this is the 23 line of a
+                      # file named &quot;hello.pl&quot;.</pre>
+<p>Although they may not be changed at runtime, the user is allowed to (re)define such constants.</p>
+<pre>constant $?TABSTOP = 4; # this causes leading tabs in a heredoc or in a POD
+                        # block&#39;s virtual margin to be counted as 4 spaces.</pre>
+<p>For a list of those special variables see <a href="Compile-time "constants"">Compile-time &quot;constants&quot;</a>.</p>
+<h2 id="The_._Sigil"><a class="u" href="#___top" title="go to top of document">The <code>.</code> Sigil</a></h2>
+<p>The <code>.</code> twigil isn&#39;t really for variables at all. In fact, something along the lines of</p>
+<pre>    class Point {
+        has $.x;
+        has $.y;
+
+        method Str() {
+            &quot;($.x, $.y)&quot; # note that we use the . instead of ! this time
+        }
+    }
+</pre>
+<p>just calls the methods <code>x</code> and <code>y</code> on <code>self</code>, which are automatically generated for you because you used the <code>.</code> twigil as you declared your attributes. Note, however, that subclasses may override those methods. If you don&#39;t want this to happen, use <code>$!x</code> and <code>$!y</code> instead.</p>
+<p>The fact that the <code>.</code> twigil just does a method call also implies that the following is possible too.</p>
+<pre>    class SaySomething {
+        method a() { say &quot;a&quot;; }
+        method b() { $.a; }
+    }
+
+    SaySomething.a; # prints &quot;a&quot;
+</pre>
+<p>For more details on objects, classes and their attributes and methods see <a href="objects">objects</a>.</p>
+<h2 id="The_<_Sigil"><a class="u" href="#___top" title="go to top of document">The <code>&lt;</code> Sigil</a></h2>
+<p>The <code>&lt; </code> twigil is just an alias for <code>$/&lt;...&gt; </code> where <code>$/</code> is the match variable. For more information on the match variable see <a href="$/">$/</a>.</p>
+<h2 id="The_^_Sigil"><a class="u" href="#___top" title="go to top of document">The <code>^</code> Sigil</a></h2>
+<p>The <code>^</code> twigil declares a formal positional parameter to blocks or subroutines. Variables of the form <code>$^variable</code> are a type of placeholder variables. They may be used in bare blocks to declare formal parameters to that block. So the block in the code</p>
+<pre>for ^4 {
+    say &quot;$^seconds follows $^first&quot;;
+}</pre>
+<p>which prints</p>
+<pre>1 follows 0
+3 follows 2</pre>
+<p>has two formal parameters, namely <code>$first</code> and <code>$second</code>. Note that even though <code>$^second</code> appears before <code>$^first</code> in the code, <code>$^first</code> is still the first formal parameter to that block. This is because the placeholder variables are sorted in Unicode order. If you have self-declared a parameter using <code>$^a</code> once you may refer to it using only <code>$a</code> thereafter.</p>
+<p>Subroutines may also make use of placeholder variables but only if they do not have an explicit parameter list. This is true for normal blocks too.</p>
+<pre>sub say-it    { say $^a; } # valid
+sub say-it()  { say $^a; } # invalid
+              { say $^a; } # valid
+-&gt; $x, $y, $x { say $^a; } # invalid</pre>
+<p>Placeholder variables syntactically cannot have any type constraints. Be also aware that one can not have placeholder variables with a single upper-case letter. This is disallowed in favor of being to able to catch some Perl 5-isms.</p>
+<h2 id="The_:_Sigil"><a class="u" href="#___top" title="go to top of document">The <code>:</code> Sigil</a></h2>
+<p>The <code>:</code> twigil declares a formal named parameter to a block or subroutine. Variables declared using this form are a type of placeholder variables too. Therefore the same things that apply to variables declared using the <code>^</code> twigil apply also to them (with the exception that they are not positional and therefore not ordered using Unicode order, of course).</p>
+<p>See <a href="^">^</a> for more details about placeholder variables.</p>
+<h2 id="The_=_Sigil"><a class="u" href="#___top" title="go to top of document">The <code>=</code> Sigil</a></h2>
+<p>The <code>=</code> twigil is used to access Pod variables. Every Pod block in the current file can be accessed via a Pod object, such as <code>$=data</code>, <code>$=SYNOPSIS</code> or <code>=UserBlock</code>. That is: a variable with the same name of the desired block and a <code>=</code> twigil.</p>
+<pre>=begin Foo
+...
+=end Foo
+
+#after that, $=Foo gives you all Foo-Pod-blocks
+</pre>
+<p>You may access the Pod tree which contains all Pod structures as a hierarchical data structure through <code>$=pod</code>.</p>
+<p>Note that all those <code>$=someBlockName</code> support the <code>Positional</code> and the <code>Associative</code> role.</p>
+<h2 id="The_~_Sigil"><a class="u" href="#___top" title="go to top of document">The <code>~</code> Sigil</a></h2>
+<p>The <code>~</code> twigil is for referring to sublanguages (called slangs). The following are useful:</p>
+<pre>$~MAIN       the current main language (e.g. Perl statements)
+$~Quote      the current root of quoting language
+$~Quasi      the current root of quasiquoting language
+$~Regex      the current root of regex language
+$~Trans      the current root of transliteration language
+$~P5Regex    the current root of the Perl 5 regex language</pre>
+<p>You may <code>supersede</code> or <code>augment</code> those languages in your current lexical scope by doing</p>
+<pre>augment slang Regex {  # derive from $~Regex and then modify $~Regex
+    token backslash:std&lt;\Y&gt; { YY };
+}</pre>
+<p>or</p>
+<pre>supersede slang Regex { # completely substitute $~Regex
+    ...
+}</pre>
+<h1 id="Special_Variables"><a class="u" href="#___top" title="go to top of document">Special Variables</a></h1>
+<h2 id="Often-Used_Variables"><a class="u" href="#___top" title="go to top of document">Often-Used Variables</a></h2>
+<p># TODO: find a better heading</p>
+<p>There are three special variables that are available in every block:</p>
+<table>
+<thead><tr>
+<th>Variable Meaning</th>
+<th>Variable</th>
+<th>Meaning</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>$_ topic variable</td>
+<td>$_</td>
+<td>topic variable</td>
+</tr>
+<tr>
+<td>$/ regex match</td>
+<td>$/</td>
+<td>regex match</td>
+</tr>
+<tr>
+<td>$! exceptions</td>
+<td>$!</td>
+<td>exceptions</td>
+</tr>
+</tbody>
+</table><h3 id="$_"><a class="u" href="#___top" title="go to top of document"><code>$_</code></a></h3>
+<p><code>$_</code> is the topic variable. It is the default parameter for blocks that do not have an explicit signature, so constructs like <code>for @array { ... }</code> and <code>given $var { ... }</code> binds to <code>$_</code> simply by invoking the block.</p>
+<pre>for &lt;a b c&gt; { say $_ }  # sets $_ to &#39;a&#39;, &#39;b&#39; and &#39;c&#39; in turn
+say $_ for &lt;a b c&gt;;     # same, even though it&#39;s not a block
+given &#39;a&#39;   { say $_ }  # sets $_ to &#39;a&#39;
+say $_ given &#39;a&#39;;       # same, even though it&#39;s not a block</pre>
+<p><code>CATCH</code> blocks set <code>$_</code> to the exception that was caught. The <code>~~</code> smart-match operator sets <code>$_</code> on the right-hand side expression to the value of the left-hand side.</p>
+<p>Calling a method on <code>$_</code> can be shortened by leaving off the variable name:</p>
+<pre>.say;                   # same as $_.say</pre>
+<p><code>m/regex/</code> and <code>/regex/</code> regex matches and <code>s/regex/subst/</code> substitutions work on <code>$_</code>:</p>
+<pre>say &quot;Looking for strings with non-alphabetic characters...&quot;;
+for &lt;ab:c d$e fgh ij*&gt; {
+    .say if m/&lt;!alpha&gt;/;
+}</pre>
+<p>This outputs:</p>
+<pre>Looking for strings with non-alphabetic characters...
+ab:c
+d$e
+ij*</pre>
+<h3 id="$/"><a class="u" href="#___top" title="go to top of document"><code>$/</code></a></h3>
+<p><code>$/</code> is the match variable. It stores the result of each regex match, and usually contains objects of type <a href="Match">Match</a>.</p>
+<pre>&#39;abc 12&#39; ~~ /\w+/;  # sets $/ to a Match object
+say $/.Str;         # abc</pre>
+<p>The <code>Grammar.parse</code> method also sets the caller&#39;s <code>$/</code> to the resulting <a href="Match">Match</a> object.</p>
+<p>Other match variables are aliases to elements of <code>$/</code>:</p>
+<pre>$0          # same as $/[0]
+$1          # same as $/[1]
+$&lt;named&gt;    # same as $/&lt;named&gt;</pre>
+<h3 id="$!"><a class="u" href="#___top" title="go to top of document"><code>$!</code></a></h3>
+<p><code>$!</code> is the error variable. If a <code>try</code> block or statement prefix catches an exception, that exception is stored in <code>$!</code>. If no exception was caught, <code>$!</code> is set to the <code>Any</code> type object.</p>
+<p>Note that <code>CATCH</code> blocks <em>do not</em> set <code>$!</code>. Rather they set <code>$_</code> inside the block to the caught exception.</p>
+<h2 id="Compile-time_"constants""><a class="u" href="#___top" title="go to top of document">Compile-time &quot;constants&quot;</a></h2>
+<table>
+<tbody>
+<tr>
+<td>$?FILE Which file am I in?</td>
+<td>$?FILE</td>
+<td>Which file am I in?</td>
+</tr>
+<tr>
+<td>$?LINE Which line am I at?</td>
+<td>$?LINE</td>
+<td>Which line am I at?</td>
+</tr>
+<tr>
+<td>&amp;?ROUTINE Which routine am I in?</td>
+<td>&amp;?ROUTINE</td>
+<td>Which routine am I in?</td>
+</tr>
+<tr>
+<td>&amp;?BLOCK Which block am I in?</td>
+<td>&amp;?BLOCK</td>
+<td>Which block am I in?</td>
+</tr>
+<tr>
+<td>%?LANG What is the current set of interwoven languages?</td>
+<td>%?LANG</td>
+<td>What is the current set of interwoven languages?</td>
+</tr>
+</tbody>
+</table><p>Other compile-time constants:</p>
+<table>
+<tbody>
+<tr>
+<td>$?SCOPE Which lexical scope am I in?</td>
+<td>$?SCOPE</td>
+<td>Which lexical scope am I in?</td>
+</tr>
+<tr>
+<td>$?PACKAGE Which package am I in?</td>
+<td>$?PACKAGE</td>
+<td>Which package am I in?</td>
+</tr>
+<tr>
+<td>$?MODULE Which module am I in?</td>
+<td>$?MODULE</td>
+<td>Which module am I in?</td>
+</tr>
+<tr>
+<td>$?CLASS Which class am I in? (as variable)</td>
+<td>$?CLASS</td>
+<td>Which class am I in? (as variable)</td>
+</tr>
+<tr>
+<td>$?ROLE Which role am I in? (as variable)</td>
+<td>$?ROLE</td>
+<td>Which role am I in? (as variable)</td>
+</tr>
+<tr>
+<td>$?GRAMMAR Which grammar am I in?</td>
+<td>$?GRAMMAR</td>
+<td>Which grammar am I in?</td>
+</tr>
+<tr>
+<td>$?TABSTOP How many spaces is a tab in a heredoc or virtual margin?</td>
+<td>$?TABSTOP</td>
+<td>How many spaces is a tab in a heredoc or virtual margin?</td>
+</tr>
+<tr>
+<td>$?USAGE The usage message generated from the signatures of MAIN subs.</td>
+<td>$?USAGE</td>
+<td>The usage message generated from the signatures of MAIN subs.</td>
+</tr>
+<tr>
+<td>$?ENC Default encoding of Str.encode/Buf.decode/various IO methods.</td>
+<td>$?ENC</td>
+<td>Default encoding of Str.encode/Buf.decode/various IO methods.</td>
+</tr>
+</tbody>
+</table><h2 id="Dynamic_variables"><a class="u" href="#___top" title="go to top of document">Dynamic variables</a></h2>
+<table>
+<tbody>
+<tr>
+<td>$*ARGFILES Magic command-line input handle.</td>
+<td>$*ARGFILES</td>
+<td>Magic command-line input handle.</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>@*ARGS Arguments from the command line.</td>
+<td>@*ARGS</td>
+<td>Arguments from the command line.</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*IN Standard input filehandle.</td>
+<td>$*IN</td>
+<td>Standard input filehandle.</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*OUT Standard output filehandle.</td>
+<td>$*OUT</td>
+<td>Standard output filehandle.</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*ERR Standard error filehandle.</td>
+<td>$*ERR</td>
+<td>Standard error filehandle.</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*TZ The system&#39;s local timezone.</td>
+<td>$*TZ</td>
+<td>The system&#39;s local timezone.</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*CWD The Current Working Directory.</td>
+<td>$*CWD</td>
+<td>The Current Working Directory.</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*KERNEL Which kernel am I compiled for?</td>
+<td>$*KERNEL</td>
+<td>Which kernel am I compiled for?</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*DISTRO Which OS distribution am I compiling under</td>
+<td>$*DISTRO</td>
+<td>Which OS distribution am I compiling under</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*VM Which virtual machine am I compiling under</td>
+<td>$*VM</td>
+<td>Which virtual machine am I compiling under</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*PERL Which Perl am I compiled for?</td>
+<td>$*PERL</td>
+<td>Which Perl am I compiled for?</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*PID Process ID of the current process.</td>
+<td>$*PID</td>
+<td>Process ID of the current process.</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*PROGRAM_NAME Path to the current executable as it was typed in on the</td>
+<td>$*PROGRAM_NAME</td>
+<td>Path to the current executable as it was typed in on the</td>
+</tr>
+<tr>
+<td>command line, or C&lt;-e&gt; if perl was invoked with the -e flag.</td>
+<td></td>
+<td>command line, or C&lt;-e&gt; if perl was invoked with the -e flag.</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*EXECUTABLE Absolute path of the perl executable that is currently running.</td>
+<td>$*EXECUTABLE</td>
+<td>Absolute path of the perl executable that is currently running.</td>
+</tr>
+<tr>
+<td>==</td>
+<td>==</td>
+</tr>
+<tr>
+<td>$*EXECUTABLE_NAME The name of the perl executable that is currently running.</td>
+<td>$*EXECUTABLE_NAME</td>
+<td>The name of the perl executable that is currently running.</td>
+</tr>
+<tr>
+<td>(e.g. perl6-p, perl6-m, Niecza.exe)</td>
+<td></td>
+<td>(e.g. perl6-p, perl6-m, Niecza.exe)</td>
+</tr>
+<tr>
+<td>Favor $*EXECUTABLE because it is not guaranteed that the perl</td>
+<td></td>
+<td>Favor $*EXECUTABLE because it is not guaranteed that the perl</td>
+</tr>
+<tr>
+<td>executable is in PATH.</td>
+<td></td>
+<td>executable is in PATH.</td>
+</tr>
+</tbody>
+</table>
+
+
+</body>
+</html>
+

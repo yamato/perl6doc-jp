@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Backtrace</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Backtrace</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_new">method new</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Str">method Str</a></li>
+    <li class="indexItem indexItem2"><a href="#method_full">method full</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Backtrace is List { ... }</pre>
+<p>A backtrace shows the dynamic call stack, usually leading up to a point where an exception was thrown.</p>
+<p>It is a List of <a href="Backtrace::Frame">Backtrace::Frame</a> objects. Its default stringification excludes backtrace frames that are deemed unnecessary or confusing, for example routines like <code>&amp;die</code> are hidden by default.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_new"><a class="u" href="#___top" title="go to top of document">method new</a></h2>
+<pre>proto method new(*@, *%) {*}
+multi method new()</pre>
+<p>Creates a new backtrace, using its calling location as the origin of the backtrace.</p>
+<h2 id="method_Str"><a class="u" href="#___top" title="go to top of document">method Str</a></h2>
+<pre>multi method Str(Backtrace:D:) returns Str:D:</pre>
+<p>Returns a concise string representation of the backtrace, omitting routines marked as <code>is hidden_from_backtrace</code>, and at the discretion of the implementor, also some routines from the setting.</p>
+<h2 id="method_full"><a class="u" href="#___top" title="go to top of document">method full</a></h2>
+<pre>multi method full(Backtrace:D:) returns Str:D:</pre>
+<p>Returns a full string representation of the backtrace, including hidden frames, compiler-specific frames and those from the setting.</p>
+
+
+
+</body>
+</html>
+

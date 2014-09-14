@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Backtrace::Frame</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Backtrace::Frame</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_file">method file</a></li>
+    <li class="indexItem indexItem2"><a href="#method_line">method line</a></li>
+    <li class="indexItem indexItem2"><a href="#method_code">method code</a></li>
+    <li class="indexItem indexItem2"><a href="#method_subname">method subname</a></li>
+    <li class="indexItem indexItem2"><a href="#method_is-hidden">method is-hidden</a></li>
+    <li class="indexItem indexItem2"><a href="#method_is-routine">method is-routine</a></li>
+    <li class="indexItem indexItem2"><a href="#method_is-setting">method is-setting</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Backtrace::Frame { }</pre>
+<p>A single backtrace frame. It identifies a location in the source code.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_file"><a class="u" href="#___top" title="go to top of document">method file</a></h2>
+<pre>method file(Backtrace::Frame:D) returns Str</pre>
+<p>Returns the file name.</p>
+<h2 id="method_line"><a class="u" href="#___top" title="go to top of document">method line</a></h2>
+<pre>method line(Backtrace::Frame:D) returns Int</pre>
+<p>Returns the line number (line numbers start to count from 1).</p>
+<h2 id="method_code"><a class="u" href="#___top" title="go to top of document">method code</a></h2>
+<pre>method code(Backtrace::Frame:D)</pre>
+<p>Returns the code object into which <code>.file</code> and <code>.line</code> point, if available.</p>
+<h2 id="method_subname"><a class="u" href="#___top" title="go to top of document">method subname</a></h2>
+<pre>method subname(Backtrace::Frame:D) returns Str</pre>
+<p>Returns the name of the enclosing subroutine.</p>
+<h2 id="method_is-hidden"><a class="u" href="#___top" title="go to top of document">method is-hidden</a></h2>
+<pre>method is-hidden(Backtrace::Frame:D) return Bool:D</pre>
+<p>Returns <code>True</code> if the frame is marked as hidden with the <code>is hidden_from_backtrace</code> trait.</p>
+<h2 id="method_is-routine"><a class="u" href="#___top" title="go to top of document">method is-routine</a></h2>
+<pre>method is-routine(Backtrace::Frame:D) return Bool:D</pre>
+<p>Return <code>True</code> if the frame point into a routine (and not into a mere <a href="Block">Block</a>).</p>
+<h2 id="method_is-setting"><a class="u" href="#___top" title="go to top of document">method is-setting</a></h2>
+<pre>method is-setting(Backtrace::Frame:D) return Bool:D</pre>
+<p>Returns <code>True</code> if the frame is part of a setting.</p>
+
+
+
+</body>
+</html>
+

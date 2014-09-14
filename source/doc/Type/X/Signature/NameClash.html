@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::Signature::NameClash</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::Signature::NameClash</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_name">method name</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>my class X::Signature::NameClash does X::Comp { }</pre>
+<p>Compile time error thrown when two named parameters have the same name, potentially through aliases.</p>
+<p>For example</p>
+<pre>sub f(:$a, :a(:@b)) { }</pre>
+<p>dies with</p>
+<pre>===SORRY!===
+Name a used for more than one named parameter</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_name"><a class="u" href="#___top" title="go to top of document">method name</a></h2>
+<pre>method name() returns Str:D</pre>
+<p>Returns the name that was used for more than one parameter.</p>
+
+
+
+</body>
+</html>
+

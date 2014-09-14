@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <title>Code</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Code</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_ACCEPTS">method ACCEPTS</a></li>
+    <li class="indexItem indexItem2"><a href="#method_arity">method arity</a></li>
+    <li class="indexItem indexItem2"><a href="#method_count">method count</a></li>
+    <li class="indexItem indexItem2"><a href="#method_signature">method signature</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Str">method Str</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Code is Any does Callable { ... }</pre>
+<p><code>Code</code> is the ultimate base class of all code objects in Perl 6. It exposes functionality that all code objects have. While thunks are directly of type <code>Code</code>, most code objects (such as those resulting from blocks, subroutines or methods) will be of some subclass of <code>Code</code>.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_ACCEPTS"><a class="u" href="#___top" title="go to top of document">method ACCEPTS</a></h2>
+<pre>multi method ACCEPTS(Code:D: Mu $topic)</pre>
+<p>Usually calls the code object and passes <code>$topic</code> as an argument. However, when called on a code object that takes no arguments, the code object is invoked with no arguments and <code>$topic</code> is dropped. The result of the call is returned.</p>
+<h2 id="method_arity"><a class="u" href="#___top" title="go to top of document">method arity</a></h2>
+<pre>method arity(Code:D:) returns Int:D</pre>
+<p>Returns the minimum number of positional arguments that must be passed in order to call the code object. Any optional or slurpy parameters in the code object&#39;s <code>Signature</code> do not contribute, nor do named parameters.</p>
+<pre>sub argless() { }
+sub args($a, $b?) { }
+sub slurpy($a, $b, *@c) { }
+say &amp;argless.arity;             # 0
+say &amp;args.arity;                # 1
+say &amp;slurpy.arity;              # 2</pre>
+<h2 id="method_count"><a class="u" href="#___top" title="go to top of document">method count</a></h2>
+<pre>method count(Code:D:) returns Real:D</pre>
+<p>Returns the maximum number of positional arguments that may be passed when calling the code object. For code objects that can accept any number of positional arguments (that is, they have a slurpy parameter), <code>count</code> will return <code>Inf</code>. Named parameters do not contribute.</p>
+<pre>sub argless() { }
+sub args($a, $b?) { }
+sub slurpy($a, $b, *@c) { }
+say &amp;argless.count;             # 0
+say &amp;args.count;                # 2
+say &amp;slurpy.count;              # Inf</pre>
+<h2 id="method_signature"><a class="u" href="#___top" title="go to top of document">method signature</a></h2>
+<pre>multi method signature(Code:D:) returns Signature:D</pre>
+<p>Returns the <code>Signature</code> object for this code object, which describes its parameters.</p>
+<h2 id="method_Str"><a class="u" href="#___top" title="go to top of document">method Str</a></h2>
+<pre>multi method Str(Code:D:) returns Str:D</pre>
+<p>Returns the name of the code object.</p>
+<pre>sub marine() { }
+say ~&amp;marine;   # marine</pre>
+
+
+
+</body>
+</html>
+

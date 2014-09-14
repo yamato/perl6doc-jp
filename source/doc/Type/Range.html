@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Range</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Range</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_min">method min</a></li>
+    <li class="indexItem indexItem2"><a href="#method_excludes_min">method excludes_min</a></li>
+    <li class="indexItem indexItem2"><a href="#method_max">method max</a></li>
+    <li class="indexItem indexItem2"><a href="#method_excludes_max">method excludes_max</a></li>
+    <li class="indexItem indexItem2"><a href="#method_bounds">method bounds</a></li>
+    <li class="indexItem indexItem2"><a href="#method_list">method list</a></li>
+    <li class="indexItem indexItem2"><a href="#method_flat">method flat</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Range is Iterable does Positional { ... }</pre>
+<p>Ranges serve two main purposes: to generate lists of consecutive numbers or strings, and to act as a matcher to check if a number or string is within a certain range.</p>
+<p>Ranges are constructed using one of the four possible range operators, which consist of two dots, and optionally a caret which indicates that the endpoint marked with it is excluded from the range.</p>
+<pre>1 .. 5
+1^.. 5  # start point excluded
+1 ..^5  # end point excluded
+1^..^5  # start and end point excluded</pre>
+<p>The caret is also a prefix operator for constructing numeric ranges starting from zero:</p>
+<pre>^$x     # same as 0 ..^ $x.Numeric</pre>
+<p>Iterating a range (or calling the <code>list</code> method) uses the same semantics as the <code>++</code> prefix and postfix operators, i.e. it calls the <code>succ</code> method on the start point, and then generated elements). </p>
+<p>Ranges always go from small to larger elements; if the start point is bigger than the end point, the range is considered empty.</p>
+<pre>for 1..5 { .say }       # five iterations
+(&#39;a&#39; ^..^ &#39;f&#39;).list     # &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;
+5 ~~ ^5;                # False
+(1.1..5).list;          # (1.1, 2.1, 3.1, 4.1)</pre>
+<p>Use the <code>...</code> sequence operator to produce lists of elements that go from larger to smaller values, or to use offsets other than increment-by-1.</p>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_min"><a class="u" href="#___top" title="go to top of document">method min</a></h2>
+<pre>method min(Range:D:)</pre>
+<p>Returns the start point of the range.</p>
+<h2 id="method_excludes_min"><a class="u" href="#___top" title="go to top of document">method excludes_min</a></h2>
+<pre>method excludes_min(Range:D:) returns Bool:D</pre>
+<p>Returns <code>True</code> if the start point is excluded from the range, and <code>False</code> otherwise.</p>
+<h2 id="method_max"><a class="u" href="#___top" title="go to top of document">method max</a></h2>
+<pre>method max(Range:D:)</pre>
+<p>Returns the end point of the range.</p>
+<h2 id="method_excludes_max"><a class="u" href="#___top" title="go to top of document">method excludes_max</a></h2>
+<pre>method excludes_max(Range:D:) returns Bool:D</pre>
+<p>Returns <code>True</code> if the end point is excluded from the range, and <code>False</code> otherwise.</p>
+<h2 id="method_bounds"><a class="u" href="#___top" title="go to top of document">method bounds</a></h2>
+<pre>method bounds(Range:D:) returns Positional</pre>
+<p>Returns a list consisting of the start and end point.</p>
+<h2 id="method_list"><a class="u" href="#___top" title="go to top of document">method list</a></h2>
+<pre>method list(Range:D:) returns List:D</pre>
+<p>Generates the list of elements that the range represents.</p>
+<h2 id="method_flat"><a class="u" href="#___top" title="go to top of document">method flat</a></h2>
+<pre>method flat(Range:D:) returns List:D</pre>
+<p>Generates the list of elements that the range represents.</p>
+
+
+
+</body>
+</html>
+

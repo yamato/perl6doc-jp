@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <title>Duration</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Duration</h1>
+<nav class="indexgroup">
+</nav>
+<pre>class Duration is Cool does Real { }</pre>
+<p>A <code>Duration</code> represents a length of time in atomic seconds, with fractions. Like an <a href="Instant">Instant</a>, it is epoch-agnostic. In numeric contexts (situations where a <code>Duration</code> is used as a number), a <code>Duration</code> will return either a <a href="Rat">Rat</a> or a <a href="FatRat">FatRat</a> representing the number of seconds it holds.</p>
+<p><code>Duration</code>s can be subtracted from or added to <code>Instant</code>s to yield another, new <code>Instant</code>. Subtracting one <code>Instant</code> from another yields a <code>Duration</code>. A <code>Duration</code> can also result from mathematical operations between two <code>Duration</code>s when it makes sense (namely, the addition, subtraction, or modulus of two <code>Duration</code>s). The type of object returned for other numeric operations is currently unspecified.</p>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::IO::Mkdir</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::IO::Mkdir</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_path">method path</a></li>
+    <li class="indexItem indexItem2"><a href="#method_mode">method mode</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::IO::Mkdir does X::IO is Exception</pre>
+<p>Error class for failed <a href="mkdir">mkdir</a> operations.</p>
+<p>A typical error message is</p>
+<pre>Failed to create directory &#39;destination&#39; with mode &#39;0o755&#39;: File exists</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_path"><a class="u" href="#___top" title="go to top of document">method path</a></h2>
+<p>Returns the path that the <a href="mkdir">mkdir</a> operation failed to create.</p>
+<h2 id="method_mode"><a class="u" href="#___top" title="go to top of document">method mode</a></h2>
+<p>Returns the permissions mask of the failed <a href="mkdir">mkdir</a> operation as an <a href="Int">Int</a>.</p>
+
+
+
+</body>
+</html>
+

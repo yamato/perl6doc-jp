@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::Temporal::Truncation</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::Temporal::Truncation</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_invocant">method invocant</a></li>
+    <li class="indexItem indexItem2"><a href="#method_error">method error</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::Temporal::Truncation does X::Temporal { }</pre>
+<p>Thrown when <code>DateTime.truncated-to</code> or <code>Date.truncated-to</code> are called in a way that doesn&#39;t make sense.</p>
+<p>For example</p>
+<pre>Date.new(2012, 08, 24).truncated-to(:microsecond);</pre>
+<p>dies with</p>
+<pre>Error while truncating 2012-08-24: unknown truncation unit &#39;microsecond&#39;</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_invocant"><a class="u" href="#___top" title="go to top of document">method invocant</a></h2>
+<p>Returns the object on which the failed <code>truncated-to</code> method was called.</p>
+<h2 id="method_error"><a class="u" href="#___top" title="go to top of document">method error</a></h2>
+<p>Returns a textual description of what actually went wrong.</p>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+  <title>class EnumMap</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class EnumMap</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_new">method new</a></li>
+    <li class="indexItem indexItem2"><a href="#method_elems">method elems</a></li>
+    <li class="indexItem indexItem2"><a href="#method_ACCEPTS">method ACCEPTS</a></li>
+    <li class="indexItem indexItem2"><a href="#method_keys">method keys</a></li>
+    <li class="indexItem indexItem2"><a href="#method_values">method values</a></li>
+    <li class="indexItem indexItem2"><a href="#method_pairs">method pairs</a></li>
+    <li class="indexItem indexItem2"><a href="#method_invert">method invert</a></li>
+    <li class="indexItem indexItem2"><a href="#method_kv">method kv</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class EnumMap does Associative is Iterable { }</pre>
+<p>An EnumMap is an immutable mapping from string keys to values of arbitrary types. It serves as a base class for <a href="Hash">Hash</a>, which is mutable.</p>
+<p>In list context an EnumMap behaves as a list of <a href="Pair">Pair</a> objects.</p>
+<p>Note that the order in which keys, values and pairs are retrieved is generally arbitrary, but the <code>keys</code>, <code>values</code> and <code>pairs</code> methods return them always in the same order when called on the same object.</p>
+<pre>my %e := EnumMap.new(&#39;a&#39;, 1, &#39;b&#39;, 2);
+say %e.keys;    # can print &quot;a b\n&quot; or &quot;b a\n&quot;;
+say %e.values;  # prints &quot;1 2\n&quot; if the previous line
+                # printed &quot;a b\n&quot;, &quot;b a\n&quot; otherwise</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_new"><a class="u" href="#___top" title="go to top of document">method new</a></h2>
+<pre>proto method new(*@, *%) {*}
+multi method new(*@args, *%pairs) </pre>
+<p>Creates a new EnumMap from a list of alternating keys and values, with the same semantics as described for hash assigning in the <a href="Hash">Hash</a> documentation.</p>
+<h2 id="method_elems"><a class="u" href="#___top" title="go to top of document">method elems</a></h2>
+<pre>method elems(EnumMap:D:) returns Int:D:</pre>
+<p>Returns the number of pairs stored in the EnumMap.</p>
+<h2 id="method_ACCEPTS"><a class="u" href="#___top" title="go to top of document">method ACCEPTS</a></h2>
+<pre>multi method ACCEPTS(EnumMap:D: Positional $topic)
+multi method ACCEPTS(EnumMap:D: Cool:D     $topic)
+multi method ACCEPTS(EnumMap:D: Regex      $topic)
+multi method ACCEPTS(EnumMap:D: Any        $topic)</pre>
+<p>Used in smart-matching if the right-hand side is an <code>EnumMap</code>.</p>
+<p>If the topic is list-like (<a href="Positional">Positional</a>), returns True if any of the list elements exist as a key in the EnumMap.</p>
+<p>If the topic is of type <code>Cool</code> (strings, integers etc.), returns True if the topic exists as a key.</p>
+<p>If the topic is a regex, returns True if any of the keys match the regex.</p>
+<p>As a fallback, the topic is coerced to a list, and the <code>Positional</code> behavior is applied.</p>
+<p>To retrieve a value from the EnumMap by key, use the <code>{ }</code> postcircumfix operator:</p>
+<pre>my $value = $enummap{$key};</pre>
+<p>To check whether a given key is stored in an EnumMap, modify the access with the <code>:exists</code> adverb:</p>
+<pre>if %h{$key}:exists {
+    say &quot;%h{} has key $key&quot;;
+}</pre>
+<p>Note that Rakudo does not yet implement operator adverbs. As a workaround you can use the non-standard <code>exists</code> method.</p>
+<h2 id="method_keys"><a class="u" href="#___top" title="go to top of document">method keys</a></h2>
+<pre>method keys(EnumMap:D:) returns List:D</pre>
+<p>Returns a list of all keys in the EnumMap.</p>
+<h2 id="method_values"><a class="u" href="#___top" title="go to top of document">method values</a></h2>
+<pre>method values(EnumMap:D:) returns List:D</pre>
+<p>Returns a list of all values in the EnumMap.</p>
+<h2 id="method_pairs"><a class="u" href="#___top" title="go to top of document">method pairs</a></h2>
+<pre>method pairs(EnumMap:D:) returns List:D</pre>
+<p>Returns a list of all pairs in the EnumMap.</p>
+<h2 id="method_invert"><a class="u" href="#___top" title="go to top of document">method invert</a></h2>
+<pre>method invert(EnumMap:D:) returns List:D</pre>
+<p>Returns a list of pairs, but with key and value exchanged.</p>
+<h2 id="method_kv"><a class="u" href="#___top" title="go to top of document">method kv</a></h2>
+<pre>method kv(EnumMap:D:) returns List:D</pre>
+<p>Returns a list of keys and values interleaved.</p>
+<pre>EnumMap.new(&#39;a&#39;, 1, &#39;b&#39;, 2).kv  # a, 1, b, 2 OR b, 2, a, 1</pre>
+
+
+
+</body>
+</html>
+

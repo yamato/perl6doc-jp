@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::Parameter::Twigil</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::Parameter::Twigil</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_parameter">method parameter</a></li>
+    <li class="indexItem indexItem2"><a href="#method_twigil">method twigil</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::Parameter::Twigil does X::Comp</pre>
+<p>Thrown when a parameter in a signature has a twigil that it may not have. Only <code>!</code>, <code>.</code> and <code>*</code> as twigils are allowed.</p>
+<p>Example:</p>
+<pre>sub f($=foo) { }</pre>
+<p>produces</p>
+<pre>===SORRY!===
+In signature parameter $=foo, it is illegal to use the = twigil</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_parameter"><a class="u" href="#___top" title="go to top of document">method parameter</a></h2>
+<p>The name of the offensive parameter (<code>$=foo</code> in the example above)</p>
+<h2 id="method_twigil"><a class="u" href="#___top" title="go to top of document">method twigil</a></h2>
+<p>The illegally used twigil.</p>
+
+
+
+</body>
+</html>
+

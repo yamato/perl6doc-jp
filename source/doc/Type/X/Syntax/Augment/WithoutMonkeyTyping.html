@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::Syntax::Augment::WithoutMonkeyTyping</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::Syntax::Augment::WithoutMonkeyTyping</h1>
+<nav class="indexgroup">
+</nav>
+<pre>class X::Syntax::Augment::WithoutMonkeyTyping does X::Syntax { }</pre>
+<p>Compile time error thrown when <code>augment</code> is used without <code>use MONKEY_TYPING</code>.</p>
+<p>Since <code>augment</code> is considered a rather unsafe and impolate action, you have to pre-declare your intent with the <code>use MONKEY_TYPING;</code> pragma.</p>
+<p>If you don&#39;t do that, for example</p>
+<pre>augment class Int { };</pre>
+<p>you get the error</p>
+<pre>===SORRY!===
+augment not allowed without &#39;use MONKEY_TYPING&#39;</pre>
+
+
+
+</body>
+</html>
+

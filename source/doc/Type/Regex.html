@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Regex</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Regex</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_ACCEPTS">method ACCEPTS</a></li>
+    <li class="indexItem indexItem2"><a href="#method_Bool">method Bool</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Regex is Method { }</pre>
+<p>A regex is a kind of pattern that describes a set of strings. The process of finding out whether a given string is in the set is called <em>matching</em>. The result of such a matching is a <a href="Match">Match</a> object, which evaluates to <code>True</code> in boolean context if the string is in the set.</p>
+<p>A regex is typically constructed by a regex literal</p>
+<pre>rx/ ^ab /;      # describes all strings starting with &#39;ab&#39;
+/ ^ ab /;       # same
+rx/ \d ** 2/;   # describes all strings containing at least two digits</pre>
+<p>To match a string against a regex, you can use the smart match operator:</p>
+<pre>my $match = &#39;abc&#39; ~~ rx/ ^ab /;
+say $match.True;                # True
+say $match.orig;                # abc
+say $match.Str;                 # ab
+say $match.from;                # 0
+say $match.to;                  # 2</pre>
+<p>Or you can evaluate the regex in boolean context, in which case it matches against the <code>$_</code> variable</p>
+<pre>$_ = &#39;abc&#39;;
+if / ^ab / {
+    say &#39;&quot;abc&quot; begins with &quot;ab&quot;&#39;;
+}
+else {
+    say &#39;This is a weird alternative Universe&#39;;
+}</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_ACCEPTS"><a class="u" href="#___top" title="go to top of document">method ACCEPTS</a></h2>
+<pre>multi method ACCEPTS(Regex:D: Mu) returns Match:D
+multi method ACCEPTS(Regex:D: @)
+multi method ACCEPTS(Regex:D: %)</pre>
+<p>Matches the regex against the argument passed in. If the argument is <a href="Positional">Positional</a>, it returns the first successful match of any list item. If the argument is <a href="Associative">Associative</a>, it returns the first successful match of any key. Otherwise it interprets the argument as a <a href="Str">Str</a> and matches against it.</p>
+<p>In the case of Positional and Associative matches, <a href="Nil">Nil</a> is returned on failure.</p>
+<h2 id="method_Bool"><a class="u" href="#___top" title="go to top of document">method Bool</a></h2>
+<pre>multi method Bool(Regex:D:) returns Bool:D</pre>
+<p>Matches against the caller&#39;s <a href="$_">$_</a> variable, and returns the <a href="Match">Match</a> object</p>
+
+
+
+</body>
+</html>
+

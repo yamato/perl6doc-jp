@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <title>class X::AdHoc</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class X::AdHoc</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_payload">method payload</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class X::AdHoc is Exception { ... }</pre>
+<p><code>X::AdHoc</code> is the type into which objects are wrapped if they are thrown as exceptions, but don&#39;t inherit from <a href="Exception">Exception</a>.</p>
+<p>Its benefit over returning non-<code>Exception</code> objects is that it gives access to all the methods from class <a href="Exception">Exception</a>, like <code>backtrace</code> and <code>rethrow</code>.</p>
+<p>You can obtain the original object with the <code>payload</code> method.</p>
+<pre>try {
+    die [404, &#39;File not found&#39;]; # throw non-exception object
+}
+say &quot;Got HTTP code &quot;,
+    $!.payload[0],          # 404
+    &quot; and backtrace &quot;,
+    $!.backtrace;</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_payload"><a class="u" href="#___top" title="go to top of document">method payload</a></h2>
+<pre>method payload(X::AdHoc:D)</pre>
+<p>Returns the original object which was passed to <code>die</code>.</p>
+
+
+
+</body>
+</html>
+

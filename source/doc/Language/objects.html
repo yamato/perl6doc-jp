@@ -1,0 +1,461 @@
+<!doctype html>
+<html>
+<head>
+  <title>Object Orientation</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Object Orientation</h1>
+<p class='subtitle'>Object Orientation in Perl 6</p>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Using_Objects">Using Objects</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Type_Objects">Type Objects</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Classes">Classes</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Attributes">Attributes</a></li>
+    <li class="indexItem indexItem2"><a href="#Methods">Methods</a></li>
+    <li class="indexItem indexItem2"><a href="#self">self</a></li>
+    <li class="indexItem indexItem2"><a href="#Private_Methods">Private Methods</a></li>
+    <li class="indexItem indexItem2"><a href="#Submethods">Submethods</a></li>
+    <li class="indexItem indexItem2"><a href="#Inheritance">Inheritance</a></li>
+    <li class="indexItem indexItem2"><a href="#Object_Construction">Object Construction</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Roles">Roles</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#Role_Application">Role Application</a></li>
+    <li class="indexItem indexItem2"><a href="#Stubs">Stubs</a></li>
+  </ol>
+  <li class="indexItem indexItem1"><a href="#Meta-Object_Programming_and_Introspection">Meta-Object Programming and Introspection</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#class_Perl6%3A%3AMetamodel%3A%3AClassHOW">class Perl6::Metamodel::ClassHOW</a></li>
+    <ol class="indexList indexList3">
+      <li class="indexItem indexItem3"><a href="#method_can">method can</a></li>
+      <li class="indexItem indexItem3"><a href="#method_methods">method methods</a></li>
+      <li class="indexItem indexItem3"><a href="#method_mro">method mro</a></li>
+      <li class="indexItem indexItem3"><a href="#method_name">method name</a></li>
+      <li class="indexItem indexItem3"><a href="#method_parents">method parents</a></li>
+      <li class="indexItem indexItem3"><a href="#method_attributes">method attributes</a></li>
+    </ol>
+  </ol>
+</ol>
+</nav>
+<p>Perl 6 is an object oriented language at its core, even though it allows you to write programs in other programming styles.</p>
+<p>Perl 6 comes with a wealth of predefined types, which can be classified in two categories: normal and <em>native</em> types.</p>
+<p>Native types are used for low-level types (like <code>uint64</code>). They do not have the same capabilities as objects, though if you call methods on them, they are <em>boxed</em> into normal objects.</p>
+<p>Everything that you can store in a variable is either a native value, or an object. That includes literals, types (type objects), code and containers.</p>
+<h1 id="Using_Objects"><a class="u" href="#___top" title="go to top of document">Using Objects</a></h1>
+<p>You can use objects by calling methods on them. To call a method on an expression, add a dot, followed by the method name:</p>
+<pre><a href="say">say</a> &quot;abc&quot;<strong>.<a href="uc">uc</a></strong>; 
+# ABC
+</pre>
+<p>This calls the <a href="uc"><code>uc</code></a> method on <code>&quot;abc&quot;</code>, which is an object of type <a href="Str"><code>Str</code></a>. If you need to supply arguments to the method, add parentheses after the method name with the arguments inside the parentheses:</p>
+<pre>my $formatted-text = &quot;Fourscore and seven years ago...&quot;.<a href="indent">indent</a><strong>(8)</strong>;
+</pre>
+<p><code>$formatted-text</code> now contains the above text, but indented 8 spaces.</p>
+<p>Multiple arguments just require a comma between them:</p>
+<pre>my @words = &quot;Abe&quot;, &quot;Lincoln&quot;;
+@words.<a href="push">push</a>(&quot;said&quot;<strong>,</strong> $formatted-text.<a href="comb">comb</a>(<a href="/language/regexes">/\w+/</a>));
+</pre>
+<p>Another method call syntax separates the method name and the argument list with a colon:</p>
+<pre>say @words.<a href="join">join</a>: &#39;--&#39;;
+# Abe--Lincoln--said--Fourscore--and--seven--years--ago
+</pre>
+<p>Since you have to put a <code>:</code> after the method if you want to pass arguments without parenthesis, a method call without a colon or parens is unambiguously a method call without an argument list:</p>
+<pre>$computation-result.say;</pre>
+<p>Many operations that don&#39;t look like method calls (for example, smart matching, or interpolating an object into a string) result in method calls under the hood.</p>
+<p>Methods can return mutable containers, in which case you can assign to the return value of a method call. This is how read-writable attributes to objects are used:</p>
+<pre>$*IN.<a href="input-line-separator">input-line-separator</a> = &quot;\r\n&quot;;
+</pre>
+<p>Here, we are call the method <code>input-line-separator</code> on the <code>$*IN</code> object, give it no arguments, and assign to the container it returned with the <a href="="><code>=</code></a> operator.</p>
+<p>All objects support the methods from class <a href="Mu">Mu</a>, which is the root of the type hierarchy. In other words, all objects are derived from <code>Mu</code>.</p>
+<h2 id="Type_Objects"><a class="u" href="#___top" title="go to top of document">Type Objects</a></h2>
+<p>Types themselves are objects, and you can get the <em>type object</em> simply by writing its name:</p>
+<pre>my $int-type-obj = Int;</pre>
+<p>You can ask any object for its type object by calling the <code>WHAT</code> method (which is actually a macro in method form):</p>
+<pre>my $int-type-obj = 1.WHAT;</pre>
+<p>Type objects (other than <a href="Mu">Mu</a>) can be compared for equality with the <a href="==="><code>===</code></a> identity operator:</p>
+<pre>sub f(Int $x) {
+    if $x.WHAT <strong><a href="===">===</a></strong> Int {
+        say &#39;you passed an Int&#39;;
+    }
+    else {
+        say &#39;you passed a subtype of Int&#39;;
+    }
+}
+</pre>
+<p>Although, in most cases, the <a href="isa"><code>.isa</code></a> method will suffice:</p>
+<pre>sub f(Int $x) {
+    if $x<strong>.<a href="isa">isa</a></strong>(Int) {
+        ...
+    }
+    ...
+}
+</pre>
+<p>Subtype checking is done by smart-matching:</p>
+<pre>if $type <strong><a href="~~">~~</a></strong> <a href="Real">Real</a> {
+    say &#39;$type contains Real or a subtype thereof&#39;;
+}
+</pre>
+<h1 id="Classes"><a class="u" href="#___top" title="go to top of document">Classes</a></h1>
+<p>Classes are declared using the <code>class</code> keyword, typically followed by a name.</p>
+<pre>class Journey {
+}</pre>
+<p>This declaration results in a type object being created and installed in the current package and current lexical scope under the name <code>Journey</code>. You can also declare classes lexically:</p>
+<pre>my class Journey {
+}</pre>
+<p>This restricts their visibility to the current lexical scope, which can be useful if the class is an implementation detail nested inside a module or another class.</p>
+<h2 id="Attributes"><a class="u" href="#___top" title="go to top of document">Attributes</a></h2>
+<p>Attributes are variables that exist per instance of a class. They are where the state of an object is stored. In Perl 6, all attributes are private. They are typically declared using the <code>has</code> declarator and using the <code>!</code> twigil.</p>
+<pre>class Journey {
+    has $!origin;
+    has $!destination;
+    has @!travellers;
+    has $!notes;
+}</pre>
+<p>While there is no such thing as a public (or even protected) attribute, there is a way to have accessor methods generated automatically: replace the <code>!</code> twigil with the <code>.</code> twigil (the <code>.</code> should remind you of method call).</p>
+<pre>class Journey {
+    has $.origin;
+    has $.destination;
+    has @!travellers;
+    has $.notes;
+}</pre>
+<p>This defaults to providing a read-only accessor. In order to allow changes to the attribute, add the <code>rw</code> trait:</p>
+<pre>class Journey {
+    has $.origin;
+    has $.destination;
+    has @!travellers;
+    has $.notes is rw;
+}</pre>
+<p>Now, after a <code>Journey</code> object is created, its <code>.origin</code>, <code>.destination</code>, and <code>.notes</code> will all be accessible from outside of the class, but only <code>.notes</code> can be modified.</p>
+<p>Since classes inherit a default constructor from <code>Mu</code> and we have requested that some accessor methods are generated for us, our class is already somewhat functional.</p>
+<pre># Create a new instance of the class.
+my $vacation = Journey.new(
+    origin      <a href="=>">=&gt;</a> &#39;Sweden&#39;,
+    destination =&gt; &#39;Switzerland&#39;,
+    notes       =&gt; &#39;Pack hiking gear!&#39;
+);
+    
+# Use an accessor; this outputs Sweden.
+say $vacation.origin;
+    
+# Use an rw accessor to change the value.
+$vacation.notes = &#39;Pack hiking gear and sunglasses!&#39;;
+</pre>
+<p>Note that the default constructor will only set attributes that have an accessor method.</p>
+<h2 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h2>
+<p>Methods are declared with the <code>method</code> keyword inside of a class body.</p>
+<pre>class Journey {
+    has $.origin;
+    has $.destination;
+    has @!travellers;
+    has $.notes is rw;
+        
+    <strong>method</strong> add_traveller($name) {
+        if $name <a href="ne">ne</a> <a href="any">any</a>(@!travellers) {
+            <a href="push">push</a> @!travellers, $name;
+        }
+        else {
+            <a href="warn">warn</a> &quot;$name is already going on the journey!&quot;;
+        }
+    }
+        
+    <strong>method</strong> describe() {
+        &quot;From $!origin to $!destination&quot;
+    }
+}
+</pre>
+<p>A method can have a signature, just like a subroutine. Attributes can be used in methods, and can always be used with the <code>!</code> twigil, even if they are declared with the <code>.</code> twigil. This is because really, the <code>.</code> twigil declares an attribute with the <code>!</code> twigil in its place, and then additionally generates an accessor method.</p>
+<p>There is a subtle but important difference between using, say, <code>$!origin</code> and <code>$.origin</code> in the method <code>describe</code>. The first is always a simple lookup of the attribute. It is cheap, and you know that it is the attribute declared in this class. The latter is really a method call, and thus it may be overridden in a subclass. Only use <code>$.origin</code> if you explicitly want to allow overriding.</p>
+<h2 id="self"><a class="u" href="#___top" title="go to top of document">self</a></h2>
+<p>Inside a method, the term <code>self</code> is available, which is bound to invocant, i.e. the object that the method was called on. <code>self</code> can be used to call further methods on the invocant, for example. Within methods, something like <code>$.origin</code> is the same thing as <code>self.origin</code>.</p>
+<h2 id="Private_Methods"><a class="u" href="#___top" title="go to top of document">Private Methods</a></h2>
+<p>Methods for internal usage inside the class that cannot be called from anywhere else are introduced with an exclamation mark <code>!</code> before the method name, and are called with the exclamation mark instead of the dot:</p>
+<pre>method !do-something-private($x) {
+    ...
+}
+method public($x) {
+    if self.precondition {
+        self!do-something-private(2 * $x)
+    }
+}</pre>
+<p>Private methods are not inherited to subclasses.</p>
+<h2 id="Submethods"><a class="u" href="#___top" title="go to top of document">Submethods</a></h2>
+<p>A submethod is public method that is not inherited to subclasses. The name stems from the fact that they are semantically similar to subroutines.</p>
+<p>Submethods are useful for object construction and destruction tasks, as well as for tasks that are so specific to a certain type that subtypes must certainly override them.</p>
+<p>TODO: example</p>
+<h2 id="Inheritance"><a class="u" href="#___top" title="go to top of document">Inheritance</a></h2>
+<p>Classes can have <em>parent classes</em>.</p>
+<pre>class Child <strong><a href="is">is</a> Parent1 is Parent2</strong> { }
+</pre>
+<p>If a method is called on the child class, and the child class does not provide that method, the parent classes&#39; method of that name is invoked instead, if it exists. The order in which parent classes are consulted is called the <em>method resolution order</em> (MRO). Perl 6 uses the <a href="https://en.wikipedia.org/wiki/C3_linearization">C3 method resolution order</a>. You can ask a type for its MRO through a call to its metaclass:</p>
+<pre>say Parcel<strong>.^<a href="mro">mro</a></strong>;    # Parcel() Cool() Any() Mu()
+</pre>
+<p>If a class does not specify a parent class, <a href="Any">Any</a> is assumed by default. All classes directly or indirectly derive from <a href="Mu">Mu</a>, the root of the type hierarchy.</p>
+<p>All calls to public method are &quot;virtual&quot; in the C++ sense, which means that the actual type of an object determines which method to call, not the declared type:</p>
+<pre>class Parent {
+    method frob {
+        say &quot;the parent class frobs&quot;
+    }
+}
+    
+class Child is Parent {
+    method frob {
+        say &quot;the child&#39;s somewhat more fancy frob is called&quot;
+    }
+}
+    
+my Parent $test;
+$test = Child.new;
+$test.frob;          # calls the frob method of Child rather than Parent
+</pre>
+<p>This produces the output:</p>
+<pre>the child&#39;s somewhat more fancy frob is called</pre>
+<h2 id="Object_Construction"><a class="u" href="#___top" title="go to top of document">Object Construction</a></h2>
+<p>Objects are generally created through methods calls, either on the type object or on another object of the same type.</p>
+<p>Class <a href="Mu">Mu</a> provides a constructor method called <a href="new">new</a>, which takes named arguments and uses them to initialize public attributes.</p>
+<pre>class Point {
+    has $.x;
+    has $.y = 2 * $!x;
+}
+my $p = Point<strong>.<a href="new">new</a></strong>( x <a href="=>">=&gt;</a> 1, y =&gt; 2);
+#             ^^^ inherited from class Mu
+say &quot;x: &quot;, $p.x;
+say &quot;y: &quot;, $p.y;
+</pre>
+<p>This outputs:</p>
+<pre>x: 1
+y: 2</pre>
+<pre>my $p2 = Point<strong>.new</strong>( x =&gt; 5 );
+# the given value for x is used to calculate the right
+# value for y.
+say &quot;x: &quot;, $p.x;
+say &quot;y: &quot;, $p.y;
+</pre>
+<p>This outputs:</p>
+<pre>x: 5
+y: 10</pre>
+<p>Mu.new calls method <a href="bless">bless</a> on its invocant, passing along all the named arguments. <code>bless</code> creates the new object, and then calls method <code>BUILDALL</code> on it. <code>BUILDALL</code> walks all subclasses in reverse method resolution order (i.e. from <a href="Mu">Mu</a> to most derived classes), and in each class checks for existence of a method named <code>BUILD</code>. If it exists, it is called, again passing all named arguments from method <code>new</code> to it. If not, the public attributes from this class are initialized from named arguments of the same name. In either case, if neither <code>BUILD</code> nor the default mechanism has initialized the attribute, default values are applied (the <code>2 * $!x</code> in the example above).</p>
+<p>Due to the nature of the default behavior of <code>BUILDALL</code> and custom <code>BUILD</code> submethods, you named arguments to the constructor <code>new</code> derived from <code>Mu</code> can correspond directly to public attributes of any of the classes in the method resolution order, or to any named parameter to any <code>BUILD</code> submethod.</p>
+<p>This object construction scheme has several implications for customized constructors. First, custom <code>BUILD</code> methods should always be submethods, otherwise they break attribute initialization in subclasses. Second, <code>BUILD</code> submethods can be used to run custom code at object construction time. They can also be used for creating aliases for attribute initialization:</p>
+<pre>class EncodedBuffer {
+    has $.enc;
+    has $.data;
+
+    submethod <strong>BUILD</strong>(:encoding(:$enc), :$data) {
+        $!enc  <a href=":=">:=</a>  $enc;
+        $!data := $data;
+    }
+}
+my $b1 = EncodedBuffer.new( encoding =&gt; &#39;UTF-8&#39;, data =&gt; [64, 65] );
+my $b2 = EncodedBuffer.new( enc      =&gt; &#39;UTF-8&#39;, data =&gt; [64, 65] );
+#  both enc and encoding are allowed now
+</pre>
+<p>Since passing arguments to a routine binds the arguments to the parameters, a separate binding step is unnecessary if the attribute is used as parameter. So the example above could also have been written as:</p>
+<pre>submethod BUILD(:encoding(:$B&lt;!&gt;enc), :$B&lt;!&gt;data) {
+    # nothing to do here anymore, the signature binding
+    # does all the work for us.
+}</pre>
+<p>The third implication is that if you want a constructor that accepts positional arguments, you must write your own <code>new</code> method:</p>
+<pre>class Point {
+    has $.x;
+    has $.y;
+    method new($x, $y) {
+        self.L&lt;bless&gt;(:$x, :$y);
+    }
+}</pre>
+<p>However this is considered poor practice, because it makes correct initialization of objects from subclasses harder.</p>
+<p>Another thing to note is that the name <code>new</code> is not special in Perl 6. It is merely a common convention. You can call <code>bless</code> from any method at all, or use <code>CREATE</code> to fiddle around with low-level workings.</p>
+<h1 id="Roles"><a class="u" href="#___top" title="go to top of document">Roles</a></h1>
+<p>Roles are in some ways similar to classes, in that they are a collection of attributes and methods. They differ in that roles are also meant for describing only parts of an object&#39;s behavior, and in how roles are applied to classes. Or to phrase it differently, classes are meant for managing instances, and roles are meant for managing behavior and code reuse.</p>
+<pre>role Serializable {
+    method serialize() {
+        self.<a href="perl">perl</a>; # very primitive serialization
+    }
+    method deserialize($buf) {
+        <a href="EVAL">EVAL</a> $buf; # reverse operation to .perl
+    }
+}
+
+class Point <strong>does</strong> Serializable {
+    has $.x;
+    has $.y;
+}
+my $p = Point.new(:x(1), :y(2));
+my $serialized = $p.serialize;      # method provided by the role
+my $clone-of-p = Point.deserialize($serialized);
+say $clone-of-p.x;      # 1
+</pre>
+<p>Roles are immutable as soon as the compiler parses the closing bracket of the role declaration.</p>
+<h2 id="Role_Application"><a class="u" href="#___top" title="go to top of document">Role Application</a></h2>
+<p>Role application differs significantly from class inheritance. When a role is applied to a class, the methods of that role are copied into the class. If multiple roles are applied to the same class, conflicts (e.g. non-multi methods of the same name) cause a compile-time error, which can be solved by providing a method of the same name in the class.</p>
+<p>This is much safer than multiple inheritance, where conflicts are never detected by the compiler, but are instead simply resolved to the superclass that appears earlier in the MRO, which might or might not be what the programmer wanted.</p>
+<p>For example, if you&#39;ve discovered an effecient method to ride cows, and are trying to market it as a new form of popular transportation, you might have a class <code>Bull</code>, for all the bulls you keep around the house, and a class <code>Automobile</code>, for things that you can drive.</p>
+<pre>class Bull {
+    has Bool $.castrated = False;
+    method steer {
+        # Turn your bull into a steer
+        $!castrated = True;
+        return self;
+    }
+}
+class Automobile {
+    has $.direction;
+    method steer ($!direction) { }
+}
+class Taurus is Bull is Automobile { }</pre>
+<pre>my $t = Taurus.new;
+$t.steer; # Castrates $t</pre>
+<p>With this set-up, your poor customers will find themselves unable to turn their Taurus, and you won&#39;t be able to make more of your product! In this case, it may have been better to use roles:</p>
+<pre>role Bull-Like {
+    has Bool $.castrated = False;
+    method steer {
+        # Turn your bull into a steer
+        $!castrated = True;
+        return self;
+    }
+}
+role Steerable {
+    has Real $.direction;
+    method steer (Real $d = 0) {
+        $!direction += $d;
+    }
+}
+class Taurus does Bull-Like does Steerable { }</pre>
+<p>This code will die with something like:</p>
+<pre>===SORRY!===
+Method &#39;steer&#39; must be resolved by class Taurus because it exists in
+multiple roles (Steerable, Bull-Like)</pre>
+<p>This check will save you and your customers a lot of headaches, and you can simply define your class instead as:</p>
+<pre>class Taurus does Bull-Like does Steerable {
+    method steer ($direction?) {
+        self.Steerable::steer($direction?)
+    }
+}</pre>
+<p>When a role is applied to a second role, the actual application is delayed until the second class is applied to a class, at which point both roles are applied to the class. Thus</p>
+<pre>role R1 {
+    # methods here
+}
+role R2 does R1 {
+    # methods here
+}
+class C does R2 { }</pre>
+<p>produces the same class <code>C</code> as</p>
+<pre>role R1 {
+    # methods here
+}
+role R2 {
+    # methods here
+}
+class C does R1 does R2 { }</pre>
+<h2 id="Stubs"><a class="u" href="#___top" title="go to top of document">Stubs</a></h2>
+<p>When a role contains a stubbed method, a non-stubbed version of a method of the same name must be supplied at the time the role is applied to a class. This allows you to create roles that act as abstract interfaces.</p>
+<pre>role AbstractSerializable {
+    method serialize() { <strong><a href="...">...</a></strong> }  # literal ... here marks the
+                                # method as a stub
+}
+
+# the following is a compile time error, for example
+#        Method &#39;serialize&#39; must be implemented by Point because
+#        it is required by a role
+class APoint does AbstractSerializable {
+    has $.x;
+    has $.y;
+}
+
+# this works:
+class SPoint does AbstractSerializable {
+    has $.x;
+    has $.y;
+    method serialize() { &quot;p($.x, $.y)&quot; }
+}
+</pre>
+<p>The implementation of the stubbed method may also be provided by another role.</p>
+<p>TODO: parameterized roles</p>
+<h1 id="Meta-Object_Programming_and_Introspection"><a class="u" href="#___top" title="go to top of document">Meta-Object Programming and Introspection</a></h1>
+<p>Perl 6 has a meta object system, which means that the behavior of objects, classes, roles, grammars, enums etc. are themselves controlled by other objects; those objects are called <em>meta objects</em>. Meta objects are, like ordinary objects, instances of classes, in this case we call them <em>meta classes</em>.</p>
+<p>For each object or class, you can get the meta object by calling <code>.HOW</code> on it. Note that although this looks like a method call, it is actually special-cased in the compiler, so it is more like a macro.</p>
+<p>So, what can you do with the meta object? For one you can check if two objects have the same meta class by comparing them for equality:</p>
+<pre>say 1.HOW ===   2.HOW;      # True
+say 1.HOW === Int.HOW;      # True
+say 1.HOW === Num.HOW;      # False</pre>
+<p>Perl 6 uses the word <em>HOW</em>, Higher Order Workings, to refer to the meta object system. Thus it should be no surprise that in Rakudo, the class name of the meta class that controls class behavior is called <code>Perl6::Metamodel::ClassHOW</code>. For each class there is one instance of <code>Perl6::Metamodel::ClassHOW</code>.</p>
+<p>But of course the meta model does much more for you. For example it allows you to introspect objects and classes. The calling convention for methods on meta objects is to call the method on the meta object, and pass in the object of interest as first argument to the object. So to get the name of the class of an object, you could write:</p>
+<pre>my $object = 1;
+my $metaobject = 1.HOW;
+say $metaobject.name($object);      # Int</pre>
+<pre># or shorter:
+say 1.HOW.name(1);                  # Int</pre>
+<p>(The motivation is that Perl 6 also wants to allow a more prototype-based object system, where it&#39;s not necessary to create a new meta object for every type).</p>
+<p>To get rid of using the same object twice, there is a shortcut:</p>
+<pre>say 1.^name;                        # Int
+# same as
+say 1.HOW.name(1);                  # Int</pre>
+<h2 id="class_Perl6::Metamodel::ClassHOW"><a class="u" href="#___top" title="go to top of document">class Perl6::Metamodel::ClassHOW</a></h2>
+<p>Introspection is the process of getting information about an object or class at runtime. In Perl 6, all introspection goes through the meta object. The standard <code>ClassHOW</code> for class-based objects offers these facilities:</p>
+<h3 id="method_can"><a class="u" href="#___top" title="go to top of document">method can</a></h3>
+<p>Given a method names, it returns a <a href="Parcel">Parcel</a> of methods that are available with this name.</p>
+<pre>class A      { method x($a) {} };
+class B is A { method x()   {} };
+say B.^can(&#39;x&#39;).elems;              # 2
+for B.^can(&#39;x&#39;) {
+    say .arity;                     # 1, 2
+}</pre>
+<p>In this example, class <code>B</code> has two possible methods available with name <code>x</code> (though a normal method call would only invoke the one installed in <code>B</code> directly). The one in <code>B</code> has arity 1 (i.e. it expects one argument, the invocant (<code>self</code>)), and the one in <code>A</code> expects 2 arguments (<code>self</code> and <code>$a</code>).</p>
+<h3 id="method_methods"><a class="u" href="#___top" title="go to top of document">method methods</a></h3>
+<p>Returns a list of public methods available on the class (which includes methods from superclasses and roles). By default this stops at the classes <a href="Cool">Cool</a>, <a href="Any">Any</a> or <a href="Mu">Mu</a>; to really get all methods, use the <code>:all</code> adverb.</p>
+<pre>class A {
+    method x() { };
+}</pre>
+<pre>say A.^methods();                   # x
+say A.^methods(:all);               # x infinite defined ...</pre>
+<p>The returned list actually returns objects of type <a href="Method">Method</a>, which you can use to introspect their signatures, and even to call them.</p>
+<h3 id="method_mro"><a class="u" href="#___top" title="go to top of document">method mro</a></h3>
+<p>Returns the list of the class itself and its superclasses in method resolution order. Perl 6 linearizes the graph of superclasses into a single list that <code>$object.^mro</code> returns; when a method is called, the class and its parent classes are visited in that order. (Only conceptually; actually the list of methods is built at class composition time).</p>
+<pre>say 1.^mro;                         # (Int) (Cool) (Any) (Mu)</pre>
+<h3 id="method_name"><a class="u" href="#___top" title="go to top of document">method name</a></h3>
+<p>Returns the name of the class:</p>
+<pre>say &#39;a string&#39;.^name;               # Str</pre>
+<h3 id="method_parents"><a class="u" href="#___top" title="go to top of document">method parents</a></h3>
+<p>Returns the list of parent classes. By default it stops at <a href="Cool">Cool</a>, <a href="Any">Any</a> or <a href="Mu">Mu</a>, which you can suppress by supplying the <code>:all</code> adverb. With <code>:tree</code>, a nested list is returned.</p>
+<pre>class D { };
+class C1 is D { };
+class C2 is D { };
+class B is C1 is C2 { };
+class A is B { };</pre>
+<pre>say A.^parents(:all).perl;          # (B, C1, C2, D, Any, Mu)
+say A.^parents(:all, :tree).perl;
+    # ([B, [C1, [D, [Any, [Mu]]]], [C2, [D, [Any, [Mu]]]]],)</pre>
+<h3 id="method_attributes"><a class="u" href="#___top" title="go to top of document">method attributes</a></h3>
+<p>Even though attributes are private to a class, you can ask a class for its attributes with <code>$object.^attributes</code>. Each attribute is represented by an instance of the Attribute class and has attributes of its own. Of particular interest are <code>name</code>, <code>rw</code> and <code>ro</code>, <code>has_accessor</code>, <code>type</code>, and <code>package</code>.</p>
+
+
+
+</body>
+</html>
+

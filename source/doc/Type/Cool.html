@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+<head>
+  <title>Cool</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>Cool</h1>
+<nav class="indexgroup">
+</nav>
+<pre>class Cool is Any { }</pre>
+<p><code>Cool</code>, also known as the <strong>C</strong>onvenient <strong>OO</strong> <strong>L</strong>oop, is a base class for strings, numbers and other built-in classes that you are supposed to use mostly interchangeably.</p>
+<p>Methods in <code>Cool</code> coerce the invocant to a more specific type, and then call the same method on that type. For example both <a href="Int">Int</a> and <a href="Str">Str</a> inherit from <code>Cool</code>, and calling method <code>substr</code> on an <code>Int</code> converts the integer to <code>Str</code> first.</p>
+<pre>123.substr(1, 1);   # &#39;2&#39;, same as 123.Str.substr(1, 1)</pre>
+<p>The following built-in types inherit from <code>Cool</code>: <a href="Array">Array</a> <a href="Backtrace">Backtrace</a> <a href="Bag">Bag</a> <a href="Baggy">Baggy</a> <a href="Bool">Bool</a> <a href="Complex">Complex</a> <a href="Cool">Cool</a> <a href="Duration">Duration</a> <a href="Enumeration">Enumeration</a> <a href="EnumMap">EnumMap</a> <a href="FatRat">FatRat</a> <a href="Hash">Hash</a> <a href="Instant">Instant</a> <a href="Int">Int</a> <a href="Iterable">Iterable</a> <a href="Iterator">Iterator</a> <a href="KeyHash">KeyHash</a> <a href="KeySet">KeySet</a> <a href="List">List</a> <a href="ListIter">ListIter</a> <a href="LoL">LoL</a> <a href="MapIter">MapIter</a> <a href="Nil">Nil</a> <a href="Num">Num</a> <a href="Numeric">Numeric</a> <a href="Parcel">Parcel</a> <a href="Range">Range</a> <a href="Real">Real</a> <a href="Seq">Seq</a> <a href="Set">Set</a> <a href="Stash">Stash</a> <a href="Str">Str</a> <a href="Stringy">Stringy</a></p>
+<p>The following table summarizes the methods that <code>Cool</code> provides, and what type they coerce to:</p>
+<table>
+<thead><tr>
+<th>method coercion type</th>
+<th>method</th>
+<th>coercion type</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>abs Numeric</td>
+<td>abs</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>conj Numeric</td>
+<td>conj</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>sqrt Numeric</td>
+<td>sqrt</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>sign Numeric</td>
+<td>sign</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>rand Numeric</td>
+<td>rand</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>sin Numeric</td>
+<td>sin</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>asin Numeric</td>
+<td>asin</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>cos Numeric</td>
+<td>cos</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>acos Numeric</td>
+<td>acos</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>tan Numeric</td>
+<td>tan</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>atan Numeric</td>
+<td>atan</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>atan2 Numeric</td>
+<td>atan2</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>sec Numeric</td>
+<td>sec</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>asec Numeric</td>
+<td>asec</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>cosec Numeric</td>
+<td>cosec</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>acosec Numeric</td>
+<td>acosec</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>cotan Numeric</td>
+<td>cotan</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>acotan Numeric</td>
+<td>acotan</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>sinh Numeric</td>
+<td>sinh</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>asinh Numeric</td>
+<td>asinh</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>cosh Numeric</td>
+<td>cosh</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>acosh Numeric</td>
+<td>acosh</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>sech Numeric</td>
+<td>sech</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>asech Numeric</td>
+<td>asech</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>asech Numeric</td>
+<td>asech</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>cosech Numeric</td>
+<td>cosech</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>acotanh Numeric</td>
+<td>acotanh</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>cis Numeric</td>
+<td>cis</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>log Numeric</td>
+<td>log</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>exp Numeric</td>
+<td>exp</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>roots Numeric</td>
+<td>roots</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>log10 Numeric</td>
+<td>log10</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>unpolar Numeric</td>
+<td>unpolar</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>round Numeric</td>
+<td>round</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>floor Numeric</td>
+<td>floor</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>ceiling Numeric</td>
+<td>ceiling</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>truncate Numeric</td>
+<td>truncate</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>ord Int</td>
+<td>ord</td>
+<td>Int</td>
+</tr>
+<tr>
+<td>chars Str</td>
+<td>chars</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>fmt Str</td>
+<td>fmt</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>uc Str</td>
+<td>uc</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>lc Str</td>
+<td>lc</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>capitalize Str</td>
+<td>capitalize</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>fc Str</td>
+<td>fc</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>flip Str</td>
+<td>flip</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>trans Str</td>
+<td>trans</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>index Str</td>
+<td>index</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>rindex Str</td>
+<td>rindex</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>ords Str</td>
+<td>ords</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>split Str</td>
+<td>split</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>match Str</td>
+<td>match</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>comb Str</td>
+<td>comb</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>subst Str</td>
+<td>subst</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>sprintf Str</td>
+<td>sprintf</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>printf Str</td>
+<td>printf</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>samecase Str</td>
+<td>samecase</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>trim Str</td>
+<td>trim</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>trim-leading Str</td>
+<td>trim-leading</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>trim-trailing Str</td>
+<td>trim-trailing</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>EVAL Str</td>
+<td>EVAL</td>
+<td>Str</td>
+</tr>
+</tbody>
+</table>
+
+
+</body>
+</html>
+

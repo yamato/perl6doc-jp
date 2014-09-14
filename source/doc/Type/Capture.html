@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <title>class Capture</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* code gets the browser-default font
+     * kbd gets a slightly less common monospace font
+     * samp gets the hard pixelly fonts
+     */
+    kbd { font-family: "Droid Sans Mono", "Luxi Mono", "Inconsolata", monospace }
+    samp { font-family: "Terminus", "Courier", "Lucida Console", monospace }
+    /* WHATWG HTML frowns on the use of <u> because it looks like a link,
+     * so we make it not look like one.
+     */
+    u { text-decoration: none }
+    .nested {
+        margin-left: 3em;
+    }
+    // footnote things:
+    aside, u { opacity: 0.7 }
+    a[id^="fn-"]:target { background: #ff0 }
+  </style>
+  <link rel="stylesheet" href="http://perlcabal.org/syn/perl.css">
+  
+  
+</head>
+<body class="pod" id="___top">
+
+
+<h1 class='title'>class Capture</h1>
+<nav class="indexgroup">
+<ol class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Methods">Methods</a></li>
+  <ol class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#method_list">method list</a></li>
+    <li class="indexItem indexItem2"><a href="#method_hash">method hash</a></li>
+    <li class="indexItem indexItem2"><a href="#method_elems">method elems</a></li>
+  </ol>
+</ol>
+</nav>
+<pre>class Capture does Positonal does Associative { }</pre>
+<p>A Capture is an argument list for passing it to a code object. It contains a list-like part for positional arguments and a hash-like part for named arguments.</p>
+<p>Captures can be created by prefixing a term with a backslash <code>\</code>.</p>
+<pre>my $c = \42;            # Capture with one positional parts
+$c = \(1, 2, a =&gt; &#39;b&#39;); # Capture wit two positional and one named part</pre>
+<p>Another common way to create a Capture is to prefix a sigilless parameter with a vertical bar <code>|</code>, which packs the remainder of the argument list into that parameter.</p>
+<pre>f(1, 2, 3, a =&gt; 4, b =&gt; 5);
+sub f($a, |c) {
+    # c  is  \(2, 3, a =&gt; 4, b =&gt; 5)
+}</pre>
+<h1 id="Methods"><a class="u" href="#___top" title="go to top of document">Methods</a></h1>
+<h2 id="method_list"><a class="u" href="#___top" title="go to top of document">method list</a></h2>
+<pre>method list(Capture:D:) returns Positional</pre>
+<p>Returns the positional part of the Capture.</p>
+<h2 id="method_hash"><a class="u" href="#___top" title="go to top of document">method hash</a></h2>
+<pre>method hash(Capture:D:) returns Associative</pre>
+<p>Returns the named/hash part of the Capture.</p>
+<h2 id="method_elems"><a class="u" href="#___top" title="go to top of document">method elems</a></h2>
+<pre>method elems(Capture:D:) returns Int:D</pre>
+<p>Returns the number of positional elements in the Capture.</p>
+
+
+
+</body>
+</html>
+
