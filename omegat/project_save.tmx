@@ -1958,6 +1958,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Be also aware that one can not have placeholder variables with a single upper-case letter.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T063202Z" creationid="yamato" creationdate="20140914T063202Z">
+        <seg>1文字の大文字のプレースホルダー変数を使うこともできない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Because &lt;c0&gt;gather&lt;/c0&gt; evaluates its block or statement in sink context, this typically causes the &lt;c1&gt;take&lt;/c1&gt; function to be evaluated in sink context.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T210403Z" creationid="Toshiyuki" creationdate="20130810T210403Z">
@@ -6858,6 +6866,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130818T081415Z" creationid="Toshiyuki" creationdate="20130818T081415Z">
         <seg>&lt;c3&gt;*&lt;/c3&gt;でマークされたPhasersはそれらの返り値として使用できる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Placeholder variables syntactically cannot have any type constraints.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T063050Z" creationid="yamato" creationdate="20140914T063050Z">
+        <seg>プレースホルダー変数は構文上、型制約を持つことができない。</seg>
       </tuv>
     </tu>
     <tu>
