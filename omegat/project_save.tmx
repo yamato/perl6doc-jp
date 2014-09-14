@@ -7950,6 +7950,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>That is: a variable with the same name of the desired block and a &lt;c4&gt;=&lt;/c4&gt; twigil.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T064351Z" creationid="yamato" creationdate="20140914T064351Z">
+        <seg>すなわち：望むブロックと同じ名前の&lt;c4&gt;=&lt;/c4&gt;ツウィギル付きの変数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>That means that &lt;c1&gt;degrees&lt;/c1&gt; and &lt;c2&gt;ﾎｸ&lt;/c2&gt; above actually directly represent &lt;c3&gt;Int&lt;/c3&gt;s.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T040130Z" creationid="yamato" creationdate="20140914T040130Z">
