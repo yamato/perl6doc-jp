@@ -6710,6 +6710,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Perl 6 may automatically generate accessor methods for you though.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T054159Z" creationid="yamato" creationdate="20140914T054159Z">
+        <seg>しかしPerl 6は自動的にアクセサメソッドを生成するかもしれない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Perl 6 supports the ability for one class to inherit from one or more classes.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T143758Z" creationid="Toshiyuki" creationdate="20140112T092958Z">
