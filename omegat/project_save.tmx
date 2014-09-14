@@ -662,6 +662,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;CATCH&lt;/c0&gt; blocks set &lt;c1&gt;$_&lt;/c1&gt; to the exception that was caught.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T111657Z" creationid="yamato" creationdate="20140914T111657Z">
+        <seg>&lt;c0&gt;CATCH&lt;/c0&gt;ブロックはキャッチされた例外を&lt;c1&gt;$_&lt;/c1&gt;にセットする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;Int&lt;/c0&gt; automatically supports promotion to arbitrary precision, as well as holding &lt;c1&gt;Inf&lt;/c1&gt; and &lt;c2&gt;NaN&lt;/c2&gt; values.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T130411Z" creationid="Toshiyuki" creationdate="20140328T130411Z">
@@ -5114,6 +5122,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>すべての書記素がユニークな書記素番号への入力で変形されて、速いsubstrアクセスのための何らかの均一な配列の中の整数として表現されることを示唆される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is the default parameter for blocks that do not have an explicit signature, so constructs like &lt;c1&gt;for @array { ... }&lt;/c1&gt; and &lt;c2&gt;given $var { ... }&lt;/c2&gt; binds to &lt;c3&gt;$_&lt;/c3&gt; simply by invoking the block.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T111614Z" creationid="yamato" creationdate="20140914T111614Z">
+        <seg>それは明示的シグネチャを持たないブロックのためのデフォルトパラメータで、&lt;c1&gt;for @array { ... }&lt;/c1&gt;や&lt;c2&gt;given $var { ... }&lt;/c2&gt;のような構造はブロックを起動することで単純に&lt;c3&gt;$_&lt;/c3&gt;へバインドする。</seg>
       </tuv>
     </tu>
     <tu>
