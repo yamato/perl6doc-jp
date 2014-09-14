@@ -3022,6 +3022,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For example &lt;a0&gt;Array&lt;/a0&gt; variables (&lt;c1&gt;@&lt;/c1&gt; sigil) empty themselves on list assignment, and then put all the values from the right-hand side into themselves.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T024937Z" creationid="yamato" creationdate="20140914T024857Z">
+        <seg>例えば&lt;a0&gt;Array&lt;/a0&gt;変数（&lt;c1&gt;@&lt;/c1&gt;シギル）はリスト割り当て時に自身を空にし、右側のすべての値を自身に配置する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example,</seg>
       </tuv>
       <tuv lang="JA">
@@ -5120,8 +5128,8 @@
       <tuv lang="EN-US">
         <seg>Item assignment places the value from the right-hand side into the variable (container) on the left.</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamato" changedate="20140914T024419Z" creationid="yamato" creationdate="20140914T024410Z">
-        <seg>アイテム割り当ては左側の変数（コンテナ）に右側の値を設置する。</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T024906Z" creationid="yamato" creationdate="20140914T024410Z">
+        <seg>アイテム割り当ては左側の変数（コンテナ）に右側の値を配置する。</seg>
       </tuv>
     </tu>
     <tu>
