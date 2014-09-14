@@ -8046,6 +8046,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Some people like to say "everything is an object", but in fact a variable is not a user-exposed object in Perl 6.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T130314Z" creationid="yamato" creationdate="20140914T130314Z">
+        <seg>一部の人々は「全てがオブジェクトだ」と言うのが好きだ。しかし実際はPerl 6で変数はユーザーにさらされたオブジェクトではない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Something like:</seg>
       </tuv>
       <tuv lang="JA">
@@ -11778,6 +11786,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T145912Z" creationid="Toshiyuki" creationdate="20140112T135351Z">
         <seg>デザインがロールを用いてよりよく実現されないかどうかにかかわらず、多重継承に至ることを考慮するのはよい習慣です（それらが明示的に矛盾するメソッド名を解決することをクラス作成者を強要するので、それは一般により安全です）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When the compiler encounters a variable declaration like &lt;c0&gt;my $x&lt;/c0&gt;, it registers it in some internal symbol table.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T130418Z" creationid="yamato" creationdate="20140914T130418Z">
+        <seg>コンパイラが&lt;c0&gt;my $x&lt;/c0&gt;のような変数宣言に遭遇するとき、それを内部のシンボルテーブルに登録する。</seg>
       </tuv>
     </tu>
     <tu>
