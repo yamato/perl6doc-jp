@@ -774,6 +774,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;[...]&lt;/c0&gt; creates an itemized array, and &lt;c1&gt;Array.new(...)&lt;/c1&gt; a non-itemized array.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T141522Z" creationid="yamato" creationdate="20140914T141522Z">
+        <seg>&lt;c0&gt;[...]&lt;/c0&gt;はアイテム化された配列、そして&lt;c1&gt;Array.new(...)&lt;/c1&gt;はアイテム化されない配列を作る。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;m/regex/&lt;/c0&gt; and &lt;c1&gt;/regex/&lt;/c1&gt; regex matches and &lt;c2&gt;s/regex/subst/&lt;/c2&gt; substitutions work on &lt;c3&gt;$_&lt;/c3&gt;:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T112632Z" creationid="yamato" creationdate="20140914T112632Z">
@@ -9650,6 +9658,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>以下は役に立つ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following examples all do the same, and do not flatten:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T141327Z" creationid="yamato" creationdate="20140914T141327Z">
+        <seg>以下の例はすべて同じでフラット化を行わない：</seg>
       </tuv>
     </tu>
     <tu>
