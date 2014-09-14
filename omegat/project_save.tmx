@@ -11422,6 +11422,38 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Which block am I in?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114526Z" creationid="yamato" creationdate="20140914T114526Z">
+        <seg>どのブロックの中にいるのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Which file am I in?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114443Z" creationid="yamato" creationdate="20140914T114443Z">
+        <seg>どのファイルの中なのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Which line am I at?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114504Z" creationid="yamato" creationdate="20140914T114504Z">
+        <seg>どの行に居るのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Which routine am I in?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114516Z" creationid="yamato" creationdate="20140914T114516Z">
+        <seg>どのルーチンの中にいるのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>While Perl 6 does enforce encapsulation on attributes, it also saves you from writing accessor methods.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140322T045805Z" creationid="Toshiyuki" creationdate="20140111T183310Z">
