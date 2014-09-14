@@ -2406,6 +2406,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>But sometimes you want to preserve the structure.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T142849Z" creationid="yamato" creationdate="20140914T142849Z">
+        <seg>しかし時々構造を保持したい時がある。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>But there are other applications too: a routine that serializes objects to a bunch of bytes needs to know the attributes of that object, which it can find out via introspection.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140322T110443Z" creationid="Toshiyuki" creationdate="20140112T164306Z">
@@ -5166,6 +5174,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In the examples above, it was always assignment to an array variable that flattened out non-itemized arrays.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T142826Z" creationid="yamato" creationdate="20140914T142826Z">
+        <seg>上の例では常にフラット化されたnon-itemized配列への割り当てだった。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In the first place, not all objects are in the same memory space (see the literature on NUMA, for instance), and two objects should not accidentally have the same identity merely because they were stored at the same offset in two different memory spaces.</seg>
       </tuv>
       <tuv lang="JA">
@@ -6482,6 +6498,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>Perl 5がそうして、非コンテナ型はtruthinessを非常に定義する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Non-flattening contexts</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T142636Z" creationid="yamato" creationdate="20140914T142636Z">
+        <seg>非フラット化コンテキスト</seg>
       </tuv>
     </tu>
     <tu>
@@ -13444,6 +13468,14 @@ my \θ       = 15 * degrees;</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T142230Z" creationid="yamato" creationdate="20140914T142230Z">
         <seg>&lt;c0&gt;$item&lt;/c0&gt;の要素をソートし、配列の割り当てにフラット化されたリストを返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>the &lt;c0&gt;.list&lt;/c0&gt; only de-itemizes the outer brackets, the inner ones create an array that is stored in the second element of the Array, and is not touched by &lt;c1&gt;.list&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T142621Z" creationid="yamato" creationdate="20140914T142621Z">
+        <seg>&lt;c0&gt;.list&lt;/c0&gt;は外側のブラケットだけde-itemizesし、内側のものは配列の2番めの要素として保存され、&lt;c1&gt;.list&lt;/c1&gt;によって触られない。</seg>
       </tuv>
     </tu>
     <tu>
