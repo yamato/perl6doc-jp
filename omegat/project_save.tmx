@@ -7462,6 +7462,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns the imaginary unit (for &lt;a0&gt;Complex&lt;/a0&gt; numbers).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124955Z" creationid="yamato" creationdate="20140914T124955Z">
+        <seg>虚数単位（&lt;a0&gt;Complex&lt;/a0&gt;数のための）を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns the number &lt;c0&gt;pi&lt;/c0&gt;, i.e. the ratio between circumference and diameter of a circle.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T124852Z" creationid="yamato" creationdate="20140914T124852Z">
