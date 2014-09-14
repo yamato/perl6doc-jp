@@ -9054,6 +9054,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The second time though, it prints "1, 11, 101".</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T043906Z" creationid="yamato" creationdate="20140914T043906Z">
+        <seg>しかし2度目は「1, 11, 101」と出力する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The semantics of &lt;c0&gt;INIT&lt;/c0&gt; and &lt;c1&gt;once&lt;/c1&gt; are not equivalent to each other in the case of cloned closures.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130822T030444Z" creationid="Toshiyuki" creationdate="20130822T030444Z">
