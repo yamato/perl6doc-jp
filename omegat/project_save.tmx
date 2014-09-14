@@ -1086,6 +1086,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A parcel is immutable, which means you cannot change the number of elements in a parcel.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T134247Z" creationid="yamato" creationdate="20140914T134247Z">
+        <seg>parcelは不変で、要素数を変えることができないことを意味する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A parcel may generally only be preserved as a part of an outer parcel or capture object.</seg>
       </tuv>
       <tuv lang="JA">
@@ -2290,6 +2298,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130813T115447Z" creationid="Toshiyuki" creationdate="20130813T115447Z">
         <seg>しかし一般には代わりにリファクターするべきだということを意味する。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>But if one of the elements happens to be a scalar container, you can still assign to it:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T134344Z" creationid="yamato" creationdate="20140914T134344Z">
+        <seg>しかし要素の一つがスカラーコンテナなら、それへの割り当てはまだ可能だ：</seg>
       </tuv>
     </tu>
     <tu>
@@ -5338,6 +5354,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>一文字に分解しない複数のコードポイントを差し込むことも、あり得る：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is created by the comma operator, and often delimited by round parenthesis -- hence the name.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T134148Z" creationid="yamato" creationdate="20140914T134148Z">
+        <seg>それはコンマ演算子で作成され、しばしば丸括弧で区切られる―このための名前だ。</seg>
       </tuv>
     </tu>
     <tu>
