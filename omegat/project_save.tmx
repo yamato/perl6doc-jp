@@ -7070,6 +7070,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Pod variables</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120911Z" creationid="yamato" creationdate="20140914T120911Z">
+        <seg>Pod変数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Pointy blocks and bare closures are transparent to &lt;c4&gt;return&lt;/c4&gt;, in that the &lt;c5&gt;return&lt;/c5&gt; statement still means &lt;c6&gt;&amp;?ROUTINE.leave&lt;/c6&gt; from the &lt;c7&gt;Routine&lt;/c7&gt; that existed in dynamic scope when the closure was cloned.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T044655Z" creationid="Toshiyuki" creationdate="20130817T044655Z">
@@ -12528,7 +12536,7 @@
       <tuv lang="EN-US">
         <seg>method (not really a variable)</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamato" changedate="20140914T120743Z" creationid="yamato" creationdate="20140914T120743Z">
+      <tuv lang="JA" changeid="yamato" changedate="20140914T121055Z" creationid="yamato" creationdate="20140914T121055Z">
         <seg>メソッド（本当は変数ではない）</seg>
       </tuv>
     </tu>
@@ -12608,6 +12616,22 @@ my \θ       = 15 * degrees;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>self-declared formal named parameter</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120903Z" creationid="yamato" creationdate="20140914T120903Z">
+        <seg>自己宣言された名前付きの仮パラメータ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>self-declared formal positional parameter</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120849Z" creationid="yamato" creationdate="20140914T120849Z">
+        <seg>自己宣言された位置の仮パラメータ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>sets the variable to 0 at &lt;c0&gt;END&lt;/c0&gt; time, since that is when the "my" declaration is actually executed.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130818T085607Z" creationid="Toshiyuki" creationdate="20130818T085607Z">
@@ -12628,6 +12652,14 @@ my \θ       = 15 * degrees;</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T073956Z" creationid="Toshiyuki" creationdate="20140329T073956Z">
         <seg>の結果は3つの&lt;c1&gt;Int&lt;/c1&gt;オブジェクトと&lt;c2&gt;Pair&lt;/c2&gt;オブジェクトを含む&lt;c0&gt;Parcel&lt;/c0&gt;、すなわち4つの位置依存オブジェクトです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>the sublanguage seen by the parser at this lexical spot</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120943Z" creationid="yamato" creationdate="20140914T120943Z">
+        <seg>このレキシカルスポットでパーサーに見られるサブ言語</seg>
       </tuv>
     </tu>
     <tu>
