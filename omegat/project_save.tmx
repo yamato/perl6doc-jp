@@ -3670,6 +3670,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Here after the initial binding, the lexpad entries for &lt;c0&gt;$a&lt;/c0&gt; and &lt;c1&gt;$b&lt;/c1&gt; both point to the same scalar container, so assigning to one variable also changes the contents of the other.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T133652Z" creationid="yamato" creationdate="20140914T133652Z">
+        <seg>最初のバインドで&lt;c0&gt;$a&lt;/c0&gt;と&lt;c1&gt;$b&lt;/c1&gt; の両方のlexpadエントリーは同じスカラーコンテナをポイントし、一方の変数への割り当てはもう片方の内容も変更する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Here are some of the names of parse rules in STD:</seg>
       </tuv>
       <tuv lang="JA">
