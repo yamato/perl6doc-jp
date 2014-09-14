@@ -9118,6 +9118,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The third time &lt;c3&gt;&amp;say-all&lt;/c3&gt; is called &lt;c4&gt;$*dynamic1&lt;/c4&gt; isn't 11 anymore, but &lt;c5&gt;$*dynamic2&lt;/c5&gt; is still 101.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T050107Z" creationid="yamato" creationdate="20140914T050107Z">
+        <seg>3度目の&lt;c3&gt;&amp;say-all&lt;/c3&gt;はもはや11でない&lt;c4&gt;$*dynamic1&lt;/c4&gt;で呼ばれるが&lt;c5&gt;$*dynamic2&lt;/c5&gt;は101のままだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The two dynamic variables are looked up in the callers scope and therefore have the values 11 and 101.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T045714Z" creationid="yamato" creationdate="20140914T045714Z">
