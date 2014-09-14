@@ -7966,6 +7966,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;.&lt;/c0&gt; twigil isn't really for variables at all.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T060727Z" creationid="yamato" creationdate="20140914T060727Z">
+        <seg>&lt;c0&gt;.&lt;/c0&gt;ツウィギルは変数のためではまったくない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c0&gt;.WHAT&lt;/c0&gt; method returns the type object associated with the object &lt;c1&gt;$o&lt;/c1&gt;, which tells the exact type of &lt;c2&gt;$o&lt;/c2&gt;: in this case &lt;c3&gt;Programmer&lt;/c3&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140112T140110Z" creationid="Toshiyuki" creationdate="20140112T140110Z">
