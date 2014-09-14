@@ -9830,6 +9830,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is because in Perl 6 all attributes are private and can be directly accessed within the class by using &lt;c4&gt;$!attribute-name&lt;/c4&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T053905Z" creationid="yamato" creationdate="20140914T053905Z">
+        <seg>これはPerl 6の全ての属性はプライベートで、&lt;c4&gt;$!attribute-name&lt;/c4&gt;を使ってクラス内で直接アクセスできるためだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is defined as the textually last statement of its top-level list of statements; any statements embedded within those top-level statements are in their own lower-level list of statements and, while they may be a final statement in their subscope, they're not considered the final statement of the outer block in question.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130803T015413Z" creationid="Toshiyuki" creationdate="20130803T015413Z">
