@@ -9782,6 +9782,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is because &lt;c1&gt;$lexical&lt;/c1&gt; isn't looked up in the caller's scope but in the scope &lt;c2&gt;&amp;say-all&lt;/c2&gt; was defined in.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T044914Z" creationid="yamato" creationdate="20140914T044914Z">
+        <seg>これは&lt;c1&gt;$lexical&lt;/c1&gt;が呼び出し元のスコープではなく&lt;c2&gt;&amp;say-all&lt;/c2&gt;が定義されたスコープをルックアップするためである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is defined as the textually last statement of its top-level list of statements; any statements embedded within those top-level statements are in their own lower-level list of statements and, while they may be a final statement in their subscope, they're not considered the final statement of the outer block in question.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130803T015413Z" creationid="Toshiyuki" creationdate="20130803T015413Z">
