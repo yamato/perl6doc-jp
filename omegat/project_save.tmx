@@ -9566,6 +9566,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Therefore the same things that apply to variables declared using the &lt;c1&gt;^&lt;/c1&gt; twigil apply also to them (with the exception that they are not positional and therefore not ordered using Unicode order, of course).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T063925Z" creationid="yamato" creationdate="20140914T063925Z">
+        <seg>したがって、&lt;c1&gt;^&lt;/c1&gt;ツウィギルを使って宣言される変数に適用されることは それらにも適用される（それらが位置ではなくユニコード順にならないことを除いて）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Therefore:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140104T201344Z" creationid="Toshiyuki" creationdate="20140104T201344Z">
