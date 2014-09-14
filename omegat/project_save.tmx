@@ -6,6 +6,22 @@
 <!-- Default translations -->
     <tu>
       <tuv lang="EN-US">
+        <seg>()
+1, 2, 3
+&lt;a b c&gt;
+ﾂｫa b cﾂｻ
+qw/a b c/</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124020Z" creationid="yamato" creationdate="20140914T124020Z">
+        <seg>()
+1, 2, 3
+&lt;a b c&gt;
+«a b c»
+qw/a b c/</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(&lt;c1&gt;next&lt;/c1&gt; without a label is purely dynamic.) Lexotic and dynamic control flow is implemented by a system of control exceptions.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130728T062449Z" creationid="Toshiyuki" creationdate="20130728T061924Z">
@@ -658,6 +674,14 @@
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T123214Z" creationid="yamato" creationdate="20140914T123214Z">
         <seg>&lt;a0&gt;Pair&lt;/a0&gt;オブジェクは&lt;c1&gt;infix:«=&gt;»&lt;/c1&gt; で（それは左側が識別子なら自動でクォートする）、または様々なコロンペア形式で作成できる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Parcel&lt;/a0&gt; literals are: the empty pair of parens &lt;c1&gt;()&lt;/c1&gt;, a comma-separated list, or several quoting constructs</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124153Z" creationid="yamato" creationdate="20140914T124153Z">
+        <seg>&lt;a0&gt;Parcel&lt;/a0&gt;リテラルは：空白の括弧のペア&lt;c1&gt;()&lt;/c1&gt;、コンマで区切られたリスト、またはいくつかのクオート構造</seg>
       </tuv>
     </tu>
     <tu>
@@ -2706,6 +2730,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>狂った読者は、あなたがそうすることができたこの手段がスコープを編集する際に初期値を他のlexicalsに設定したかどうか疑問に思う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creates an object of type &lt;c0&gt;Whatever&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124219Z" creationid="yamato" creationdate="20140914T124219Z">
+        <seg>&lt;c0&gt;Whatever&lt;/c0&gt;型のオブジェクトを作成する。</seg>
       </tuv>
     </tu>
     <tu>
