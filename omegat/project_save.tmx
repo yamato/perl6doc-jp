@@ -7454,6 +7454,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>So the block in the code</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T062032Z" creationid="yamato" creationdate="20140914T062032Z">
+        <seg>それでコードのブロック</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>So the object in question is of class &lt;c0&gt;Employee&lt;/c0&gt; or one that inherits from it, but not &lt;c1&gt;GeekCook&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T151656Z" creationid="Toshiyuki" creationdate="20140112T135850Z">
@@ -8106,6 +8114,14 @@
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T021752Z" creationid="yamato" creationdate="20140914T021752Z">
         <seg>&lt;c0&gt;^&lt;/c0&gt;シギル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;^&lt;/c0&gt; twigil declares a formal positional parameter to blocks or subroutines.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T061931Z" creationid="yamato" creationdate="20140914T061755Z">
+        <seg>&lt;c0&gt;^&lt;/c0&gt;ツウィギルはブロックとサブルーチンに狩りの位置パラメータを宣言する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9758,6 +9774,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>They may be used in bare blocks to declare formal parameters to that block.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T062017Z" creationid="yamato" creationdate="20140914T062017Z">
+        <seg>それらは裸のブロックで仮パラメータを宣言するのに使われる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>They parse the same as phasers:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130818T082139Z" creationid="Toshiyuki" creationdate="20130818T082139Z">
@@ -10898,6 +10922,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>はっきりと定義済み値に初期化されない限り、ネイティブでない型の変数は適正型の型オブジェクトを含んで始める。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Variables of the form &lt;c1&gt;$^variable&lt;/c1&gt; are a type of placeholder variables.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T061842Z" creationid="yamato" creationdate="20140914T061842Z">
+        <seg>&lt;c1&gt;$^variable&lt;/c1&gt;という形式の変数はプレースホルダー変数の一種だ。</seg>
       </tuv>
     </tu>
     <tu>
