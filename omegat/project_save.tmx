@@ -6342,6 +6342,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that trailing dots are not allowed, so you have to write &lt;c0&gt;1.0&lt;/c0&gt; instead of &lt;c1&gt;1.&lt;/c1&gt; (this rule is important because there are infix operators starting with a dot, for example the &lt;c2&gt;..&lt;/c2&gt; &lt;a3&gt;Range&lt;/a3&gt; operator).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T122329Z" creationid="yamato" creationdate="20140914T122329Z">
+        <seg>後置のドットは許されない。なので&lt;c1&gt;1.&lt;/c1&gt;の代わりに&lt;c0&gt;1.0&lt;/c0&gt;と書かなければならない（ドットで始まる中置演算子があるのでこの規則は重要だ。例えば&lt;c2&gt;..&lt;/c2&gt;&lt;a3&gt;レンジ&lt;/a3&gt;演算子）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that type objects are not classes, but may be used to name classes when the type's associated meta-object allows it:</seg>
       </tuv>
       <tuv lang="JA">
