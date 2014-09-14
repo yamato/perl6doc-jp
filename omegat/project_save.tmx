@@ -5566,14 +5566,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>List</seg>
-      </tuv>
-      <tuv lang="JA" changeid="yamato" changedate="20140914T022845Z" creationid="yamato" creationdate="20140914T022845Z">
-        <seg>リスト</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>List assignment and binding</seg>
       </tuv>
       <tuv lang="JA">
