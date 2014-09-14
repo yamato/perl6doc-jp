@@ -5102,6 +5102,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Inside the subroutine, the lexpad entry for &lt;c0&gt;$a&lt;/c0&gt; points to the same container that &lt;c1&gt;$x&lt;/c1&gt; points to outside the subroutine.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T132130Z" creationid="yamato" creationdate="20140914T132130Z">
+        <seg>サブルーチン内で&lt;c0&gt;$a&lt;/c0&gt;のためのlexpadエントリーはサブルーチンの外をポイントする&lt;c1&gt;$x&lt;/c1&gt;と同じコンテナをポイントする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Instantiated objects default to true unless the class overrides the definition.</seg>
       </tuv>
       <tuv lang="JA">
@@ -6434,6 +6442,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>これらの生産物の一部が対応してそれらの全てでなく、演算子の名前を挙げたことに注意すべきである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that subroutine signatures allow passing around of containers:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T131922Z" creationid="yamato" creationdate="20140914T131922Z">
+        <seg>サブルーチンシグネチャがコンテナを渡すことが許される：</seg>
       </tuv>
     </tu>
     <tu>
