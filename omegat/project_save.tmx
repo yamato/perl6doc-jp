@@ -8366,6 +8366,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The distinction whether an &lt;c3&gt;=&lt;/c3&gt; means item or list assignment is based on the syntax of the left-hand side.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T024034Z" creationid="yamato" creationdate="20140914T024034Z">
+        <seg>&lt;c3&gt;=&lt;/c3&gt;がアイテム割り当て、リスト割り当てのどちらを意味するかは左側の構文に基づいて区別される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The double-underscore forms are going away:</seg>
       </tuv>
       <tuv lang="JA">
