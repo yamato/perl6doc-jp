@@ -5230,6 +5230,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It explains the levels of indirection involved in dealing with variables and container elements.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T130045Z" creationid="yamato" creationdate="20140914T130045Z">
+        <seg>それは変数とコンテナ要素を処理することに関係している間接手段のレベルを説明する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It has dependent tasks:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140112T091854Z" creationid="Toshiyuki" creationdate="20140112T091854Z">
@@ -11674,6 +11682,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T155030Z" creationid="Toshiyuki" creationdate="20130810T155030Z">
         <seg>さて、それは本当は戻らない。&lt;c2&gt;take&lt;/c2&gt;がレキシカルかダイナミックに使われるかどうかコンパイル時に知る時から。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What is a variable?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T130101Z" creationid="yamato" creationdate="20140914T130101Z">
+        <seg>変数とは何か？</seg>
       </tuv>
     </tu>
     <tu>
