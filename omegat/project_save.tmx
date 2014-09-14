@@ -8326,6 +8326,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Still it's easy to observe how different they are:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T135420Z" creationid="yamato" creationdate="20140914T135420Z">
+        <seg>それらの違いを観察するのはまだ簡単だ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Strict lookup</seg>
       </tuv>
       <tuv lang="JA">
@@ -10838,6 +10846,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is because the &lt;c0&gt;Scalar&lt;/c0&gt; container type hides itself well, but &lt;c1&gt;Array&lt;/c1&gt; makes no such effort.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T135516Z" creationid="yamato" creationdate="20140914T135516Z">
+        <seg>これは&lt;c0&gt;Scalar&lt;/c0&gt;コンテナ型がうまく隠れるからだ。しかし&lt;c1&gt;Array&lt;/c1&gt;はそのような努力をしない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is because the placeholder variables are sorted in Unicode order.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T062441Z" creationid="yamato" creationdate="20140914T062441Z">
@@ -11322,6 +11338,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T164623Z" creationid="Toshiyuki" creationdate="20130817T164623Z">
         <seg>それらを全てハンドルされたとしてマークするためにはCATCHブロックの暗黙のループ経由で個別にアクセスしなければならない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To place a non-&lt;c0&gt;Array&lt;/c0&gt; into an array variable, binding works:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T135552Z" creationid="yamato" creationdate="20140914T135552Z">
+        <seg>non-&lt;c0&gt;Array&lt;/c0&gt;を配列変数に入れるためにバインディングが機能する：</seg>
       </tuv>
     </tu>
     <tu>
