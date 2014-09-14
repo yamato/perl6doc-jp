@@ -638,6 +638,22 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Int&lt;/a0&gt; literals consist of digits, and can contain underscores between any two digits.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T121811Z" creationid="yamato" creationdate="20140914T121811Z">
+        <seg>&lt;a0&gt;Int&lt;/a0&gt;リテラルは数字で構成され、2つの数字の間にアンダースコアを含むことができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Rat&lt;/a0&gt; (rational numbers) literals contain two integer parts joined by a dot.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T122058Z" creationid="yamato" creationdate="20140914T122058Z">
+        <seg>&lt;a0&gt;Rat&lt;/a0&gt;（有理数）リテラルはドットで接続された2つの整数ペアを含む。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;$!&lt;/c0&gt; is the error variable.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T113807Z" creationid="yamato" creationdate="20140914T113807Z">
@@ -10858,6 +10874,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T072429Z" creationid="Toshiyuki" creationdate="20130817T072429Z">
         <seg>あなたの呼び出し元から直接に返すなら、次のようにできる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To specify a base other than ten, use the colonpair form &lt;c0&gt;:radix&lt;number&gt; &lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T121934Z" creationid="yamato" creationdate="20140914T121934Z">
+        <seg>10以外の基数を指定するために&lt;c0&gt;:radix&lt;number&gt; &lt;/c0&gt;というコロンペアを使う。</seg>
       </tuv>
     </tu>
     <tu>
