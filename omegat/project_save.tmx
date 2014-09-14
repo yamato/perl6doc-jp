@@ -7094,6 +7094,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Process ID of the current process.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115426Z" creationid="yamato" creationdate="20140914T115426Z">
+        <seg>現在のプロセスID。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Properties applied to objects constructed at compile-time, such as variables and classes, are also called &lt;b0&gt;traits&lt;/b0&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140326T132801Z" creationid="Toshiyuki" creationdate="20140326T132801Z">
@@ -8594,6 +8602,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T232404Z" creationid="Toshiyuki" creationdate="20140328T232404Z">
         <seg>Coolクラス（とパッケージ）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Current Working Directory.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115220Z" creationid="yamato" creationdate="20140914T115220Z">
+        <seg>現在の作業ディレクトリ。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11510,6 +11526,22 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Which OS distribution am I compiling under</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115327Z" creationid="yamato" creationdate="20140914T115319Z">
+        <seg>どのOS向けにコンパイルされたか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Which Perl am I compiled for?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115405Z" creationid="yamato" creationdate="20140914T115405Z">
+        <seg>どのPerlでコンパイルされたか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Which block am I in?</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T114526Z" creationid="yamato" creationdate="20140914T114526Z">
@@ -11538,6 +11570,14 @@
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T114811Z" creationid="yamato" creationdate="20140914T114811Z">
         <seg>どの文法の中にいるのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Which kernel am I compiled for?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115245Z" creationid="yamato" creationdate="20140914T115245Z">
+        <seg>どのカーネルでコンパイルされたか？</seg>
       </tuv>
     </tu>
     <tu>
@@ -11586,6 +11626,14 @@
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T114516Z" creationid="yamato" creationdate="20140914T114516Z">
         <seg>どのルーチンの中にいるのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Which virtual machine am I compiling under</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115348Z" creationid="yamato" creationdate="20140914T115348Z">
+        <seg>どの仮想マシンでコンパイルされたか</seg>
       </tuv>
     </tu>
     <tu>
