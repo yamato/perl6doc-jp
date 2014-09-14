@@ -3054,6 +3054,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Favor $*EXECUTABLE because it is not guaranteed that the perl</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T115953Z" creationid="yamato" creationdate="20140914T115953Z">
+        <seg>$*EXECUTABLEを支持せよ。なぜならperl</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Filehandles are a notable exception.</seg>
       </tuv>
       <tuv lang="JA">
@@ -12274,6 +12282,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>doesは、クロージャのリストをしない、等しくない</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>executable is in PATH.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T120033Z" creationid="yamato" creationdate="20140914T120033Z">
+        <seg>実行ファイルがPATHに入っている保証がないからだ。</seg>
       </tuv>
     </tu>
     <tu>
