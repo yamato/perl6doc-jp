@@ -5942,6 +5942,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note how the attributes are declared as &lt;c0&gt;$.x&lt;/c0&gt; and &lt;c1&gt;$.y&lt;/c1&gt; but are still accessed via &lt;c2&gt;$!x&lt;/c2&gt; and &lt;c3&gt;$!y&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T053401Z" creationid="yamato" creationdate="20140914T053401Z">
+        <seg>&lt;c0&gt;$.x&lt;/c0&gt;と&lt;c1&gt;$.y&lt;/c1&gt;として宣言された属性は &lt;c2&gt;$!x&lt;/c2&gt;と&lt;c3&gt;$!y&lt;/c3&gt;によってアクセスし続けることができるので注意が必要だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note how the last pair assume that an implicit .0 sorts after anything alphabetic, and that alphabetic is defined according to Unicode, not just according to ASCII.</seg>
       </tuv>
       <tuv lang="JA">
