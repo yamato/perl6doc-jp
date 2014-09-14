@@ -2726,6 +2726,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Dynamic variables are looked up through the caller, not through the outer scope.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T042602Z" creationid="yamato" creationdate="20140914T042602Z">
+        <seg>動的変数は外側のスコープではなく呼び出し元を通してルックアップされる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Each iteration's value is returned as a single "argument" object.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130808T131157Z" creationid="Toshiyuki" creationdate="20130808T131157Z">
