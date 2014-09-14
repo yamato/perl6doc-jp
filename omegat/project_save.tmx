@@ -654,6 +654,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Pair&lt;/a0&gt; objects can be created either with &lt;c1&gt;infix:ﾂｫ=&gt;ﾂｻ &lt;/c1&gt; (which auto-quotes the left-hand side if it is an identifier), or with the various colonpair forms.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T123214Z" creationid="yamato" creationdate="20140914T123214Z">
+        <seg>&lt;a0&gt;Pair&lt;/a0&gt;オブジェクは&lt;c1&gt;infix:«=&gt;»&lt;/c1&gt; で（それは左側が識別子なら自動でクォートする）、または様々なコロンペア形式で作成できる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;Rat&lt;/a0&gt; (rational numbers) literals contain two integer parts joined by a dot.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T122058Z" creationid="yamato" creationdate="20140914T122058Z">
