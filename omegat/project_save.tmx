@@ -3198,6 +3198,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For more information on the match variable see &lt;a3&gt;$/&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T061640Z" creationid="yamato" creationdate="20140914T061640Z">
+        <seg>マッチ変数の情報は&lt;a3&gt;$/&lt;/a3&gt;を参照。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For multiline comments it is recommended (but not required) to use two or more brackets both for visual clarity and to avoid relying too much on internal bracket counting heuristics when commenting code that may accidentally miscount single brackets:</seg>
       </tuv>
       <tuv lang="JA">
@@ -8038,6 +8046,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;&lt; &lt;/c0&gt; twigil is just an alias for &lt;c1&gt;$/&lt;...&gt; &lt;/c1&gt; where &lt;c2&gt;$/&lt;/c2&gt; is the match variable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T061620Z" creationid="yamato" creationdate="20140914T061620Z">
+        <seg>&lt;c0&gt;&lt; &lt;/c0&gt;ツウィギルは&lt;c1&gt;$/&lt;...&gt; &lt;/c1&gt;の別名で、&lt;c2&gt;$/&lt;/c2&gt;はマッチ変数だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c0&gt;&lt;&lt;/c0&gt; Sigil</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T021744Z" creationid="yamato" creationdate="20140914T021744Z">
@@ -8690,6 +8706,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>パラメータが結びつけられているという事実は、シグネチャに密接に結びついている外のキャプチャーがあることを意味する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The fact that the &lt;c0&gt;.&lt;/c0&gt; twigil just does a method call also implies that the following is possible too.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T061444Z" creationid="yamato" creationdate="20140914T061444Z">
+        <seg>実際、&lt;c0&gt;.&lt;/c0&gt;ツウィギルは以下が可能なようにメソッドを呼び出すだけだ。</seg>
       </tuv>
     </tu>
     <tu>
