@@ -3582,6 +3582,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>How many spaces is a tab in a heredoc or virtual margin?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114848Z" creationid="yamato" creationdate="20140914T114848Z">
+        <seg>ヒアドキュメントまたは仮想マージンのタブのスペースの数は？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>How these are resolved depends on what they are eventually bound to.</seg>
       </tuv>
       <tuv lang="JA">
@@ -6658,6 +6666,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>他のオールキャプス名は、半確保される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Other compile-time constants:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114628Z" creationid="yamato" creationdate="20140914T114628Z">
+        <seg>他のコンパイル時定数：</seg>
       </tuv>
     </tu>
     <tu>
@@ -11270,6 +11286,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>What is the current set of interwoven languages?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114615Z" creationid="yamato" creationdate="20140914T114615Z">
+        <seg>混合された言語の現在のセットは何か？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>When a class inherits from another class that informs the method dispatcher to follow the inheritance chain to look for a method to dispatch.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T144059Z" creationid="Toshiyuki" creationdate="20140112T093116Z">
@@ -11430,6 +11454,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Which class am I in?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114744Z" creationid="yamato" creationdate="20140914T114744Z">
+        <seg>度のクラスの中にいるのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Which file am I in?</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T114443Z" creationid="yamato" creationdate="20140914T114443Z">
@@ -11438,10 +11470,50 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Which grammar am I in?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114811Z" creationid="yamato" creationdate="20140914T114811Z">
+        <seg>どの文法の中にいるのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Which lexical scope am I in?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114646Z" creationid="yamato" creationdate="20140914T114646Z">
+        <seg>どのレキシカルスコープの中にいるのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Which line am I at?</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T114504Z" creationid="yamato" creationdate="20140914T114504Z">
         <seg>どの行に居るのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Which module am I in?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114722Z" creationid="yamato" creationdate="20140914T114722Z">
+        <seg>どのモジュールの中にいるのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Which package am I in?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114657Z" creationid="yamato" creationdate="20140914T114657Z">
+        <seg>どのパッケージの中にいるのか？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Which role am I in?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T114756Z" creationid="yamato" creationdate="20140914T114756Z">
+        <seg>どのロールの中にいるのか？</seg>
       </tuv>
     </tu>
     <tu>
