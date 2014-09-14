@@ -2710,6 +2710,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Consider the zip operator &lt;c0&gt;Z&lt;/c0&gt;, which takes an element from each list like a zipper:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T143259Z" creationid="yamato" creationdate="20140914T143259Z">
+        <seg>zip演算子&lt;c0&gt;Z&lt;/c0&gt;を考える。それはジッパーのようなそれぞれのリストの要素を受け取る：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Constants (and enums) default to &lt;c1&gt;our&lt;/c1&gt; scoping so they can be accessed from outside the package.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130802T132343Z" creationid="Toshiyuki" creationdate="20130802T132127Z">
