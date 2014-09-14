@@ -4974,6 +4974,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It is possible to create "variables" in Perl 6 that do not have sigils:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T033310Z" creationid="yamato" creationdate="20140914T033243Z">
+        <seg>Perl 6でシギルを持たない「変数」を作ることが可能だ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It is possible to fail with a resumable exception, such as a warning.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130818T073634Z" creationid="Toshiyuki" creationdate="20130818T073634Z">
