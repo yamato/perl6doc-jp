@@ -3302,6 +3302,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Flattening, Items and Containers</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T140735Z" creationid="yamato" creationdate="20140914T140735Z">
+        <seg>フラット化、アイテムとコンテナ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For &lt;c0&gt;Scalar&lt;/c0&gt; it means "replace the previously stored value with the new one".</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T131835Z" creationid="yamato" creationdate="20140914T131835Z">
@@ -8726,6 +8734,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;%&lt;/c0&gt; and &lt;c1&gt;@&lt;/c1&gt; sigils in Perl 6 generally indicate flattening.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T140912Z" creationid="yamato" creationdate="20140914T140912Z">
+        <seg>Perl 6の&lt;c0&gt;%&lt;/c0&gt;と&lt;c1&gt;@&lt;/c1&gt;シギルは一般にフラット化を示す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c0&gt;&amp;&lt;/c0&gt; sigil indicates that this attribute represents something invocable.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T182550Z" creationid="Toshiyuki" creationdate="20140111T182550Z">
@@ -9234,6 +9250,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>匿名のenum関数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The answer is that binding to array elements is recognized at the syntax level, and instead of emitting code for a normal binding operation, a special method on the array is called that knows how to do the binding itself.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T140721Z" creationid="yamato" creationdate="20140914T140721Z">
+        <seg>答えは配列要素へのバインディングは構文レベルで認知されるということだ。そして通常のバインディング演算のコードを発行する代わりに、それ自身をどのようにバインドするか知っている特別なメソッドが配列で呼び出される。</seg>
       </tuv>
     </tu>
     <tu>
