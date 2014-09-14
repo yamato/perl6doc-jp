@@ -4262,6 +4262,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If used in a context where it doesn't make sense, a compile-time exception of type &lt;a1&gt;X::Syntax::NoSelf&lt;/a1&gt; is thrown.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124644Z" creationid="yamato" creationdate="20140914T124644Z">
+        <seg>意味のないコンテキストで使われるとコンパイル時例外&lt;a1&gt;X::Syntax::NoSelf&lt;/a1&gt;がスローされる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If used in an argument list, all of these forms count as named arguments, with the exception of &lt;c0&gt;'quoted string' =&gt; $value &lt;/c0&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T124002Z" creationid="yamato" creationdate="20140914T124002Z">
@@ -7426,6 +7434,38 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130814T113840Z" creationid="Toshiyuki" creationdate="20130814T113840Z">
         <seg>再開可能な例外が普通に去るかどうかは実装に依存する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns Euler's number</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124912Z" creationid="yamato" creationdate="20140914T124912Z">
+        <seg>オイラー数を返す</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns a pseudo-random &lt;a0&gt;Num&lt;/a0&gt; in the range &lt;c1&gt;0..^1&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124756Z" creationid="yamato" creationdate="20140914T124756Z">
+        <seg>&lt;c1&gt;0..^1&lt;/c1&gt;の間の擬似ランダム&lt;a0&gt;Num&lt;/a0&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns an &lt;a0&gt;Instant&lt;/a0&gt; object representing the current time.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124713Z" creationid="yamato" creationdate="20140914T124713Z">
+        <seg>現在の時間を表す&lt;a0&gt;Instant&lt;/a0&gt;オブジェクトを返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the number &lt;c0&gt;pi&lt;/c0&gt;, i.e. the ratio between circumference and diameter of a circle.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T124852Z" creationid="yamato" creationdate="20140914T124852Z">
+        <seg>円周率&lt;c0&gt;pi&lt;/c0&gt;を返す、すなわち円の円周と直径の間の比率。</seg>
       </tuv>
     </tu>
     <tu>
