@@ -9630,6 +9630,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>They may be directly accessed from within the class via &lt;c0&gt;!&lt;/c0&gt;:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T052058Z" creationid="yamato" creationdate="20140914T052058Z">
+        <seg>それらは&lt;c0&gt;!&lt;/c0&gt;によってクラス内部から直接アクセスされるかもしれない：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>They parse the same as phasers:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130818T082139Z" creationid="Toshiyuki" creationdate="20130818T082139Z">
