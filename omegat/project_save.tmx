@@ -5278,6 +5278,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>List</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T022845Z" creationid="yamato" creationdate="20140914T022845Z">
+        <seg>リスト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>List assignment and binding</seg>
       </tuv>
       <tuv lang="JA">
@@ -10474,6 +10482,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140309T004120Z" creationid="Toshiyuki" creationdate="20140309T004120Z">
         <seg>変数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Variable names start with a special character called a &lt;e0&gt;sigil&lt;/e0&gt;, followed optionally by a second special character named &lt;e1&gt;twigil&lt;/e1&gt;, and then an &lt;e2&gt;identifier&lt;/e2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T022837Z" creationid="yamato" creationdate="20140914T022837Z">
+        <seg>変数名は&lt;e0&gt;シギル&lt;/e0&gt;と呼ばれる特殊文字で始まり、その次に&lt;e1&gt;ツウィギル&lt;/e1&gt;という第2の特殊文字が任意で付加され、最後に&lt;e2&gt;識別子&lt;/e2&gt;が続く。</seg>
       </tuv>
     </tu>
     <tu>
