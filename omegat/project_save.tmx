@@ -13424,6 +13424,14 @@ my \θ       = 15 * degrees;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>sorts the elements of &lt;c0&gt;$item&lt;/c0&gt; and then returns a list that is flattened out in the array assignment.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T142230Z" creationid="yamato" creationdate="20140914T142230Z">
+        <seg>&lt;c0&gt;$item&lt;/c0&gt;の要素をソートし、配列の割り当てにフラット化されたリストを返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>the assignment &lt;c0&gt;$x = 42&lt;/c0&gt; stores a pointer to the &lt;c1&gt;Int&lt;/c1&gt; object 42 in the scalar container to which the lexpad entry for &lt;c2&gt;$x&lt;/c2&gt; points.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T131516Z" creationid="yamato" creationdate="20140914T131516Z">
