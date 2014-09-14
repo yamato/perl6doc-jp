@@ -8094,6 +8094,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;:&lt;/c0&gt; twigil declares a formal named parameter to a block or subroutine.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T063456Z" creationid="yamato" creationdate="20140914T063456Z">
+        <seg>&lt;c0&gt;:&lt;/c0&gt;ツウィギルはブロックやサブルーチンに対して名前付き仮パラメータを宣言する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c0&gt;&lt; &lt;/c0&gt; twigil is just an alias for &lt;c1&gt;$/&lt;...&gt; &lt;/c1&gt; where &lt;c2&gt;$/&lt;/c2&gt; is the match variable.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T061620Z" creationid="yamato" creationdate="20140914T061620Z">
@@ -10030,6 +10038,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is disallowed in favor of being to able to catch some Perl 5-isms.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T063414Z" creationid="yamato" creationdate="20140914T063414Z">
+        <seg>これは若干のPerl 5-ismsを捉えて賛同するために認められていない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is equivalent to</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T113741Z" creationid="Toshiyuki" creationdate="20130810T113741Z">
@@ -10970,6 +10986,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>未定義値を含んでいる変数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Variables declared using this form are a type of placeholder variables too.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T063529Z" creationid="yamato" creationdate="20140914T063529Z">
+        <seg>この形式で宣言される変数も一種のプレースホルダー変数だ。</seg>
       </tuv>
     </tu>
     <tu>
