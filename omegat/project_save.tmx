@@ -4974,6 +4974,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In the case of &lt;c0&gt;my $x&lt;/c0&gt;, the lexpad entry for the variable &lt;c1&gt;$x&lt;/c1&gt; is a pointer to an object of type &lt;c2&gt;Scalar&lt;/c2&gt;, usually just called &lt;e3&gt;the container&lt;/e3&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T130924Z" creationid="yamato" creationdate="20140914T130924Z">
+        <seg>&lt;c0&gt;my $x&lt;/c0&gt;の場合、変数&lt;c1&gt;$x&lt;/c1&gt;のためのlexpadエントリーは&lt;c2&gt;Scalar&lt;/c2&gt;型オブジェクトのポインタで、通常は単に&lt;e3&gt;コンテナ&lt;/e3&gt;と呼ばれる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In the case where you want all your parameters to default to &lt;c0&gt;rw&lt;/c0&gt;, you may use the visually suggestive double-ended arrow to indicate that values flow both ways:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T113722Z" creationid="Toshiyuki" creationdate="20130810T113722Z">
@@ -7506,6 +7514,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140113T080142Z" creationid="Toshiyuki" creationdate="20140113T080142Z">
         <seg>ロール</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Scalar containers</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T130934Z" creationid="yamato" creationdate="20140914T130934Z">
+        <seg>スカラーコンテナ</seg>
       </tuv>
     </tu>
     <tu>
