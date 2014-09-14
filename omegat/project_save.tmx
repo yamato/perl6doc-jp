@@ -6958,6 +6958,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>See also the documentation in &lt;a0&gt;List&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T023116Z" creationid="yamato" creationdate="20140914T023116Z">
+        <seg>&lt;a0&gt;List&lt;/a0&gt;のドキュメントを参照。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>See below for more on this.</seg>
       </tuv>
       <tuv lang="JA">
@@ -8906,6 +8914,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130822T030444Z" creationid="Toshiyuki" creationdate="20130822T030444Z">
         <seg>&lt;c0&gt;INIT&lt;/c0&gt;と&lt;c1&gt;once&lt;/c1&gt;のセマンティクスは他のそれぞれの複製されたクロージャとは同等ではない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The sigil serves both as rough type constraint, and as an indicator as to whether the contents of the variable flatten in list context.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T023046Z" creationid="yamato" creationdate="20140914T023046Z">
+        <seg>シギルはおおまかな型成約と、変数の内容がリストコンテキストでフラットになるかどうかに関する指標として役立つ。</seg>
       </tuv>
     </tu>
     <tu>
