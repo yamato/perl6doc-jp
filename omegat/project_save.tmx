@@ -2014,6 +2014,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>At run time, a variable appears as an entry in a &lt;e0&gt;lexical pad&lt;/e0&gt;, or &lt;e1&gt;lexpad&lt;/e1&gt; for short.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T130655Z" creationid="yamato" creationdate="20140914T130655Z">
+        <seg>実行時、変数は&lt;e0&gt;lexical pad&lt;/e0&gt;または &lt;e1&gt;lexpad&lt;/e1&gt;のエントリーとして現れる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Attempts to say something like:</seg>
       </tuv>
       <tuv lang="JA">
@@ -10578,6 +10586,22 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>これは、ユニコードBidiMirroringデータテーブルの市場第二部を含む。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This internal symbol table is used to detect undeclared variables, and to tie the code generation for the variable to the correct scope.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T130555Z" creationid="yamato" creationdate="20140914T130555Z">
+        <seg>この内部シンボルテーブルは宣言されていない変数を見つけ、変数を正しいスコープに結合するコード生成に用いられる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is a per-scope data structure that stores a pointer for each variable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T130738Z" creationid="yamato" creationdate="20140914T130738Z">
+        <seg>これはそれぞれの変数のポインタを保存するスコープごとのデータ構造だ。</seg>
       </tuv>
     </tu>
     <tu>
