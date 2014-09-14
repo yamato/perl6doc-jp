@@ -6246,6 +6246,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Next to assignment, Perl 6 also supports &lt;e0&gt;binding&lt;/e0&gt; with the &lt;c1&gt;:=&lt;/c1&gt; operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T133018Z" creationid="yamato" creationdate="20140914T133018Z">
+        <seg>割り当ての次に、Perl 6は&lt;c1&gt;:=&lt;/c1&gt;演算子による&lt;e0&gt;バインディング&lt;/e0&gt;もサポートする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Nil</seg>
       </tuv>
       <tuv lang="JA">
@@ -7522,6 +7530,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130814T113840Z" creationid="Toshiyuki" creationdate="20130814T113840Z">
         <seg>再開可能な例外が普通に去るかどうかは実装に依存する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returning a container is how &lt;c0&gt;is rw&lt;/c0&gt; attribute accessors work.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T132833Z" creationid="yamato" creationdate="20140914T132833Z">
+        <seg>コンテナを返すことは&lt;c0&gt;is rw&lt;/c0&gt;属性アクセサが動作する方法だ。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12834,6 +12850,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>以下に効果的に準備をされる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>is equivalent to</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T132901Z" creationid="yamato" creationdate="20140914T132901Z">
+        <seg>は次と同じだ</seg>
       </tuv>
     </tu>
     <tu>
