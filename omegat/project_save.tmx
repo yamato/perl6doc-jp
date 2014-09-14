@@ -3582,6 +3582,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Here you can find an overview of different kinds of terms.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T121639Z" creationid="yamato" creationdate="20140914T121639Z">
+        <seg>ここでは異なる種類の項の概要を見ることができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Heredoc boundaries are suppressed, however, so you can split excessively long heredoc intro lines like this:</seg>
       </tuv>
       <tuv lang="JA">
@@ -5890,6 +5898,14 @@
       </tuv>
       <tuv lang="JA">
         <seg>大部分の記号参照は、この表記法でされる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Most syntactic constructs in Perl 6 can be categorized in &lt;e0&gt;terms&lt;/e0&gt; and &lt;a1&gt;operators&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T121603Z" creationid="yamato" creationdate="20140914T121603Z">
+        <seg>Perl 6の大部分の構文法の構造は&lt;e0&gt;項&lt;/e0&gt;と&lt;a1&gt;演算子&lt;/a1&gt;に分類できる。</seg>
       </tuv>
     </tu>
     <tu>
