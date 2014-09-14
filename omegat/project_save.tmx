@@ -4430,6 +4430,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In fact, something along the lines of</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T060758Z" creationid="yamato" creationdate="20140914T060758Z">
+        <seg>実際、行に沿う何か</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In fact, this construct would be relatively useless if you could bind only boolean values as parameters, since within the closure you already know whether it evaluated to true or false.) Binding within an &lt;c1&gt;else&lt;/c1&gt; automatically binds the value tested by the previous &lt;c2&gt;if&lt;/c2&gt; or &lt;c3&gt;elsif&lt;/c3&gt;, which, while known to be false, might nevertheless be an &lt;i4&gt;interesting&lt;/i4&gt; value of false.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130804T084044Z" creationid="Toshiyuki" creationdate="20130804T084044Z">
@@ -11826,6 +11834,14 @@
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T074659Z" creationid="Toshiyuki" creationdate="20130817T074659Z">
         <seg>それは常にレキシカルスコープな&lt;c0&gt;LINE&lt;/c0&gt;ループから抜け出す。あなたが見ることができないいくつかのダイナミックスコープがたまたまそのラベルを持っていても。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>just calls the methods &lt;c0&gt;x&lt;/c0&gt; and &lt;c1&gt;y&lt;/c1&gt; on &lt;c2&gt;self&lt;/c2&gt;, which are automatically generated for you because you used the &lt;c3&gt;.&lt;/c3&gt; twigil as you declared your attributes.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140914T061107Z" creationid="yamato" creationdate="20140914T061107Z">
+        <seg>は単にメソッド&lt;c0&gt;x&lt;/c0&gt;と&lt;c1&gt;y&lt;/c1&gt;を&lt;c2&gt;self&lt;/c2&gt;で呼ぶだけで、それは&lt;c3&gt;.&lt;/c3&gt;を使って属性を宣言することで自動生成される。</seg>
       </tuv>
     </tu>
     <tu>
