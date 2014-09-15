@@ -4118,6 +4118,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generic, "smart" three-way comparator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T052911Z" creationid="yamato" creationdate="20140915T052911Z">
+        <seg>ジェネリックな、「スマート」3項比較。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Given &lt;c0&gt;sink&lt;/c0&gt;, there's no need for an "else" clause on Perl 6's loops, and the &lt;c1&gt;sink&lt;/c1&gt; construct works in any list, not just &lt;c2&gt;for&lt;/c2&gt; loops.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T080818Z" creationid="Toshiyuki" creationdate="20140329T080818Z">
