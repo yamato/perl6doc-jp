@@ -1318,6 +1318,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Again &lt;c0&gt;.tree&lt;/c0&gt; can turn the inner parcels into "hard", itemized arrays:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T013243Z" creationid="yamato" creationdate="20140915T013243Z">
+        <seg>また、&lt;c0&gt;.tree&lt;/c0&gt;は内部のパーセルを「ハードな」、アイテム化された配列に変えることができる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>All IEEE modes must be lexically available via pragma except in cases where that would entail heroic efforts to bypass a braindead platform.</seg>
       </tuv>
       <tuv lang="JA">
@@ -12170,6 +12178,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T131712Z" creationid="yamato" creationdate="20140914T131712Z">
         <seg>それが正確に意味するものはコンテナ型次第だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What happens when you call &lt;c0&gt;$x.list&lt;/c0&gt;?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T013314Z" creationid="yamato" creationdate="20140915T013314Z">
+        <seg>&lt;c0&gt;$x.list&lt;/c0&gt;を呼びだしたとき何が起こっているのか？</seg>
       </tuv>
     </tu>
     <tu>
