@@ -10022,6 +10022,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The grouping operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T032307Z" creationid="yamato" creationdate="20140915T032307Z">
+        <seg>グルーピング演算子。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The hyper operator</seg>
       </tuv>
       <tuv lang="JA">
