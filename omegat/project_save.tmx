@@ -4822,6 +4822,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In an expression like &lt;c0&gt;1 + 2 * 3&lt;/c0&gt;, the &lt;c1&gt;2 * 3&lt;/c1&gt; is evaluated first because the infix &lt;c2&gt;*&lt;/c2&gt; has tighter &lt;s3&gt;precedence&lt;/s3&gt; than the &lt;c4&gt;+&lt;/c4&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T015808Z" creationid="yamato" creationdate="20140915T015808Z">
+        <seg>&lt;c0&gt;1 + 2 * 3&lt;/c0&gt;のような式では&lt;c1&gt;2 * 3&lt;/c1&gt;が先に評価される。なぜならinfix &lt;c2&gt;*&lt;/c2&gt;は&lt;c4&gt;+&lt;/c4&gt;より高い&lt;s3&gt;優先順位&lt;/s3&gt;を持つからだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In any case, all formal parameters are the equivalent of &lt;c0&gt;my&lt;/c0&gt; variables within the block.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130729T125913Z" creationid="Toshiyuki" creationdate="20130729T125913Z">
@@ -9874,6 +9882,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>以下のロールはサポートされる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following table summarizes the precedence levels in Perl 6, from tightest to loosest:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T015909Z" creationid="yamato" creationdate="20140915T015909Z">
+        <seg>以下のテーブルはPerl 6での優先順位レベルを要約する。最も高いものから低いものへ：</seg>
       </tuv>
     </tu>
     <tu>
