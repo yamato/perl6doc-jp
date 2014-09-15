@@ -2726,6 +2726,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a1&gt;Int&lt;/a1&gt; and does a bitwise &lt;e2&gt;AND&lt;/e2&gt; operation assuming two's complement.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044722Z" creationid="yamato" creationdate="20140915T044722Z">
+        <seg>両方の引数を&lt;a1&gt;Int&lt;/a1&gt;に強制し、2の補数を仮定するように&lt;e2&gt;AND&lt;/e2&gt;演算を行う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coerces the argument to &lt;a0&gt;Bool&lt;/a0&gt; and then does a bit flip, which makes it the same as &lt;c1&gt;prefix:&lt;!&gt; &lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T043539Z" creationid="yamato" creationdate="20140915T043539Z">
@@ -3226,6 +3234,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>認められなかった形</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Divisibility operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044512Z" creationid="yamato" creationdate="20140915T044512Z">
+        <seg>整除性演算子。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5766,6 +5782,22 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Integer bit shift to the left.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044742Z" creationid="yamato" creationdate="20140915T044742Z">
+        <seg>整数の左へのビットシフト。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Integer bit shift to the right.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044757Z" creationid="yamato" creationdate="20140915T044757Z">
+        <seg>整数の右へのビットシフト。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Integer bitwise negation.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T043249Z" creationid="yamato" creationdate="20140915T043249Z">
@@ -5778,6 +5810,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T044249Z" creationid="yamato" creationdate="20140915T044249Z">
         <seg>整数の除算。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Integer modulo operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044554Z" creationid="yamato" creationdate="20140915T044554Z">
+        <seg>整数剰余演算子。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7406,6 +7446,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Numeric bitwise &lt;e0&gt;AND&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044634Z" creationid="yamato" creationdate="20140915T044634Z">
+        <seg>数値のビットごとの&lt;e0&gt;AND&lt;/e0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Numeric context operator.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T042538Z" creationid="yamato" creationdate="20140915T042538Z">
@@ -8374,6 +8422,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns &lt;c0&gt;True&lt;/c0&gt; if &lt;c1&gt;$a % $b == 0&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044531Z" creationid="yamato" creationdate="20140915T044531Z">
+        <seg>もし&lt;c1&gt;$a % $b == 0&lt;/c1&gt;なら&lt;c0&gt;True&lt;/c0&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns Euler's number</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T124912Z" creationid="yamato" creationdate="20140914T124912Z">
@@ -8418,6 +8474,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T124852Z" creationid="yamato" creationdate="20140914T124852Z">
         <seg>円周率&lt;c0&gt;pi&lt;/c0&gt;を返す、すなわち円の円周と直径の間の比率。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the remainder of an integer modulo operation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044617Z" creationid="yamato" creationdate="20140915T044617Z">
+        <seg>剰余演算の余りの整数を返す。</seg>
       </tuv>
     </tu>
     <tu>
