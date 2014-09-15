@@ -654,6 +654,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Callable&lt;/a0&gt; indexes are invoked with the number of elements as arguments.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T035456Z" creationid="yamato" creationdate="20140915T035456Z">
+        <seg>&lt;a0&gt;Callable&lt;/a0&gt;インデックスは引数として数値の要素で起動される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;Int&lt;/a0&gt; literals consist of digits, and can contain underscores between any two digits.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T121811Z" creationid="yamato" creationdate="20140914T121811Z">
@@ -6198,6 +6206,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Lists of indexes produce list of results as if they were all indexed separately.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T035406Z" creationid="yamato" creationdate="20140915T035406Z">
+        <seg>インデックスのリストは全て個別にインデックスされたかのように結果のリストを生成する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Literals</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T120105Z" creationid="Toshiyuki" creationdate="20140329T120105Z">
@@ -11534,6 +11550,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This lets you write</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T035606Z" creationid="yamato" creationdate="20140915T035606Z">
+        <seg>次のように書くと</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This makes it easy to keep track of what you last "took":</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T213301Z" creationid="Toshiyuki" creationdate="20130810T213301Z">
@@ -13966,6 +13990,14 @@ my \θ       = 15 * degrees;</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130802T140241Z" creationid="Toshiyuki" creationdate="20130802T140241Z">
         <seg>Perl 5の振る舞いを得るために。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>to index lists and arrays from the end.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T035639Z" creationid="yamato" creationdate="20140915T035639Z">
+        <seg>終わりからリストと配列をインデックスする。</seg>
       </tuv>
     </tu>
     <tu>
