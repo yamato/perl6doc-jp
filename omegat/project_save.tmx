@@ -2726,6 +2726,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a0&gt;Int&lt;/a0&gt; and does a bitwise &lt;e1&gt;OR&lt;/e1&gt; (inclusive OR) operation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T045310Z" creationid="yamato" creationdate="20140915T045310Z">
+        <seg>両方の引数を&lt;a0&gt;Int&lt;/a0&gt;に強制し、ビットごとの&lt;e1&gt;OR&lt;/e1&gt;（内包的論理和）演算をする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coerces both arguments to &lt;a0&gt;Int&lt;/a0&gt; and returns the greatest common denominator.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T044908Z" creationid="yamato" creationdate="20140915T044908Z">
@@ -2754,6 +2762,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T043928Z" creationid="yamato" creationdate="20140915T043928Z">
         <seg>両方の引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制し、 それらを乗算する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a0&gt;Numeric&lt;/a0&gt; and subtracts the second from the first.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T045156Z" creationid="yamato" creationdate="20140915T045156Z">
+        <seg>両方の引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制し、最初の方から次の方を減算する。</seg>
       </tuv>
     </tu>
     <tu>
