@@ -1902,6 +1902,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>As a special case the &lt;e0&gt;listop&lt;/e0&gt; (list operator) can stand either as a term or as a prefix.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T024500Z" creationid="yamato" creationdate="20140915T024500Z">
+        <seg>特別なケースとして&lt;e0&gt;listop&lt;/e0&gt;（リスト演算子）は項か接頭辞として有効だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>As a special case to support the use above, a backslash where a postfix is expected is considered a degenerate form of unspace.</seg>
       </tuv>
       <tuv lang="JA">
