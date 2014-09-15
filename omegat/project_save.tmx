@@ -2790,6 +2790,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces to &lt;a0&gt;Numeric&lt;/a0&gt; first.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044347Z" creationid="yamato" creationdate="20140915T044347Z">
+        <seg>最初を&lt;a0&gt;Numeric&lt;/a0&gt;に強制する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coercions may also be specified on the return type:</seg>
       </tuv>
       <tuv lang="JA">
@@ -3218,6 +3226,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>認められなかった形</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Division of &lt;a1&gt;Int&lt;/a1&gt; values returns &lt;a2&gt;Rat&lt;/a2&gt;, otherwise the "wider type" rule described in &lt;a3&gt;Numeric&lt;/a3&gt; holds.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044233Z" creationid="yamato" creationdate="20140915T044233Z">
+        <seg>&lt;a1&gt;Int&lt;/a1&gt;の除算は&lt;a2&gt;Rat&lt;/a2&gt;を返し、そうでなければ&lt;a3&gt;Numeric&lt;/a3&gt;が持つ「より広い型」の規則になる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3922,6 +3938,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>全般的な引用は、現在副詞をとるかもしれない：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generally the following identity holds:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044419Z" creationid="yamato" creationdate="20140915T044419Z">
+        <seg>一般に、続く識別子は以下を持つ：</seg>
       </tuv>
     </tu>
     <tu>
@@ -5750,6 +5774,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Integer division.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044249Z" creationid="yamato" creationdate="20140915T044249Z">
+        <seg>整数の除算。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Interpolating into a single-quoted string</seg>
       </tuv>
       <tuv lang="JA">
@@ -6634,6 +6666,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>デフォルトによってPerlが正確なバージョン番号によって外端モジュールを輸入する時から、そのような変なバージョンによるモジュールがまだPerlによって使われることができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Modulo operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044328Z" creationid="yamato" creationdate="20140915T044328Z">
+        <seg>剰余演算子。</seg>
       </tuv>
     </tu>
     <tu>
