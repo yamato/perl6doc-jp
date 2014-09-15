@@ -11598,6 +11598,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>To reiterate the previous point: &lt;c0&gt;.list&lt;/c0&gt; only removes the itemization (or scalar container) of the invocant, whereas &lt;c1&gt;.flat&lt;/c1&gt; walks the elements of the invocant, and removes their itemization (note that both methods don't modify the invocant object; they just return a modified copy).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T014044Z" creationid="yamato" creationdate="20140915T014044Z">
+        <seg>前のポイントを繰り返し言うと：&lt;c0&gt;.list&lt;/c0&gt;はインボカントのアイテム化（またはスカラーコンテナ）を取り除くだけだ。ところが&lt;c1&gt;.flat&lt;/c1&gt;はインボカントの要素を歩きまわり、それらのアイテム化を取り除く（両方のメソッドはインボカントオブジェクトを変更しない；変更されたコピーを返すだけだ）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To return a value (to the dynamical caller) from any pointy block or bare closure, you either just let the block return the value of its final expression, or you can use &lt;c0&gt;leave&lt;/c0&gt;, which comes in both function and method forms.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T071032Z" creationid="Toshiyuki" creationdate="20130817T071032Z">
