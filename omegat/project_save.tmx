@@ -2182,6 +2182,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Autoincrement Precedence</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T040704Z" creationid="yamato" creationdate="20140915T040704Z">
+        <seg>オートインクリメント優先順位</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Autopriming of Unary and Binary Operators with Whatever</seg>
       </tuv>
       <tuv lang="JA">
@@ -4398,6 +4406,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If no such method was found, an empty &lt;a4&gt;Parcel&lt;/a4&gt; is returned.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T040635Z" creationid="yamato" creationdate="20140915T040635Z">
+        <seg>メソッドが見つからなければ空の&lt;a4&gt;Parcel&lt;/a4&gt;が返される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If no type can represent it exactly, it should be returned as either a Rat or a Num, whichever is more accurate.</seg>
       </tuv>
       <tuv lang="JA">
@@ -5430,6 +5446,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Increments its argument by one, and returns the incremented value.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T040739Z" creationid="yamato" creationdate="20140915T040739Z">
+        <seg>引数を1つインクリメントし、インクリメントされた値を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Individual arguments in a parcel or capture composer are parsed as ordinary expressions, and any functions mentioned are called immediately, with each function's results placed as an argument (often a subparcel, if the function returns multiple values) within the outer parcel (or capture).</seg>
       </tuv>
       <tuv lang="JA">
@@ -5914,6 +5938,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>はっきりと何らかの間接参照前後関係に置かれない限り、それは自動的に内容に間接参照を遺贈しない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It works by calling the &lt;a0&gt;succ&lt;/a0&gt; method (for &lt;e1&gt;successor&lt;/e1&gt;) on its argument, which gives custom types the freedom to implement their own incrementation semantics.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T040921Z" creationid="yamato" creationdate="20140915T040921Z">
+        <seg>それは&lt;a0&gt;succ&lt;/a0&gt;メソッド（&lt;e1&gt;successor&lt;/e1&gt;のための）を引数で呼び出し、それはカスタムメイドのインクリメント意味論を実装する自由を与える。</seg>
       </tuv>
     </tu>
     <tu>
