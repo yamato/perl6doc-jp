@@ -2798,6 +2798,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a0&gt;Numeric&lt;/a0&gt; (if necessary), and returns &lt;c1&gt;True&lt;/c1&gt; if they are distinct.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T054500Z" creationid="yamato" creationdate="20140915T054500Z">
+        <seg>必要なら両方の引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制し、それらが異なるなら&lt;c1&gt;True&lt;/c1&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coerces both arguments to &lt;a0&gt;Numeric&lt;/a0&gt; and adds them.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T045118Z" creationid="yamato" creationdate="20140915T045118Z">
@@ -2818,6 +2826,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T045156Z" creationid="yamato" creationdate="20140915T045156Z">
         <seg>両方の引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制し、最初の方から次の方を減算する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a0&gt;Numeric&lt;/a0&gt; if necessary, and returns &lt;c1&gt;True&lt;/c1&gt; if they are equal.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T054401Z" creationid="yamato" creationdate="20140915T054401Z">
+        <seg>必要なら両方の引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制し、それらが等しいなら&lt;c1&gt;True&lt;/c1&gt;を返す。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3090,6 +3106,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T193050Z" creationid="Toshiyuki" creationdate="20140111T193050Z">
         <seg>コンストラクタ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Constructs a &lt;a0&gt;Range&lt;/a0&gt; from the arguments, excluding both start and end point.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T054228Z" creationid="yamato" creationdate="20140915T054228Z">
+        <seg>引数から&lt;a0&gt;Range&lt;/a0&gt;を構成する。始点と終点を除く。</seg>
       </tuv>
     </tu>
     <tu>
