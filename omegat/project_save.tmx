@@ -4558,6 +4558,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Hypothetical reset: if the current scope is exited either through an exception or &lt;c0&gt;fail()&lt;/c0&gt;, the old value is restored.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T052154Z" creationid="yamato" creationdate="20140915T052154Z">
+        <seg>仮定のリセット：もし現在のスコープを例外か&lt;c0&gt;fail()&lt;/c0&gt;で抜けたら、古い値が復元される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If &lt;c4&gt;$b &lt;= 0 &lt;/c4&gt;, the empty list is returned.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T050914Z" creationid="yamato" creationdate="20140915T050914Z">
@@ -6822,6 +6830,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Mixes &lt;c0&gt;$role&lt;/c0&gt; into &lt;c1&gt;$obj&lt;/c1&gt; at run time.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T052323Z" creationid="yamato" creationdate="20140915T052323Z">
+        <seg>実行時に&lt;c0&gt;$role&lt;/c0&gt;を&lt;c1&gt;$obj&lt;/c1&gt;にミックスする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Modifiers</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140222T015922Z" creationid="Toshiyuki" creationdate="20140222T015922Z">
@@ -8522,6 +8538,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T184217Z" creationid="Toshiyuki" creationdate="20140111T184217Z">
         <seg>&lt;c4&gt;!&lt;/c4&gt;を&lt;c5&gt;.&lt;/c5&gt;に置き換えると属性&lt;c6&gt;$!done&lt;/c6&gt;とアクセサメソッド&lt;c7&gt;done&lt;/c7&gt;を両方宣言します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Requires &lt;c2&gt;$obj&lt;/c2&gt; to be mutable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T052337Z" creationid="yamato" creationdate="20140915T052337Z">
+        <seg>&lt;c2&gt;$obj&lt;/c2&gt;が可変である必要がある。</seg>
       </tuv>
     </tu>
     <tu>
