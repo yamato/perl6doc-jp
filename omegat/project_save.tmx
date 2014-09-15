@@ -7278,6 +7278,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Other cases include meta-reduced infix operators (&lt;c1&gt;[+]| 1, 2, 3&lt;/c1&gt;) and the &lt;a2&gt;prefix ...&lt;/a2&gt; etc. stub operators.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T025438Z" creationid="yamato" creationdate="20140915T025438Z">
+        <seg>他のケースではメタ縮小中置演算子（&lt;c1&gt;[+]| 1, 2, 3&lt;/c1&gt;）と&lt;a2&gt;prefix ...&lt;/a2&gt;などのスタブ演算子を含む。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Other compile-time constants:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T114628Z" creationid="yamato" creationdate="20140914T114628Z">
