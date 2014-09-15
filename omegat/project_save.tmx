@@ -1414,6 +1414,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Aliases the left-hand side to &lt;c0&gt;$_&lt;/c0&gt;, then evaluates the right-hand side, and calls &lt;c1&gt;.ACCEPTS($_)&lt;/c1&gt; on it.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T060206Z" creationid="yamato" creationdate="20140915T060206Z">
+        <seg>左側を&lt;c0&gt;$_&lt;/c0&gt;にエイリアスし、右側を評価し、&lt;c1&gt;.ACCEPTS($_)&lt;/c1&gt;を呼ぶ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>All IEEE modes must be lexically available via pragma except in cases where that would entail heroic efforts to bypass a braindead platform.</seg>
       </tuv>
       <tuv lang="JA">
@@ -4418,6 +4426,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T014326Z" creationid="yamato" creationdate="20140915T014326Z">
         <seg>ここにフラット化を行う演算がいくつかある：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Here is an excerpt of built-in smart-matching functionality:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T060342Z" creationid="yamato" creationdate="20140915T060342Z">
+        <seg>スマートマッチングの機能の抜粋がここにある：</seg>
       </tuv>
     </tu>
     <tu>
@@ -11386,6 +11402,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T043906Z" creationid="yamato" creationdate="20140914T043906Z">
         <seg>しかし2度目は「1, 11, 101」と出力する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The semantics are left to the type of the right-hand side operand.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T060259Z" creationid="yamato" creationdate="20140915T060259Z">
+        <seg>セマンティックは、右側オペランドの型に任せられる。</seg>
       </tuv>
     </tu>
     <tu>
