@@ -2854,6 +2854,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a0&gt;Str&lt;/a0&gt; (if necessary), and returns &lt;c1&gt;True&lt;/c1&gt; if both are equal.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T054940Z" creationid="yamato" creationdate="20140915T054940Z">
+        <seg>必要なら両方の引数を&lt;a0&gt;Str&lt;/a0&gt;に強制し、等しいなら&lt;c1&gt;True&lt;/c1&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coerces both arguments to &lt;a0&gt;Str&lt;/a0&gt; and concatenates them.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T051307Z" creationid="yamato" creationdate="20140915T051307Z">
