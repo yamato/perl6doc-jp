@@ -734,6 +734,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;$invocant.?method&lt;/c0&gt; calls method &lt;c1&gt;method&lt;/c1&gt; on &lt;c2&gt;$invocant&lt;/c2&gt; if it has a method of such name.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T040240Z" creationid="yamato" creationdate="20140915T040240Z">
+        <seg>&lt;c0&gt;$invocant.?method&lt;/c0&gt;はそのような名前のメソッドを持っているなら&lt;c2&gt;$invocant&lt;/c2&gt;でメソッド&lt;c1&gt;method&lt;/c1&gt;を呼び出す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;$o.perl&lt;/c0&gt; returns a string that can be executed as Perl code, and reproduces the original object &lt;c1&gt;$o&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140322T105129Z" creationid="Toshiyuki" creationdate="20140112T140148Z">
@@ -7478,6 +7486,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Otherwise it returns &lt;a3&gt;Nil&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T040256Z" creationid="yamato" creationdate="20140915T040256Z">
+        <seg>そうでなければ&lt;a3&gt;Nil&lt;/a3&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Otherwise the postfix dot will be taken to be the start of some kind of method call syntax.</seg>
       </tuv>
       <tuv lang="JA">
@@ -7834,6 +7850,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>それらが間のドットを持っているかもしれないけれども、後置演算子は間のスペースを決して持っていないかもしれない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Potential method calls.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T040111Z" creationid="yamato" creationdate="20140915T040111Z">
+        <seg>潜在のメソッド呼び出し。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8938,6 +8962,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>タイトル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Technically this is not an operator, but syntax special-cased in the compiler.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T040017Z" creationid="yamato" creationdate="20140915T040017Z">
+        <seg>技術的にはこれは演算子ではなく、コンパイラで特別な場合の文法だ。</seg>
       </tuv>
     </tu>
     <tu>
