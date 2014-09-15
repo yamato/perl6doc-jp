@@ -4422,6 +4422,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If the contents looks like a list of pairs and does not use &lt;a0&gt;$_&lt;/a0&gt; or other placeholder parameters, returns an itemized &lt;a1&gt;Hash&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T033809Z" creationid="yamato" creationdate="20140915T033809Z">
+        <seg>内容がペアのリストのように見えて、&lt;a0&gt;$_&lt;/a0&gt;またはプレースホルダーパラメータを使っていないならアイテム化された&lt;a1&gt;Hash&lt;/a1&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If the failure throws its exception and the exception resumes, the thrower by default returns the null string (&lt;c0&gt;''&lt;/c0&gt;) to whatever caused the failure to throw its exception.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130818T074133Z" creationid="Toshiyuki" creationdate="20130818T074133Z">
@@ -7394,6 +7402,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>他の後置演算子は、unspaceを使用もするかもしれない：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Otherwise it constructs a &lt;a0&gt;Block&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T033844Z" creationid="yamato" creationdate="20140915T033844Z">
+        <seg>そうでなければ&lt;a0&gt;Block&lt;/a0&gt;を構築する。</seg>
       </tuv>
     </tu>
     <tu>
