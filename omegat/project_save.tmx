@@ -2798,6 +2798,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a0&gt;Str&lt;/a0&gt; and concatenates them.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T051307Z" creationid="yamato" creationdate="20140915T051307Z">
+        <seg>両方の引数を&lt;a0&gt;Str&lt;/a0&gt;に強制し、それらを結合する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coerces both arguments to &lt;a1&gt;Int&lt;/a1&gt; and does a bitwise &lt;e2&gt;AND&lt;/e2&gt; operation assuming two's complement.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T044722Z" creationid="yamato" creationdate="20140915T044722Z">
@@ -2954,6 +2962,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>複雑なリテラルは、2実数の追加または引き算を書くことによって、同じように示される再び、スペースが演算子のあたりになくて、（）角度の中に：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Concatenation</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T051241Z" creationid="yamato" creationdate="20140915T051241Z">
+        <seg>連結</seg>
       </tuv>
     </tu>
     <tu>
@@ -3154,6 +3170,22 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>狂った読者は、あなたがそうすることができたこの手段がスコープを編集する際に初期値を他のlexicalsに設定したかどうか疑問に思う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creates an &lt;e0&gt;all&lt;/e0&gt; &lt;a1&gt;Junction&lt;/a1&gt; from its arguments.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T051352Z" creationid="yamato" creationdate="20140915T051352Z">
+        <seg>引数から&lt;e0&gt;全ての&lt;/e0&gt;&lt;a1&gt;Junction&lt;/a1&gt;を作成する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creates an &lt;e0&gt;any&lt;/e0&gt; &lt;a1&gt;Junction&lt;/a1&gt; from its arguments.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T051439Z" creationid="yamato" creationdate="20140915T051439Z">
+        <seg>引数から&lt;e0&gt;どれかの&lt;/e0&gt;&lt;a1&gt;Junction&lt;/a1&gt;を作成する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8622,6 +8654,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>See &lt;a2&gt;Junction&lt;/a2&gt; for more details.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T051454Z" creationid="yamato" creationdate="20140915T051454Z">
+        <seg>詳細は&lt;a2&gt;Junction&lt;/a2&gt;を参照。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>See &lt;a2&gt;Quoting Constructs&lt;/a2&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T122833Z" creationid="yamato" creationdate="20140914T122833Z">
@@ -11050,6 +11090,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130803T044423Z" creationid="Toshiyuki" creationdate="20130803T044423Z">
         <seg>条件文の結果はブロックが実行に選んだ結果になる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The right-hand side can be &lt;c0&gt;*&lt;/c0&gt;, in which case a lazy, infinite list is returned.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T051234Z" creationid="yamato" creationdate="20140915T051234Z">
+        <seg>右側は&lt;c0&gt;*&lt;/c0&gt;もあり得る。この場合はレイジーで、無限のリストを返す。</seg>
       </tuv>
     </tu>
     <tu>
