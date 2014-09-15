@@ -2718,10 +2718,26 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces &lt;c0&gt;$a&lt;/c0&gt; to &lt;a1&gt;Str&lt;/a1&gt; and &lt;c2&gt;$b&lt;/c2&gt; to &lt;a3&gt;Int&lt;/a3&gt; and repeats the string &lt;c4&gt;$b&lt;/c4&gt; times.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T050728Z" creationid="yamato" creationdate="20140915T050728Z">
+        <seg>&lt;c0&gt;$a&lt;/c0&gt;を&lt;a1&gt;Str&lt;/a1&gt;、&lt;c2&gt;$b&lt;/c2&gt;を&lt;a3&gt;Int&lt;/a3&gt;に強制し、文字列を&lt;c4&gt;$b&lt;/c4&gt;の回数繰り返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coerces both argument to &lt;a0&gt;Numeric&lt;/a0&gt; and divides the left through the right number.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T044050Z" creationid="yamato" creationdate="20140915T044050Z">
         <seg>引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制し、左を右の数で除算する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a0&gt;Bool&lt;/a0&gt; and does a logical &lt;e1&gt;OR&lt;/e1&gt; (inclusive OR) operation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T050638Z" creationid="yamato" creationdate="20140915T050638Z">
+        <seg>両方の引数を&lt;a0&gt;Bool&lt;/a0&gt;に強制し、&lt;e1&gt;論理和&lt;/e1&gt;（内包的論理和）演算をする。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8466,6 +8482,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130814T113840Z" creationid="Toshiyuki" creationdate="20130814T113840Z">
         <seg>再開可能な例外が普通に去るかどうかは実装に依存する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Return the empty string if &lt;c5&gt;$b &lt;= 0 &lt;/c5&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T050744Z" creationid="yamato" creationdate="20140915T050744Z">
+        <seg>&lt;c5&gt;$b &lt;= 0 &lt;/c5&gt;なら空の文字列を返す。</seg>
       </tuv>
     </tu>
     <tu>
