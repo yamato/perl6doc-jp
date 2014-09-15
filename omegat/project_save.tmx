@@ -3006,6 +3006,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Decrements its argument by one, and returns the decremented value.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T041021Z" creationid="yamato" creationdate="20140915T041005Z">
+        <seg>引数を1つデクリメントし、デクリメントされた値を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Default encoding of Str.encode/Buf.decode/various IO methods.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T115008Z" creationid="yamato" creationdate="20140914T115008Z">
@@ -5454,6 +5462,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Increments its argument by one, and returns the unincremented value.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T041146Z" creationid="yamato" creationdate="20140915T041146Z">
+        <seg>引数を1つインクリメントし、インクリメント前の値を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Individual arguments in a parcel or capture composer are parsed as ordinary expressions, and any functions mentioned are called immediately, with each function's results placed as an argument (often a subparcel, if the function returns multiple values) within the outer parcel (or capture).</seg>
       </tuv>
       <tuv lang="JA">
@@ -5938,6 +5954,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>はっきりと何らかの間接参照前後関係に置かれない限り、それは自動的に内容に間接参照を遺贈しない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It works by calling the &lt;a0&gt;pred&lt;/a0&gt; method (for &lt;e1&gt;predecessor&lt;/e1&gt;) on its argument, which gives custom types the freedom to implement their own decrementation semantics.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T041118Z" creationid="yamato" creationdate="20140915T041118Z">
+        <seg>それは&lt;a0&gt;pred&lt;/a0&gt;メソッド（&lt;e1&gt;predecessor&lt;/e1&gt;のための）を引数で呼び出し、それはカスタムメイドのデクリメント意味論を実装する自由を与える。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7002,6 +7026,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T034145Z" creationid="yamato" creationdate="20140915T034145Z">
         <seg>この構造が内容を再解析しないことに注意；むしろ内容は文リスト（すなわちブロックのような）として解析され、あとの解析でハッシュとして解釈される必要があると示すなら、ブロックは実行されて&lt;a0&gt;Hash&lt;/a0&gt;に強制される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that this does not necessarily return its argument.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T041244Z" creationid="yamato" creationdate="20140915T041244Z">
+        <seg>これはその引数を返す必要はない。</seg>
       </tuv>
     </tu>
     <tu>
