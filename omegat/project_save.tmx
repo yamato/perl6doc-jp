@@ -734,6 +734,22 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;$invocant.*method&lt;/c0&gt; calls all methods called &lt;c1&gt;method&lt;/c1&gt; from &lt;c2&gt;$invocant&lt;/c2&gt;, and returns a &lt;a3&gt;Parcel&lt;/a3&gt; of the results.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T040612Z" creationid="yamato" creationdate="20140915T040612Z">
+        <seg>&lt;c0&gt;$invocant.*method&lt;/c0&gt;は&lt;c1&gt;method&lt;/c1&gt;というメソッド全てを&lt;c2&gt;$invocant&lt;/c2&gt;で呼び出し、結果を&lt;a3&gt;Parcel&lt;/a3&gt;で返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;$invocant.+method&lt;/c0&gt; calls all methods called &lt;c1&gt;method&lt;/c1&gt; from &lt;c2&gt;$invocant&lt;/c2&gt;, and returns a &lt;a3&gt;Parcel&lt;/a3&gt; of the results.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T040442Z" creationid="yamato" creationdate="20140915T040442Z">
+        <seg>&lt;c0&gt;$invocant.+method&lt;/c0&gt;は&lt;c1&gt;method&lt;/c1&gt;というメソッドを&lt;c2&gt;$invocant&lt;/c2&gt;で全て呼び出し、結果を&lt;a3&gt;Parcel&lt;/a3&gt;のリストで返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;$invocant.?method&lt;/c0&gt; calls method &lt;c1&gt;method&lt;/c1&gt; on &lt;c2&gt;$invocant&lt;/c2&gt; if it has a method of such name.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T040240Z" creationid="yamato" creationdate="20140915T040240Z">
@@ -3042,6 +3058,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>添え字付けの形としての出演にもかかわらず、これらの名前は、実行時でなくコンパイル時で分解される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Dies if no such method was found.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T040455Z" creationid="yamato" creationdate="20140915T040455Z">
+        <seg>メソッドが見つからなければdieする。</seg>
       </tuv>
     </tu>
     <tu>
