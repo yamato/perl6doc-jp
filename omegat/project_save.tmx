@@ -1582,6 +1582,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>An empty group &lt;c0&gt;()&lt;/c0&gt; creates an empty &lt;a1&gt;Parcel&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T033132Z" creationid="yamato" creationdate="20140915T033132Z">
+        <seg>空のグループ&lt;c0&gt;()&lt;/c0&gt;は空の&lt;a1&gt;Parcel&lt;/a1&gt;を作る。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>An exception handler is just a switch statement on an implicit topic that happens to be the current exception to be dealt with.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130813T130151Z" creationid="Toshiyuki" creationdate="20130813T130151Z">
