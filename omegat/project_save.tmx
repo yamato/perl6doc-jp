@@ -2710,6 +2710,22 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces both argument to &lt;a0&gt;Numeric&lt;/a0&gt; and divides the left through the right number.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044050Z" creationid="yamato" creationdate="20140915T044050Z">
+        <seg>引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制し、左を右の数で除算する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a0&gt;Numeric&lt;/a0&gt; and multiplies them.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T043928Z" creationid="yamato" creationdate="20140915T043928Z">
+        <seg>両方の引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制し、 それらを乗算する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coerces the argument to &lt;a0&gt;Bool&lt;/a0&gt; and then does a bit flip, which makes it the same as &lt;c1&gt;prefix:&lt;!&gt; &lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T043539Z" creationid="yamato" creationdate="20140915T043539Z">
@@ -6774,6 +6790,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Multiplicative Precedence</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T043844Z" creationid="yamato" creationdate="20140915T043844Z">
+        <seg>乗法の優先順位</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Mutable types</seg>
       </tuv>
       <tuv lang="JA">
@@ -10802,6 +10826,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140112T090212Z" creationid="Toshiyuki" creationdate="20140112T090212Z">
         <seg>残りのパラメータは従属する&lt;c0&gt;Task&lt;/c0&gt;のインスタンスです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The result is of the wider type.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044004Z" creationid="yamato" creationdate="20140915T044004Z">
+        <seg>結果はより広い型になる。</seg>
       </tuv>
     </tu>
     <tu>
