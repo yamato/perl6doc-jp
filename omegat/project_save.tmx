@@ -2318,6 +2318,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Block or &lt;a0&gt;Hash&lt;/a0&gt; constructor.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T033632Z" creationid="yamato" creationdate="20140915T033632Z">
+        <seg>ブロックまたは&lt;a0&gt;Hash&lt;/a0&gt;のコンストラクタ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Both sides are in item context.</seg>
       </tuv>
       <tuv lang="JA">
@@ -4866,6 +4874,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>すべてのこれらのケースに、生み出される型は、Int、Ratまたは数を正確に表現することができるNumで最も狭い。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In an argument list, putting parenthesis around an argument prevents it from being interpreted as a named argument.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T033609Z" creationid="yamato" creationdate="20140915T033609Z">
+        <seg>引数リストの中で引数の周りに括弧を置くと名前付き引数と解釈されるのを防ぐ。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7466,6 +7482,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>パーセル、パラメータとキャプチャー</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Parens around non-empty expressions simply structure the expression, but not have additional semantics.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T033442Z" creationid="yamato" creationdate="20140915T033442Z">
+        <seg>空でない式の周りの括弧は単純に式を構築するが、それ以上の意味論はない。</seg>
       </tuv>
     </tu>
     <tu>
