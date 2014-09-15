@@ -2366,6 +2366,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Boolean bitwise negation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T043444Z" creationid="yamato" creationdate="20140915T043444Z">
+        <seg>ブールのビット否定。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Boolean context operator.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T042213Z" creationid="yamato" creationdate="20140915T042213Z">
@@ -2706,6 +2714,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T042309Z" creationid="yamato" creationdate="20140915T042309Z">
         <seg>&lt;c1&gt;Bool&lt;/c1&gt;メソッドを呼ぶことで引数を&lt;a0&gt;Bool&lt;/a0&gt;に強制する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Coerces the argument to &lt;a0&gt;Int&lt;/a0&gt; and does a bitwise negation on the result, assuming &lt;a1&gt;two's complement&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T043423Z" creationid="yamato" creationdate="20140915T043423Z">
+        <seg>引数を&lt;a0&gt;Int&lt;/a0&gt;に強制し、ビットごとの否定を行う。&lt;a1&gt;2の補数&lt;/a1&gt;を仮定する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5682,6 +5698,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130809T151411Z" creationid="Toshiyuki" creationdate="20130809T151411Z">
         <seg>代わりとして、よりパスカル的な&lt;c0&gt;repeat&lt;/c0&gt;ループを書くべきだ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Integer bitwise negation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T043249Z" creationid="yamato" creationdate="20140915T043249Z">
+        <seg>整数のビットごとの否定。</seg>
       </tuv>
     </tu>
     <tu>
