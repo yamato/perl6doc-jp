@@ -4110,6 +4110,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For value types, &lt;c0&gt;===&lt;/c0&gt; behaves like &lt;c1&gt;eqv&lt;/c1&gt;:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T055614Z" creationid="yamato" creationdate="20140915T055614Z">
+        <seg>値型に対しては&lt;c0&gt;===&lt;/c0&gt;は&lt;c1&gt;eqv&lt;/c1&gt;のように振る舞う：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Forcing capture context</seg>
       </tuv>
       <tuv lang="JA">
@@ -8714,6 +8722,22 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T044531Z" creationid="yamato" creationdate="20140915T044531Z">
         <seg>もし&lt;c1&gt;$a % $b == 0&lt;/c1&gt;なら&lt;c0&gt;True&lt;/c0&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns &lt;c0&gt;True&lt;/c0&gt; if both arguments are the same object.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T055532Z" creationid="yamato" creationdate="20140915T055532Z">
+        <seg>両方の引数が同じオブジェクトなら&lt;c0&gt;True&lt;/c0&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns &lt;c0&gt;True&lt;/c0&gt; if the two arguments are structurally the same, i.e. from the same type and (recursively) contain the same values.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T055458Z" creationid="yamato" creationdate="20140915T055458Z">
+        <seg>２つの引数が構造的に同じなら&lt;c0&gt;True&lt;/c0&gt;を返す。すなわち同じ型で（再帰的に）同じ値を含む場合。</seg>
       </tuv>
     </tu>
     <tu>
