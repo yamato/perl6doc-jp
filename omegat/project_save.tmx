@@ -2726,6 +2726,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces the argument to &lt;a0&gt;Str&lt;/a0&gt; by calling the &lt;c1&gt;Str&lt;/c1&gt; method on it.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042855Z" creationid="yamato" creationdate="20140915T042855Z">
+        <seg>&lt;c1&gt;Str&lt;/c1&gt;メソッドを呼ぶことで引数を&lt;a0&gt;Str&lt;/a0&gt;に強制する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coercions may also be specified on the return type:</seg>
       </tuv>
       <tuv lang="JA">
@@ -3514,6 +3522,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T140735Z" creationid="yamato" creationdate="20140914T140735Z">
         <seg>フラット化、アイテムとコンテナ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Flattens objects of type &lt;a0&gt;Capture&lt;/a0&gt;, &lt;a1&gt;Enum&lt;/a1&gt;, &lt;a2&gt;Pair&lt;/a2&gt;, &lt;a3&gt;List&lt;/a3&gt;, &lt;a4&gt;Parcel&lt;/a4&gt;, &lt;a5&gt;EnumMap&lt;/a5&gt; and &lt;a6&gt;Hash&lt;/a6&gt; into an argument list.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T043032Z" creationid="yamato" creationdate="20140915T043032Z">
+        <seg>引数リストの&lt;a0&gt;Capture&lt;/a0&gt;、&lt;a1&gt;Enum&lt;/a1&gt;、&lt;a2&gt;Pair&lt;/a2&gt;、&lt;a3&gt;List&lt;/a3&gt;、&lt;a4&gt;Parcel&lt;/a4&gt;、&lt;a5&gt;EnumMap&lt;/a5&gt;そして&lt;a6&gt;Hash&lt;/a6&gt;型のオブジェクトをフラット化する。</seg>
       </tuv>
     </tu>
     <tu>
