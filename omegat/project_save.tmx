@@ -10134,6 +10134,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The name of the routine is formed of the operator category, then a colon, and a list quote construct with the symbol(s) that make up the operator:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T024306Z" creationid="yamato" creationdate="20140915T024306Z">
+        <seg>ルーチンの名前は演算子のカテゴリーに組み込まれる。コロン、シンボル付きのリストクオート構造は演算子を作る：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The new &lt;c0&gt;constant&lt;/c0&gt; declarator introduces a compile-time constant, either a variable or named value, which may be initialized with a pseudo-assignment:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130802T131802Z" creationid="Toshiyuki" creationdate="20130802T131802Z">
