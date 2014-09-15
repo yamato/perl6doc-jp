@@ -670,6 +670,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>.* .() .[] .{} .&lt;&gt; .ﾂｫﾂｻ .:: .= .^ .:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T054819Z" creationid="yamato" creationdate="20140915T054738Z">
+        <seg>.* .() .[] .{} .&lt;&gt; .«» .:: .= .^ .:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;Callable&lt;/a0&gt; indexes are invoked with the number of elements as arguments.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T035456Z" creationid="yamato" creationdate="20140915T035456Z">
@@ -8758,6 +8766,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Role for objects which support indexing them using &lt;c0&gt;postcircumfix:ﾂｫ[ ]ﾂｻ&lt;/c0&gt; (usually list-like objects).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T054819Z" creationid="yamato" creationdate="20140915T054738Z">
+        <seg>Role for objects which support indexing them using &lt;c0&gt;postcircumfix:«[ ]»&lt;/c0&gt; (usually list-like objects).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Roles</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140113T080142Z" creationid="Toshiyuki" creationdate="20140113T080142Z">
@@ -14650,6 +14666,62 @@ my \θ       = 15 * degrees;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>proto sub infix:ﾂｫ&lt;=ﾂｻ(Any, Any) returns Bool:D is assoc&lt;chain&gt;
+multi sub infix:ﾂｫ&lt;=ﾂｻ(Int:D, Int:D)
+multi sub infix:ﾂｫ&lt;=ﾂｻ(Num:D, Num:D)
+multi sub infix:ﾂｫ&lt;=ﾂｻ(Real:D, Real:D)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T054819Z" creationid="yamato" creationdate="20140915T054738Z">
+        <seg>proto sub infix:«&lt;=»(Any, Any) returns Bool:D is assoc&lt;chain&gt;
+multi sub infix:«&lt;=»(Int:D, Int:D)
+multi sub infix:«&lt;=»(Num:D, Num:D)
+multi sub infix:«&lt;=»(Real:D, Real:D)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>proto sub infix:ﾂｫ&lt;ﾂｻ(Any, Any) returns Bool:D is assoc&lt;chain&gt;
+multi sub infix:ﾂｫ&lt;ﾂｻ(Int:D, Int:D)
+multi sub infix:ﾂｫ&lt;ﾂｻ(Num:D, Num:D)
+multi sub infix:ﾂｫ&lt;ﾂｻ(Real:D, Real:D)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T054540Z" creationid="yamato" creationdate="20140915T054540Z">
+        <seg>proto sub infix:«&lt;»(Any, Any) returns Bool:D is assoc&lt;chain&gt;
+multi sub infix:«&lt;»(Int:D, Int:D)
+multi sub infix:«&lt;»(Num:D, Num:D)
+multi sub infix:«&lt;»(Real:D, Real:D)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>proto sub infix:ﾂｫ&gt;=ﾂｻ(Any, Any) returns Bool:D is assoc&lt;chain&gt;
+multi sub infix:ﾂｫ&gt;=ﾂｻ(Int:D, Int:D)
+multi sub infix:ﾂｫ&gt;=ﾂｻ(Num:D, Num:D)
+multi sub infix:ﾂｫ&gt;=ﾂｻ(Real:D, Real:D)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T054819Z" creationid="yamato" creationdate="20140915T054738Z">
+        <seg>proto sub infix:«&gt;=»(Any, Any) returns Bool:D is assoc&lt;chain&gt;
+multi sub infix:«&gt;=»(Int:D, Int:D)
+multi sub infix:«&gt;=»(Num:D, Num:D)
+multi sub infix:«&gt;=»(Real:D, Real:D)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>proto sub infix:ﾂｫ&gt;ﾂｻ(Any, Any) returns Bool:D is assoc&lt;chain&gt;
+multi sub infix:ﾂｫ&gt;ﾂｻ(Int:D, Int:D)
+multi sub infix:ﾂｫ&gt;ﾂｻ(Num:D, Num:D)
+multi sub infix:ﾂｫ&gt;ﾂｻ(Real:D, Real:D)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T054819Z" creationid="yamato" creationdate="20140915T054738Z">
+        <seg>proto sub infix:«&gt;»(Any, Any) returns Bool:D is assoc&lt;chain&gt;
+multi sub infix:«&gt;»(Int:D, Int:D)
+multi sub infix:«&gt;»(Num:D, Num:D)
+multi sub infix:«&gt;»(Real:D, Real:D)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>rather than</seg>
       </tuv>
       <tuv lang="JA">
@@ -14726,6 +14798,14 @@ my \θ       = 15 * degrees;</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T142230Z" creationid="yamato" creationdate="20140914T142230Z">
         <seg>&lt;c0&gt;$item&lt;/c0&gt;の要素をソートし、配列の割り当てにフラット化されたリストを返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>sub infix:ﾂｫ=&gt;ﾂｻ($key, Mu $value) returns Pair:D</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T054819Z" creationid="yamato" creationdate="20140915T054738Z">
+        <seg>sub infix:«=&gt;»($key, Mu $value) returns Pair:D</seg>
       </tuv>
     </tu>
     <tu>
