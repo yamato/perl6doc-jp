@@ -3094,6 +3094,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Each operator is also available as a routine; postcircumfix operators as methods, all others as subroutines.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T023925Z" creationid="yamato" creationdate="20140915T023925Z">
+        <seg>それぞれの演算子はルーチンとしても使える；後置演算子はメソッド、他の全てはサブルーチン。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Each subsequent clone gets an initial state that is one higher than the previous, and each clone maintains its own state of &lt;c0&gt;$x&lt;/c0&gt;, because that's what &lt;c1&gt;state&lt;/c1&gt; variables do.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130822T031421Z" creationid="Toshiyuki" creationdate="20130822T031421Z">
@@ -7170,6 +7178,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20131027T041918Z" creationid="Toshiyuki" creationdate="20131027T041918Z">
         <seg>演算子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Operators can occur in several positions relative to a term:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T023741Z" creationid="yamato" creationdate="20140915T023741Z">
+        <seg>演算子は項に関連したいくつかの位置で起こりえる：</seg>
       </tuv>
     </tu>
     <tu>
@@ -13338,6 +13354,16 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T120816Z" creationid="yamato" creationdate="20140914T120816Z">
         <seg>マッチオブジェクトへのインデックス（本当は変数ではない）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>infix:&lt;+&gt;(1, 2)                 # same as 1 + 2
+circumfix:ﾂｫ( )ﾂｻ('a', 'b', 'c')  # same as ('a', 'b', 'c')</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T024000Z" creationid="yamato" creationdate="20140915T024000Z">
+        <seg>infix:&lt;+&gt;(1, 2)                 # same as 1 + 2
+circumfix:«( )»('a', 'b', 'c')  # same as ('a', 'b', 'c')</seg>
       </tuv>
     </tu>
     <tu>
