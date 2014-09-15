@@ -2350,6 +2350,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Breaks up the contents on whitespace, and returns a &lt;c0&gt;Parcel&lt;/c0&gt; of the words.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T031131Z" creationid="yamato" creationdate="20140915T031131Z">
+        <seg>空白を取り除き、ワードの&lt;c0&gt;Parcel&lt;/c0&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Built-In Data Types</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140325T141352Z" creationid="Toshiyuki" creationdate="20140325T141352Z">
@@ -10266,6 +10274,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>疑似添え字は、単純なスカラーである必要はない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The quote-words construct.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T030611Z" creationid="yamato" creationdate="20140915T030611Z">
+        <seg>クオートワード構造。</seg>
       </tuv>
     </tu>
     <tu>
