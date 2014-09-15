@@ -4510,6 +4510,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If &lt;c4&gt;$b &lt;= 0 &lt;/c4&gt;, the empty list is returned.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T050914Z" creationid="yamato" creationdate="20140915T050914Z">
+        <seg>&lt;c4&gt;$b &lt;= 0 &lt;/c4&gt;なら空のリストが返される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If a &lt;c1&gt;try&lt;/c1&gt; block or statement prefix catches an exception, that exception is stored in &lt;c2&gt;$!&lt;/c2&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T113944Z" creationid="yamato" creationdate="20140914T113944Z">
@@ -8518,6 +8526,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns a list of &lt;c0&gt;$a&lt;/c0&gt; repeated and evaluated &lt;c1&gt;$b&lt;/c1&gt; times (&lt;c2&gt;$b&lt;/c2&gt; is coerced to &lt;a3&gt;Int&lt;/a3&gt;).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T050857Z" creationid="yamato" creationdate="20140915T050857Z">
+        <seg>&lt;c0&gt;$a&lt;/c0&gt;のリストを&lt;c1&gt;$b&lt;/c1&gt;の回数繰り返す（&lt;c2&gt;$b&lt;/c2&gt;は&lt;a3&gt;Int&lt;/a3&gt;に強制される。）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns a pseudo-random &lt;a0&gt;Num&lt;/a0&gt; in the range &lt;c1&gt;0..^1&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T124756Z" creationid="yamato" creationdate="20140914T124756Z">
@@ -10770,6 +10786,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130811T125157Z" creationid="Toshiyuki" creationdate="20130811T125157Z">
         <seg>個々のケースのキーワードは&lt;c1&gt;when&lt;/c1&gt;だ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The left-hand side is evaluated for each repetition, so</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T051000Z" creationid="yamato" creationdate="20140915T051000Z">
+        <seg>左側は繰り返しごとに評価されるので、</seg>
       </tuv>
     </tu>
     <tu>
@@ -14422,6 +14446,22 @@ my \θ       = 15 * degrees;</seg>
       </tuv>
       <tuv lang="JA">
         <seg>本当に手段</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>returns five distinct arrays (but with the same content each time), and</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T051104Z" creationid="yamato" creationdate="20140915T051104Z">
+        <seg>は区別可能な５つの配列（ただし内容は毎回同じ）を返し、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>returns three pseudo random numbers that are determined independently.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T051131Z" creationid="yamato" creationdate="20140915T051131Z">
+        <seg>は独立して決定される３つの擬似乱数を返す。</seg>
       </tuv>
     </tu>
     <tu>
