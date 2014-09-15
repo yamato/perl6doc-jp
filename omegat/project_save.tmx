@@ -4198,6 +4198,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generic ordering, uses the same semantics as &lt;a0&gt;cmp&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T055220Z" creationid="yamato" creationdate="20140915T055220Z">
+        <seg>ジェネリックな、&lt;a0&gt;cmp&lt;/a0&gt;と同じ意味論を使う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generic types</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T232202Z" creationid="Toshiyuki" creationdate="20140328T232202Z">
@@ -8706,6 +8714,22 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T044531Z" creationid="yamato" creationdate="20140915T044531Z">
         <seg>もし&lt;c1&gt;$a % $b == 0&lt;/c1&gt;なら&lt;c0&gt;True&lt;/c0&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns &lt;c1&gt;True&lt;/c1&gt; if the first argument is larger than the second.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T055322Z" creationid="yamato" creationdate="20140915T055322Z">
+        <seg>最初の引数が次より大きければ&lt;c1&gt;True&lt;/c1&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns &lt;c1&gt;True&lt;/c1&gt; if the first argument is smaller than the second.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T055251Z" creationid="yamato" creationdate="20140915T055251Z">
+        <seg>最初の引数が次より小さければ&lt;c1&gt;True&lt;/c1&gt;を返す。</seg>
       </tuv>
     </tu>
     <tu>
