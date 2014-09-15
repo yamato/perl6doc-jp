@@ -782,6 +782,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;$role&lt;/c0&gt; doesn't need to a be a role, it can be something that knows how to act like a role, for example enum values.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T052512Z" creationid="yamato" creationdate="20140915T052512Z">
+        <seg>&lt;c0&gt;$role&lt;/c0&gt;はロールである必要はない。例えば列挙型の値のようにロールに似た振る舞いを知っている何かならよい。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;CATCH&lt;/c0&gt; blocks set &lt;c1&gt;$_&lt;/c1&gt; to the exception that was caught.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T111657Z" creationid="yamato" creationdate="20140914T111657Z">
@@ -3186,6 +3194,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>狂った読者は、あなたがそうすることができたこの手段がスコープを編集する際に初期値を他のlexicalsに設定したかどうか疑問に思う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creates a copy of &lt;c0&gt;$obj&lt;/c0&gt; with &lt;c1&gt;$role&lt;/c1&gt; mixed in.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T052613Z" creationid="yamato" creationdate="20140915T052613Z">
+        <seg>&lt;c1&gt;$role&lt;/c1&gt;がミックスインされた&lt;c0&gt;$obj&lt;/c0&gt;のコピーを作成する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8906,6 +8922,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130811T133157Z" creationid="Toshiyuki" creationdate="20130811T133157Z">
         <seg>&lt;c1&gt;when&lt;/c1&gt;文は通常の文のように順番に実行されると仮定されるので、switchブロックのすべての文が&lt;c2&gt;when&lt;/c2&gt;文になる必要はない（それは連続の&lt;c3&gt;when&lt;/c3&gt;のシーケンスを持つためにオプティマイザを助ける。なぜならマッチできると思われる最初の適切なテストに直接ジャンプするようにアレンジできるからだ。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Since &lt;c2&gt;$obj&lt;/c2&gt; is not modified, &lt;c3&gt;but&lt;/c3&gt; can be used to created immutable values with mixins.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T052731Z" creationid="yamato" creationdate="20140915T052731Z">
+        <seg>&lt;c2&gt;$obj&lt;/c2&gt;は変更されないので、&lt;c3&gt;but&lt;/c3&gt;は不変の値をミックスインで作成するのに使用できる。</seg>
       </tuv>
     </tu>
     <tu>
