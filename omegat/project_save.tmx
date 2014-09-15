@@ -3014,6 +3014,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Decrements its argument by one, and returns the undecremented value.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T041340Z" creationid="yamato" creationdate="20140915T041340Z">
+        <seg>引数を1つでクリメントし、デクリメント前の値を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Default encoding of Str.encode/Buf.decode/various IO methods.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T115008Z" creationid="yamato" creationdate="20140914T115008Z">
@@ -3358,6 +3366,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Exponentiation Precedence</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T041511Z" creationid="yamato" creationdate="20140915T041426Z">
+        <seg>指数優先順位</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Expressions inside the signature are parsed as parameter declarations rather than ordinary expressions.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T082234Z" creationid="Toshiyuki" creationdate="20140329T082234Z">
@@ -3538,6 +3554,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T024937Z" creationid="yamato" creationdate="20140914T024857Z">
         <seg>例えば&lt;a0&gt;Array&lt;/a0&gt;変数（&lt;c1&gt;@&lt;/c1&gt;シギル）はリスト割り当て時に自身を空にし、右側のすべての値を自身に配置する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example for undefined values, it returns 0:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T041306Z" creationid="yamato" creationdate="20140915T041306Z">
+        <seg>例えば未定義値ならそれは0を返す：</seg>
       </tuv>
     </tu>
     <tu>
@@ -10066,6 +10090,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>我々が行って、例外は注意される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The exponentiation operator coerces both arguments to &lt;a0&gt;Numeric&lt;/a0&gt; and calculates the left-hand-side raised to the power of the right-hand side.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T041507Z" creationid="yamato" creationdate="20140915T041507Z">
+        <seg>&lt;a0&gt;Numeric&lt;/a0&gt; and calculates the left-hand-side raised to the power of the right-hand side.</seg>
       </tuv>
     </tu>
     <tu>
