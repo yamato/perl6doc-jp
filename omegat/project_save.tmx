@@ -878,6 +878,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;e0&gt;upto&lt;/e0&gt; operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T043558Z" creationid="yamato" creationdate="20140915T043558Z">
+        <seg>&lt;e0&gt;upto&lt;/e0&gt;演算子。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A &lt;c0&gt;CATCH&lt;/c0&gt; block handles only "bad" exceptions, and lets control exceptions pass unhindered.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130816T125424Z" creationid="Toshiyuki" creationdate="20130816T125424Z">
@@ -2702,6 +2710,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces the argument to &lt;a0&gt;Bool&lt;/a0&gt; and then does a bit flip, which makes it the same as &lt;c1&gt;prefix:&lt;!&gt; &lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T043539Z" creationid="yamato" creationdate="20140915T043539Z">
+        <seg>引数を&lt;a0&gt;Bool&lt;/a0&gt;に強制し、ビットフリップする。それは&lt;c1&gt;prefix:&lt;!&gt; &lt;/c1&gt;と同じにする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coerces the argument to &lt;a0&gt;Bool&lt;/a0&gt; by calling the &lt;c1&gt;Bool&lt;/c1&gt; method on it, and returns the negation of the result.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T042525Z" creationid="yamato" creationdate="20140915T042525Z">
@@ -2738,6 +2754,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T042614Z" creationid="yamato" creationdate="20140915T042614Z">
         <seg>&lt;c1&gt;Numeric&lt;/c1&gt;メソッドを呼ぶことで引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Coerces the argument to &lt;a0&gt;Numeric&lt;/a0&gt;, and generates a range from 0 up to (but excluding) the argument.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T043742Z" creationid="yamato" creationdate="20140915T043742Z">
+        <seg>引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制し、0から引数（ただし除外される）のレンジを生成する。</seg>
       </tuv>
     </tu>
     <tu>
