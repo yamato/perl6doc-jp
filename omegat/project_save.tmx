@@ -3206,6 +3206,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Container identity.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T060025Z" creationid="yamato" creationdate="20140915T060025Z">
+        <seg>コンテナの識別。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Container types</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T224446Z" creationid="Toshiyuki" creationdate="20140328T224446Z">
@@ -8726,6 +8734,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns &lt;a0&gt;True&lt;/a0&gt; if both arguments are bound to the same container.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T060054Z" creationid="yamato" creationdate="20140915T060054Z">
+        <seg>両方の引数が同じコンテナにバインドされているなら&lt;a0&gt;True&lt;/a0&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns &lt;c0&gt;True&lt;/c0&gt; if &lt;c1&gt;$a % $b == 0&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T044531Z" creationid="yamato" creationdate="20140915T044531Z">
@@ -11394,6 +11410,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140322T124243Z" creationid="Toshiyuki" creationdate="20140115T143508Z">
         <seg>正規表現で最も単純なケースは固定文字列です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The smart-match operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T060104Z" creationid="yamato" creationdate="20140915T060104Z">
+        <seg>スマートマッチ演算子。</seg>
       </tuv>
     </tu>
     <tu>
