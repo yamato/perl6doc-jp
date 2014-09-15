@@ -7126,6 +7126,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Operator Precedence</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T015155Z" creationid="yamato" creationdate="20140915T015155Z">
+        <seg>演算子の優先順位</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Operators</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20131027T041918Z" creationid="Toshiyuki" creationdate="20131027T041918Z">
