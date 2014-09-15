@@ -1662,6 +1662,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>And a few that don't flatten:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T014414Z" creationid="yamato" creationdate="20140915T014414Z">
+        <seg>そしてフラット化しないもの：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>And these are also equivalent:</seg>
       </tuv>
       <tuv lang="JA">
@@ -3854,6 +3862,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Here is a list of a few operations that flattens:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T014326Z" creationid="yamato" creationdate="20140915T014326Z">
+        <seg>ここにフラット化を行う演算がいくつかある：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Here you can find an overview of different kinds of terms.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T121639Z" creationid="yamato" creationdate="20140914T121639Z">
@@ -4962,6 +4978,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130820T124713Z" creationid="Toshiyuki" creationdate="20130820T124713Z">
         <seg>一般にphasersの初期化は宣言順に実行し、ファイナライズは逆順に実行する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In general, operations that have to iterate the list usually flatten the list.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T014241Z" creationid="yamato" creationdate="20140915T014241Z">
+        <seg>一般にリストを繰り返す必要がある演算はリストをフラット化する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7242,6 +7266,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T141918Z" creationid="yamato" creationdate="20140914T141918Z">
         <seg>リストの他のメソッドもフラットなlists/parcelsを返す。例として</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Other operations don't.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T014251Z" creationid="yamato" creationdate="20140915T014251Z">
+        <seg>他の演算はそうしない。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12202,6 +12234,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T131712Z" creationid="yamato" creationdate="20140914T131712Z">
         <seg>それが正確に意味するものはコンテナ型次第だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What flattens, what doesn't?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T014151Z" creationid="yamato" creationdate="20140915T014151Z">
+        <seg>なぜフラット化しないのか？</seg>
       </tuv>
     </tu>
     <tu>
