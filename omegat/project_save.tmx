@@ -2830,6 +2830,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a0&gt;Str&lt;/a0&gt;, and then does a lexicographic comparison.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T053639Z" creationid="yamato" creationdate="20140915T053639Z">
+        <seg>引数を&lt;a0&gt;Str&lt;/a0&gt;に強制し、辞書比較を行う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coerces both arguments to &lt;a1&gt;Int&lt;/a1&gt; and does a bitwise &lt;e2&gt;AND&lt;/e2&gt; operation assuming two's complement.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T044722Z" creationid="yamato" creationdate="20140915T044722Z">
@@ -7638,6 +7646,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Numeric three-way comparator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T053733Z" creationid="yamato" creationdate="20140915T053733Z">
+        <seg>数値の３項比較。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Numerics in Perl are not designed to give the identical answer everywhere.</seg>
       </tuv>
       <tuv lang="JA">
@@ -9394,6 +9410,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T122823Z" creationid="yamato" creationdate="20140914T122823Z">
         <seg>文字列リテラルはしばしば&lt;c0&gt;'&lt;/c0&gt;または&lt;c1&gt;"&lt;/c1&gt;で作成される。しかし文字列は実際はPerl 6の強力なサブ言語だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>String three-way comparator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T053533Z" creationid="yamato" creationdate="20140915T053533Z">
+        <seg>文字列の3項比較。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14500,6 +14524,14 @@ circumfix:«( )»('a', 'b', 'c')  # same as ('a', 'b', 'c')</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T121055Z" creationid="yamato" creationdate="20140914T121055Z">
         <seg>メソッド（本当は変数ではない）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>multi sub infix:ﾂｫ&lt;=&gt;ﾂｻ($a, $b) returns Order:D is assoc&lt;none&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T053715Z" creationid="yamato" creationdate="20140915T053715Z">
+        <seg>multi sub infix:«&lt;=&gt;»($a, $b) returns Order:D is assoc&lt;none&gt;</seg>
       </tuv>
     </tu>
     <tu>
