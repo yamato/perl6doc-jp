@@ -1286,6 +1286,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Additive Precedence</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T045054Z" creationid="yamato" creationdate="20140915T045054Z">
+        <seg>加算の優先順位</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Adverbial Pair forms</seg>
       </tuv>
       <tuv lang="JA">
@@ -2714,6 +2722,30 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T044050Z" creationid="yamato" creationdate="20140915T044050Z">
         <seg>引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制し、左を右の数で除算する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a0&gt;Int&lt;/a0&gt; and returns the greatest common denominator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T044908Z" creationid="yamato" creationdate="20140915T044908Z">
+        <seg>両方の引数を&lt;a0&gt;Int&lt;/a0&gt;に強制し、最大公分母を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a0&gt;Int&lt;/a0&gt; and returns the least common multiple, that is the smallest integer that is smallest integer that is evenly divisible by both arguments.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T045029Z" creationid="yamato" creationdate="20140915T045029Z">
+        <seg>両方の引数を&lt;a0&gt;Int&lt;/a0&gt;に強制し、最小公倍数、つまり両方の引数で均一に割り切れる最小の整数を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Coerces both arguments to &lt;a0&gt;Numeric&lt;/a0&gt; and adds them.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T045118Z" creationid="yamato" creationdate="20140915T045118Z">
+        <seg>両方の引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制し、それらを加える。</seg>
       </tuv>
     </tu>
     <tu>
