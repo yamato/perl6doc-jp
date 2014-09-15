@@ -2694,6 +2694,22 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces the argument to &lt;a0&gt;Bool&lt;/a0&gt; by calling the &lt;c1&gt;Bool&lt;/c1&gt; method on it, and returns the negation of the result.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042525Z" creationid="yamato" creationdate="20140915T042525Z">
+        <seg>&lt;c1&gt;Bool&lt;/c1&gt;メソッドを呼び出して引数を&lt;a0&gt;Bool&lt;/a0&gt;に強制し、結果を否定して返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Coerces the argument to &lt;a0&gt;Bool&lt;/a0&gt; by calling the &lt;c1&gt;Bool&lt;/c1&gt; method on it.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042309Z" creationid="yamato" creationdate="20140915T042309Z">
+        <seg>&lt;c1&gt;Bool&lt;/c1&gt;メソッドを呼ぶことで引数を&lt;a0&gt;Bool&lt;/a0&gt;に強制する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coercions may also be specified on the return type:</seg>
       </tuv>
       <tuv lang="JA">
@@ -6742,6 +6758,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Negated boolean context operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042420Z" creationid="yamato" creationdate="20140915T042420Z">
+        <seg>否定のブールコンテキスト演算子。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>New quoting constructs may be declared as macros:</seg>
       </tuv>
       <tuv lang="JA">
@@ -7062,6 +7086,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that this collapses &lt;a2&gt;Junction&lt;/a2&gt;s.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042358Z" creationid="yamato" creationdate="20140915T042358Z">
+        <seg>これは&lt;a2&gt;Junction&lt;/a2&gt;を崩壊させるので注意。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that this construct does not re-parse the contents; rather the contents are always parsed as a statement list (i.e. like a block), and if the later analysis shows that it needs to be interpreted as a hash, the block is executed and coerced to &lt;a0&gt;Hash&lt;/a0&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T034145Z" creationid="yamato" creationdate="20140915T034145Z">
@@ -7218,6 +7250,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T131145Z" creationid="Toshiyuki" creationdate="20130817T131145Z">
         <seg>数値と文字列の変換はフェールソフトセマンティクスを許可する（しかし要求されない）ためにlazy warningsを使う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Numeric context operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042538Z" creationid="yamato" creationdate="20140915T042538Z">
+        <seg>数値コンテキスト演算子。</seg>
       </tuv>
     </tu>
     <tu>
