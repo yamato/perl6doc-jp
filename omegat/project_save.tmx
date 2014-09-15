@@ -6,6 +6,14 @@
 <!-- Default translations -->
     <tu>
       <tuv lang="EN-US">
+        <seg>"temporizes" the variable passed as the argument, which means it is reset to its old value on scope exit.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T051650Z" creationid="yamato" creationdate="20140915T051650Z">
+        <seg>引数で渡された変数を「テンポラリー化」し、スコープを抜けると古い値にリセットする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>()
 1, 2, 3
 &lt;a b c&gt;
@@ -530,6 +538,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>（これはほとんど、あなたが望むものでない、しかし、磨かれた何かを望むならば、あなたはよりはっきりしていることがありえる。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>(This is similar to the &lt;a0&gt;local&lt;/a0&gt; operator in Perl 5, except that &lt;c1&gt;temp&lt;/c1&gt; does not reset the value).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T051758Z" creationid="yamato" creationdate="20140915T051758Z">
+        <seg>（これはPerl 5の&lt;a0&gt;local&lt;/a0&gt;演算子に似ているが、&lt;c1&gt;temp&lt;/c1&gt;は値を初期化しない。）</seg>
       </tuv>
     </tu>
     <tu>
