@@ -6686,6 +6686,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Non-&lt;a0&gt;Positional&lt;/a0&gt; invocants are interpreted as a one-list element of the object.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T035728Z" creationid="yamato" creationdate="20140915T035728Z">
+        <seg>Non-&lt;a0&gt;Positional&lt;/a0&gt;インボカントは一つのリストの要素のオブジェクトと解釈される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Non-closure-returning Operators with *</seg>
       </tuv>
       <tuv lang="JA">
@@ -10394,6 +10402,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T160934Z" creationid="Toshiyuki" creationdate="20130810T160934Z">
         <seg>ユーザーとライブラリ作者がダイナミックなgatherを&lt;c11&gt;take&lt;/c11&gt;を含むユーザー定義のコールバックと使用しようと試みるなら、唯一残っている難しさが生じる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The operator for calling one method, &lt;c0&gt;$invocant.method&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T035807Z" creationid="yamato" creationdate="20140915T035807Z">
+        <seg>一つのメソッドを呼ぶ演算子は&lt;c0&gt;$invocant.method&lt;/c0&gt;だ。</seg>
       </tuv>
     </tu>
     <tu>
