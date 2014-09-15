@@ -8654,6 +8654,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Subroutine calls are the most common listops.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T024730Z" creationid="yamato" creationdate="20140915T024730Z">
+        <seg>サブルーチン呼び出しは最も一般的なリスト演算子だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Subroutines may also make use of placeholder variables but only if they do not have an explicit parameter list.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T062915Z" creationid="yamato" creationdate="20140914T062915Z">
