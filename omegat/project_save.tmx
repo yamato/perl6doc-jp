@@ -10096,8 +10096,8 @@ qw/a b c/</seg>
       <tuv lang="EN-US">
         <seg>The exponentiation operator coerces both arguments to &lt;a0&gt;Numeric&lt;/a0&gt; and calculates the left-hand-side raised to the power of the right-hand side.</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamato" changedate="20140915T041507Z" creationid="yamato" creationdate="20140915T041507Z">
-        <seg>&lt;a0&gt;Numeric&lt;/a0&gt; and calculates the left-hand-side raised to the power of the right-hand side.</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T041740Z" creationid="yamato" creationdate="20140915T041507Z">
+        <seg>指数演算子は両方の引数に&lt;a0&gt;Numeric&lt;/a0&gt;を強制し、左側に右側の累乗を生じる。</seg>
       </tuv>
     </tu>
     <tu>
