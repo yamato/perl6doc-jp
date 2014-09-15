@@ -798,6 +798,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;===&lt;/c0&gt; uses the &lt;a1&gt;WHICH&lt;/a1&gt; method to obtain the object identity, so all value types must override method &lt;c2&gt;WHICH&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T055831Z" creationid="yamato" creationdate="20140915T055831Z">
+        <seg>&lt;c0&gt;===&lt;/c0&gt;はオブジェクトの識別性を得るために&lt;a1&gt;WHICH&lt;/a1&gt;を使う。なので全ての値型のほとんどは&lt;c2&gt;WHICH&lt;/c2&gt;をオーバーライドしなければならない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;CATCH&lt;/c0&gt; blocks set &lt;c1&gt;$_&lt;/c1&gt; to the exception that was caught.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T111657Z" creationid="yamato" creationdate="20140914T111657Z">
