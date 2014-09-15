@@ -2958,6 +2958,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Compares strings with string semantics, numbers with number semantics, &lt;a0&gt;Pair&lt;/a0&gt; objects first by key and then by value etc.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T053400Z" creationid="yamato" creationdate="20140915T053400Z">
+        <seg>文字列を文字列意味論で、数値を数値意味論で、&lt;a0&gt;Pair&lt;/a0&gt;オブジェクトを最初にキー、次に値で比較する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Compile-time "constants"</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T022112Z" creationid="yamato" creationdate="20140914T022112Z">
@@ -14250,6 +14258,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T062213Z" creationid="yamato" creationdate="20140914T062213Z">
         <seg>これは2つのパラメータ&lt;c0&gt;$first&lt;/c0&gt;と&lt;c1&gt;$second&lt;/c1&gt;を持つ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>if &lt;c0&gt;$a eqv $b&lt;/c0&gt;, then &lt;c1&gt;$a cmp $b&lt;/c1&gt; always returns &lt;c2&gt;Order::Same&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T053502Z" creationid="yamato" creationdate="20140915T053502Z">
+        <seg>もし&lt;c0&gt;$a eqv $b&lt;/c0&gt;なら&lt;c1&gt;$a cmp $b&lt;/c1&gt;は常に&lt;c2&gt;Order::Same&lt;/c2&gt;を返す。</seg>
       </tuv>
     </tu>
     <tu>
