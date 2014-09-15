@@ -3606,6 +3606,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For unary operators this is interpreted as:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T021230Z" creationid="yamato" creationdate="20140915T021230Z">
+        <seg>単項演算子ではこれは次のように解釈される：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Forcing capture context</seg>
       </tuv>
       <tuv lang="JA">
@@ -12106,6 +12114,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T140536Z" creationid="Toshiyuki" creationdate="20140111T192122Z">
         <seg>&lt;c4&gt;.&lt;/c4&gt;メソッドコールを明示的なインボカントなしに呼び出すと、現在のトピックがインボカントになります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Using two &lt;c0&gt;!&lt;/c0&gt; symbols below generically to represent any pair of operators that have the same precedence, the associativities specified above for binary operators are interpreted as follows:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T021144Z" creationid="yamato" creationdate="20140915T021144Z">
+        <seg>下記の2つの&lt;c0&gt;!&lt;/c0&gt;シンボルを使うことは一般に同じ優先順位を持つ演算子のペアを表現するためで、上で示した2項演算子の結合性は以下のように解釈される：</seg>
       </tuv>
     </tu>
     <tu>
