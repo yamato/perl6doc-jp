@@ -3326,6 +3326,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Fail on type &lt;a0&gt;Any&lt;/a0&gt;, and on &lt;a1&gt;EnumMap&lt;/a1&gt;, &lt;a2&gt;Hash&lt;/a2&gt; and related types it allows lookup of hash elements by key.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T034523Z" creationid="yamato" creationdate="20140915T034523Z">
+        <seg>&lt;a0&gt;Any&lt;/a0&gt;型のFail、&lt;a1&gt;EnumMap&lt;/a1&gt;、&lt;a2&gt;Hash&lt;/a2&gt;と関連する型はキーで要素を検索できる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Favor $*EXECUTABLE because it is not guaranteed that the perl</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T115953Z" creationid="yamato" creationdate="20140914T115953Z">
@@ -10106,6 +10114,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T034331Z" creationid="yamato" creationdate="20140915T034331Z">
         <seg>ハッシュのインデクシング。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The hash indexing quote-words operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T034544Z" creationid="yamato" creationdate="20140915T034544Z">
+        <seg>ハッシュインデクシングクオートワード演算子。</seg>
       </tuv>
     </tu>
     <tu>
