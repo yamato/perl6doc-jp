@@ -2366,6 +2366,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Boolean context operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042213Z" creationid="yamato" creationdate="20140915T042213Z">
+        <seg>ブールコンテキスト演算子。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Both sides are in item context.</seg>
       </tuv>
       <tuv lang="JA">
@@ -4554,6 +4562,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>プログラムが書記素見方よりもむしろコードポイント見方が欲しいスコープを持つならば、ちょうど出力翻訳と同様に、そのレキシカルスコープに見える文字列は一般的な形にも変形されなければならない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the right-hand side is a non-negative integer and the left-hand side is an arbitrary precision type (&lt;a0&gt;Int&lt;/a0&gt;, &lt;a1&gt;FatRat&lt;/a1&gt;), then the calculation is carried out without loss of precision.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042105Z" creationid="yamato" creationdate="20140915T042105Z">
+        <seg>もし右側が負の数でない整数で左側が任意の有理数（&lt;a0&gt;Int&lt;/a0&gt;、&lt;a1&gt;FatRat&lt;/a1&gt;）なら、計算は制度を失わずに行われる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9058,6 +9074,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>シンボルテーブル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Symbolic Unary Precedence</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042203Z" creationid="yamato" creationdate="20140915T042203Z">
+        <seg>シンボリック単項優先順位</seg>
       </tuv>
     </tu>
     <tu>
