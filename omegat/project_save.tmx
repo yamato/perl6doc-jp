@@ -8870,6 +8870,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns the first defined operand.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T062708Z" creationid="yamato" creationdate="20140915T062708Z">
+        <seg>最初に定義されているオペランドを返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns the first true argument if there is only one, and &lt;a0&gt;Nil&lt;/a0&gt; otherwise.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T061248Z" creationid="yamato" creationdate="20140915T061248Z">
