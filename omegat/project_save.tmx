@@ -4326,6 +4326,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If that's what you want, there is another utility method called &lt;c1&gt;flat&lt;/c1&gt;:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T013652Z" creationid="yamato" creationdate="20140915T013652Z">
+        <seg>それがあなたが望むものなら、&lt;c1&gt;flat&lt;/c1&gt;と呼ばれる別のユーティリティメソッドがある：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If the &lt;c7&gt;gather&lt;/c7&gt; contains no &lt;c8&gt;take&lt;/c8&gt; lexically, it by definition cannot be the lexotic target of any &lt;c9&gt;take&lt;/c9&gt;, so it can only harvest dynamic &lt;c10&gt;take&lt;/c10&gt; calls.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T160429Z" creationid="Toshiyuki" creationdate="20130810T160429Z">
@@ -5626,6 +5634,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>それは単位型であるが、多値のコンテナである単位を含む。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It just returned the same object without the outer &lt;c0&gt;.item&lt;/c0&gt; container, but didn't look inside the list.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T013507Z" creationid="yamato" creationdate="20140915T013507Z">
+        <seg>それは外側の&lt;c0&gt;.item&lt;/c0&gt;コンテナがない同じオブジェクトを返すだけだが、リストの中を見ない。</seg>
       </tuv>
     </tu>
     <tu>
