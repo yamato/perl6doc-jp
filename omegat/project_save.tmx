@@ -6878,6 +6878,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that this construct does not re-parse the contents; rather the contents are always parsed as a statement list (i.e. like a block), and if the later analysis shows that it needs to be interpreted as a hash, the block is executed and coerced to &lt;a0&gt;Hash&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T034145Z" creationid="yamato" creationdate="20140915T034145Z">
+        <seg>この構造が内容を再解析しないことに注意；むしろ内容は文リスト（すなわちブロックのような）として解析され、あとの解析でハッシュとして解釈される必要があると示すなら、ブロックは実行されて&lt;a0&gt;Hash&lt;/a0&gt;に強制される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that this is not like declaring a public attribute, as some languages allow; you really get &lt;e0&gt;both&lt;/e0&gt; a private storage location and a method, without having to write the method by hand.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140322T045857Z" creationid="Toshiyuki" creationdate="20140111T184503Z">
@@ -7990,6 +7998,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns an itemized &lt;a1&gt;Array&lt;/a1&gt; which does not flatten in list context.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T034242Z" creationid="yamato" creationdate="20140915T034242Z">
+        <seg>リストコンテキストでフラット化されない、アイテム化された&lt;a1&gt;Array&lt;/a1&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns the imaginary unit (for &lt;a0&gt;Complex&lt;/a0&gt; numbers).</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T124955Z" creationid="yamato" creationdate="20140914T124955Z">
@@ -9038,6 +9054,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;a0&gt;Array&lt;/a0&gt; constructor.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T034158Z" creationid="yamato" creationdate="20140915T034158Z">
+        <seg>&lt;a0&gt;Array&lt;/a0&gt;コンストラクタ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c0&gt;!&lt;/c0&gt; Sigil</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T021723Z" creationid="yamato" creationdate="20140914T021723Z">
@@ -10074,6 +10098,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T032307Z" creationid="yamato" creationdate="20140915T032307Z">
         <seg>グルーピング演算子。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The hash indexing postcircumfix.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T034331Z" creationid="yamato" creationdate="20140915T034331Z">
+        <seg>ハッシュのインデクシング。</seg>
       </tuv>
     </tu>
     <tu>
