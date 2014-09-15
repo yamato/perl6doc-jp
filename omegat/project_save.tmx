@@ -5278,6 +5278,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In the operator descriptions below, a default associativity of &lt;e0&gt;left&lt;/e0&gt; is assumed.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T022432Z" creationid="yamato" creationdate="20140915T022432Z">
+        <seg>下記で述べる演算子はデフォルトで&lt;e0&gt;左&lt;/e0&gt;結合と仮定される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In theory, any user-defined control construct can catch any control exception it likes.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T075745Z" creationid="Toshiyuki" creationdate="20130817T075735Z">
