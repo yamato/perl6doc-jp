@@ -2710,6 +2710,22 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coerces the argument to &lt;a0&gt;Numeric&lt;/a0&gt; by calling the &lt;c1&gt;Numeric&lt;/c1&gt; method on it, and then negates the result.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042752Z" creationid="yamato" creationdate="20140915T042752Z">
+        <seg>&lt;c1&gt;Numeric&lt;/c1&gt;メソッドを呼ぶことで引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制する。そして符号を反転して返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Coerces the argument to &lt;a0&gt;Numeric&lt;/a0&gt; by calling the &lt;c1&gt;Numeric&lt;/c1&gt; method on it.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042614Z" creationid="yamato" creationdate="20140915T042614Z">
+        <seg>&lt;c1&gt;Numeric&lt;/c1&gt;メソッドを呼ぶことで引数を&lt;a0&gt;Numeric&lt;/a0&gt;に強制する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Coercions may also be specified on the return type:</seg>
       </tuv>
       <tuv lang="JA">
@@ -6766,6 +6782,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Negative numeric context operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042650Z" creationid="yamato" creationdate="20140915T042650Z">
+        <seg>負の数値コンテキスト演算子。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>New quoting constructs may be declared as macros:</seg>
       </tuv>
       <tuv lang="JA">
@@ -8946,6 +8970,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>厳しい検索</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>String context operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T042805Z" creationid="yamato" creationdate="20140915T042805Z">
+        <seg>文字列コンテキスト演算子。</seg>
       </tuv>
     </tu>
     <tu>
