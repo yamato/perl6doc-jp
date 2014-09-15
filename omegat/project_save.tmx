@@ -7622,6 +7622,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that this short-circuits, i.e. if one of the arguments evaluates to a false value, the arguments to the right of are never evaluated.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T060757Z" creationid="yamato" creationdate="20140915T060757Z">
+        <seg>もし引数の１つが偽の値と評価されると、右の引数は決して評価されない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that trailing dots are not allowed, so you have to write &lt;c0&gt;1.0&lt;/c0&gt; instead of &lt;c1&gt;1.&lt;/c1&gt; (this rule is important because there are infix operators starting with a dot, for example the &lt;c2&gt;..&lt;/c2&gt; &lt;a3&gt;Range&lt;/a3&gt; operator).</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T122329Z" creationid="yamato" creationdate="20140914T122329Z">
@@ -8834,6 +8842,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T034242Z" creationid="yamato" creationdate="20140915T034242Z">
         <seg>リストコンテキストでフラット化されない、アイテム化された&lt;a1&gt;Array&lt;/a1&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the first argument that evaluates to &lt;c0&gt;False&lt;/c0&gt; in boolean context, or otherwise the last argument.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140915T060544Z" creationid="yamato" creationdate="20140915T060544Z">
+        <seg>最初の引数がブール値コンテキストで&lt;c0&gt;False&lt;/c0&gt;なら最初の引数、そうでなければ最後の引数を返す。</seg>
       </tuv>
     </tu>
     <tu>
