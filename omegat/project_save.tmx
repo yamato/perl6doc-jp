@@ -6606,6 +6606,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Its exact semantics are left to the container type on the left-hand side.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T130921Z" creationid="yamato" creationdate="20140916T130921Z">
+        <seg>その正確な意味論は左側のコンテナ型に任せられる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Just as a &lt;c2&gt;my&lt;/c2&gt; variable can not be accessed from the outside of its declared scope, attributes are not accessible outside of the class.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T182227Z" creationid="Toshiyuki" creationdate="20140111T182227Z">
