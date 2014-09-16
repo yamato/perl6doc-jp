@@ -3182,6 +3182,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Constructs a &lt;a0&gt;Parcel&lt;/a0&gt; from its arguments.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T140539Z" creationid="yamato" creationdate="20140916T140539Z">
+        <seg>引数から&lt;a0&gt;Parcel&lt;/a0&gt;を構築する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Constructs a &lt;a0&gt;Range&lt;/a0&gt; from the arguments, excluding both start and end point.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T054228Z" creationid="yamato" creationdate="20140915T054228Z">
@@ -3658,6 +3666,22 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140330T053453Z" creationid="Toshiyuki" creationdate="20140330T053453Z">
         <seg>埋め込みコメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Evaluates its argument in boolean context (and thus collapses &lt;a0&gt;Junction&lt;/a0&gt;s), and negates the result.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T140433Z" creationid="yamato" creationdate="20140916T140433Z">
+        <seg>引数をブール値コンテキストで評価する（そして&lt;a0&gt;Junction&lt;/a0&gt;を失敗させる）。そして結果を否定する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Evaluates its argument in boolean context (and thus collapses &lt;a0&gt;Junction&lt;/a0&gt;s), and returns the result.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T140505Z" creationid="yamato" creationdate="20140916T140505Z">
+        <seg>引数をブール値コンテキストで評価する（そして&lt;a0&gt;Junction&lt;/a0&gt;を失敗させる）。そして結果を返す。</seg>
       </tuv>
     </tu>
     <tu>
