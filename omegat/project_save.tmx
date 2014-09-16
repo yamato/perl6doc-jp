@@ -1550,6 +1550,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Also used syntactically as the separator of arguments in calls.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T140612Z" creationid="yamato" creationdate="20140916T140612Z">
+        <seg>呼び出しでの構文的なセパレーターとしても使われる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Also, individual subprocesses may not create new process variables.</seg>
       </tuv>
       <tuv lang="JA">
