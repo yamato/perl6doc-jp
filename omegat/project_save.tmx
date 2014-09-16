@@ -950,6 +950,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A &lt;a0&gt;Pair&lt;/a0&gt; within an argument list with an unquoted identifier on the left is interpreted as a named argument.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T131721Z" creationid="yamato" creationdate="20140916T131721Z">
+        <seg>左側のクオートされない識別子の引数リストの&lt;a0&gt;Pair&lt;/a0&gt;は名前付き引数と解釈される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A &lt;c0&gt;CATCH&lt;/c0&gt; block handles only "bad" exceptions, and lets control exceptions pass unhindered.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130816T125424Z" creationid="Toshiyuki" creationdate="20130816T125424Z">
