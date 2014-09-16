@@ -718,6 +718,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Pair&lt;/a0&gt; constructor.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T131253Z" creationid="yamato" creationdate="20140916T131253Z">
+        <seg>&lt;a0&gt;Pair&lt;/a0&gt;コンストラクタ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;Pair&lt;/a0&gt; objects can be created either with &lt;c1&gt;infix:ﾂｫ=&gt;ﾂｻ &lt;/c1&gt; (which auto-quotes the left-hand side if it is an identifier), or with the various colonpair forms.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T123214Z" creationid="yamato" creationdate="20140914T123214Z">
@@ -3154,6 +3162,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T193050Z" creationid="Toshiyuki" creationdate="20140111T193050Z">
         <seg>コンストラクタ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Constructs a &lt;a0&gt;Pair&lt;/a0&gt; object with the left-hand side as the key and the right-hand side as the value.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T131341Z" creationid="yamato" creationdate="20140916T131341Z">
+        <seg>左側をキー、右側を値として&lt;a0&gt;Pair&lt;/a0&gt;オブジェクトを構築する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7570,6 +7586,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130802T155653Z" creationid="Toshiyuki" creationdate="20130802T155653Z">
         <seg>スコープの終了でなされないテンポライゼーションは、そのスコープ内の継続が取られるならやり直すために準備されなければならないことに注意しろ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that the &lt;c0&gt;=&gt; &lt;/c0&gt; operator is syntactically special-cased, in that it allows unquoted identifier on the left-hand side.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T131540Z" creationid="yamato" creationdate="20140916T131540Z">
+        <seg>クオートされない識別子を左側で許すという点で&lt;c0&gt;=&gt; &lt;/c0&gt;演算子は構文的に特別なので注意。</seg>
       </tuv>
     </tu>
     <tu>
