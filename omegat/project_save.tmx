@@ -278,6 +278,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(Note that item assignment and list assignment have different precedence levels, and the syntax of the left-hand side decides whether an equal sign &lt;c0&gt;=&lt;/c0&gt; is parsed as item assignment or list assignment operator).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T131241Z" creationid="yamato" creationdate="20140916T131241Z">
+        <seg>（アイテム割り当てとリスト割り当てには異なる優先順位レベルがあることに注意。左側の構文は等号&lt;c0&gt;=&lt;/c0&gt;がアイテム割り当てかリスト割り当て演算として解析されるかを決める）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(Note that the constant declarator always evaluates its initialization expression at compile time.)</seg>
       </tuv>
       <tuv lang="JA">
