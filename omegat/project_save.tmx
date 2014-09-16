@@ -14,6 +14,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>$false&lt;/c0&gt; evaluates and returns the expression from the &lt;c1&gt;$true&lt;/c1&gt; branch if &lt;c2&gt;$condition&lt;/c2&gt; is a true value.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T130211Z" creationid="yamato" creationdate="20140916T130211Z">
+        <seg>$false&lt;/c0&gt; &lt;c2&gt;$condition&lt;/c2&gt;が真なら&lt;c1&gt;$true&lt;/c1&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>()
 1, 2, 3
 &lt;a b c&gt;
@@ -8182,6 +8190,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Otherwise it evaluates and returns the &lt;c3&gt;$false&lt;/c3&gt; branch.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T130228Z" creationid="yamato" creationdate="20140916T130228Z">
+        <seg>そうでなければ&lt;c3&gt;$false&lt;/c3&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Otherwise it returns &lt;a3&gt;Nil&lt;/a3&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T040256Z" creationid="yamato" creationdate="20140915T040256Z">
@@ -9834,6 +9850,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T121318Z" creationid="yamato" creationdate="20140914T121318Z">
         <seg>項</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Ternary operator, conditional operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T130003Z" creationid="yamato" creationdate="20140916T130003Z">
+        <seg>3項演算子、条件演算子。</seg>
       </tuv>
     </tu>
     <tu>
