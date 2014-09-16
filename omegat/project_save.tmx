@@ -6566,6 +6566,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Item assignment.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T130319Z" creationid="yamato" creationdate="20140916T130319Z">
+        <seg>アイテム割り当て。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Item containers prevent flattening, thus allowing the programmer to write nested data structures.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T141303Z" creationid="yamato" creationdate="20140914T141303Z">
@@ -8506,6 +8514,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T063050Z" creationid="yamato" creationdate="20140914T063050Z">
         <seg>プレースホルダー変数は構文上、型制約を持つことができない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Places the value of the right-hand side into the container on the left-hand side.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140916T130422Z" creationid="yamato" creationdate="20140916T130422Z">
+        <seg>右側の値を左側のコンテナに配置する。</seg>
       </tuv>
     </tu>
     <tu>
