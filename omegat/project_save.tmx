@@ -10262,6 +10262,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;...&lt;/c0&gt; operators consider the initial values as "generated elements" as well, so the are also checked against the endpoint:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T122033Z" creationid="yamato" creationdate="20140917T122033Z">
+        <seg>&lt;c0&gt;...&lt;/c0&gt;演算子は最初の値を生成された要素と考える。また、終点と照合される」</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c0&gt;.&lt;/c0&gt; Sigil</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T021737Z" creationid="yamato" creationdate="20140914T021737Z">
@@ -10986,6 +10994,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T092741Z" creationid="Toshiyuki" creationdate="20140329T092658Z">
         <seg>英字と数字の定義は適切なユニコード文字も含みます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The distinction between item assignment and list assignment is determined by the parser depending on the syntax of the left-hand side.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T122126Z" creationid="yamato" creationdate="20140917T122126Z">
+        <seg>アイテム割当てとリスト割当ての区別は、左側の構文に従い、パーサーで決定される。</seg>
       </tuv>
     </tu>
     <tu>
@@ -13986,6 +14002,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Whereas &lt;c0&gt;$x = $y&lt;/c0&gt; puts the value in &lt;c1&gt;$y&lt;/c1&gt; into &lt;c2&gt;$x&lt;/c2&gt;, &lt;c3&gt;$x := $y&lt;/c3&gt; makes &lt;c4&gt;$x&lt;/c4&gt; and &lt;c5&gt;$y&lt;/c5&gt; the same thing.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T122228Z" creationid="yamato" creationdate="20140917T122228Z">
+        <seg>&lt;c0&gt;$x = $y&lt;/c0&gt;は&lt;c1&gt;$y&lt;/c1&gt;の値を&lt;c2&gt;$x&lt;/c2&gt;に置くのに対し、&lt;c3&gt;$x := $y&lt;/c3&gt;は&lt;c4&gt;$x&lt;/c4&gt;と&lt;c5&gt;$y&lt;/c5&gt;を同じものにする。</seg>
       </tuv>
     </tu>
     <tu>
