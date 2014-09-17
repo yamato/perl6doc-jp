@@ -9110,6 +9110,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns the first defined argument, or else the last argument.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T123547Z" creationid="yamato" creationdate="20140917T123547Z">
+        <seg>最初の定義された引数を返す。そうでなければ最後の引数を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns the first defined operand.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T062708Z" creationid="yamato" creationdate="20140915T062708Z">
