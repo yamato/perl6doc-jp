@@ -3414,6 +3414,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Custom generators are the last argument before the '...' operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T121049Z" creationid="yamato" creationdate="20140917T121049Z">
+        <seg>カスタムジェネレータは'...'演算子の前の最後の引数だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>DYNAMIC</seg>
       </tuv>
       <tuv lang="JA">
@@ -7958,6 +7966,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Of course the generator can also take only one argument.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T121207Z" creationid="yamato" creationdate="20140917T121207Z">
+        <seg>もちろんジェネレータは１つの引数だけ取ることができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Of course, an explicit &lt;c4&gt;next&lt;/c4&gt; might be clearer than a &lt;c5&gt;succeed&lt;/c5&gt; if you really want to go directly to the next iteration.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130813T120420Z" creationid="Toshiyuki" creationdate="20130813T120420Z">
@@ -12054,6 +12070,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>There must be at least as many initial elements as arguments to the generator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T121246Z" creationid="yamato" creationdate="20140917T121246Z">
+        <seg>少なくともジェネレータへの引数と同じくらい多くの最初の要素がなければならない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>There's no reason to exclude any useful epoch that is well characterized in atomic seconds.</seg>
       </tuv>
       <tuv lang="JA">
@@ -12802,6 +12826,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>この名前は、構文的にでなく、意味論的に、考えられることになっている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This one takes two arguments, and generates the Fibonacci numbers</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T121123Z" creationid="yamato" creationdate="20140917T121123Z">
+        <seg>これは２つの引数を取り、フィボナッチ数を発生する。</seg>
       </tuv>
     </tu>
     <tu>
