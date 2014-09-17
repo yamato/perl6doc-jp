@@ -5806,6 +5806,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In other positions it is a syntax error.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T115613Z" creationid="yamato" creationdate="20140917T115613Z">
+        <seg>他の位置では構文エラーになる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In other words, a dot following a number can only be a decimal point if the following character is a digit.</seg>
       </tuv>
       <tuv lang="JA">
@@ -6042,6 +6050,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>無限とNaN</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Infix &lt;c0&gt;:&lt;/c0&gt; is only allowed after the first argument of a non-method call.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T115556Z" creationid="yamato" creationdate="20140917T115556Z">
+        <seg>&lt;c0&gt;:&lt;/c0&gt;は最初の引数の後の非メソッド呼び出しだけに許される。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14410,6 +14426,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T133757Z" creationid="yamato" creationdate="20140914T133757Z">
         <seg>この状況をあなたは前に見ている：それはまさに&lt;c0&gt;is rw&lt;/c0&gt;としてマークされたシグネチャパラメータで起こったことだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Zip operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T115630Z" creationid="yamato" creationdate="20140917T115630Z">
+        <seg>Zip演算子。</seg>
       </tuv>
     </tu>
     <tu>
