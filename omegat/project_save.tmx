@@ -5062,6 +5062,30 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If the &lt;c0&gt;!!!&lt;/c0&gt; statement is executed, it calls &lt;a1&gt;&amp;die&lt;/a1&gt;, with the default message &lt;c2&gt;stub code executed&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T123119Z" creationid="yamato" creationdate="20140917T123119Z">
+        <seg>&lt;c0&gt;!!!&lt;/c0&gt;が実行されたなら、それは&lt;a1&gt;&amp;die&lt;/a1&gt;を呼ぶ。デフォルトメッセージは&lt;c2&gt;stub code executed&lt;/c2&gt;になる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the &lt;c0&gt;...&lt;/c0&gt; statement is executed, it calls &lt;a1&gt;&amp;fail&lt;/a1&gt;, with the default message &lt;c2&gt;stub code executed&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T123021Z" creationid="yamato" creationdate="20140917T123021Z">
+        <seg>&lt;c0&gt;...&lt;/c0&gt;文が実行されたなら、それは&lt;a1&gt;&amp;fail&lt;/a1&gt;を呼ぶ。デフォルトメッセージは&lt;c2&gt;stub code executed&lt;/c2&gt;になる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the &lt;c0&gt;???&lt;/c0&gt; statement is executed, it calls &lt;a1&gt;&amp;warn&lt;/a1&gt;, with the default message &lt;c2&gt;stub code executed&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T123201Z" creationid="yamato" creationdate="20140917T123201Z">
+        <seg>&lt;c0&gt;???&lt;/c0&gt;が実行されたなら、それは&lt;a1&gt;&amp;warn&lt;/a1&gt;を呼ぶ。デフォルトメッセージは&lt;c2&gt;stub code executed&lt;/c2&gt;になる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If the &lt;c7&gt;gather&lt;/c7&gt; contains no &lt;c8&gt;take&lt;/c8&gt; lexically, it by definition cannot be the lexotic target of any &lt;c9&gt;take&lt;/c9&gt;, so it can only harvest dynamic &lt;c10&gt;take&lt;/c10&gt; calls.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T160429Z" creationid="Toshiyuki" creationdate="20130810T160429Z">
