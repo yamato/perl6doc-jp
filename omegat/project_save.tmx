@@ -1726,6 +1726,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>An endpoint of &lt;c0&gt;*&lt;/c0&gt; (&lt;a1&gt;Whatever&lt;/a1&gt;) generates an infinite sequence, with a default generator of *.succ</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T121014Z" creationid="yamato" creationdate="20140917T121014Z">
+        <seg>終点の&lt;c0&gt;*&lt;/c0&gt;（&lt;a1&gt;Whatever&lt;/a1&gt;）は無限のシーケンスを発生し、デフォルトのジェネレータ*.succで発生する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>An exception handler is just a switch statement on an implicit topic that happens to be the current exception to be dealt with.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130813T130151Z" creationid="Toshiyuki" creationdate="20130813T130151Z">
@@ -10742,6 +10750,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The arguments are taken from the initial elements and the already generated elements.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T120742Z" creationid="yamato" creationdate="20140917T120742Z">
+        <seg>引数は最初の要素とすでに発生した要素から取られる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The array indexing operator.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T035123Z" creationid="yamato" creationdate="20140915T035123Z">
@@ -10914,6 +10930,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>デフォルト浮動小数点モードは例外を投げなくて、むしろ最大下界とナンを繁殖させる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The default generator is &lt;c0&gt;*.&lt;/c0&gt;&lt;a1&gt;succ&lt;/a1&gt; or &lt;c2&gt;*.&lt;/c2&gt;&lt;a3&gt;pred&lt;/a3&gt;, depending on how the end points compare:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T120853Z" creationid="yamato" creationdate="20140917T120853Z">
+        <seg>デフォルトのジェネレータは&lt;c0&gt;*.&lt;/c0&gt;&lt;a1&gt;succ&lt;/a1&gt;または&lt;c2&gt;*.&lt;/c2&gt;&lt;a3&gt;pred&lt;/a3&gt;で、終点がどのように比較されるかに依存する：</seg>
       </tuv>
     </tu>
     <tu>
