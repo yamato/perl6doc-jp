@@ -4206,6 +4206,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For the &lt;c1&gt;...&lt;/c1&gt; operator, the final element is included, for the &lt;c2&gt;...^&lt;/c2&gt; operator it is excluded.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T121740Z" creationid="yamato" creationdate="20140917T121740Z">
+        <seg>&lt;c1&gt;...&lt;/c1&gt;演算子では最後の要素が含まれ、&lt;c2&gt;...^&lt;/c2&gt;演算子では除外される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For the lexotic return of &lt;c2&gt;next&lt;/c2&gt;, the control exception will contain the identity of the loop scope to be exited (since the label was already "used up" to discover that identity), but for the dynamic fallback, the exception will contain only the loop label to be matched dynamically.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130729T115017Z" creationid="Toshiyuki" creationdate="20130729T115017Z">
@@ -12434,6 +12442,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>これは、強制演算子としてシギルを使うことができる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This allows you to write</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T121751Z" creationid="yamato" creationdate="20140917T121751Z">
+        <seg>これは次のように書くことを許す。</seg>
       </tuv>
     </tu>
     <tu>
