@@ -3374,6 +3374,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Creates a cross product from all the lists, order so that the rightmost elements vary most rapidly</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T120331Z" creationid="yamato" creationdate="20140917T120238Z">
+        <seg>全てのリストからクロス積を作る。最も右側の要素が最も早く変化するように並べられる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Creates an &lt;e0&gt;all&lt;/e0&gt; &lt;a1&gt;Junction&lt;/a1&gt; from its arguments.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T051352Z" creationid="yamato" creationdate="20140915T051352Z">
@@ -10330,6 +10338,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T133413Z" creationid="Toshiyuki" creationdate="20140328T133413Z">
         <seg>&lt;c0&gt;StrPos&lt;/c0&gt;型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;X&lt;/c0&gt; operator also exists as a meta operator, in which case the inner parcels are replaced by the value from applying the meta'ed operator to the list:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T120413Z" creationid="yamato" creationdate="20140917T120413Z">
+        <seg>&lt;c0&gt;X&lt;/c0&gt;演算子はメタ演算子としても存在する。その場合は内側のパーセルはリストにメタ演算子が適用された値に置き換えられる：</seg>
       </tuv>
     </tu>
     <tu>
