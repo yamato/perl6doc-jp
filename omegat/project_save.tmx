@@ -4974,6 +4974,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If it is the only statement in a routine or type, it marks that routine or type as a stub (which is significant in the context of pre-declaring types and composing roles).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T122858Z" creationid="yamato" creationdate="20140917T122858Z">
+        <seg>ルーチンまたは型の唯一の文であるならば、それはスタブ（型を前宣言して、ロールを組み立てるコンテクストで重要な）としてそのルーチンまたは型をマークする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If no exception was caught, &lt;c3&gt;$!&lt;/c3&gt; is set to the &lt;c4&gt;Any&lt;/c4&gt; type object.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T114022Z" creationid="yamato" creationdate="20140914T114022Z">
@@ -10640,8 +10648,8 @@ qw/a b c/</seg>
       <tuv lang="EN-US">
         <seg>The &lt;e0&gt;yada, yada, yada&lt;/e0&gt; operator or &lt;e1&gt;stub&lt;/e1&gt; operator.</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamato" changedate="20140917T122544Z" creationid="yamato" creationdate="20140917T122544Z">
-        <seg>&lt;e0&gt;やだ、やだ、やだ&lt;/e0&gt; operator or &lt;e1&gt;stub&lt;/e1&gt; operator.</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T122721Z" creationid="yamato" creationdate="20140917T122544Z">
+        <seg>&lt;e0&gt;などなど&lt;/e0&gt;演算子または&lt;e1&gt;stub&lt;/e1&gt;演算子。</seg>
       </tuv>
     </tu>
     <tu>
