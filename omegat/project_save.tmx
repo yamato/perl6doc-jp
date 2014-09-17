@@ -6310,6 +6310,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It can have initial elements and a generator on left-hand side, and an endpoint on the right-hand side.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T120621Z" creationid="yamato" creationdate="20140917T120621Z">
+        <seg>それは最初の要素とジェネレータを左側に持つことができ、右側は終点を持つ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It declares the new type name in the same scope as that of the associated declaration.</seg>
       </tuv>
       <tuv lang="JA">
@@ -11642,6 +11650,22 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130822T030444Z" creationid="Toshiyuki" creationdate="20130822T030444Z">
         <seg>&lt;c0&gt;INIT&lt;/c0&gt;と&lt;c1&gt;once&lt;/c1&gt;のセマンティクスは他のそれぞれの複製されたクロージャとは同等ではない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The sequence operator invokes the generator with as many arguments as necessary.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T120705Z" creationid="yamato" creationdate="20140917T120705Z">
+        <seg>シーケンス演算子は必要ならジェネレータを多くの引数で起動する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The sequence operator is a generic operator to produce lazy lists.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T120516Z" creationid="yamato" creationdate="20140917T120516Z">
+        <seg>シーケンス演算子はレイジーなリストをつくるジェネリックな演算子だ。</seg>
       </tuv>
     </tu>
     <tu>
