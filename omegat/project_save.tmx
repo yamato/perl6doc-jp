@@ -5070,6 +5070,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If the endpoint is not &lt;c0&gt;*&lt;/c0&gt;, it is smart-matched against each generated element, and the sequence is terminated when the smart-match succeeded.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T121652Z" creationid="yamato" creationdate="20140917T121652Z">
+        <seg>終点が&lt;c0&gt;*&lt;/c0&gt;でなければ、それは各々の発生した要素に対してスマートなマッチし、スマートマッチが成功したときシーケンスは終了される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If the failure throws its exception and the exception resumes, the thrower by default returns the null string (&lt;c0&gt;''&lt;/c0&gt;) to whatever caused the failure to throw its exception.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130818T074133Z" creationid="Toshiyuki" creationdate="20130818T074133Z">
@@ -6506,6 +6514,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T013507Z" creationid="yamato" creationdate="20140915T013507Z">
         <seg>それは外側の&lt;c0&gt;.item&lt;/c0&gt;コンテナがない同じオブジェクトを返すだけだが、リストの中を見ない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It knows about arithmetic and geometric sequences.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T121531Z" creationid="yamato" creationdate="20140917T121531Z">
+        <seg>それは算術と幾何級数的シーケンスを知っている。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14210,6 +14226,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>宣言の範囲内で、副詞形はパラメタ宣言の名前を変えるのに用いられる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Without a generator, and more than one initial element, and all initial elements numeric, the sequence operator tries to deduce the generator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T121433Z" creationid="yamato" creationdate="20140917T121433Z">
+        <seg>ジェネレータ無しで、１つより多くの初期要素、そして全ての数値要素では、シーケンス演算子はジェネレータを推論しようと試みる。</seg>
       </tuv>
     </tu>
     <tu>
