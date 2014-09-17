@@ -10070,6 +10070,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>That turns what would otherwise be a function call into a method call.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T115358Z" creationid="yamato" creationdate="20140917T115358Z">
+        <seg>そうでなければメソッド呼び出しの関数呼び出しになる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The "point of declaration" is the moment the compiler sees "&lt;c0&gt;my $foo&lt;/c0&gt;", not the end of the statement as in Perl 5, so</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130730T125416Z" creationid="Toshiyuki" creationdate="20130730T125416Z">
@@ -13434,6 +13442,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>若干の変形を使いなさい</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Used as an argument separator just like infix &lt;c0&gt;,&lt;/c0&gt; and marks the argument to its left as the invocant.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T115216Z" creationid="yamato" creationdate="20140917T115216Z">
+        <seg>infix &lt;c0&gt;,&lt;/c0&gt;のように引数のセパレータとして使われ、そしてその左の引数をインボカントとマークする。</seg>
       </tuv>
     </tu>
     <tu>
