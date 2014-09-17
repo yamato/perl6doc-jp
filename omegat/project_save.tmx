@@ -8886,6 +8886,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Read-only binding.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T122437Z" creationid="yamato" creationdate="20140917T122437Z">
+        <seg>読み取り専用バインディング。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Regardless of syntax, adverbs used as named arguments (in either term or infix position) generally show up as optional named parameters to the function in question--even if the function is an operator or macro.</seg>
       </tuv>
       <tuv lang="JA">
@@ -10626,6 +10634,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130806T101538Z" creationid="Toshiyuki" creationdate="20130806T101538Z">
         <seg>&lt;c4&gt;.next&lt;/c4&gt;と&lt;c5&gt;.last&lt;/c5&gt;メソッドはそのループのイテレーションの最終値を与える任意の引数をとる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;e0&gt;yada, yada, yada&lt;/e0&gt; operator or &lt;e1&gt;stub&lt;/e1&gt; operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T122544Z" creationid="yamato" creationdate="20140917T122544Z">
+        <seg>&lt;e0&gt;やだ、やだ、やだ&lt;/e0&gt; operator or &lt;e1&gt;stub&lt;/e1&gt; operator.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12978,6 +12994,22 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140313T135218Z" creationid="Toshiyuki" creationdate="20140111T181204Z">
         <seg>この型オブジェクトはクラスの「空のインスタンス」です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This will output 42, because &lt;c0&gt;$a&lt;/c0&gt; and &lt;c1&gt;$b&lt;/c1&gt; both contained the number &lt;c2&gt;42&lt;/c2&gt;, but the &lt;a3&gt;containers&lt;/a3&gt; were different.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T122347Z" creationid="yamato" creationdate="20140917T122347Z">
+        <seg>これは42と出力する。なぜなら&lt;c0&gt;$a&lt;/c0&gt;と&lt;c1&gt;$b&lt;/c1&gt;は同じ数値&lt;c2&gt;42&lt;/c2&gt;を含むが&lt;a3&gt;containers&lt;/a3&gt;は異なるからだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This will output 43, since &lt;c0&gt;$b&lt;/c0&gt; and &lt;c1&gt;$a&lt;/c1&gt; both represented the same object.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T122421Z" creationid="yamato" creationdate="20140917T122421Z">
+        <seg>これは43と出力する。&lt;c0&gt;$b&lt;/c0&gt;と&lt;c1&gt;$a&lt;/c1&gt;は同じオブジェクトを表している。</seg>
       </tuv>
     </tu>
     <tu>
