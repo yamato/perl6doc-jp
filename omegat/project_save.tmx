@@ -9118,10 +9118,26 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns the first operand that evaluates to &lt;c0&gt;False&lt;/c0&gt; in boolean context, or otherwise the last operand.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T123342Z" creationid="yamato" creationdate="20140917T123342Z">
+        <seg>ブール値コンテキストで最初のオペランドが&lt;c0&gt;False&lt;/c0&gt;と評価されるならそれを返す。そうでなければ最後のオペランドを返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns the first true argument if there is only one, and &lt;a0&gt;Nil&lt;/a0&gt; otherwise.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T061248Z" creationid="yamato" creationdate="20140915T061248Z">
         <seg>最初に真になるものが１つしかなければ引数を返し、そうでなければ&lt;a0&gt;Nil&lt;/a0&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the first undefined argument, otherwise the last argument.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T123418Z" creationid="yamato" creationdate="20140917T123418Z">
+        <seg>最初の未定義の引数を返す。そうでなければ最後の引数を返す。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9162,6 +9178,30 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140113T080142Z" creationid="Toshiyuki" creationdate="20140113T080142Z">
         <seg>ロール</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Same as &lt;a0&gt;infix &amp;&amp;&lt;/a0&gt;, except with looser precedence.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T123232Z" creationid="yamato" creationdate="20140917T123232Z">
+        <seg>低い優先順位であることを除けば&lt;a0&gt;infix &amp;&amp;&lt;/a0&gt;と同じ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Same as &lt;c0&gt;infix //&lt;/c0&gt;, except with looser precedence.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T123518Z" creationid="yamato" creationdate="20140917T123518Z">
+        <seg>低い優先順位であることを除けば&lt;c0&gt;infix //&lt;/c0&gt;と同じ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Same as &lt;c0&gt;infix ||&lt;/c0&gt;, except with looser precedence.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140917T123453Z" creationid="yamato" creationdate="20140917T123453Z">
+        <seg>低い優先順位であることを除けば&lt;c0&gt;infix ||&lt;/c0&gt;と同じ。</seg>
       </tuv>
     </tu>
     <tu>
