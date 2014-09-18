@@ -7446,6 +7446,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Native types are used for low-level types (like &lt;c0&gt;uint64&lt;/c0&gt;).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140918T152431Z" creationid="yamato" creationdate="20140918T152431Z">
+        <seg>ネイティブ型は低レベルの型（&lt;c0&gt;uint64&lt;/c0&gt;のような）のために使われる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Negated boolean context operator.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T042420Z" creationid="yamato" creationdate="20140915T042420Z">
