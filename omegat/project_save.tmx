@@ -8638,6 +8638,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Perl 6 is an object oriented language at its core, even though it allows you to write programs in other programming styles.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140918T151911Z" creationid="yamato" creationdate="20140918T151911Z">
+        <seg>Perl 6のコアはオブジェクト指向言語で、他のプログラミングスタイルでプログラムを書くことさえできる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Perl 6 is rather more liberal than many languages in the area of constructors.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T140742Z" creationid="Toshiyuki" creationdate="20140111T193128Z">
