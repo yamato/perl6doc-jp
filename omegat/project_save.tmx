@@ -8558,6 +8558,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Perl 6 comes with a wealth of predefined types, which can be classified in two categories: normal and &lt;e0&gt;native&lt;/e0&gt; types.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140918T152249Z" creationid="yamato" creationdate="20140918T152249Z">
+        <seg>Perl 6には多くの定義済みの型が付属している。そしてそれは2つのカテゴリーに分類できる：通常型と&lt;e0&gt;ネイティブ&lt;/e0&gt; 型だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Perl 6 currently recognizes decimal numbers and the null key.</seg>
       </tuv>
       <tuv lang="JA">
