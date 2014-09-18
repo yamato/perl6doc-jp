@@ -3750,6 +3750,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Everything that you can store in a variable is either a native value, or an object.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140918T152655Z" creationid="yamato" creationdate="20140918T152655Z">
+        <seg>あなたが変数に保管することができるすべては、ネイティブ値またはオブジェクトだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Examples</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20131027T121726Z" creationid="Toshiyuki" creationdate="20131027T121726Z">
@@ -10158,6 +10166,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>That includes literals, types (type objects), code and containers.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140918T152712Z" creationid="yamato" creationdate="20140918T152712Z">
+        <seg>それは、リテラル、型（型オブジェクト）、コードとコンテナを含む。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>That is,</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T060536Z" creationid="Toshiyuki" creationdate="20130810T060536Z">
@@ -12518,6 +12534,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>They do not have the same capabilities as objects, though if you call methods on them, they are &lt;e1&gt;boxed&lt;/e1&gt; into normal objects.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140918T152617Z" creationid="yamato" creationdate="20140918T152617Z">
+        <seg>それらはオブジェクトと同じ機能を持たないが、もしそれらでメソッドを呼び出すと。それらは通常オブジェクトに&lt;e1&gt;ボックス化&lt;/e1&gt;される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>They may be directly accessed from within the class via &lt;c0&gt;!&lt;/c0&gt;:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T052058Z" creationid="yamato" creationdate="20140914T052058Z">
@@ -13178,6 +13202,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T134947Z" creationid="yamato" creationdate="20140914T134947Z">
         <seg>このように書くことができる</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To call a method on an expression, add a dot, followed by the method name:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140918T152908Z" creationid="yamato" creationdate="20140918T152908Z">
+        <seg>式でメソッドを呼ぶために、ドットを加え、続けてメソッド名をつける：</seg>
       </tuv>
     </tu>
     <tu>
@@ -14506,6 +14538,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>あなたは、同様にコンストラクタに引数を渡すことができる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can use objects by calling methods on them.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140918T152744Z" creationid="yamato" creationdate="20140918T152744Z">
+        <seg>あなたは、それらの上でメソッドを呼ぶことによって、オブジェクトを使用することができる。</seg>
       </tuv>
     </tu>
     <tu>
