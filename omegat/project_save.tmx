@@ -2822,6 +2822,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Classes are declared using the &lt;c0&gt;class&lt;/c0&gt; keyword, typically followed by a name.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T020516Z" creationid="yamato" creationdate="20140920T020516Z">
+        <seg>クラスは&lt;c0&gt;class&lt;/c0&gt;キーワードを使って宣言され、典型的には名前が続く。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Classes get to decide which of their values are true and which are false.</seg>
       </tuv>
       <tuv lang="JA">
