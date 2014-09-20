@@ -1662,6 +1662,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Although, in most cases, the &lt;a0&gt;&lt;c1&gt;.isa&lt;/c1&gt;&lt;/a0&gt; method will suffice:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T015943Z" creationid="yamato" creationdate="20140920T015943Z">
+        <seg>ほとんどの場合&lt;a0&gt;&lt;c1&gt;.isa&lt;/c1&gt;&lt;/a0&gt;メソッドで十分だ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Always.</seg>
       </tuv>
       <tuv lang="JA">
@@ -10134,6 +10142,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Subtype checking is done by smart-matching:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T020030Z" creationid="yamato" creationdate="20140920T020030Z">
+        <seg>サブタイプのチェックはスマートマッチングで行われる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Such a cursor is essentially a pattern-matching state.</seg>
       </tuv>
       <tuv lang="JA">
@@ -13578,6 +13594,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140327T133511Z" creationid="Toshiyuki" creationdate="20140327T133511Z">
         <seg>型オブジェクト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Type objects (other than &lt;a0&gt;Mu&lt;/a0&gt;) can be compared for equality with the &lt;a1&gt;&lt;c2&gt;===&lt;/c2&gt;&lt;/a1&gt; identity operator:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T015852Z" creationid="yamato" creationdate="20140920T015852Z">
+        <seg>型オブジェクト（&lt;a0&gt;Mu&lt;/a0&gt;以外）は&lt;a1&gt;&lt;c2&gt;===&lt;/c2&gt;&lt;/a1&gt;アイデンティティ演算子で同一性を比較できる：</seg>
       </tuv>
     </tu>
     <tu>
