@@ -2350,6 +2350,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Attributes can be used in methods, and can always be used with the &lt;c0&gt;!&lt;/c0&gt; twigil, even if they are declared with the &lt;c1&gt;.&lt;/c1&gt; twigil.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T022751Z" creationid="yamato" creationdate="20140920T022751Z">
+        <seg>属性はメソッドで使うことができる。そして&lt;c0&gt;!&lt;/c0&gt;ツウィギルを常に使用できる。&lt;c1&gt;.&lt;/c1&gt;ツウィギルで宣言されても同様だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Autoincrement Precedence</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T040704Z" creationid="yamato" creationdate="20140915T040704Z">
