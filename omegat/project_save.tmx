@@ -1510,6 +1510,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>All calls to public method are "virtual" in the C++ sense, which means that the actual type of an object determines which method to call, not the declared type:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T042503Z" creationid="yamato" creationdate="20140920T042503Z">
+        <seg>全てのパブリックメソッドへの呼び出しはC++の意味での「virtual」だ。それは宣言された型ではなく、オブジェクトの実際の型が呼び出すメソッドを決定することを意味する：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>All classes directly or indirectly derive from &lt;a1&gt;Mu&lt;/a1&gt;, the root of the type hierarchy.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T024947Z" creationid="yamato" creationdate="20140920T024947Z">
@@ -13456,8 +13464,8 @@ qw/a b c/</seg>
       <tuv lang="EN-US">
         <seg>This produces the output:</seg>
       </tuv>
-      <tuv lang="JA" changeid="Toshiyuki" changedate="20131026T015809Z" creationid="Toshiyuki" creationdate="20131026T015809Z">
-        <seg>これは次のように出力します：</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T042516Z" creationid="Toshiyuki" creationdate="20131026T015809Z">
+        <seg>これは次のように出力する：</seg>
       </tuv>
     </tu>
     <tu>
