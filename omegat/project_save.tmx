@@ -2326,6 +2326,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Attributes are variables that exist per instance of a class.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T021054Z" creationid="yamato" creationdate="20140920T021028Z">
+        <seg>属性は、クラスのインスタンスごとに存在する変数だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Attributes are variables that exists per instance of a class.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T051944Z" creationid="yamato" creationdate="20140914T051944Z">
@@ -5578,6 +5586,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T120255Z" creationid="Toshiyuki" creationdate="20130810T120255Z">
         <seg>Perl 5では、裸のブロックはdo-onceループと判断される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In Perl 6, all attributes are private.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T021149Z" creationid="yamato" creationdate="20140920T021149Z">
+        <seg>Perl 6ではすべての属性がプライベートだ。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12626,6 +12642,22 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T055215Z" creationid="yamato" creationdate="20140914T055215Z">
         <seg>それらはコンパイラに知られていて、コンパイル後に修正されない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>They are typically declared using the &lt;c0&gt;has&lt;/c0&gt; declarator and using the &lt;c1&gt;!&lt;/c1&gt; twigil.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T021245Z" creationid="yamato" creationdate="20140920T021245Z">
+        <seg>それらは典型的には&lt;c0&gt;has&lt;/c0&gt;宣言と&lt;c1&gt;!&lt;/c1&gt;ツウィギルを使って宣言される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>They are where the state of an object is stored.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T021132Z" creationid="yamato" creationdate="20140920T021132Z">
+        <seg>それらはオブジェクトの状態が保存される場所だ。</seg>
       </tuv>
     </tu>
     <tu>
