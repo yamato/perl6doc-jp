@@ -11470,6 +11470,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The first is always a simple lookup of the attribute.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T023208Z" creationid="yamato" creationdate="20140920T023208Z">
+        <seg>最初は常に単純な属性の検索だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The first parameter is the callback (the thing to do to execute the task).</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T141503Z" creationid="Toshiyuki" creationdate="20140112T035629Z">
@@ -12366,6 +12374,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>There is a subtle but important difference between using, say, &lt;c0&gt;$!origin&lt;/c0&gt; and &lt;c1&gt;$.origin&lt;/c1&gt; in the method &lt;c2&gt;describe&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T023137Z" creationid="yamato" creationdate="20140920T023137Z">
+        <seg>&lt;c2&gt;describe&lt;/c2&gt;メソッドで&lt;c0&gt;$!origin&lt;/c0&gt;と&lt;c1&gt;$.origin&lt;/c1&gt;を使うことの微妙だが重要な違いがある。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>There is also a &lt;c2&gt;let&lt;/c2&gt; prefix operator that sets a hypothetical value.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130802T134150Z" creationid="Toshiyuki" creationdate="20130802T134150Z">
@@ -13010,6 +13026,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T053905Z" creationid="yamato" creationdate="20140914T053905Z">
         <seg>これはPerl 6の全ての属性はプライベートで、&lt;c4&gt;$!attribute-name&lt;/c4&gt;を使ってクラス内で直接アクセスできるためだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is because really, the &lt;c2&gt;.&lt;/c2&gt; twigil declares an attribute with the &lt;c3&gt;!&lt;/c3&gt; twigil in its place, and then additionally generates an accessor method.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T022939Z" creationid="yamato" creationdate="20140920T022939Z">
+        <seg>これは、&lt;c2&gt;.&lt;/c2&gt;ツウィギルが&lt;c3&gt;!&lt;/c3&gt;ツウィギルの場所で属性を宣言し、追加でアクセサメソッドを生成するからだ。</seg>
       </tuv>
     </tu>
     <tu>
