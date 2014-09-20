@@ -1854,6 +1854,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Another method call syntax separates the method name and the argument list with a colon:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T013555Z" creationid="yamato" creationdate="20140920T013555Z">
+        <seg>もう1つのメソッド呼び出し構文は、コロンでメソッドと引数リストを分離する：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Another normal use of a you-don't-see-this-space is typically to put a dotted postfix on the next line:</seg>
       </tuv>
       <tuv lang="JA">
