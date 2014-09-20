@@ -6558,6 +6558,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It is cheap, and you know that it is the attribute declared in this class.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T023251Z" creationid="yamato" creationdate="20140920T023251Z">
+        <seg>これはチープで、あなたはその属性がこのクラスで宣言されていることを知っている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It is created by the comma operator, and often delimited by round parenthesis -- hence the name.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T134148Z" creationid="yamato" creationdate="20140914T134148Z">
@@ -8362,6 +8370,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>ベース10（どんな形でも）だけは、更なるexponentiatorが『e』または『E』から始めているのを許す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Only use &lt;c3&gt;$.origin&lt;/c3&gt; if you explicitly want to allow overriding.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T023433Z" creationid="yamato" creationdate="20140920T023427Z">
+        <seg>明確にオーバーライドを許したいなら&lt;c3&gt;$.origin&lt;/c3&gt;だけを使用しろ。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11472,8 +11488,8 @@ qw/a b c/</seg>
       <tuv lang="EN-US">
         <seg>The first is always a simple lookup of the attribute.</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamato" changedate="20140920T023208Z" creationid="yamato" creationdate="20140920T023208Z">
-        <seg>最初は常に単純な属性の検索だ。</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T023301Z" creationid="yamato" creationdate="20140920T023208Z">
+        <seg>前者は常に単純な属性の検索だ。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11738,6 +11754,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130811T125157Z" creationid="Toshiyuki" creationdate="20130811T125157Z">
         <seg>個々のケースのキーワードは&lt;c1&gt;when&lt;/c1&gt;だ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The latter is really a method call, and thus it may be overridden in a subclass.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T023339Z" creationid="yamato" creationdate="20140920T023339Z">
+        <seg>後者は本当にメソッド呼び出しで、サブクラスでオーバーライドされるかもしれない。</seg>
       </tuv>
     </tu>
     <tu>
