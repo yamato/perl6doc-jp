@@ -918,6 +918,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c1&gt;bless&lt;/c1&gt; creates the new object, and then calls method &lt;c2&gt;BUILDALL&lt;/c2&gt; on it.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T042913Z" creationid="yamato" creationdate="20140920T042913Z">
+        <seg>&lt;c1&gt;bless&lt;/c1&gt;は新しいオブジェクトを作成し、&lt;c2&gt;BUILDALL&lt;/c2&gt;をそれで呼び出す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c1&gt;self&lt;/c1&gt; can be used to call further methods on the invocant, for example.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T023746Z" creationid="yamato" creationdate="20140920T023746Z">
