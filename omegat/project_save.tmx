@@ -782,6 +782,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;$formatted-text&lt;/c0&gt; now contains the above text, but indented 8 spaces.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T013348Z" creationid="yamato" creationdate="20140920T013348Z">
+        <seg>&lt;c0&gt;$formatted-text&lt;/c0&gt;は上記のテキストを含むが、8スペースインデントされている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;$invocant.*method&lt;/c0&gt; calls all methods called &lt;c1&gt;method&lt;/c1&gt; from &lt;c2&gt;$invocant&lt;/c2&gt;, and returns a &lt;a3&gt;Parcel&lt;/a3&gt; of the results.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T040612Z" creationid="yamato" creationdate="20140915T040612Z">
@@ -5342,6 +5350,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If you need to supply arguments to the method, add parentheses after the method name with the arguments inside the parentheses:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T013245Z" creationid="yamato" creationdate="20140920T013245Z">
+        <seg>メソッドに引数を与える必要があるなら、メソッド名の後の括弧の中に引数を加える。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If you rely on &lt;c0&gt;$_&lt;/c0&gt; as the implicit parameter to a block, then &lt;c1&gt;$_&lt;/c1&gt; is considered read/write by default.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T113936Z" creationid="Toshiyuki" creationdate="20130810T113936Z">
@@ -7354,6 +7370,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140112T125409Z" creationid="Toshiyuki" creationdate="20140112T125409Z">
         <seg>多重継承</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Multiple arguments just require a comma between them:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T013418Z" creationid="yamato" creationdate="20140920T013418Z">
+        <seg>複数の引数は、それらの間にコンマが必要だ。</seg>
       </tuv>
     </tu>
     <tu>
