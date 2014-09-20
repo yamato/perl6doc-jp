@@ -2318,6 +2318,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Attributes</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T020958Z" creationid="yamato" creationdate="20140920T020958Z">
+        <seg>属性</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Attributes are variables that exists per instance of a class.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T051944Z" creationid="yamato" creationdate="20140914T051944Z">
@@ -12790,6 +12798,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This declaration results in a type object being created and installed in the current package and current lexical scope under the name &lt;c0&gt;Journey&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T020741Z" creationid="yamato" creationdate="20140920T020741Z">
+        <seg>この宣言は結果として現在のパッケージとレキシカルスコープの&lt;c0&gt;Journey&lt;/c0&gt;という名前にインストールされる型オブジェクトになる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This document summarizes Apocalypse 2, which covers small-scale lexical items and typological issues.</seg>
       </tuv>
       <tuv lang="JA">
@@ -13186,6 +13202,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>これは、1次元リストにすべてのパーセルを再帰的に平らにする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This restricts their visibility to the current lexical scope, which can be useful if the class is an implementation detail nested inside a module or another class.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T020916Z" creationid="yamato" creationdate="20140920T020916Z">
+        <seg>これはそれらの可視範囲を現在のレキシカルスコープに制限する。そして、クラスがモジュールまたはもう一つのクラス内で入れ子になった実装小部品であるならば、それは役に立つことがありえる。</seg>
       </tuv>
     </tu>
     <tu>
