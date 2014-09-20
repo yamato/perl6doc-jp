@@ -7214,6 +7214,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Methods can return mutable containers, in which case you can assign to the return value of a method call.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T014633Z" creationid="yamato" creationdate="20140920T014633Z">
+        <seg>メソッドは変更可能なコンテナを返せる。その場合はメソッド呼び出しの返り値を割り当てできる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Methods on Arrays</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140327T141203Z" creationid="Toshiyuki" creationdate="20140327T141203Z">
