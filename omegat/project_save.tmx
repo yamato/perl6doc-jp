@@ -2878,6 +2878,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Classes can have &lt;e0&gt;parent classes&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T024323Z" creationid="yamato" creationdate="20140920T024323Z">
+        <seg>クラスは&lt;e0&gt;親クラス&lt;/e0&gt;を持てる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Classes get to decide which of their values are true and which are false.</seg>
       </tuv>
       <tuv lang="JA">
@@ -10234,6 +10242,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T024054Z" creationid="yamato" creationdate="20140920T024054Z">
         <seg>サブメソッド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Submethods are useful for object construction and destruction tasks, as well as for tasks that are so specific to a certain type that subtypes must certainly override them.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T024259Z" creationid="yamato" creationdate="20140920T024259Z">
+        <seg>サブメソッドは、オブジェクト構築と破棄作業のために、ならびにサブタイプがそれらに確実にオーバーライドしなければならないように特定の型に特有である仕事のために役立つ。</seg>
       </tuv>
     </tu>
     <tu>
