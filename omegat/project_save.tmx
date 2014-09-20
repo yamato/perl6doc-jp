@@ -1494,6 +1494,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>All objects support the methods from class &lt;a0&gt;Mu&lt;/a0&gt;, which is the root of the type hierarchy.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T015322Z" creationid="yamato" creationdate="20140920T015322Z">
+        <seg>全てのオブジェクトはクラス&lt;a0&gt;Mu&lt;/a0&gt;のメソッドをサポートする。それは型階層の根本だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>All of the adverbial forms (including the normal ones with identifier keys) are considered special tokens and are recognized in various positions in addition to term position.</seg>
       </tuv>
       <tuv lang="JA">
@@ -4574,6 +4582,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Here, we are call the method &lt;c0&gt;input-line-separator&lt;/c0&gt; on the &lt;c1&gt;$*IN&lt;/c1&gt; object, give it no arguments, and assign to the container it returned with the &lt;a2&gt;&lt;c3&gt;=&lt;/c3&gt;&lt;/a2&gt; operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T015111Z" creationid="yamato" creationdate="20140920T015111Z">
+        <seg>ここで&lt;c0&gt;input-line-separator&lt;/c0&gt;メソッドを&lt;c1&gt;$*IN&lt;/c1&gt;オブジェクトで呼び出し、引数を与えず、返されたコンテナに&lt;a2&gt;&lt;c3&gt;=&lt;/c3&gt;&lt;/a2&gt;演算子で割り当てる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Heredoc boundaries are suppressed, however, so you can split excessively long heredoc intro lines like this:</seg>
       </tuv>
       <tuv lang="JA">
@@ -5922,6 +5938,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>言い換えると、以下の文字が桁であるならば、数の後の点は小数点でありえるだけである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In other words, all objects are derived from &lt;c1&gt;Mu&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T015344Z" creationid="yamato" creationdate="20140920T015344Z">
+        <seg>言い換えれば、全てのオブジェクトは&lt;c1&gt;Mu&lt;/c1&gt;を継承する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12906,6 +12930,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>これは、内部のルーチンが実物体としてパーセルに対処することができる方法である。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is how read-writable attributes to objects are used:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T014749Z" creationid="yamato" creationdate="20140920T014749Z">
+        <seg>これは読み書き可能な属性が使われる方法だ：</seg>
       </tuv>
     </tu>
     <tu>
