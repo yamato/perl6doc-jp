@@ -5934,6 +5934,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In order to allow changes to the attribute, add the &lt;c0&gt;rw&lt;/c0&gt; trait:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T021735Z" creationid="yamato" creationdate="20140920T021735Z">
+        <seg>属性の変更を許すために&lt;c0&gt;rw&lt;/c0&gt;トレイトを加える：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In order to interpolate an entire array, it's necessary now to subscript with empty brackets:</seg>
       </tuv>
       <tuv lang="JA">
@@ -12838,6 +12846,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This defaults to providing a read-only accessor.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T021707Z" creationid="yamato" creationdate="20140920T021707Z">
+        <seg>これはデフォルトで読み取り専用アクセサを提供する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This document summarizes Apocalypse 2, which covers small-scale lexical items and typological issues.</seg>
       </tuv>
       <tuv lang="JA">
@@ -14538,6 +14554,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T144941Z" creationid="Toshiyuki" creationdate="20140112T135006Z">
         <seg>多重継承は知ると役に立つ概念です。そして使用の時に、より役に立つOOP概念があることを理解するのは重要です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>While there is no such thing as a public (or even protected) attribute, there is a way to have accessor methods generated automatically: replace the &lt;c0&gt;!&lt;/c0&gt; twigil with the &lt;c1&gt;.&lt;/c1&gt; twigil (the &lt;c2&gt;.&lt;/c2&gt; should remind you of method call).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T021633Z" creationid="yamato" creationdate="20140920T021633Z">
+        <seg>public（またはprotected）な属性がないなら、自動的に生成されるアクセサメソッドを持つ方法がある： &lt;c0&gt;!&lt;/c0&gt;ツウィギルを&lt;c1&gt;.&lt;/c1&gt;ツウィギルに置き換える（&lt;c2&gt;.&lt;/c2&gt;はメソッド呼び出しを思い起こさせる）。</seg>
       </tuv>
     </tu>
     <tu>
