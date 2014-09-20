@@ -950,6 +950,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c3&gt;BUILDALL&lt;/c3&gt; walks all subclasses in reverse method resolution order (i.e. from &lt;a4&gt;Mu&lt;/a4&gt; to most derived classes), and in each class checks for existence of a method named &lt;c5&gt;BUILD&lt;/c5&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T043254Z" creationid="yamato" creationdate="20140920T043254Z">
+        <seg>&lt;c3&gt;BUILDALL&lt;/c3&gt;はサブクラスをreverse method resolution orderで渡り歩き（すなわち&lt;a4&gt;Mu&lt;/a4&gt;から多くの派生クラスへ）、そしてそれぞれのクラスで&lt;c5&gt;BUILD&lt;/c5&gt;という名前のメソッドが存在するかチェックする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c4&gt;3e8&lt;/c4&gt; constructs a &lt;a5&gt;Num&lt;/a5&gt; with value &lt;c6&gt;3 * 10**8&lt;/c6&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T122642Z" creationid="yamato" creationdate="20140914T122642Z">
@@ -5118,6 +5126,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If it exists, it is called, again passing all named arguments from method &lt;c6&gt;new&lt;/c6&gt; to it.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T043353Z" creationid="yamato" creationdate="20140920T043353Z">
+        <seg>存在するならメソッド&lt;c6&gt;new&lt;/c6&gt;からの名前付き引数を再び全て渡す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If it is left blank, the value is &lt;c0&gt;Bool::True&lt;/c0&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T123824Z" creationid="yamato" creationdate="20140914T123824Z">
@@ -5178,6 +5194,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130813T134608Z" creationid="Toshiyuki" creationdate="20130813T134608Z">
         <seg>&lt;c3&gt;CATCH&lt;/c3&gt;の例外を扱うケースがないなら、例外は再スローされるだろう。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If not, the public attributes from this class are initialized from named arguments of the same name.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T043445Z" creationid="yamato" creationdate="20140920T043445Z">
+        <seg>存在しないなら、このクラスのパブリック属性は同じ名前の名前付き引数で初期化される。</seg>
       </tuv>
     </tu>
     <tu>
