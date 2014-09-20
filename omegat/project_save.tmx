@@ -2854,6 +2854,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Class &lt;a0&gt;Mu&lt;/a0&gt; provides a constructor method called &lt;a1&gt;new&lt;/a1&gt;, which takes named arguments and uses them to initialize public attributes.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T042747Z" creationid="yamato" creationdate="20140920T042747Z">
+        <seg>クラス&lt;a0&gt;Mu&lt;/a0&gt;は&lt;a1&gt;new&lt;/a1&gt;という名前のコンストラクタを提供する。それはパブリックな属性を初期化するために名前付き引数を受け取る。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Class methods</seg>
       </tuv>
       <tuv lang="JA">
@@ -7542,6 +7550,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Mu.new calls method &lt;a0&gt;bless&lt;/a0&gt; on its invocant, passing along all the named arguments.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T042849Z" creationid="yamato" creationdate="20140920T042849Z">
+        <seg>Mu.newは&lt;a0&gt;bless&lt;/a0&gt;をインボカントで呼び出し、全ての名前付き引数を渡す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Much like &lt;c0&gt;return&lt;/c0&gt; may only return from an "official" subroutine or method, a loop exit like &lt;c1&gt;next&lt;/c1&gt; should be caught by the construct the user expects it to be caught by.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T080353Z" creationid="Toshiyuki" creationdate="20130817T080353Z">
@@ -8266,6 +8282,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T142325Z" creationid="Toshiyuki" creationdate="20140112T092844Z">
         <seg>オブジェクト指向プログラミングは、コードの再利用を可能にするメカニズムの1つとして継承の概念を提供します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Objects are generally created through methods calls, either on the type object or on another object of the same type.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T042645Z" creationid="yamato" creationdate="20140920T042645Z">
+        <seg>オブジェクトは一般にメソッド呼び出しを通して作成され、型オブジェクトか他の同じ型のオブジェクトを通して作成される。</seg>
       </tuv>
     </tu>
     <tu>
