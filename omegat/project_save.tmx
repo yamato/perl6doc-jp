@@ -7158,6 +7158,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Many operations that don't look like method calls (for example, smart matching, or interpolating an object into a string) result in method calls under the hood.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T014409Z" creationid="yamato" creationdate="20140920T014409Z">
+        <seg>メソッド呼び出しに見えない多くの演算（例えばスマートマッチ、文字列中のオブジェクトの展開）は結果としてメソッド呼び出しになる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Match objects</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140222T024614Z" creationid="Toshiyuki" creationdate="20140222T024614Z">
