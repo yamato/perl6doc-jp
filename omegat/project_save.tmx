@@ -9614,6 +9614,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Since you have to put a &lt;c0&gt;:&lt;/c0&gt; after the method if you want to pass arguments without parenthesis, a method call without a colon or parens is unambiguously a method call without an argument list:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T013927Z" creationid="yamato" creationdate="20140920T013927Z">
+        <seg>括弧なしで引数を渡すにはメソッドの後に&lt;c0&gt;:&lt;/c0&gt;を置く必要がある。なのでコロンまたは括弧なしのメソッド呼び出しは引数リストのない明白なメソッド呼び出しだ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Single-line Comments</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140330T053448Z" creationid="Toshiyuki" creationdate="20140330T053448Z">
