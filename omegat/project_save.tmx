@@ -5902,6 +5902,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In either case, if neither &lt;c7&gt;BUILD&lt;/c7&gt; nor the default mechanism has initialized the attribute, default values are applied (the &lt;c8&gt;2 * $!x&lt;/c8&gt; in the example above).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T043909Z" creationid="yamato" creationdate="20140920T043909Z">
+        <seg>いずれにせよ、&lt;c7&gt;BUILD&lt;/c7&gt;もデフォルトメカニズムも属性を初期化しなかったならば、デフォルト値が適用される（上の例の&lt;c8&gt;2 * $!x&lt;/c8&gt;）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In either case, no bare parcel object is seen as a normal bound argument.</seg>
       </tuv>
       <tuv lang="JA">
