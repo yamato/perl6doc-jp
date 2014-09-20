@@ -4990,6 +4990,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If a method is called on the child class, and the child class does not provide that method, the parent classes' method of that name is invoked instead, if it exists.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T024535Z" creationid="yamato" creationdate="20140920T024535Z">
+        <seg>メソッドが子クラスで呼ばれ、その子クラスがメソッドを提供しないなら、親クラスのメソッドが存在するなら代わりに呼び出される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If a term is not expected at this point, it is a syntax error.</seg>
       </tuv>
       <tuv lang="JA">
@@ -8918,6 +8926,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Perl 6 uses the &lt;a1&gt;C3 method resolution order&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T024715Z" creationid="yamato" creationdate="20140920T024715Z">
+        <seg>Perl 6は&lt;a1&gt;C3 method resolution order&lt;/a1&gt;を使う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Perl 6, like many other languages, uses the &lt;c0&gt;class&lt;/c0&gt; keyword to introduce a new class.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T180049Z" creationid="Toshiyuki" creationdate="20140111T180049Z">
@@ -12014,6 +12030,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The order in which parent classes are consulted is called the &lt;e0&gt;method resolution order&lt;/e0&gt; (MRO).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T024659Z" creationid="yamato" creationdate="20140920T024659Z">
+        <seg>親クラスが参照される順序は&lt;e0&gt;method resolution order&lt;/e0&gt;（MRO）と呼ばれる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The output can look like this:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140322T104840Z" creationid="Toshiyuki" creationdate="20140112T135553Z">
@@ -14882,6 +14906,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>あなたは、オプション一組のキーを引合いに出すために、:key($value)の形を使用することもできる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can ask a type for its MRO through a call to its metaclass:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T024822Z" creationid="yamato" creationdate="20140920T024822Z">
+        <seg>あなたは、そのメタクラスに呼び出しを通して型にそのMROを要求することができる：</seg>
       </tuv>
     </tu>
     <tu>
