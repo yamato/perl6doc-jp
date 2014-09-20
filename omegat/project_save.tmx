@@ -12638,6 +12638,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This calls the &lt;a0&gt;&lt;c1&gt;uc&lt;/c1&gt;&lt;/a0&gt; method on &lt;c2&gt;"abc"&lt;/c2&gt;, which is an object of type &lt;a3&gt;&lt;c4&gt;Str&lt;/c4&gt;&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T013054Z" creationid="yamato" creationdate="20140920T013054Z">
+        <seg>これは&lt;a0&gt;&lt;c1&gt;uc&lt;/c1&gt;&lt;/a0&gt;メソッドを&lt;c2&gt;"abc"&lt;/c2&gt;で呼ぶ。それは&lt;a3&gt;&lt;c4&gt;Str&lt;/c4&gt;&lt;/a3&gt;オブジェクト型だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This can be a bit cumbersome, so in the particular case of labels, the label that is already visible in the current lexical scope is considered a kind of pseudo object specifying a potential dynamic context.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T074045Z" creationid="Toshiyuki" creationdate="20130817T074045Z">
