@@ -1214,6 +1214,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A method can have a signature, just like a subroutine.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T022550Z" creationid="yamato" creationdate="20140920T022542Z">
+        <seg>メソッドはサブルーチンのようにシグネチャを持てる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A multidimensional slice will be done with semicolons between individual slice sublists.</seg>
       </tuv>
       <tuv lang="JA">
@@ -7286,6 +7294,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Methods are declared with the &lt;c0&gt;method&lt;/c0&gt; keyword inside of a class body.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T022458Z" creationid="yamato" creationdate="20140920T022458Z">
+        <seg>メソッドはクラス本体の内側で&lt;c0&gt;method&lt;/c0&gt;キーワードで宣言される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Methods can return mutable containers, in which case you can assign to the return value of a method call.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T014633Z" creationid="yamato" creationdate="20140920T014633Z">
@@ -7890,6 +7906,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130811T040458Z" creationid="Toshiyuki" creationdate="20130811T040458Z">
         <seg>&lt;c0&gt;take&lt;/c0&gt;自体はこの例ではsinkコンテキストにある。なぜならgather内に与えられた&lt;c1&gt;for&lt;/c1&gt;ループがsinkコンテキストにあるからだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that the default constructor will only set attributes that have an accessor method.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T022416Z" creationid="yamato" creationdate="20140920T022416Z">
+        <seg>デフォルトコンストラクタはアクセサメソッドを持つ属性をセットするだけなので注意。</seg>
       </tuv>
     </tu>
     <tu>
