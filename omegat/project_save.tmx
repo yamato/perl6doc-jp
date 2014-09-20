@@ -1286,6 +1286,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A submethod is public method that is not inherited to subclasses.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T024121Z" creationid="yamato" creationdate="20140920T024121Z">
+        <seg>サブメソッドはサブクラスに継承されないパブリックメソッドだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A switch statement is a means of topicalizing, so the switch keyword is the English topicalizer, &lt;c0&gt;given&lt;/c0&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130811T125000Z" creationid="Toshiyuki" creationdate="20130811T125000Z">
@@ -7342,6 +7350,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Methods for internal usage inside the class that cannot be called from anywhere else are introduced with an exclamation mark &lt;c0&gt;!&lt;/c0&gt; before the method name, and are called with the exclamation mark instead of the dot:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T024022Z" creationid="yamato" creationdate="20140920T024022Z">
+        <seg>他のどこからも呼び出されることができないクラスの内部使用のためのメソッドは、メソッド名の前に感嘆符&lt;c0&gt;!&lt;/c0&gt;で始めて、ドットの代わりに感嘆符で呼び出される：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Methods on Arrays</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140327T141203Z" creationid="Toshiyuki" creationdate="20140327T141203Z">
@@ -9038,6 +9054,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Private methods are not inherited to subclasses.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T024045Z" creationid="yamato" creationdate="20140920T024045Z">
+        <seg>プライベートメソッドはサブクラスに継承されない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Process ID of the current process.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T115426Z" creationid="yamato" creationdate="20140914T115426Z">
@@ -10202,6 +10226,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>下位呼び出し</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Submethods</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T024054Z" creationid="yamato" creationdate="20140920T024054Z">
+        <seg>サブメソッド</seg>
       </tuv>
     </tu>
     <tu>
@@ -11890,6 +11922,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T024306Z" creationid="yamato" creationdate="20140915T024306Z">
         <seg>ルーチンの名前は演算子のカテゴリーに組み込まれる。コロン、シンボル付きのリストクオート構造は演算子を作る：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The name stems from the fact that they are semantically similar to subroutines.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T024142Z" creationid="yamato" creationdate="20140920T024142Z">
+        <seg>名前は、それらがサブルーチンと意味論的に類似しているという事実から生じる。</seg>
       </tuv>
     </tu>
     <tu>
