@@ -918,6 +918,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c1&gt;self&lt;/c1&gt; can be used to call further methods on the invocant, for example.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T023746Z" creationid="yamato" creationdate="20140920T023746Z">
+        <seg>&lt;c1&gt;self&lt;/c1&gt;は、例えばインボカント上で更にメソッドを呼ぶのに利用できる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c2&gt;$!&lt;/c2&gt; is a convenient link to the last failure, and only ever contains one exception, the most recent.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T151646Z" creationid="Toshiyuki" creationdate="20130817T151646Z">
@@ -6270,6 +6278,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Inside a method, the term &lt;c0&gt;self&lt;/c0&gt; is available, which is bound to invocant, i.e. the object that the method was called on.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T023711Z" creationid="yamato" creationdate="20140920T023711Z">
+        <seg>メソッドの中で項&lt;c0&gt;self&lt;/c0&gt;が利用できる。それはインボカント、すなわちメソッドが呼ばれたオブジェクトにバインドされている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Inside the &lt;c0&gt;CATCH&lt;/c0&gt; block, the exception in question is bound to &lt;c1&gt;$_&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130813T130230Z" creationid="Toshiyuki" creationdate="20130813T130230Z">
@@ -9010,6 +9026,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130806T103253Z" creationid="Toshiyuki" creationdate="20130806T103253Z">
         <seg>多分、マルチディスパッチはこれを選り分けできる。]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Private Methods</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T023848Z" creationid="yamato" creationdate="20140920T023848Z">
+        <seg>プライベートメソッド</seg>
       </tuv>
     </tu>
     <tu>
@@ -14746,6 +14770,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>宣言の範囲内で、副詞形はパラメタ宣言の名前を変えるのに用いられる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Within methods, something like &lt;c2&gt;$.origin&lt;/c2&gt; is the same thing as &lt;c3&gt;self.origin&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T023824Z" creationid="yamato" creationdate="20140920T023824Z">
+        <seg>メソッド内の&lt;c2&gt;$.origin&lt;/c2&gt;のようなものは&lt;c3&gt;self.origin&lt;/c3&gt;と同じだ。</seg>
       </tuv>
     </tu>
     <tu>
