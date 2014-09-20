@@ -13622,6 +13622,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Types themselves are objects, and you can get the &lt;e0&gt;type object&lt;/e0&gt; simply by writing its name:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T015441Z" creationid="yamato" creationdate="20140920T015441Z">
+        <seg>型自体はオブジェクトで、単純にその名前を書くことで&lt;e0&gt;型オブジェクト&lt;/e0&gt;を得られる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Undefined types</seg>
       </tuv>
       <tuv lang="JA">
@@ -14578,6 +14586,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>あなたは、オプション一組のキーを引合いに出すために、:key($value)の形を使用することもできる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can ask any object for its type object by calling the &lt;c0&gt;WHAT&lt;/c0&gt; method (which is actually a macro in method form):</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T015704Z" creationid="yamato" creationdate="20140920T015704Z">
+        <seg>&lt;c0&gt;WHAT&lt;/c0&gt;メソッド（実はメソッド形式のマクロ）を呼ぶことでオブジェクトの型オブジェクトを問い合わせできる：</seg>
       </tuv>
     </tu>
     <tu>
