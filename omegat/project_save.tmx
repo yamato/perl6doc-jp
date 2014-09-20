@@ -8078,6 +8078,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Now, after a &lt;c0&gt;Journey&lt;/c0&gt; object is created, its &lt;c1&gt;.origin&lt;/c1&gt;, &lt;c2&gt;.destination&lt;/c2&gt;, and &lt;c3&gt;.notes&lt;/c3&gt; will all be accessible from outside of the class, but only &lt;c4&gt;.notes&lt;/c4&gt; can be modified.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T022033Z" creationid="yamato" creationdate="20140920T022033Z">
+        <seg>&lt;c0&gt;Journey&lt;/c0&gt;オブジェクトが作成されたあと、&lt;c1&gt;.origin&lt;/c1&gt;、&lt;c2&gt;.destination&lt;/c2&gt;、&lt;c3&gt;.notes&lt;/c3&gt;は全てクラスの外側からアクセスできる。しかし&lt;c4&gt;.notes&lt;/c4&gt;だけが変更できる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Numeric Coercion of StrPos or StrLen</seg>
       </tuv>
       <tuv lang="JA">
@@ -9650,6 +9658,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130803T031831Z" creationid="Toshiyuki" creationdate="20130803T031831Z">
         <seg>括弧に入れられた式はそれらの内部を文とみなすので、あなたが問題を予期している所でも一貫して上手くいく：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Since classes inherit a default constructor from &lt;c0&gt;Mu&lt;/c0&gt; and we have requested that some accessor methods are generated for us, our class is already somewhat functional.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T022209Z" creationid="yamato" creationdate="20140920T022209Z">
+        <seg>クラスが&lt;c0&gt;Mu&lt;/c0&gt;からデフォルトコンストラクタを受け継ぎ、若干のアクセッサメソッドが生成されるように要求したので、我々のクラスはすでにいくらか機能的だ。</seg>
       </tuv>
     </tu>
     <tu>
