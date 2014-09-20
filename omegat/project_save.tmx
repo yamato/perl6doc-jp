@@ -3734,6 +3734,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Due to the nature of the default behavior of &lt;c0&gt;BUILDALL&lt;/c0&gt; and custom &lt;c1&gt;BUILD&lt;/c1&gt; submethods, you named arguments to the constructor &lt;c2&gt;new&lt;/c2&gt; derived from &lt;c3&gt;Mu&lt;/c3&gt; can correspond directly to public attributes of any of the classes in the method resolution order, or to any named parameter to any &lt;c4&gt;BUILD&lt;/c4&gt; submethod.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T155715Z" creationid="yamato" creationdate="20140920T155715Z">
+        <seg>&lt;c0&gt;BUILDALL&lt;/c0&gt;とカスタム&lt;c1&gt;BUILD&lt;/c1&gt;サブメソッドのデフォルト動作の性質のために、&lt;c3&gt;Mu&lt;/c3&gt;から継承した&lt;c2&gt;new&lt;/c2&gt;への名前付き引数はどんなクラスのメソッド選択順序にも直接パブリック属性を対応できる。または&lt;c4&gt;BUILD&lt;/c4&gt;サブメソッドにどんな名前付きパラメータでも。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>During execution, this will cause the caller sites to be recorded without any warnings.</seg>
       </tuv>
       <tuv lang="JA">
@@ -13490,6 +13498,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>この名前は、構文的にでなく、意味論的に、考えられることになっている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This object construction scheme has several implications for customized constructors.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140920T155749Z" creationid="yamato" creationdate="20140920T155749Z">
+        <seg>このオブジェクト構築スキームは、カスタマイズされたコンストラクタのためにいくつかの意味を持つ。</seg>
       </tuv>
     </tu>
     <tu>
