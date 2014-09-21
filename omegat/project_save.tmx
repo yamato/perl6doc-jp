@@ -3830,6 +3830,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Each attribute is represented by an instance of the Attribute class and has attributes of its own.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T033759Z" creationid="yamato" creationdate="20140921T033759Z">
+        <seg>各々の属性にはAttributeクラスのインスタンスによって表現されて、自身の属性がある。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Each iteration's value is returned as a single "argument" object.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130808T131157Z" creationid="Toshiyuki" creationdate="20130808T131157Z">
@@ -3914,6 +3922,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130825T072119Z" creationid="Toshiyuki" creationdate="20130825T072119Z">
         <seg>クロージャの複製なしでも、&lt;c0&gt;INIT&lt;/c0&gt;はメインラインコードの前に実行する。&lt;c1&gt;once&lt;/c1&gt;が最後の可能な時まで延期する間、一度実行し、後の呼び出しのために値をキャッシュする（sinkコンテキストで呼ばれないと仮定し、&lt;c2&gt;once&lt;/c2&gt;が副作用のために1回だけ評価される場合）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Even though attributes are private to a class, you can ask a class for its attributes with &lt;c0&gt;$object.^attributes&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T033726Z" creationid="yamato" creationdate="20140921T033726Z">
+        <seg>属性がクラスにプライベートでも、&lt;c0&gt;$object.^attributes&lt;/c0&gt;でクラスにその属性を求めることができる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8554,6 +8570,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>もちろん、適正抽象概念レベルを提供しない文字列で使われるならば、そのような次元の数は失敗する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Of particular interest are &lt;c1&gt;name&lt;/c1&gt;, &lt;c2&gt;rw&lt;/c2&gt; and &lt;c3&gt;ro&lt;/c3&gt;, &lt;c4&gt;has_accessor&lt;/c4&gt;, &lt;c5&gt;type&lt;/c5&gt;, and &lt;c6&gt;package&lt;/c6&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T033902Z" creationid="yamato" creationdate="20140921T033902Z">
+        <seg>特に興味が有るのは&lt;c1&gt;name&lt;/c1&gt;、&lt;c2&gt;rw&lt;/c2&gt;、&lt;c3&gt;ro&lt;/c3&gt;、&lt;c4&gt;has_accessor&lt;/c4&gt;、&lt;c5&gt;type&lt;/c5&gt;そして&lt;c6&gt;package&lt;/c6&gt;だ。</seg>
       </tuv>
     </tu>
     <tu>
