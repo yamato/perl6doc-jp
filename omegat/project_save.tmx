@@ -1942,6 +1942,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Another thing to note is that the name &lt;c0&gt;new&lt;/c0&gt; is not special in Perl 6.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T024327Z" creationid="yamato" creationdate="20140921T024327Z">
+        <seg>もう1つの注意は、名前&lt;c0&gt;new&lt;/c0&gt;がPerl 6では特別でないということである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Any block object can be used, not just labels, so to return a value from this iteration of the current block you can say:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130806T102511Z" creationid="Toshiyuki" creationdate="20130806T102511Z">
@@ -4766,6 +4774,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>However this is considered poor practice, because it makes correct initialization of objects from subclasses harder.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T024241Z" creationid="yamato" creationdate="20140921T024241Z">
+        <seg>しかしこれは良くないプラクティスと考えられる。それがサブクラスからオブジェクトの正しい初期化をより難しくするからだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>However, Perl will try to make those look like their corresponding uppercase types if you treat them that way.</seg>
       </tuv>
       <tuv lang="JA">
@@ -6730,6 +6746,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T045817Z" creationid="Toshiyuki" creationdate="20130817T045817Z">
         <seg>&lt;c0&gt;Routine&lt;/c0&gt;が現在のコールスタックでもうコールフレームを所持していないならクロージャから戻るのは不当だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is merely a common convention.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T024405Z" creationid="yamato" creationdate="20140921T024405Z">
+        <seg>それは単に一般の慣習だ。</seg>
       </tuv>
     </tu>
     <tu>
