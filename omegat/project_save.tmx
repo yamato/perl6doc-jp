@@ -4206,6 +4206,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For each object or class, you can get the meta object by calling &lt;c0&gt;.HOW&lt;/c0&gt; on it.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T031256Z" creationid="yamato" creationdate="20140921T031256Z">
+        <seg>各々のオブジェクトまたはクラスについては、あなたは、それの上で&lt;c0&gt;.HOW&lt;/c0&gt;を呼び出すことによって、メタオブジェクトを得ることができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example &lt;a0&gt;Array&lt;/a0&gt; variables (&lt;c1&gt;@&lt;/c1&gt; sigil) empty themselves on list assignment, and then put all the values from the right-hand side into themselves.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T024937Z" creationid="yamato" creationdate="20140914T024857Z">
@@ -7470,6 +7478,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Meta objects are, like ordinary objects, instances of classes, in this case we call them &lt;e1&gt;meta classes&lt;/e1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T031227Z" creationid="yamato" creationdate="20140921T031227Z">
+        <seg>メタオブジェクトは通常のオブジェクトのようにクラスのインスタンスで、この場合は&lt;e1&gt;メタクラス&lt;/e1&gt;と呼ぶ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Meta-Object Programming and Introspection</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T030948Z" creationid="yamato" creationdate="20140921T030948Z">
@@ -9002,6 +9018,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T151438Z" creationid="Toshiyuki" creationdate="20130817T151438Z">
         <seg>Perl 6は&lt;c0&gt;Failure&lt;/c0&gt;オブジェクト、「スローされない例外」を持つ（実際は&lt;c1&gt;Failure&lt;/c1&gt;は単にスローされない例外を含む）。それはそれらがハンドルされたかどうか知っている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Perl 6 has a meta object system, which means that the behavior of objects, classes, roles, grammars, enums etc. are themselves controlled by other objects; those objects are called &lt;e0&gt;meta objects&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T031117Z" creationid="yamato" creationdate="20140921T031117Z">
+        <seg>Perl 6にはメタオブジェクトシステムがある。そして、それはオブジェクト、クラス、ロール、文法、列挙型その他のふるまいが他のオブジェクトによってそれら自身コントロールされることを意味する;それらのオブジェクトは、&lt;e0&gt;メタオブジェクト&lt;/e0&gt;と呼ばれている。</seg>
       </tuv>
     </tu>
     <tu>
