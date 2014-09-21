@@ -8638,6 +8638,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Or to phrase it differently, classes are meant for managing instances, and roles are meant for managing behavior and code reuse.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T025100Z" creationid="yamato" creationdate="20140921T025100Z">
+        <seg>または別に述べると、クラスはインスタンスを管理するため、そしてロールはふるまいとコード再利用を管理するためのものである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Or whatever.</seg>
       </tuv>
       <tuv lang="JA">
@@ -13056,8 +13064,8 @@ qw/a b c/</seg>
       <tuv lang="EN-US">
         <seg>They differ in that roles are also meant for describing only parts of an object's behavior, and in how roles are applied to classes.</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamato" changedate="20140921T024811Z" creationid="yamato" creationdate="20140921T024811Z">
-        <seg>また、ロールがオブジェクトのふるまいの部分だけを記述するために、そして、ロールがクラスに適用される方法で意味されるという点で、それらは異なる。</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T025124Z" creationid="yamato" creationdate="20140921T024811Z">
+        <seg>また、ロールがオブジェクトのふるまいの部分だけを記述するために、そして、ロールがクラスに適用されるためのものという点で、それらは異なる。</seg>
       </tuv>
     </tu>
     <tu>
