@@ -9182,6 +9182,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Perl 6 has special syntax for writing regexes:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T044636Z" creationid="yamato" creationdate="20140921T044611Z">
+        <seg>Perl 6は正規表現を書くための特別な構文を持っている：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Perl 6 includes a system of &lt;b0&gt;sigils&lt;/b0&gt; to mark the fundamental structural type of a variable:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T000343Z" creationid="Toshiyuki" creationdate="20140329T000343Z">
