@@ -13254,6 +13254,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This check will save you and your customers a lot of headaches, and you can simply define your class instead as:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T030516Z" creationid="yamato" creationdate="20140921T030516Z">
+        <seg>このチェックはあなたと顧客を多くの頭痛から救うだろう。そしてあなたは代わりにクラスをシンプルに定義できる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This code will die with something like:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T030338Z" creationid="yamato" creationdate="20140921T030338Z">
@@ -14722,6 +14730,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T025359Z" creationid="yamato" creationdate="20140921T025359Z">
         <seg>ロールがクラスに適用されるとき、そのロールのメソッドはクラスにコピーされる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When a role is applied to a second role, the actual application is delayed until the second class is applied to a class, at which point both roles are applied to the class.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T030646Z" creationid="yamato" creationdate="20140921T030646Z">
+        <seg>ロールが第2のロールに適用されるとき、第2のクラスがクラスに適用されるまで、実際の適用は遅れる。そのポイントでは両方のロールがクラスに適用される。</seg>
       </tuv>
     </tu>
     <tu>
