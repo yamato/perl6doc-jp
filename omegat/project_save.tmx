@@ -5190,6 +5190,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If multiple roles are applied to the same class, conflicts (e.g. non-multi methods of the same name) cause a compile-time error, which can be solved by providing a method of the same name in the class.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T025538Z" creationid="yamato" creationdate="20140921T025538Z">
+        <seg>複数のロールが同じクラスに適用されるならば、競合（例えば同じ名前の非マルチメソッド）はコンパイル時エラーを引き起こす。そして、それはクラスで同じ名前のメソッドを提供することによって解決することができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If no exception was caught, &lt;c3&gt;$!&lt;/c3&gt; is set to the &lt;c4&gt;Any&lt;/c4&gt; type object.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T114022Z" creationid="yamato" creationdate="20140914T114022Z">
@@ -13450,6 +13458,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>本当に、ユーザーがどの型を意図するかについて、専念しなかったリテラル値のallomorphicな性質を表現するために、これは多重継承を通して実装される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is much safer than multiple inheritance, where conflicts are never detected by the compiler, but are instead simply resolved to the superclass that appears earlier in the MRO, which might or might not be what the programmer wanted.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T025645Z" creationid="yamato" creationdate="20140921T025645Z">
+        <seg>これは多重継承よりずっと安全だ。そこで、競合はコンパイラによって決して見つけられなくて、その代わりに単にMROの初期に現れるスーパークラスに解決される。そして、それはプログラマーが望んだものであるかもしれないか、ないかもしれない。</seg>
       </tuv>
     </tu>
     <tu>
