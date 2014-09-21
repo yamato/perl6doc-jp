@@ -510,6 +510,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(The motivation is that Perl 6 also wants to allow a more prototype-based object system, where it's not necessary to create a new meta object for every type).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T032142Z" creationid="yamato" creationdate="20140921T032142Z">
+        <seg>（動機づけはまた、Perl 6がよりプロトタイプベースのオブジェクトシステムを許したいということである、そこで、それはすべての型のために新しいメタオブジェクトを作成するのに必要でない）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(The optimizer is also allowed to substitute such variants when it can determine that the final destination would store natively in any case, or that the variant could not possibly malfunction given the arguments.) [Conjecture: we could allow an 'N' metoperator to select the native variant on a case by case basis.]</seg>
       </tuv>
       <tuv lang="JA">
@@ -5798,6 +5806,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In Perl 6, all introspection goes through the meta object.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T032318Z" creationid="yamato" creationdate="20140921T032318Z">
+        <seg>Perl 6では、すべての内省は、メタオブジェクトを行う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In Perl 6, control flow is designed to do what the user expects most of the time, but this implies that we must consider the declarative nature of labels and blocks and combine those with the dynamic nature of the call stack.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130727T170258Z" creationid="Toshiyuki" creationdate="20130727T170258Z">
@@ -6658,6 +6674,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140322T050723Z" creationid="Toshiyuki" creationdate="20140112T135453Z">
         <seg>イントロスペクションはソースコードを読むことによってでなく、いくつかのプロパティ（その型のような）のためにオブジェクト（またはコントロールしているオブジェクト）に問い合わせることによって、あなたのプログラムのいくつかのオブジェクトに関する情報を収集するプロセスです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Introspection is the process of getting information about an object or class at runtime.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T032301Z" creationid="yamato" creationdate="20140921T032301Z">
+        <seg>内省は、実行時でオブジェクトまたはクラスに関する情報を得るプロセスである。</seg>
       </tuv>
     </tu>
     <tu>
@@ -10294,6 +10318,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>So to get the name of the class of an object, you could write:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T032106Z" creationid="yamato" creationdate="20140921T032106Z">
+        <seg>オブジェクトのクラス名を得るために次のように書ける：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>So we will say that it is erroneous for a library writer to mix dynamic gather with callbacks unless those callbacks are somehow "ungathered" to the outer dynamic scope.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T161444Z" creationid="Toshiyuki" creationdate="20130810T161444Z">
@@ -12550,6 +12582,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The standard &lt;c0&gt;ClassHOW&lt;/c0&gt; for class-based objects offers these facilities:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T032345Z" creationid="yamato" creationdate="20140921T032345Z">
+        <seg>クラスベースオブジェクトのための標準的な&lt;c0&gt;ClassHOW&lt;/c0&gt;は、これらの機能を提供する：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The statement form can be particularly useful to expose a lexically scoped declaration to the surrounding lexical scope without "trapping" it inside a block.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130818T084118Z" creationid="Toshiyuki" creationdate="20130818T084118Z">
@@ -14058,6 +14098,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T025737Z" creationid="Toshiyuki" creationdate="20140329T025737Z">
         <seg>スカラー値のフォーマットされた表現を得るために、値上で暗黙の&lt;c1&gt;sprintf&lt;/c1&gt;を行う&lt;c0&gt;.fmt('%03d')&lt;/c0&gt;メソッドを使ってください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To get rid of using the same object twice, there is a shortcut:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T032241Z" creationid="yamato" creationdate="20140921T032241Z">
+        <seg>2回同じオブジェクトを使うためにショートカットがある：</seg>
       </tuv>
     </tu>
     <tu>
