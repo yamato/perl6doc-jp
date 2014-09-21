@@ -4238,6 +4238,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For example, if you've discovered an effecient method to ride cows, and are trying to market it as a new form of popular transportation, you might have a class &lt;c0&gt;Bull&lt;/c0&gt;, for all the bulls you keep around the house, and a class &lt;c1&gt;Automobile&lt;/c1&gt;, for things that you can drive.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T025918Z" creationid="yamato" creationdate="20140921T025918Z">
+        <seg>たとえば、牛に乗る効率的なメソッドを気付いて、それを人気の輸送機関の新しい形として市場に出そうとしているならば、家のまわりで飼うすべての雄牛と、運転することができるということのために、クラス&lt;c1&gt;Automobile&lt;/c1&gt;のために、あなたはクラス&lt;c0&gt;Bull&lt;/c0&gt;を持つかもしれない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example, since Perl requires an absence of whitespace between a noun and a postfix operator, using unspace lets you line up postfix operators:</seg>
       </tuv>
       <tuv lang="JA">
