@@ -12070,6 +12070,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The first two can use delimiters other than the slash:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T044921Z" creationid="yamato" creationdate="20140921T044921Z">
+        <seg>最初の2つは、スラッシュ以外のデリミタを使うことができる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The first two cannot flatten, otherwise it would be very hard to get access to the structure that's actually stored in the list or parcel, and the whole point of &lt;c0&gt;.tree&lt;/c0&gt; is to not flatten.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T014858Z" creationid="yamato" creationdate="20140915T014858Z">
