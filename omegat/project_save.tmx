@@ -12398,6 +12398,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The third implication is that if you want a constructor that accepts positional arguments, you must write your own &lt;c0&gt;new&lt;/c0&gt; method:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T024049Z" creationid="yamato" creationdate="20140921T024049Z">
+        <seg>第3の意味は、あなたが位置引数を受け入れるコンストラクタを望むならば、あなたがあなた自身の&lt;c0&gt;new&lt;/c0&gt;メソッドを書かなければならないということである：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The third time &lt;c3&gt;&amp;say-all&lt;/c3&gt; is called &lt;c4&gt;$*dynamic1&lt;/c4&gt; isn't 11 anymore, but &lt;c5&gt;$*dynamic2&lt;/c5&gt; is still 101.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T050107Z" creationid="yamato" creationdate="20140914T050107Z">
