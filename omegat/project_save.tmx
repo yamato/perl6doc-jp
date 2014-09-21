@@ -6350,6 +6350,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In this case, it may have been better to use roles:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T030259Z" creationid="yamato" creationdate="20140921T030259Z">
+        <seg>この場合、ロールを使うともっと良くなるかもしれない：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In this case, the &lt;c3&gt;!&lt;/c3&gt; twigil emphasizes that this attribute is private to the class.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T182723Z" creationid="Toshiyuki" creationdate="20140111T182723Z">
@@ -13246,6 +13254,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This code will die with something like:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T030338Z" creationid="yamato" creationdate="20140921T030338Z">
+        <seg>このコードは、以下のような何かでdieする：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This construct only allows you to attach a single statement to the end of an expression.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T121759Z" creationid="Toshiyuki" creationdate="20130810T121759Z">
@@ -15082,6 +15098,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>裸のタイプ名も宣言される時から、同じスコープの以降の宣言で、疑似シギルの使用はオプションである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>With this set-up, your poor customers will find themselves unable to turn their Taurus, and you won't be able to make more of your product!</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T030223Z" creationid="yamato" creationdate="20140921T030223Z">
+        <seg>このセットアップで、あなたの貧しい顧客はそれらのTaurusを回すことができないことに気づく。そしてあなたは一層製品にすることができない！</seg>
       </tuv>
     </tu>
     <tu>
