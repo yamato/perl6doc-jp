@@ -4086,6 +4086,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>First, custom &lt;c0&gt;BUILD&lt;/c0&gt; methods should always be submethods, otherwise they break attribute initialization in subclasses.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T023211Z" creationid="yamato" creationdate="20140921T023211Z">
+        <seg>1番目に、カスタム&lt;c0&gt;BUILD&lt;/c0&gt;メソッドは常にサブメソッドでなければならない、さもなければ、それらはサブクラスで属性初期化を中断する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>First, declaring this routine as a method adds it to the list of methods for the current class.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T185257Z" creationid="Toshiyuki" creationdate="20140111T185257Z">
