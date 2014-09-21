@@ -4590,6 +4590,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Given a method names, it returns a &lt;a0&gt;Parcel&lt;/a0&gt; of methods that are available with this name.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T032448Z" creationid="yamato" creationdate="20140921T032448Z">
+        <seg>メソッド名が与えられれば、この名前で利用できるメソッドの&lt;a0&gt;Parcel&lt;/a0&gt;を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Given an object &lt;c0&gt;$p&lt;/c0&gt;, and the class definitions from the previous sections, we can ask it a few questions:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T150205Z" creationid="Toshiyuki" creationdate="20140112T135528Z">
@@ -6418,6 +6426,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T182723Z" creationid="Toshiyuki" creationdate="20140111T182723Z">
         <seg>この場合、&lt;c3&gt;!&lt;/c3&gt; twigilは属性がクラスにプライベートであることを強調します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this example, class &lt;c0&gt;B&lt;/c0&gt; has two possible methods available with name &lt;c1&gt;x&lt;/c1&gt; (though a normal method call would only invoke the one installed in &lt;c2&gt;B&lt;/c2&gt; directly).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T032638Z" creationid="yamato" creationdate="20140921T032638Z">
+        <seg>この例では、クラス&lt;c0&gt;B&lt;/c0&gt;には、名前&lt;c1&gt;x&lt;/c1&gt;（通常のメソッド呼び出しが直接&lt;c2&gt;B&lt;/c2&gt;でインストールされるものを実施するだけであるけれども）で、利用できる2つのあり得るメソッドがある。</seg>
       </tuv>
     </tu>
     <tu>
