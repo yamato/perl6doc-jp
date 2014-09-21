@@ -7470,6 +7470,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Meta-Object Programming and Introspection</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T030948Z" creationid="yamato" creationdate="20140921T030948Z">
+        <seg>メタオブジェクトプログラミングと内省</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Method calls</seg>
       </tuv>
       <tuv lang="JA">
@@ -12014,6 +12022,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The implementation of the stubbed method may also be provided by another role.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T030923Z" creationid="yamato" creationdate="20140921T030923Z">
+        <seg>また、短くされたメソッドの実装は、もう一つのロールによって提供されるかもしれない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The implicit break (what &lt;c2&gt;succeed&lt;/c2&gt; does explicitly) of a &lt;c3&gt;when&lt;/c3&gt; block is abnormal.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130816T125233Z" creationid="Toshiyuki" creationdate="20130816T125233Z">
@@ -13178,6 +13194,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>これは、型オブジェクトがスカラーに割り当てられるが、非スカラーコンテキストで消えるのを許可する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This allows you to create roles that act as abstract interfaces.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T030826Z" creationid="yamato" creationdate="20140921T030826Z">
+        <seg>これは、抽象的なインターフェースの働きをするロールをつくることができる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14722,6 +14746,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T152409Z" creationid="Toshiyuki" creationdate="20140112T161304Z">
         <seg>関数またはメソッドがあなたの知らないオブジェクトを返すとき、&lt;c0&gt;.WHAT&lt;/c0&gt;でその型を見つけ、&lt;c1&gt;.perl&lt;/c1&gt;でその構造を、そしてこの戻り値が何であるかという良いアイデアを得るでしょう。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When a role contains a stubbed method, a non-stubbed version of a method of the same name must be supplied at the time the role is applied to a class.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T030802Z" creationid="yamato" creationdate="20140921T030802Z">
+        <seg>ロールが短くされたメソッドを含むとき、同じ名前のメソッドの短くされないバージョンはロールがクラスに適用される時で供給されなければならない。</seg>
       </tuv>
     </tu>
     <tu>
