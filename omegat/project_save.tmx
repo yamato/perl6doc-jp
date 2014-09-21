@@ -2750,6 +2750,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>But of course the meta model does much more for you.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T031858Z" creationid="yamato" creationdate="20140921T031858Z">
+        <seg>しかし、もちろん、メタモデルはよりあなたに大いに尽力する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>But sometimes you want to preserve the structure.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T142849Z" creationid="yamato" creationdate="20140914T142849Z">
@@ -4206,6 +4214,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For each class there is one instance of &lt;c2&gt;Perl6::Metamodel::ClassHOW&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T031835Z" creationid="yamato" creationdate="20140921T031835Z">
+        <seg>クラスごとに&lt;c2&gt;Perl6::Metamodel::ClassHOW&lt;/c2&gt;のインスタンスがある。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For each object or class, you can get the meta object by calling &lt;c0&gt;.HOW&lt;/c0&gt; on it.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T031256Z" creationid="yamato" creationdate="20140921T031256Z">
@@ -4234,6 +4250,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T142416Z" creationid="yamato" creationdate="20140914T142416Z">
         <seg>例として</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example it allows you to introspect objects and classes.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T031941Z" creationid="yamato" creationdate="20140921T031941Z">
+        <seg>たとえば、オブジェクトとクラスの内省を許す。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11582,6 +11606,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The calling convention for methods on meta objects is to call the method on the meta object, and pass in the object of interest as first argument to the object.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T032023Z" creationid="yamato" creationdate="20140921T032023Z">
+        <seg>メタオブジェクトのメソッドのための呼出し規約は、メタオブジェクトでメソッドを呼んで、オブジェクトへの最初の引数として関心のオブジェクトを渡すことである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The choice any particular implementation makes is specifically &lt;i1&gt;not&lt;/i1&gt; part of the definition of Perl 6, and you should not rely on it in portable code.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130811T041448Z" creationid="Toshiyuki" creationdate="20130811T041448Z">
@@ -13930,6 +13962,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T185456Z" creationid="Toshiyuki" creationdate="20140111T185456Z">
         <seg>したがって&lt;c1&gt;Task&lt;/c1&gt;クラスのどのインスタンスでも&lt;c2&gt;.&lt;/c2&gt;メソッド呼び出し演算子でこのメソッドを呼ぶことができます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Thus it should be no surprise that in Rakudo, the class name of the meta class that controls class behavior is called &lt;c1&gt;Perl6::Metamodel::ClassHOW&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T031803Z" creationid="yamato" creationdate="20140921T031803Z">
+        <seg>このように、Rakudoにおいて、クラスふるまいをコントロールするメタクラスのクラス名が呼び出された&lt;c1&gt;Perl6::Metamodel::ClassHOW&lt;/c1&gt;であることは、思いもかけないことであってはならない。</seg>
       </tuv>
     </tu>
     <tu>
