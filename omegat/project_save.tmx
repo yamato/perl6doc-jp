@@ -9598,6 +9598,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Roles are in some ways similar to classes, in that they are a collection of attributes and methods.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T024742Z" creationid="yamato" creationdate="20140921T024742Z">
+        <seg>それらが属性とメソッドのコレクションであるという点で、ロールはクラスといくつかの点で類似している。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Same as &lt;a0&gt;infix &amp;&amp;&lt;/a0&gt;, except with looser precedence.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140917T123232Z" creationid="yamato" creationdate="20140917T123232Z">
@@ -13046,6 +13054,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>They differ in that roles are also meant for describing only parts of an object's behavior, and in how roles are applied to classes.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T024811Z" creationid="yamato" creationdate="20140921T024811Z">
+        <seg>また、ロールがオブジェクトのふるまいの部分だけを記述するために、そして、ロールがクラスに適用される方法で意味されるという点で、それらは異なる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>They do not have the same capabilities as objects, though if you call methods on them, they are &lt;e1&gt;boxed&lt;/e1&gt; into normal objects.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140918T152617Z" creationid="yamato" creationdate="20140918T152617Z">
@@ -15098,6 +15114,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T015704Z" creationid="yamato" creationdate="20140920T015704Z">
         <seg>&lt;c0&gt;WHAT&lt;/c0&gt;メソッド（実はメソッド形式のマクロ）を呼ぶことでオブジェクトの型オブジェクトを問い合わせできる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can call &lt;c1&gt;bless&lt;/c1&gt; from any method at all, or use &lt;c2&gt;CREATE&lt;/c2&gt; to fiddle around with low-level workings.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T024647Z" creationid="yamato" creationdate="20140921T024647Z">
+        <seg>あなたはどんなメソッドからでも&lt;c1&gt;bless&lt;/c1&gt;を呼び出せる。または&lt;c2&gt;CREATE&lt;/c2&gt;を使って低レベルの作業ができる。</seg>
       </tuv>
     </tu>
     <tu>
