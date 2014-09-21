@@ -2222,6 +2222,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>As in the rest of Perl 6, comments in regexes start with a hash character &lt;c0&gt;#&lt;/c0&gt; and go upto the rest of the line.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T124430Z" creationid="yamato" creationdate="20140921T124430Z">
+        <seg>正規表現のコメントはハッシュ文字&lt;c0&gt;#&lt;/c0&gt;から始まって残りの行までになる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>As mentioned before, a class can inherit from multiple classes.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140112T125536Z" creationid="Toshiyuki" creationdate="20140112T125536Z">
