@@ -2838,6 +2838,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>By default this stops at the classes &lt;a0&gt;Cool&lt;/a0&gt;, &lt;a1&gt;Any&lt;/a1&gt; or &lt;a2&gt;Mu&lt;/a2&gt;; to really get all methods, use the &lt;c3&gt;:all&lt;/c3&gt; adverb.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T032955Z" creationid="yamato" creationdate="20140921T032955Z">
+        <seg>デフォルトでこれはクラス&lt;a0&gt;Cool&lt;/a0&gt;、&lt;a1&gt;Any&lt;/a1&gt;または&lt;a2&gt;Mu&lt;/a2&gt;で止まる；本当の全てのメソッドを得るためには&lt;c3&gt;:all&lt;/c3&gt;副詞を使う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>By default, keys and values are separated by tab characters, and pairs are terminated by newlines.</seg>
       </tuv>
       <tuv lang="JA">
@@ -9630,6 +9638,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns a list of public methods available on the class (which includes methods from superclasses and roles).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T032827Z" creationid="yamato" creationdate="20140921T032827Z">
+        <seg>クラス（スーパークラスとロールからメソッドを含む）上で、利用できるパブリックメソッドのリストを返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns a pseudo-random &lt;a0&gt;Num&lt;/a0&gt; in the range &lt;c1&gt;0..^1&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T124756Z" creationid="yamato" creationdate="20140914T124756Z">
@@ -12378,6 +12394,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>旧一義化構文：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The one in &lt;c3&gt;B&lt;/c3&gt; has arity 1 (i.e. it expects one argument, the invocant (&lt;c4&gt;self&lt;/c4&gt;)), and the one in &lt;c5&gt;A&lt;/c5&gt; expects 2 arguments (&lt;c6&gt;self&lt;/c6&gt; and &lt;c7&gt;$a&lt;/c7&gt;).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T032801Z" creationid="yamato" creationdate="20140921T032801Z">
+        <seg>&lt;c3&gt;B&lt;/c3&gt;のそれはarity 1（すなわち、それは1つの引数（インボカント（&lt;c4&gt;self&lt;/c4&gt;））を予想する）を持つ、そして、&lt;c5&gt;A&lt;/c5&gt;のそれは2つの引数（&lt;c6&gt;self&lt;/c6&gt;と&lt;c7&gt;$a&lt;/c7&gt;）を予想する。</seg>
       </tuv>
     </tu>
     <tu>
