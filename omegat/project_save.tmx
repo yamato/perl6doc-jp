@@ -8640,8 +8640,8 @@ qw/a b c/</seg>
       <tuv lang="EN-US">
         <seg>Or to phrase it differently, classes are meant for managing instances, and roles are meant for managing behavior and code reuse.</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamato" changedate="20140921T025100Z" creationid="yamato" creationdate="20140921T025100Z">
-        <seg>または別に述べると、クラスはインスタンスを管理するため、そしてロールはふるまいとコード再利用を管理するためのものである。</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T025146Z" creationid="yamato" creationdate="20140921T025100Z">
+        <seg>または別の言い方では、クラスはインスタンスを管理するため、そしてロールはふるまいとコード再利用を管理するためのものである。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9590,6 +9590,22 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Role Application</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T025317Z" creationid="yamato" creationdate="20140921T025317Z">
+        <seg>ロールの適用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Role application differs significantly from class inheritance.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T025347Z" creationid="yamato" creationdate="20140921T025347Z">
+        <seg>ロールの適用は、クラス継承とかなり異なる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Role for objects which support indexing them using &lt;c0&gt;postcircumfix:ﾂｫ[ ]ﾂｻ&lt;/c0&gt; (usually list-like objects).</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T054819Z" creationid="yamato" creationdate="20140915T054738Z">
@@ -9602,6 +9618,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140113T080142Z" creationid="Toshiyuki" creationdate="20140113T080142Z">
         <seg>ロール</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Roles are immutable as soon as the compiler parses the closing bracket of the role declaration.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T025304Z" creationid="yamato" creationdate="20140921T025304Z">
+        <seg>コンパイラがロール宣言の右大括弧を解析するとすぐに、ロールは不変になる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14650,6 +14674,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T152409Z" creationid="Toshiyuki" creationdate="20140112T161304Z">
         <seg>関数またはメソッドがあなたの知らないオブジェクトを返すとき、&lt;c0&gt;.WHAT&lt;/c0&gt;でその型を見つけ、&lt;c1&gt;.perl&lt;/c1&gt;でその構造を、そしてこの戻り値が何であるかという良いアイデアを得るでしょう。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When a role is applied to a class, the methods of that role are copied into the class.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T025359Z" creationid="yamato" creationdate="20140921T025359Z">
+        <seg>ロールがクラスに適用されるとき、そのロールのメソッドはクラスにコピーされる。</seg>
       </tuv>
     </tu>
     <tu>
