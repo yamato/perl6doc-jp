@@ -4088,8 +4088,8 @@ qw/a b c/</seg>
       <tuv lang="EN-US">
         <seg>First, custom &lt;c0&gt;BUILD&lt;/c0&gt; methods should always be submethods, otherwise they break attribute initialization in subclasses.</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamato" changedate="20140921T023211Z" creationid="yamato" creationdate="20140921T023211Z">
-        <seg>1番目に、カスタム&lt;c0&gt;BUILD&lt;/c0&gt;メソッドは常にサブメソッドでなければならない、さもなければ、それらはサブクラスで属性初期化を中断する。</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T023329Z" creationid="yamato" creationdate="20140921T023211Z">
+        <seg>第1に、カスタム&lt;c0&gt;BUILD&lt;/c0&gt;メソッドは常にサブメソッドでなければならない、さもなければ、それらはサブクラスで属性初期化を中断する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9614,6 +9614,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Second, &lt;c1&gt;BUILD&lt;/c1&gt; submethods can be used to run custom code at object construction time.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T023301Z" creationid="yamato" creationdate="20140921T023301Z">
+        <seg>第2には、&lt;c1&gt;BUILD&lt;/c1&gt;サブメソッドは、オブジェクト構築時にカスタムコードを実行するのに用いられることができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Second, a method places its invocant into the special variable &lt;c3&gt;self&lt;/c3&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T185538Z" creationid="Toshiyuki" creationdate="20140111T185538Z">
@@ -9910,6 +9918,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Since passing arguments to a routine binds the arguments to the parameters, a separate binding step is unnecessary if the attribute is used as parameter.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T023456Z" creationid="yamato" creationdate="20140921T023456Z">
+        <seg>ルーチンに引数を渡すことが引数をパラメータに結びつけるので、属性がパラメータとして使われるならば、別々の結合ステップは不必要である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Since the loop executes once before evaluating the condition, the bound parameter will be undefined that first time through the loop.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T055600Z" creationid="Toshiyuki" creationdate="20130810T055600Z">
@@ -10050,6 +10066,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T062032Z" creationid="yamato" creationdate="20140914T062032Z">
         <seg>それでコードのブロック</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So the example above could also have been written as:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T023533Z" creationid="yamato" creationdate="20140921T023510Z">
+        <seg>それで、上の例は次のように書くこともできた：</seg>
       </tuv>
     </tu>
     <tu>
@@ -12962,6 +12986,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T021132Z" creationid="yamato" creationdate="20140920T021132Z">
         <seg>それらはオブジェクトの状態が保存される場所だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>They can also be used for creating aliases for attribute initialization:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T023346Z" creationid="yamato" creationdate="20140921T023346Z">
+        <seg>また、それらが、属性初期化のために別名をつくるために使われることができる：</seg>
       </tuv>
     </tu>
     <tu>
