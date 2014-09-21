@@ -342,6 +342,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(Only conceptually; actually the list of methods is built at class composition time).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T033328Z" creationid="yamato" creationdate="20140921T033328Z">
+        <seg>（概念的にだけ；実はメソッドのリストはクラス構成時に構築される。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(Or we use push semantics and &lt;c3&gt;$!&lt;/c3&gt; means &lt;c4&gt;@![*-1]&lt;/c4&gt;.) This might be more robust than merely making &lt;c5&gt;@!&lt;/c5&gt; a parameter to CATCH.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T152707Z" creationid="Toshiyuki" creationdate="20130817T152707Z">
@@ -9182,6 +9190,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Perl 6 linearizes the graph of superclasses into a single list that &lt;c0&gt;$object.^mro&lt;/c0&gt; returns; when a method is called, the class and its parent classes are visited in that order.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T033247Z" creationid="yamato" creationdate="20140921T033225Z">
+        <seg>Perl 6は、&lt;c0&gt;$object.^mro&lt;/c0&gt;が返す一つのリストに、スーパークラスのグラフを線形化する；メソッドが呼び出されるとき、クラスとその親クラスはその順序でまわられる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Perl 6 may automatically generate accessor methods for you though.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T054159Z" creationid="yamato" creationdate="20140914T054159Z">
@@ -9730,6 +9746,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T124955Z" creationid="yamato" creationdate="20140914T124955Z">
         <seg>虚数単位（&lt;a0&gt;Complex&lt;/a0&gt;数のための）を返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the list of the class itself and its superclasses in method resolution order.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T033152Z" creationid="yamato" creationdate="20140921T033152Z">
+        <seg>メソッド選択順序でクラスそのものとそのスーパークラスのリストを返す。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12522,6 +12546,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130803T044423Z" creationid="Toshiyuki" creationdate="20130803T044423Z">
         <seg>条件文の結果はブロックが実行に選んだ結果になる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The returned list actually returns objects of type &lt;a0&gt;Method&lt;/a0&gt;, which you can use to introspect their signatures, and even to call them.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T033137Z" creationid="yamato" creationdate="20140921T033137Z">
+        <seg>返されたリストは型&lt;a0&gt;Method&lt;/a0&gt;のオブジェクトを実際に返す、そしてそれは、あなたはそれらのシグネチャの内省を使用することができる、そして、それらを呼び出すために同じである。</seg>
       </tuv>
     </tu>
     <tu>
