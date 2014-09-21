@@ -2830,6 +2830,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>By default it stops at &lt;a0&gt;Cool&lt;/a0&gt;, &lt;a1&gt;Any&lt;/a1&gt; or &lt;a2&gt;Mu&lt;/a2&gt;, which you can suppress by supplying the &lt;c3&gt;:all&lt;/c3&gt; adverb.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T033535Z" creationid="yamato" creationdate="20140921T033535Z">
+        <seg>デフォルトで、それは&lt;a0&gt;Cool&lt;/a0&gt;、&lt;a1&gt;Any&lt;/a1&gt;または&lt;a2&gt;Mu&lt;/a2&gt;で止まる。そして、それをあなたは&lt;c3&gt;:all&lt;/c3&gt;副詞を与えることによって抑制することができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>By default the innermost call frame matching the selection criteria will be exited.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T073639Z" creationid="Toshiyuki" creationdate="20130817T073639Z">
@@ -9750,10 +9758,26 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns the list of parent classes.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T033400Z" creationid="yamato" creationdate="20140921T033400Z">
+        <seg>親クラスのリストを返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns the list of the class itself and its superclasses in method resolution order.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T033152Z" creationid="yamato" creationdate="20140921T033152Z">
         <seg>メソッド選択順序でクラスそのものとそのスーパークラスのリストを返す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the name of the class:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T033347Z" creationid="yamato" creationdate="20140921T033347Z">
+        <seg>クラスのなめを返す：</seg>
       </tuv>
     </tu>
     <tu>
@@ -15346,6 +15370,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140112T161413Z" creationid="Toshiyuki" creationdate="20140112T161413Z">
         <seg>&lt;c2&gt;.^methods&lt;/c2&gt;で、あなたはそれをどうすることができるのかについて学ぶことができます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>With &lt;c4&gt;:tree&lt;/c4&gt;, a nested list is returned.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T033602Z" creationid="yamato" creationdate="20140921T033602Z">
+        <seg>&lt;c4&gt;:tree&lt;/c4&gt;をつけるとネストしたリストを返す。</seg>
       </tuv>
     </tu>
     <tu>
