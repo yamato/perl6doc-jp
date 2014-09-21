@@ -4374,6 +4374,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For one you can check if two objects have the same meta class by comparing them for equality:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T031604Z" creationid="yamato" creationdate="20140921T031604Z">
+        <seg>1つとして、それらの同一性を比較することでオブジェクトが同じメタクラスを持つかチェックできる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For some syntactic purposes, Perl distinguishes bracketing characters from non-bracketing.</seg>
       </tuv>
       <tuv lang="JA">
@@ -8062,6 +8070,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that although this looks like a method call, it is actually special-cased in the compiler, so it is more like a macro.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T031448Z" creationid="yamato" creationdate="20140921T031448Z">
+        <seg>これはメソッド呼び出しのように見えるが、実際はコンパイラで特別扱いされるので、よりマクロのようである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that an identifier followed by a pair of parens is always parsed as a subroutine call.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T035010Z" creationid="yamato" creationdate="20140915T035010Z">
@@ -9122,6 +9138,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T024715Z" creationid="yamato" creationdate="20140920T024715Z">
         <seg>Perl 6は&lt;a1&gt;C3 method resolution order&lt;/a1&gt;を使う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Perl 6 uses the word &lt;e0&gt;HOW&lt;/e0&gt;, Higher Order Workings, to refer to the meta object system.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T031648Z" creationid="yamato" creationdate="20140921T031648Z">
+        <seg>メタオブジェクトシステムに言及するために、Perl 6はワード&lt;e0&gt;HOW&lt;/e0&gt;（高位作業）を使う。</seg>
       </tuv>
     </tu>
     <tu>
@@ -10266,6 +10290,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>それで、あなたが言うとき、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So, what can you do with the meta object?</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T031506Z" creationid="yamato" creationdate="20140921T031506Z">
+        <seg>それで、メタオブジェクトをどうすることができるか？</seg>
       </tuv>
     </tu>
     <tu>
