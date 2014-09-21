@@ -8214,6 +8214,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that neither the colon &lt;c0&gt;:&lt;/c0&gt; nor round parentheses can be delimiters; the colon is forbidden because it would clash with adverbs, such as &lt;c1&gt;rx:i/abc/&lt;/c1&gt; (case insensitive regexes), and round parentheses would indicate a function call instead.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140921T122419Z" creationid="yamato" creationdate="20140921T122419Z">
+        <seg>コロン&lt;c0&gt;:&lt;/c0&gt;も丸い括弧もデリミタでありえないことに注意すべきである；それが副詞（例えば&lt;c1&gt;rx:i/abc/&lt;/c1&gt;（大文字小文字に無関心な正規表現））と衝突するので、コロンは禁じられている、そして、丸い括弧はその代わりに関数呼び出しを示す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that since these are type names, parentheses must always be used to call them as coercers, since the listop form is not allowed for coercions.</seg>
       </tuv>
       <tuv lang="JA">
