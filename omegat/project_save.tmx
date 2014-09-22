@@ -10470,6 +10470,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>So to match a hash character, you need to quote it:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T153746Z" creationid="yamato" creationdate="20140922T153746Z">
+        <seg>それで、ハッシュ文字にマッチするために、あなたはそれを引用符で囲む必要がある：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>So we will say that it is erroneous for a library writer to mix dynamic gather with callbacks unless those callbacks are somehow "ungathered" to the outer dynamic scope.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T161444Z" creationid="Toshiyuki" creationdate="20130810T161444Z">
