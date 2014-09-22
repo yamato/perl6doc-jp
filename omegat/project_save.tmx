@@ -7590,6 +7590,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Match results are stored in the &lt;c0&gt;$/&lt;/c0&gt; variable, and are also returned from the match.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T154125Z" creationid="yamato" creationdate="20140922T154125Z">
+        <seg>マッチの結果は&lt;c0&gt;$/&lt;/c0&gt;変数に保管され、マッチから返される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Matches of constant pairs on constant objects may all be resolved at compile time, so dead code can be eliminated by the optimizer.</seg>
       </tuv>
       <tuv lang="JA">
@@ -10718,6 +10726,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Strings are searched left to right for the regex, so its enough if a substring matches the regex:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T154025Z" creationid="yamato" creationdate="20140922T154025Z">
+        <seg>文字列は左から右に検索される。なので部分文字列がマッチすれば正規表現には十分だ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Strings, the &lt;c0&gt;Str&lt;/c0&gt; Type</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T131040Z" creationid="Toshiyuki" creationdate="20140328T131040Z">
@@ -12650,6 +12666,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T044004Z" creationid="yamato" creationdate="20140915T044004Z">
         <seg>結果はより広い型になる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The result is of type &lt;a1&gt;Match&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T154151Z" creationid="yamato" creationdate="20140922T154151Z">
+        <seg>結果は&lt;a1&gt;Match&lt;/a1&gt;型だ。</seg>
       </tuv>
     </tu>
     <tu>
