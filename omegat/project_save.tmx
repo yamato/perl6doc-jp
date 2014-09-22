@@ -1902,6 +1902,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>An unescaped dot &lt;c0&gt;.&lt;/c0&gt; in a regex matches any single character.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T154249Z" creationid="yamato" creationdate="20140922T154249Z">
+        <seg>正規表現内のエスケープされていないドット&lt;c0&gt;.&lt;/c0&gt;は任意の1文字にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>An unspace can suppress any of several whitespace dependencies in Perl.</seg>
       </tuv>
       <tuv lang="JA">
@@ -7238,6 +7246,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Its negation is written with an upper-case letter</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T154458Z" creationid="yamato" creationdate="20140922T154458Z">
+        <seg>その反転は大文字で書かれる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Just as a &lt;c2&gt;my&lt;/c2&gt; variable can not be accessed from the outside of its declared scope, attributes are not accessible outside of the class.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T182227Z" creationid="Toshiyuki" creationdate="20140111T182227Z">
@@ -10446,6 +10462,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>So these all match:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T154301Z" creationid="yamato" creationdate="20140922T154301Z">
+        <seg>なのでこれらは全てマッチする：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>So these are all equivalent:</seg>
       </tuv>
       <tuv lang="JA">
@@ -12982,6 +13006,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>There are predefined character classes of the form &lt;c0&gt;\w&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T154441Z" creationid="yamato" creationdate="20140922T154441Z">
+        <seg>予め定義された文字クラス&lt;c0&gt;\w&lt;/c0&gt;がある。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>There are several use cases for this, if you know you're going to initialize the memory otherwise, or you're doing some form of memory mapping.</seg>
       </tuv>
       <tuv lang="JA">
@@ -13666,6 +13698,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>このドキュメントはApocalypse 2を要約する。そして、それは小規模の語彙項目とタイプの問題を取り上げる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This doesn't match:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T154324Z" creationid="yamato" creationdate="20140922T154324Z">
+        <seg>これはマッチしない：</seg>
       </tuv>
     </tu>
     <tu>
@@ -16074,6 +16114,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T120709Z" creationid="yamato" creationdate="20140914T120709Z">
         <seg>属性（クラスメンバー）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>because there is no character to match before &lt;c0&gt;per&lt;/c0&gt; in the target string.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T154404Z" creationid="yamato" creationdate="20140922T154404Z">
+        <seg>なぜならターゲット文字列の&lt;c0&gt;per&lt;/c0&gt;の前にマッチする文字がないからだ。</seg>
       </tuv>
     </tu>
     <tu>
