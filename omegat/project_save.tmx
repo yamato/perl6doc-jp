@@ -1582,6 +1582,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>All other characters must either be escaped with a backslash (for example &lt;c1&gt;\:&lt;/c1&gt; to match a colon), or included in quotes:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T140406Z" creationid="yamato" creationdate="20140922T140406Z">
+        <seg>他の全ての文字は、バックスラッシュ（たとえばコロンにマッチする&lt;c1&gt;\:&lt;/c1&gt;）でもエスケープされなければならないか、クォートにも含まれなければならない：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>All other radixes must either rely on the constant folding properties of ordinary multiplication and exponentiation, or supply the equivalent two numbers as part of the string, which will be interpreted as they would outside the string, that is, as decimal numbers by default:</seg>
       </tuv>
       <tuv lang="JA">
@@ -1626,6 +1634,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>Allomorphic値意味論</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Alphanumeric characters and the underscore &lt;c0&gt;_&lt;/c0&gt; are literal matches.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T140317Z" creationid="yamato" creationdate="20140922T140317Z">
+        <seg>英数字とアンダースコア&lt;c0&gt;_&lt;/c0&gt;はリテラルマッチだ。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12242,6 +12258,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T032307Z" creationid="yamato" creationdate="20140915T032307Z">
         <seg>グルーピング演算子。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The hash character &lt;c0&gt;#&lt;/c0&gt; cannot be escaped with a backslash, because that would collide with the &lt;e1&gt;unspace&lt;/e1&gt; syntax.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T140507Z" creationid="yamato" creationdate="20140922T140507Z">
+        <seg>それが&lt;e1&gt;unspace&lt;/e1&gt;構文と衝突するので、ハッシュ文字&lt;c0&gt;#&lt;/c0&gt;はバックスラッシュでエスケープされることができない。</seg>
       </tuv>
     </tu>
     <tu>
