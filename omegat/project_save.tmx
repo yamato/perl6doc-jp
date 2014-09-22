@@ -902,6 +902,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;\d&lt;/c0&gt; matches a single digit (Unicode property &lt;c1&gt;N&lt;/c1&gt;), and &lt;c2&gt;\D&lt;/c2&gt; matches a single character that is not a digit.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140922T154601Z" creationid="yamato" creationdate="20140922T154601Z">
+        <seg>&lt;c0&gt;\d&lt;/c0&gt;は1文字の数字（ユニコードプロパティ&lt;c1&gt;N&lt;/c1&gt;）にマッチする。そして&lt;c2&gt;\D&lt;/c2&gt;は数値でない1文字にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;m/regex/&lt;/c0&gt; and &lt;c1&gt;/regex/&lt;/c1&gt; regex matches and &lt;c2&gt;s/regex/subst/&lt;/c2&gt; substitutions work on &lt;c3&gt;$_&lt;/c3&gt;:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T112632Z" creationid="yamato" creationdate="20140914T112632Z">
