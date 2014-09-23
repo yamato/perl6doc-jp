@@ -12918,6 +12918,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The only difference between the &lt;c0&gt;token&lt;/c0&gt; and &lt;c1&gt;rule&lt;/c1&gt; declarators is that the &lt;c2&gt;rule&lt;/c2&gt; declarator causes &lt;a3&gt;&lt;c4&gt;:sigspace&lt;/c4&gt;&lt;/a3&gt; to go into effect for the Regex:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T092335Z" creationid="yamato" creationdate="20140923T092335Z">
+        <seg>&lt;c0&gt;token&lt;/c0&gt;と&lt;c1&gt;rule&lt;/c1&gt;宣言の唯一の違いは、&lt;c2&gt;rule&lt;/c2&gt;宣言が&lt;a3&gt;&lt;c4&gt;:sigspace&lt;/c4&gt;&lt;/a3&gt; に正規表現のために実施されるということである：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The only remaining difficulty arises if both the user and a library writer attempt to use dynamic gather with user-defined callbacks that contain &lt;c11&gt;take&lt;/c11&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T160934Z" creationid="Toshiyuki" creationdate="20130810T160934Z">
@@ -13602,6 +13610,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>これらは、コンパイラに知られていて、コンパイラそのものの範囲内で実際ダイナミックに捜し出されるかもしれないすべての値で、コンパイラの動的スコープがプログラムのレキシカルスコープに分解するので辞書的に捜し出されるように見えるだけである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These are both &lt;e6&gt;ratcheting&lt;/e6&gt;, which means that the match engine won't back up and try again if it fails to match something.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T092042Z" creationid="yamato" creationdate="20140923T092042Z">
+        <seg>これらは両方の&lt;e6&gt;ratcheting&lt;/e6&gt;である。そして、それがマッチに何かに失敗するならば、マッチエンジンがそうしない手段はそれを後退させて、再びそれをためす。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14554,6 +14570,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140917T122421Z" creationid="yamato" creationdate="20140917T122421Z">
         <seg>これは43と出力する。&lt;c0&gt;$b&lt;/c0&gt;と&lt;c1&gt;$a&lt;/c1&gt;は同じオブジェクトを表している。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This will usually do what you want, but isn't appropriate for all cases:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T092053Z" creationid="yamato" creationdate="20140923T092053Z">
+        <seg>これは、通常、あなたが望むことをするが、全例に適切でない：</seg>
       </tuv>
     </tu>
     <tu>
