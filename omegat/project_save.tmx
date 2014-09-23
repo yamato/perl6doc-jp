@@ -9422,6 +9422,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Parses the contents of the file &lt;c0&gt;$filename&lt;/c0&gt; with the &lt;a1&gt;parse&lt;/a1&gt; method, passing along any named options in &lt;c2&gt;%opts&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T094127Z" creationid="yamato" creationdate="20140923T094127Z">
+        <seg>&lt;a1&gt;parse&lt;/a1&gt;メソッド（&lt;c2&gt;%opts&lt;/c2&gt;で任意の名前付きオプションを渡す）で、ファイル&lt;c0&gt;$filename&lt;/c0&gt;の内容をパースする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Path to the current executable as it was typed in on the</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T115532Z" creationid="yamato" creationdate="20140914T115532Z">
@@ -15122,6 +15130,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>位置引数の単位</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Unlike &lt;a0&gt;parse&lt;/a0&gt;, &lt;c1&gt;subparse&lt;/c1&gt; will allow the grammar to match only part of the supplied string.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T093939Z" creationid="yamato" creationdate="20140923T093939Z">
+        <seg>&lt;a0&gt;parse&lt;/a0&gt;とは異なり、&lt;c1&gt;subparse&lt;/c1&gt;はグラマーが与えられた文字列の一部だけにマッチするのを許す。</seg>
       </tuv>
     </tu>
     <tu>
