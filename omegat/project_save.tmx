@@ -1422,6 +1422,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A quantifier makes a preceding atom match not exactly once, but rather a variable number of times.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T050233Z" creationid="yamato" creationdate="20140923T050233Z">
+        <seg>数量詞は、前のアトムをきっかり一度でなく、可変的な回数にマッチさせる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A signature object (&lt;c0&gt;Signature&lt;/c0&gt;) may be created with colon-prefixed parens:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T082134Z" creationid="Toshiyuki" creationdate="20140329T082134Z">
