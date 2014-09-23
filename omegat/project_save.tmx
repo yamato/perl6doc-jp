@@ -958,6 +958,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;\w&lt;/c0&gt; matches a single word character, that is a letter (Unicode category L), a digit or an underscore.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T013649Z" creationid="yamato" creationdate="20140923T013649Z">
+        <seg>&lt;c0&gt;\w&lt;/c0&gt;はワード文字、つまりレター（ユニコード分類L）、数字またはアンダースコアにマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;m/regex/&lt;/c0&gt; and &lt;c1&gt;/regex/&lt;/c1&gt; regex matches and &lt;c2&gt;s/regex/subst/&lt;/c2&gt; substitutions work on &lt;c3&gt;$_&lt;/c3&gt;:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T112632Z" creationid="yamato" creationdate="20140914T112632Z">
@@ -1010,6 +1018,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140923T013327Z" creationid="yamato" creationdate="20140923T013327Z">
         <seg>&lt;c1&gt;\V&lt;/c1&gt;垂直空白以外にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c1&gt;\W&lt;/c1&gt; matches a single character that isn't a word character.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T013705Z" creationid="yamato" creationdate="20140923T013705Z">
+        <seg>&lt;c1&gt;\W&lt;/c1&gt;はワード文字以外にマッチする。</seg>
       </tuv>
     </tu>
     <tu>
