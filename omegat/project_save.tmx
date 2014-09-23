@@ -1126,6 +1126,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s0&gt;&lt;c1&gt;regex&lt;/c1&gt;&lt;/s0&gt; isn't the only declarator for named regexes -- in fact, it's the least common.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T091913Z" creationid="yamato" creationdate="20140923T091913Z">
+        <seg>&lt;s0&gt;&lt;c1&gt;regex&lt;/c1&gt;&lt;/s0&gt;は名前付き正規表現のための唯一の宣言ではない―実際、それは最も少ない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A &lt;a0&gt;Pair&lt;/a0&gt; within an argument list with an unquoted identifier on the left is interpreted as a named argument.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140916T131721Z" creationid="yamato" creationdate="20140916T131721Z">
@@ -2754,6 +2762,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T172058Z" creationid="Toshiyuki" creationdate="20130817T172058Z">
         <seg>このプラグマでハッピーになる前に、Perl 6はスローされた例外によって早まって爆発しがちな様々な並行処理プリミティブを含むので注意。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Being named gives us the advantage of being able to easily reuse the regex elsewhere:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T091753Z" creationid="yamato" creationdate="20140923T091753Z">
+        <seg>名をつけられることは、我々に簡単に正規表現をどこかほかで再利用することができる利点を与える：</seg>
       </tuv>
     </tu>
     <tu>
@@ -8034,6 +8050,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130818T085336Z" creationid="Toshiyuki" creationdate="20130818T085336Z">
         <seg>大部分の値を出さないphasersも使うことができる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Most of the time, the &lt;s2&gt;&lt;c3&gt;token&lt;/c3&gt;&lt;/s2&gt; or &lt;s4&gt;&lt;c5&gt;rule&lt;/c5&gt;&lt;/s4&gt; declarators are used.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T091940Z" creationid="yamato" creationdate="20140923T091940Z">
+        <seg>殆どの場合&lt;s2&gt;&lt;c3&gt;token&lt;/c3&gt;&lt;/s2&gt;か&lt;s4&gt;&lt;c5&gt;rule&lt;/c5&gt;&lt;/s4&gt;宣言が使われる。</seg>
       </tuv>
     </tu>
     <tu>
