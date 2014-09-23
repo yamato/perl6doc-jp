@@ -4518,6 +4518,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For example, Perl 6 is parsed and executed using a Perl 6-style grammar.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T074247Z" creationid="yamato" creationdate="20140923T074247Z">
+        <seg>たとえば、Perl 6はPerl 6スタイルのグラマーを用いてパースされて、実行される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example, if you've discovered an effecient method to ride cows, and are trying to market it as a new form of popular transportation, you might have a class &lt;c0&gt;Bull&lt;/c0&gt;, for all the bulls you keep around the house, and a class &lt;c1&gt;Automobile&lt;/c1&gt;, for things that you can drive.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T025918Z" creationid="yamato" creationdate="20140921T025918Z">
@@ -4866,6 +4874,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140321T132534Z" creationid="Toshiyuki" creationdate="20140321T132534Z">
         <seg>グラマー</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Grammars are a powerful tool used to destructure text and often to return data structures that have been created by interpreting that text.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T074215Z" creationid="yamato" creationdate="20140923T074215Z">
+        <seg>グラマーは、テキストを分解して、そのテキストを解釈することによって作成されたデータ構造を返すのに用いられる強力なツールである。</seg>
       </tuv>
     </tu>
     <tu>
