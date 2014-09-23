@@ -4486,6 +4486,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For example to match strings of the form &lt;c0&gt;key=value&lt;/c0&gt;, you can write a regex like this:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T051718Z" creationid="yamato" creationdate="20140923T051718Z">
+        <seg>例えば&lt;c0&gt;key=value&lt;/c0&gt;という文字列なら正規表現を次のように書ける：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example,</seg>
       </tuv>
       <tuv lang="JA">
@@ -11418,6 +11426,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T021715Z" creationid="yamato" creationdate="20140914T021715Z">
         <seg>&lt;c0&gt;*&lt;/c0&gt;シギル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;+&lt;/c0&gt; quantifier makes the preceding atom match one or more times, with no upper limit.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T051640Z" creationid="yamato" creationdate="20140923T051640Z">
+        <seg>&lt;c0&gt;+&lt;/c0&gt;数量詞は前のアトムを1つまたはそれ以上（上限なし）にマッチさせる。</seg>
       </tuv>
     </tu>
     <tu>
