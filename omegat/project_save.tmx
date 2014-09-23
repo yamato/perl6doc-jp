@@ -910,6 +910,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;\h&lt;/c0&gt; matches a single horizontal whitespace character.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T010246Z" creationid="yamato" creationdate="20140923T010246Z">
+        <seg>&lt;c0&gt;\h&lt;/c0&gt;は1文字の水平空白文字にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;m/regex/&lt;/c0&gt; and &lt;c1&gt;/regex/&lt;/c1&gt; regex matches and &lt;c2&gt;s/regex/subst/&lt;/c2&gt; substitutions work on &lt;c3&gt;$_&lt;/c3&gt;:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T112632Z" creationid="yamato" creationdate="20140914T112632Z">
@@ -8274,6 +8282,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T122419Z" creationid="yamato" creationdate="20140921T122419Z">
         <seg>コロン&lt;c0&gt;:&lt;/c0&gt;も丸い括弧もデリミタでありえないことに注意すべきである；それが副詞（例えば&lt;c1&gt;rx:i/abc/&lt;/c1&gt;（大文字小文字に無関心な正規表現））と衝突するので、コロンは禁じられている、そして、丸い括弧はその代わりに関数呼び出しを示す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that not only the Arabic digits (commonly used in the Latin alphabet) match &lt;c0&gt;\d&lt;/c0&gt;, but also digits from other scripts.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T005951Z" creationid="yamato" creationdate="20140923T005951Z">
+        <seg>アラビア数字（ラテンアルファベットで一般的に用いられる）だけが&lt;c0&gt;\d&lt;/c0&gt;にマッチするのでなく、他の文字の数字にもマッチすることに注意すべきである。</seg>
       </tuv>
     </tu>
     <tu>
