@@ -7878,6 +7878,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Matches the grammar against &lt;c0&gt;$str&lt;/c0&gt;, using &lt;c1&gt;$rule&lt;/c1&gt; as the starting rule, optionally applying &lt;c2&gt;$actions&lt;/c2&gt; as actions object.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T093539Z" creationid="yamato" creationdate="20140923T093539Z">
+        <seg>オプションでアクションオブジェクトとして&lt;c2&gt;$actions&lt;/c2&gt;を適用して、開始ルールとして&lt;c1&gt;$rule&lt;/c1&gt;を用いて&lt;c0&gt;$str&lt;/c0&gt;に対してグラマーにマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Matching a string against that regex searches for that string:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140321T022431Z" creationid="Toshiyuki" creationdate="20140115T143522Z">
