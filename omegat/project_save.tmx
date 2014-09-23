@@ -950,6 +950,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;\v&lt;/c0&gt; matches a single vertical whitespace character.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T013316Z" creationid="yamato" creationdate="20140923T013316Z">
+        <seg>&lt;c0&gt;\v&lt;/c0&gt;は垂直空白にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;m/regex/&lt;/c0&gt; and &lt;c1&gt;/regex/&lt;/c1&gt; regex matches and &lt;c2&gt;s/regex/subst/&lt;/c2&gt; substitutions work on &lt;c3&gt;$_&lt;/c3&gt;:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T112632Z" creationid="yamato" creationdate="20140914T112632Z">
@@ -994,6 +1002,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140923T012436Z" creationid="yamato" creationdate="20140923T012436Z">
         <seg>&lt;c1&gt;\S&lt;/c1&gt;空白以外の1文字にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c1&gt;\V&lt;/c1&gt; match a single character that is not a vertical whitspace.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T013327Z" creationid="yamato" creationdate="20140923T013327Z">
+        <seg>&lt;c1&gt;\V&lt;/c1&gt;垂直空白以外にマッチする。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14906,6 +14922,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130802T140212Z" creationid="Toshiyuki" creationdate="20130802T140212Z">
         <seg>使え</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Use &lt;c0&gt;\s&lt;/c0&gt; to match any kind of whitespace, not just vertical whitespace</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T013427Z" creationid="yamato" creationdate="20140923T013427Z">
+        <seg>垂直空白だけでなくあらゆる種類の空白にマッチするには&lt;c0&gt;\s&lt;/c0&gt;を使う。</seg>
       </tuv>
     </tu>
     <tu>
