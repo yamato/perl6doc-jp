@@ -774,6 +774,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;[竊曽&lt;/a0&gt; In fact, named regexes can even take extra arguments, using the same syntax as subroutine parameter lists</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T094242Z" creationid="yamato" creationdate="20140923T094242Z">
+        <seg>&lt;a0&gt;[竊曽&lt;/a0&gt;実際に、名前付き正規表現は追加の引数を受け取れる。サブルーチンのパラメータリストの構文と同じだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;$!&lt;/c0&gt; is the error variable.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T113807Z" creationid="yamato" creationdate="20140914T113807Z">
