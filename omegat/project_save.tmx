@@ -966,6 +966,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c1&gt;\n&lt;/c1&gt; is supposed to also match a Windows CR LF codepoing pair; though it is unclear whether the magic happens at the time that external data is read, or at regex match time.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T011624Z" creationid="yamato" creationdate="20140923T011624Z">
+        <seg>&lt;c1&gt;\n&lt;/c1&gt;はWindowsのCR LFにもマッチすると思われる；外部データを読み込むか、正規表現マッチ時になるまでマジックが起こるか不明だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c1&gt;bless&lt;/c1&gt; creates the new object, and then calls method &lt;c2&gt;BUILDALL&lt;/c2&gt; on it.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T042913Z" creationid="yamato" creationdate="20140920T042913Z">
