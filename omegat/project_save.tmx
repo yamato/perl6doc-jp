@@ -5446,6 +5446,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If a parse of only a part of the string is desired, use &lt;a1&gt;subparse&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T093713Z" creationid="yamato" creationdate="20140923T093713Z">
+        <seg>文字列の一部だけの解析が要求されるならば&lt;a1&gt;subparse&lt;/a1&gt;を使う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If a term is not expected at this point, it is a syntax error.</seg>
       </tuv>
       <tuv lang="JA">
@@ -10190,6 +10198,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns the resulting &lt;a0&gt;Match&lt;/a0&gt; object, and also sets the caller's &lt;c1&gt;$/&lt;/c1&gt; variable to the result Match object.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T093833Z" creationid="yamato" creationdate="20140923T093833Z">
+        <seg>結果の&lt;a0&gt;Match&lt;/a0&gt;オブジェクトを返し、呼び出し元の&lt;c1&gt;$/&lt;/c1&gt;変数に結果のMatchオブジェクトをセットする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Role Application</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T025317Z" creationid="yamato" creationdate="20140921T025317Z">
@@ -14578,6 +14594,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140313T135218Z" creationid="Toshiyuki" creationdate="20140111T181204Z">
         <seg>この型オブジェクトはクラスの「空のインスタンス」です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This will fail if the grammar does not parse the &lt;e0&gt;entire&lt;/e0&gt; string.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T093618Z" creationid="yamato" creationdate="20140923T093618Z">
+        <seg>グラマーが&lt;e0&gt;全体の&lt;/e0&gt;文字列をパースしないならば、これは失敗する。</seg>
       </tuv>
     </tu>
     <tu>
