@@ -918,6 +918,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;\n&lt;/c0&gt; matches a single, logical newline character.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T011206Z" creationid="yamato" creationdate="20140923T011206Z">
+        <seg>&lt;c0&gt;\n&lt;/c0&gt;は1文字の論理改行にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;m/regex/&lt;/c0&gt; and &lt;c1&gt;/regex/&lt;/c1&gt; regex matches and &lt;c2&gt;s/regex/subst/&lt;/c2&gt; substitutions work on &lt;c3&gt;$_&lt;/c3&gt;:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T112632Z" creationid="yamato" creationdate="20140914T112632Z">
@@ -15042,6 +15050,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>バージョンリテラル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Vertical whitespaces like newline characters are explicitly excluded; those can be matched with &lt;c0&gt;\v&lt;/c0&gt;, and &lt;c1&gt;\s&lt;/c1&gt; matches any kind of whitespace.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T011137Z" creationid="yamato" creationdate="20140923T011137Z">
+        <seg>改行文字のような垂直空白は明示的に除外される；それらは&lt;c0&gt;\v&lt;/c0&gt;、&lt;c1&gt;\s&lt;/c1&gt;（あらゆる空白）にマッチする。</seg>
       </tuv>
     </tu>
     <tu>
