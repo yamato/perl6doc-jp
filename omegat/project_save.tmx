@@ -926,6 +926,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;\s&lt;/c0&gt; matches a single whitespace character.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T012419Z" creationid="yamato" creationdate="20140923T012419Z">
+        <seg>&lt;c0&gt;\s&lt;/c0&gt;は1文字の空白にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;m/regex/&lt;/c0&gt; and &lt;c1&gt;/regex/&lt;/c1&gt; regex matches and &lt;c2&gt;s/regex/subst/&lt;/c2&gt; substitutions work on &lt;c3&gt;$_&lt;/c3&gt;:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T112632Z" creationid="yamato" creationdate="20140914T112632Z">
@@ -966,6 +974,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c1&gt;\S&lt;/c1&gt; matches a single character that is not a whitspace.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T012436Z" creationid="yamato" creationdate="20140923T012436Z">
+        <seg>&lt;c1&gt;\S&lt;/c1&gt;空白以外の1文字にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c1&gt;\n&lt;/c1&gt; is supposed to also match a Windows CR LF codepoing pair; though it is unclear whether the magic happens at the time that external data is read, or at regex match time.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140923T011624Z" creationid="yamato" creationdate="20140923T011624Z">
@@ -994,6 +1010,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T151646Z" creationid="Toshiyuki" creationdate="20130817T151646Z">
         <seg>&lt;c2&gt;$!&lt;/c2&gt;は最後の失敗への便利なリンクで、一つだけの最も最近の例外を含む。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c2&gt;\N&lt;/c2&gt; matches a single character that's not a logical newline.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T012401Z" creationid="yamato" creationdate="20140923T012401Z">
+        <seg>&lt;c2&gt;\N&lt;/c2&gt;論理改行以外の1文字にマッチする。</seg>
       </tuv>
     </tu>
     <tu>
