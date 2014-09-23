@@ -3038,6 +3038,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>By default, &lt;c2&gt;&lt;ws&gt; &lt;/c2&gt; makes sure that words are seperated, so &lt;c3&gt;a b&lt;/c3&gt; and &lt;c4&gt;^&amp;&lt;/c4&gt; will match &lt;c5&gt;&lt;ws&gt; &lt;/c5&gt; in the middle, but &lt;c6&gt;ab&lt;/c6&gt; won't.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T053146Z" creationid="yamato" creationdate="20140923T053146Z">
+        <seg>デフォルトでは&lt;c2&gt;&lt;ws&gt; &lt;/c2&gt;は単語が分けられたことを確かめる。&lt;c3&gt;a b&lt;/c3&gt;と&lt;c4&gt;^&amp;&lt;/c4&gt;は中央で&lt;c5&gt;&lt;ws&gt; &lt;/c5&gt;にマッチするが&lt;c6&gt;ab&lt;/c6&gt;はマッチしない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>By default, keys and values are separated by tab characters, and pairs are terminated by newlines.</seg>
       </tuv>
       <tuv lang="JA">
