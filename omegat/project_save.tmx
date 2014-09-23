@@ -1982,6 +1982,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>An example that's more practical to the common Perl 6 user is the &lt;a0&gt;JSON::Simple module&lt;/a0&gt;, which can deserialize any valid JSON file, and yet the deserializing code is written in less than 100 lines of simple, extensible code.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T083102Z" creationid="yamato" creationdate="20140923T083102Z">
+        <seg>一般的なPerl 6ユーザーにより実用的である例は&lt;a0&gt;JSON::Simple&lt;/a0&gt;モジュール（それは有効なJSONがファイルを非直列化することができる）であるが、非直列化しているコードは単純な、拡張可能なコードの100未満の行に書かれる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>An exception handler is just a switch statement on an implicit topic that happens to be the current exception to be dealt with.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130813T130151Z" creationid="Toshiyuki" creationdate="20130813T130151Z">
