@@ -12750,6 +12750,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The main ingredient of grammars is named &lt;a0&gt;regexes&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T090001Z" creationid="yamato" creationdate="20140923T090001Z">
+        <seg>グラマーの主要構成は名前付き&lt;a0&gt;正規表現&lt;/a0&gt;だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The method form will leave any block in the dynamic scope that can be named as an object and that responds to the &lt;c2&gt;.leave&lt;/c2&gt; method.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T071918Z" creationid="Toshiyuki" creationdate="20130817T071918Z">
