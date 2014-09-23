@@ -6718,6 +6718,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In this case, we have to specify that the regex is lexically scoped using the &lt;c0&gt;my&lt;/c0&gt; keyword, because named regexes are normally used within grammars.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T091629Z" creationid="yamato" creationdate="20140923T091629Z">
+        <seg>この場合、名をつけられた正規表現が通常グラマーの中で使われるので、我々は正規表現が&lt;c0&gt;my&lt;/c0&gt;キーワードを使用して辞書的に捜し出されることを示していなければならない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In this example, class &lt;c0&gt;B&lt;/c0&gt; has two possible methods available with name &lt;c1&gt;x&lt;/c1&gt; (though a normal method call would only invoke the one installed in &lt;c2&gt;B&lt;/c2&gt; directly).</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T032638Z" creationid="yamato" creationdate="20140921T032638Z">
@@ -15810,6 +15818,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T144941Z" creationid="Toshiyuki" creationdate="20140112T135006Z">
         <seg>多重継承は知ると役に立つ概念です。そして使用の時に、より役に立つOOP概念があることを理解するのは重要です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>While the syntax of &lt;a1&gt;Perl 6 Regexes&lt;/a1&gt; is outside the scope of this document, &lt;e2&gt;named&lt;/e2&gt; regexes have a special syntax, similar to subroutine definitions:&lt;a3&gt;[1]&lt;/a3&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T091558Z" creationid="yamato" creationdate="20140923T091558Z">
+        <seg>&lt;a1&gt;Perl 6の正規表現&lt;/a1&gt;の構文がこのドキュメントの範囲外の間、&lt;e2&gt;名前付き&lt;/e2&gt;正規表現には特別な構文（サブルーチン定義に類似した）がある：&lt;a3&gt;[1]&lt;/a3&gt;</seg>
       </tuv>
     </tu>
     <tu>
