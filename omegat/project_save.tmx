@@ -950,6 +950,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c1&gt;\H&lt;/c1&gt; matches a single character that is not a horizontal whitespace character.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T010312Z" creationid="yamato" creationdate="20140923T010312Z">
+        <seg>&lt;c1&gt;\H&lt;/c1&gt;は水平空白文字でない1文字にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c1&gt;bless&lt;/c1&gt; creates the new object, and then calls method &lt;c2&gt;BUILDALL&lt;/c2&gt; on it.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T042913Z" creationid="yamato" creationdate="20140920T042913Z">
