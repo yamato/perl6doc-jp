@@ -8118,6 +8118,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Negation works as &lt;c0&gt;&lt;:!category&gt; &lt;/c0&gt;, so &lt;c1&gt;&lt;:!Lu&gt; &lt;/c1&gt; matches a single character that isn't an upper-case letter.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T014803Z" creationid="yamato" creationdate="20140923T014803Z">
+        <seg>否定は&lt;c0&gt;&lt;:!category&gt; &lt;/c0&gt;で機能する。&lt;c1&gt;&lt;:!Lu&gt; &lt;/c1&gt;は大文字でない1文字にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Negative numeric context operator.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T042650Z" creationid="yamato" creationdate="20140915T042650Z">
@@ -10262,6 +10270,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Several category can be combined with one of these infix operators:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T014839Z" creationid="yamato" creationdate="20140923T014839Z">
+        <seg>いくつかのカテゴリーは、これらの中置演算子の1つと結合されることができる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Sigilless variables</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T021659Z" creationid="yamato" creationdate="20140914T021659Z">
@@ -10522,6 +10538,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130805T160823Z" creationid="Toshiyuki" creationdate="20130805T160823Z">
         <seg>このように、暗黙の条件は短絡演算子によって暗に意味する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So for example &lt;c0&gt;&lt;:Lu&gt; &lt;/c0&gt; matches a single, upper-case letter.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T014726Z" creationid="yamato" creationdate="20140923T014726Z">
+        <seg>例えば&lt;c0&gt;&lt;:Lu&gt; &lt;/c0&gt;は1文字の大文字にマッチする。</seg>
       </tuv>
     </tu>
     <tu>
