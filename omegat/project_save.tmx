@@ -11966,6 +11966,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The character classes so far are mostly for convenience; a more systematic approach is the use of Unicode properties.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T014430Z" creationid="yamato" creationdate="20140923T014430Z">
+        <seg>文字クラスはここまで大部分は便宜のためだ；より体系的なアプローチはユニコードプロパティの使用だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The choice any particular implementation makes is specifically &lt;i1&gt;not&lt;/i1&gt; part of the definition of Perl 6, and you should not rely on it in portable code.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130811T041448Z" creationid="Toshiyuki" creationdate="20130811T041448Z">
@@ -13554,6 +13562,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>これらは、通訳される</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>They are called in the form &lt;c0&gt;&lt;:property&gt; &lt;/c0&gt;, where &lt;c1&gt;property&lt;/c1&gt; can be a short or long Unicode property name.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T014629Z" creationid="yamato" creationdate="20140923T014629Z">
+        <seg>それらは&lt;c0&gt;&lt;:property&gt; &lt;/c0&gt;の形式で呼ばれ、&lt;c1&gt;property&lt;/c1&gt;はショートかロングのユニコードプロパティ名だ。</seg>
       </tuv>
     </tu>
     <tu>
