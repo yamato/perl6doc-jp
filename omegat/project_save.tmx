@@ -14070,6 +14070,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is different for quotes, so &lt;c3&gt;'ab'+&lt;/c3&gt; matches the strings &lt;c4&gt;ab&lt;/c4&gt;, &lt;c5&gt;abab&lt;/c5&gt;, &lt;c6&gt;ababab&lt;/c6&gt; etc.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T050642Z" creationid="yamato" creationdate="20140923T050642Z">
+        <seg>これはクォートでは異なり、&lt;c3&gt;'ab'+&lt;/c3&gt;は&lt;c4&gt;ab&lt;/c4&gt;、&lt;c5&gt;abab&lt;/c5&gt;、&lt;c6&gt;ababab&lt;/c6&gt;などにマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is disallowed in favor of being to able to catch some Perl 5-isms.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T063414Z" creationid="yamato" creationdate="20140914T063414Z">
