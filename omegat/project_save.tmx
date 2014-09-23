@@ -4454,6 +4454,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For example &lt;c0&gt;a+&lt;/c0&gt; matches one or more &lt;c1&gt;a&lt;/c1&gt; characters.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T050333Z" creationid="yamato" creationdate="20140923T050333Z">
+        <seg>例えば&lt;c0&gt;a+&lt;/c0&gt;は1つまたはそれ以上の&lt;c1&gt;a&lt;/c1&gt;という文字にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example for undefined values, it returns 0:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T041306Z" creationid="yamato" creationdate="20140915T041306Z">
@@ -9706,6 +9714,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>Qの形</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Quantifiers bind tighter than concatenation, so &lt;c0&gt;ab+&lt;/c0&gt; matches one &lt;c1&gt;a&lt;/c1&gt; followed by one or more &lt;c2&gt;b&lt;/c2&gt;s.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T050507Z" creationid="yamato" creationdate="20140923T050507Z">
+        <seg>数量詞は連結よりも厳しく結合するので、&lt;c0&gt;ab+&lt;/c0&gt;は1つの&lt;c1&gt;a&lt;/c1&gt;に続く1つまたはそれ以上の&lt;c2&gt;b&lt;/c2&gt;にマッチする。</seg>
       </tuv>
     </tu>
     <tu>
