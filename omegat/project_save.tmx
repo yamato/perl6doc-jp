@@ -6182,6 +6182,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In between the &lt;c0&gt;&lt; &gt; &lt;/c0&gt;, you can also use the same operators for categories (&lt;c1&gt;+&lt;/c1&gt;, &lt;c2&gt;|&lt;/c2&gt;, &lt;c3&gt;&amp;&lt;/c3&gt;, &lt;c4&gt;-&lt;/c4&gt;, &lt;c5&gt;^&lt;/c5&gt;) to combine multiple range definitions and even mix in some of the unicode categories above.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T032123Z" creationid="yamato" creationdate="20140923T032123Z">
+        <seg>&lt;c0&gt;&lt; &gt; &lt;/c0&gt;の間で同じカテゴリーの演算子も使用できる。（&lt;c1&gt;+&lt;/c1&gt;、&lt;c2&gt;|&lt;/c2&gt;、&lt;c3&gt;&amp;&lt;/c3&gt;、&lt;c4&gt;-&lt;/c4&gt;、&lt;c5&gt;^&lt;/c5&gt;）複数のレンジやいくつかのユニコードカテゴリーも結合できる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In boolean contexts, a true value is returned if and only if there are any elements in the container.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T022628Z" creationid="Toshiyuki" creationdate="20140329T022628Z">
