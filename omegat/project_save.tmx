@@ -8894,6 +8894,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>One or more: +</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T051532Z" creationid="yamato" creationdate="20140923T051532Z">
+        <seg>1つまたはそれ以上：+</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>One other difference from Perl 5 is that the default is not to undefine a variable.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130802T140100Z" creationid="Toshiyuki" creationdate="20130802T140100Z">
