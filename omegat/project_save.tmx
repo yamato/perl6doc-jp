@@ -270,6 +270,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(Note that exotic tabs like the &lt;c2&gt;U+000B VERTICAL TABULATION&lt;/c2&gt; character is not included here).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T012619Z" creationid="yamato" creationdate="20140923T012619Z">
+        <seg>（&lt;c2&gt;U+000B VERTICAL TABULATION&lt;/c2&gt;のような珍しいタブは含まない）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(Note that fatal exception types can do the &lt;c2&gt;Resumable&lt;/c2&gt; role even if thrown via &lt;c3&gt;fail()&lt;/c3&gt;--when uncaught they just hit the outermost fatal handler instead of the outermost warning handler, so some inner scope has to explicitly treat them as warnings and resume them.)</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T115135Z" creationid="Toshiyuki" creationdate="20130817T115115Z">
@@ -934,6 +942,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;\t&lt;/c0&gt; matches a single tab/tabulation character, &lt;c1&gt;U+0009&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T012501Z" creationid="yamato" creationdate="20140923T012501Z">
+        <seg>&lt;c0&gt;\t&lt;/c0&gt;は1文字のタブ文字&lt;c1&gt;U+0009&lt;/c1&gt;にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;m/regex/&lt;/c0&gt; and &lt;c1&gt;/regex/&lt;/c1&gt; regex matches and &lt;c2&gt;s/regex/subst/&lt;/c2&gt; substitutions work on &lt;c3&gt;$_&lt;/c3&gt;:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T112632Z" creationid="yamato" creationdate="20140914T112632Z">
@@ -1034,6 +1050,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T043254Z" creationid="yamato" creationdate="20140920T043254Z">
         <seg>&lt;c3&gt;BUILDALL&lt;/c3&gt;はサブクラスをreverse method resolution orderで渡り歩き（すなわち&lt;a4&gt;Mu&lt;/a4&gt;から多くの派生クラスへ）、そしてそれぞれのクラスで&lt;c5&gt;BUILD&lt;/c5&gt;という名前のメソッドが存在するかチェックする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c3&gt;\T&lt;/c3&gt; matches a single character that is not a tab.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T012631Z" creationid="yamato" creationdate="20140923T012631Z">
+        <seg>&lt;c3&gt;\T&lt;/c3&gt;はタブ以外にマッチする。</seg>
       </tuv>
     </tu>
     <tu>
