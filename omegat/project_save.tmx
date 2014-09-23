@@ -974,6 +974,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;m:s/ photo shop /&lt;/c0&gt; acts just the same as if one had written &lt;c1&gt;m/ photo &lt;ws&gt; shop &lt;ws&gt; /&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T052952Z" creationid="yamato" creationdate="20140923T052952Z">
+        <seg>&lt;c0&gt;m:s/ photo shop /&lt;/c0&gt;は&lt;c1&gt;m/ photo &lt;ws&gt; shop &lt;ws&gt; /&lt;/c1&gt;と書かれたかのように振る舞う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;my Dog $spot&lt;/c0&gt; by itself does not automatically call a &lt;c1&gt;Dog&lt;/c1&gt; constructor.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140327T133640Z" creationid="Toshiyuki" creationdate="20140327T133640Z">
@@ -11818,6 +11826,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140917T122721Z" creationid="yamato" creationdate="20140917T122544Z">
         <seg>&lt;e0&gt;などなど&lt;/e0&gt;演算子または&lt;e1&gt;stub&lt;/e1&gt;演算子。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;s0&gt;&lt;c1&gt;:sigspace&lt;/c1&gt;&lt;/s0&gt; or &lt;s2&gt;&lt;c3&gt;:s&lt;/c3&gt;&lt;/s2&gt; adverb makes whitespace significant in a regex.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T052926Z" creationid="yamato" creationdate="20140923T052926Z">
+        <seg>&lt;s0&gt;&lt;c1&gt;:sigspace&lt;/c1&gt;&lt;/s0&gt;または&lt;s2&gt;&lt;c3&gt;:s&lt;/c3&gt;&lt;/s2&gt;副詞は空白を正規表現で重要にさせる。</seg>
       </tuv>
     </tu>
     <tu>
