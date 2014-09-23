@@ -5486,6 +5486,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If minimal and maximal number of matches are the same, a single integer is possible: &lt;c0&gt;a ** 5&lt;/c0&gt; to match &lt;c1&gt;a&lt;/c1&gt; exactly five times.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T052154Z" creationid="yamato" creationdate="20140923T052154Z">
+        <seg>最小と最高の数が同じなら1つの整数でもよい：&lt;c0&gt;a ** 5&lt;/c0&gt;は&lt;c1&gt;a&lt;/c1&gt;がきっかり5回にマッチする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If multiple roles are applied to the same class, conflicts (e.g. non-multi methods of the same name) cause a compile-time error, which can be solved by providing a method of the same name in the class.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T025538Z" creationid="yamato" creationdate="20140921T025538Z">
@@ -14682,6 +14690,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T062101Z" creationid="Toshiyuki" creationdate="20130810T062101Z">
         <seg>二つの配列を並行して処理するために&lt;c0&gt;zip&lt;/c0&gt;関数を使用してパラメータの数が一致するようにバインド可能なリストを生成する：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To quantifier an atom an arbitrary number of times, you can say for example &lt;c0&gt;a ** 2..5&lt;/c0&gt; to match the character &lt;c1&gt;a&lt;/c1&gt; at least twice and at most 5 times</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T052041Z" creationid="yamato" creationdate="20140923T052041Z">
+        <seg>アトムに任意の回数、例えば&lt;c0&gt;a ** 2..5&lt;/c0&gt;なら少なくとも2回から5回の&lt;c1&gt;a&lt;/c1&gt;にマッチする。</seg>
       </tuv>
     </tu>
     <tu>
