@@ -870,6 +870,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;Grammar&lt;/c0&gt; is the superclass that classes automatically get when they are declared with the &lt;c1&gt;grammar&lt;/c1&gt; keyword instead of &lt;c2&gt;class&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T092456Z" creationid="yamato" creationdate="20140923T092456Z">
+        <seg>&lt;c0&gt;Grammar&lt;/c0&gt;は、それらが&lt;c2&gt;class&lt;/c2&gt;の代わりに&lt;c1&gt;grammar&lt;/c1&gt;キーワードで宣言されるとき、クラスが自動的に得るスーパークラスである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;Int&lt;/c0&gt; automatically supports promotion to arbitrary precision, as well as holding &lt;c1&gt;Inf&lt;/c1&gt; and &lt;c2&gt;NaN&lt;/c2&gt; values.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T130411Z" creationid="Toshiyuki" creationdate="20140328T130411Z">
@@ -4906,6 +4914,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140923T074215Z" creationid="yamato" creationdate="20140923T074215Z">
         <seg>グラマーは、テキストを分解して、そのテキストを解釈することによって作成されたデータ構造を返すのに用いられる強力なツールである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Grammars should only be used to parse text; if you wish to extract complex data, an &lt;a3&gt;action class&lt;/a3&gt; is recommended to be used in conjunction with the grammar.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T092628Z" creationid="yamato" creationdate="20140923T092628Z">
+        <seg>グラマーはテキストをパースするのに用いられなければならないだけである；あなたが複雑なデータを得たいならば、アクションクラスはグラマーとともに使うことが勧められる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12920,8 +12936,8 @@ qw/a b c/</seg>
       <tuv lang="EN-US">
         <seg>The only difference between the &lt;c0&gt;token&lt;/c0&gt; and &lt;c1&gt;rule&lt;/c1&gt; declarators is that the &lt;c2&gt;rule&lt;/c2&gt; declarator causes &lt;a3&gt;&lt;c4&gt;:sigspace&lt;/c4&gt;&lt;/a3&gt; to go into effect for the Regex:</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamato" changedate="20140923T092335Z" creationid="yamato" creationdate="20140923T092335Z">
-        <seg>&lt;c0&gt;token&lt;/c0&gt;と&lt;c1&gt;rule&lt;/c1&gt;宣言の唯一の違いは、&lt;c2&gt;rule&lt;/c2&gt;宣言が&lt;a3&gt;&lt;c4&gt;:sigspace&lt;/c4&gt;&lt;/a3&gt; に正規表現のために実施されるということである：</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T092358Z" creationid="yamato" creationdate="20140923T092335Z">
+        <seg>&lt;c0&gt;token&lt;/c0&gt;と&lt;c1&gt;rule&lt;/c1&gt;宣言の唯一の違いは、&lt;c2&gt;rule&lt;/c2&gt;宣言が&lt;a3&gt;&lt;c4&gt;:sigspace&lt;/c4&gt;&lt;/a3&gt; を正規表現のために実施させるということである：</seg>
       </tuv>
     </tu>
     <tu>
