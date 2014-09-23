@@ -4670,6 +4670,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Fortunately, defining your own is simple enough.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T021306Z" creationid="yamato" creationdate="20140923T021306Z">
+        <seg>幸い、自身で定義するのは十分シンプルだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>From there it continues to scan outward to find the innermost block outside the &lt;c3&gt;when&lt;/c3&gt; that defines &lt;c4&gt;$_&lt;/c4&gt;, either explicitly or implicitly.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130812T114431Z" creationid="Toshiyuki" creationdate="20130812T114431Z">
@@ -10786,6 +10794,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>時々、変数名でシギルを保つことはより明白であるので、これを書く交互の方法は以下の通りである：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sometimes the pre-existing wildcards and character classes are just not enough.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T021240Z" creationid="yamato" creationdate="20140923T021240Z">
+        <seg>時々、既にあるワイルドカードと文字クラスでは十分でない。</seg>
       </tuv>
     </tu>
     <tu>
