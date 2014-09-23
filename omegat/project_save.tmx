@@ -2734,6 +2734,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Between &lt;c0&gt;&lt;[ ]&gt; &lt;/c0&gt;, you can put any number of single characters and ranges of characters (expressed with two dots between the end points) between them, with or without whitespace.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140923T021910Z" creationid="yamato" creationdate="20140923T021910Z">
+        <seg>&lt;c0&gt;&lt;[ ]&gt; &lt;/c0&gt;の間に任意の数の文字と文字のレンジ（間に2つのドットを入れる）を置ける。空白は無視される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Binding is different from assignment.</seg>
       </tuv>
       <tuv lang="JA">
