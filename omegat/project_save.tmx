@@ -1494,6 +1494,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A tutorial for creating and using classes in Perl 6</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140924T132355Z" creationid="yamato" creationdate="20140924T132355Z">
+        <seg>Perlでのクラスの作成と使用のチュートリアル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A twigil forms part of the name of the variable.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T182643Z" creationid="Toshiyuki" creationdate="20140111T182643Z">
