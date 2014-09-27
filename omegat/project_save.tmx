@@ -2614,6 +2614,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Assuming each of the following statements is the final statement in a block, "sunk" loops such as these may be indicated:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T151150Z" creationid="yamato" creationdate="20140927T151150Z">
+        <seg>以下のステートメントの各々がブロックの最終的なステートメントであるならば、これらのような「埋没した」ループは以下のように示されるかもしれない：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>At each point in the parse, the lexer knows which subset of the grammatical categories are possible at that point, and follows the longest-token rule across all the active alternatives, including those representing any grammatical categories that are ready to match.</seg>
       </tuv>
       <tuv lang="JA">
@@ -3722,6 +3730,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>オープナーとクローザーを数える構成概念は、所定のオープナーだけが特別であると仮定する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Constructs that parse a single statement or semilist as an argument are presumed to want the results of that statement, so such constructs remain lazy even when that statement is a loop.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T151110Z" creationid="yamato" creationdate="20140927T151110Z">
+        <seg>単文をパースする構造または引数としてのセミリストはそのステートメントの結果が欲しいために推定されるので、そのステートメントがループであるときさえ、そのような構造はレイジーままである。</seg>
       </tuv>
     </tu>
     <tu>
