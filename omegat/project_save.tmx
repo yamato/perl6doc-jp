@@ -16806,6 +16806,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>but lazy loops can be indicated by putting the loop in parens or brackets:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T151622Z" creationid="yamato" creationdate="20140927T151622Z">
+        <seg>しかし、レイジーループは、ループを括弧またはブラケットに置くことによって表されることができる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>but never as</seg>
       </tuv>
       <tuv lang="JA">
@@ -17174,6 +17182,14 @@ my \θ       = 15 * degrees;</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T124445Z" creationid="yamato" creationdate="20140914T124445Z">
         <seg>または定数として</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>or by use of either a statement prefix or a phaser in statement form:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T151720Z" creationid="yamato" creationdate="20140927T151720Z">
+        <seg>または文接頭語かステートメント形式のフェーザーの使用によって：</seg>
       </tuv>
     </tu>
     <tu>
