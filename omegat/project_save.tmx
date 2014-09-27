@@ -1246,6 +1246,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A &lt;c3&gt;do&lt;/c3&gt; is unnecessary immediately after any opening bracket as the syntax inside brackets expects a statements, so the above can in fact be written:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T142444Z" creationid="yamato" creationdate="20140927T142444Z">
+        <seg>ブラケットの内側の構文がステートメントを期待して、&lt;c3&gt;do&lt;/c3&gt;はブラケットを開けている何の直後にでも不必要であるので、上記は実際は次のように書ける：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A &lt;c3&gt;once&lt;/c3&gt; runs separately for each clone, so separate clones can keep separate state variables:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130822T030938Z" creationid="Toshiyuki" creationdate="20130822T030712Z">
