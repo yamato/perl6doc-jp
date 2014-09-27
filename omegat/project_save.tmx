@@ -366,6 +366,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(Only a single statement is allowed inside parens or brackets; otherwise it will be interpreted as a LoL composer.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T140223Z" creationid="yamato" creationdate="20140927T140223Z">
+        <seg>（単文だけは括弧またはブラケットの中に許される；さもなければ、それはLoLコンポーザーと解釈される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(Only conceptually; actually the list of methods is built at class composition time).</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T033328Z" creationid="yamato" creationdate="20140921T033328Z">
@@ -8834,6 +8842,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>それゆえに、空白文字がそれの前に許されないことに注意すべきである</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note though that the contents of parens or brackets is parsed as a statement, so you can say:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T140115Z" creationid="yamato" creationdate="20140927T140115Z">
+        <seg>括弧またはブラケット内の内容はステートメントとして解析されるので、以下のように書くことができる：</seg>
       </tuv>
     </tu>
     <tu>
