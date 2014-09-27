@@ -11390,6 +11390,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>That is, lookahead of more than one "longest token" is discouraged.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T120116Z" creationid="yamato" creationdate="20140927T120116Z">
+        <seg>つまり、複数の「最も長いトークン」の先読みは認められない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>That is, precedence decisions do not cross a &lt;c2&gt;do&lt;/c2&gt; boundary, and the missing "right paren" is assumed at the next statement terminator or unmatched bracket.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T124306Z" creationid="Toshiyuki" creationdate="20130810T124306Z">
