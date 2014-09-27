@@ -11998,6 +11998,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;given&lt;/c0&gt; construct is not considered a loop, and just returns normally.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T205545Z" creationid="yamato" creationdate="20140927T205545Z">
+        <seg>&lt;c0&gt;given&lt;/c0&gt;構造はループとみなされず、ただ普通通りに戻る。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c0&gt;if&lt;/c0&gt; and &lt;c1&gt;unless&lt;/c1&gt; statements work much as they do in Perl 5.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130803T042914Z" creationid="Toshiyuki" creationdate="20130803T042914Z">
