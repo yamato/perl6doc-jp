@@ -454,6 +454,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(Side effects are the only reason to execute such statements in the first place, and Perl will, in fact, warn you if you do something that is "useless" in sink context.) A loop in sink context not only evaluates itself eagerly, but can optimize away the production of any values from the loop.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T150718Z" creationid="yamato" creationdate="20140927T150718Z">
+        <seg>（副作用は第一にそのようなステートメントを実行する唯一の理由である、そして、あなたが受け手コンテクストで「役に立たない」何かをするならば、Perlは、実際、あなたに警告する。）受け手コンテクストのループは、熱心にそれ自体を評価するだけでなく、ループから離れて任意の値の生成を最適化することもできる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(Such pseudo operators may also place restrictions on which meta-operators work on them.)</seg>
       </tuv>
       <tuv lang="JA">
@@ -5426,6 +5434,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T063749Z" creationid="Toshiyuki" creationdate="20130810T063749Z">
         <seg>しかしながら、これは自動でchompされたファイルハンドルではおそらく失敗するので、代わりに&lt;c0&gt;for&lt;/c0&gt;ループを使え。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>However, to support the expectations of imperative programmers (the vast majority of us, it turns out), any explicit loop found as the final statement of a statement list is automatically forced to use sink semantics so that the loop executes to completion before returning from the block.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T150918Z" creationid="yamato" creationdate="20140927T150918Z">
+        <seg>しかし、命令的なプログラマーの期待をサポートするために（我々の大部分、それはわかる）、ステートメントリストの最終的なステートメントとして見つかる何か明示的ループはループがブロックから帰る前に完成に実行する使用受け手意味論にそう自動的に強制される。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12638,6 +12654,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The final statement of a statement list is not a sink context, and can return any value including a lazy list.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T150749Z" creationid="yamato" creationdate="20140927T150749Z">
+        <seg>ステートメントリストの最終的なステートメントは、受け手コンテクストでなくて、レイジーリストを含む任意の値を返すことができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The first declaration specifies instance storage for a callback -- a bit of code to invoke in order to perform the task that an object represents:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T182453Z" creationid="Toshiyuki" creationdate="20140111T182453Z">
@@ -14290,6 +14314,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>このfixupは、暫定的な呼び出しのためにだけされる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This forced sink context is applied to loops &lt;i0&gt;only&lt;/i0&gt; at the statement list level, that is, at the top level of a compilation unit, or directly inside a block.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T151010Z" creationid="yamato" creationdate="20140927T151010Z">
+        <seg>この強制的受け手コンテクストは、ステートメントリストレベル&lt;i0&gt;だけ&lt;/i0&gt;のループ（つまり、コンパイル単位のトップレベルで）に、または、直接ブロック内で適用される。</seg>
       </tuv>
     </tu>
     <tu>
