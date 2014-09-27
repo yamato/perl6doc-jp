@@ -1,4 +1,4 @@
-﻿control flow	制御フロー
+control flow	制御フロー
 programming language	プログラミング言語
 feature	特徴、特色、機能
 dynamic	動的な、機能的な
@@ -168,7 +168,6 @@ at least	少なくとも
 alias	別名を付ける
 export	エクスポートする
 any other	何か他の
-
 aliasing	別名を付けること
 part of	部分
 some	いくつかの
@@ -739,3 +738,6 @@ Conversely	反対に、逆に
 ephemeral	短命な、一過性の
 as well as	だけでなく
 subsequent	以降の
+fundamental	基本の、重要な
+representation	表現
+encapsulation	カプセル化
