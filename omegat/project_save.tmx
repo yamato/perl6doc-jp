@@ -5718,6 +5718,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If such use can't be detected because it is hidden in an &lt;c2&gt;EVAL&lt;/c2&gt;, then it is erroneous, since the &lt;c3&gt;EVAL()&lt;/c3&gt; compiler might bind to either &lt;c4&gt;$OUTER::x&lt;/c4&gt; or the subsequently declared "&lt;c5&gt;my $x&lt;/c5&gt;".</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T134933Z" creationid="yamato" creationdate="20140927T134933Z">
+        <seg>&lt;c2&gt;EVAL&lt;/c2&gt;で隠されているためにそのような使用が検出できないならそれは誤りなので、&lt;c3&gt;EVAL()&lt;/c3&gt;コンパイラは&lt;c4&gt;$OUTER::x&lt;/c4&gt;か後で宣言される"&lt;c5&gt;my $x&lt;/c5&gt;"にバインドするだろう。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If that's not intended, you must use whitespace between the adverb and the opening bracket.</seg>
       </tuv>
       <tuv lang="JA">
