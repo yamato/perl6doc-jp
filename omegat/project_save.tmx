@@ -6382,6 +6382,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In any sequence of statements, only the value of the final statement is returned, so all prior statements are evaluated in sink context, which is automatically eager, to force the evaluation of side effects.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T150458Z" creationid="yamato" creationdate="20140927T150458Z">
+        <seg>ステートメントの何かシーケンスに、最終的なステートメントの値だけは返されるので、副作用の評価を強制するために、すべての前のステートメントは受け手コンテクスト（それは自動的に熱心である）で評価される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In between the &lt;c0&gt;&lt; &gt; &lt;/c0&gt;, you can also use the same operators for categories (&lt;c1&gt;+&lt;/c1&gt;, &lt;c2&gt;|&lt;/c2&gt;, &lt;c3&gt;&amp;&lt;/c3&gt;, &lt;c4&gt;-&lt;/c4&gt;, &lt;c5&gt;^&lt;/c5&gt;) to combine multiple range definitions and even mix in some of the unicode categories above.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140923T032123Z" creationid="yamato" creationdate="20140923T032123Z">
