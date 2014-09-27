@@ -7782,6 +7782,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Locate the end of interpolated expressions that begin with a sigil and might or might not end with brackets.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T120315Z" creationid="yamato" creationdate="20140927T120315Z">
+        <seg>シギルで始まって、ブラケットで終わるかもしれないか、終わらないかもしれない展開された式の終わりを置きなさい。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Looking at it the other way, all arguments that don't actually need to be wrapped up in a parcel are considered degenerate parcels in their own right when it comes to binding.</seg>
       </tuv>
       <tuv lang="JA">
@@ -9946,6 +9954,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140917T122437Z" creationid="yamato" creationdate="20140917T122437Z">
         <seg>読み取り専用バインディング。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Recognize that a reduce operator is not really beginning a &lt;c0&gt;[...]&lt;/c0&gt; composer.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T120428Z" creationid="yamato" creationdate="20140927T120428Z">
+        <seg>減少演算子が&lt;c0&gt;[...]&lt;/c0&gt;コンポーザーを本当に開始していないことを認識しなさい。</seg>
       </tuv>
     </tu>
     <tu>
