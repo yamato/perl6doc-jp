@@ -1934,6 +1934,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Although a bare block occurring as a single statement is no longer a do-once loop, as with loops when used in a statement list, it still executes immediately as in Perl 5, as if it were immediately dereferenced with a &lt;c0&gt;.()&lt;/c0&gt; postfix, so within such a block &lt;c1&gt;CALLER::&lt;/c1&gt; refers to the dynamic scope associated with the lexical scope surrounding the block.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T210141Z" creationid="yamato" creationdate="20140927T210141Z">
+        <seg>単一ステートメントとして生じている裸のブロックがもはや1度だけのループでないが、ステートメントリストで使われるとき、ループと同様に、まるで&lt;c0&gt;.()&lt;/c0&gt;接尾辞ですぐに間接参照されるように、それはPerl 5の場合のようにすぐまだ実行するので、そのようなブロックの中で、&lt;c1&gt;CALLER::&lt;/c1&gt;はブロックを囲んでいるレキシカルスコープと関連する動的スコープに参照する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Although objects of type &lt;c0&gt;Scalar&lt;/c0&gt; are everywhere in Perl 6, you usually never see them directly as objects, because most operations &lt;e1&gt;decontainerize&lt;/e1&gt;, which means they act on the &lt;c2&gt;Scalar&lt;/c2&gt; container's contents instead of the container itself.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T131253Z" creationid="yamato" creationdate="20140914T131253Z">
@@ -12170,6 +12178,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130806T101538Z" creationid="Toshiyuki" creationdate="20130806T101538Z">
         <seg>&lt;c4&gt;.next&lt;/c4&gt;と&lt;c5&gt;.last&lt;/c5&gt;メソッドはそのループのイテレーションの最終値を与える任意の引数をとる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c6&gt;take&lt;/c6&gt; function's signature is like that of &lt;c7&gt;return&lt;/c7&gt;; while having the syntax of a list operator, it merely returns a single item or "argument" (see &lt;a8&gt;S02&lt;/a8&gt; for definition).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T210732Z" creationid="yamato" creationdate="20140927T210732Z">
+        <seg>&lt;c6&gt;take&lt;/c6&gt;関数のシグネチャは、&lt;c7&gt;return&lt;/c7&gt;のそれのようである；リスト演算子の構文を持っている間、それは単に一つのアイテムまたは「引数」（定義については&lt;a8&gt;S02&lt;/a8&gt;を参照）を返すだけである。</seg>
       </tuv>
     </tu>
     <tu>
