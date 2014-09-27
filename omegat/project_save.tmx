@@ -8766,6 +8766,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that the corresponding block forms put the loop into a statement list, so these loops are evaluated in sink context:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T151815Z" creationid="yamato" creationdate="20140927T151815Z">
+        <seg>対応するブロックの形がループをステートメントリストに入れるので、これらのループは受け手コンテクストで評価されることに注意：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that the default constructor will only set attributes that have an accessor method.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T022416Z" creationid="yamato" creationdate="20140920T022416Z">
