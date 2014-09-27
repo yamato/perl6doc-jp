@@ -2030,6 +2030,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>An eager loop may likewise be indicated by using the &lt;c0&gt;eager&lt;/c0&gt; statement prefix:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T153648Z" creationid="yamato" creationdate="20140927T153648Z">
+        <seg>熱心なループは、&lt;c0&gt;eager&lt;/c0&gt;文接頭語を用いて同様に表されることができる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>An earlier section explained that declaring the class &lt;c0&gt;Task&lt;/c0&gt; installed a type object in the namespace.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140314T141736Z" creationid="Toshiyuki" creationdate="20140112T090833Z">
