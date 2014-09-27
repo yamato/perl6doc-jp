@@ -8830,6 +8830,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Numbers</seg>
+      </tuv>
+      <tuv lang="JA" changeid="Toshiyuki" changedate="20140322T013833Z" creationid="Toshiyuki" creationdate="20140322T013833Z">
+        <seg>数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Numeric Coercion of StrPos or StrLen</seg>
       </tuv>
       <tuv lang="JA">
