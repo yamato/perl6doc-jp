@@ -4158,6 +4158,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Essentially, the compiler turns it into a &lt;c2&gt;goto&lt;/c2&gt; with an implicitly generated (secret) label on that first statement.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T122220Z" creationid="yamato" creationdate="20140927T122220Z">
+        <seg>本質的に、コンパイラはその最初の文の暗黙のうちに生成された（秘密の）ラベルで、それを&lt;c2&gt;goto&lt;/c2&gt;に変える。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Evaluates its argument in boolean context (and thus collapses &lt;a0&gt;Junction&lt;/a0&gt;s), and negates the result.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140916T140433Z" creationid="yamato" creationdate="20140916T140433Z">
@@ -6570,6 +6578,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>下位呼び出しの結果を差し込むために、シギルと括弧を含むことが、必要である：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In order to know when that implicit label must be generated, we restrict &lt;c3&gt;redo&lt;/c3&gt; to the current outer lexical scope.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T122307Z" creationid="yamato" creationdate="20140927T122307Z">
+        <seg>その暗黙のラベルがいつ生成されなければならないかについてわかっているために、我々は現在の外のレキシカルスコープに&lt;c3&gt;redo&lt;/c3&gt;を限定する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11874,6 +11890,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T213053Z" creationid="Toshiyuki" creationdate="20140328T213053Z">
         <seg>&lt;c0&gt;of&lt;/c0&gt;型はどのような種類の値が変数に保存されるか指定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;redo&lt;/c0&gt; operator, as a variant of &lt;c1&gt;goto&lt;/c1&gt;, directly transfers control to the first statement of the lexotically enclosed loop.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T122111Z" creationid="yamato" creationdate="20140927T122111Z">
+        <seg>&lt;c0&gt;redo&lt;/c0&gt;演算子は、&lt;c1&gt;goto&lt;/c1&gt;の変形として、コントロールをレキシカルに囲まれたループの最初の文から、直接転送する。</seg>
       </tuv>
     </tu>
     <tu>
