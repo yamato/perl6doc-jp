@@ -8742,6 +8742,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that since &lt;c0&gt;do&lt;/c0&gt; is considered a one-time loop, it is always evaluated eagerly, despite being a statement prefix.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T160855Z" creationid="yamato" creationdate="20140927T160855Z">
+        <seg>&lt;c0&gt;do&lt;/c0&gt;はワンタイムのループとみなされるので、ステートメントの接頭辞に関わらずそれは常に熱心に評価される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that since these are type names, parentheses must always be used to call them as coercers, since the listop form is not allowed for coercions.</seg>
       </tuv>
       <tuv lang="JA">
@@ -14554,6 +14562,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T025645Z" creationid="yamato" creationdate="20140921T025645Z">
         <seg>これは多重継承よりずっと安全だ。そこで、競合はコンパイラによって決して見つけられなくて、その代わりに単にMROの初期に現れるスーパークラスに解決される。そして、それはプログラマーが望んだものであるかもしれないか、ないかもしれない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is no great hardship; the &lt;c1&gt;lazy&lt;/c1&gt; prefix is better documentation in any case.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T161008Z" creationid="yamato" creationdate="20140927T161008Z">
+        <seg>これは大変な困難ではない；&lt;c1&gt;lazy&lt;/c1&gt;接頭辞はいずれにせよより良いドキュメンテーションだ。</seg>
       </tuv>
     </tu>
     <tu>
