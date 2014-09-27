@@ -2846,6 +2846,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Blocks are delimited by curlies, or by the beginning and end of the current compilation unit (either the current file or the current &lt;c0&gt;EVAL&lt;/c0&gt; string).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T133358Z" creationid="yamato" creationdate="20140927T133358Z">
+        <seg>ブロックはカーリーによって、または現在のコンパイル単位（現行ファイルか現在の&lt;c0&gt;EVAL&lt;/c0&gt;文字列）の始めと終わりによって区切られる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Boolean bitwise negation.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T043444Z" creationid="yamato" creationdate="20140915T043444Z">
