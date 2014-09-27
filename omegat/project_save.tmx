@@ -190,6 +190,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(If you find yourself wanting the dynamic variant, please use &lt;c4&gt;goto&lt;/c4&gt; with an explicit label instead, so the compiler can know to pessimize any unrolling of that loop.)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T134430Z" creationid="yamato" creationdate="20140927T134430Z">
+        <seg>（動的なバリアントを望むなら代わりに明示的なラベルで&lt;c4&gt;goto&lt;/c4&gt;を使う。なのでコンパイラはそのループを開くことで何か効率が悪くなることを知ることができる。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(In other words, it does autoboxing and autounboxing as necessary.</seg>
       </tuv>
       <tuv lang="JA">
