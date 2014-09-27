@@ -7358,6 +7358,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It may not be used dynamically.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T124729Z" creationid="yamato" creationdate="20140927T124729Z">
+        <seg>それは動的に使うことはないだろう。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It means "there is no value here".</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140327T132653Z" creationid="Toshiyuki" creationdate="20140327T132653Z">
