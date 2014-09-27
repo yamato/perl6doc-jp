@@ -7318,6 +7318,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It is erroneous to write an eager loop without a loop exit, since that will chew up all your memory.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T155940Z" creationid="yamato" creationdate="20140927T155940Z">
+        <seg>それがあなたのすべてのメモリを破壊するので、ループ出口なしで熱心なループを記述することは誤りである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It is given as a trait of the variable:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T224539Z" creationid="Toshiyuki" creationdate="20140328T224539Z">
