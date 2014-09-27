@@ -3766,6 +3766,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Control flow is a dynamic feature of all computer programming languages, but languages differ in the extent to which control flow is attached to declarative features of the language, which are often known as "static" or "lexical".</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T121823Z" creationid="yamato" creationdate="20140927T121823Z">
+        <seg>制御フローはすべてのコンピュータプログラミング言語のダイナミックな機能である。しかし、言語は制御フローが言語の宣言的機能に付けられる範囲において異なる。そして、それは"static"または"lexical"としてよく知られている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Conveniently, arrays and hashes interpolate with only whitespace separators by default, so the subsequent split on whitespace still works out.</seg>
       </tuv>
       <tuv lang="JA">
