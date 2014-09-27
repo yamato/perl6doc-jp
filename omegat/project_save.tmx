@@ -7230,6 +7230,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It doesn't matter that there is only one statement there; what matters is that a sequence of statements is expected there by the grammar.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T153532Z" creationid="yamato" creationdate="20140927T153532Z">
+        <seg>1つのステートメントだけがそこにあることは、重要でない；重要であることは、一連のステートメントがグラマーによってそこで期待されるということである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It either returns an unthrown exception, or throws the exception.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T170453Z" creationid="Toshiyuki" creationdate="20130817T170453Z">
