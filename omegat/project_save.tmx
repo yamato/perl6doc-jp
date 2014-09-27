@@ -134,6 +134,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(Generic languages are allowed, but only if intended; accidentally generic languages lead to loss of linguistic identity and integrity.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T120705Z" creationid="yamato" creationdate="20140927T120705Z">
+        <seg>（しかし、意図される場合だけ、一般的な言語は許される；一般的な言語は、偶然に結果として言語アイデンティティと完全性の損失に導く。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(However, as with the other bracketed forms, the value may end up being used as a subscript depending on context.)</seg>
       </tuv>
       <tuv lang="JA">
@@ -14408,8 +14416,8 @@ qw/a b c/</seg>
       <tuv lang="EN-US">
         <seg>This is the hard lesson of Perl 5's source filters and other multi-pass parsing mistakes.)</seg>
       </tuv>
-      <tuv lang="JA">
-        <seg>これは難しいレッスンであるPerl 5が、ソースフィルタである、そして、他のマルチパス構文解析は誤認する。）</seg>
+      <tuv lang="JA" changeid="yamato" changedate="20140927T120843Z">
+        <seg>これはPerl 5のソースフィルターと他のマルチパス解析の間違いの難しいレッスンだ。）</seg>
       </tuv>
     </tu>
     <tu>
