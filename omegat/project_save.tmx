@@ -1958,6 +1958,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Alternately, any &lt;c4&gt;PRE&lt;/c4&gt; phaser may define its corresponding &lt;c5&gt;POST&lt;/c5&gt; as an embedded phaser block that closes over the lexical scope of the &lt;c6&gt;PRE&lt;/c6&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T025950Z" creationid="yamato" creationdate="20140928T025950Z">
+        <seg>あるいは、何か&lt;c4&gt;PRE&lt;/c4&gt;フェーザーは、&lt;c6&gt;PRE&lt;/c6&gt;のレキシカルスコープの上に閉まる埋め込みフェーザーブロックとして、その対応する&lt;c5&gt;POST&lt;/c5&gt;を定義することができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Alternately, if an object is being serialized to a form that does not preserve object identity, there is no requirement to preserve uniqueness, since in this case the object is really being translated to a value type representation, and reconstituted on the other end as a different unique object.</seg>
       </tuv>
       <tuv lang="JA">
@@ -5350,6 +5358,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>How this information is made available is implementation dependent.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T030237Z" creationid="yamato" creationdate="20140928T030237Z">
+        <seg>この情報が利用可能となる方法は、処理系依存である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>However this is considered poor practice, because it makes correct initialization of objects from subclasses harder.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T024241Z" creationid="yamato" creationdate="20140921T024241Z">
@@ -5714,6 +5730,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130814T114130Z" creationid="Toshiyuki" creationdate="20130814T114130Z">
         <seg>もし継続が使われたら、&lt;c0&gt;.resume&lt;/c0&gt;呼び出しは単純に問題の継続に飛び、 そのlambdaのコールフレームは破棄される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If exit phasers are running as a result of a stack unwind initiated by an exception, this information needs to be made available.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T030017Z" creationid="yamato" creationdate="20140928T030017Z">
+        <seg>終了フェーザーがスタックの結果として動作しているならば、例外によって開始されて巻き戻しなさい、この情報は利用可能となる必要がある。</seg>
       </tuv>
     </tu>
     <tu>
