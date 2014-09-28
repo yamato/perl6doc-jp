@@ -11086,6 +11086,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>So &lt;c0&gt;LEAVE&lt;/c0&gt; phasers for a given block are necessarily evaluated after any &lt;c1&gt;CATCH&lt;/c1&gt; and &lt;c2&gt;CONTROL&lt;/c2&gt; phasers.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T023012Z" creationid="yamato" creationdate="20140928T023012Z">
+        <seg>それで、与えられたブロックのための&lt;c0&gt;LEAVE&lt;/c0&gt;フェーザーは、何か&lt;c1&gt;CATCH&lt;/c1&gt;と&lt;c2&gt;CONTROL&lt;/c2&gt;フェーザーの後必然的に評価される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>So &lt;c0&gt;[1, 2, 3].join(',')&lt;/c0&gt; produces &lt;c1&gt;"1,2,3"&lt;/c1&gt; as a result, as one might hope.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T141738Z" creationid="yamato" creationdate="20140914T141738Z">
