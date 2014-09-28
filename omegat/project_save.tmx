@@ -926,6 +926,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;FIRST&lt;/c0&gt;, &lt;c1&gt;NEXT&lt;/c1&gt;, and &lt;c2&gt;LAST&lt;/c2&gt; are meaningful only within the lexical scope of a loop, and may occur only at the top level of such a loop block.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T021403Z" creationid="yamato" creationdate="20140928T021403Z">
+        <seg>&lt;c0&gt;FIRST&lt;/c0&gt;、&lt;c1&gt;NEXT&lt;/c1&gt;と&lt;c2&gt;LAST&lt;/c2&gt;は、ループのレキシカルスコープの中でだけ意味があって、そのようなループブロックのトップレベルだけで、生じることができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;Grammar&lt;/c0&gt; is the superclass that classes automatically get when they are declared with the &lt;c1&gt;grammar&lt;/c1&gt; keyword instead of &lt;c2&gt;class&lt;/c2&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140923T092456Z" creationid="yamato" creationdate="20140923T092456Z">
@@ -14482,6 +14490,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T120128Z" creationid="Toshiyuki" creationdate="20130817T120128Z">
         <seg>ダイナミックな制御はどんなレキシカルスコープの警告制御にも直交する。そしてそれは単に&lt;c1&gt;warn()&lt;/c1&gt;を呼ぶかどうか最初の場所で決定する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This feature is awaiting further exploration by means of a &lt;c2&gt;ClassHOW&lt;/c2&gt; extension.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T021155Z" creationid="yamato" creationdate="20140928T021155Z">
+        <seg>この機能は、&lt;c2&gt;ClassHOW&lt;/c2&gt;拡張によって更なる探究を待っている。</seg>
       </tuv>
     </tu>
     <tu>
