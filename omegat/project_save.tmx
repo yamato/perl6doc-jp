@@ -9518,6 +9518,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Other similar forms, where a keyword is followed by code to be controlled by it, may also take bare statements, including &lt;c0&gt;try&lt;/c0&gt;, &lt;c1&gt;once&lt;/c1&gt;, &lt;c2&gt;quietly&lt;/c2&gt;, &lt;c3&gt;start&lt;/c3&gt;, &lt;c4&gt;lazy&lt;/c4&gt;, and &lt;c5&gt;sink&lt;/c5&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T013615Z" creationid="yamato" creationdate="20140928T013615Z">
+        <seg>他の類似した形式（キーワードの後にそれに寄ってコントロールされるためにコードが続く）は以下の裸のステートメントを取ることができ、以下を含む。&lt;c0&gt;try&lt;/c0&gt;、&lt;c1&gt;once&lt;/c1&gt;、&lt;c2&gt;quietly&lt;/c2&gt;、&lt;c3&gt;start&lt;/c3&gt;、&lt;c4&gt;lazy&lt;/c4&gt;、&lt;c5&gt;sink&lt;/c5&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Otherwise it constructs a &lt;a0&gt;Block&lt;/a0&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T033844Z" creationid="yamato" creationdate="20140915T033844Z">
