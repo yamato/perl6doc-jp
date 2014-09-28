@@ -718,6 +718,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(You can say something like &lt;c6&gt;try({...})&lt;/c6&gt;, but then you are calling the &lt;c7&gt;try()&lt;/c7&gt; function using function call syntax instead, and since Perl does not supply such a function, it will be assumed to be a user-defined function.) For purposes of flow control, none of these forms are considered loops, but they may easily be applied to a normal loop.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T014003Z" creationid="yamato" creationdate="20140928T014003Z">
+        <seg>（あなたは&lt;c6&gt;try({...})&lt;/c6&gt;のような何かを書くことができる。しかし&lt;c7&gt;try()&lt;/c7&gt;関数を代わりに関数呼び出し文法で使い、Perlがそのような関数を供給しないので、それはユーザー定義の関数と仮定されるだろう。）フロー制御の目的のためにこれらの形式はループと見なされないが、これらは通常のループに簡単に適用出来る。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(You could write a macro that violates this, but resist the urge.) Variables that mediate between an outer statement and an inner block (such as loop variables) should generally be declared as formal parameters to that block.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130729T123354Z" creationid="Toshiyuki" creationdate="20130729T123036Z">
