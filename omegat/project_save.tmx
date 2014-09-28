@@ -1198,6 +1198,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c6&gt;POST&lt;/c6&gt; phasers are evaluated after everything else, to guarantee that even &lt;c7&gt;LEAVE&lt;/c7&gt; phasers can't violate postconditions.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T024807Z" creationid="yamato" creationdate="20140928T024807Z">
+        <seg>同じ&lt;c7&gt;LEAVE&lt;/c7&gt;フェーザーが事後条件を犯すことができないことを保証するために、&lt;c6&gt;POST&lt;/c6&gt;フェーザーは、他の全ての後評価される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c6&gt;PRE&lt;/c6&gt; and &lt;c7&gt;POST&lt;/c7&gt; return boolean values which, if false, trigger a runtime exception.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140928T020708Z" creationid="yamato" creationdate="20140928T020708Z">
