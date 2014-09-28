@@ -2166,6 +2166,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>An exception thrown from an &lt;c0&gt;ENTER&lt;/c0&gt; phaser will abort the &lt;c1&gt;ENTER&lt;/c1&gt; queue, but one thrown from a &lt;c2&gt;LEAVE&lt;/c2&gt; phaser will not.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T030343Z" creationid="yamato" creationdate="20140928T030343Z">
+        <seg>&lt;c0&gt;ENTER&lt;/c0&gt;フェーザーから投げられる例外は&lt;c1&gt;ENTER&lt;/c1&gt;キューを中止する、しかし、&lt;c2&gt;LEAVE&lt;/c2&gt;フェーザーから投げられる1つはそうしない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>An explicit placeholder may also be used:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130804T084207Z" creationid="Toshiyuki" creationdate="20130804T084207Z">
@@ -12906,6 +12914,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130814T112512Z" creationid="Toshiyuki" creationdate="20130814T112512Z">
         <seg>例外を投げるものは全ての例外がハンドルされることを示すために()を返すlambdaをキャッチするためにコールスタックを探す。そしてそのときハッピーで、その点にスタックを巻き戻す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The exceptions thrown by failing &lt;c3&gt;PRE&lt;/c3&gt; and &lt;c4&gt;POST&lt;/c4&gt; phasers cannot be caught by a &lt;c5&gt;CATCH&lt;/c5&gt; in the same block, which implies that &lt;c6&gt;POST&lt;/c6&gt; phaser are not run if a &lt;c7&gt;PRE&lt;/c7&gt; phaser fails.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T030503Z" creationid="yamato" creationdate="20140928T030503Z">
+        <seg>失敗している&lt;c3&gt;PRE&lt;/c3&gt;と&lt;c4&gt;POST&lt;/c4&gt;フェーザーによって投げられる例外は&lt;c5&gt;CATCH&lt;/c5&gt;によって同じブロックに引っかかることができない。そして、&lt;c7&gt;PRE&lt;/c7&gt;フェーザーが失敗するならば、それは&lt;c6&gt;POST&lt;/c6&gt;フェーザーが動作されないことを意味する。</seg>
       </tuv>
     </tu>
     <tu>
