@@ -9110,6 +9110,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Now it is associated only with loops.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T022002Z" creationid="yamato" creationdate="20140928T022002Z">
+        <seg>現在、それはループだけに関連する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Now, after a &lt;c0&gt;Journey&lt;/c0&gt; object is created, its &lt;c1&gt;.origin&lt;/c1&gt;, &lt;c2&gt;.destination&lt;/c2&gt;, and &lt;c3&gt;.notes&lt;/c3&gt; will all be accessible from outside of the class, but only &lt;c4&gt;.notes&lt;/c4&gt; can be modified.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T022033Z" creationid="yamato" creationdate="20140920T022033Z">
@@ -10786,6 +10794,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T124949Z" creationid="Toshiyuki" creationdate="20130817T124949Z">
         <seg>キャッチlambdaから返す方法の議論は前のセクションを参照。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See the &lt;c2&gt;once&lt;/c2&gt; above for &lt;c3&gt;state&lt;/c3&gt; semantics.]</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T022047Z" creationid="yamato" creationdate="20140928T022047Z">
+        <seg>上記の&lt;c2&gt;once&lt;/c2&gt;を&lt;c3&gt;state&lt;/c3&gt; 意味論のために参照。]</seg>
       </tuv>
     </tu>
     <tu>
@@ -16890,6 +16906,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>［注意する：公式ユニコード文字名のどれもコンマを含まない。］</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>[Note: the name &lt;c0&gt;FIRST&lt;/c0&gt; used to be associated with &lt;c1&gt;state&lt;/c1&gt; declarations.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T021916Z" creationid="yamato" creationdate="20140928T021916Z">
+        <seg>[Note: 名前&lt;c0&gt;FIRST&lt;/c0&gt;は&lt;c1&gt;state&lt;/c1&gt;宣言と関連して使われる。</seg>
       </tuv>
     </tu>
     <tu>
