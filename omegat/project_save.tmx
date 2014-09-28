@@ -406,6 +406,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(Perl 6's &lt;c2&gt;EVAL&lt;/c2&gt; function only evaluates strings, not blocks, and does not catch exceptions.) A &lt;c3&gt;try&lt;/c3&gt; block by default has a &lt;c4&gt;CATCH&lt;/c4&gt; block that handles all fatal exceptions by ignoring them.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T014946Z" creationid="yamato" creationdate="20140928T014946Z">
+        <seg>（Perl 6の&lt;c2&gt;EVAL&lt;/c2&gt;関数はブロックではなく文字列を評価し、例外をキャッチしない。）&lt;c3&gt;try&lt;/c3&gt;はデフォルトで&lt;c4&gt;CATCH&lt;/c4&gt;ブロックを持ち、致命的な例外を却下することでそれを取り扱う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(Rat64 will tend to be more accurate for numbers of normal or large magnitude, while Num64 may be more accurate for numbers of very small magnitude, since the Rat's size mismatch of numerator and denominator will eventually cost more accuracy than the Num's exponent overhead.</seg>
       </tuv>
       <tuv lang="JA">
