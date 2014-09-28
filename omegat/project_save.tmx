@@ -1198,6 +1198,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c8&gt;KEEP&lt;/c8&gt; and &lt;c9&gt;UNDO&lt;/c9&gt; are just variants of &lt;c10&gt;LEAVE&lt;/c10&gt;, and for execution order are treated as part of the queue of &lt;c11&gt;LEAVE&lt;/c11&gt; phasers.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T020852Z" creationid="yamato" creationdate="20140928T020852Z">
+        <seg>&lt;c8&gt;KEEP&lt;/c8&gt;と&lt;c9&gt;UNDO&lt;/c9&gt;は、ただ&lt;c10&gt;LEAVE&lt;/c10&gt;のバリアントで、実行順序のために&lt;c11&gt;LEAVE&lt;/c11&gt;フェーザーのキューの一部として扱われる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;e0&gt;upto&lt;/e0&gt; operator.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T043558Z" creationid="yamato" creationdate="20140915T043558Z">
@@ -7346,6 +7354,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T023251Z" creationid="yamato" creationdate="20140920T023251Z">
         <seg>これはチープで、あなたはその属性がこのクラスで宣言されていることを知っている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is conjectured that &lt;c0&gt;PRE&lt;/c0&gt; and &lt;c1&gt;POST&lt;/c1&gt; submethods in a class could be made to run as if they were phasers in any public method of the class.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T020956Z" creationid="yamato" creationdate="20140928T020956Z">
+        <seg>まるでそれらがクラスの何かパブリックメソッドのフェーザーであるように、クラスの&lt;c0&gt;PRE&lt;/c0&gt;と&lt;c1&gt;POST&lt;/c1&gt;サブメソッドが走らせられることができると推測される。</seg>
       </tuv>
     </tu>
     <tu>
