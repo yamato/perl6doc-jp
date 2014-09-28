@@ -4390,6 +4390,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Except for &lt;c0&gt;CATCH&lt;/c0&gt; and &lt;c1&gt;CONTROL&lt;/c1&gt; phasers, which run while an exception is looking for a place to handle it, all block-leaving phasers wait until the call stack is actually unwound to run.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T022528Z" creationid="yamato" creationdate="20140928T022528Z">
+        <seg>&lt;c0&gt;CATCH&lt;/c0&gt;と&lt;c1&gt;CONTROL&lt;/c1&gt;フェーザー（例外が扱われる場所を探している間に実行する）を除いて、ブロックを去る全てのフェーザーはコールスタックが実行するために実際に巻き戻るまで待つ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Except for such formal parameter declarations, all lexically scoped declarations are visible from the point of declaration to the end of the enclosing block.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130729T130432Z" creationid="Toshiyuki" creationdate="20130729T130432Z">
@@ -15682,6 +15690,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>Untyped配列とハッシュには、まだ完全に許容できるが、それらにはPerl 5である同じ性能の問題がある。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Unwinding happens only after some exception handler decides to handle the exception that way.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T022602Z" creationid="yamato" creationdate="20140928T022602Z">
+        <seg>いくつかの例外ハンドラーがそのように例外を取り扱うことに決めたあとだけ、巻き戻しは起こる。</seg>
       </tuv>
     </tu>
     <tu>
