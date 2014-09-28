@@ -9318,6 +9318,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Only phasers that can occur multiple times within a block are eligible for this per-variable form.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T015712Z" creationid="yamato" creationdate="20140928T015712Z">
+        <seg>ブロックの中で複数回生じることがあり得るフェーザーだけがこの変数ごとの形式に適格だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Only use &lt;c3&gt;$.origin&lt;/c3&gt; if you explicitly want to allow overriding.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T023433Z" creationid="yamato" creationdate="20140920T023427Z">
@@ -12498,6 +12506,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130811T041448Z" creationid="Toshiyuki" creationdate="20130811T041448Z">
         <seg>どんな特定の実装の選択も明確にPerl 6の定義の一部ではない。そして移植可能なコード内でそれに頼るべきではない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The compiler is free to ignore &lt;c0&gt;LINK&lt;/c0&gt; phasers compiled at run time since they're too late for the application-wide linking decisions.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T015437Z" creationid="yamato" creationdate="20140928T015437Z">
+        <seg>アプリケーション範囲のリンクの決定のためには手遅れなので、実行時にコンパイルされた&lt;c0&gt;LINK&lt;/c0&gt;フェーザーを無視するのはコンパイラの自由だ。</seg>
       </tuv>
     </tu>
     <tu>
