@@ -14638,6 +14638,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This includes the &lt;c3&gt;LEAVE&lt;/c3&gt; variants, &lt;c4&gt;KEEP&lt;/c4&gt; and &lt;c5&gt;UNDO&lt;/c5&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T024056Z" creationid="yamato" creationdate="20140928T024056Z">
+        <seg>これは&lt;c3&gt;LEAVE&lt;/c3&gt;のバリアント、&lt;c4&gt;KEEP&lt;/c4&gt;と&lt;c5&gt;UNDO&lt;/c5&gt;を含む。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This includes the second section of the Unicode BidiMirroring data table.</seg>
       </tuv>
       <tuv lang="JA">
