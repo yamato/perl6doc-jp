@@ -1302,6 +1302,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A &lt;c3&gt;NEXT&lt;/c3&gt; executes only if the end of the loop block is reached normally, or an explicit &lt;c4&gt;next&lt;/c4&gt; is executed.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T021558Z" creationid="yamato" creationdate="20140928T021558Z">
+        <seg>ループブロックの終わりに普通に達する場合だけ、&lt;c3&gt;NEXT&lt;/c3&gt;は実行する、または、明示的&lt;c4&gt;next&lt;/c4&gt;は実行される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A &lt;c3&gt;do&lt;/c3&gt; is unnecessary immediately after any opening bracket as the syntax inside brackets expects a statements, so the above can in fact be written:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140927T142444Z" creationid="yamato" creationdate="20140927T142444Z">
@@ -6534,6 +6542,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In distinction to &lt;c5&gt;LEAVE&lt;/c5&gt; phasers, a &lt;c6&gt;NEXT&lt;/c6&gt; phaser is not executed if the loop block is exited via any exception other than the control exception thrown by &lt;c7&gt;next&lt;/c7&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T021725Z" creationid="yamato" creationdate="20140928T021725Z">
+        <seg>&lt;c5&gt;LEAVE&lt;/c5&gt;フェーザーへの区別に、ループブロックが&lt;c7&gt;next&lt;/c7&gt;によって投げられるコントロール例外以外の何か例外を通して出られるならば、&lt;c6&gt;NEXT&lt;/c6&gt;フェーザーは実行されない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In either case this sets the &lt;c0&gt;of&lt;/c0&gt; property of the container to &lt;c1&gt;Dog&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T213252Z" creationid="Toshiyuki" creationdate="20140328T213252Z">
@@ -6794,6 +6810,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130811T124152Z" creationid="Toshiyuki" creationdate="20130811T124152Z">
         <seg>特に、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In particular, a &lt;c8&gt;last&lt;/c8&gt; bypasses evaluation of &lt;c9&gt;NEXT&lt;/c9&gt; phasers.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T021807Z" creationid="yamato" creationdate="20140928T021807Z">
+        <seg>特に、&lt;c8&gt;last&lt;/c8&gt;は&lt;c9&gt;NEXT&lt;/c9&gt;フェーザーの評価を回避する。</seg>
       </tuv>
     </tu>
     <tu>
