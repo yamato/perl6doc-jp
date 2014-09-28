@@ -5630,6 +5630,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If a &lt;c0&gt;POST&lt;/c0&gt; fails or any kind of &lt;c1&gt;LEAVE&lt;/c1&gt; block throws an exception while the stack is unwinding, the unwinding continues and collects exceptions to be handled.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T030735Z" creationid="yamato" creationdate="20140928T030735Z">
+        <seg>&lt;c0&gt;POST&lt;/c0&gt;が失敗する、または、スタックが巻き戻しである間どんな&lt;c1&gt;LEAVE&lt;/c1&gt;ブロックでも例外を投げる、巻き戻しは取り扱われる例外を続けて、集める。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If a &lt;c1&gt;try&lt;/c1&gt; block or statement prefix catches an exception, that exception is stored in &lt;c2&gt;$!&lt;/c2&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T113944Z" creationid="yamato" creationdate="20140914T113944Z">
@@ -16266,6 +16274,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>レースリストを求める要求が減少するとき、掛けられた糸は殺されるかもしれない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When the unwinding is completed all new exceptions are thrown from that point.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T030751Z" creationid="yamato" creationdate="20140928T030751Z">
+        <seg>巻き戻しが完了するとき、すべての新しい例外はそのポイントから投げられる。</seg>
       </tuv>
     </tu>
     <tu>
