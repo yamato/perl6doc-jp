@@ -1174,10 +1174,26 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c4&gt;ENTER&lt;/c4&gt; and &lt;c5&gt;LEAVE&lt;/c5&gt; are used only for their side effects.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T020457Z" creationid="yamato" creationdate="20140928T020457Z">
+        <seg>&lt;c4&gt;ENTER&lt;/c4&gt;と&lt;c5&gt;LEAVE&lt;/c5&gt;はそれらの副作用のためだけに使われる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c5&gt;Nil&lt;/c5&gt; also indicates a failed match.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140327T132843Z" creationid="Toshiyuki" creationdate="20140327T132843Z">
         <seg>&lt;c5&gt;Nil&lt;/c5&gt;は失敗したマッチも示します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c6&gt;PRE&lt;/c6&gt; and &lt;c7&gt;POST&lt;/c7&gt; return boolean values which, if false, trigger a runtime exception.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T020708Z" creationid="yamato" creationdate="20140928T020708Z">
+        <seg>&lt;c6&gt;PRE&lt;/c6&gt;と&lt;c7&gt;POST&lt;/c7&gt;はブール値を返し、もし偽なら実行時例外を起動させる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -13994,6 +14010,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>これらは、同じ2-要素リストで広げられる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These are now separate notions.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T020431Z" creationid="yamato" creationdate="20140928T020431Z">
+        <seg>現在これらは別の概念だ。</seg>
       </tuv>
     </tu>
     <tu>
