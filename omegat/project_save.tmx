@@ -1806,6 +1806,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>All of these phaser blocks can see any previously declared lexical variables, even if those variables have not been elaborated yet when the closure is invoked (in which case the variables evaluate to an undefined value.)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T020153Z" creationid="yamato" creationdate="20140928T020153Z">
+        <seg>クロージャが起動されるときたとえそれらの変数がまだ念入りに作られなかったとしても、これらのフェーザーブロックの全ては何か前に宣言された静的変数を見ることができる（その場合には変数は未定義値と評価する。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>All other characters must either be escaped with a backslash (for example &lt;c1&gt;\:&lt;/c1&gt; to match a colon), or included in quotes:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140922T140406Z" creationid="yamato" creationdate="20140922T140406Z">
@@ -8994,6 +9002,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T035007Z" creationid="yamato" creationdate="20140914T035007Z">
         <seg>しかしこれらが&lt;a0&gt;コンテナ&lt;/a0&gt;を作成しない点に注意が必要だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note: Apocalypse 4 confused the notions of &lt;c0&gt;PRE&lt;/c0&gt;/&lt;c1&gt;POST&lt;/c1&gt; with &lt;c2&gt;ENTER&lt;/c2&gt;/&lt;c3&gt;LEAVE&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T020416Z" creationid="yamato" creationdate="20140928T020416Z">
+        <seg>Apocalypse 4では&lt;c0&gt;PRE&lt;/c0&gt;/&lt;c1&gt;POST&lt;/c1&gt;と&lt;c2&gt;ENTER&lt;/c2&gt;/&lt;c3&gt;LEAVE&lt;/c3&gt;の概念を混同していた。</seg>
       </tuv>
     </tu>
     <tu>
