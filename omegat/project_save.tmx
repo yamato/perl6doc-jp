@@ -4286,6 +4286,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Either the corresponding &lt;c1&gt;POST&lt;/c1&gt; is defined as a separate phaser, in which case &lt;c2&gt;PRE&lt;/c2&gt; and &lt;c3&gt;POST&lt;/c3&gt; share no lexical scope.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T025858Z" creationid="yamato" creationdate="20140928T025858Z">
+        <seg>対応する&lt;c1&gt;POST&lt;/c1&gt;がそうであるどちらでも別々のフェーザーとして定義した、その場合には、&lt;c2&gt;PRE&lt;/c2&gt;と&lt;c3&gt;POST&lt;/c3&gt;はレキシカルスコープを共有しない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Either way, each Positional or Associative element represents the entire contents of the corresponding Pod block.</seg>
       </tuv>
       <tuv lang="JA">
@@ -7906,6 +7914,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>呼び出しの挙げられたパラメータのように、順序が、添え字で複数の副詞を取り扱う際にない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Likewise &lt;c8&gt;PRE&lt;/c8&gt; phasers fire off before any &lt;c9&gt;ENTER&lt;/c9&gt; or &lt;c10&gt;FIRST&lt;/c10&gt; (though not before &lt;c11&gt;BEGIN&lt;/c11&gt;, &lt;c12&gt;CHECK&lt;/c12&gt;, &lt;c13&gt;LINK&lt;/c13&gt;, or &lt;c14&gt;INIT&lt;/c14&gt;, since those are done at compile or process initialization time).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T025750Z" creationid="yamato" creationdate="20140928T025750Z">
+        <seg>同様に、&lt;c8&gt;PRE&lt;/c8&gt;フェーザーは、何か&lt;c9&gt;ENTER&lt;/c9&gt;または&lt;c10&gt;FIRST&lt;/c10&gt;（それらがコンパイルまたはプロセス初期化時でされる時から&lt;c11&gt;BEGIN&lt;/c11&gt;、&lt;c12&gt;CHECK&lt;/c12&gt;、&lt;c13&gt;LINK&lt;/c13&gt;または&lt;c14&gt;INIT&lt;/c14&gt;の前にないけれども）の前に発射する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12098,6 +12114,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T113719Z" creationid="yamato" creationdate="20140914T113719Z">
         <seg>&lt;c0&gt;Grammar.parse&lt;/c0&gt;メソッドも呼び出し元の&lt;c1&gt;$/&lt;/c1&gt;に結果の&lt;a2&gt;Match&lt;/a2&gt;オブジェクトをセットする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;POST&lt;/c0&gt; block can be defined in one of two ways.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T025815Z" creationid="yamato" creationdate="20140928T025815Z">
+        <seg>&lt;c0&gt;POST&lt;/c0&gt;ブロックは、2つの方法のうちの1つで定義されることができる。</seg>
       </tuv>
     </tu>
     <tu>
