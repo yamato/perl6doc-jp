@@ -6470,6 +6470,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In any case, exception handlers are specified to run within the dynamic scope of the failing code, whether or not the exception is resumable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T022844Z" creationid="yamato" creationdate="20140928T022844Z">
+        <seg>いずれにせよ、例外がレジューム可能であるか否かを問わず、例外ハンドラは失敗しているコードの動的スコープの中で動作するために指定される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In any case, it declares that you don't care about the evaluation order, only the result order.</seg>
       </tuv>
       <tuv lang="JA">
@@ -11726,6 +11734,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>That is, just because an exception is thrown past a stack frame does not mean we have officially left the block yet, since the exception might be resumable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T022822Z" creationid="yamato" creationdate="20140928T022822Z">
+        <seg>つまり、例外がレジューム可能かもしれない時から、ただ例外がスタックフレームが意味しない過去を投げられるので、我々はまだブロックを公式に去った。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>That is, lookahead of more than one "longest token" is discouraged.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140927T120116Z" creationid="yamato" creationdate="20140927T120116Z">
@@ -13610,6 +13626,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T060104Z" creationid="yamato" creationdate="20140915T060104Z">
         <seg>スマートマッチ演算子。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The stack is unwound and the phasers are called only if an exception is not resumed.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20140928T022855Z" creationid="yamato" creationdate="20140928T022855Z">
+        <seg>スタックは巻き戻される、そして、例外が再開されない場合だけ、フェーザーは呼び出される。</seg>
       </tuv>
     </tu>
     <tu>
