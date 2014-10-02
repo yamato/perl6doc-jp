@@ -2350,6 +2350,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Any phaser defined in the lexical scope of a method is a closure that closes over &lt;c0&gt;self&lt;/c0&gt; as well as normal lexicals.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141002T131456Z" creationid="yamato" creationdate="20141002T131456Z">
+        <seg>メソッドのレキシカルスコープで定義されるフェーザーは何でも、通常のレキシカルのように&lt;c0&gt;self&lt;/c0&gt;上で閉じるクロージャだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Any radix may include a fractional part.</seg>
       </tuv>
       <tuv lang="JA">
