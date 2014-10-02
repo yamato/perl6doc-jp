@@ -6934,6 +6934,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In particular, the return value should not be modified within a &lt;c1&gt;POST&lt;/c1&gt; phaser, but a &lt;c2&gt;LEAVE&lt;/c2&gt; phaser could be more liberal.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141002T131312Z" creationid="yamato" creationdate="20141002T131312Z">
+        <seg>特に戻り値は&lt;c1&gt;POST&lt;/c1&gt;フェーザーで変更されてはならない。しかし&lt;c2&gt;LEAVE&lt;/c2&gt;フェーザーはもっと自由だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In particular, there is a natural conflict between postfix operators and infix operators, either of which may occur after a term.</seg>
       </tuv>
       <tuv lang="JA">
@@ -16386,6 +16394,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>それが一体となって注意されるかどうかにかかわらず、文字または2は現在のレキシカルスコープのユニコード支持線次第である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Whether the return value is modifiable may be a policy of the phaser in question.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141002T131129Z" creationid="yamato" creationdate="20141002T131129Z">
+        <seg>戻り値が変更可能かどうかは問題のフェーザーのポリシーによる。</seg>
       </tuv>
     </tu>
     <tu>
