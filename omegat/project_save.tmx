@@ -6878,6 +6878,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In other words, it's exactly what &lt;c2&gt;return&lt;/c2&gt; is sending to the outside world in raw form, so that the phaser doesn't accidentally impose context prematurely.)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141002T130913Z" creationid="yamato" creationdate="20141002T130913Z">
+        <seg>言い換えれば、それはまさに&lt;c2&gt;return&lt;/c2&gt;が外側にそのままの形で送っている形式だ。なのでフェーザーが早まって偶然にコンテキストを押し付けることはない。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In other words, this is legal:</seg>
       </tuv>
       <tuv lang="JA">
@@ -13802,6 +13810,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T050107Z" creationid="yamato" creationdate="20140914T050107Z">
         <seg>3度目の&lt;c3&gt;&amp;say-all&lt;/c3&gt;はもはや11でない&lt;c4&gt;$*dynamic1&lt;/c4&gt;で呼ばれるが&lt;c5&gt;$*dynamic2&lt;/c5&gt;は101のままだ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The topic of the block outside a phaser is still available as &lt;c0&gt;OUTER::&lt;$_&gt;&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141002T131012Z" creationid="yamato" creationdate="20141002T131012Z">
+        <seg>フェーザーの外側のブロックのトピックはまだ&lt;c0&gt;OUTER::&lt;$_&gt;&lt;/c0&gt;で利用できる。</seg>
       </tuv>
     </tu>
     <tu>
