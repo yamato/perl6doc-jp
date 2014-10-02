@@ -254,6 +254,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(It is presented as a argument, that is, either as parcel or an object that can stand alone in a list.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141002T130506Z" creationid="yamato" creationdate="20141002T130506Z">
+        <seg>（それは引数として表現される。つまり、パーセルかオブジェクトがリストでスタンドアロンでありえる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(Marking dynamic variables as readonly is very helpful in terms of sharing the same value among competing threads, since a readonly variable need not be locked.)</seg>
       </tuv>
       <tuv lang="JA">
@@ -4914,6 +4922,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140921T031604Z" creationid="yamato" creationdate="20140921T031604Z">
         <seg>1つとして、それらの同一性を比較することでオブジェクトが同じメタクラスを持つかチェックできる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For phasers such as &lt;c0&gt;KEEP&lt;/c0&gt; and &lt;c1&gt;POST&lt;/c1&gt; that are run when exiting a scope normally, the return value (if any) from that scope is available as the current topic within the phaser.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141002T130245Z" creationid="yamato" creationdate="20141002T130245Z">
+        <seg>&lt;c0&gt;KEEP&lt;/c0&gt;と&lt;c1&gt;POST&lt;/c1&gt;のような、スコープを普通に抜けるときに実行するフェーザーのスコープからの戻り値はフェーザーの現在のトピックとして利用できる。</seg>
       </tuv>
     </tu>
     <tu>
