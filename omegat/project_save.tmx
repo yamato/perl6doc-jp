@@ -6454,6 +6454,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Implicit use of &lt;c0&gt;$_&lt;/c0&gt; with &lt;c1&gt;.method&lt;/c1&gt; also counts as an argument.)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T103714Z" creationid="yamato" creationdate="20141004T103714Z">
+        <seg>また、&lt;c1&gt;.method&lt;/c1&gt;による&lt;c0&gt;$_&lt;/c0&gt;の暗黙の使用は、引数と見なされる。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In Perl 5, a bare block is deemed to be a do-once loop.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T120255Z" creationid="Toshiyuki" creationdate="20130810T120255Z">
