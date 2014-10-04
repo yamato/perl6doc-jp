@@ -198,6 +198,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(In addition to standard formal parameters, placeholder arguments also count, as do the underscore variables.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T100021Z" creationid="yamato" creationdate="20141004T100021Z">
+        <seg>（標準的な仮パラメータに加えて、また、アンダースコア変数のように、プレースホールダー引数は数えられる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(In other words, it does autoboxing and autounboxing as necessary.</seg>
       </tuv>
       <tuv lang="JA">
