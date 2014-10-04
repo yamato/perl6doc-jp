@@ -6398,6 +6398,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If you wish to be less ambiguous, the &lt;c0&gt;hash&lt;/c0&gt; list operator will explicitly evaluate a list and compose a hash of the returned value, while &lt;c1&gt;sub&lt;/c1&gt; or &lt;c2&gt;-&gt;&lt;/c2&gt; introduces an anonymous subroutine:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T105528Z" creationid="yamato" creationdate="20141004T105528Z">
+        <seg>あなたがよりあいまいでなくしたいならば、&lt;c1&gt;sub&lt;/c1&gt;または&lt;c2&gt;-&gt;&lt;/c2&gt;が匿名のサブルーチンを始める間、&lt;c0&gt;hash&lt;/c0&gt;リスト演算子ははっきりとリストを評価して、戻り値のハッシュを組み立てる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If you wish to return a closure from a function, you must use an explicit prefix such as &lt;c0&gt;return&lt;/c0&gt; or &lt;c1&gt;sub&lt;/c1&gt; or &lt;c2&gt;-&gt;&lt;/c2&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130810T150911Z" creationid="Toshiyuki" creationdate="20130810T150911Z">
