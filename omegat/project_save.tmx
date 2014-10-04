@@ -2438,6 +2438,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Anywhere a term is expected, a block is taken to be a closure definition (an anonymous subroutine).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T095124Z" creationid="yamato" creationdate="20141004T095124Z">
+        <seg>どこでも、項は期待される、ブロックはクロージャ定義（匿名のサブルーチン）であるためにとられる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Apart from &lt;c0&gt;CATCH&lt;/c0&gt; and &lt;c1&gt;CONTROL&lt;/c1&gt;, which can only occur once, most of these can occur multiple times within the block.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130818T093455Z" creationid="Toshiyuki" creationdate="20130818T093455Z">
@@ -5714,6 +5722,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140920T024905Z" creationid="yamato" creationdate="20140920T024905Z">
         <seg>クラスが親クラスを指定しないなら、&lt;a0&gt;Any&lt;/a0&gt;がデフォルトで仮定される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If a closure has arguments, it is always taken as a normal closure.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T095814Z" creationid="yamato" creationdate="20141004T095814Z">
+        <seg>クロージャが引数を持つならば、それは常に通常のクロージャとしてとられる。</seg>
       </tuv>
     </tu>
     <tu>
