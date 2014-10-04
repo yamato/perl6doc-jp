@@ -670,6 +670,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(This may be done lazily as long as consistent semantics are preserved, so a block that is never executed and never has a reference taken can avoid cloning altogether.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T125528Z" creationid="yamato" creationdate="20141004T125528Z">
+        <seg>（一貫したセマンティックが保たれる限り、これはゆったりとされることができるので、決して実行されなくて、決して参照をとっておかないブロックは全くクローニングを避けることができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(Unary uses of backslash may therefore never be followed by whitespace or they would be taken as an unspace.)</seg>
       </tuv>
       <tuv lang="JA">
@@ -730,6 +738,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>（それがしかし役に立つことがわかるならば、我々はこれをリラックスさせる権利を保有する。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>(When we say "clone", we mean the way the system takes a snapshot of the routine's lexical scope and binds it to the current instance of the routine so that if you ever use the current reference to the routine, it gets the current snapshot of its world in terms of the lexical symbols that are visible to it.)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T125504Z" creationid="yamato" creationdate="20141004T125504Z">
+        <seg>（「クローン」を言うとき、あなたがルーチンへの現在の言及を使うように、我々はシステムがルーチンのレキシカルスコープのスナップショットをとって、それをルーチンの現在のインスタンスに結びつける方法を意味する、それは流れをそれに見えるレキシカルシンボルに関して世界のスナップ撮影させる。）</seg>
       </tuv>
     </tu>
     <tu>
@@ -1934,6 +1950,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>All remaining blocks are conceptually cloned into closures as soon as the lexical scope containing them is entered.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T125516Z" creationid="yamato" creationdate="20141004T125516Z">
+        <seg>それらを含んでいるレキシカルスコープが入られるとすぐに、すべての残りのブロックはクロージャに概念的にクローンをつくられる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>All the uppercase adverbs are reserved for user-defined quotes.</seg>
       </tuv>
       <tuv lang="JA">
@@ -2906,6 +2930,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140222T021421Z" creationid="Toshiyuki" creationdate="20140222T021421Z">
         <seg>バックトラック制御</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Backtracking over a closure in a regex is also considered failure of the closure, which is how hypothetical variables are managed by regexes.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T125240Z" creationid="yamato" creationdate="20141004T125240Z">
+        <seg>また、正規表現のクロージャの上の後戻りはクロージャの失敗とみなされる。そして、それは仮説的変数が正規表現によって管理される方法である。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4498,6 +4530,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T122046Z" creationid="Toshiyuki" creationdate="20140328T122046Z">
         <seg>全てのオブジェクトはハッシュと他の値ベースの比較のためにオブジェクトをユニークに識別する“WHICH”値を生成することができます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Everything is conceptually a closure in Perl 6, but the optimizer is free to turn unreferenced closures into mere blocks of code.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T125402Z" creationid="yamato" creationdate="20141004T125341Z">
+        <seg>すべては概念的にPerl 6のクロージャである、しかし、オプティマイザーは参照されないクロージャをコードの単なるブロックに変えることができる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7658,6 +7698,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>最後のものが括弧で終わる限り、それはたくさんのargumentlessなメソッドがあるのを許される：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is also free to turn referenced closures into mere anonymous subroutines if the block does not refer to any external lexicals that should themselves be cloned.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T125437Z" creationid="yamato" creationdate="20141004T125437Z">
+        <seg>ブロックがそれら自身クローンをつくられなければならない何か外レキシカルに言及しないならば、また、それは当該クロージャを単なる匿名のサブルーチンに変えることができる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -16570,6 +16618,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>不確かなとき、試みは引数の並びを解析させられる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When is a closure not a closure</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T125314Z" creationid="yamato" creationdate="20141004T125314Z">
+        <seg>いつ、クロージャはクロージャでないか</seg>
       </tuv>
     </tu>
     <tu>
