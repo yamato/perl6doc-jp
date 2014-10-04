@@ -5486,6 +5486,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>However, if an argumentless closure is empty, or appears to contain nothing but a comma-separated list starting with a pair or a hash (counting a single pair or hash as a list of one element), the closure will be immediately executed as a hash composer, as if called with &lt;c0&gt;.()&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T105359Z" creationid="yamato" creationdate="20141004T105359Z">
+        <seg>しかし、引数がないクロージャが空であるか、ペアまたはハッシュ（一つのペアまたはハッシュを1要素のリストとして計算に入れる）から始めているコンマで区切られたリストだけを含むように見えるならば、まるで&lt;c0&gt;.()&lt;/c0&gt;で呼び出されるように、クロージャはハッシュコンポーザーとしてすぐに実行される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>However, in that case &lt;c5&gt;&amp;foo&lt;/c5&gt; by itself is not sufficient to uniquely name a specific function.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140329T083442Z" creationid="Toshiyuki" creationdate="20140329T083429Z">
