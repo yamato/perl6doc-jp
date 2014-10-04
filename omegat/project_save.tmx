@@ -8950,6 +8950,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that common idioms work as expected though:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T093335Z" creationid="yamato" creationdate="20141004T093335Z">
+        <seg>しかし、一般的なイディオムが予想通りに機能することに注意すべきである：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that even though &lt;c2&gt;$^second&lt;/c2&gt; appears before &lt;c3&gt;$^first&lt;/c3&gt; in the code, &lt;c4&gt;$^first&lt;/c4&gt; is still the first formal parameter to that block.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T062351Z" creationid="yamato" creationdate="20140914T062351Z">
@@ -15770,6 +15778,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>位置引数の単位</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Unless you are parsing a statement that expects a block argument, it is illegal to use a bare closure where an operator is expected because it will be considered to be two terms in row.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T093353Z" creationid="yamato" creationdate="20141004T093353Z">
+        <seg>あなたが1ブロック引数を期待するステートメントをパースしない限り、列の2つの項であることがみなされるので、演算子が期待される裸のクロージャを使うことは無効である。</seg>
       </tuv>
     </tu>
     <tu>
