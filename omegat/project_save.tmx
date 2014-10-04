@@ -17650,6 +17650,14 @@ my \θ       = 15 * degrees;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>parentheses aren't necessary around &lt;c0&gt;EXPR&lt;/c0&gt; because the whitespace between &lt;c1&gt;EXPR&lt;/c1&gt; and the block forces the block to be considered a block rather than a subscript, provided the block occurs where an infix operator would be expected.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T091133Z" creationid="yamato" creationdate="20141004T091133Z">
+        <seg>中置演算子が期待される所でブロックが生じるならば、&lt;c0&gt;EXPR&lt;/c0&gt;とブロックの間の空白文字が添え字よりもむしろブロックとみなされるブロックを強制するので、括弧は&lt;c1&gt;EXPR&lt;/c1&gt;のまわりで必要でない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>produces objects of classes defined as:</seg>
       </tuv>
       <tuv lang="JA">
