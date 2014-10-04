@@ -3206,6 +3206,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>But generally you should be using &lt;c0&gt;fail&lt;/c0&gt; in such a case to return an exception object.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T124256Z" creationid="yamato" creationdate="20141004T124256Z">
+        <seg>しかし、通常、あなたは、例外オブジェクトを返すために、この場合には&lt;c0&gt;fail&lt;/c0&gt;を使っていなければならない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>But if one of the elements happens to be a scalar container, you can still assign to it:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T134344Z" creationid="yamato" creationdate="20140914T134344Z">
@@ -6706,6 +6714,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>いずれにせよ、それは、あなたは評価順序（結果順序だけ）が好きでないと断言する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In any case, returning an unthrown exception is considered failure from the standpoint of &lt;c1&gt;let&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T124420Z" creationid="yamato" creationdate="20141004T124420Z">
+        <seg>いずれにせよ、スローされていない例外を返すことは、&lt;c1&gt;let&lt;/c1&gt;の見地からの失敗とみなされる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14158,6 +14174,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Then in list context, you're returning a list of length 1, which is defined (much like in Perl 5).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T124235Z" creationid="yamato" creationdate="20141004T124235Z">
+        <seg>それからリストコンテキストでは、あなたは長さ1のリストを返している。そして、それは定義される（Perl 5でずっと似ている）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>There are a number of positional container types with slightly different semantics in Perl 6.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T133923Z" creationid="yamato" creationdate="20140914T133923Z">
@@ -15738,6 +15762,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T071032Z" creationid="Toshiyuki" creationdate="20130817T071032Z">
         <seg>何か一つのポインティブロックか裸のクロージャから値を返すために（ダイナミックな呼び出し元へ）、ブロックが最後の文の値を返すようにするだけか、関数かメソッド形式の&lt;c0&gt;leave&lt;/c0&gt;を使うことができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To return an explicit scalar undef, you can always say</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T124219Z" creationid="yamato" creationdate="20141004T124219Z">
+        <seg>明示的スカラーundefを返すために、あなたは常に言うことができる</seg>
       </tuv>
     </tu>
     <tu>
