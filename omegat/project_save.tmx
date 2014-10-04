@@ -406,6 +406,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(Otherwise it will be parsed as a hash subscript.)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T091408Z" creationid="yamato" creationdate="20141004T091408Z">
+        <seg>（さもなければ、それはハッシュ添え字としてパースされる。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(Parens aren't considered an operator.)</seg>
       </tuv>
       <tuv lang="JA">
@@ -1602,6 +1610,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130811T125000Z" creationid="Toshiyuki" creationdate="20130811T125000Z">
         <seg>switch文はトピカライズの手段だ。そういうわけで、switchキーワードは英語のトピカライザー、&lt;c0&gt;given&lt;/c0&gt;だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A top-level bare block is always considered a statement block if there's a term and a space before it:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T091306Z" creationid="yamato" creationdate="20141004T091306Z">
+        <seg>項とスペースがそれの前にあるならば、トップレベルの裸のブロックは常にステートメントブロックとみなされる：</seg>
       </tuv>
     </tu>
     <tu>
@@ -15246,6 +15262,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This works for all control structures, not just the new ones in Perl 6.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T091234Z" creationid="yamato" creationdate="20141004T091234Z">
+        <seg>これはPerl 6の新しいものに限らず全ての制御構造で機能する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Those always start with a colon, and then are followed either by an identifier or the name of an already existing variable (whose name sans the sigil is used as the key, and value of the variable is used as the value of the pair).</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T123609Z" creationid="yamato" creationdate="20140914T123609Z">
@@ -16826,6 +16850,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>あなたは、同様にコンストラクタに引数を渡すことができる：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can still parenthesize the expression argument for old times' sake, as long as there's a space between the closing paren and the opening brace.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T091356Z" creationid="yamato" creationdate="20141004T091356Z">
+        <seg>スペースが終わりの括弧と左中カッコの間にある限り、あなたはまだ昔のよしみで式引数を括弧に入れることができる。</seg>
       </tuv>
     </tu>
     <tu>
