@@ -238,6 +238,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(In the absence of an explicit semicolon, the current statement may continue on a subsequent line, but only with valid statement continuators such as &lt;c0&gt;else&lt;/c0&gt; that cannot be confused with the beginning of a new statement.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T115255Z" creationid="yamato" creationdate="20141004T115255Z">
+        <seg>（明示的セミコロンがない場合、新しいステートメントを開始することで混乱することができない&lt;c0&gt;else&lt;/c0&gt;のような有効なステートメント継続者だけで以外、現在のステートメントは、以降の行で続けることができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(Initialization of ordinary variables does not count--presumably the presence of a label will prevent code-movement optimizations past the label.) So, for instance, it's always possible to &lt;c5&gt;goto&lt;/c5&gt; into the next case of a &lt;c6&gt;when&lt;/c6&gt; or into either the "then" or "else" branch of a conditional.</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130817T142332Z" creationid="Toshiyuki" creationdate="20130817T142332Z">
@@ -9914,6 +9922,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T191724Z" creationid="Toshiyuki" creationdate="20140111T191724Z">
         <seg>一方、メソッドは全ての仕事の依存を実行します。&lt;c0&gt;for&lt;/c0&gt;構造を使ってすべての&lt;c1&gt;@!dependencies&lt;/c1&gt;属性のアイテムを繰り返し実行します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Outside of any kind of expression brackets, a final closing curly on a line (not counting whitespace or comments) always reverts to the precedence of semicolon whether or not you put a semicolon after it.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T115217Z" creationid="yamato" creationdate="20141004T115217Z">
+        <seg>どんな式ブラケットの外ででも、あなたがそれの後セミコロンを置いたか否かを問わず、同等の（数えている空白文字でないまたはコメントでない）最終的な終わりのカーリーは常にセミコロンの優先順位に戻る。</seg>
       </tuv>
     </tu>
     <tu>
