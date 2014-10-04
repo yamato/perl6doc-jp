@@ -2462,6 +2462,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Anything else, such as a statement modifier (on, say, a &lt;c1&gt;loop&lt;/c1&gt; statement) must continue on the same line, unless the newline be escaped using the "unspace" construct--see S02.)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T123449Z" creationid="yamato" creationdate="20141004T123449Z">
+        <seg>他に何か（例えばステートメント修飾子）（on、say、&lt;c1&gt;loop&lt;/c1&gt;ステートメント）は、同じ行で続けなければならない、改行文字は"unspace"構造を使用して、エスケープされる ― S02.を見る）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Anywhere a term is expected, a block is taken to be a closure definition (an anonymous subroutine).</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20141004T095124Z" creationid="yamato" creationdate="20141004T095124Z">
@@ -3162,6 +3170,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130822T031051Z" creationid="Toshiyuki" creationdate="20130822T031051Z">
         <seg>しかし&lt;c0&gt;state&lt;/c0&gt;はどんなイニシャライザにも自動的に「once」セマンティクスを適用するので、これも動作する：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>But &lt;c0&gt;statement_control:&lt;BEGIN&gt;&lt;/c0&gt; hides &lt;c1&gt;prefix:&lt;BEGIN&gt;&lt;/c1&gt; at the start of a statement.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T123800Z" creationid="yamato" creationdate="20141004T123800Z">
+        <seg>しかし、&lt;c0&gt;statement_control:&lt;BEGIN&gt;&lt;/c0&gt;はステートメントの始まりで、&lt;c1&gt;prefix:&lt;BEGIN&gt;&lt;/c1&gt;を隠す。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4634,6 +4650,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>ファイル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Final blocks on statement-level constructs always imply semicolon precedence afterwards regardless of the position of the closing curly.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T123512Z" creationid="yamato" creationdate="20141004T123512Z">
+        <seg>終わりのカーリーの位置に関係なく、ステートメント-レベル構造に関する最終的なブロックは常にその後セミコロン優先順位を意味する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11670,6 +11694,22 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Statement-level constructs are distinguished in the grammar by being declared in the &lt;c0&gt;statement_control&lt;/c0&gt; category:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T123533Z" creationid="yamato" creationdate="20141004T123533Z">
+        <seg>ステートメント-レベル構造は、&lt;c0&gt;statement_control&lt;/c0&gt;カテゴリーで宣言されることによって、グラマーで識別される：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Statement-level constructs may start only where the parser is expecting the start of a statement.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T123551Z" creationid="yamato" creationdate="20141004T123551Z">
+        <seg>ステートメント-レベル構造は、パーサーがステートメントの始まりを期待しているところだけを始めることができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Still it's easy to observe how different they are:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140914T135420Z" creationid="yamato" creationdate="20140914T135420Z">
@@ -13114,6 +13154,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>我々が行って、例外は注意される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The existence of a &lt;c0&gt;statement_control:&lt;BEGIN&gt;&lt;/c0&gt; does not preclude us from also defining a &lt;c1&gt;prefix:&lt;BEGIN&gt;&lt;/c1&gt; that &lt;i2&gt;can&lt;/i2&gt; be used within an expression:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T123717Z" creationid="yamato" creationdate="20141004T123717Z">
+        <seg>&lt;c0&gt;statement_control:&lt;BEGIN&gt;&lt;/c0&gt;の存在は、我々がまた、式の範囲内で使われることができる&lt;c1&gt;prefix:&lt;BEGIN&gt;&lt;/c1&gt;を定義するのを妨げない：</seg>
       </tuv>
     </tu>
     <tu>
@@ -15498,6 +15546,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>そうするために、型は後置演算子として文字通りのシグネチャを用いて洗練されているかもしれない：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To embed a statement in an expression you must use something like &lt;c0&gt;do {...}&lt;/c0&gt; or &lt;c1&gt;try {...}&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T123622Z" creationid="yamato" creationdate="20141004T123622Z">
+        <seg>ステートメントを式に埋めるために、あなたは&lt;c0&gt;do {...}&lt;/c0&gt;または&lt;c1&gt;try {...}&lt;/c1&gt;のような何かを使わなければならない。</seg>
       </tuv>
     </tu>
     <tu>
