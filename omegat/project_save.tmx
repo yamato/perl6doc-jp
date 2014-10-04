@@ -2310,6 +2310,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>And to the parentheses delimiting function arguments:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T114010Z" creationid="yamato" creationdate="20141004T114010Z">
+        <seg>そして、関数実引数を区切っている括弧に：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Angle quotes (quote words)</seg>
       </tuv>
       <tuv lang="JA">
