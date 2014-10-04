@@ -446,6 +446,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(Remove the whitespace if you wish it to be a postcircumfix.)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T095048Z" creationid="yamato" creationdate="20141004T095048Z">
+        <seg>（あなたがそれが後置接周であることを望むならば、空白文字を削除しなさい。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(Routines are considered mutable because they can be wrapped in place.)</seg>
       </tuv>
       <tuv lang="JA">
