@@ -3166,6 +3166,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Built-in statement-level keywords require whitespace between the keyword and the first argument, as well as before any terminating loop.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T123936Z" creationid="yamato" creationdate="20141004T123936Z">
+        <seg>ビルトインステートメント-レベルキーワードは、キーワードと最初の引数の間で、ならびに何か終了しているループの前に空白文字を必要とする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>But &lt;c0&gt;state&lt;/c0&gt; automatically applies "once" semantics to any initializer, so this also works:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130822T031051Z" creationid="Toshiyuki" creationdate="20130822T031051Z">
@@ -4170,6 +4178,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140328T224736Z" creationid="Toshiyuki" creationdate="20140328T224736Z">
         <seg>コンテナ型を定義することはPerl 5のタイ変数のPerl 6の同等物です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Definition of Success</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T124003Z" creationid="yamato" creationdate="20141004T124003Z">
+        <seg>成功の定義</seg>
       </tuv>
     </tu>
     <tu>
@@ -5734,6 +5750,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Hypothetical variables are somewhat transactional--they keep their new values only on successful exit of the current block, and otherwise are rolled back to their original values.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T124102Z" creationid="yamato" creationdate="20141004T124102Z">
+        <seg>仮定的変数はいくらかトランザクショナルである－それらは現在ブロックの成功した終了の上でだけそれらの新しい値を保って、さもなければそれらの最初の値にロールバックされる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If &lt;c4&gt;$b &lt;= 0 &lt;/c4&gt;, the empty list is returned.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T050914Z" creationid="yamato" creationdate="20140915T050914Z">
@@ -7054,6 +7078,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In particular, a syntax error will be reported for C-isms such as these:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T123949Z" creationid="yamato" creationdate="20141004T123949Z">
+        <seg>特に、構文エラーはこれらのようなC-ismsのために報告される：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In particular, end-of-line comments do not treat backslash as significant.</seg>
       </tuv>
       <tuv lang="JA">
@@ -7122,6 +7154,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>一般的な命名スキームがない場合、2つの異なるスペースからの2アドレスが衝突することは、ありそうもなくなることができるだけである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the absence of error exception propagation, a successful exit is one that returns a defined value or parcel.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T124132Z" creationid="yamato" creationdate="20141004T124132Z">
+        <seg>エラー例外伝搬がない場合、成功した終了は、定義済み値またはパーセルを返すものである。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7754,6 +7794,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>それは単位型であるが、多値のコンテナである単位を含む。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is, of course, a failure to leave the block by propagating an error exception, though returning a defined value after catching an exception is okay.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T124113Z" creationid="yamato" creationdate="20141004T124113Z">
+        <seg>例外を捕えた後に定義済み値を返してもいいけれども、それは、もちろん、エラー例外を伝達することによってブロックを去る失敗である。</seg>
       </tuv>
     </tu>
     <tu>
@@ -17058,6 +17106,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20140111T181736Z" creationid="Toshiyuki" creationdate="20140111T181736Z">
         <seg>あなたは、所定のオブジェクトが型オブジェクトであるかどうかこと知るために、このメソッドを使用することができます：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You could also conceivably define a &lt;c2&gt;prefix:&lt;if&gt;&lt;/c2&gt;, but then you may not get what you want when you say:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T123855Z" creationid="yamato" creationdate="20141004T123855Z">
+        <seg>また、あなたはおそら&lt;c2&gt;prefix:&lt;if&gt;&lt;/c2&gt;を定義することができた、だが、あなたは以下のように言うとき、望むものを得ることができない：</seg>
       </tuv>
     </tu>
     <tu>
