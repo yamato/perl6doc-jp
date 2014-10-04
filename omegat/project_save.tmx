@@ -5750,6 +5750,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If a closure is the right argument of the dot operator, the closure is interpreted as a hash subscript.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T111905Z" creationid="yamato" creationdate="20141004T111905Z">
+        <seg>クロージャがドット演算子の正しい引数であるならば、クロージャはハッシュ添え字と解釈される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If a given token may be interpreted as either a postfix operator or an infix operator, the infix operator requires space before it.</seg>
       </tuv>
       <tuv lang="JA">
@@ -9094,6 +9102,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that the closure in a &lt;c0&gt;map&lt;/c0&gt; will never be interpreted as a hash, since such a closure always takes arguments, and use of placeholders (including underscore variables) is taken as evidence of arguments.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T111856Z" creationid="yamato" creationdate="20141004T111856Z">
+        <seg>ハッシュがクロージャが常に引数をとるようであるものとプレースホールダー（アンダースコア変数を含む）の使用から引数の証拠としてとられて、&lt;c0&gt;map&lt;/c0&gt;のクロージャが決して解釈されないことに注意すべきである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that the corresponding block forms put the loop into a statement list, so these loops are evaluated in sink context:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140927T151815Z" creationid="yamato" creationdate="20140927T151815Z">
@@ -11090,6 +11106,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>変数（上の例の場合のように）を入力するにちがいないシグネチャオブジェクトが、更なる型制約を適用するために、他のシグネチャの範囲内で使われるかもしれない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Similar rules apply to array subscripts:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141004T111918Z" creationid="yamato" creationdate="20141004T111918Z">
+        <seg>類似したルールは、配列の添え字にあてはまる：</seg>
       </tuv>
     </tu>
     <tu>
