@@ -16926,6 +16926,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>While this does not work perfectly in all cases&lt;a2&gt;[1]&lt;/a2&gt;, it is very useful for debugging simple objects.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141005T105440Z" creationid="yamato" creationdate="20141005T105440Z">
+        <seg>とは言え、これは全てのケースで完璧に動作するわけではない&lt;a2&gt;[1]&lt;/a2&gt;、これはシンプルなオブジェクトのデバッグにとても便利だ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Whitespace and underscores are allowed but ignored.</seg>
       </tuv>
       <tuv lang="JA">
