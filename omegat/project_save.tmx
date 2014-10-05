@@ -878,6 +878,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;[↑]&lt;/a0&gt; For example closures cannot easily be reproduced this way; if you don't know what a closure is don't worry.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141005T105640Z" creationid="yamato" creationdate="20141005T105640Z">
+        <seg>&lt;a0&gt;[↑]&lt;/a0&gt; 例えばクロージャはこの方法では簡単に再構築できない；あなたがクロージャについて知らなければ心配はない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;[竊曽&lt;/a0&gt; In fact, named regexes can even take extra arguments, using the same syntax as subroutine parameter lists</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140923T094242Z" creationid="yamato" creationdate="20140923T094242Z">
@@ -2002,6 +2010,14 @@ qw/a b c/</seg>
       </tuv>
       <tuv lang="JA">
         <seg>また、入れられた文字列は、意味されたスケーリングのためにプラスまたはマイナスと多分後置単位型を導いているだろう。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Also current implementations have problems with dumping cyclic data structures this way, but they are expected to be handled correctly by &lt;c1&gt;.perl&lt;/c1&gt; at some point.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamato" changedate="20141005T105904Z" creationid="yamato" creationdate="20141005T105904Z">
+        <seg>また、現在の実装は循環データ構造のダンプに問題を持っている。しかしそれらはいくつかの点で&lt;c1&gt;.perl&lt;/c1&gt;が正しく扱われることを期待される。</seg>
       </tuv>
     </tu>
     <tu>
