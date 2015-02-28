@@ -206,6 +206,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(In fact, &lt;c3&gt;=cut&lt;/c3&gt; is now gone.) The format name does not have to be &lt;c4&gt;comment&lt;/c4&gt; -- any unrecognized format name will do to make it a comment.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="Toshiyuki" changedate="20150228T154718Z" creationid="Toshiyuki" creationdate="20150228T154718Z">
+        <seg>（実際、&lt;c3&gt;=cut&lt;/c3&gt;は無くなっている。）フォーマット名は&lt;c4&gt;comment&lt;/c4&gt;である必要はない―認識できないフォーマット名は全てコメントになる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(In other words, it does autoboxing and autounboxing as necessary.</seg>
       </tuv>
       <tuv lang="JA">
