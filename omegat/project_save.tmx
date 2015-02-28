@@ -16494,6 +16494,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>We have single paragraph comments with &lt;c0&gt;=for comment&lt;/c0&gt; as well.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="Yamato" changedate="20150228T160334Z" creationid="Yamato" creationdate="20150228T160334Z">
+        <seg>我々は、同様に&lt;c0&gt;=for comment&lt;/c0&gt;で単一のパラグラフコメントをする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>We may add more of them in the future, so you can protect yourself from future collisions by using mixed case on your top-level packages.</seg>
       </tuv>
       <tuv lang="JA">
