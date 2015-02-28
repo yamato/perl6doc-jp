@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tmx SYSTEM "tmx11.dtd">
 <tmx version="1.1">
-  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="3.1.6" segtype="sentence" srclang="EN-US"/>
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="3.1.8" segtype="sentence" srclang="EN-US"/>
   <body>
 <!-- Default translations -->
     <tu>
@@ -16126,6 +16126,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Unlike in Perl 5, Pod syntax now lets you use &lt;c0&gt;=begin comment&lt;/c0&gt; and &lt;c1&gt;=end comment&lt;/c1&gt; to delimit a Pod block correctly without the need for &lt;c2&gt;=cut&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="Toshiyuki" changedate="20150228T154525Z" creationid="Toshiyuki" creationdate="20150228T154525Z">
+        <seg>Perl 5と違って、Pod構文は&lt;c0&gt;=begin comment&lt;/c0&gt;と&lt;c1&gt;=end comment&lt;/c1&gt;でPodブロックを区切ることで使用できる。&lt;c2&gt;=cut&lt;/c2&gt;は必要としない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Unlike in Perl 5, applying a statement modifier to a &lt;c0&gt;do&lt;/c0&gt; block is specifically disallowed:</seg>
       </tuv>
       <tuv lang="JA" changeid="Toshiyuki" changedate="20130809T151326Z" creationid="Toshiyuki" creationdate="20130809T151326Z">
@@ -18190,6 +18198,14 @@ multi sub infix:«&gt;»(Real:D, Real:D)</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140915T054819Z" creationid="yamato" creationdate="20140915T054738Z">
         <seg>sub infix:«=&gt;»($key, Mu $value) returns Pair:D</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>term</seg>
+      </tuv>
+      <tuv lang="JA" changeid="Toshiyuki" changedate="20131027T121752Z" creationid="Toshiyuki" creationdate="20131027T121752Z">
+        <seg>項</seg>
       </tuv>
     </tu>
     <tu>
