@@ -4494,6 +4494,14 @@ qw/a b c/</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Embedded comments require the &lt;c2&gt;#&lt;/c2&gt; to be followed by a backtick (&lt;c3&gt;`&lt;/c3&gt;) plus one or more opening bracketing characters.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="Yamato" changedate="20150303T151142Z" creationid="Yamato" creationdate="20150303T151142Z">
+        <seg>埋め込みコメントは、文字を括弧に入れているbacktick（&lt;c3&gt;`&lt;/c3&gt;）プラス一つ以上の開始が続くことを&lt;c2&gt;#&lt;/c2&gt;に要求する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Essentially, the compiler turns it into a &lt;c2&gt;goto&lt;/c2&gt; with an implicitly generated (secret) label on that first statement.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamato" changedate="20140927T122220Z" creationid="yamato" creationdate="20140927T122220Z">
